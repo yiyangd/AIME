@@ -1,39 +1,64 @@
-name: Complete reviewed AIME QA records
+name: Deploy AIME to GitHub Pages
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
-  restore_qa:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    defaults:
+      run:
+        working-directory: web
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out the reviewed pack
+        uses: actions/checkout@v6
         with:
-          fetch-depth: 3
-      - name: Restore exactly the five reviewed QA reports
-        shell: bash
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install the locked website dependencies
+        run: npm ci
+      - name: Check Astro and bilingual mathematics
         run: |
-          set -euo pipefail
-          test "$(git rev-parse HEAD^)" = 16d50024a799efd071252e0d15e576e7f5b657f9
-          git diff --exit-code HEAD^ HEAD -- . ':(exclude).github/workflows/pages.yml'
-          staging="$RUNNER_TEMP/aime-reviewed-qa-source"
-          git worktree add --detach "$staging" 4563bb92be4017eed8852ef3aa3fa886bec9b3bc
-          (cd "$staging" && python3 aime-bootstrap-extract.py)
-          paths=(output/qa/rendered/matrix/render-report.json output/qa/rendered/solutions_en/render-report.json output/qa/rendered/solutions_zh/render-report.json output/qa/rendered/textbook/render-report.json output/qa/rendered/workbook/render-report.json)
-          for path in "${paths[@]}"; do
-            test ! -e "$path"
-            install -D -m 0644 "$staging/$path" "$path"
-            cmp "$staging/$path" "$path"
-          done
-          git -c core.autocrlf=false add -f -- "${paths[@]}"
-          test "$(git diff --cached --name-only)" = "$(printf '%s\n' "${paths[@]}")"
-          for path in "${paths[@]}"; do
-            test "$(git rev-parse ":$path")" = "$(git hash-object --no-filters "$staging/$path")"
-          done
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Include five reviewed AIME rendering reports'
-          git push origin HEAD:main
+          npm run check
+          npm run check-math
+      - name: Build the static website
+        run: npm run build
+      - name: Check all built local links and anchors
+        run: npm run validate
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload only the built public website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web/dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish the reviewed website
+        id: deployment
+        uses: actions/deploy-pages@v4
