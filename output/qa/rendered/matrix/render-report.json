@@ -1,0 +1,26 @@
+[
+  {
+    "pdf": "output\\matrix\\AIME_2000-2026_matrix_bilingual.pdf",
+    "pages": 11,
+    "all_pages_rendered": 11,
+    "contact_sheets": 1
+  },
+  {
+    "pdf": "output\\matrix\\AIME_2000-2026_matrix_bilingual_poster.pdf",
+    "pages": 4,
+    "all_pages_rendered": 4,
+    "contact_sheets": 1
+  },
+  {
+    "pdf": "output\\matrix\\AIME_2000-2026_matrix_en.pdf",
+    "pages": 10,
+    "all_pages_rendered": 10,
+    "contact_sheets": 1
+  },
+  {
+    "pdf": "output\\matrix\\AIME_2000-2026_matrix_zh.pdf",
+    "pages": 10,
+    "all_pages_rendered": 10,
+    "contact_sheets": 1
+  }
+]
