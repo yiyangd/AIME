@@ -1,0 +1,935 @@
+{
+  "subtype_id": "GE05",
+  "introduction_en": "Triangle centers are useful because they preserve exact ratios, equal distances and half-angle relations. Choose the appropriate center identity, retain internal/external bisector branches, and connect lengths to area only after the point order is established.",
+  "introduction_zh": "三角形中心可提供精确比例、等距及半角关系。应选择合适的中心恒等式，保留内外角平分线分支，并先明确点序再联系长度与面积。",
+  "prerequisites": [
+    "GE01",
+    "GE03"
+  ],
+  "methods": [
+    {
+      "method_id": "GE05-M01",
+      "title_en": "Angle-bisector ratios persist in nested triangles",
+      "title_zh": "角平分线比例在嵌套三角形中仍成立",
+      "steps_en": [
+        "For the internal bisector $AD$, write $BD/DC=AB/AC$ with positive segment lengths.",
+        "If a second segment crosses the same angle, apply the theorem inside the smaller triangle as well.",
+        "For a needed length use $AD^2=AB\\cdot AC-BD\\cdot DC$, or Stewart’s theorem for a general cevian.",
+        "Restore the signs and triangle inequalities after eliminating or squaring."
+      ],
+      "steps_zh": [
+        "对内角平分线 $AD$，写出正线段比例 $BD/DC=AB/AC$。",
+        "若另一条线段横跨同一角，在小三角形内也可使用同一定理。",
+        "需要长度时用 $AD^2=AB\\cdot AC-BD\\cdot DC$，一般劈线则用斯图尔特定理。",
+        "消元或平方后补查符号与三角不等式。"
+      ],
+      "example_en": "A triangle has $AB=6,AC=9,BC=10$. Find the length of the internal bisector from $A$.",
+      "example_zh": "三角形满足 $AB=6,AC=9,BC=10$，求从 $A$ 出发的内角平分线长度。",
+      "solution_en": [
+        "The ratio $BD/DC=2/3$ gives $BD=4,DC=6$.",
+        "The bisector identity gives $AD^2=6\\cdot9-4\\cdot6=30$.",
+        "Thus $AD=\\sqrt{30}$. The original sides satisfy all strict triangle inequalities, so the internal construction is valid."
+      ],
+      "solution_zh": [
+        "由 $BD/DC=2/3$ 得 $BD=4,DC=6$。",
+        "角平分线恒等式给出 $AD^2=6\\cdot9-4\\cdot6=30$。",
+        "故 $AD=\\sqrt{30}$；原三边满足严格三角不等式，内部构造合法。"
+      ],
+      "tip_en": "An angle bisector is not generally a median.",
+      "tip_zh": "角平分线一般不是中线。",
+      "question_ids": [
+        "AIME-2001-I-Q04",
+        "AIME-2002-I-Q10",
+        "AIME-2009-I-Q05",
+        "AIME-2010-I-Q15",
+        "AIME-2010-II-Q15",
+        "AIME-2012-I-Q12",
+        "AIME-2026-II-Q10"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [
+        "Stewart’s theorem for $BD=m,DC=n,BC=m+n$, $AB=c,AC=b,AD=d$ is $b^2m+c^2n=(m+n)(d^2+mn)$. Internal-bisector substitution yields the short identity above.",
+        "A bisected subangle can create an isosceles auxiliary triangle. Determine its other two angles before assuming the bisector splits the original side in half."
+      ],
+      "extensions_zh": [
+        "若 $BD=m,DC=n,BC=m+n,AB=c,AC=b,AD=d$，斯图尔特定理为 $b^2m+c^2n=(m+n)(d^2+mn)$；代入内角平分线比例即可得到上面的简式。",
+        "被平分的子角可能产生等腰辅助三角形，应先求另外两角，不能直接假设原边被平分。"
+      ]
+    },
+    {
+      "method_id": "GE05-M02",
+      "title_en": "Balance masses to locate cevian intersections",
+      "title_zh": "平衡质量定位劈线交点",
+      "steps_en": [
+        "Assign positive endpoint masses inversely proportional to the side-division lengths.",
+        "Scale the assignments so shared vertices carry the same mass.",
+        "Add endpoint masses when replacing a side by its division point, then read a new ratio inversely."
+      ],
+      "steps_zh": [
+        "端点质量按分段长度的反比分配。",
+        "统一缩放，使共用顶点质量一致。",
+        "将两端质量相加作为分点质量，再按反比读取新的线段比例。"
+      ],
+      "example_en": "In triangle $ABC$, $D\\in BC$ has $BD:DC=2:3$, and $E\\in CA$ has $CE:EA=1:2$. If $P=AD\\cap BE$, find $AP:PD$.",
+      "example_zh": "三角形中 $BD:DC=2:3,CE:EA=1:2$，且 $P=AD\\cap BE$，求 $AP:PD$。",
+      "solution_en": [
+        "Take masses $m_B=3,m_C=2$ to balance $D$. The ratio at $E$ requires $m_A=1$.",
+        "The mass at $D$ is $m_B+m_C=5$.",
+        "On $AD$, the balance relation is $AP/PD=m_D/m_A=5$, so the ratio is $5:1$."
+      ],
+      "solution_zh": [
+        "由 $D$ 取质量 $m_B=3,m_C=2$；$E$ 的比例再要求 $m_A=1$。",
+        "$D$ 的质量为 $m_B+m_C=5$。",
+        "沿 $AD$，平衡关系给出 $AP/PD=m_D/m_A=5$，故为 $5:1$。"
+      ],
+      "tip_en": "Masses add at a side point; segment lengths do not.",
+      "tip_zh": "分点处相加的是质量，不是线段长度。",
+      "question_ids": [
+        "AIME-2002-II-Q13",
+        "AIME-2011-II-Q04"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M03",
+      "title_en": "Reflect across a bisector to create an isosceles midpoint",
+      "title_zh": "关于角平分线反射构造等腰中点",
+      "steps_en": [
+        "Reflection across an internal angle bisector exchanges the two side rays.",
+        "Reflect a known endpoint onto the other side at the same distance from the vertex.",
+        "Transfer equal distances to the reflected points, then use perpendicular bisectors, midpoint theorems or parallel-line isosceles triangles."
+      ],
+      "steps_zh": [
+        "关于内角平分线反射会交换两条边射线。",
+        "把已知端点映到另一边上距顶点相等的位置。",
+        "将等距条件转移到反射点，再用垂直平分线、中点定理或平行线等腰三角形。"
+      ],
+      "example_en": "Angle $A$ is bisected by line $AM$. Point $B$ lies on one ray with $AB=3$. Its reflection is $B\\prime$. If $M$ lies on $AM$ and $MB=4$, find $MB\\prime$.",
+      "example_zh": "直线 $AM$ 平分角 $A$，一边上 $AB=3$，将 $B$ 反射得 $B\\prime$。若 $M$ 在平分线上且 $MB=4$，求 $MB\\prime$。",
+      "solution_en": [
+        "The reflection fixes $A,M$ and sends $B$ onto the other ray with $AB\\prime=3$.",
+        "Reflections preserve all distances, so $MB\\prime=MB=4$.",
+        "Thus $M$ lies on the perpendicular bisector of $BB\\prime$, a useful linear condition when several bisectors meet a midpoint."
+      ],
+      "solution_zh": [
+        "反射固定 $A,M$，并把 $B$ 映到另一射线上，$AB\\prime=3$。",
+        "反射保持距离，故 $MB\\prime=MB=4$。",
+        "因此 $M$ 在 $BB\\prime$ 的垂直平分线上；多个角平分线通过中点时，这可给出线性条件。"
+      ],
+      "tip_en": "Reflection preserves a ray’s distance from the vertex, not its original coordinate.",
+      "tip_zh": "反射保持到顶点的距离，不保持原坐标。",
+      "question_ids": [
+        "AIME-2003-I-Q15",
+        "AIME-2011-I-Q04",
+        "AIME-2022-I-Q03",
+        "AIME-2022-II-Q11"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE07"
+      ],
+      "extensions_en": [
+        "In a trapezoid, parallel bases often turn an angle-bisector intercept triangle into an isosceles triangle. The second bisector then becomes its median, placing the intersection at a midpoint.",
+        "To align coordinates with a bisector, place adjacent vertices at $(c\\cos t,c\\sin t),(a\\cos t,-a\\sin t)$. Locate the axis intercept by the bisector theorem before intersecting a perpendicular cut."
+      ],
+      "extensions_zh": [
+        "梯形中，平行底边常使角平分线截出的三角形成为等腰；另一条平分线于是成为中线，使交点成为中点。",
+        "若把平分线作为坐标轴，可将邻接两顶点写为 $(c\\cos t,c\\sin t),(a\\cos t,-a\\sin t)$。先用平分线定理定位轴上截点，再求垂直截线。"
+      ]
+    },
+    {
+      "method_id": "GE05-M04",
+      "title_en": "Cancel area in inradius, altitude and semiperimeter equations",
+      "title_zh": "在内切圆、三角高及半周长式中消去面积",
+      "steps_en": [
+        "Write $K=rs$ and $K=ah/2$ for the same triangle.",
+        "Ratios such as $r/h=a/(2s)$ eliminate area without computing radicals.",
+        "For equal inradii in adjacent triangles, replace radius equality by area divided by semiperimeter equality.",
+        "If tangent lengths are used, combine $K=rs$ with Heron and verify the circle is an incircle."
+      ],
+      "steps_zh": [
+        "对同一三角形写 $K=rs$ 与 $K=ah/2$。",
+        "用 $r/h=a/(2s)$ 等比例消去面积，无须先计算根式。",
+        "相邻三角形内切圆相等时，改写为面积除以半周长相等。",
+        "若使用切线长，可联立 $K=rs$ 与海伦公式，并确认所用圆确为内切圆。"
+      ],
+      "example_en": "A triangle has sides $5,6,7$. Through its incenter draw a line parallel to the side of length six. Find the resulting interior parallel chord.",
+      "example_zh": "三角形三边为 $5,6,7$，过内心作平行于六长边的直线，求内部平行截段长。",
+      "solution_en": [
+        "The semiperimeter is nine. If altitude to the six-side is $h$, then $r/h=6/(2\\cdot9)=1/3$.",
+        "The upper similar triangle has height $h-r=2h/3$.",
+        "Its base chord is therefore $(2/3)6=4$."
+      ],
+      "solution_zh": [
+        "半周长为九。以六长边为底的高为 $h$，则 $r/h=6/(2\\cdot9)=1/3$。",
+        "上方相似小三角形高为 $h-r=2h/3$。",
+        "所以平行底截段长为 $(2/3)6=4$。"
+      ],
+      "tip_en": "Use the semiperimeter of the correct subtriangle.",
+      "tip_zh": "应使用对应子三角形的半周长。",
+      "question_ids": [
+        "AIME-2001-I-Q07",
+        "AIME-2001-II-Q07",
+        "AIME-2009-I-Q12",
+        "AIME-2010-I-Q15",
+        "AIME-2005-I-Q15"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M05",
+      "title_en": "Tangent lengths are semiperimeter differences",
+      "title_zh": "切线长等于半周长之差",
+      "steps_en": [
+        "For sides $a,b,c$ and semiperimeter $s$, the two tangent lengths from $A$ equal $s-a$.",
+        "Use these values to locate incircle contact points on a common side.",
+        "Connect a vertex tangent length to the half-angle by $r=(s-a)\\tan(A/2)$.",
+        "When chords or a second tangent meet a triangle side, retain the actual segment order before adding lengths."
+      ],
+      "steps_zh": [
+        "三边为 $a,b,c$、半周长为 $s$ 时，从 $A$ 出发的两切线长为 $s-a$。",
+        "利用这些长度定位公共边上的内切圆切点。",
+        "由 $r=(s-a)\\tan(A/2)$ 将顶点切线长联系到半角。",
+        "弦或另一切线与边相交时，先明确线段次序，再作长度相加。"
+      ],
+      "example_en": "The incircle of a $5$–$12$–$13$ right triangle touches the hypotenuse. Find the two hypotenuse pieces.",
+      "example_zh": "五、十二、十三直角三角形的内切圆与斜边相切，求斜边两分段长。",
+      "solution_en": [
+        "The semiperimeter is fifteen. At the endpoints of the hypotenuse the opposite side lengths are twelve and five.",
+        "The tangent pieces are therefore $15-12=3$ and $15-5=10$.",
+        "They sum to thirteen, checking the hypotenuse length. Equal tangents transfer the same values onto the adjacent legs."
+      ],
+      "solution_zh": [
+        "半周长为十五，斜边两端对应的对边长为十二与五。",
+        "所以切线分段为 $15-12=3$ 与 $15-5=10$。",
+        "两段和为十三，核实斜边长度；等切线可把相同数值转移至邻接直角边。"
+      ],
+      "tip_en": "Tangent-length addition differs from secant-power multiplication.",
+      "tip_zh": "切线段相加与割线点幂相乘不可混用。",
+      "question_ids": [
+        "AIME-2007-II-Q09",
+        "AIME-2018-II-Q14",
+        "AIME-2022-I-Q11",
+        "AIME-2024-I-Q08"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE03"
+      ],
+      "extensions_en": [
+        "A circle row along a triangle base is controlled by the same half-angle cotangents as its incircle. Compare two rows to recover the common base coefficient without solving either base angle."
+      ],
+      "extensions_zh": [
+        "三角形底边圆链由与内切圆相同的两个半角余切控制。比较两种圆链可求共同底边系数，无需分别求两个底角。"
+      ]
+    },
+    {
+      "method_id": "GE05-M06",
+      "title_en": "Circumradius converts a side into a sine",
+      "title_zh": "外接圆半径把边长转化为正弦",
+      "steps_en": [
+        "Use $a=2R\\sin A$ or $R=abc/(4K)$ to connect a center radius with triangle metrics.",
+        "For an equidistant apex over a triangle plane, its projection is the base circumcenter.",
+        "Retain the correct half-angle and diagonal choices in a rhombus, and verify the circumcenter location when a filled region is involved."
+      ],
+      "steps_zh": [
+        "使用 $a=2R\\sin A$ 或 $R=abc/(4K)$ 联系圆心半径与三角形度量。",
+        "到三角形三个顶点等距的空间顶点，其投影为底面外心。",
+        "菱形中保留正确半角与对角线选择；涉及填满区域时核实外心位置。"
+      ],
+      "example_en": "A triangle has sides $13,14,15$. Find its circumradius.",
+      "example_zh": "三角形三边为 $13,14,15$，求外接圆半径。",
+      "solution_en": [
+        "The semiperimeter is twenty-one, so Heron gives $K=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$.",
+        "Use $R=abc/(4K)=13\\cdot14\\cdot15/(4\\cdot84)$.",
+        "This simplifies to $R=65/8$. Since $15^2<13^2+14^2$, the triangle is acute and its circumcenter is interior."
+      ],
+      "solution_zh": [
+        "半周长为二十一，海伦公式给出 $K=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$。",
+        "使用 $R=abc/(4K)=13\\cdot14\\cdot15/(4\\cdot84)$。",
+        "化简为 $R=65/8$；由于 $15^2<13^2+14^2$，三角形为锐角，外心在内部。"
+      ],
+      "tip_en": "A circumradius is not generally the distance from the centroid to a vertex.",
+      "tip_zh": "外接圆半径一般不是重心到顶点的距离。",
+      "question_ids": [
+        "AIME-2000-II-Q12",
+        "AIME-2003-II-Q07",
+        "AIME-2017-I-Q04"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M07",
+      "title_en": "Incenter distances are half-angle right triangles",
+      "title_zh": "内心距离来自半角直角三角形",
+      "steps_en": [
+        "Drop a radius to a side: $AI=r/\\sin(A/2)$ and the adjacent tangent length is $r\\cot(A/2)$.",
+        "The internal bisectors meet with $\\angle BIC=90^\\circ+A/2$.",
+        "In an isosceles triangle, put the center on its symmetry axis and use one half-triangle.",
+        "For excircles use $r_a=K/(s-a)$; preserve external-center directions."
+      ],
+      "steps_zh": [
+        "向边作半径，得 $AI=r/\\sin(A/2)$，邻接切线长为 $r\\cot(A/2)$。",
+        "内角平分线满足 $\\angle BIC=90^\\circ+A/2$。",
+        "等腰三角形中把内心放在对称轴上，使用半个三角形。",
+        "旁切圆使用 $r_a=K/(s-a)$，并保留外部圆心方向。"
+      ],
+      "example_en": "In a triangle with inradius two and angle $A=60^\\circ$, find $AI$ and $\\angle BIC$.",
+      "example_zh": "三角形内切圆半径二，$A=60^\\circ$，求 $AI$ 与 $\\angle BIC$。",
+      "solution_en": [
+        "At a contact point, the radius is perpendicular to the side and the angle at $A$ is $30^\\circ$.",
+        "Therefore $AI=2/\\sin30^\\circ=4$.",
+        "The bisector-angle identity gives $\\angle BIC=90^\\circ+30^\\circ=120^\\circ$."
+      ],
+      "solution_zh": [
+        "切点处半径垂直边，$A$ 处夹角为 $30^\\circ$。",
+        "所以 $AI=2/\\sin30^\\circ=4$。",
+        "平分线交角恒等式给出 $\\angle BIC=120^\\circ$。"
+      ],
+      "tip_en": "An angle between unoriented bisector lines may be supplementary to the angle between their inward rays.",
+      "tip_zh": "无向角平分线的夹角，可能是向内射线交角的补角。",
+      "question_ids": [
+        "AIME-2007-II-Q15",
+        "AIME-2009-I-Q15",
+        "AIME-2009-II-Q10",
+        "AIME-2015-I-Q11",
+        "AIME-2018-I-Q13",
+        "AIME-2019-I-Q11",
+        "AIME-2026-II-Q08"
+      ],
+      "prerequisites": [
+        "GE03",
+        "AL07"
+      ],
+      "extensions_en": [
+        "Three equal corner circles have centers homothetic to the vertices about the incenter, with ratio $(r-x)/r$. In an isosceles triangle with base $a$, equal sides $b$ and altitude $h$, use $r=ah/(a+2b)$, base exradius $ah/(2b-a)$ and other exradii $h$."
+      ],
+      "extensions_zh": [
+        "三个等角圆的圆心，是三顶点以内心为中心、比例 $(r-x)/r$ 的位似像。等腰三角形底边为 $a$、腰为 $b$、高为 $h$ 时，可用 $r=ah/(a+2b)$、底边旁切圆半径 $ah/(2b-a)$、另两旁切圆半径 $h$。"
+      ]
+    },
+    {
+      "method_id": "GE05-M08",
+      "title_en": "Euler’s center identity links inradius and circumradius",
+      "title_zh": "欧拉圆心恒等式联系内外接半径",
+      "steps_en": [
+        "For incenter $I$ and circumcenter $O$, use $OI^2=R^2-2Rr$.",
+        "Combine a perpendicular-center condition with a right triangle involving a vertex on the circumcircle.",
+        "Recover a half-angle from $AI=r/\\sin(A/2)$, then use $K=rs=bc\\sin A/2$."
+      ],
+      "steps_zh": [
+        "对内心 $I$、外心 $O$，使用 $OI^2=R^2-2Rr$。",
+        "将圆心垂直条件与包含圆上顶点的直角三角形结合。",
+        "由 $AI=r/\\sin(A/2)$ 求半角，再用 $K=rs=bc\\sin A/2$。"
+      ],
+      "example_en": "A triangle has $R=5,r=2$ and $IA\\perp OI$. Find $AI$.",
+      "example_zh": "三角形有 $R=5,r=2$ 且 $IA\\perp OI$，求 $AI$。",
+      "solution_en": [
+        "Euler gives $OI^2=25-20=5$.",
+        "In right triangle $OIA$, $AI^2=OA^2-OI^2=25-5=20$.",
+        "Thus $AI=2\\sqrt5$ and $\\sin(A/2)=2/(2\\sqrt5)=1/\\sqrt5$, consistent with a positive angle."
+      ],
+      "solution_zh": [
+        "欧拉恒等式给出 $OI^2=25-20=5$。",
+        "直角三角形 $OIA$ 中，$AI^2=OA^2-OI^2=20$。",
+        "所以 $AI=2\\sqrt5$，且 $\\sin(A/2)=1/\\sqrt5$，符合正角条件。"
+      ],
+      "tip_en": "Write the right triangle with its actual right-angle vertex.",
+      "tip_zh": "必须按实际直角顶点写勾股关系。",
+      "question_ids": [
+        "AIME-2024-II-Q10"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M09",
+      "title_en": "The bisector’s arc midpoint is equidistant from the incenter and endpoints",
+      "title_zh": "角平分线弧中点到内心及弧端点等距",
+      "steps_en": [
+        "The internal bisector from $A$ meets the circumcircle at the midpoint $M$ of the arc $BC$ not containing $A$.",
+        "Angle chasing gives $MB=MC=MI$ for the incenter $I$.",
+        "Use these equal distances with secant power, similar triangles or an antipodal point.",
+        "Keep the order of the bisector’s circle, side and incenter intersections explicit."
+      ],
+      "steps_zh": [
+        "从 $A$ 出发的内角平分线交外接圆于不含 $A$ 的弧 $BC$ 中点 $M$。",
+        "追角可得 $MB=MC=MI$，其中 $I$ 为内心。",
+        "将等距与割线点幂、相似三角形或对径点结合。",
+        "明确角平分线上圆交点、边交点及内心的次序。"
+      ],
+      "example_en": "An internal bisector from $C$ meets side $AB$ at $L$, then its circumcircle at $M$. The order is $C,I,L,M$, with $LI=1,LM=2$. Find $MC$ if $MA^2=LM\\cdot MC$.",
+      "example_zh": "从 $C$ 的内角平分线交 $AB$ 于 $L$、再交外接圆于 $M$，点序为 $C,I,L,M$，且 $LI=1,LM=2$。已知 $MA^2=LM\\cdot MC$，求 $MC$。",
+      "solution_en": [
+        "By the arc-midpoint lemma, $MA=MI$. The given order gives $MI=LI+LM=3$.",
+        "The secant relation becomes $9=2MC$.",
+        "Thus $MC=9/2$, and $CI=MC-MI=3/2>0$ checks the stated order."
+      ],
+      "solution_zh": [
+        "弧中点引理给出 $MA=MI$，由点序得 $MI=LI+LM=3$。",
+        "割线关系成为 $9=2MC$。",
+        "所以 $MC=9/2$，且 $CI=MC-MI=3/2>0$，核实点序。"
+      ],
+      "tip_en": "An antipode turns a cyclic right angle into a line relation; choose the correct arc midpoint first.",
+      "tip_zh": "对径点可将圆内直角转为直线关系，但须先选对弧中点。",
+      "question_ids": [
+        "AIME-2012-II-Q15",
+        "AIME-2014-II-Q14",
+        "AIME-2016-I-Q06",
+        "AIME-2020-I-Q13"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE03"
+      ],
+      "extensions_en": [
+        "To prove $MA=MI$ in the version with bisector from $C$ and arc midpoint $M$ of $AB$, let half-angles at $A,C$ be $u,v$. Both $\\angle MAI$ and $\\angle MIA$ equal $u+v$, making triangle $AMI$ isosceles."
+      ],
+      "extensions_zh": [
+        "对从 $C$ 平分至弧 $AB$ 中点 $M$ 的版本，设 $A,C$ 半角为 $u,v$。则 $\\angle MAI$ 与 $\\angle MIA$ 均为 $u+v$，故 $AMI$ 等腰，得到 $MA=MI$。"
+      ]
+    },
+    {
+      "method_id": "GE05-M10",
+      "title_en": "Centroid, circumcenter and nine-point circle have exact coordinate roles",
+      "title_zh": "重心、外心与九点圆具有精确坐标角色",
+      "steps_en": [
+        "The centroid is the average of the three vertex vectors and divides each median in ratio $2:1$.",
+        "Find a circumcenter from perpendicular-bisector equations, and use symmetry to identify it with the centroid only in special triangles.",
+        "The side midpoints and altitude feet lie on the nine-point circle; convert its arcs using inscribed angles.",
+        "When right-angle circles transfer directed angles, finish with a ray and supplement check."
+      ],
+      "steps_zh": [
+        "重心为三个顶点向量的平均，按 $2:1$ 分每条中线。",
+        "外心由垂直平分线方程确定，只有特殊三角形才能凭对称性认定其与重心相同。",
+        "三边中点及三条高的垂足共九点圆，可用圆周角换算弧。",
+        "利用直角圆传递有向角后，最后仍须检验射线与补角分支。"
+      ],
+      "example_en": "Triangle vertices are $(0,0),(6,0),(0,6)$. Find its centroid and circumcenter.",
+      "example_zh": "三角形顶点为 $(0,0),(6,0),(0,6)$，求重心与外心。",
+      "solution_en": [
+        "The average vertex vector gives centroid $G=(2,2)$.",
+        "The two axis legs have perpendicular bisectors $x=3,y=3$, so circumcenter $O=(3,3)$.",
+        "They are distinct. As a right-triangle check, $O$ is the midpoint of the hypotenuse."
+      ],
+      "solution_zh": [
+        "顶点平均给出重心 $G=(2,2)$。",
+        "两条轴上直角边的垂直平分线为 $x=3,y=3$，所以外心 $O=(3,3)$。",
+        "两中心不同；直角三角形的斜边中点为外心，也核实了结果。"
+      ],
+      "tip_en": "Directed-angle equality modulo $180^\\circ$ does not determine the ordinary angle without ray information.",
+      "tip_zh": "模 $180^\\circ$ 的有向角相等，不能在缺少射线信息时直接确定普通角。",
+      "question_ids": [
+        "AIME-2002-I-Q13",
+        "AIME-2011-II-Q13",
+        "AIME-2013-II-Q04",
+        "AIME-2021-II-Q14",
+        "AIME-2025-II-Q05"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M11",
+      "title_en": "Isogonal cevians give a sine-area product relation",
+      "title_zh": "等角劈线给出正弦面积乘积关系",
+      "steps_en": [
+        "For cevians from one vertex, write each pair of adjacent subtriangle areas using a common pair of side lengths and angle sines.",
+        "Equal reflected angles exchange the sine factors, causing the product of opposite area ratios to simplify.",
+        "Use the remaining side ratios or area totals to solve, retaining which cevian is internal."
+      ],
+      "steps_zh": [
+        "对同顶点劈线，用共同侧边长度及夹角正弦表示相邻子三角形面积。",
+        "关于角平分线对称的角交换正弦因子，使两组面积比乘积化简。",
+        "再用剩余边比或面积总和求解，并保留内部劈线位置。"
+      ],
+      "example_en": "In triangle $ABC$, $AB=2AC$. Rays $AD,AE$ inside angle $A$ satisfy $\\angle BAD=\\angle EAC$. Show $(BD/DC)(BE/EC)=4$.",
+      "example_zh": "三角形中 $AB=2AC$，内部射线 $AD,AE$ 满足 $\\angle BAD=\\angle EAC$。证明 $(BD/DC)(BE/EC)=4$。",
+      "solution_en": [
+        "By common-altitude area ratios, $BD/DC=[ABD]/[ACD]=(AB/AC)\\sin\\angle BAD/\\sin\\angle DAC$.",
+        "Similarly $BE/EC=(AB/AC)\\sin\\angle BAE/\\sin\\angle EAC$. Isogonality makes $\\angle BAE=\\angle DAC$.",
+        "Multiplication cancels both sine ratios, giving $(AB/AC)^2=4$."
+      ],
+      "solution_zh": [
+        "由等高面积比，$BD/DC=(AB/AC)\\sin\\angle BAD/\\sin\\angle DAC$。",
+        "同理 $BE/EC=(AB/AC)\\sin\\angle BAE/\\sin\\angle EAC$，而等角关系使 $\\angle BAE=\\angle DAC$。",
+        "相乘后正弦比相消，得到 $(AB/AC)^2=4$。"
+      ],
+      "tip_en": "Two equal-looking angles must be located at the same vertex before applying isogonality.",
+      "tip_zh": "应用等角共轭前，应确认所比较的角位于同一顶点。",
+      "question_ids": [
+        "AIME-2005-II-Q14"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE05-M12",
+      "title_en": "A midpoint perimeter bisector is parallel to the opposite angle bisector",
+      "title_zh": "过边中点的周长平分线平行于对角平分线",
+      "steps_en": [
+        "Equal polygon perimeters after a cut mean the two original boundary routes between cut endpoints have equal length.",
+        "Through a side midpoint, construct the second endpoint using the difference of the adjacent side lengths.",
+        "Write its displacement as a scalar multiple of the sum of the two unit side directions at the opposite vertex.",
+        "The sum points along the internal angle bisector; convert the acute angle between two such lines with a supplement check."
+      ],
+      "steps_zh": [
+        "切开后的两多边形周长相等，等价于切点之间原边界两条路线等长。",
+        "从边中点出发，利用相邻边长之差确定第二切点。",
+        "将该切线向量写成对角顶点两边单位方向向量之和的倍数。",
+        "单位向量和沿内角平分线，最后换算两条此类直线的锐夹角并检验补角。"
+      ],
+      "example_en": "Triangle $ABC$ has $CA=5,CB=7$. Let $M$ be the midpoint of $AB$, and $X\\in CB$ with $CX=1$. Prove $MX$ bisects perimeter and is parallel to the $C$-bisector.",
+      "example_zh": "三角形中 $CA=5,CB=7$，$M$ 为 $AB$ 中点，$X\\in CB$ 且 $CX=1$。证明 $MX$ 平分周长并平行于 $C$ 的角平分线。",
+      "solution_en": [
+        "Boundary routes $M-A-C-X$ and $M-B-X$ have lengths $AB/2+5+1$ and $AB/2+6$, hence equal.",
+        "With unit vectors $u,v$ from $C$ toward $A,B$, $M=(5u+7v)/2$ and $X=v$.",
+        "Thus $M-X=(5/2)(u+v)$, parallel to the internal bisector at $C$. Adding the common cut $MX$ preserves equality of the two new perimeters."
+      ],
+      "solution_zh": [
+        "边界路线 $M-A-C-X$ 与 $M-B-X$ 的长度分别为 $AB/2+5+1$ 与 $AB/2+6$，相等。",
+        "以从 $C$ 指向 $A,B$ 的单位向量为 $u,v$，则 $M=(5u+7v)/2,X=v$。",
+        "所以 $M-X=(5/2)(u+v)$，平行于 $C$ 的内角平分线；两边都加入共同切段 $MX$ 后，新周长仍相等。"
+      ],
+      "tip_en": "Perimeter bisection and area bisection are different conditions.",
+      "tip_zh": "平分周长与平分面积是不同条件。",
+      "question_ids": [
+        "AIME-2022-I-Q14"
+      ],
+      "prerequisites": [
+        "GE07",
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2001-II-Q07",
+    "AIME-2002-I-Q10",
+    "AIME-2007-II-Q09",
+    "AIME-2009-I-Q12",
+    "AIME-2010-I-Q15",
+    "AIME-2011-I-Q04",
+    "AIME-2011-II-Q04",
+    "AIME-2012-I-Q12",
+    "AIME-2014-II-Q14",
+    "AIME-2015-I-Q11",
+    "AIME-2016-I-Q06",
+    "AIME-2018-I-Q13",
+    "AIME-2020-I-Q13",
+    "AIME-2022-I-Q03",
+    "AIME-2022-I-Q14",
+    "AIME-2022-II-Q11",
+    "AIME-2024-II-Q10",
+    "AIME-2026-II-Q08"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-I-Q04": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2002-I-Q10": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2009-I-Q05": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2010-I-Q15": {
+      "method_ids": [
+        "GE05-M01",
+        "GE05-M04"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2010-II-Q15": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2012-I-Q12": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2026-II-Q10": {
+      "method_ids": [
+        "GE05-M01"
+      ],
+      "prerequisites": [
+        "GE04",
+        "NT01"
+      ]
+    },
+    "AIME-2002-II-Q13": {
+      "method_ids": [
+        "GE05-M02"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2011-II-Q04": {
+      "method_ids": [
+        "GE05-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2003-I-Q15": {
+      "method_ids": [
+        "GE05-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2011-I-Q04": {
+      "method_ids": [
+        "GE05-M03"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2022-I-Q03": {
+      "method_ids": [
+        "GE05-M03"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE07"
+      ]
+    },
+    "AIME-2022-II-Q11": {
+      "method_ids": [
+        "GE05-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2001-I-Q07": {
+      "method_ids": [
+        "GE05-M04"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2001-II-Q07": {
+      "method_ids": [
+        "GE05-M04"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE07"
+      ]
+    },
+    "AIME-2009-I-Q12": {
+      "method_ids": [
+        "GE05-M04"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ]
+    },
+    "AIME-2005-I-Q15": {
+      "method_ids": [
+        "GE05-M04"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2007-II-Q09": {
+      "method_ids": [
+        "GE05-M05"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2018-II-Q14": {
+      "method_ids": [
+        "GE05-M05"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2022-I-Q11": {
+      "method_ids": [
+        "GE05-M05"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2024-I-Q08": {
+      "method_ids": [
+        "GE05-M05"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE06"
+      ]
+    },
+    "AIME-2000-II-Q12": {
+      "method_ids": [
+        "GE05-M06"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE09"
+      ]
+    },
+    "AIME-2003-II-Q07": {
+      "method_ids": [
+        "GE05-M06"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2017-I-Q04": {
+      "method_ids": [
+        "GE05-M06"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE10"
+      ]
+    },
+    "AIME-2007-II-Q15": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE06"
+      ]
+    },
+    "AIME-2009-I-Q15": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE04"
+      ]
+    },
+    "AIME-2009-II-Q10": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07"
+      ]
+    },
+    "AIME-2015-I-Q11": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2018-I-Q13": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE03"
+      ]
+    },
+    "AIME-2019-I-Q11": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "GE06",
+        "NT05"
+      ]
+    },
+    "AIME-2026-II-Q08": {
+      "method_ids": [
+        "GE05-M07"
+      ],
+      "prerequisites": [
+        "AL02",
+        "NT05"
+      ]
+    },
+    "AIME-2024-II-Q10": {
+      "method_ids": [
+        "GE05-M08"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2012-II-Q15": {
+      "method_ids": [
+        "GE05-M09"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2014-II-Q14": {
+      "method_ids": [
+        "GE05-M09"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2016-I-Q06": {
+      "method_ids": [
+        "GE05-M09"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE04"
+      ]
+    },
+    "AIME-2020-I-Q13": {
+      "method_ids": [
+        "GE05-M09"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2002-I-Q13": {
+      "method_ids": [
+        "GE05-M10"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ]
+    },
+    "AIME-2011-II-Q13": {
+      "method_ids": [
+        "GE05-M10"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2013-II-Q04": {
+      "method_ids": [
+        "GE05-M10"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2021-II-Q14": {
+      "method_ids": [
+        "GE05-M10"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2025-II-Q05": {
+      "method_ids": [
+        "GE05-M10"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE04"
+      ]
+    },
+    "AIME-2005-II-Q14": {
+      "method_ids": [
+        "GE05-M11"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2022-I-Q14": {
+      "method_ids": [
+        "GE05-M12"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07",
+        "NT05"
+      ]
+    }
+  },
+  "review": {
+    "author": "print_builder",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

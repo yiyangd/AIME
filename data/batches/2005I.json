@@ -1,0 +1,694 @@
+[
+  {
+    "question_id": "AIME-2005-I-Q01",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "If the small radius is $r$, the centers form a regular hexagon of side and circumradius $2r$. Internal tangency gives $2r+r=30$, so $r=10$.",
+      "reason_zh": "设小圆半径为 $r$，六圆心组成边长及外接圆半径均为 $2r$ 的正六边形。内切给出 $3r=30$，故 $r=10$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The area is $K=\\pi(900-6\\cdot100)=300\\pi$, between $942$ and $943$. Its floor is $942$.",
+        "reason_zh": "面积 $K=\\pi(900-600)=300\\pi$，介于 $942$ 与 $943$ 之间，所求 $942$。"
+      }
+    ],
+    "statement_en": "Six equal circles form a cyclic ring, each touching its neighbors externally and a radius-$30$ circle internally. If $K$ is the area inside the large circle but outside the six small disks, find $\\lfloor K\\rfloor$.",
+    "statement_zh": "六个等圆首尾成环，相邻外切，且均与半径 $30$ 的大圆内切。大圆内、六小圆盘外的面积为 $K$，求 $\\lfloor K\\rfloor$。",
+    "answer": 942,
+    "solution_en": [
+      "If the small radius is $r$, the centers form a regular hexagon of side and circumradius $2r$. Internal tangency gives $2r+r=30$, so $r=10$.",
+      "The area is $K=\\pi(900-6\\cdot100)=300\\pi$, between $942$ and $943$. Its floor is $942$."
+    ],
+    "solution_zh": [
+      "设小圆半径为 $r$，六圆心组成边长及外接圆半径均为 $2r$ 的正六边形。内切给出 $3r=30$，故 $r=10$。",
+      "面积 $K=\\pi(900-600)=300\\pi$，介于 $942$ 与 $943$ 之间，所求 $942$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/1",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q02",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "The condition is exactly $k\\mid2004$, since the target requires $1+jk=2005$ for an integer $j\\ge1$.",
+      "reason_zh": "条件恰为 $k\\mid2004$，因为目标要求某个正整数 $j$ 满足 $1+jk=2005$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The condition is exactly $k\\mid2004$, since the target requires $1+jk=2005$ for an integer $j\\ge1$.",
+        "reason_zh": "条件恰为 $k\\mid2004$，因为目标要求某个正整数 $j$ 满足 $1+jk=2005$。"
+      }
+    ],
+    "statement_en": "How many positive differences $k$ make the arithmetic sequence $1,1+k,1+2k,\\ldots$ contain $2005$?",
+    "statement_zh": "有多少个正公差 $k$ 使等差数列 $1,1+k,1+2k,\\ldots$ 包含 $2005$？",
+    "answer": 12,
+    "solution_en": [
+      "The condition is exactly $k\\mid2004$, since the target requires $1+jk=2005$ for an integer $j\\ge1$.",
+      "$2004=2^2\\cdot3\\cdot167$, so the divisor count is $3\\cdot2\\cdot2=12$."
+    ],
+    "solution_zh": [
+      "条件恰为 $k\\mid2004$，因为目标要求某个正整数 $j$ 满足 $1+jk=2005$。",
+      "$2004=2^2\\cdot3\\cdot167$，故约数个数为 $12$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/2",
+    "method_chain": [
+      "Divisor functions & totients",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q03",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "Four total divisors forces the form $p^3$ or $pq$ for distinct primes. The latter has proper divisors $1,p,q$, so choose two of the fifteen primes below fifty: $\\binom{15}{2}=105$.",
+      "reason_zh": "总约数数为四，故只能为 $p^3$ 或不同素数之积 $pq$。后一类真约数为 $1,p,q$，从小于五十的十五个素数中选二，有 $105$ 种。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "For $p^3$, the largest proper divisor is $p^2<50$, giving $p=2,3,5,7$. Total $105+4=109$.",
+        "reason_zh": "前一类要求 $p^2<50$，所以 $p=2,3,5,7$，另有四种，合计 $109$。"
+      }
+    ],
+    "statement_en": "Count positive integers having exactly three proper divisors, all smaller than $50$. A proper divisor excludes the integer itself.",
+    "statement_zh": "求恰有三个真约数且三个都小于 $50$ 的正整数个数，真约数不包括该数本身。",
+    "answer": 109,
+    "solution_en": [
+      "Four total divisors forces the form $p^3$ or $pq$ for distinct primes. The latter has proper divisors $1,p,q$, so choose two of the fifteen primes below fifty: $\\binom{15}{2}=105$.",
+      "For $p^3$, the largest proper divisor is $p^2<50$, giving $p=2,3,5,7$. Total $105+4=109$."
+    ],
+    "solution_zh": [
+      "总约数数为四，故只能为 $p^3$ 或不同素数之积 $pq$。后一类真约数为 $1,p,q$，从小于五十的十五个素数中选二，有 $105$ 种。",
+      "前一类要求 $p^2<50$，所以 $p=2,3,5,7$，另有四种，合计 $109$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/3",
+    "method_chain": [
+      "Divisor functions & totients",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q04",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Write $N=s^2+5=x(x+7)$. Completing the square gives $(2x+7-2s)(2x+7+2s)=69$.",
+      "reason_zh": "设 $N=s^2+5=x(x+7)$，配方得 $(2x+7-2s)(2x+7+2s)=69$。"
+    },
+    "secondary": [],
+    "statement_en": "A band has five members left over after making a square formation. It can instead form a complete rectangle with seven more rows than columns. Find the largest possible band size.",
+    "statement_zh": "乐队排成正方阵后多出五人，但可排成行数比列数多七的完整长方阵。求最多人数。",
+    "answer": 294,
+    "solution_en": [
+      "Write $N=s^2+5=x(x+7)$. Completing the square gives $(2x+7-2s)(2x+7+2s)=69$.",
+      "The positive factor pairs are $(1,69)$ and $(3,23)$. They give $(x,s)=(14,17)$ or $(3,5)$, hence sizes $294,30$. The maximum is $294$."
+    ],
+    "solution_zh": [
+      "设 $N=s^2+5=x(x+7)$，配方得 $(2x+7-2s)(2x+7+2s)=69$。",
+      "正因子对为 $(1,69),(3,23)$，分别给出 $(x,s)=(14,17),(3,5)$，人数为 $294,30$，故最大 $294$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/4",
+    "method_chain": [
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q05",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO01",
+      "reason_en": "Read orientations bottom to top as $U,D$. The forbidden adjacency is $UD$, so every valid string consists of some down-facing coins followed by up-facing coins: nine choices for the split.",
+      "reason_zh": "从下至上将方向记为 $U,D$，禁止相邻模式 $UD$，所以合法串必为若干 $D$ 后接若干 $U$，分界有九种。"
+    },
+    "secondary": [],
+    "statement_en": "Stack four identical gold and four identical silver coins. Each has one engraved face, independently orientable up or down. Count distinguishable stacks with no adjacent engraved faces facing one another.",
+    "statement_zh": "将四枚相同金币与四枚相同银币叠成一柱，每枚仅一面有雕刻，可朝上或朝下。求相邻两枚雕刻面不相对的不同叠法数。",
+    "answer": 630,
+    "solution_en": [
+      "Read orientations bottom to top as $U,D$. The forbidden adjacency is $UD$, so every valid string consists of some down-facing coins followed by up-facing coins: nine choices for the split.",
+      "Independently choose the four gold positions in $\\binom84=70$ ways. Total $9\\cdot70=630$."
+    ],
+    "solution_zh": [
+      "从下至上将方向记为 $U,D$，禁止相邻模式 $UD$，所以合法串必为若干 $D$ 后接若干 $U$，分界有九种。",
+      "独立地选择四个金币位置，有 $\\binom84=70$ 种，总数 $630$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/5",
+    "method_chain": [
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q06",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Adding one yields $(x-1)^4=2006$. The nonreal roots are $1\\pm i\\sqrt[4]{2006}$.",
+      "reason_zh": "两边加一得 $(x-1)^4=2006$，非实根为 $1\\pm i\\sqrt[4]{2006}$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Adding one yields $(x-1)^4=2006$. The nonreal roots are $1\\pm i\\sqrt[4]{2006}$.",
+        "reason_zh": "两边加一得 $(x-1)^4=2006$，非实根为 $1\\pm i\\sqrt[4]{2006}$。"
+      }
+    ],
+    "statement_en": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005$. Find $\\lfloor P\\rfloor$.",
+    "statement_zh": "令 $P$ 为方程 $x^4-4x^3+6x^2-4x=2005$ 的所有非实根之积，求 $\\lfloor P\\rfloor$。",
+    "answer": 45,
+    "solution_en": [
+      "Adding one yields $(x-1)^4=2006$. The nonreal roots are $1\\pm i\\sqrt[4]{2006}$.",
+      "Their product is $1+\\sqrt{2006}$. Since $44^2<2006<45^2$, this lies between $45$ and $46$, so the floor is $45$."
+    ],
+    "solution_zh": [
+      "两边加一得 $(x-1)^4=2006$，非实根为 $1\\pm i\\sqrt[4]{2006}$。",
+      "乘积为 $1+\\sqrt{2006}$。由 $44^2<2006<45^2$，其值介于 $45$ 与 $46$，故取整为 $45$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/6",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q07",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Extend $AD$ and $BC$ to meet at $P$. Triangle $ABP$ is equilateral. Writing $x=AB$ gives $PD=x-10,PC=x-8$ and included angle sixty degrees.",
+      "reason_zh": "延长 $AD,BC$ 交于 $P$，则 $ABP$ 为等边三角形。设 $x=AB$，有 $PD=x-10,PC=x-8$，夹角六十度。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Cosine rule gives $144=(x-10)^2+(x-8)^2-(x-10)(x-8)=x^2-18x+84$. Thus $x=9+\\sqrt{141}$, so $p+q=150$.",
+        "reason_zh": "余弦定理给出 $144=x^2-18x+84$，正根为 $x=9+\\sqrt{141}$，故所求 $150$。"
+      }
+    ],
+    "statement_en": "Quadrilateral $ABCD$ has $BC=8,CD=12,DA=10$ and interior angles $A=B=60^\\circ$. If $AB=p+\\sqrt q$ for positive integers $p,q$, find $p+q$.",
+    "statement_zh": "四边形 $ABCD$ 中 $BC=8,CD=12,DA=10$，内角 $A=B=60^\\circ$。若 $AB=p+\\sqrt q$，其中 $p,q$ 为正整数，求 $p+q$。",
+    "answer": 150,
+    "solution_en": [
+      "Extend $AD$ and $BC$ to meet at $P$. Triangle $ABP$ is equilateral. Writing $x=AB$ gives $PD=x-10,PC=x-8$ and included angle sixty degrees.",
+      "Cosine rule gives $144=(x-10)^2+(x-8)^2-(x-10)(x-8)=x^2-18x+84$. Thus $x=9+\\sqrt{141}$, so $p+q=150$."
+    ],
+    "solution_zh": [
+      "延长 $AD,BC$ 交于 $P$，则 $ABP$ 为等边三角形。设 $x=AB$，有 $PD=x-10,PC=x-8$，夹角六十度。",
+      "余弦定理给出 $144=x^2-18x+84$，正根为 $x=9+\\sqrt{141}$，故所求 $150$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/7",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q08",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Put $y=2^{111x}>0$, converting the equation to $y^3-8y^2+16y-4=0$. The three stated real $x$ roots correspond bijectively to three positive $y$ roots.",
+      "reason_zh": "令 $y=2^{111x}>0$，得 $y^3-8y^2+16y-4=0$。题给三个实根与三个正 $y$ 根一一对应。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "By Vieta their product is four, so the $x$-sum is $\\log_2(4)/111=2/111$. The answer is $113$.",
+        "reason_zh": "由韦达定理三根乘积为四，所以 $x$ 根和为 $\\log_2(4)/111=2/111$，所求 $113$。"
+      }
+    ],
+    "statement_en": "The equation $2^{333x-2}+2^{111x+2}=2^{222x+1}+1$ has three real roots with reduced sum $m/n$. Find $m+n$.",
+    "statement_zh": "方程 $2^{333x-2}+2^{111x+2}=2^{222x+1}+1$ 有三个实根，其和为最简分数 $m/n$，求 $m+n$。",
+    "answer": 113,
+    "solution_en": [
+      "Put $y=2^{111x}>0$, converting the equation to $y^3-8y^2+16y-4=0$. The three stated real $x$ roots correspond bijectively to three positive $y$ roots.",
+      "By Vieta their product is four, so the $x$-sum is $\\log_2(4)/111=2/111$. The answer is $113$."
+    ],
+    "solution_zh": [
+      "令 $y=2^{111x}>0$，得 $y^3-8y^2+16y-4=0$。题给三个实根与三个正 $y$ 根一一对应。",
+      "由韦达定理三根乘积为四，所以 $x$ 根和为 $\\log_2(4)/111=2/111$，所求 $113$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/8",
+    "method_chain": [
+      "Logarithms & exponentials",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q09",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "The edge joining the two unpainted faces is uniformly one of twelve edges. At a large-cube corner, edge position, face center, the fractions placing both bad faces inward are $3/12=1/4$, $5/12$, and $8/12=2/3$, respectively.",
+      "reason_zh": "两个未染面的公共棱等可能位于十二条棱之一。在大立方体角、棱、面心位置，使两个坏面都朝内的概率分别为 $3/12,5/12,8/12$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE10",
+        "reason_en": "The edge joining the two unpainted faces is uniformly one of twelve edges. At a large-cube corner, edge position, face center, the fractions placing both bad faces inward are $3/12=1/4$, $5/12$, and $8/12=2/3$, respectively.",
+        "reason_zh": "两个未染面的公共棱等可能位于十二条棱之一。在大立方体角、棱、面心位置，使两个坏面都朝内的概率分别为 $3/12,5/12,8/12$。"
+      }
+    ],
+    "statement_en": "Twenty-seven cubes each have two adjacent unpainted faces and four orange faces. Random independent orientations form a $3\\times3\\times3$ cube. Its all-orange exterior has probability $p^a/(q^br^c)$ in prime-factor form. Find $a+b+c+p+q+r$.",
+    "statement_zh": "二十七个小立方体各有两个相邻面未染色，其余四面为橙色。随机独立定向后拼成 $3\\times3\\times3$ 大立方体。外表全橙的概率分解为 $p^a/(q^br^c)$，求 $a+b+c+p+q+r$。",
+    "answer": 74,
+    "solution_en": [
+      "The edge joining the two unpainted faces is uniformly one of twelve edges. At a large-cube corner, edge position, face center, the fractions placing both bad faces inward are $3/12=1/4$, $5/12$, and $8/12=2/3$, respectively.",
+      "With eight corner, twelve edge and six face-center cubes, multiply to get $(1/4)^8(5/12)^{12}(2/3)^6=5^{12}/(2^{34}3^{18})$. The central cube imposes no condition.",
+      "The requested sum is $12+34+18+5+2+3=74$."
+    ],
+    "solution_zh": [
+      "两个未染面的公共棱等可能位于十二条棱之一。在大立方体角、棱、面心位置，使两个坏面都朝内的概率分别为 $3/12,5/12,8/12$。",
+      "相应小立方体数为八、十二、六，中心不受限制，所以概率为 $(1/4)^8(5/12)^{12}(2/3)^6=5^{12}/(2^{34}3^{18})$。",
+      "所求为 $12+34+18+5+2+3=74$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/9",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Volumes & solid geometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q10",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The midpoint is $(35/2,39/2)$, so the median line is $q=-5p+107$.",
+      "reason_zh": "$BC$ 中点为 $(35/2,39/2)$，故中线方程为 $q=-5p+107$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Signed double area gives $|980-56p|=140$, hence $p=15$ or $20$. Since $p+q=107-4p$, its maximum is $47$.",
+        "reason_zh": "面积条件给出 $|980-56p|=140$，所以 $p=15$ 或 $20$。因 $p+q=107-4p$，最大值为 $47$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has area $70$, $B=(12,19)$, $C=(23,20)$, and $A=(p,q)$. Its median to $BC$ lies on a line of slope $-5$. Maximize $p+q$.",
+    "statement_zh": "三角形 $ABC$ 面积为 $70$，$B=(12,19),C=(23,20),A=(p,q)$。到 $BC$ 的中线所在直线斜率为 $-5$，求 $p+q$ 最大值。",
+    "answer": 47,
+    "solution_en": [
+      "The midpoint is $(35/2,39/2)$, so the median line is $q=-5p+107$.",
+      "Signed double area gives $|980-56p|=140$, hence $p=15$ or $20$. Since $p+q=107-4p$, its maximum is $47$."
+    ],
+    "solution_zh": [
+      "$BC$ 中点为 $(35/2,39/2)$，故中线方程为 $q=-5p+107$。",
+      "面积条件给出 $|980-56p|=140$，所以 $p=15$ 或 $20$。因 $p+q=107-4p$，最大值为 $47$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/10",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q11",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "For a unit-radius semicircle whose diameter forms angle $\\theta\\in[0,\\pi/2]$ with a square side, its two perpendicular projection widths are $1+\\cos\\theta$ and $1+\\sin\\theta$. Thus the least square side for that orientation is their maximum.",
+      "reason_zh": "设单位半径半圆的直径与正方形边夹角为 $\\theta\\in[0,\\pi/2]$。两个正交方向的投影宽度为 $1+\\cos\\theta,1+\\sin\\theta$，此方向所需最小正方形边长为二者较大值。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "This maximum is minimized at $\\theta=\\pi/4$, with value $1+1/\\sqrt2$. Scaling to side eight gives $d=16/(1+1/\\sqrt2)=32-16\\sqrt2=32-\\sqrt{512}$.",
+        "reason_zh": "在 $\\theta=\\pi/4$ 时该值最小，为 $1+1/\\sqrt2$。缩放到边长八，最大直径为 $16/(1+1/\\sqrt2)=32-\\sqrt{512}$。"
+      }
+    ],
+    "statement_en": "Find the largest possible diameter $d$ of a semicircle contained in a side-$8$ square. If $d=m-\\sqrt n$ with integers $m,n$, find $m+n$.",
+    "statement_zh": "边长八的正方形内能容纳的半圆，其最大直径为 $d=m-\\sqrt n$，其中 $m,n$ 为整数，求 $m+n$。",
+    "answer": 544,
+    "solution_en": [
+      "For a unit-radius semicircle whose diameter forms angle $\\theta\\in[0,\\pi/2]$ with a square side, its two perpendicular projection widths are $1+\\cos\\theta$ and $1+\\sin\\theta$. Thus the least square side for that orientation is their maximum.",
+      "This maximum is minimized at $\\theta=\\pi/4$, with value $1+1/\\sqrt2$. Scaling to side eight gives $d=16/(1+1/\\sqrt2)=32-16\\sqrt2=32-\\sqrt{512}$.",
+      "Therefore $m+n=544$."
+    ],
+    "solution_zh": [
+      "设单位半径半圆的直径与正方形边夹角为 $\\theta\\in[0,\\pi/2]$。两个正交方向的投影宽度为 $1+\\cos\\theta,1+\\sin\\theta$，此方向所需最小正方形边长为二者较大值。",
+      "在 $\\theta=\\pi/4$ 时该值最小，为 $1+1/\\sqrt2$。缩放到边长八，最大直径为 $16/(1+1/\\sqrt2)=32-\\sqrt{512}$。",
+      "所求为 $544$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/11",
+    "method_chain": [
+      "Inequalities & continuous optimization",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q12",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "Divisors pair except at squares, so $\\tau(j)$ is odd exactly for square $j$. Hence $S(n)$ has parity $\\lfloor\\sqrt n\\rfloor$.",
+      "reason_zh": "除平方数外，约数两两配对，所以 $\\tau(j)$ 恰在 $j$ 为平方数时为奇。因此 $S(n)$ 的奇偶性等于 $\\lfloor\\sqrt n\\rfloor$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Odd blocks correspond to $k=1,3,\\ldots,43$, each containing $2k+1$ integers from $k^2$ through $(k+1)^2-1$. They are all complete below $2005$. Thus $a=2(1+3+\\cdots+43)+22=990$.",
+        "reason_zh": "奇数块对应 $k=1,3,\\ldots,43$，每块有 $2k+1$ 个整数，且均完整位于范围内。所以 $a=2(1+3+\\cdots+43)+22=990$。"
+      }
+    ],
+    "statement_en": "Let $\\tau(n)$ count positive divisors and $S(n)=\\sum_{j=1}^n\\tau(j)$. Among $1\\le n\\le2005$, let $a,b$ count odd and even values of $S(n)$. Find $|a-b|$.",
+    "statement_zh": "令 $\\tau(n)$ 为正约数个数，$S(n)=\\sum_{j=1}^n\\tau(j)$。在 $1\\le n\\le2005$ 中，$S(n)$ 奇偶数目分别为 $a,b$，求 $|a-b|$。",
+    "answer": 25,
+    "solution_en": [
+      "Divisors pair except at squares, so $\\tau(j)$ is odd exactly for square $j$. Hence $S(n)$ has parity $\\lfloor\\sqrt n\\rfloor$.",
+      "Odd blocks correspond to $k=1,3,\\ldots,43$, each containing $2k+1$ integers from $k^2$ through $(k+1)^2-1$. They are all complete below $2005$. Thus $a=2(1+3+\\cdots+43)+22=990$.",
+      "Then $b=1015$, and the absolute difference is $25$."
+    ],
+    "solution_zh": [
+      "除平方数外，约数两两配对，所以 $\\tau(j)$ 恰在 $j$ 为平方数时为奇。因此 $S(n)$ 的奇偶性等于 $\\lfloor\\sqrt n\\rfloor$。",
+      "奇数块对应 $k=1,3,\\ldots,43$，每块有 $2k+1$ 个整数，且均完整位于范围内。所以 $a=2(1+3+\\cdots+43)+22=990$。",
+      "于是 $b=1015$，绝对差为 $25$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/12",
+    "method_chain": [
+      "Divisor functions & totients",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q13",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Track counts by the last step, $R(x,y),U(x,y),D(x,y)$. Then $R(x,y)=R(x-1,y)+D(x-1,y)$, $U(x,y)=U(x,y-1)+D(x,y-1)$, and $D(x,y)$ is the sum of all three states at $(x-1,y-1)$.",
+      "reason_zh": "按最后一步记录 $R(x,y),U(x,y),D(x,y)$。递推为 $R(x,y)=R(x-1,y)+D(x-1,y)$，$U(x,y)=U(x,y-1)+D(x,y-1)$，$D(x,y)$ 为 $(x-1,y-1)$ 三状态之和。"
+    },
+    "secondary": [],
+    "statement_en": "A lattice path uses steps $R=(1,0),U=(0,1),D=(1,1)$, but may not have adjacent $RU$ or $UR$. Count paths from $(0,0)$ to $(5,5)$.",
+    "statement_zh": "格点路径允许步长 $R=(1,0),U=(0,1),D=(1,1)$，但不得相邻出现 $RU$ 或 $UR$。求从 $(0,0)$ 到 $(5,5)$ 的路径数。",
+    "answer": 83,
+    "solution_en": [
+      "Track counts by the last step, $R(x,y),U(x,y),D(x,y)$. Then $R(x,y)=R(x-1,y)+D(x-1,y)$, $U(x,y)=U(x,y-1)+D(x,y-1)$, and $D(x,y)$ is the sum of all three states at $(x-1,y-1)$.",
+      "Use one empty starting state and allow all three first steps; along each axis the only path uses that axis direction. Filling the recurrence gives $(D,R,U)(5,5)=(27,28,28)$.",
+      "The desired total is $27+28+28=83$."
+    ],
+    "solution_zh": [
+      "按最后一步记录 $R(x,y),U(x,y),D(x,y)$。递推为 $R(x,y)=R(x-1,y)+D(x-1,y)$，$U(x,y)=U(x,y-1)+D(x,y-1)$，$D(x,y)$ 为 $(x-1,y-1)$ 三状态之和。",
+      "初始空路径为一种，可接任意首步，坐标轴上仅有沿轴路径。逐格计算得终点 $(D,R,U)=(27,28,28)$。",
+      "总数为 $83$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/13",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q14",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The convex order forces $A,C$ on opposite sides and $B,D$ on opposite sides. If the side through $B$ has slope $m$, its line is $mx-y+9-10m=0$; a perpendicular side through $C$ has line $x+my-8=0$.",
+      "reason_zh": "由凸顶点顺序，$A,C$ 所在边相对，$B,D$ 所在边相对。若过 $B$ 的边斜率为 $m$，其方程为 $mx-y+9-10m=0$，过 $C$ 的垂直边为 $x+my-8=0$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Equal widths give $|2-14m|=|12m-8|$, so $m=5/13$ or $-3$. The first places $A,C$ on opposite sides of the line through $B$, invalid for a supporting side. For $m=-3$ all four points lie on their required side segments.",
+        "reason_zh": "两宽度相等给出 $|2-14m|=|12m-8|$，得 $m=5/13$ 或 $-3$。前者使 $A,C$ 在过 $B$ 直线两侧，不能是支撑边；后者满足各点在线段内。"
+      }
+    ],
+    "statement_en": "Points $A=(0,12),B=(10,9),C=(8,0),D=(-4,7)$ lie on different sides of one square. If its area is $K$, find $10K\\bmod1000$.",
+    "statement_zh": "点 $A=(0,12),B=(10,9),C=(8,0),D=(-4,7)$ 分别位于同一正方形的不同边上。若其面积为 $K$，求 $10K$ 除以一千的余数。",
+    "answer": 936,
+    "solution_en": [
+      "The convex order forces $A,C$ on opposite sides and $B,D$ on opposite sides. If the side through $B$ has slope $m$, its line is $mx-y+9-10m=0$; a perpendicular side through $C$ has line $x+my-8=0$.",
+      "Equal widths give $|2-14m|=|12m-8|$, so $m=5/13$ or $-3$. The first places $A,C$ on opposite sides of the line through $B$, invalid for a supporting side. For $m=-3$ all four points lie on their required side segments.",
+      "The side length is $44/\\sqrt{10}$, so $10K=1936$ and the remainder is $936$."
+    ],
+    "solution_zh": [
+      "由凸顶点顺序，$A,C$ 所在边相对，$B,D$ 所在边相对。若过 $B$ 的边斜率为 $m$，其方程为 $mx-y+9-10m=0$，过 $C$ 的垂直边为 $x+my-8=0$。",
+      "两宽度相等给出 $|2-14m|=|12m-8|$，得 $m=5/13$ 或 $-3$。前者使 $A,C$ 在过 $B$ 直线两侧，不能是支撑边；后者满足各点在线段内。",
+      "边长为 $44/\\sqrt{10}$，故 $10K=1936$，余数为 $936$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/14",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-I-Q15",
+    "paper_id": "AIME-2005-I",
+    "exam_year": 2005,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Let $M$ be the midpoint of $AB$, let $R$ be the incircle contact point on $AC$, and let the incircle cut $CM$ at one-third and two-thirds positions. Its tangent lengths from $M$ and $C$ have equal square $2CM^2/9$. Relabel $A,B$ so the base tangency point $T$ lies in $AM$. Equal tangent lengths give $AC=AR+CR=AT+MT=AM=10$.",
+      "reason_zh": "令 $M$ 为 $AB$ 中点，内切圆在 $CM$ 三分点相交。从 $M,C$ 引切线，其切线长平方均为 $2CM^2/9$。交换 $A,B$ 后可设底边切点 $T$ 在 $AM$ 上，切线长相等给出 $AC=AT+MT=AM=10$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Put $a=BC$. With semiperimeter $15+a/2$, $MT=(a-10)/2$ and median formula gives $CM^2=(a^2-100)/2$. Thus $(a-10)^2/4=(a^2-100)/9$. Since $a>10$, cancellation yields $9(a-10)=4(a+10)$, so $a=26$.",
+        "reason_zh": "设 $a=BC$，半周长为 $15+a/2$，所以 $MT=(a-10)/2$，中线公式给出 $CM^2=(a^2-100)/2$。代入得 $(a-10)^2/4=(a^2-100)/9$，因 $a>10$，化简得 $a=26$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Put $a=BC$. With semiperimeter $15+a/2$, $MT=(a-10)/2$ and median formula gives $CM^2=(a^2-100)/2$. Thus $(a-10)^2/4=(a^2-100)/9$. Since $a>10$, cancellation yields $9(a-10)=4(a+10)$, so $a=26$.",
+        "reason_zh": "设 $a=BC$，半周长为 $15+a/2$，所以 $MT=(a-10)/2$，中线公式给出 $CM^2=(a^2-100)/2$。代入得 $(a-10)^2/4=(a^2-100)/9$，因 $a>10$，化简得 $a=26$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Heron gives area $\\sqrt{28\\cdot8\\cdot18\\cdot2}=24\\sqrt{14}$. The requested sum is $38$.",
+        "reason_zh": "海伦公式给出面积 $\\sqrt{28\\cdot8\\cdot18\\cdot2}=24\\sqrt{14}$，所求 $38$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=20$. Its incircle cuts the median from $C$ into three equal segments. If the area is $m\\sqrt n$ with squarefree $n$, find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=20$，内切圆将从 $C$ 出发的中线分为三等段。若面积为 $m\\sqrt n$ 且 $n$ 无平方素因子，求 $m+n$。",
+    "answer": 38,
+    "solution_en": [
+      "Let $M$ be the midpoint of $AB$, let $R$ be the incircle contact point on $AC$, and let the incircle cut $CM$ at one-third and two-thirds positions. Its tangent lengths from $M$ and $C$ have equal square $2CM^2/9$. Relabel $A,B$ so the base tangency point $T$ lies in $AM$. Equal tangent lengths give $AC=AR+CR=AT+MT=AM=10$.",
+      "Put $a=BC$. With semiperimeter $15+a/2$, $MT=(a-10)/2$ and median formula gives $CM^2=(a^2-100)/2$. Thus $(a-10)^2/4=(a^2-100)/9$. Since $a>10$, cancellation yields $9(a-10)=4(a+10)$, so $a=26$.",
+      "Heron gives area $\\sqrt{28\\cdot8\\cdot18\\cdot2}=24\\sqrt{14}$. The requested sum is $38$."
+    ],
+    "solution_zh": [
+      "令 $M$ 为 $AB$ 中点，内切圆在 $CM$ 三分点相交。从 $M,C$ 引切线，其切线长平方均为 $2CM^2/9$。交换 $A,B$ 后可设底边切点 $T$ 在 $AM$ 上，切线长相等给出 $AC=AT+MT=AM=10$。",
+      "设 $a=BC$，半周长为 $15+a/2$，所以 $MT=(a-10)/2$，中线公式给出 $CM^2=(a^2-100)/2$。代入得 $(a-10)^2/4=(a^2-100)/9$，因 $a>10$，化简得 $a=26$。",
+      "海伦公式给出面积 $\\sqrt{28\\cdot8\\cdot18\\cdot2}=24\\sqrt{14}$，所求 $38$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005I/problem/15",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

@@ -1,0 +1,1821 @@
+[
+  {
+    "subtype_id": "AL06",
+    "reviewer": "print_builder",
+    "content_sha256": "ca16fd444ad97959c684b60a0cf428e09406593eaca9361ed60972ba31326d2f",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "AL06-M01",
+      "AL06-M02",
+      "AL06-M03",
+      "AL06-M04",
+      "AL06-M05",
+      "AL06-M06",
+      "AL06-M07",
+      "AL06-M08",
+      "AL06-M09"
+    ],
+    "findings": [
+      "Read all nine bilingual methods, examples, solutions and extensions. Recomputed the negative floor solutions {-5,-4},seven rounding successes,logarithmic-band probability 3/13,floor sum 43,absolute-value roots and flat interval,area 2 and enclosing radius sqrt(2),three wave intersections,five finite-window events,and cubic-fold boundary/interior roots.",
+      "Checked all mapped routes, including reciprocal floor intervals, square-root threshold blocks, exact residue sums, nested absolute-value preimages, ordered positive/negative mass bounds, closure-forced disks, tent-piece filtering, finite traffic windows,and stamp no-gap minimality.",
+      "Made necessary positivity and domain conditions explicit in reciprocal-floor and fractional-part branches; separated n=0 from positive square-root rounding. Specified monotone smooth-sum changes and that S is the total value of processed stamps in the no-gap lemma.",
+      "Independently checked the 2024 I Q12 derivative-product and strict-convexity certificate. Added definitions of h,F,G and their knot/branch data so the extension is self-contained before using its equations. Bilingual conditions and proofs agree."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "AL06-M01",
+          "title_en": "Invert a floor into an exact half-open interval",
+          "title_zh": "将取整反解为精确半开区间",
+          "steps_en": [
+            "Replace $\\lfloor u\\rfloor=k$ by $k\\le u<k+1$, preserving both endpoint signs.",
+            "Invert a monotone expression only after fixing its sign and domain.",
+            "Count integers using floor and ceiling bounds, or count branches whose ranges contain the target.",
+            "Prove the converse: every counted value or input really lies in its claimed interval."
+          ],
+          "steps_zh": [
+            "把 $\\lfloor u\\rfloor=k$ 换成 $k\\le u<k+1$，保留两端开闭。",
+            "固定符号与定义域后才反解单调表达式。",
+            "用上下取整计算整数，或计算值域包含目标的分支。",
+            "证明逆向成立：每个计入的值或输入确实落在对应区间。"
+          ],
+          "example_en": "Find all integers $x$ with $\\lfloor(2x+1)/5\\rfloor=-2$.",
+          "example_zh": "求满足 $\\lfloor(2x+1)/5\\rfloor=-2$ 的全部整数 $x$。",
+          "solution_en": [
+            "The floor condition is $-2\\le(2x+1)/5<-1$.",
+            "It becomes $-11\\le2x<-6$, or $-11/2\\le x<-3$.",
+            "The integer solutions are $-5,-4$. In particular, the upper endpoint $-3$ is excluded."
+          ],
+          "solution_zh": [
+            "取整条件为 $-2\\le(2x+1)/5<-1$。",
+            "整理成 $-11\\le2x<-6$，即 $-11/2\\le x<-3$。",
+            "整数解为负五、负四，特别是上端点负三不包含。"
+          ],
+          "tip_en": "Floor means rounding downward, including for negative inputs.",
+          "tip_zh": "下取整始终向下，负数也一样。",
+          "question_ids": [
+            "AIME-2002-II-Q08",
+            "AIME-2007-II-Q07",
+            "AIME-2009-I-Q06",
+            "AIME-2009-II-Q11",
+            "AIME-2012-II-Q10",
+            "AIME-2015-II-Q13",
+            "AIME-2020-II-Q14",
+            "AIME-2022-II-Q08"
+          ],
+          "prerequisites": [
+            "AL04",
+            "CO02"
+          ],
+          "extensions_en": [
+            "For $A>0,n>0$ and positive $k$, $\\lfloor A/n\\rfloor=k$ means $A/(k+1)<n\\le A/k$. A half-open interval of length at least one always contains an integer. For $x\\lfloor x\\rfloor$ with $a=\\lfloor x\\rfloor\\ge1$, the exact range is $[a^2,a^2+a)$ and each integer in it has inverse $x=N/a$.",
+            "For an integer $j\\ge0$, $f(x)=x\\{x\\}$ on $[j,j+1)$, writing $x=j+t$ gives $f=(j+t)t$, strictly increasing onto $[0,j+1)$. Iterated preimages can therefore be counted by weakly ordered branch indices. Integer endpoints map to zero and must be checked separately."
+          ],
+          "extensions_zh": [
+            "在 $A>0,n>0,k>0$ 时，$\\lfloor A/n\\rfloor=k$ 等价于 $A/(k+1)<n\\le A/k$。长度至少一的半开区间必含整数。对 $x\\lfloor x\\rfloor$，若 $a=\\lfloor x\\rfloor\\ge1$，精确值域为 $[a^2,a^2+a)$，其中每个整数 $N$ 的逆像为 $x=N/a$。",
+            "对整数 $j\\ge0$，在 $[j,j+1)$ 上，令 $x=j+t$，则 $x\\{x\\}=(j+t)t$ 严格递增且值域为 $[0,j+1)$，因此迭代原像可由弱递增分支下标计数。整数端点映到零，须另行检验。"
+          ]
+        },
+        {
+          "method_id": "AL06-M02",
+          "title_en": "Group rounding by thresholds and periodic residue classes",
+          "title_zh": "按阈值与周期剩余类归组四舍五入",
+          "steps_en": [
+            "Write the exact interval producing each rounded value, including any tie convention.",
+            "If changing the input by a fixed period changes intermediate rounded values by integers, prove a residue-class success pattern.",
+            "For root rounding or square-free blocks, compare consecutive square gaps with the block width.",
+            "Count complete blocks and the truncated final block separately."
+          ],
+          "steps_zh": [
+            "写出产生每个取整值的精确区间，并说明等距时的规则。",
+            "若输入加固定周期使中间取整值增加整数，先证明成功模式按剩余类周期重复。",
+            "平方根取整或无平方数区块可比较相邻平方差与区块宽度。",
+            "分开计算完整区块与最后截断块。"
+          ],
+          "example_en": "For integer $n$, let $R(n)$ be the nearest integer to $n/3$, and then round $3R(n)$ to an integer. Among $0\\le n\\le20$, which inputs return unchanged?",
+          "example_zh": "对整数 $n$，将 $n/3$ 四舍五入为整数 $R(n)$，再取整数 $3R(n)$。零至二十中哪些输入能回到原数？",
+          "solution_en": [
+            "Write $n=3q+r$, with $r=0,1,2$. The rounded values are $q,q,q+1$ respectively, with no ties.",
+            "The returned integers are $3q,3q,3q+3$, so equality holds exactly when $r=0$.",
+            "The successful inputs are $0,3,6,9,12,15,18$, seven in total. The residue calculation proves the pattern globally."
+          ],
+          "solution_zh": [
+            "写 $n=3q+r$，$r=0,1,2$ 时取整分别为 $q,q,q+1$，无等距情形。",
+            "返回整数分别为 $3q,3q,3q+3$，仅余数零时等于原数。",
+            "成功输入为零、三、六、九、十二、十五、十八，共七个；剩余类计算证明了整体周期。"
+          ],
+          "tip_en": "A periodic rounding rule still needs an endpoint count in a finite input interval.",
+          "tip_zh": "周期取整规则在有限输入范围内仍须处理端点截段。",
+          "question_ids": [
+            "AIME-2007-I-Q05",
+            "AIME-2007-I-Q11",
+            "AIME-2008-I-Q07",
+            "AIME-2013-II-Q06",
+            "AIME-2022-II-Q08"
+          ],
+          "prerequisites": [
+            "NT03"
+          ],
+          "extensions_en": [
+            "For positive integers $n,k$, the nearest integer to $\\sqrt n$ is $k$ precisely when $(k-1/2)^2<n<(k+1/2)^2$. This becomes $k^2-k+1\\le n\\le k^2+k$, with $2k$ inputs. No square-root tie occurs because the squared half-integer endpoints are not integers. The case $n=0$ gives rounded value zero separately.",
+            "A tuple of nondecreasing integer floors stays constant on a consecutive block. To be uniquely identified by it, an integer must have a tuple jump immediately before and after it. This converts singleton floor blocks into divisibility of two consecutive integers."
+          ],
+          "extensions_zh": [
+            "对正整数 $n,k$，$\\sqrt n$ 最近整数为 $k$ 恰要求 $(k-1/2)^2<n<(k+1/2)^2$，即 $k^2-k+1\\le n\\le k^2+k$，共有 $2k$ 个输入。半整数端点的平方非整数，因此无取舍平局；$n=0$ 时另有取整值零。",
+            "若干非降整数取整组成的向量在连续整数区块上恒定。要由该向量唯一确定某整数，它前后必须都发生向量跳跃，可转为相邻整数的整除条件。"
+          ]
+        },
+        {
+          "method_id": "AL06-M03",
+          "title_en": "Read logarithmic floors as geometric bands or indicators",
+          "title_zh": "把对数取整读成等比区间或指示量",
+          "steps_en": [
+            "Translate logarithm thresholds into powers of the base.",
+            "A floor residue condition selects disjoint bands; sum their lengths with a geometric series.",
+            "Use $\\lceil u\\rceil-\\lfloor u\\rfloor$ as zero at integers and one elsewhere.",
+            "For a monotone floor sum, certify an extremum by evaluating the last legal input and the next one."
+          ],
+          "steps_zh": [
+            "将对数阈值转成底数的幂。",
+            "取整剩余类条件选择不交区间带，用几何级数求其长度。",
+            "把 $\\lceil u\\rceil-\\lfloor u\\rfloor$ 视为整数处零、其他处一的指示量。",
+            "单调取整和的最值可由最后合法输入与紧接的下一个输入核验。"
+          ],
+          "example_en": "For uniformly chosen $x\\in(0,1]$, find the probability that $\\lfloor\\log_3(1/x)\\rfloor\\equiv1\\pmod3$.",
+          "example_zh": "在 $(0,1]$ 均匀选 $x$，求 $\\lfloor\\log_3(1/x)\\rfloor$ 模三余一的概率。",
+          "solution_en": [
+            "The permitted floors are $3j+1$, giving $3^{-3j-2}<x\\le3^{-3j-1}$ for $j\\ge0$.",
+            "Each interval length is $(1/3-1/9)3^{-3j}=(2/9)27^{-j}$.",
+            "The total length, hence probability, is $(2/9)/(1-1/27)=3/13$."
+          ],
+          "solution_zh": [
+            "允许的取整值为 $3j+1$，对应 $3^{-3j-2}<x\\le3^{-3j-1}$。",
+            "每段长度为 $(2/9)27^{-j}$。",
+            "总长度即概率，为 $(2/9)/(1-1/27)=3/13$。"
+          ],
+          "tip_en": "For an integer argument, an integral logarithm may force a special power family; prove which powers are themselves integers.",
+          "tip_zh": "整数自变量的对数为整数时可能只剩特殊幂族，须证明哪些幂本身为整数。",
+          "question_ids": [
+            "AIME-2004-I-Q12",
+            "AIME-2007-I-Q07",
+            "AIME-2010-I-Q14"
+          ],
+          "prerequisites": [
+            "AL04",
+            "AL05"
+          ]
+        },
+        {
+          "method_id": "AL06-M04",
+          "title_en": "Separate a floor sum into its smooth sum and exact residues",
+          "title_zh": "将取整和拆成未取整和与精确余数",
+          "steps_en": [
+            "Use $\\lfloor a/m\\rfloor=(a-r)/m$ with the least residue $0\\le r<m$.",
+            "First bound the total floor error to isolate any unknown integer parameter.",
+            "Then compute the exact residue correction by full periods and a final partial period.",
+            "For piecewise-linear area sums, track the fractional part of each unit-strip contribution in the same way."
+          ],
+          "steps_zh": [
+            "用 $\\lfloor a/m\\rfloor=(a-r)/m$，其中最小非负余数为 $r$。",
+            "先估计取整误差总量，隔离可能的未知整数参数。",
+            "再按完整周期与尾部截段计算精确余数修正。",
+            "分段线性面积和也可同样追踪每个单位条带贡献的小数部分。"
+          ],
+          "example_en": "Compute $\\sum_{n=1}^{10}\\lfloor(3n+2)/4\\rfloor$.",
+          "example_zh": "计算 $\\sum_{n=1}^{10}\\lfloor(3n+2)/4\\rfloor$。",
+          "solution_en": [
+            "The unfloored sum is $(3\\cdot55+20)/4=185/4$.",
+            "The residues of $3n+2$ modulo four repeat as $1,0,3,2$. Two full blocks contribute twelve, and the last two terms add one.",
+            "Subtract the residue total divided by four: $(185-13)/4=43$."
+          ],
+          "solution_zh": [
+            "未取整和为 $(3\\cdot55+20)/4=185/4$。",
+            "$3n+2$ 模四的余数循环为一、零、三、二，两整块贡献十二，最后两项再加一。",
+            "扣除余数总量除四，得到 $(185-13)/4=43$。"
+          ],
+          "tip_en": "A uniform error bound can prove uniqueness of a parameter before a large sum is evaluated exactly.",
+          "tip_zh": "统一误差界可以先证明参数唯一，再求大和的精确值。",
+          "question_ids": [
+            "AIME-2015-I-Q14",
+            "AIME-2023-I-Q10"
+          ],
+          "prerequisites": [
+            "AL05",
+            "NT03"
+          ],
+          "extensions_en": [
+            "If $N$ floors each subtract a fractional part in $[0,1)$, their total error lies in $(-N,0]$. If each unit increase of an integer parameter changes the smooth sum in the same direction by more than the permitted window plus this error width, only one parameter can work. For areas under $x\\lfloor\\sqrt x\\rfloor$, each integer strip contributes $k(2j+1)/2$; its half-integer parity depends only on whether $k$ is odd."
+          ],
+          "extensions_zh": [
+            "$N$ 个下取整各减去 $[0,1)$ 内的小数部分，误差总量在 $(-N,0]$。若整数参数每增加一都使未取整和向同一方向变化，且变化量超过允许窗口加误差宽度，就至多一个参数可行。对 $x\\lfloor\\sqrt x\\rfloor$ 下的面积，每个整数条带贡献 $k(2j+1)/2$，其半整数奇偶仅取决于 $k$ 是否为奇数。"
+          ]
+        },
+        {
+          "method_id": "AL06-M05",
+          "title_en": "Resolve signs and count absolute-value levels",
+          "title_zh": "拆分符号并计算绝对值水平线根数",
+          "steps_en": [
+            "List all breakpoints where an absolute-value input changes sign.",
+            "Replace the expression by its exact formula on each interval, retaining its interval restrictions.",
+            "Construct a level-count table at regular levels, turning levels, zero, and any flat interval.",
+            "For nested absolute values, translate the outer equation into distinct inner levels and sum their valid root counts."
+          ],
+          "steps_zh": [
+            "列出绝对值内部变号的全部分界点。",
+            "在各区间用精确公式代替，并保留该区间限制。",
+            "对普通高度、转折高度、零高度及平坦段建立根数表。",
+            "嵌套绝对值方程先转成不同内部高度，再相加其有效根数。"
+          ],
+          "example_en": "Solve $|x-1|+|x+2|=5$, and explain what happens if the right side is three.",
+          "example_zh": "解 $|x-1|+|x+2|=5$，并说明右端改为三时有何变化。",
+          "solution_en": [
+            "The breakpoints are $-2,1$. The expression is $-2x-1$ to the left, three in the middle, and $2x+1$ to the right.",
+            "At level five the left and right roots are $-3,2$, both in their legal intervals; the middle gives none.",
+            "At level three every $x\\in[-2,1]$ works, so the solution set is an interval rather than a finite root count."
+          ],
+          "solution_zh": [
+            "分界为负二、一，表达式左段为 $-2x-1$，中间恒三，右段为 $2x+1$。",
+            "高度五时左右根为负三、二，均在合法段内，中段无解。",
+            "高度三时整个 $[-2,1]$ 都是解，不能按有限根数处理。"
+          ],
+          "tip_en": "Squaring or dropping interval restrictions can turn an illegal branch root into a false solution.",
+          "tip_zh": "平方或丢掉区间限制，会把无效分支根变成伪解。",
+          "question_ids": [
+            "AIME-2001-II-Q08",
+            "AIME-2010-I-Q11",
+            "AIME-2020-II-Q08",
+            "AIME-2021-I-Q08",
+            "AIME-2022-II-Q06",
+            "AIME-2025-I-Q12"
+          ],
+          "prerequisites": [
+            "AL01",
+            "GE07"
+          ],
+          "extensions_en": [
+            "An absolute-value preimage $|x-a|=z$ exists only for $z\\ge0$: it gives $a\\pm z$, with the two values coinciding at zero. In a two-variable factor-sign region, consider all sign combinations and impose the original plane or ordering constraints before declaring a region bounded.",
+            "For an ordered zero-sum tuple with a fixed sum of absolute values, split into total positive and negative mass. An ordered coordinate of rank $k$ cannot carry more than the corresponding mass divided by the number of coordinates forced to share its sign and magnitude bound. The equality tuple must be checked separately."
+          ],
+          "extensions_zh": [
+            "绝对值原像 $|x-a|=z$ 只在 $z\\ge0$ 时存在，产生 $a\\pm z$，零时两值重合。两个变量的乘积符号区域须检查全部符号组合，并施加原平面或次序条件后，才能判断区域有界。",
+            "总和为零且绝对值和固定的有序元组，可拆成正质量与负质量。某排名坐标的大小不超过相应质量除以被迫具有同号同量级界的项数；等号元组仍须独立检验。"
+          ]
+        },
+        {
+          "method_id": "AL06-M06",
+          "title_en": "Treat floor graphs as cells and strip areas",
+          "title_zh": "把取整图形视为单元格与条带面积",
+          "steps_en": [
+            "Fix every floor value and translate it into a half-open cell or strip.",
+            "Within that piece, solve the remaining smooth condition and intersect its range with the cell.",
+            "For area or probability, sum disjoint piece measures; isolated boundary points have zero measure.",
+            "For a closed enclosing object, pass to the closure and prove its extremal boundary points are included in the required bound."
+          ],
+          "steps_zh": [
+            "固定各个取整值，转成半开单元格或条带。",
+            "在分段内解余下光滑条件，并与该格取交。",
+            "面积概率按不交分段求和，孤立边界点测度为零。",
+            "闭包围对象须包含原集合闭包，并证明极端边界点给出必要界。"
+          ],
+          "example_en": "Inside $[0,2)^2$, let $R$ satisfy $\\lfloor x\\rfloor+\\lfloor y\\rfloor=1$. Find its area and the radius of its smallest closed enclosing disk.",
+          "example_zh": "在 $[0,2)^2$ 中令 $R$ 满足 $\\lfloor x\\rfloor+\\lfloor y\\rfloor=1$，求面积与最小闭包围圆盘半径。",
+          "solution_en": [
+            "The two cells have floor pairs $(0,1),(1,0)$, each of area one, so the area is two.",
+            "Any closed enclosing disk contains their closures, including opposite points $(0,2)$ and $(2,0)$, whose distance is $2\\sqrt2$. Thus its radius is at least $\\sqrt2$.",
+            "The disk centered at $(1,1)$ of radius $\\sqrt2$ contains both closed squares, attaining the lower bound."
+          ],
+          "solution_zh": [
+            "取整对为 $(0,1),(1,0)$ 的两个单元格各面积一，总面积二。",
+            "闭包围圆盘须含两格闭包，包括距离 $2\\sqrt2$ 的对点 $(0,2),(2,0)$，故半径至少 $\\sqrt2$。",
+            "以 $(1,1)$ 为心、半径 $\\sqrt2$ 的圆盘包含两闭正方形，达到下界。"
+          ],
+          "tip_en": "A boundary excluded from a half-open set can still force the radius of every closed containing disk.",
+          "tip_zh": "半开集排除的边界仍可能限制所有包含它的闭圆盘半径。",
+          "question_ids": [
+            "AIME-2010-I-Q08",
+            "AIME-2011-II-Q15",
+            "AIME-2015-I-Q14"
+          ],
+          "prerequisites": [
+            "GE07",
+            "PS03",
+            "NT05"
+          ]
+        },
+        {
+          "method_id": "AL06-M07",
+          "title_en": "Filter periodic-piece roots before applying Vieta",
+          "title_zh": "先筛周期分段根再使用韦达",
+          "steps_en": [
+            "Bound the possible function values, then use the other equation to bound the number of relevant periods.",
+            "Write one polynomial equation for each rising or falling piece.",
+            "Keep only roots satisfying that piece domain; count shared endpoints once.",
+            "Apply Vieta only to a complete retained root pair, and add any single surviving endpoint root separately."
+          ],
+          "steps_zh": [
+            "先限制函数值，再用另一方程限制相关周期数量。",
+            "对每个上升或下降分段写一个多项式方程。",
+            "仅保留符合该分段定义域的根，共用端点只计一次。",
+            "只有完整保留的一对根才能直接用韦达求和，单个幸存根须另外相加。"
+          ],
+          "example_en": "Let a period-two triangular wave equal $x$ on $[0,1]$ and $2-x$ on $[1,2]$. Find its intersections with $y=x/3$ for $x\\ge0$.",
+          "example_zh": "周期二的三角波在 $[0,1]$ 为 $x$、在 $[1,2]$ 为 $2-x$，求其与 $y=x/3$ 在非负横轴上的交点。",
+          "solution_en": [
+            "The wave lies in $[0,1]$, so $0\\le x\\le3$. Only pieces $[0,1],[1,2],[2,3]$ matter.",
+            "The piece equations are $x=x/3$, $2-x=x/3$, and $x-2=x/3$, giving $x=0,3/2,3$ respectively.",
+            "All lie in their pieces, so the intersections are $(0,0),(3/2,1/2),(3,1)$. The endpoint at three is counted once."
+          ],
+          "solution_zh": [
+            "波值在零与一之间，所以横坐标只须考虑零至三，共三段。",
+            "三段方程为 $x=x/3$、$2-x=x/3$、$x-2=x/3$，分别得到 $x=0,3/2,3$。",
+            "都位于各自合法段，所以交点为 $(0,0),(3/2,1/2),(3,1)$，端点三只计一次。"
+          ],
+          "tip_en": "A polynomial may have two roots while its original piece retains only one.",
+          "tip_zh": "多项式可能有两根，但原分段可能只保留一根。",
+          "question_ids": [
+            "AIME-2001-II-Q08",
+            "AIME-2025-I-Q11"
+          ],
+          "prerequisites": [
+            "AL02",
+            "AL09"
+          ]
+        },
+        {
+          "method_id": "AL06-M08",
+          "title_en": "Count events in a finite window under stepwise constraints",
+          "title_zh": "在阶梯限制下计算有限窗口事件数",
+          "steps_en": [
+            "Replace a ceiling-dependent rule by intervals where its integer value is fixed.",
+            "Optimize the rate or capacity within each interval, preserving whether the endpoint is included.",
+            "Distinguish a limiting rate from an attainable integer count in a finite closed observation window.",
+            "For minimal counts, show both a construction and why one fewer item fails the original coverage conditions."
+          ],
+          "steps_zh": [
+            "将依赖上取整的规则分成整数值固定的区间。",
+            "在每区间内优化速率或容量，并保留端点是否包含。",
+            "区分极限速率与有限闭观察窗口中可达到的整数事件数。",
+            "最少数量须同时给构造与少一个物体不能满足原覆盖条件的证明。"
+          ],
+          "example_en": "Events are exactly fourteen minutes apart. Their phase is free. What is the greatest number occurring in a closed sixty-minute window?",
+          "example_zh": "事件间隔恰为十四分钟，初相位可自由选择，六十分钟闭窗口中最多发生多少次？",
+          "solution_en": [
+            "If $q$ events occur, the first-to-last span is $(q-1)14$, which must be at most sixty.",
+            "Thus $q\\le\\lfloor60/14\\rfloor+1=5$.",
+            "Events at minutes $0,14,28,42,56$ attain five. The floor of the hourly steady rate is four, a different quantity."
+          ],
+          "solution_zh": [
+            "若发生 $q$ 次，首末跨度为 $(q-1)14$，必须不超过六十。",
+            "所以 $q\\le\\lfloor60/14\\rfloor+1=5$。",
+            "在零、十四、二十八、四十二、五十六分钟发生可达到五次；稳态每小时速率的整数部分为四，是另一数量。"
+          ],
+          "tip_en": "A supremum of rates may still yield an attained integer window count; state the endpoint convention.",
+          "tip_zh": "速率上确界即使不达到，整数窗口计数仍可能达到，须说明端点约定。",
+          "question_ids": [
+            "AIME-2008-I-Q12",
+            "AIME-2022-II-Q14"
+          ],
+          "prerequisites": [
+            "LO02"
+          ],
+          "extensions_en": [
+            "For ordered positive stamp denominations, suppose the already processed stamps have total value $S$ and their subcollections attain every value from zero through $S$. Adding a stamp of value $v$ extends coverage without a gap exactly when $v\\le S+1$. Repeating this criterion gives the necessary low-denomination counts before a high denomination can be used. A final ceiling may give a construction count, but minimality requires showing a collection with one fewer stamp cannot reach the target total."
+          ],
+          "extensions_zh": [
+            "正邮票面值按序处理，若已处理邮票的总面值为 $S$，且其子组合能覆盖零至 $S$，加入面值 $v$ 的一枚邮票能无缺口延伸，当且仅当 $v\\le S+1$。反复使用即得到启用较高面值前必须具备的低面值数量。最后的上取整可给构造数量，但最小性还须证明少一枚的总面值无法达到目标。"
+          ]
+        },
+        {
+          "method_id": "AL06-M09",
+          "title_en": "Certify intersections of full folded branches",
+          "title_zh": "证明完整折叠分支交点计数有效",
+          "steps_en": [
+            "Split every absolute and trigonometric fold at all extrema, zeros, and break levels; list each monotone full-range branch.",
+            "Use the coupled equations to confine every solution and check all branch endpoints separately.",
+            "Prove one crossing per branch pair: endpoint signs give existence, while orientation or a derivative-product bound gives uniqueness.",
+            "If a boundary corner replaces a sign change, analyze it locally and certify whether an additional interior root exists."
+          ],
+          "steps_zh": [
+            "在所有极值、零点与折叠高度处分开绝对值和三角分段，列全单调满值域分支。",
+            "利用联立方程限制全部解，并单独检验所有分支端点。",
+            "证明每对分支恰有一次穿越：端点符号给存在性，方向或导数乘积界给唯一性。",
+            "若边界角点替代变号，须局部分析是否还有内部根。"
+          ],
+          "example_en": "On $[0,1]^2$, solve $y=x^3$ and $x=2y$. Explain why two increasing functions need not have just one intersection.",
+          "example_zh": "在单位正方形中解 $y=x^3,x=2y$，并解释两个递增函数为何不一定只有一个交点。",
+          "solution_en": [
+            "Substitute to get $x=2x^3$, or $x(1-2x^2)=0$.",
+            "The two admissible solutions are $(0,0)$ and $(1/\\sqrt2,1/(2\\sqrt2))$. The negative root lies outside the square.",
+            "Both graphs are increasing, yet a boundary root and an interior root coexist. At the interior root the derivative product is $(3x^2)\\cdot2=3>1$, giving a transverse crossing."
+          ],
+          "solution_zh": [
+            "代入得到 $x=2x^3$，即 $x(1-2x^2)=0$。",
+            "单位方形内解为 $(0,0)$ 与 $(1/\\sqrt2,1/(2\\sqrt2))$，负根在方形外。",
+            "两图都递增，仍可有边界根与内部根。内部根的导数乘积为 $(3x^2)\\cdot2=3>1$，故为横截穿越。"
+          ],
+          "tip_en": "Counting branch pairs without a uniqueness argument can give an unjustified answer.",
+          "tip_zh": "没有唯一性证明的分支对相乘，不能保证答案成立。",
+          "question_ids": [
+            "AIME-2024-I-Q12"
+          ],
+          "prerequisites": [
+            "AL08",
+            "AL07",
+            "CO06"
+          ],
+          "extensions_en": [
+            "Crossing lemma: for equally oriented inverse graphs, put $H(y)=G(y)-F^{-1}(y)$. At a root, $H\\prime=(F\\prime G\\prime-1)/F\\prime$. If the derivative product exceeds one at every interior root, the sign of $H\\prime$ is fixed on that branch pair. Two roots with that same nonzero crossing direction are impossible. Oppositely oriented graphs are unique directly by monotonicity.",
+            "For the coupled trigonometric-fold example, define $h(u)=4\\bigl||u-1/2|-1/4\\bigr|$ on $[0,1]$ and solve $y=F(x)=h(|\\sin2\\pi x|)$, $x=G(y)=h(|\\cos3\\pi y|)$. The knot values of $h$ at $0,1/4,1/2,3/4,1$ are $1,0,1,0,1$, giving sixteen full-height branches of $F$ and twenty-four full-width branches of $G$; their only boundary solution is $(1,1)$. The derivative magnitude is $D=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|$. If $|\\cos2\\pi x|\\le1/20$, the equations imply $y\\ge.99$ and $x\\ge1-18\\pi^2(.01)^2>.982$, contradicting that cosine bound. If $D\\le1$, one factor is at most $1/20$, so the sine factor must be small. The equations then force $a=1-x\\le.01$, $b=1-y<.01$ and exactly $b=4\\sin2\\pi a$, $a=4(1-\\cos3\\pi b)$.",
+            "Let $K(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$. On $[0,.01]$, $K\\prime\\prime=36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]>0$. Since $K(0)=K(b_*)=0$ for an interior root, strict convexity gives $K\\prime(b_*)>0$, equivalent to $D>1$, a contradiction. Thus the crossing lemma applies. Near zero $K\\prime(0)<0$, while $K(.01)>0$, so the corner branch also has an interior root. This supplies the needed uniqueness and corner certificate for counting the full branch pairs."
+          ],
+          "extensions_zh": [
+            "穿越引理：同向逆图令 $H(y)=G(y)-F^{-1}(y)$，零点处 $H\\prime=(F\\prime G\\prime-1)/F\\prime$。若每个内部零点导数乘积均大于一，则同一分支对上 $H\\prime$ 在零点具有固定非零符号，不能有两个同向穿越根。反向图则直接由单调性唯一。",
+            "联立三角折叠例中，先定义 $h(u)=4\\bigl||u-1/2|-1/4\\bigr|$（$0\\le u\\le1$），求解 $y=F(x)=h(|\\sin2\\pi x|)$、$x=G(y)=h(|\\cos3\\pi y|)$。$h$ 在 $0,1/4,1/2,3/4,1$ 的节点值为 $1,0,1,0,1$，故 $F$ 有十六个满高度分支、$G$ 有二十四个满宽度分支，唯一边界解为 $(1,1)$。导数绝对乘积为 $D=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|$。若余弦因子至多二十分之一，方程迫使 $y\\ge.99$ 与 $x\\ge1-18\\pi^2(.01)^2>.982$，与该余弦界矛盾。若 $D\\le1$，至少一因子不超过二十分之一，所以只能正弦因子小。方程进而迫使 $a=1-x\\le.01,b=1-y<.01$，并精确满足 $b=4\\sin2\\pi a,a=4(1-\\cos3\\pi b)$。",
+            "令 $K(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$。在 $[0,.01]$ 上，其二阶导数 $36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]$ 为正。内部根使 $K(0)=K(b_*)=0$，严格凸性给出 $K\\prime(b_*)>0$，恰等价于 $D>1$，产生矛盾。因此穿越引理适用。零附近 $K\\prime(0)<0$ 而 $K(.01)>0$，故角点分支另有内部根。这补全按满分支对计数所需的唯一性与角点证书。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "subtype_id": "CO01",
+    "reviewer": "print_builder",
+    "content_sha256": "b33c8131e780c9211e6f641ca348f156aa2e50ac38d9fb7505c87ed69f4c612e",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO01-M01",
+      "CO01-M02",
+      "CO01-M03",
+      "CO01-M04",
+      "CO01-M05",
+      "CO01-M06",
+      "CO01-M07",
+      "CO01-M08"
+    ],
+    "findings": [
+      "Read all eight bilingual method procedures, examples, solutions, tips and extensions; recomputed the original example counts 480,20,20,72,1120,24,12,16.",
+      "Checked the mapped question routes, including the rank-pattern, card-grid unique-removal, constrained insertion/deletion, and median-of-medians arguments; the procedures and special-lemma extensions cover their actual counting structure.",
+      "Checked the ordered/unordered distinctions, repeated-object divisors, circular stabilizers, and reversible-construction multiplicities. English and Chinese conditions and worked steps agree."
+    ],
+    "patch": {}
+  },
+  {
+    "subtype_id": "CO02",
+    "reviewer": "print_builder",
+    "content_sha256": "c54cc8dba6711898298bda16238d40573b08c93b64e4eb9bf5f11d433723072e",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO02-M01",
+      "CO02-M02",
+      "CO02-M03",
+      "CO02-M04",
+      "CO02-M05",
+      "CO02-M06",
+      "CO02-M07"
+    ],
+    "findings": [
+      "Read all seven bilingual methods and recomputed every original example: 90,640,452,(56 and 21),1 modulo 5,rank 15,and the star-or-triangle argument.",
+      "Checked all mapped routes, including equal-cardinality intersection sums, binary prefixes, function fibers, iterated fractional-part inverse intervals, prime-binomial reduction, and pairwise-intersecting edge families.",
+      "Verified strict endpoint handling, symmetry factors and binomial-convolution explanations; the bilingual procedures, examples and extensions give equivalent mathematical conditions."
+    ],
+    "patch": {}
+  },
+  {
+    "subtype_id": "CO03",
+    "reviewer": "print_builder",
+    "content_sha256": "ff5660aea07a98f59f32f3af5970384243db53d2b25374a7cc9e2451162cf4cc",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO03-M01",
+      "CO03-M02",
+      "CO03-M03",
+      "CO03-M04",
+      "CO03-M05",
+      "CO03-M06"
+    ],
+    "findings": [
+      "Read all six bilingual procedures, examples, worked solutions and extensions. Recomputed the counts 30,6,30,(60 and 15),expected range 5,and all six interval distances in the increment example.",
+      "Checked all mapped routes, including divisor-exponent distributions, bounded generating-function coefficients, run compositions, order-statistic gap exchangeability, and the sufficiency of the unique negative increment rule.",
+      "Made the positive-divisor hypothesis b>0 explicit in the clipped integer interval lemma in both languages; its displayed ceil/floor bounds require that sign. All other mathematical and bilingual checks pass."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "CO03-M01",
+          "title_en": "Normalize lower bounds and use stars and bars",
+          "title_zh": "平移下界并使用隔板法",
+          "steps_en": [
+            "Introduce one variable for each labeled part and translate any lower bounds to zero.",
+            "For $r$ nonnegative parts totaling $N$, use $\\binom{N+r-1}{r-1}$; for positive parts, subtract one first.",
+            "For a multiset, interpret parts as multiplicities; for prime factors, distribute each prime exponent independently."
+          ],
+          "steps_zh": [
+            "为每个有标识部件设变量，将下界平移为零。",
+            "把 $N$ 分成 $r$ 个非负部分有 $\\binom{N+r-1}{r-1}$ 种；正部分先各减一。",
+            "多重集用重数作为部分，素因子分配则对每种指数独立拆分。"
+          ],
+          "example_en": "Four identical tokens go into five labeled boxes, with exactly two boxes nonempty. Count the distributions.",
+          "example_zh": "四枚相同棋子放入五个有标识盒子，恰有两个非空，求分配数。",
+          "solution_en": [
+            "Choose the two nonempty boxes in $\\binom52=10$ ways.",
+            "If their positive counts are $u,v$, then $u+v=4$ has $\\binom31=3$ solutions.",
+            "The choice of boxes and counts uniquely gives the distribution, so the answer is $30$."
+          ],
+          "solution_zh": [
+            "选两个非空盒子有 $\\binom52=10$ 种。",
+            "两个正重数满足 $u+v=4$，有 $\\binom31=3$ 组。",
+            "盒子与重数唯一决定分配，所以共有三十种。"
+          ],
+          "tip_en": "A sorted list with repetitions corresponds to multiplicities, not to an arbitrary ordering of the parts.",
+          "tip_zh": "可重复的有序非降列表对应重数，不能再任意排列部分。",
+          "question_ids": [
+            "AIME-2000-II-Q05",
+            "AIME-2001-I-Q06",
+            "AIME-2004-II-Q08",
+            "AIME-2006-II-Q08",
+            "AIME-2007-II-Q02",
+            "AIME-2011-II-Q06",
+            "AIME-2013-II-Q12",
+            "AIME-2020-I-Q09",
+            "AIME-2024-II-Q03",
+            "AIME-2026-I-Q02"
+          ],
+          "prerequisites": [
+            "CO02",
+            "NT01"
+          ],
+          "extensions_en": [
+            "The number of nondecreasing $k$-tuples drawn from $r$ values is $\\binom{r+k-1}{k}$, because their multiplicities are nonnegative and total $k$. The number of all positive compositions of $N$ with an arbitrary number of parts is $2^{N-1}$, choosing cuts among its $N-1$ internal gaps."
+          ],
+          "extensions_zh": [
+            "从 $r$ 种值中选非降 $k$ 元组共有 $\\binom{r+k-1}{k}$ 种，因为重数非负且和为 $k$。将 $N$ 分成任意数量正部分的所有有序分拆共有 $2^{N-1}$ 种，等价于选择内部 $N-1$ 个间隔是否切开。"
+          ]
+        },
+        {
+          "method_id": "CO03-M02",
+          "title_en": "Enforce upper bounds by coefficients or clipped intervals",
+          "title_zh": "用系数或截断区间处理上界",
+          "steps_en": [
+            "Encode a variable taking values in $A$ by $\\sum_{a\\in A}x^a$; multiply for independent labeled variables.",
+            "Extract the target coefficient, or fix some variables and intersect the remaining integer interval with every bound.",
+            "If upper-bound violations are easier to count, shift a violating variable down by its first forbidden value and apply inclusion-exclusion.",
+            "When congruences force residues, substitute those residues first; the remaining equation may become ordinary stars and bars."
+          ],
+          "steps_zh": [
+            "变量可取集合 $A$ 时，用 $\\sum_{a\\in A}x^a$ 编码；独立有标识变量对应相乘。",
+            "提取目标系数，或固定部分变量并把其余整数区间与所有边界相交。",
+            "若越界容易计数，将越界变量减去首次禁止值，再容斥。",
+            "若同余迫使变量落在指定剩余类，先代入剩余类，余下方程常可化为隔板法。"
+          ],
+          "example_en": "How many triples $0\\le x,y,z\\le3$ satisfy $x+y+z=7$?",
+          "example_zh": "满足 $0\\le x,y,z\\le3$ 且 $x+y+z=7$ 的整数三元组有多少个？",
+          "solution_en": [
+            "The coefficient is $[t^7](1+t+t^2+t^3)^3$. Without the upper bounds there are $\\binom92=36$ triples.",
+            "For $x\\ge4$, shifting $x$ down by four gives $\\binom52=10$ triples, and likewise for the other two variables.",
+            "Two violations would sum to at least eight and cannot occur. Therefore the answer is $36-3\\cdot10=6$."
+          ],
+          "solution_zh": [
+            "所求为 $[t^7](1+t+t^2+t^3)^3$。不加上界有 $\\binom92=36$ 组。",
+            "若 $x\\ge4$，将它减四后有 $\\binom52=10$ 组，其余两变量同理。",
+            "两变量同时越界至少和为八，不可能，所以共有 $36-3\\cdot10=6$ 组。"
+          ],
+          "tip_en": "A coefficient of a reciprocal product counts solutions only while numerator terms above the target degree are irrelevant.",
+          "tip_zh": "倒数乘积的系数可以计解，但须确认分子的其他项次数均高于目标次数。",
+          "question_ids": [
+            "AIME-2003-I-Q09",
+            "AIME-2009-I-Q09",
+            "AIME-2013-I-Q15",
+            "AIME-2018-I-Q01",
+            "AIME-2020-I-Q11",
+            "AIME-2022-II-Q13"
+          ],
+          "prerequisites": [
+            "CO02",
+            "CO04",
+            "NT03"
+          ],
+          "extensions_en": [
+            "For $b>0$ and $L\\le ax+by\\le U$ and fixed $x$, the allowed $y$ lie between $\\lceil(L-ax)/b\\rceil$ and $\\lfloor(U-ax)/b\\rfloor$, further clipped by its own bounds. Use zero if the lower endpoint exceeds the upper. For products of geometric series, a coefficient of $\\prod_i(1-x^{w_i})^{-1}$ counts nonnegative solutions of $\\sum_iw_iu_i=N$."
+          ],
+          "extensions_zh": [
+            "对固定 $x$，若 $b>0$ 且 $L\\le ax+by\\le U$，则 $y$ 的上下界分别为 $\\lceil(L-ax)/b\\rceil$ 与 $\\lfloor(U-ax)/b\\rfloor$，还须与自身范围取交；下界大于上界时贡献零。几何级数乘积 $\\prod_i(1-x^{w_i})^{-1}$ 的 $x^N$ 系数计算非负方程 $\\sum_iw_iu_i=N$ 的解数。"
+          ]
+        },
+        {
+          "method_id": "CO03-M03",
+          "title_en": "Describe rows and paths by runs and gaps",
+          "title_zh": "用连续段与间隔描述行和路径",
+          "steps_en": [
+            "Replace each maximal block by its positive length and record its type.",
+            "Separate choices of block order, block lengths, and the gaps that receive them.",
+            "Treat the two ends and a circular closing gap explicitly; insert distinct labels only after the type pattern is counted."
+          ],
+          "steps_zh": [
+            "把每个极大同类段替换为其正长度并记录类型。",
+            "分开计算段顺序、段长度与放置这些段的间隔。",
+            "明确处理两端与圆形闭合间隔；先计类型模式，再放不同标签。"
+          ],
+          "example_en": "Count binary words of length nine with four ones, where the ones form exactly two runs, of lengths one and three.",
+          "example_zh": "长度九的二进制串有四个一，且它们恰形成长度一与三的两个连续段，求串数。",
+          "solution_en": [
+            "The five zeros create six gaps, including the ends. The two one-runs must occupy different gaps.",
+            "Choose their gaps in $\\binom62$ ways, then assign which gap gets the length-three run in two ways.",
+            "The count is $2\\binom62=30$; the separating zero is already built into choosing different gaps."
+          ],
+          "solution_zh": [
+            "五个零产生含两端在内的六个间隔，两个一段须放在不同间隔。",
+            "选间隔有 $\\binom62$ 种，再用两种方式指定哪个间隔放长度三的段。",
+            "共有 $2\\binom62=30$ 种，不同间隔已自动保证两段间有零。"
+          ],
+          "tip_en": "The number of turns in a path is one less than its number of nonempty directional runs.",
+          "tip_zh": "路径转弯次数比非空方向段数少一。",
+          "question_ids": [
+            "AIME-2008-II-Q12",
+            "AIME-2009-I-Q10",
+            "AIME-2011-II-Q07",
+            "AIME-2015-II-Q12",
+            "AIME-2019-II-Q05",
+            "AIME-2024-I-Q06",
+            "AIME-2025-II-Q10"
+          ],
+          "prerequisites": [
+            "CO01",
+            "CO02"
+          ],
+          "extensions_en": [
+            "For $j$ occupied runs using $s$ cells and all run lengths one or two, the number of doubletons is $s-j$ and their ordered positions can be chosen in $\\binom{j}{s-j}$ ways. If $e$ empty cells supply the separators, placing runs in $e+1$ distinct gaps contributes $\\binom{e+1}{j}$.",
+            "Run lengths in $\\{1,\\ldots,h\\}$ have generating function $x+\\cdots+x^h$. With the initial symbol fixed, binary words with bounded runs correspond to positive compositions with those allowed part sizes."
+          ],
+          "extensions_zh": [
+            "若 $j$ 个占用段共含 $s$ 格，且段长仅一或二，则二元段有 $s-j$ 个，其顺序位置有 $\\binom{j}{s-j}$ 种。若 $e$ 个空格提供分隔，将各段放入 $e+1$ 个不同间隔另有 $\\binom{e+1}{j}$ 种。",
+            "段长限于 $\\{1,\\ldots,h\\}$ 时，单段生成函数为 $x+\\cdots+x^h$。固定首字母后，段长有限的二元串与允许这些部分大小的正有序分拆双射。"
+          ]
+        },
+        {
+          "method_id": "CO03-M04",
+          "title_en": "Separate part-size patterns from label assignments",
+          "title_zh": "分离部分大小模式与标签分配",
+          "steps_en": [
+            "List all feasible multiplicity or component-size patterns using the total constraints.",
+            "For labeled groups of sizes $n_i$, assign distinct objects in $N!/\\prod_i n_i!$ ways.",
+            "If some groups are interchangeable, divide by factorials of repeated group multiplicities; never divide for groups already distinguished by size or label."
+          ],
+          "steps_zh": [
+            "按总量限制列全可行重数或部件大小模式。",
+            "向大小为 $n_i$ 的有标识组分配不同物体，有 $N!/\\prod_i n_i!$ 种。",
+            "若某些组可互换，按重复大小组的重数阶乘归并；已由大小或标签区分的组不能再相除。"
+          ],
+          "example_en": "Split six distinct samples into unlabeled groups of sizes one, two, and three. Compare with splitting them into three unlabeled pairs.",
+          "example_zh": "将六个不同样本分成无标识的一元、二元、三元组；再与分成三个无标识二元组比较，各有多少种？",
+          "solution_en": [
+            "The sizes one, two, and three distinguish the groups, so the first count is $6!/(1!2!3!)=60$.",
+            "For three pairs, first label the pairs: $6!/(2!)^3=90$.",
+            "Every unlabeled partition has $3!$ labelings of its equal-sized pairs, so the second answer is $90/6=15$."
+          ],
+          "solution_zh": [
+            "一、二、三的大小已区分各组，第一种为 $6!/(1!2!3!)=60$。",
+            "三个二元组先加标签，计数为 $6!/(2!)^3=90$。",
+            "每个无标识分拆有 $3!$ 种等大小组标签，所以第二种为 $90/6=15$。"
+          ],
+          "tip_en": "A multinomial count is a weight attached to a size pattern, not the number of size patterns.",
+          "tip_zh": "多项式系数是每种大小模式的权重，不是大小模式数。",
+          "question_ids": [
+            "AIME-2012-II-Q14",
+            "AIME-2016-II-Q08",
+            "AIME-2018-II-Q08",
+            "AIME-2021-I-Q04",
+            "AIME-2025-I-Q03"
+          ],
+          "prerequisites": [
+            "CO01"
+          ]
+        },
+        {
+          "method_id": "CO03-M05",
+          "title_en": "Use exchangeable gap coordinates for order statistics",
+          "title_zh": "用可交换间隔求次序统计量",
+          "steps_en": [
+            "Write a chosen subset increasingly and record all unchosen gaps, including both ends.",
+            "Show this is a bijection to weak compositions of the fixed unchosen total.",
+            "Use coordinate exchangeability to average the gaps, then express the requested statistic in them."
+          ],
+          "steps_zh": [
+            "把选中子集递增排列，记录未选元素的所有间隔，包括两端。",
+            "证明其与固定未选总数的弱有序分拆双射。",
+            "利用间隔坐标可交换性求均值，再用间隔表示目标统计量。"
+          ],
+          "example_en": "Choose three integers uniformly from $1,\\ldots,9$. What is the expected difference between the largest and smallest?",
+          "example_zh": "从一至九中均匀选三个整数，最大数与最小数之差的期望是多少？",
+          "solution_en": [
+            "The six unchosen integers occupy four gap coordinates, each with the same expected value $6/4=3/2$.",
+            "The range is two chosen-to-chosen increments plus the two internal gaps: $2+g_1+g_2$.",
+            "Its expected value is $2+2(3/2)=5$. The two exterior gaps do not enter the range."
+          ],
+          "solution_zh": [
+            "六个未选整数分布在四个间隔坐标，均值均为 $6/4=3/2$。",
+            "最大最小之差为两个已选相邻步长加两个内部间隔，即 $2+g_1+g_2$。",
+            "期望为 $2+2(3/2)=5$，两端外部间隔不计入极差。"
+          ],
+          "tip_en": "Exchangeability follows from the uniform bijection to all gap vectors; do not assume unrelated gaps are independent.",
+          "tip_zh": "可交换性来自均匀双射到全部间隔向量，不能假设这些间隔相互独立。",
+          "question_ids": [
+            "AIME-2015-I-Q12"
+          ],
+          "prerequisites": [
+            "PS04",
+            "CO02"
+          ]
+        },
+        {
+          "method_id": "CO03-M06",
+          "title_en": "Translate function bounds into all interval sums",
+          "title_zh": "把函数约束转成所有区间步长和",
+          "steps_en": [
+            "Use consecutive increments $d_i=f(i)-f(i-1)$ as variables.",
+            "Convert every pairwise distance condition into a bound on each consecutive sum of increments.",
+            "Use the total sum to bound exceptional negative increments, then prove any proposed local rule suffices for every longer interval before counting its orders."
+          ],
+          "steps_zh": [
+            "以相邻增量 $d_i=f(i)-f(i-1)$ 为变量。",
+            "把每对输入的距离条件转为每段连续增量和的界。",
+            "利用总和限制例外负增量，再证明所设局部规则对全部较长区间也充分，之后才排列计数。"
+          ],
+          "example_en": "Start at zero with increments $(3,-1,3)$, giving values $(0,3,2,5)$. Verify $|i-j|\\le|f(i)-f(j)|\\le3|i-j|$ for all indices, and explain why replacing the middle step by $-2$ fails.",
+          "example_zh": "从零出发取增量 $(3,-1,3)$，得到 $(0,3,2,5)$。检验所有下标满足 $|i-j|\\le|f(i)-f(j)|\\le3|i-j|$，并解释中间步改为负二为何失败。",
+          "solution_en": [
+            "Every single increment has absolute value between one and three. The two length-two interval sums are both two, and the length-three sum is five.",
+            "These absolute sums lie respectively in $[2,6]$ and $[3,9]$, proving every pairwise inequality.",
+            "After replacing $-1$ by $-2$, an adjacent two-step sum becomes one, below its required lower bound two. Bounds on individual steps alone are insufficient."
+          ],
+          "solution_zh": [
+            "单步绝对值均在一与三之间；两段长度二的和均为二，长度三的和为五。",
+            "这些绝对和分别位于 $[2,6]$ 与 $[3,9]$，所以全部成对不等式成立。",
+            "若中间改为负二，某两步和为一，低于应有下界二；仅检验单步界不充分。"
+          ],
+          "tip_en": "Local restrictions may suggest a count, but their sufficiency for nonadjacent input pairs must be proved.",
+          "tip_zh": "局部限制可提示计数，但必须证明其对非相邻输入对也充分。",
+          "question_ids": [
+            "AIME-2018-II-Q15"
+          ],
+          "prerequisites": [
+            "LO01",
+            "CO01"
+          ],
+          "extensions_en": [
+            "If all other increments lie in $\\{1,2,3\\}$ and the only negative increment is $-1$, each existing neighbor must be three for the length-two lower bound. These conditions suffice: an interval containing $-1$ alone has absolute sum one; an interval extending to one side begins with sum two over two steps, and every added positive step preserves sum at least length. Intervals extending both ways have an even larger initial margin. The upper bound follows by the triangle inequality."
+          ],
+          "extensions_zh": [
+            "若其他增量均属于 $\\{1,2,3\\}$ 且唯一负增量为负一，长度二下界要求其每个现有邻居均为三。这也充分：仅含负一步的区间绝对和为一；向一侧延伸的区间从两步和为二开始，每加一步正增量都保持总和至少为长度；向两侧延伸有更大初始余量。上界由三角不等式得到。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "subtype_id": "CO04",
+    "reviewer": "print_builder",
+    "content_sha256": "e5c48936f7e8bc566352f30e782c9faf5b88324569d5dec17a46e71732033701",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO04-M01",
+      "CO04-M02",
+      "CO04-M03",
+      "CO04-M04",
+      "CO04-M05",
+      "CO04-M06"
+    ],
+    "findings": [
+      "Read all six bilingual methods and their special extensions; recomputed 19 exactly-one multiples,14 directed-block permutations,subset-square total 240,nonuniform witness total 30 versus 19 objects,the three-column capacity construction,and the sharp three zero-overlap rotations.",
+      "Checked all mapped inclusion-exclusion and incidence routes, including overlapping 2x2 board blocks, circular long runs, arithmetic-progression witnesses, tournament source/sink structure, primitive grid-line representatives, and equilateral-apex correction.",
+      "The cyclic overlap identity counts ordered differences correctly, and complement exchange requires even rotation cycles. Capacity examples include an attaining configuration. English and Chinese formulas and boundary conditions agree."
+    ],
+    "patch": {}
+  },
+  {
+    "subtype_id": "CO05",
+    "reviewer": "print_builder",
+    "content_sha256": "f3ec620fa71cd986cae41f64e3c6030f9b468b1000d5bfdf366496bda2aff2e9",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO05-M01",
+      "CO05-M02",
+      "CO05-M03",
+      "CO05-M04",
+      "CO05-M05",
+      "CO05-M06",
+      "CO05-M07",
+      "CO05-M08"
+    ],
+    "findings": [
+      "Read all eight bilingual methods and extensions; independently verified the suffix-state vectors and count 21,the mixed-step path count 16,binary-path shape count 16,indecomposable convolution 177,first-hit set {5,6,8},divisor-chain count 8,coin expectation 6,and three domino tilings.",
+      "Checked the mapped route recurrences and state sufficiency, including Hamilton closure, nonbacktracking edge memory, cycle-color identification, absorbing frog states, prefix success constraints, unique-negative increments, and divisor-chain normalization.",
+      "The 2026 I Q15 exact-cover recurrence and candidate/certificate implementation were separately inspected and rerun during problem review; the stated 2025 candidates and 83 covers agree. Clarified the Chinese phrase as a 10 by 10 board with five loops to avoid merging the numbers."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "CO05-M01",
+          "title_en": "Remember the suffix or last move needed by the rule",
+          "title_zh": "记住规则所需的后缀或末步",
+          "steps_en": [
+            "Choose states recording the shortest suffix, last direction, used subset, or edge type that determines all legal extensions.",
+            "For each state list every legal next symbol or move and its new state.",
+            "Initialize the empty object explicitly, then add counts from disjoint predecessor states.",
+            "Sum only the terminal states satisfying the full endpoint or closure condition."
+          ],
+          "steps_zh": [
+            "状态记录决定后继所需的最短后缀、末方向、已用子集或末棱类型。",
+            "对每态列出全部合法下一符号或动作及其新状态。",
+            "明确空对象初值，再从互斥前驱状态相加。",
+            "最后只汇总满足完整终点或闭合条件的终态。"
+          ],
+          "example_en": "Count binary words of length five avoiding the consecutive pattern $101$.",
+          "example_zh": "求不含连续模式 $101$ 的五位二进制串个数。",
+          "solution_en": [
+            "Use states $0,1,2$ for the longest suffix matching a proper prefix of $101$: empty, $1$, and $10$.",
+            "The updates are $(a,b,c)\\mapsto(a+c,a+b,b)$; from state $10$, appending one is forbidden. Begin at $(1,0,0)$.",
+            "Lengths one through five give $(1,1,0),(1,2,1),(2,3,2),(4,5,3),(7,9,5)$. The answer is $21$."
+          ],
+          "solution_zh": [
+            "用状态零、一、二记录与 $101$ 真前缀相同的最长后缀：空、一、十。",
+            "更新为 $(a,b,c)\\mapsto(a+c,a+b,b)$，状态十后不能再接一。初值 $(1,0,0)$。",
+            "一至五位状态依次为 $(1,1,0),(1,2,1),(2,3,2),(4,5,3),(7,9,5)$，总数二十一。"
+          ],
+          "tip_en": "A nonbacktracking walk must remember its previous edge; the current vertex alone is insufficient.",
+          "tip_zh": "非回退游走须记住前一条棱，仅当前顶点不足以决定后继。",
+          "question_ids": [
+            "AIME-2001-I-Q14",
+            "AIME-2001-I-Q15",
+            "AIME-2005-I-Q13",
+            "AIME-2007-II-Q06",
+            "AIME-2008-I-Q11",
+            "AIME-2013-II-Q09",
+            "AIME-2015-II-Q12",
+            "AIME-2016-II-Q12",
+            "AIME-2021-II-Q08"
+          ],
+          "prerequisites": [
+            "CO06"
+          ],
+          "extensions_en": [
+            "For a Hamilton path, use $H(S,v)$, with visited set $S$ and last vertex $v$; append only unused adjacent vertices. A final cycle count needs the additional edge back to the start. For a cycle coloring, compare proper row colorings with equal versus unequal end colors; identifying equal ends yields $R_n+R_{n-1}=q(q-1)^{n-1}$."
+          ],
+          "extensions_zh": [
+            "哈密顿路径可用已访集合与末点状态 $H(S,v)$，只添加未访问相邻点；若计圈，还须检验最后能接回起点。环染色可按一行合法染色的两端相同或不同分类，合并同色端点得到 $R_n+R_{n-1}=q(q-1)^{n-1}$。"
+          ]
+        },
+        {
+          "method_id": "CO05-M02",
+          "title_en": "Extend acyclic paths by their accumulated totals",
+          "title_zh": "按累计总量扩展无环路径",
+          "steps_en": [
+            "Use coordinates, total weight, or another quantity that strictly increases at every step.",
+            "Write a predecessor or forward-extension recurrence over that quantity, storing any running-value or turn information needed.",
+            "For a fixed multiset of moves, check the result independently with a multinomial interleaving count.",
+            "If turns are prescribed, replace maximal directional runs by positive compositions before summing."
+          ],
+          "steps_zh": [
+            "使用坐标、总重量等每步严格增加的量。",
+            "按该量写前驱或向前扩展递推，并记录所需运行值或转弯信息。",
+            "固定动作重数时，可用多项式交错计数独立核验。",
+            "若规定转弯数，先把极大方向段转成正有序分拆，再求和。"
+          ],
+          "example_en": "A path uses steps $(1,0),(0,1),(2,1)$. Count paths from $(0,0)$ to $(3,2)$.",
+          "example_zh": "路径允许步长 $(1,0),(0,1),(2,1)$，求从 $(0,0)$ 到 $(3,2)$ 的路径数。",
+          "solution_en": [
+            "Let $F(x,y)=F(x-1,y)+F(x,y-1)+F(x-2,y-1)$, with $F(0,0)=1$ and out-of-range states zero.",
+            "Alternatively, without a long step there are three horizontal and two vertical moves, giving $\\binom52=10$.",
+            "With one long step, one move of each of the three types remains, giving $3!=6$; two long steps exceed the horizontal total. Thus $F(3,2)=16$."
+          ],
+          "solution_zh": [
+            "令 $F(x,y)=F(x-1,y)+F(x,y-1)+F(x-2,y-1)$，初值 $F(0,0)=1$，范围外状态为零。",
+            "独立核验：无长步时有三横两竖，排列数为 $\\binom52=10$。",
+            "恰一长步时三类动作各一次，有 $3!=6$ 种；两长步横总量过大。因此共有十六条。"
+          ],
+          "tip_en": "A recurrence ordered by total weight remains finite even when its running value can be negative.",
+          "tip_zh": "即使运行值可为负，只要按严格增加的总重量排序，递推仍然有限。",
+          "question_ids": [
+            "AIME-2005-I-Q13",
+            "AIME-2007-I-Q06",
+            "AIME-2018-II-Q08",
+            "AIME-2024-I-Q06",
+            "AIME-2026-II-Q14"
+          ],
+          "prerequisites": [
+            "CO03",
+            "LO01"
+          ],
+          "extensions_en": [
+            "For a nonstandard arithmetic operation, track both ordinary accumulated total $s$ and running result $v$. A move of positive weight $t$ advances to total $s+t$, so no cycle is possible in the dynamic program. A parity invariant may simplify the transition, but does not replace counting every admissible weight choice."
+          ],
+          "extensions_zh": [
+            "非标准运算可同时记录普通累计总量 $s$ 与运行结果 $v$。新增正重量 $t$ 后总量变为 $s+t$，故动态规划不会循环。奇偶不变量可简化转移，但不能替代对每个合法重量选择的计数。"
+          ]
+        },
+        {
+          "method_id": "CO05-M03",
+          "title_en": "Insert and delete an extreme object to obtain a product recurrence",
+          "title_zh": "插删极值对象得到乘法递推",
+          "steps_en": [
+            "Identify where the largest label must occur in a legal object.",
+            "Show deleting it preserves every local condition.",
+            "Count its legal reinsertion slots in every smaller object and use the resulting recurrence with its smallest valid initial case."
+          ],
+          "steps_zh": [
+            "确定合法对象中最大标签可出现的位置。",
+            "证明删去它仍保持每个局部条件。",
+            "对每个较小对象计算重新插入的合法位置数，结合最小有效初值递推。"
+          ],
+          "example_en": "An increasing rooted binary tree is required to be a single path and has labels $1,2,3,4,5$, increasing away from the root. Count its left-right shapes.",
+          "example_zh": "递增二叉树只允许形成一条从根出发的路径，标签一至五沿路径递增，求左右子节点形状数。",
+          "solution_en": [
+            "The labels along the path are forced to be $1,2,3,4,5$.",
+            "Insert the next largest label as the left or right child of the current final leaf. Deleting that largest leaf uniquely reverses this operation.",
+            "Four insertions each have two choices, so there are $2^4=16$ shapes."
+          ],
+          "solution_zh": [
+            "路径上标签顺序被迫为一、二、三、四、五。",
+            "每次把新增最大标签接为当前末叶的左或右子节点，删除最大叶可唯一逆转。",
+            "四次插入各两种选择，共十六种形状。"
+          ],
+          "tip_en": "If the deletion joins two former neighbors, check their new adjacency explicitly.",
+          "tip_zh": "若删除后两位旧邻居相接，须明确检验新相邻关系。",
+          "question_ids": [
+            "AIME-2006-I-Q11",
+            "AIME-2015-II-Q10"
+          ],
+          "prerequisites": [
+            "CO01"
+          ],
+          "extensions_en": [
+            "For a permutation whose downward jumps are at most two, the new maximum may go at the end or immediately before either of the next two largest labels. Deleting it is safe because the newly adjacent predecessor is at most the old maximum minus one and its successor at least the old maximum minus two. This proves the three-slot recurrence rather than merely guessing it."
+          ],
+          "extensions_zh": [
+            "若排列每次下降至多二，新增最大值只能放末尾，或紧靠在接下来两个最大标签之前。删除它后，新的前项至多为旧最大值减一、后项至少为旧最大值减二，所以新邻接仍合法，由此严格得到三位置递推。"
+          ]
+        },
+        {
+          "method_id": "CO05-M04",
+          "title_en": "Split at the earliest closed prefix or unique defect",
+          "title_zh": "按最早闭合前缀或唯一缺陷分解",
+          "steps_en": [
+            "Choose a distinguished split that every object has uniquely.",
+            "Count the first component and the independent remainder.",
+            "Write a convolution recurrence, subtracting earlier component sizes when solving for the indecomposable count.",
+            "For a unique adjacent defect, forbid its neighboring extra defects before multiplying the two side counts."
+          ],
+          "steps_zh": [
+            "选择每个对象唯一具有的特殊分界。",
+            "分别计算第一部件与独立余部。",
+            "写卷积递推，求不可分计数时扣除更早部件大小。",
+            "唯一相邻缺陷出现后，先禁止它两旁新增缺陷，再相乘左右计数。"
+          ],
+          "example_en": "Let $c_1,\\ldots,c_5=1,1,3,13,71$ count indecomposable permutations, where no proper prefix is an initial value set. How many permutations of six labels have exactly two such consecutive components?",
+          "example_zh": "不可分排列指没有真前缀恰为初始值集合，已知一至五项计数为 $1,1,3,13,71$。六标签排列中，恰有两个这样的连续部件者有多少？",
+          "solution_en": [
+            "The first component has a unique size $k$, from one to five. Its values must be $1,\\ldots,k$ and the second uses the others.",
+            "Each size contributes $c_kc_{6-k}$, with the second component standardized without changing its order.",
+            "The total is $2(1\\cdot71)+2(1\\cdot13)+3^2=177$. The earliest closed prefix makes the split unique."
+          ],
+          "solution_zh": [
+            "第一部件大小 $k$ 唯一，范围一至五，其值必须为一至 $k$，第二部件使用其余值。",
+            "每个大小贡献 $c_kc_{6-k}$，第二部件标准化不改变相对顺序。",
+            "总数为 $2(1\\cdot71)+2(1\\cdot13)+3^2=177$。最早闭合前缀保证分界唯一。"
+          ],
+          "tip_en": "The word earliest or unique is a proof device that prevents a convolution from overcounting.",
+          "tip_zh": "“最早”或“唯一”是防止卷积重复计数的关键。",
+          "question_ids": [
+            "AIME-2018-II-Q11",
+            "AIME-2023-I-Q11"
+          ],
+          "prerequisites": [
+            "CO01",
+            "CO02"
+          ],
+          "extensions_en": [
+            "An arbitrary permutation splits at its earliest closed prefix, giving $n!=\\sum_{k=1}^n c_k(n-k)!$. For independent sets in a line, the choose-or-omit last position recurrence is $T_n=T_{n-1}+T_{n-2}$, with $T_0=1,T_1=2$. A prescribed unique adjacent pair leaves two independent no-adjacency blocks after excluding the two positions immediately beside it."
+          ],
+          "extensions_zh": [
+            "任意排列按最早闭合前缀分解，得到 $n!=\\sum_{k=1}^n c_k(n-k)!$。直线上的不相邻子集按末位选或不选满足 $T_n=T_{n-1}+T_{n-2}$，初值 $T_0=1,T_1=2$。指定唯一相邻对后，排除其两侧紧邻位置，余下为两个独立不相邻区块。"
+          ]
+        },
+        {
+          "method_id": "CO05-M05",
+          "title_en": "Reverse a deterministic process into exact first-hit levels",
+          "title_zh": "反转确定性过程得到首次命中层",
+          "steps_en": [
+            "Define whether the hitting index counts terms or moves.",
+            "List every predecessor of a state from the original forward rule, including exceptional absorbing states.",
+            "Start at the target and generate one reverse level at a time, proving predecessor classes do not create duplicates or earlier hits.",
+            "For a queue or stack, reverse the full state or track original positions rather than guessing final labels."
+          ],
+          "steps_zh": [
+            "明确命中下标计算项数还是移动次数。",
+            "从原正向规则列全每态前驱，包括特殊吸收态。",
+            "从目标逐层反向生成，证明各前驱类不重复也不提前命中。",
+            "队列或堆叠应逆转完整状态或追踪原位置，不能猜测最终标签。"
+          ],
+          "example_en": "Define $f(1)=1$; for even $n$, let $f(n)=n/2$; for odd $n>1$, let $f(n)=n-1$. Which starts reach one for the first time on their fourth term?",
+          "example_zh": "定义 $f(1)=1$，偶数除以二，奇数且大于一时减一。哪些起点在第四项首次到一？",
+          "solution_en": [
+            "The first level is $T_1=\\{1\\}$ and the second is $T_2=\\{2\\}$; the absorbing predecessor one must be excluded.",
+            "An even target $z$ has predecessors $2z$ and $z+1$; an odd target greater than one has only $2z$. Thus $T_3=\\{3,4\\}$.",
+            "Reversing once more gives $T_4=\\{6,8,5\\}$. Direct trajectories verify all three first-hit lengths."
+          ],
+          "solution_zh": [
+            "初层为 $T_1=\\{1\\}$、次层为 $T_2=\\{2\\}$，须排除吸收前驱一。",
+            "偶目标 $z$ 有前驱 $2z,z+1$，大于一的奇目标只有 $2z$，所以第三层为 $\\{3,4\\}$。",
+            "再反向一步得到 $T_4=\\{6,8,5\\}$，逐一正向检查均在第四项首次到一。"
+          ],
+          "tip_en": "Different reverse branches can merge only if the forward map sends one source to two outputs, which a deterministic map cannot do.",
+          "tip_zh": "同一反向层不同目标的前驱不会重复，因为确定性映射不可能把一个起点送到两个输出。",
+          "question_ids": [
+            "AIME-2000-I-Q15",
+            "AIME-2004-I-Q15"
+          ],
+          "prerequisites": []
+        },
+        {
+          "method_id": "CO05-M06",
+          "title_en": "Normalize divisor chains to smaller integer states",
+          "title_zh": "将整除链归一到较小整数状态",
+          "steps_en": [
+            "Choose an initial term or a final divisor so the remainder has a smaller integer parameter.",
+            "Divide out the common scale and translate strict growth into the new first-term restriction.",
+            "Sum only legal divisors, give the one-term case separately, and memoize by the strictly decreasing parameter."
+          ],
+          "steps_zh": [
+            "选择首项或末端约数，使余部具有较小整数参数。",
+            "除去公共比例，把严格增长转成新首项限制。",
+            "仅对合法约数求和，单独给单项情况，并按严格减小的参数缓存。"
+          ],
+          "example_en": "Count chains $1=a_0<a_1<\\cdots<a_t=12$ in which every term divides the next.",
+          "example_zh": "求从一严格递增到十二、且每项整除下一项的链数。",
+          "solution_en": [
+            "Let $D(n)$ count such chains ending at $n$, with $D(1)=1$. The penultimate term is a unique proper divisor $d$ of $n$, so $D(n)=\\sum_{d\\mid n,d<n}D(d)$.",
+            "This gives $D(2)=D(3)=1,D(4)=2,D(6)=3$.",
+            "Therefore $D(12)=D(1)+D(2)+D(3)+D(4)+D(6)=8$. Each chain is counted by its unique penultimate term."
+          ],
+          "solution_zh": [
+            "令 $D(n)$ 计终点为 $n$ 的链，$D(1)=1$。倒数第二项是唯一真约数 $d$，故 $D(n)=\\sum_{d\\mid n,d<n}D(d)$。",
+            "依次得 $D(2)=D(3)=1,D(4)=2,D(6)=3$。",
+            "所以 $D(12)=1+1+1+2+3=8$，每链按唯一倒数第二项计一次。"
+          ],
+          "tip_en": "Dividing the remaining terms also changes their sum; subtract the removed normalized first term.",
+          "tip_zh": "将余项除以首项会改变总和，还须扣除已移去的归一首项。",
+          "question_ids": [
+            "AIME-2019-II-Q12"
+          ],
+          "prerequisites": [
+            "NT02"
+          ],
+          "extensions_en": [
+            "For a strictly increasing positive divisor chain of total $s$ and first term at least two, define $g(s)$. The one-term chain contributes one. If its first term is $d\\mid s$, $2\\le d<s$, dividing later terms by $d$ leaves sum $s/d-1$ and first term at least two. Hence $g(s)=1+\\sum_{2\\le d<s,d\\mid s}g(s/d-1)$, with impossible small states zero."
+          ],
+          "extensions_zh": [
+            "对总和 $s$、首项至少二的严格递增正整数整除链，令计数为 $g(s)$。单项链贡献一；若首项为 $d\\mid s$ 且 $2\\le d<s$，后续项除以 $d$ 后总和为 $s/d-1$，首项仍至少二。因此 $g(s)=1+\\sum_{2\\le d<s,d\\mid s}g(s/d-1)$，不可行小状态设零。"
+          ]
+        },
+        {
+          "method_id": "CO05-M07",
+          "title_en": "Separate active and absorbing states in a weighted recurrence",
+          "title_zh": "在加权递推中区分活动与吸收状态",
+          "steps_en": [
+            "Choose states with the same future transition law; verify any symmetry-based merging.",
+            "For counts, sum legal predecessor counts; for probabilities, multiply by transition probabilities.",
+            "Remove paths as soon as they hit the absorbing event, so later steps cannot count them again.",
+            "For expected remaining time, use $E=1+\\sum pE_{next}$ with zero at absorbing states."
+          ],
+          "steps_zh": [
+            "选择未来转移规律相同的状态，按对称合并前须验证。",
+            "计路径时相加合法前驱数，计概率时乘转移概率。",
+            "一旦命中吸收事件便移除路径，避免以后再次计入。",
+            "剩余期望用 $E=1+\\sum pE_{next}$，吸收态取零。"
+          ],
+          "example_en": "Flip a fair coin until two consecutive heads appear. Find the expected number of flips.",
+          "example_zh": "反复掷公平硬币，首次连续两次正面时停止，求掷币次数的期望。",
+          "solution_en": [
+            "Let $E_0$ be the expectation with no terminal head and $E_1$ with one terminal head.",
+            "First-step equations are $E_0=1+(E_0+E_1)/2$ and $E_1=1+E_0/2$; the second head reaches an absorbing state with zero remaining time.",
+            "Solving gives $E_0=6$. The time already spent in the next flip supplies the leading one in each equation."
+          ],
+          "solution_zh": [
+            "令 $E_0$ 为末尾无正面时的期望，$E_1$ 为末尾恰有一个正面时的期望。",
+            "首次步骤方程为 $E_0=1+(E_0+E_1)/2$、$E_1=1+E_0/2$，再出正面进入剩余时间零的吸收态。",
+            "解得 $E_0=6$。每式开头的一是下一次掷币已经花费的时间。"
+          ],
+          "tip_en": "Merged states must have identical transition totals into every merged class, not merely look symmetric in a sketch.",
+          "tip_zh": "合并状态须对每个合并类别具有相同转移总量，不能只凭图上看似对称。",
+          "question_ids": [
+            "AIME-2002-II-Q12",
+            "AIME-2018-I-Q14",
+            "AIME-2021-I-Q12"
+          ],
+          "prerequisites": [
+            "PS04",
+            "PS05"
+          ],
+          "extensions_en": [
+            "For a prefix success boundary, retain only states with hit count $j\\le\\lfloor pn\\rfloor$ at each required prefix length; a final total condition is an additional terminal filter. For predicting the next color of an unchanged deck, the prediction does not affect later information or transitions, so choosing the currently more numerous color maximizes the immediate success probability and is globally optimal."
+          ],
+          "extensions_zh": [
+            "对前缀成功率边界，在每个要求的前缀长度只保留命中数 $j\\le\\lfloor pn\\rfloor$ 的状态，最终命中总数另作终态筛选。预测剩余牌颜色时，预测本身不改变以后的信息与转移，因此每次猜当前数量较多的颜色最大化即时成功率，也给出整体最优策略。"
+          ]
+        },
+        {
+          "method_id": "CO05-M08",
+          "title_en": "Count exact covers with the first uncovered element",
+          "title_zh": "用首个未覆盖元素计算精确覆盖",
+          "steps_en": [
+            "Represent every allowed piece by its set of occupied cells.",
+            "Choose the first uncovered cell in a fixed order and branch only over legal pieces containing it and disjoint from the covered set.",
+            "Stop with count one exactly when every cell is covered and the prescribed number of pieces is used.",
+            "Save the candidate list, recurrence, and resulting cover list or checksums so a computed answer can be independently reproduced."
+          ],
+          "steps_zh": [
+            "用占用单元集合表示每个允许部件。",
+            "按固定顺序取首个未覆盖格，只对含该格且不与已覆盖集相交的部件分支。",
+            "仅在全部单元覆盖且使用指定部件数时计一。",
+            "保存候选表、递推与最终覆盖列表或校验值，使计算结果可独立复现。"
+          ],
+          "example_en": "Use three dominoes to cover a two-row, three-column board. Count the tilings by branching at the upper-left cell.",
+          "example_zh": "用三块骨牌覆盖两行三列棋盘，按左上首格分支计算铺法。",
+          "solution_en": [
+            "If its domino is vertical, the remaining two-by-two square has two covers: both vertical or both horizontal.",
+            "If it is horizontal, the lower-left cell must also belong to a horizontal domino; the last column is then vertical, giving one cover.",
+            "The branches are disjoint because the piece covering the chosen cell is unique. Total $2+1=3$."
+          ],
+          "solution_zh": [
+            "若首格骨牌竖放，余下二乘二方块有全竖或全横两种。",
+            "若首格横放，左下也须横放，末列被迫竖放，只有一种。",
+            "各分支按覆盖首格的唯一部件区分，互不重复，共三种。"
+          ],
+          "tip_en": "Pruning is valid only when its condition is proved necessary; the unpruned pivot recurrence already counts each partition once.",
+          "tip_zh": "剪枝条件必须证明为必要条件；即使不剪枝，首格递推本身已保证每个分拆恰计一次。",
+          "question_ids": [
+            "AIME-2026-I-Q15"
+          ],
+          "prerequisites": [
+            "LO02"
+          ],
+          "extensions_en": [
+            "In symbols, $C(U,j)=\\sum_L C(U\\cup L,j-1)$ over candidate pieces containing the first cell outside $U$ and avoiding $U$. Set $C(U,0)=1$ for full coverage and zero otherwise. The $10\\times10$ five-loop problem has a companion certificate listing all $2025$ candidate boundary masks, all $83$ accepted covers, and the exact search totals; no unproved geometric slab classification is needed for the count."
+          ],
+          "extensions_zh": [
+            "符号上，$C(U,j)=\\sum_L C(U\\cup L,j-1)$，其中 $L$ 含首个不在 $U$ 中的单元且不交 $U$。$j=0$ 时仅全部覆盖取一。$10\\times10$ 棋盘的五环题配有证书，记录全部二千零二十五个候选边界掩码、八十三个有效覆盖及精确搜索总量，计数不依赖未经证明的条块分类。"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "subtype_id": "CO06",
+    "reviewer": "print_builder",
+    "content_sha256": "740d6712b0985642ccccdaed5aeae2caf9e2bc3250dba16ce50fb620c4f00ba8",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO06-M01",
+      "CO06-M02",
+      "CO06-M03",
+      "CO06-M04",
+      "CO06-M05",
+      "CO06-M06",
+      "CO06-M07",
+      "CO06-M08",
+      "CO06-M09",
+      "CO06-M10",
+      "CO06-M11",
+      "CO06-M12",
+      "CO06-M13",
+      "CO06-M14"
+    ],
+    "findings": [
+      "Read all fourteen bilingual methods, original examples, worked solutions, tips and extensions. Recomputed the explicit example results: bipartite obstruction,8 triangles,6 disk regions,8 crossed cells,4 matchings,15 layered paths,(10,20,10) equilibrium,6 tournament extensions,circular separation impossibility,offset 4/5,nine torus states,Fano sums 1 and -1,10 shared-edge colorings,and maximum path variation 7.",
+      "Checked the mapped graph and incidence routes, the Hamiltonian diagonal-rule/gcd proof, finite Fano/K4 incidence lemmas, strict circular separation, chord segment containment, graph-equilibrium maximum principle, and attainment of the weighted-degree bound.",
+      "Added the necessary boundary-endpoint/transverse-intersection hypothesis to the r+1 planar-region increment in both languages; a free-ended segment would not satisfy that increment. Rephrased layer monotonicity to cover either height direction. The remaining bilingual statements and special-lemma extensions pass."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "CO06-M01",
+          "title_en": "Translate adjacency into a finite graph",
+          "title_zh": "把相邻关系转成有限图",
+          "steps_en": [
+            "Specify exactly what vertices and edges represent, and whether the edges are directed.",
+            "Use coordinates, parity, a dual graph, or an explicit edge list to prove the representation preserves every legal move.",
+            "Count graph objects or states, retaining visited-set memory or reachability constraints when required."
+          ],
+          "steps_zh": [
+            "明确顶点与边各代表什么，以及边是否有方向。",
+            "用坐标、奇偶、对偶图或明确边表，证明图表示保留全部合法动作。",
+            "再计算图对象或状态，必要时保留已访问集合或可达性条件。"
+          ],
+          "example_en": "A counter moves between side-adjacent cells of a two-by-three board. Can it return to its start after an odd number of moves?",
+          "example_zh": "棋子在两行三列棋盘的共边相邻格之间移动，能否在奇数步后回到起点？",
+          "solution_en": [
+            "Color each cell by the parity of its row plus column. Every graph edge joins opposite colors.",
+            "Each move flips the color, so after an odd number the counter is on the other color.",
+            "It cannot be at the starting cell. This is a bipartite-graph obstruction independent of the chosen route."
+          ],
+          "solution_zh": [
+            "按行号加列号的奇偶给格子两色染色，每条图边连接异色格。",
+            "每步翻转颜色，奇数步后必位于另一色。",
+            "因此不能回起点，这是二部图障碍，与具体路线无关。"
+          ],
+          "tip_en": "For face-adjacency problems, the dual graph often turns a solid into a small familiar graph.",
+          "tip_zh": "面的相邻问题常可通过对偶图，把立体变成小型常见图。",
+          "question_ids": [
+            "AIME-2001-I-Q15",
+            "AIME-2001-II-Q01",
+            "AIME-2012-I-Q11",
+            "AIME-2018-I-Q14"
+          ],
+          "prerequisites": [
+            "CO05",
+            "NT03"
+          ],
+          "extensions_en": [
+            "An octahedron has the cube as its face-adjacency dual. Label cube vertices by binary triples: adjacent vertices differ in one bit, so avoiding face adjacency means Hamming distance two or three. For a digit rule, use digits as vertices and allowed consecutive digit blocks as directed edges; a directed cycle may produce unbounded lengths, while a finite acyclic graph has a longest path."
+          ],
+          "extensions_zh": [
+            "八面体的面相邻对偶图是立方体。用三位二进制标顶点，相邻恰差一位，因此避开共边面意味着相差两位或三位。数位规则可把数位作顶点、允许相邻数位块作有向边；有向环可能产生无限长度，无环有限图则有最长路径。"
+          ]
+        },
+        {
+          "method_id": "CO06-M02",
+          "title_en": "Count geometric witnesses and certify their multiplicity",
+          "title_zh": "计几何见证并证明其重数",
+          "steps_en": [
+            "Choose an elementary witness: a vertex tuple, an apex, a pair of lines, or a pair of monotone branches.",
+            "Classify all degenerate or exceptional configurations and determine their witness multiplicity.",
+            "Subtract invalid cases or correct multiplicities only after proving every remaining witness produces one valid object.",
+            "For intersections of curves, prove existence and uniqueness within each counted branch pair; monotonicity of both curves alone does not suffice."
+          ],
+          "steps_zh": [
+            "选择基本见证：顶点元组、顶角、一对直线或一对单调分支。",
+            "分类全部退化与例外构型，并确定见证重数。",
+            "证明剩余每个见证均产生合法对象之后，再扣除无效情形或修正重数。",
+            "曲线交点按分支对计数时，须证明每对中的存在性与唯一性，两曲线各自单调并不足够。"
+          ],
+          "example_en": "Four vertices of a square and its center are marked. How many nondegenerate triangles use three marked points?",
+          "example_zh": "标记正方形四顶点与中心，从中选三个点能组成多少个非退化三角形？",
+          "solution_en": [
+            "All triples number $\\binom53=10$.",
+            "Exactly two triples are collinear: the center with either opposite vertex pair. No other line contains three marked points.",
+            "Subtract these two invalid witnesses to obtain eight triangles."
+          ],
+          "solution_zh": [
+            "全部三元组有 $\\binom53=10$ 个。",
+            "恰有两个共线三元组，即中心与任一对对顶点；没有其他含三个标记点的直线。",
+            "扣除两个退化见证，得到八个三角形。"
+          ],
+          "tip_en": "A count of branch rectangles requires a local intersection certificate; never infer one crossing from a picture.",
+          "tip_zh": "分支矩形的计数需要局部交点证书，不能凭图猜定一个交点。",
+          "question_ids": [
+            "AIME-2002-I-Q05",
+            "AIME-2003-I-Q06",
+            "AIME-2004-I-Q03",
+            "AIME-2010-II-Q11",
+            "AIME-2015-II-Q05",
+            "AIME-2017-I-Q01",
+            "AIME-2017-II-Q13",
+            "AIME-2018-I-Q07",
+            "AIME-2022-II-Q05",
+            "AIME-2023-I-Q03",
+            "AIME-2023-II-Q11",
+            "AIME-2024-I-Q12"
+          ],
+          "prerequisites": [
+            "CO04",
+            "GE03"
+          ],
+          "extensions_en": [
+            "An isosceles triangle has one apex witness except for an equilateral triangle, which has three. For a regular $n$-gon, apex counting gives $n\\lfloor(n-1)/2\\rfloor$ incidences; subtract two extra copies of each equilateral triangle. For pairwise-intersecting edge families, two edges $ab,ac$ force every edge either through $a$ or equal to $bc$, leaving star families and the triangle exception.",
+            "For a curve-branch pair, use endpoint signs for existence. Opposite orientations can give direct uniqueness; equal orientations need a further derivative or convexity argument. A sufficient crossing certificate is that the difference of the two graphs has the same nonzero derivative sign at every zero: two such crossings would force an intervening zero of the opposite orientation. The full trigonometric-fold certificate is supplied with its companion solution."
+          ],
+          "extensions_zh": [
+            "一般等腰三角形只有一个顶角见证，等边三角形有三个。正 $n$ 边形按顶角计数有 $n\\lfloor(n-1)/2\\rfloor$ 次关联，应对每个等边三角形扣掉额外两份。两两相交边族中，已有 $ab,ac$ 后，其他边要么经过 $a$，要么为 $bc$，只剩星形与三角形例外。",
+            "每对曲线分支可用端点符号证明存在；方向相反时可直接唯一，方向相同时还须导数或凸性。一个充分的穿越证书是两图差在每个零点的导数均具有相同非零符号；若有两个同向穿越，中间必有反向零点。完整三角折叠证书见配套解析。"
+          ]
+        },
+        {
+          "method_id": "CO06-M03",
+          "title_en": "Count planar regions by Euler or incremental crossings",
+          "title_zh": "用欧拉公式或逐段交点计平面区域",
+          "steps_en": [
+            "Replace each intersection by a graph vertex and split every segment there.",
+            "Use $V-E+F=1+C$ with the correct component and exterior-face counts, or add one segment at a time.",
+            "In a disk partitioned by full chords, a new chord with no overlapping old edge and $r$ distinct interior crossings adds $r+1$ regions. Coincident crossings count as one point; free-ended segments need a separate Euler calculation."
+          ],
+          "steps_zh": [
+            "将每个交点作为图顶点，并把线段在交点处分边。",
+            "用 $V-E+F=1+C$ 并正确处理连通分量与外部面，或逐条添加线段。",
+            "圆盘已由完整弦分割时，新增弦若不与旧边重合，且有 $r$ 个不同内部交点，就新增 $r+1$ 个区域。重合交点只计一个点；端点自由的线段须另用欧拉公式计算。"
+          ],
+          "example_en": "Three distinct diameters of a disk pass through its center. How many disk regions do they form, and why does a generic pair-crossing formula overcount?",
+          "example_zh": "圆盘内三条不同直径都过圆心，形成多少个区域？为什么一般位置的线段对交点公式会多数？",
+          "solution_en": [
+            "The first diameter creates two regions. The second crosses it at one point and adds two, giving four.",
+            "The third meets both old diameters at the same center point, so it also adds two, giving six.",
+            "Using three pairwise crossings in the generic formula $1+3+3$ gives seven because the last two crossings are not distinct."
+          ],
+          "solution_zh": [
+            "第一条直径得到两个区域，第二条有一个交点，新增两个，得到四个。",
+            "第三条与旧直径都在同一圆心相交，仍只新增两个，最终六个。",
+            "把三对相交代入一般公式 $1+3+3$ 会得七，因为第三条上的两个交点并不不同。"
+          ],
+          "tip_en": "Probability-one general position is valid only after excluding the finitely described degeneracies.",
+          "tip_zh": "只有排除明确描述的退化事件后，才能使用概率一的一般位置。",
+          "question_ids": [
+            "AIME-2022-II-Q09",
+            "AIME-2025-I-Q13"
+          ],
+          "prerequisites": [
+            "CO02",
+            "PS04"
+          ],
+          "extensions_en": [
+            "For complete bipartite segments between $m,n$ ordered points on parallel lines with no triple interior crossing, $X=\\binom m2\\binom n2$ crossings and Euler give $mn+X-1$ bounded faces. For a random chord arrangement, linearity of expectation applies to crossing indicators; endpoint interleaving determines whether two chords cross."
+          ],
+          "extensions_zh": [
+            "平行两线上分别有 $m,n$ 个有序点，连全两组之间线段且无三线内部共点，则交点 $X=\\binom m2\\binom n2$，欧拉公式给有界面数 $mn+X-1$。随机弦安排可对相交指示变量使用期望线性性，两弦是否相交由端点是否交错决定。"
+          ]
+        },
+        {
+          "method_id": "CO06-M04",
+          "title_en": "Normalize lattice directions and count crossed cells",
+          "title_zh": "归一格点方向并计算穿越单元",
+          "steps_en": [
+            "Divide an integer direction vector by the gcd of its coordinates to obtain the primitive step.",
+            "Use coordinate spans to bound possible directions when a line contains a prescribed number of grid points.",
+            "Normalize a line by its first boundary point or least coordinate to avoid counting it from several points.",
+            "For a segment joining lattice points, count crossed unit-cell interiors with the gcd correction."
+          ],
+          "steps_zh": [
+            "将整数方向向量各坐标除以最大公因数，得到本原步长。",
+            "规定直线含多少格点时，利用坐标跨度限制方向。",
+            "按首个边界点或最小坐标归一每条线，避免从多个点重复计。",
+            "格点连线穿越单位格内部时，使用最大公因数修正。"
+          ],
+          "example_en": "Find all lattice points on the segment from $(0,0)$ to $(6,4)$, and count the unit-square interiors crossed by the segment.",
+          "example_zh": "求从 $(0,0)$ 到 $(6,4)$ 线段上的全部整点，并计算线段穿过多少个单位正方形内部。",
+          "solution_en": [
+            "The coordinate gcd is two, so the primitive step is $(3,2)$. The lattice points are $(0,0),(3,2),(6,4)$.",
+            "A segment with positive integer spans $a,b$ crosses $a+b-\\gcd(a,b)$ unit-square interiors: simultaneous grid-line crossings at internal lattice points merge two changes.",
+            "The count here is $6+4-2=8$. Using the nonprimitive step would miss the interior lattice point."
+          ],
+          "solution_zh": [
+            "坐标最大公因数为二，本原步长为 $(3,2)$，整点为 $(0,0),(3,2),(6,4)$。",
+            "横纵正整数跨度为 $a,b$ 的线段穿过 $a+b-\\gcd(a,b)$ 个单位格内部；内部整点同时穿两条格线，将两次变化合并。",
+            "本题为 $6+4-2=8$；用非本原方向会漏掉中间整点。"
+          ],
+          "tip_en": "A line and a directed traversal are different objects; identify opposite primitive directions when counting lines.",
+          "tip_zh": "直线与有向行进不同，计直线时须归并相反本原方向。",
+          "question_ids": [
+            "AIME-2007-II-Q05",
+            "AIME-2017-II-Q14"
+          ],
+          "prerequisites": [
+            "NT02",
+            "GE07"
+          ]
+        },
+        {
+          "method_id": "CO06-M05",
+          "title_en": "Decompose regular graphs into cycles and gcd components",
+          "title_zh": "把规则图分解为循环与最大公因数组件",
+          "steps_en": [
+            "Use degree two or a fixed modular step to identify disjoint cycle components.",
+            "For a step $k$ modulo $n$, there are $\\gcd(n,k)$ cycles, each of length $n/\\gcd(n,k)$.",
+            "Apply the local cycle count, then multiply across independent components; remember diameter or single-edge degeneracies.",
+            "If the labels of components are being assigned, correct for indistinguishable components of the same size."
+          ],
+          "steps_zh": [
+            "通过度为二或固定模步长识别互不相交的循环分量。",
+            "模 $n$ 步长 $k$ 产生 $\\gcd(n,k)$ 个长度 $n/\\gcd(n,k)$ 的循环。",
+            "使用局部圈计数，再按独立分量相乘，并处理直径或单边退化。",
+            "若需给分量分配标签，还须按相同大小分量的可交换性修正。"
+          ],
+          "example_en": "A graph is the disjoint union of a four-cycle and a six-cycle. Count its perfect matchings.",
+          "example_zh": "一个图是四循环与六循环的不交并，求其完美匹配数。",
+          "solution_en": [
+            "In an even cycle, choosing which of the two edges at a fixed vertex is matched forces every remaining edge alternately.",
+            "Each component therefore has exactly two perfect matchings.",
+            "The components are disjoint, so the total is $2\\cdot2=4$. An odd-cycle component would make the total zero."
+          ],
+          "solution_zh": [
+            "偶循环中，选定某顶点两条邻边中哪一条属于匹配后，其余边被迫交替确定。",
+            "因此每个分量恰有两种完美匹配。",
+            "不交分量独立，总数为四；若含奇循环分量，则总数为零。"
+          ],
+          "tip_en": "A permutation cycle is oriented; an undirected graph cycle identifies its two orientations.",
+          "tip_zh": "置换循环有方向，无向图循环则归并正反两方向。",
+          "question_ids": [
+            "AIME-2004-I-Q08",
+            "AIME-2012-II-Q14",
+            "AIME-2014-II-Q13",
+            "AIME-2016-II-Q12",
+            "AIME-2024-I-Q11",
+            "AIME-2025-II-Q11"
+          ],
+          "prerequisites": [
+            "CO01",
+            "NT02"
+          ],
+          "extensions_en": [
+            "An undirected cycle on $k$ fixed labels has $(k-1)!/2$ realizations for $k\\ge3$. A proper $q$-coloring of an $n$-cycle has $(q-1)^n+(-1)^n(q-1)$ choices, obtainable by the row-versus-cycle recurrence. A primitive regular-star step requires $\\gcd(n,k)=1$; complementing the step reverses traversal, and step one must be excluded if crossings are required."
+          ],
+          "extensions_zh": [
+            "$k\\ge3$ 个固定标签的无向圈有 $(k-1)!/2$ 种。$n$ 循环的合法 $q$ 色染色数为 $(q-1)^n+(-1)^n(q-1)$，可由一行与环的关系递推得到。规则星形的本原步长须与 $n$ 互素；互补步长反转方向，要求交叉时还须排除步长一。"
+          ]
+        },
+        {
+          "method_id": "CO06-M06",
+          "title_en": "Use layers and distance levels to bound simple paths",
+          "title_zh": "用层次与距离等级限制简单路径",
+          "steps_en": [
+            "Identify a quantity that changes monotonically along the path, such as height.",
+            "Decompose the path into one visit to each layer and count its simple horizontal pieces.",
+            "If edge lengths must increase strictly, list all possible lengths to bound the edge count.",
+            "For an extremal path, enforce every required length in reverse order and exhibit all surviving constructions."
+          ],
+          "steps_zh": [
+            "找出沿路径单调变化的量，例如高度。",
+            "把路径分成对各层的一次访问，计算各层内简单横向部分。",
+            "若步长严格增加，列全可用长度以限制边数。",
+            "最大路径须反向依次满足每个必要长度，并展示所有幸存构造。"
+          ],
+          "example_en": "A graph has top $T$, bottom $B$, and one middle triangular cycle. $T$ joins every middle vertex, and every middle vertex joins $B$. Count simple paths from $T$ to $B$ with no return to an earlier level.",
+          "example_zh": "图由顶点 $T$、底点 $B$ 与中间三角循环组成，顶点与底点各连接全部中层点。求不返回较高层的简单 $T$ 到 $B$ 路径数。",
+          "solution_en": [
+            "Choose the first middle vertex in three ways.",
+            "From it, a simple path within the triangle has one zero-edge option and two options each for one or two edges, totaling five.",
+            "It then goes to $B$ uniquely, giving $3\\cdot5=15$ paths. Turning back around the triangle would revisit a vertex and is excluded."
+          ],
+          "solution_zh": [
+            "进入中层的首点有三种选择。",
+            "从该点沿三角形的简单路径有零步一种、一步和两步各两种，共五种。",
+            "之后唯一走到底点，所以有十五条，沿循环折返会重访顶点，已排除。"
+          ],
+          "tip_en": "A bound from the number of distance levels needs an explicit path to prove that it is achievable.",
+          "tip_zh": "由距离等级数得到的上界，还须有具体路径证明可达到。",
+          "question_ids": [
+            "AIME-2008-II-Q10",
+            "AIME-2016-I-Q03"
+          ],
+          "prerequisites": [
+            "LO02",
+            "CO01"
+          ]
+        },
+        {
+          "method_id": "CO06-M07",
+          "title_en": "Normalize graph equilibrium by degree and apply a maximum principle",
+          "title_zh": "按度数归一平衡并使用最大值原理",
+          "steps_en": [
+            "Write the fixed transfer equation $c_v=\\sum_{u\\sim v}c_u/d_u$.",
+            "Divide by $d_v$ so $c_v/d_v$ is the average of its neighbors corresponding ratios.",
+            "At a maximal ratio, every neighboring ratio must equal it; connectedness propagates equality.",
+            "Use the total amount to recover the common constant and all vertex allocations."
+          ],
+          "steps_zh": [
+            "写固定转移方程 $c_v=\\sum_{u\\sim v}c_u/d_u$。",
+            "除以 $d_v$，使 $c_v/d_v$ 成为邻居相应比值的平均。",
+            "最大比值处所有邻居都须同值，连通性将等值传遍全图。",
+            "用总量求公共常数及每个顶点的分配。"
+          ],
+          "example_en": "Three vertices form a path $A-B-C$. At every simultaneous step each sends its entire amount equally to its neighbors. A nonnegative total of forty is unchanged at every vertex. Find the amounts.",
+          "example_zh": "三个顶点组成路径 $A-B-C$，每步同时把全部数量平分给邻居。非负总量为四十且每点数量保持不变，求各点数量。",
+          "solution_en": [
+            "The degrees are one, two, one. Degree-normalized ratios must be constant by the connected-graph maximum principle.",
+            "Therefore the amounts are proportional to $1:2:1$.",
+            "The common factor is $40/4=10$, so the amounts are $(10,20,10)$. Direct transfer verifies the fixed state."
+          ],
+          "solution_zh": [
+            "度数为一、二、一，连通图最大值原理使按度归一的比值恒定。",
+            "故数量比为一比二比一。",
+            "公共系数为十，数量为 $(10,20,10)$，直接转移也可核验。"
+          ],
+          "tip_en": "The averaging identity uses an undirected graph; a directed transfer graph has a different stationary law.",
+          "tip_zh": "此平均关系使用无向图，有向转移图具有不同的平衡规律。",
+          "question_ids": [
+            "AIME-2012-I-Q07"
+          ],
+          "prerequisites": []
+        },
+        {
+          "method_id": "CO06-M08",
+          "title_en": "Analyze tournament strong components before counting orientations",
+          "title_zh": "先分析竞赛图强分量再计方向",
+          "steps_en": [
+            "A tournament has exactly one directed edge between each vertex pair.",
+            "Collapse strongly connected components; their directions form a total order.",
+            "Use small component sizes to determine the possible source or sink obstruction, then count its event intersections."
+          ],
+          "steps_zh": [
+            "竞赛图每对顶点间恰有一条有向边。",
+            "将强连通分量缩点，各分量之间形成全序方向。",
+            "利用小分量大小确定源点或汇点障碍，再计算相关事件交集。"
+          ],
+          "example_en": "Start with a directed triangle cycle and add a fourth vertex with one edge to each old vertex. How many choices of its three edge directions make the whole graph strongly connected?",
+          "example_zh": "从一个有向三角循环出发，加第四顶点并与每个旧顶点各连一条有向边。三个方向有多少种选择使全图强连通？",
+          "solution_en": [
+            "The old cycle already allows every old vertex to reach every other.",
+            "The new vertex must have at least one outgoing and one incoming edge. This condition also suffices, because the old cycle connects the entry and exit points.",
+            "Of the $2^3=8$ orientations, exclude all-outgoing and all-incoming, leaving six."
+          ],
+          "solution_zh": [
+            "旧循环中各点已能互相到达。",
+            "新顶点须至少有一条出边与一条入边；这也充分，因为旧循环连接进出点。",
+            "八种方向中排除全出与全入，剩六种。"
+          ],
+          "tip_en": "A nonstrong tournament need not have a global source or sink for arbitrary vertex counts.",
+          "tip_zh": "一般大小的非强连通竞赛图未必有全局源点或汇点。",
+          "question_ids": [
+            "AIME-2017-II-Q11"
+          ],
+          "prerequisites": [
+            "CO04"
+          ],
+          "extensions_en": [
+            "A nontrivial strongly connected tournament has at least three vertices. On five vertices, a nonstrong tournament cannot have both its first and last strong components nontrivial, since they would require at least six vertices. Thus its first or last component is a singleton, giving a global source or sink. This is why the source/sink inclusion-exclusion is complete specifically in the five-vertex problem."
+          ],
+          "extensions_zh": [
+            "非平凡强连通竞赛图至少有三个顶点。五顶点非强竞赛图的首尾强分量不可能都非平凡，否则至少需六点，因此首分量或末分量必为单点，形成全局源点或汇点。这才保证五顶点题中的源汇容斥完备。"
+          ]
+        },
+        {
+          "method_id": "CO06-M09",
+          "title_en": "Use circular order to characterize strict separation",
+          "title_zh": "用圆周顺序刻画严格分隔",
+          "steps_en": [
+            "Restrict a separating circle to the common circumcircle of the points.",
+            "Two distinct circles meet at at most two points, so membership can change at most twice around the cyclic order.",
+            "For sufficiency, strictly separate a consecutive run by a line in the adjoining gaps, then approximate the finite half-plane choice by a sufficiently large circle."
+          ],
+          "steps_zh": [
+            "将分隔圆限制到所有点的公共外接圆上。",
+            "两个不同圆至多相交两点，所以沿循环顺序成员身份至多改变两次。",
+            "证明充分性时，在相邻空隙中用直线严格分隔连续段，再用足够大的圆在有限点集上近似该半平面。"
+          ],
+          "example_en": "Can a circle contain one opposite pair of a square strictly inside while placing the other opposite pair strictly outside?",
+          "example_zh": "能否用一个圆，使正方形一对对顶点严格在圆内、另一对严格在圆外？",
+          "solution_en": [
+            "Along the square circumcircle the required membership pattern alternates inside, outside, inside, outside.",
+            "This requires at least four boundary changes, but two distinct circles have at most two intersection points.",
+            "The circles cannot coincide under strict separation, so the configuration is impossible."
+          ],
+          "solution_zh": [
+            "沿正方形外接圆，要求成员状态交替为内、外、内、外。",
+            "这至少需要四次边界变化，而两个不同圆至多有两个交点。",
+            "严格分隔也不允许两圆重合，因此不可能。"
+          ],
+          "tip_en": "Strict separation leaves positive margins on a finite point set; those margins justify the large-circle approximation.",
+          "tip_zh": "有限点集的严格分隔具有正余量，这一余量保证大圆近似有效。",
+          "question_ids": [
+            "AIME-2014-I-Q05"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        {
+          "method_id": "CO06-M10",
+          "title_en": "Count chord-supported rectangles by perpendicular offsets",
+          "title_zh": "按垂直弦的偏移量计算弦支撑矩形",
+          "steps_en": [
+            "Group chords by direction and pair perpendicular direction classes.",
+            "Represent each chord by its signed distance from the circumcenter.",
+            "Choose two offsets in each class; all four corners lie on their finite chords exactly when the largest squared offsets sum to at most the radius squared.",
+            "Count offset-pair multiplicities, taking care not to count the same perpendicular class pair twice."
+          ],
+          "steps_zh": [
+            "将弦按方向分组，再配对互相垂直的方向类。",
+            "用弦到外心的带符号距离表示每条弦。",
+            "各类选两个偏移量，四角都在有限弦上当且仅当两类最大偏移绝对值的平方和不超过半径平方。",
+            "按偏移对重数计数，避免同一垂直方向对被数两次。"
+          ],
+          "example_en": "In a unit disk, two vertical chords have offsets $\\pm3/5$. What is the greatest symmetric horizontal offset $\\pm t$ that forms a rectangle with corners on all four chord segments?",
+          "example_zh": "单位圆盘中两条竖弦偏移量为 $\\pm3/5$，两横弦偏移量为 $\\pm t$。矩形四角均落在这些有限弦上时，$t$ 最大为多少？",
+          "solution_en": [
+            "The four corners are $(\\pm3/5,\\pm t)$.",
+            "Every corner lies in the disk exactly when $9/25+t^2\\le1$. This also ensures it lies on each relevant chord segment.",
+            "Thus $t\\le4/5$, attained when all four corners are on the circumcircle."
+          ],
+          "solution_zh": [
+            "四角为 $(\\pm3/5,\\pm t)$。",
+            "它们在圆盘内恰要求 $9/25+t^2\\le1$，这同时保证位于各自有限弦段上。",
+            "所以最大 $t=4/5$，等号时四角都在圆周。"
+          ],
+          "tip_en": "Perpendicular supporting lines alone do not guarantee their intersections lie on the available chord segments.",
+          "tip_zh": "支撑直线互相垂直，并不保证交点落在可用弦段上。",
+          "question_ids": [
+            "AIME-2024-II-Q15"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        {
+          "method_id": "CO06-M11",
+          "title_en": "Recover a Hamiltonian rule from one incoming edge",
+          "title_zh": "由唯一入边恢复哈密顿转移规则",
+          "steps_en": [
+            "Encode each allowed outgoing choice by a binary rule at the state.",
+            "Impose one incoming edge at every state; compare the two possible predecessors.",
+            "Propagate the resulting equality to reduce the rule to diagonal classes.",
+            "Compute the displacement after one rule period and use a gcd condition to distinguish one full cycle from several short cycles."
+          ],
+          "steps_zh": [
+            "用每个状态的二元规则编码出边选择。",
+            "每态要求恰一入边，比较两种可能前驱。",
+            "传播所得等式，将规则压缩到对角类别。",
+            "计算一个规则周期后的位移，用最大公因数区分一个大循环与多个短循环。"
+          ],
+          "example_en": "On $\\mathbb Z_3^2$, repeat commands $A,A,B$, where $A$ increases the first coordinate and $B$ the second. Show the resulting walk from $(0,0)$ visits all nine states before returning.",
+          "example_zh": "在 $\\mathbb Z_3^2$ 上重复指令 $A,A,B$，其中 $A$ 增第一坐标，$B$ 增第二坐标。证明从原点出发先遍历九态再返回。",
+          "solution_en": [
+            "Each command increases the coordinate sum by one modulo three, so states within a three-step block have different diagonal classes.",
+            "One block changes coordinates by $(2,1)=(2,-2)$ modulo three. This translation has order three because $\\gcd(2,3)=1$.",
+            "The three diagonal classes and three distinct block translations give nine distinct states, followed by the return."
+          ],
+          "solution_zh": [
+            "每条指令使坐标和模三增加一，同一三步块的状态位于不同对角类。",
+            "一块位移为 $(2,1)=(2,-2)$，因 $\\gcd(2,3)=1$，此平移的阶为三。",
+            "三个对角类配三个不同块平移，得到九个不同状态后返回。"
+          ],
+          "tip_en": "A locally bijective successor rule gives a union of cycles; the gcd test is what proves there is one Hamiltonian cycle.",
+          "tip_zh": "局部一入一出的规则只保证若干循环，最大公因数检验才证明只有一个哈密顿大循环。",
+          "question_ids": [
+            "AIME-2023-I-Q14"
+          ],
+          "prerequisites": [
+            "NT02",
+            "CO02"
+          ],
+          "extensions_en": [
+            "For states $(a,b)\\in\\mathbb Z_n^2$, let $h(a,b)=1$ choose the first-coordinate move and zero the second. One incoming edge gives $h(a-1,b)=h(a,b-1)$, so $h$ depends only on $a+b$. If the resulting length-$n$ rule has $c$ first-coordinate moves, each period translates by $(c,-c)$, and the walk covers all $n^2$ states exactly when $\\gcd(c,n)=1$."
+          ],
+          "extensions_zh": [
+            "对模 $n$ 二维状态，以 $h(a,b)=1$ 选第一坐标步、零选第二坐标步。唯一入边给出 $h(a-1,b)=h(a,b-1)$，故规则只依赖 $a+b$。长度 $n$ 规则若含 $c$ 个第一坐标步，每周期平移 $(c,-c)$，遍历全部 $n^2$ 状态的充要条件为 $\\gcd(c,n)=1$。"
+          ]
+        },
+        {
+          "method_id": "CO06-M12",
+          "title_en": "Use finite incidence geometry to count signed configurations",
+          "title_zh": "用有限关联几何计算符号构型",
+          "steps_en": [
+            "Recognize the small hypergraph and prove its point-line incidences.",
+            "Condition on zero positions; only hyperedges avoiding zeros contribute to a product sum.",
+            "Translate the remaining signs into line-product signs, or into degrees of a smaller auxiliary graph.",
+            "Count every incidence type disjointly and verify the small total by exhaustive enumeration when available."
+          ],
+          "steps_zh": [
+            "识别小型超图并证明点线关联规律。",
+            "按零位置分类，只有避开零的超边对乘积和有贡献。",
+            "把余下正负号转成线乘积符号，或转成更小辅助图的度数。",
+            "按不交关联类型求和，可用穷举独立核验小规模总量。"
+          ],
+          "example_en": "The Fano plane has seven points and seven three-point lines, with three lines through each point and one line through each point pair. Give every point sign $+1$ except one point of sign $-1$. What is the sum of the seven line products? What changes with two negative points?",
+          "example_zh": "法诺平面有七点七条三点线，每点过三线、每对点恰共一线。仅一个点为负一，其余为正一，七条线的符号乘积和为多少？若有两个负点呢？",
+          "solution_en": [
+            "One negative point lies on exactly three lines, making three products negative and four positive. The sum is one.",
+            "Two negative points share one line, whose product is positive. Their other two lines each are distinct, giving four negative products.",
+            "There are then three positive products and four negative ones, so the sum is negative one. The shared line must not be counted as negative twice."
+          ],
+          "solution_zh": [
+            "一个负点所在三条线乘积负，其余四条正，和为一。",
+            "两个负点共用的一条线乘积反为正，各自其余两线不同，共四条负乘积线。",
+            "于是三正四负，和为负一；公共线不能被当作两条负线。"
+          ],
+          "tip_en": "Finite geometry is useful only after verifying the claimed incidence pattern, not merely recognizing its name.",
+          "tip_zh": "须验证所声称的关联结构，不能只认出有限几何名称。",
+          "question_ids": [
+            "AIME-2026-II-Q15"
+          ],
+          "prerequisites": [
+            "NT03",
+            "CO04"
+          ],
+          "extensions_en": [
+            "The cyclic triples $\\{i,i+1,i+3\\}$ modulo seven form the Fano plane: every pair occurs in one triple. With one zero point, four lines survive. Each of the six remaining points lies on exactly two surviving lines, identifying it with an edge of $K_4$. A choice of negative points becomes a graph edge set; a line product is negative exactly when that vertex degree is odd.",
+            "With three negative signs among those six points, exactly two of the four products must be negative to make their sum zero modulo three. Three-edge subsets of $K_4$ with exactly two odd-degree vertices are precisely its spanning three-edge paths, numbering $4!/2=12$. With two zero points, the two surviving lines meet once, and a minority sign changes only one line product exactly when it is outside their intersection. These lemmas justify the nontrivial zero strata in the full enumeration."
+          ],
+          "extensions_zh": [
+            "模七的循环三元组 $\\{i,i+1,i+3\\}$ 构成法诺平面，每对点恰出现一次。一个零点后剩四条线，每个其余点属于其中两线，故对应 $K_4$ 的一条边。选择负点就成为选择边，某线乘积为负恰对应其顶点度为奇数。",
+            "这六点中若三个为负，要使四个乘积之和模三为零，必须恰有两个负乘积。$K_4$ 三边子集中恰有两个奇度顶点的正是覆盖四点的三边路径，有 $4!/2=12$ 个。两个零点时剩两线且相交一次，少数符号只有放在非交点位置才仅改变一个线乘积。这些引理支撑完整枚举中的非平凡零分层。"
+          ]
+        },
+        {
+          "method_id": "CO06-M13",
+          "title_en": "Condition on shared edges and multiply boundary completions",
+          "title_zh": "按公共边分类并相乘边界补全",
+          "steps_en": [
+            "Choose the colors of all edges shared by multiple local regions.",
+            "For each region determine the number of remaining boundary choices compatible with its fixed internal edges.",
+            "Multiply only when those remaining boundary edge sets are disjoint, then sum over shared-edge patterns."
+          ],
+          "steps_zh": [
+            "先选择被多个局部区域共用边的颜色。",
+            "对每个区域按已定内部边计算剩余边界补全数。",
+            "只有剩余边界集合互不重叠时才相乘，再对公共边模式求和。"
+          ],
+          "example_en": "Two unit squares share one edge. Color their seven distinct edges red or blue so each square has exactly one blue edge. Count the colorings.",
+          "example_zh": "两个单位正方形共用一条边，将七条不同边染红蓝，使每个正方形恰有一条蓝边，求染色数。",
+          "solution_en": [
+            "If the shared edge is blue, all six outside edges are forced red, giving one coloring.",
+            "If the shared edge is red, each square chooses one of its three outside edges to be blue; these edge sets are disjoint.",
+            "The count is $1+3\\cdot3=10$. Conditioning on the shared edge is what makes the completions independent."
+          ],
+          "solution_zh": [
+            "公共边蓝时，六条外边均被迫红，只有一种。",
+            "公共边红时，每个正方形各从自己的三条外边选一条蓝，两组边互不相交。",
+            "共有 $1+3\\cdot3=10$ 种，按公共边分类后，补全过程才独立。"
+          ],
+          "tip_en": "Regions sharing unassigned edges do not have independent completion counts.",
+          "tip_zh": "仍共用未定边的区域，其补全数不能独立相乘。",
+          "question_ids": [
+            "AIME-2025-II-Q03"
+          ],
+          "prerequisites": []
+        },
+        {
+          "method_id": "CO06-M14",
+          "title_en": "Bound graph edge differences by weighted deviations",
+          "title_zh": "用加权偏差限制图边差总和",
+          "steps_en": [
+            "Orient every edge from its lower label to its higher label and collect the coefficient of each vertex value.",
+            "The coefficient sum is zero and its absolute value is at most the vertex degree. Subtract a common center from every label.",
+            "Use rearrangement to pair the largest absolute deviations with the largest degrees.",
+            "Prove equality by a compatible low-high bipartition and the required degree allocations; a numerical bound alone is insufficient."
+          ],
+          "steps_zh": [
+            "将边从较小标签定向到较大标签，收集每个顶点值的系数。",
+            "系数和为零，绝对值不超过度数，因此可给所有标签减同一中心。",
+            "用重排把最大偏差绝对值配最大度数。",
+            "以相容的低高二部分配及指定度数分配证明等号，只有数值上界并不够。"
+          ],
+          "example_en": "Place labels one through four on the four vertices of a path. Maximize the sum of absolute differences on its three edges.",
+          "example_zh": "将一至四放在四顶点路径上，求三条边绝对差之和的最大值。",
+          "solution_en": [
+            "Center labels at $5/2$. Their absolute deviations are $3/2,3/2,1/2,1/2$; the path degrees are two, two, one, one.",
+            "The degree-weighted bound is $2(3/2+3/2)+(1/2+1/2)=7$.",
+            "The order $2,4,1,3$ has differences $2,3,2$, attaining seven. Its interior vertices receive the largest deviations and every edge joins low to high."
+          ],
+          "solution_zh": [
+            "将标签减去 $5/2$，偏差绝对值为 $3/2,3/2,1/2,1/2$，度数为二、二、一、一。",
+            "加权上界为 $2(3/2+3/2)+(1/2+1/2)=7$。",
+            "排列 $2,4,1,3$ 的边差为二、三、二，达到七；内部点占最大偏差，每条边均连接低值与高值。"
+          ],
+          "tip_en": "The degree multiset alone gives a bound; the graph must permit the equality sign pattern and value allocation.",
+          "tip_zh": "度数多重集只能给界，还须图结构允许等号符号模式与数值分配。",
+          "question_ids": [
+            "AIME-2026-I-Q11"
+          ],
+          "prerequisites": [
+            "AL07",
+            "LO02"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "subtype_id": "CO07",
+    "reviewer": "print_builder",
+    "content_sha256": "da4a3cd988d77e06ae7ce63c4d3009baec22a33dadff19db2d121bb7c9ebff4a",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "CO07-M01",
+      "CO07-M02",
+      "CO07-M03",
+      "CO07-M04",
+      "CO07-M05",
+      "CO07-M06",
+      "CO07-M07",
+      "CO07-M08"
+    ],
+    "findings": [
+      "Read all eight bilingual procedures, original examples, full worked steps, tips and extensions. Recomputed no shuffle fixed points,56 unequal-gap schedules,136 unordered subset-pair designs,4 half-turn colorings,8 lamp histories,5 digit-stream solutions,6 maximal-board tokens,and 15 independent-chain target sets.",
+      "Checked every mapped route and inverse construction, including the unique orientation of three-color strips, two-ring displacement cancellation, maximal row/column support reconstruction, and singleton/two-block collision-chain decomposition.",
+      "Verified that the prime-factor cost minimization follows from splitting a composite factor and that separated chains attain the cost. Fixed points, nonfree symmetry actions, endpoint bounds, and target-set independence are treated explicitly and consistently in both languages."
+    ],
+    "patch": {}
+  }
+]

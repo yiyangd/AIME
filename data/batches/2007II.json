@@ -1,0 +1,721 @@
+[
+  {
+    "question_id": "AIME-2007-II-Q01",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO01",
+      "reason_en": "Strings with at most one zero use five distinct symbols from seven, giving $(7)_5=2520$.",
+      "reason_zh": "零至多一次时，从七个不同字符中有序取五个，得 $2520$。"
+    },
+    "secondary": [],
+    "statement_en": "Form five-character strings from the multiset $\\{A,I,M,E,2,0,0,7\\}$, never exceeding the supplied multiplicities. If there are $N$ distinct strings, find $N/10$.",
+    "statement_zh": "从多重集合 $\\{A,I,M,E,2,0,0,7\\}$ 中取字符排成长五的串，各字符不超过原有次数。若不同串数为 $N$，求 $N/10$。",
+    "answer": 372,
+    "solution_en": [
+      "Strings with at most one zero use five distinct symbols from seven, giving $(7)_5=2520$.",
+      "With two zeroes, choose their positions in $\\binom52$ ways and order three distinct remaining symbols in $(6)_3$ ways, giving $1200$. Thus $N=3720$, so $N/10=372$."
+    ],
+    "solution_zh": [
+      "零至多一次时，从七个不同字符中有序取五个，得 $2520$。",
+      "零恰两次时，选位置并排其余三字符，得 $\\binom52(6)_3=1200$。所以 $N=3720$，所求 $372$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/1",
+    "method_chain": [
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q02",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT02",
+      "reason_en": "Write $b=au,c=av$, where $u,v\\ge1$. Then $a(1+u+v)=100$, so $a$ is a divisor of one hundred with $100/a\\ge3$.",
+      "reason_zh": "令 $b=au,c=av$，$u,v\\ge1$，则 $a(1+u+v)=100$，要求 $a$ 整除一百且 $100/a\\ge3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "The possible $a$ values are $1,2,4,5,10,20,25$, each contributing $100/a-2$ positive ordered pairs. Their sum is $100+50+25+20+10+5+4-14=200$.",
+        "reason_zh": "可取 $a=1,2,4,5,10,20,25$，各贡献 $100/a-2$，相加为 $200$。"
+      }
+    ],
+    "statement_en": "Count positive integer triples $(a,b,c)$ with $a\\mid b$, $a\\mid c$ and $a+b+c=100$.",
+    "statement_zh": "求满足 $a\\mid b,a\\mid c,a+b+c=100$ 的正整数有序三元组数。",
+    "answer": 200,
+    "solution_en": [
+      "Write $b=au,c=av$, where $u,v\\ge1$. Then $a(1+u+v)=100$, so $a$ is a divisor of one hundred with $100/a\\ge3$.",
+      "The possible $a$ values are $1,2,4,5,10,20,25$, each contributing $100/a-2$ positive ordered pairs. Their sum is $100+50+25+20+10+5+4-14=200$."
+    ],
+    "solution_zh": [
+      "令 $b=au,c=av$，$u,v\\ge1$，则 $a(1+u+v)=100$，要求 $a$ 整除一百且 $100/a\\ge3$。",
+      "可取 $a=1,2,4,5,10,20,25$，各贡献 $100/a-2$，相加为 $200$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/2",
+    "method_chain": [
+      "Divisibility, GCD & LCM",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q03",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "The $5,12,13$ triangles $AEB,CFD$ are right at $E,F$. Extend $EA$ past $A$ and $FD$ past $D$ to meet at $G$. The complementary acute angles show $AGD$ is right and congruent to $BEA$, so $GA=5,GD=12$.",
+      "reason_zh": "$AEB,CFD$ 是直角边为五、十二的直角三角形。延长 $EA$ 过 $A$、$FD$ 过 $D$ 相交于 $G$。由互余角，$AGD$ 为直角且与 $BEA$ 全等，故 $GA=5,GD=12$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "The $5,12,13$ triangles $AEB,CFD$ are right at $E,F$. Extend $EA$ past $A$ and $FD$ past $D$ to meet at $G$. The complementary acute angles show $AGD$ is right and congruent to $BEA$, so $GA=5,GD=12$.",
+        "reason_zh": "$AEB,CFD$ 是直角边为五、十二的直角三角形。延长 $EA$ 过 $A$、$FD$ 过 $D$ 相交于 $G$。由互余角，$AGD$ 为直角且与 $BEA$ 全等，故 $GA=5,GD=12$。"
+      }
+    ],
+    "statement_en": "Square $ABCD$ has side thirteen. Exterior points $E,F$ satisfy $AE=CF=12$ and $BE=DF=5$, with $E$ outside across $AB$ and $F$ outside across $CD$. Find $EF^2$.",
+    "statement_zh": "边长十三的正方形 $ABCD$ 外，点 $E$ 在 $AB$ 外侧、点 $F$ 在 $CD$ 外侧，满足 $AE=CF=12,BE=DF=5$，求 $EF^2$。",
+    "answer": 578,
+    "solution_en": [
+      "The $5,12,13$ triangles $AEB,CFD$ are right at $E,F$. Extend $EA$ past $A$ and $FD$ past $D$ to meet at $G$. The complementary acute angles show $AGD$ is right and congruent to $BEA$, so $GA=5,GD=12$.",
+      "Thus $GE=17,GF=17$, with $GE\\perp GF$. Pythagoras gives $EF^2=2\\cdot17^2=578$."
+    ],
+    "solution_zh": [
+      "$AEB,CFD$ 是直角边为五、十二的直角三角形。延长 $EA$ 过 $A$、$FD$ 过 $D$ 相交于 $G$。由互余角，$AGD$ 为直角且与 $BEA$ 全等，故 $GA=5,GD=12$。",
+      "于是 $GE=GF=17$ 且互相垂直，故 $EF^2=578$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/3",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q04",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Let one X,Y require $u,v$ worker-hours. Equations $300u+200v=100$, $240u+300v=120$ give $u=1/7,v=2/7$.",
+      "reason_zh": "设单件甲乙需 $u,v$ 工时，联立 $300u+200v=100,240u+300v=120$，得 $u=1/7,v=2/7$。"
+    },
+    "secondary": [],
+    "statement_en": "Identical workers require fixed production times per item type. One hundred worker-hours produce $300$ items of type X and $200$ of Y; $120$ worker-hours produce $240$ X and $300$ Y. With $150$ worker-hours, producing $150$ X leaves capacity for how many Y?",
+    "statement_zh": "所有工人生产每种产品所需时间固定相同。一百工时可生产三百件甲及二百件乙；一百二十工时可生产二百四十件甲及三百件乙。一百五十工时生产一百五十件甲后，还能生产多少乙？",
+    "answer": 450,
+    "solution_en": [
+      "Let one X,Y require $u,v$ worker-hours. Equations $300u+200v=100$, $240u+300v=120$ give $u=1/7,v=2/7$.",
+      "Then $150/7+2m/7=150$, so $m=450$."
+    ],
+    "solution_zh": [
+      "设单件甲乙需 $u,v$ 工时，联立 $300u+200v=100,240u+300v=120$，得 $u=1/7,v=2/7$。",
+      "再解 $150/7+2m/7=150$，得 $m=450$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/4",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q05",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO06",
+      "reason_en": "The intercept rectangle is $223\\times9$, containing $2007$ unit squares. Since $\\gcd(223,9)=1$, the segment meets no interior lattice point, and it crosses $223+9-1=231$ square interiors.",
+      "reason_zh": "截距矩形为 $223\\times9$，有 $2007$ 格。因两截距互质，线段不经过内部格点，穿过 $223+9-1=231$ 个格子的内部。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The intercept rectangle is $223\\times9$, containing $2007$ unit squares. Since $\\gcd(223,9)=1$, the segment meets no interior lattice point, and it crosses $223+9-1=231$ square interiors.",
+        "reason_zh": "截距矩形为 $223\\times9$，有 $2007$ 格。因两截距互质，线段不经过内部格点，穿过 $223+9-1=231$ 个格子的内部。"
+      }
+    ],
+    "statement_en": "Count unit lattice squares whose interiors lie entirely in the first quadrant and strictly below the line $9x+223y=2007$.",
+    "statement_zh": "求内部完全位于第一象限且位于直线 $9x+223y=2007$ 下方的单位格正方形数。",
+    "answer": 888,
+    "solution_en": [
+      "The intercept rectangle is $223\\times9$, containing $2007$ unit squares. Since $\\gcd(223,9)=1$, the segment meets no interior lattice point, and it crosses $223+9-1=231$ square interiors.",
+      "The remaining $1776$ squares split equally above and below by half-turn symmetry about the rectangle center. Thus the count is $888$."
+    ],
+    "solution_zh": [
+      "截距矩形为 $223\\times9$，有 $2007$ 格。因两截距互质，线段不经过内部格点，穿过 $223+9-1=231$ 个格子的内部。",
+      "其余 $1776$ 格由矩形中心半周旋转在上下两侧一一对应，故下方有 $888$ 格。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/5",
+    "method_chain": [
+      "Graphs & geometric counting",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q06",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Build from right to left. A final digit $d$ may be preceded by an odd digit below $d$ or an even digit above $d$. For every $d=0,\\ldots,9$, these possibilities total exactly four; zero is never an allowed predecessor.",
+      "reason_zh": "从右向左构造：数字 $d$ 前可接小于它的奇数字，或大于它的偶数字。对零至九的每个 $d$，恰有四个选择，且零从不作为合法前驱。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT06",
+        "reason_en": "Build from right to left. A final digit $d$ may be preceded by an odd digit below $d$ or an even digit above $d$. For every $d=0,\\ldots,9$, these possibilities total exactly four; zero is never an allowed predecessor.",
+        "reason_zh": "从右向左构造：数字 $d$ 前可接小于它的奇数字，或大于它的偶数字。对零至九的每个 $d$，恰有四个选择，且零从不作为合法前驱。"
+      }
+    ],
+    "statement_en": "A decimal digit string is parity-monotonic when every odd digit is followed by a strictly larger digit and every even digit by a strictly smaller one. Count four-digit positive integers with this property.",
+    "statement_zh": "若十进制数字串中每个奇数字后都接更大数字、每个偶数字后都接更小数字，称其为奇偶单调。求符合的四位正整数个数。",
+    "answer": 640,
+    "solution_en": [
+      "Build from right to left. A final digit $d$ may be preceded by an odd digit below $d$ or an even digit above $d$. For every $d=0,\\ldots,9$, these possibilities total exactly four; zero is never an allowed predecessor.",
+      "The last digit has ten choices and each preceding digit four, with a nonzero leading digit automatic. Count $10\\cdot4^3=640$."
+    ],
+    "solution_zh": [
+      "从右向左构造：数字 $d$ 前可接小于它的奇数字，或大于它的偶数字。对零至九的每个 $d$，恰有四个选择，且零从不作为合法前驱。",
+      "末位十种，前三位各四种，首位自动非零，总数 $640$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/6",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Number bases, digits & palindromes"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q07",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "The interval is $k^3\\le n<(k+1)^3=k^3+3k^2+3k+1$. Its multiples of $k$ have quotients $k^2,k^2+1,\\ldots,k^2+3k+3$, so there are $3k+4$.",
+      "reason_zh": "范围为 $k^3\\le n<k^3+3k^2+3k+1$，其中 $k$ 的倍数除以 $k$ 后从 $k^2$ 至 $k^2+3k+3$，共有 $3k+4$ 个。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "The interval is $k^3\\le n<(k+1)^3=k^3+3k^2+3k+1$. Its multiples of $k$ have quotients $k^2,k^2+1,\\ldots,k^2+3k+3$, so there are $3k+4$.",
+        "reason_zh": "范围为 $k^3\\le n<k^3+3k^2+3k+1$，其中 $k$ 的倍数除以 $k$ 后从 $k^2$ 至 $k^2+3k+3$，共有 $3k+4$ 个。"
+      }
+    ],
+    "statement_en": "For an integer $k$, exactly seventy positive multiples $n_i$ of $k$ satisfy $\\lfloor\\sqrt[3]{n_i}\\rfloor=k$. Find the largest $n_i/k$.",
+    "statement_zh": "某整数 $k$ 恰有七十个正倍数 $n_i$ 满足 $\\lfloor\\sqrt[3]{n_i}\\rfloor=k$，求最大的 $n_i/k$。",
+    "answer": 553,
+    "solution_en": [
+      "The interval is $k^3\\le n<(k+1)^3=k^3+3k^2+3k+1$. Its multiples of $k$ have quotients $k^2,k^2+1,\\ldots,k^2+3k+3$, so there are $3k+4$.",
+      "From $3k+4=70$, $k=22$. Maximum quotient $22^2+66+3=553$."
+    ],
+    "solution_zh": [
+      "范围为 $k^3\\le n<k^3+3k^2+3k+1$，其中 $k$ 的倍数除以 $k$ 后从 $k^2$ 至 $k^2+3k+3$，共有 $3k+4$ 个。",
+      "解得 $k=22$，最大商为 $553$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/7",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Divisibility, GCD & LCM"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q08",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO02",
+      "reason_en": "Let there be $h$ length-four and $v$ length-five lines. Then $4h+5v=2007$ and basic count $(h-1)(v-1)$. Put $x=h-1,y=v-1$, so $4x+5y=1998$.",
+      "reason_zh": "设长四、长五的线各 $h,v$ 条，则 $4h+5v=2007$，矩形数为 $(h-1)(v-1)$。令 $x=h-1,y=v-1$，得 $4x+5y=1998$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Let there be $h$ length-four and $v$ length-five lines. Then $4h+5v=2007$ and basic count $(h-1)(v-1)$. Put $x=h-1,y=v-1$, so $4x+5y=1998$.",
+        "reason_zh": "设长四、长五的线各 $h,v$ 条，则 $4h+5v=2007$，矩形数为 $(h-1)(v-1)$。令 $x=h-1,y=v-1$，得 $4x+5y=1998$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "The product $xy=x(1998-4x)/5$ is a concave quadratic, peaking at $x=249.75$. Integer feasibility requires $x\\equiv2\\pmod5$, whose nearest candidates are $247,252$, yielding products $49894,49896$.",
+        "reason_zh": "乘积 $x(1998-4x)/5$ 为开口向下抛物线，顶点在 $249.75$。整性要求 $x\\equiv2\\pmod5$，最近两候选为 $247,252$，乘积为 $49894,49896$。"
+      }
+    ],
+    "statement_en": "Full lines parallel to the sides of a $4\\times5$ paper rectangle have total drawn length $2007$. A basic rectangle is bounded by adjacent drawn lines in each direction; paper edges do not count unless drawn. Maximize the basic-rectangle count $N$ and give $N\\bmod1000$.",
+    "statement_zh": "在 $4\\times5$ 纸上画与边平行的完整横纵线，总长 $2007$。基本矩形由两方向各相邻的画线围成，未画出的纸边不算。求最大基本矩形数 $N$ 除以一千的余数。",
+    "answer": 896,
+    "solution_en": [
+      "Let there be $h$ length-four and $v$ length-five lines. Then $4h+5v=2007$ and basic count $(h-1)(v-1)$. Put $x=h-1,y=v-1$, so $4x+5y=1998$.",
+      "The product $xy=x(1998-4x)/5$ is a concave quadratic, peaking at $x=249.75$. Integer feasibility requires $x\\equiv2\\pmod5$, whose nearest candidates are $247,252$, yielding products $49894,49896$.",
+      "The latter is maximal, with remainder $896$."
+    ],
+    "solution_zh": [
+      "设长四、长五的线各 $h,v$ 条，则 $4h+5v=2007$，矩形数为 $(h-1)(v-1)$。令 $x=h-1,y=v-1$，得 $4x+5y=1998$。",
+      "乘积 $x(1998-4x)/5$ 为开口向下抛物线，顶点在 $249.75$。整性要求 $x\\equiv2\\pmod5$，最近两候选为 $247,252$，乘积为 $49894,49896$。",
+      "后者最大，余数为 $896$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/8",
+    "method_chain": [
+      "Discrete extrema & constructions",
+      "Inequalities & continuous optimization",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q09",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "Using a rectangle coordinate system, $BE=DF=\\sqrt{63^2+84^2}=105$, $BF=DE=364$, and $EF=\\sqrt{63^2+280^2}=287$. Both triangles have semiperimeter $378$.",
+      "reason_zh": "计算边长得 $BE=DF=105,BF=DE=364,EF=287$，两三角形半周长均为 $378$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Using a rectangle coordinate system, $BE=DF=\\sqrt{63^2+84^2}=105$, $BF=DE=364$, and $EF=\\sqrt{63^2+280^2}=287$. Both triangles have semiperimeter $378$.",
+        "reason_zh": "计算边长得 $BE=DF=105,BF=DE=364,EF=287$，两三角形半周长均为 $378$。"
+      }
+    ],
+    "statement_en": "Rectangle $ABCD$ has $AB=63,BC=448$. Points $E\\in AD,F\\in BC$ satisfy $AE=CF=84$. The incircles of $BEF$ and $DEF$ touch $EF$ at $P,Q$. Find $PQ$.",
+    "statement_zh": "矩形 $ABCD$ 满足 $AB=63,BC=448$，$E\\in AD,F\\in BC$，且 $AE=CF=84$。三角形 $BEF,DEF$ 的内切圆分别在 $P,Q$ 与 $EF$ 相切，求 $PQ$。",
+    "answer": 259,
+    "solution_en": [
+      "Using a rectangle coordinate system, $BE=DF=\\sqrt{63^2+84^2}=105$, $BF=DE=364$, and $EF=\\sqrt{63^2+280^2}=287$. Both triangles have semiperimeter $378$.",
+      "Tangent lengths give $EP=378-364=14$ and $FQ=14$. Therefore $PQ=287-28=259$."
+    ],
+    "solution_zh": [
+      "计算边长得 $BE=DF=105,BF=DE=364,EF=287$，两三角形半周长均为 $378$。",
+      "由切线长公式，$EP=FQ=378-364=14$，故 $PQ=287-28=259$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/9",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q10",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Given $|A|=j$, allowed $B$ number $2^j+2^{6-j}-1$, subtracting the empty-set overlap.",
+      "reason_zh": "固定 $|A|=j$，合法 $B$ 个数为 $2^j+2^{6-j}-1$，减去空集重复。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "Given $|A|=j$, allowed $B$ number $2^j+2^{6-j}-1$, subtracting the empty-set overlap.",
+        "reason_zh": "固定 $|A|=j$，合法 $B$ 个数为 $2^j+2^{6-j}-1$，减去空集重复。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Summing over $A$ gives favorable pairs $\\sum_j\\binom6j(2^j+2^{6-j}-1)=2\\cdot3^6-2^6$. Divide by $2^{12}$ to get $697/2^{11}$, so the answer is $710$.",
+        "reason_zh": "对 $A$ 求和，有利对数为 $2\\cdot3^6-2^6$，除以 $2^{12}$ 得 $697/2^{11}$，所求 $710$。"
+      }
+    ],
+    "statement_en": "Independently choose uniform random subsets $A,B$ of a six-element set $S$. The probability that $B\\subseteq A$ or $B\\subseteq S\\setminus A$ is $m/n^r$ with prime $n$ and reduced numerator. Find $m+n+r$.",
+    "statement_zh": "在六元素集合 $S$ 中独立等可能选子集 $A,B$。事件 $B\\subseteq A$ 或 $B\\subseteq S\\setminus A$ 的概率写成最简的 $m/n^r$，$n$ 为素数，求 $m+n+r$。",
+    "answer": 710,
+    "solution_en": [
+      "Given $|A|=j$, allowed $B$ number $2^j+2^{6-j}-1$, subtracting the empty-set overlap.",
+      "Summing over $A$ gives favorable pairs $\\sum_j\\binom6j(2^j+2^{6-j}-1)=2\\cdot3^6-2^6$. Divide by $2^{12}$ to get $697/2^{11}$, so the answer is $710$."
+    ],
+    "solution_zh": [
+      "固定 $|A|=j$，合法 $B$ 个数为 $2^j+2^{6-j}-1$，减去空集重复。",
+      "对 $A$ 求和，有利对数为 $2\\cdot3^6-2^6$，除以 $2^{12}$ 得 $697/2^{11}$，所求 $710$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/10",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Inclusion-exclusion & double counting",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q11",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "At simultaneous ground/small-cylinder tangency, center separation is $96$ and vertical difference $48$, so the center line is $30^\\circ$ from horizontal. Crossing sweeps the large center through $120^\\circ$ on radius $96$, advancing $2\\cdot96\\cos30^\\circ=96\\sqrt3$.",
+      "reason_zh": "同时接触地面与小圆柱时，圆心距九十六、竖直差四十八，故连心线与水平成三十度。跨越时大圆心沿半径九十六转过一百二十度，水平前进 $96\\sqrt3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE06",
+        "reason_en": "At simultaneous ground/small-cylinder tangency, center separation is $96$ and vertical difference $48$, so the center line is $30^\\circ$ from horizontal. Crossing sweeps the large center through $120^\\circ$ on radius $96$, advancing $2\\cdot96\\cos30^\\circ=96\\sqrt3$.",
+        "reason_zh": "同时接触地面与小圆柱时，圆心距九十六、竖直差四十八，故连心线与水平成三十度。跨越时大圆心沿半径九十六转过一百二十度，水平前进 $96\\sqrt3$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "No slip around the stationary small circle makes large-cylinder spin $(96/72)120^\\circ=160^\\circ$. The remaining $200^\\circ$ spin is on flat ground, advancing $(200/360)2\\pi\\cdot72=80\\pi$.",
+        "reason_zh": "无滑动给出大圆柱自转角为 $(96/72)120^\\circ=160^\\circ$。余下二百度在地面完成，前进 $80\\pi$。"
+      }
+    ],
+    "statement_en": "A radius-$72$ cylinder rolls without slipping along level ground, over a fixed parallel radius-$24$ cylinder, and back onto the ground. After exactly one full revolution it has its original circumferential contact point down again. The net horizontal displacement is $a\\pi+b\\sqrt c$, $c$ squarefree. Find $a+b+c$.",
+    "statement_zh": "半径七十二的圆柱在水平地面无滑动滚动，越过固定且平行的半径二十四圆柱后回到地面。恰转一整周，原周面接地点再次朝下，水平净位移为 $a\\pi+b\\sqrt c$，求 $a+b+c$。",
+    "answer": 179,
+    "solution_en": [
+      "At simultaneous ground/small-cylinder tangency, center separation is $96$ and vertical difference $48$, so the center line is $30^\\circ$ from horizontal. Crossing sweeps the large center through $120^\\circ$ on radius $96$, advancing $2\\cdot96\\cos30^\\circ=96\\sqrt3$.",
+      "No slip around the stationary small circle makes large-cylinder spin $(96/72)120^\\circ=160^\\circ$. The remaining $200^\\circ$ spin is on flat ground, advancing $(200/360)2\\pi\\cdot72=80\\pi$.",
+      "Total displacement $80\\pi+96\\sqrt3$ gives $179$."
+    ],
+    "solution_zh": [
+      "同时接触地面与小圆柱时，圆心距九十六、竖直差四十八，故连心线与水平成三十度。跨越时大圆心沿半径九十六转过一百二十度，水平前进 $96\\sqrt3$。",
+      "无滑动给出大圆柱自转角为 $(96/72)120^\\circ=160^\\circ$。余下二百度在地面完成，前进 $80\\pi$。",
+      "位移为 $80\\pi+96\\sqrt3$，所求 $179$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/11",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Tangent circles & common tangents",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q12",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Write $x_j=3^{u+vj}$ with integer $v\\ge1$. The logarithm sum gives $2u+7v=77$.",
+      "reason_zh": "写成 $x_j=3^{u+vj}$，整数 $v\\ge1$，对数和给出 $2u+7v=77$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "The positive sum lies strictly between its largest term $x_7$ and $3x_7$, since its ratio backwards is at most one third. Its logarithm therefore lies strictly between integers $u+7v$ and $u+7v+1$, forcing $u+7v=56$.",
+        "reason_zh": "各项和严格介于最大项 $x_7$ 与其三倍之间，所以其对数严格介于相邻整数 $u+7v,u+7v+1$，迫使 $u+7v=56$。"
+      }
+    ],
+    "statement_en": "An increasing geometric sequence consists of integer powers of three, satisfies $\\sum_{j=0}^7\\log_3x_j=308$ and $56\\le\\log_3(\\sum_{j=0}^7x_j)\\le57$. Find $\\log_3x_{14}$.",
+    "statement_zh": "递增等比数列各项均为三的整数次幂，满足前八项对数和为 $308$，且 $56\\le\\log_3(\\sum_{j=0}^7x_j)\\le57$。求 $\\log_3x_{14}$。",
+    "answer": 91,
+    "solution_en": [
+      "Write $x_j=3^{u+vj}$ with integer $v\\ge1$. The logarithm sum gives $2u+7v=77$.",
+      "The positive sum lies strictly between its largest term $x_7$ and $3x_7$, since its ratio backwards is at most one third. Its logarithm therefore lies strictly between integers $u+7v$ and $u+7v+1$, forcing $u+7v=56$.",
+      "Solve $u=21,v=5$, giving $u+14v=91$."
+    ],
+    "solution_zh": [
+      "写成 $x_j=3^{u+vj}$，整数 $v\\ge1$，对数和给出 $2u+7v=77$。",
+      "各项和严格介于最大项 $x_7$ 与其三倍之间，所以其对数严格介于相邻整数 $u+7v,u+7v+1$，迫使 $u+7v=56$。",
+      "解得 $u=21,v=5$，所求为 $91$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/12",
+    "method_chain": [
+      "Sequences & summation",
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q13",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "If bottom values are $x_0,\\ldots,x_{10}$, the top is $\\sum_i\\binom{10}{i}x_i$. Modulo three the only nonzero binomial weights occur at $i=0,1,9,10$, all equal one.",
+      "reason_zh": "顶端为 $\\sum_i\\binom{10}{i}x_i$。模三只有 $i=0,1,9,10$ 的二项式权重非零，且均为一。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "If bottom values are $x_0,\\ldots,x_{10}$, the top is $\\sum_i\\binom{10}{i}x_i$. Modulo three the only nonzero binomial weights occur at $i=0,1,9,10$, all equal one.",
+        "reason_zh": "顶端为 $\\sum_i\\binom{10}{i}x_i$。模三只有 $i=0,1,9,10$ 的二项式权重非零，且均为一。"
+      }
+    ],
+    "statement_en": "An eleven-row triangular array is filled bottom-up by adding the two entries immediately below each cell. Bottom entries are independently chosen zero or one. Count bottom rows whose top entry is divisible by three.",
+    "statement_zh": "十一行三角阵自下向上填数，每格等于下方相邻两格之和。底行每格取零或一，求顶端数被三整除的底行填法数。",
+    "answer": 640,
+    "solution_en": [
+      "If bottom values are $x_0,\\ldots,x_{10}$, the top is $\\sum_i\\binom{10}{i}x_i$. Modulo three the only nonzero binomial weights occur at $i=0,1,9,10$, all equal one.",
+      "These four binary entries must sum to zero or three, giving $1+4=5$ choices. The seven others are free, so total $5\\cdot2^7=640$."
+    ],
+    "solution_zh": [
+      "顶端为 $\\sum_i\\binom{10}{i}x_i$。模三只有 $i=0,1,9,10$ 的二项式权重非零，且均为一。",
+      "这四个零一项的和只能为零或三，共五种，其余七项任意，故总数为 $640$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/13",
+    "method_chain": [
+      "Subsets & binomial identities",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q14",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "The polynomial is nonconstant, and comparing leading coefficients makes it monic. If $\\lambda$ is a complex root, so is $2\\lambda^3+\\lambda$. A root of modulus greater than one would iterate to arbitrarily larger moduli, impossible for a finite root set.",
+      "reason_zh": "多项式不是常数，比较首项系数可知其首一。若 $\\lambda$ 是复根，$2\\lambda^3+\\lambda$ 也是根。若某根模大于一，迭代将产生模严格增大的无限根，矛盾。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL03",
+        "reason_en": "The root product has modulus one because $f(0)=1$ and the polynomial is monic. Since every modulus is at most one, all must equal one. The image root must also have modulus one, so $|2\\lambda^2+1|=1$ with $|\\lambda|=1$, forcing $\\lambda^2=-1$.",
+        "reason_zh": "首一且常数项一，使根模乘积为一；各根模又不超过一，因此全部为一。像根也模一，故 $|2\\lambda^2+1|=1$，与 $|\\lambda|=1$ 合用迫使 $\\lambda^2=-1$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "The polynomial is nonconstant, and comparing leading coefficients makes it monic. If $\\lambda$ is a complex root, so is $2\\lambda^3+\\lambda$. A root of modulus greater than one would iterate to arbitrarily larger moduli, impossible for a finite root set.",
+        "reason_zh": "多项式不是常数，比较首项系数可知其首一。若 $\\lambda$ 是复根，$2\\lambda^3+\\lambda$ 也是根。若某根模大于一，迭代将产生模严格增大的无限根，矛盾。"
+      }
+    ],
+    "statement_en": "A real-coefficient polynomial obeys $f(0)=1$, $f(2)+f(3)=125$, and $f(x)f(2x^2)=f(2x^3+x)$ identically. Find $f(5)$.",
+    "statement_zh": "实系数多项式满足 $f(0)=1,f(2)+f(3)=125$，且恒有 $f(x)f(2x^2)=f(2x^3+x)$，求 $f(5)$。",
+    "answer": 676,
+    "solution_en": [
+      "The polynomial is nonconstant, and comparing leading coefficients makes it monic. If $\\lambda$ is a complex root, so is $2\\lambda^3+\\lambda$. A root of modulus greater than one would iterate to arbitrarily larger moduli, impossible for a finite root set.",
+      "The root product has modulus one because $f(0)=1$ and the polynomial is monic. Since every modulus is at most one, all must equal one. The image root must also have modulus one, so $|2\\lambda^2+1|=1$ with $|\\lambda|=1$, forcing $\\lambda^2=-1$.",
+      "Real coefficients now give $f(x)=(x^2+1)^j$. Its functional identity is indeed satisfied. The value condition $5^j+10^j=125$ uniquely gives $j=2$. Therefore $f(5)=26^2=676$."
+    ],
+    "solution_zh": [
+      "多项式不是常数，比较首项系数可知其首一。若 $\\lambda$ 是复根，$2\\lambda^3+\\lambda$ 也是根。若某根模大于一，迭代将产生模严格增大的无限根，矛盾。",
+      "首一且常数项一，使根模乘积为一；各根模又不超过一，因此全部为一。像根也模一，故 $|2\\lambda^2+1|=1$，与 $|\\lambda|=1$ 合用迫使 $\\lambda^2=-1$。",
+      "实系数于是给出 $f(x)=(x^2+1)^j$，其确满足函数恒等式。条件 $5^j+10^j=125$ 唯一给出 $j=2$，故 $f(5)=676$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/14",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Complex numbers & roots of unity",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-II-Q15",
+    "paper_id": "AIME-2007-II",
+    "exam_year": 2007,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Let original inradius and circumradius be $r,R$, and the common small radius $x$. The three corner-circle centers form the triangle homothetic to the original about its incenter, with ratio $(r-x)/r$. Their circumradius is $R(r-x)/r$.",
+      "reason_zh": "设原三角形内、外接圆半径为 $r,R$，小圆半径 $x$。三个角圆圆心组成以原内心为中心、比例 $(r-x)/r$ 的位似三角形，其外接圆半径为 $R(r-x)/r$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Let original inradius and circumradius be $r,R$, and the common small radius $x$. The three corner-circle centers form the triangle homothetic to the original about its incenter, with ratio $(r-x)/r$. Their circumradius is $R(r-x)/r$.",
+        "reason_zh": "设原三角形内、外接圆半径为 $r,R$，小圆半径 $x$。三个角圆圆心组成以原内心为中心、比例 $(r-x)/r$ 的位似三角形，其外接圆半径为 $R(r-x)/r$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The fourth center is that circumcenter, distance $2x$ from all three. Heron gives area $84$, so $r=4,R=65/8$. Hence $2x=(65/8)(4-x)/4$.",
+        "reason_zh": "第四圆心就是该外心，到三个圆心距离均为 $2x$。海伦公式得面积八十四，故 $r=4,R=65/8$，所以 $2x=(65/8)(4-x)/4$。"
+      }
+    ],
+    "statement_en": "Inside a $13$–$14$–$15$ triangle, three equal circles each touch the two sides at one vertex, and a fourth equal circle is externally tangent to all three. If their radius is reduced $m/n$, find $m+n$.",
+    "statement_zh": "在边长十三、十四、十五的三角形内，三个等圆各与某顶点的两条邻边相切，第四个等圆分别与三者外切。若公共半径为最简分数 $m/n$，求 $m+n$。",
+    "answer": 389,
+    "solution_en": [
+      "Let original inradius and circumradius be $r,R$, and the common small radius $x$. The three corner-circle centers form the triangle homothetic to the original about its incenter, with ratio $(r-x)/r$. Their circumradius is $R(r-x)/r$.",
+      "The fourth center is that circumcenter, distance $2x$ from all three. Heron gives area $84$, so $r=4,R=65/8$. Hence $2x=(65/8)(4-x)/4$.",
+      "Solve $129x=260$, giving $x=260/129$ and answer $389$."
+    ],
+    "solution_zh": [
+      "设原三角形内、外接圆半径为 $r,R$，小圆半径 $x$。三个角圆圆心组成以原内心为中心、比例 $(r-x)/r$ 的位似三角形，其外接圆半径为 $R(r-x)/r$。",
+      "第四圆心就是该外心，到三个圆心距离均为 $2x$。海伦公式得面积八十四，故 $r=4,R=65/8$，所以 $2x=(65/8)(4-x)/4$。",
+      "解得 $x=260/129$，所求为 $389$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007II/problem/15",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

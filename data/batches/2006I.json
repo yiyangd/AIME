@@ -1,0 +1,712 @@
+[
+  {
+    "question_id": "AIME-2006-I-Q01",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Pythagoras in $ABC$ gives $AC^2=18^2+21^2=765$. In $ACD$, $AD^2=765+14^2=961$, so $AD=31$.",
+      "reason_zh": "对 $ABC$ 用勾股定理得 $AC^2=765$，再对 $ACD$ 得 $AD^2=765+196=961$，故 $AD=31$。"
+    },
+    "secondary": [],
+    "statement_en": "Quadrilateral $ABCD$ has $B=90^\\circ$, $AC\\perp CD$, and $AB=18,BC=21,CD=14$. Find its perimeter.",
+    "statement_zh": "四边形 $ABCD$ 中 $B=90^\\circ,AC\\perp CD,AB=18,BC=21,CD=14$，求周长。",
+    "answer": 84,
+    "solution_en": [
+      "Pythagoras in $ABC$ gives $AC^2=18^2+21^2=765$. In $ACD$, $AD^2=765+14^2=961$, so $AD=31$.",
+      "Perimeter $18+21+14+31=84$."
+    ],
+    "solution_zh": [
+      "对 $ABC$ 用勾股定理得 $AC^2=765$，再对 $ACD$ 得 $AD^2=765+196=961$，故 $AD=31$。",
+      "周长为 $84$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/1",
+    "method_chain": [
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q02",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO02",
+      "reason_en": "The minimum is $1+\\cdots+90=4095$, maximum $11+\\cdots+100=4995$.",
+      "reason_zh": "最小和为 $4095$，最大和为 $4995$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "The minimum is $1+\\cdots+90=4095$, maximum $11+\\cdots+100=4995$.",
+        "reason_zh": "最小和为 $4095$，最大和为 $4995$。"
+      }
+    ],
+    "statement_en": "Among all ninety-element subsets of $\\{1,\\ldots,100\\}$, how many distinct element sums occur?",
+    "statement_zh": "在 $\\{1,\\ldots,100\\}$ 的所有九十元素子集中，元素和有多少种不同值？",
+    "answer": 901,
+    "solution_en": [
+      "The minimum is $1+\\cdots+90=4095$, maximum $11+\\cdots+100=4995$.",
+      "Unless the subset is the maximum final block, some selected integer $k<100$ has unselected successor $k+1$. Replacing it raises the sum by exactly one. Repetition constructs every intermediate sum.",
+      "Thus the number is $4995-4095+1=901$."
+    ],
+    "solution_zh": [
+      "最小和为 $4095$，最大和为 $4995$。",
+      "只要尚未成为最大末段子集，就存在已选的 $k<100$ 而 $k+1$ 未选。将其替换使和恰增加一，重复即可得到所有中间整数。",
+      "故不同和共有 $901$ 种。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/2",
+    "method_chain": [
+      "Discrete extrema & constructions",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q03",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "Write the number $d10^k+u$ with leading digit $d$. Then $d10^k=28u$. Since seven does not divide a power of ten, it divides $d$, forcing $d=7$.",
+      "reason_zh": "写成 $d10^k+u$，条件为 $d10^k=28u$。因七不整除十的幂，必须整除首位 $d$，故 $d=7$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "Thus $u=10^k/4$, requiring $k\\ge2$. The least case has $u=25$, giving $725$.",
+        "reason_zh": "于是 $u=10^k/4$，要求 $k\\ge2$。最小情形为 $u=25$，原数 $725$。"
+      }
+    ],
+    "statement_en": "Find the least positive integer whose value becomes one twenty-ninth as large when its leftmost decimal digit is deleted.",
+    "statement_zh": "求删去十进制最左一位后数值恰变为原数二十九分之一的最小正整数。",
+    "answer": 725,
+    "solution_en": [
+      "Write the number $d10^k+u$ with leading digit $d$. Then $d10^k=28u$. Since seven does not divide a power of ten, it divides $d$, forcing $d=7$.",
+      "Thus $u=10^k/4$, requiring $k\\ge2$. The least case has $u=25$, giving $725$."
+    ],
+    "solution_zh": [
+      "写成 $d10^k+u$，条件为 $d10^k=28u$。因七不整除十的幂，必须整除首位 $d$，故 $d=7$。",
+      "于是 $u=10^k/4$，要求 $k\\ge2$。最小情形为 $u=25$，原数 $725$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/3",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Divisibility, GCD & LCM"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q04",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "The five-adic valuation controls trailing zeros. An integer $j$ occurs in $101-j$ of the factorials.",
+      "reason_zh": "五的指数决定末尾零数，而整数 $j$ 在 $101-j$ 个阶乘中出现。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Multiples $5,10,\\ldots,100$ contribute $96+91+\\cdots+1=970$. Multiples $25,50,75,100$ contribute an additional $76+51+26+1=154$. No factor $125$ occurs.",
+        "reason_zh": "五的倍数贡献 $96+91+\\cdots+1=970$，二十五的倍数额外贡献 $154$，没有一百二十五的倍数。"
+      }
+    ],
+    "statement_en": "Let $N$ be the trailing-zero count of $\\prod_{k=1}^{100}k!$. Find $N\\bmod1000$.",
+    "statement_zh": "令 $N$ 为 $\\prod_{k=1}^{100}k!$ 的十进制末尾零数，求其除以一千的余数。",
+    "answer": 124,
+    "solution_en": [
+      "The five-adic valuation controls trailing zeros. An integer $j$ occurs in $101-j$ of the factorials.",
+      "Multiples $5,10,\\ldots,100$ contribute $96+91+\\cdots+1=970$. Multiples $25,50,75,100$ contribute an additional $76+51+26+1=154$. No factor $125$ occurs.",
+      "Thus $N=1124$, remainder $124$."
+    ],
+    "solution_zh": [
+      "五的指数决定末尾零数，而整数 $j$ 在 $101-j$ 个阶乘中出现。",
+      "五的倍数贡献 $96+91+\\cdots+1=970$，二十五的倍数额外贡献 $154$，没有一百二十五的倍数。",
+      "故 $N=1124$，余数 $124$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/4",
+    "method_chain": [
+      "Prime factorization & valuations",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q05",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Square and match the independent radicals: $ab=52,ac=234,bc=72$. Multiplying gives $(abc)^2=52\\cdot234\\cdot72=936^2$.",
+      "reason_zh": "平方并比较独立根式系数，得 $ab=52,ac=234,bc=72$，所以 $(abc)^2=936^2$。"
+    },
+    "secondary": [],
+    "statement_en": "For positive integers $a,b,c$, $\\sqrt{2006+104\\sqrt6+468\\sqrt{10}+144\\sqrt{15}}=a\\sqrt2+b\\sqrt3+c\\sqrt5$. Find $abc$.",
+    "statement_zh": "正整数 $a,b,c$ 满足 $\\sqrt{2006+104\\sqrt6+468\\sqrt{10}+144\\sqrt{15}}=a\\sqrt2+b\\sqrt3+c\\sqrt5$，求 $abc$。",
+    "answer": 936,
+    "solution_en": [
+      "Square and match the independent radicals: $ab=52,ac=234,bc=72$. Multiplying gives $(abc)^2=52\\cdot234\\cdot72=936^2$.",
+      "Positivity yields $abc=936$. Indeed $(a,b,c)=(13,4,18)$ also gives constant part $338+48+1620=2006$."
+    ],
+    "solution_zh": [
+      "平方并比较独立根式系数，得 $ab=52,ac=234,bc=72$，所以 $(abc)^2=936^2$。",
+      "取正得 $abc=936$，且 $(13,4,18)$ 的常数部分确为 $2006$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/5",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q06",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT07",
+      "reason_en": "Each equals $(100a+10b+c)/999$. There are $10\\cdot9\\cdot8=720$ triples, and each digit appears in each position $72$ times.",
+      "reason_zh": "每个数为 $(100a+10b+c)/999$，共有 $720$ 个数字三元组，每个数字在每个位置出现七十二次。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Each equals $(100a+10b+c)/999$. There are $10\\cdot9\\cdot8=720$ triples, and each digit appears in each position $72$ times.",
+        "reason_zh": "每个数为 $(100a+10b+c)/999$，共有 $720$ 个数字三元组，每个数字在每个位置出现七十二次。"
+      }
+    ],
+    "statement_en": "Sum all real numbers $0.\\overline{abc}$ whose three decimal digits $a,b,c$ are pairwise distinct, allowing $a=0$.",
+    "statement_zh": "求所有循环小数 $0.\\overline{abc}$ 的和，其中三位数字两两不同，允许 $a=0$。",
+    "answer": 360,
+    "solution_en": [
+      "Each equals $(100a+10b+c)/999$. There are $10\\cdot9\\cdot8=720$ triples, and each digit appears in each position $72$ times.",
+      "The sum is $72(0+1+\\cdots+9)(100+10+1)/999=72\\cdot45/9=360$."
+    ],
+    "solution_zh": [
+      "每个数为 $(100a+10b+c)/999$，共有 $720$ 个数字三元组，每个数字在每个位置出现七十二次。",
+      "所以总和为 $72\\cdot45\\cdot111/999=360$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/6",
+    "method_chain": [
+      "Rational fractions & repeating decimals",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q07",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "Let the first-line distance from the vertex be $x$ spacing units. Similar triangles have area proportional to distance squared. Thus $A,B,C,D$ have proportional areas $x^2,2x+3,2x+7,2x+11$.",
+      "reason_zh": "设顶点距第一线为 $x$ 个间距。相似三角形面积与距离平方成正比，所以四区面积对应 $x^2,2x+3,2x+7,2x+11$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "Let the first-line distance from the vertex be $x$ spacing units. Similar triangles have area proportional to distance squared. Thus $A,B,C,D$ have proportional areas $x^2,2x+3,2x+7,2x+11$.",
+        "reason_zh": "设顶点距第一线为 $x$ 个间距。相似三角形面积与距离平方成正比，所以四区面积对应 $x^2,2x+3,2x+7,2x+11$。"
+      }
+    ],
+    "statement_en": "An angle is cut by seven equally spaced parallel cross-lines numbered outward from its vertex. Region $A$ is the initial triangle; $B,C,D$ are strips between lines $2$–$3$, $4$–$5$, and $6$–$7$. Given $[C]/[B]=11/5$, find $[D]/[A]$.",
+    "statement_zh": "一个角被七条等距平行截线依次截开。$A$ 为顶点到第一线的三角形；$B,C,D$ 分别为第二至三、第四至五、第六至七线间的带状区。若面积比 $[C]/[B]=11/5$，求 $[D]/[A]$。",
+    "answer": 408,
+    "solution_en": [
+      "Let the first-line distance from the vertex be $x$ spacing units. Similar triangles have area proportional to distance squared. Thus $A,B,C,D$ have proportional areas $x^2,2x+3,2x+7,2x+11$.",
+      "The ratio $(2x+7)/(2x+3)=11/5$ gives $x=1/6$. Consequently $[D]/[A]=(2x+11)/x^2=408$."
+    ],
+    "solution_zh": [
+      "设顶点距第一线为 $x$ 个间距。相似三角形面积与距离平方成正比，所以四区面积对应 $x^2,2x+3,2x+7,2x+11$。",
+      "由 $(2x+7)/(2x+3)=11/5$ 得 $x=1/6$，故 $[D]/[A]=408$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/7",
+    "method_chain": [
+      "Areas & area ratios",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q08",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "Let common side be $z$ and each outer angle incident to the top vertex be $\\alpha$. The central angle is $\\pi-2\\alpha$, so $0<\\alpha<\\pi/2$ and $z^2\\sin\\alpha=\\sqrt{2006}$.",
+      "reason_zh": "设公共边长为 $z$，外围在顶部会合的角为 $\\alpha$，则中央角为 $\\pi-2\\alpha$，所以 $0<\\alpha<\\pi/2$ 且 $z^2\\sin\\alpha=\\sqrt{2006}$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Let common side be $z$ and each outer angle incident to the top vertex be $\\alpha$. The central angle is $\\pi-2\\alpha$, so $0<\\alpha<\\pi/2$ and $z^2\\sin\\alpha=\\sqrt{2006}$.",
+        "reason_zh": "设公共边长为 $z$，外围在顶部会合的角为 $\\alpha$，则中央角为 $\\pi-2\\alpha$，所以 $0<\\alpha<\\pi/2$ 且 $z^2\\sin\\alpha=\\sqrt{2006}$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Central area $K=z^2\\sin2\\alpha=2\\sqrt{2006}\\cos\\alpha$ takes every value in $(0,\\sqrt{8024})$. Since $89^2<8024<90^2$, the possible integers are $1$ through $89$.",
+        "reason_zh": "中央面积 $K=z^2\\sin2\\alpha=2\\sqrt{2006}\\cos\\alpha$ 遍历 $(0,\\sqrt{8024})$，由于 $89^2<8024<90^2$，正整数可能值为一至八十九，共 $89$ 个。"
+      }
+    ],
+    "statement_en": "A hexagon is tiled by five equal-side rhombi as in the companion diagram: a central rhombus $T$ and four congruent outer rhombi $P,Q,R,S$. At the top vertex of $T$, the incident angles of $P,T,Q$ form a straight angle; likewise at the bottom. Each outer rhombus has area $\\sqrt{2006}$. How many positive integer areas can $T$ have?",
+    "statement_zh": "如配图，六边形被五个等边长菱形铺满：中央为 $T$，四周 $P,Q,R,S$ 全等。$T$ 顶点处 $P,T,Q$ 的角拼成平角，底点处同理。每个外围菱形面积为 $\\sqrt{2006}$。中央面积有多少个正整数可能值？",
+    "answer": 89,
+    "solution_en": [
+      "Let common side be $z$ and each outer angle incident to the top vertex be $\\alpha$. The central angle is $\\pi-2\\alpha$, so $0<\\alpha<\\pi/2$ and $z^2\\sin\\alpha=\\sqrt{2006}$.",
+      "Central area $K=z^2\\sin2\\alpha=2\\sqrt{2006}\\cos\\alpha$ takes every value in $(0,\\sqrt{8024})$. Since $89^2<8024<90^2$, the possible integers are $1$ through $89$."
+    ],
+    "solution_zh": [
+      "设公共边长为 $z$，外围在顶部会合的角为 $\\alpha$，则中央角为 $\\pi-2\\alpha$，所以 $0<\\alpha<\\pi/2$ 且 $z^2\\sin\\alpha=\\sqrt{2006}$。",
+      "中央面积 $K=z^2\\sin2\\alpha=2\\sqrt{2006}\\cos\\alpha$ 遍历 $(0,\\sqrt{8024})$，由于 $89^2<8024<90^2$，正整数可能值为一至八十九，共 $89$ 个。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/8",
+    "method_chain": [
+      "Areas & area ratios",
+      "Trigonometric algebra & equations",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": [],
+    "diagram_path": "data/diagrams/AIME-2006-I-Q08.svg"
+  },
+  {
+    "question_id": "AIME-2006-I-Q09",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "The logarithm sum gives $a^{12}r^{66}=2^{6018}$, hence $a^2r^{11}=2^{1003}$. Thus $a=2^u,r=2^v$ with nonnegative exponents satisfying $2u+11v=1003$.",
+      "reason_zh": "条件给出 $a^{12}r^{66}=2^{6018}$，即 $a^2r^{11}=2^{1003}$。因此 $a=2^u,r=2^v$，且 $2u+11v=1003$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "The logarithm sum gives $a^{12}r^{66}=2^{6018}$, hence $a^2r^{11}=2^{1003}$. Thus $a=2^u,r=2^v$ with nonnegative exponents satisfying $2u+11v=1003$.",
+        "reason_zh": "条件给出 $a^{12}r^{66}=2^{6018}$，即 $a^2r^{11}=2^{1003}$。因此 $a=2^u,r=2^v$，且 $2u+11v=1003$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "$v$ is odd and $1\\le v\\le91$, giving forty-six choices. Each determines a nonnegative integer $u$, so the count is $46$.",
+        "reason_zh": "$v$ 为一至九十一的奇数，共四十六个，每个唯一确定合法 $u$，所以答案为 $46$。"
+      }
+    ],
+    "statement_en": "A geometric sequence has positive integer first term $a$ and ratio $r$. If the sum of base-eight logarithms of its first twelve terms is $2006$, count possible ordered pairs $(a,r)$.",
+    "statement_zh": "等比数列首项 $a$、公比 $r$ 均为正整数，前十二项的以八为底的对数之和为 $2006$。求 $(a,r)$ 个数。",
+    "answer": 46,
+    "solution_en": [
+      "The logarithm sum gives $a^{12}r^{66}=2^{6018}$, hence $a^2r^{11}=2^{1003}$. Thus $a=2^u,r=2^v$ with nonnegative exponents satisfying $2u+11v=1003$.",
+      "$v$ is odd and $1\\le v\\le91$, giving forty-six choices. Each determines a nonnegative integer $u$, so the count is $46$."
+    ],
+    "solution_zh": [
+      "条件给出 $a^{12}r^{66}=2^{6018}$，即 $a^2r^{11}=2^{1003}$。因此 $a=2^u,r=2^v$，且 $2u+11v=1003$。",
+      "$v$ 为一至九十一的奇数，共四十六个，每个唯一确定合法 $u$，所以答案为 $46$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/9",
+    "method_chain": [
+      "Prime factorization & valuations",
+      "Logarithms & exponentials",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q10",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The line through $(1,1/2)$ and $(3/2,2)$ has slope three. Each point is the symmetry center of one pair of tangent disks, so the line bisects those four disks in pairs.",
+      "reason_zh": "连接 $(1,1/2)$ 与 $(3/2,2)$ 的直线斜率为三。两点分别为一对相切圆盘的对称中心，所以该直线分别平分这两对圆盘。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The line through $(1,1/2)$ and $(3/2,2)$ has slope three. Each point is the symmetry center of one pair of tangent disks, so the line bisects those four disks in pairs.",
+        "reason_zh": "连接 $(1,1/2)$ 与 $(3/2,2)$ 的直线斜率为三。两点分别为一对相切圆盘的对称中心，所以该直线分别平分这两对圆盘。"
+      }
+    ],
+    "statement_en": "Eight radius-$1/2$ disks have centers $(i+1/2,j+1/2)$ for $i,j\\in\\{0,1,2\\}$ except $(i,j)=(2,2)$. A slope-three line bisects their total area. Write it as $ax=by+c$ in relatively prime positive integers and find $a^2+b^2+c^2$.",
+    "statement_zh": "八个半径 $1/2$ 的圆盘，圆心为 $(i+1/2,j+1/2)$，其中 $i,j=0,1,2$，但去掉 $(2,2)$。一条斜率三的直线平分总面积，写成互质正整数方程 $ax=by+c$，求 $a^2+b^2+c^2$。",
+    "answer": 65,
+    "solution_en": [
+      "The line through $(1,1/2)$ and $(3/2,2)$ has slope three. Each point is the symmetry center of one pair of tangent disks, so the line bisects those four disks in pairs.",
+      "It misses the other four disks, leaving two on each side; their centers have signed line values in opposite pairs of safe magnitudes. Thus it bisects the union. Its equation is $y=3x-5/2$, or $6x=2y+5$.",
+      "The answer is $36+4+25=65$."
+    ],
+    "solution_zh": [
+      "连接 $(1,1/2)$ 与 $(3/2,2)$ 的直线斜率为三。两点分别为一对相切圆盘的对称中心，所以该直线分别平分这两对圆盘。",
+      "其余四圆均不被直线穿过，两侧各两个，因此总面积被平分。方程为 $y=3x-5/2$，即 $6x=2y+5$。",
+      "所求为 $65$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/10",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q11",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "In a legal tower using $1,\\ldots,n$, the new largest cube $n+1$ can be inserted only at bottom, directly above $n$, or directly above $n-1$: exactly three choices for $n\\ge2$. Each insertion stays legal.",
+      "reason_zh": "在使用一至 $n$ 的合法塔中，最大新块 $n+1$ 只能插在底部、$n$ 正上方、$n-1$ 正上方，恰三种，而且均保持合法。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "In a legal tower using $1,\\ldots,n$, the new largest cube $n+1$ can be inserted only at bottom, directly above $n$, or directly above $n-1$: exactly three choices for $n\\ge2$. Each insertion stays legal.",
+        "reason_zh": "在使用一至 $n$ 的合法塔中，最大新块 $n+1$ 只能插在底部、$n$ 正上方、$n-1$ 正上方，恰三种，而且均保持合法。"
+      }
+    ],
+    "statement_en": "Stack cubes of side lengths $1,\\ldots,8$, using all once. A cube of length $k$ may have immediately above it only a cube of side at most $k+2$. Find the number of towers modulo $1000$.",
+    "statement_zh": "将边长一至八的八个立方体各用一次叠成塔，边长 $k$ 的上面紧邻的立方体边长至多 $k+2$。求塔数除以一千的余数。",
+    "answer": 458,
+    "solution_en": [
+      "In a legal tower using $1,\\ldots,n$, the new largest cube $n+1$ can be inserted only at bottom, directly above $n$, or directly above $n-1$: exactly three choices for $n\\ge2$. Each insertion stays legal.",
+      "Conversely deleting $n+1$ preserves legality because its supporting cube had side at least $n-1$, and the cube above it has side at most $n$. Thus $T_{n+1}=3T_n$, with $T_2=2$.",
+      "Therefore $T_8=2\\cdot3^6=1458$, remainder $458$."
+    ],
+    "solution_zh": [
+      "在使用一至 $n$ 的合法塔中，最大新块 $n+1$ 只能插在底部、$n$ 正上方、$n-1$ 正上方，恰三种，而且均保持合法。",
+      "反过来删除 $n+1$ 也保持合法，因为它原下方至少为 $n-1$，原上方至多为 $n$。所以 $T_{n+1}=3T_n,T_2=2$。",
+      "故 $T_8=1458$，余数为 $458$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/11",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q12",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "Use $2\\cos4x\\cos x=\\cos3x+\\cos5x$. Setting these latter cosines to $u,v$ turns the equation into $u^3+v^3=(u+v)^3$, so $uv(u+v)=0$.",
+      "reason_zh": "用积化和差公式 $2\\cos4x\\cos x=\\cos3x+\\cos5x$，将两项余弦记为 $u,v$，原式化为 $uv(u+v)=0$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Use $2\\cos4x\\cos x=\\cos3x+\\cos5x$. Setting these latter cosines to $u,v$ turns the equation into $u^3+v^3=(u+v)^3$, so $uv(u+v)=0$.",
+        "reason_zh": "用积化和差公式 $2\\cos4x\\cos x=\\cos3x+\\cos5x$，将两项余弦记为 $u,v$，原式化为 $uv(u+v)=0$。"
+      }
+    ],
+    "statement_en": "Sum degree values $100<x<200$ satisfying $\\cos^3(3x)+\\cos^3(5x)=8\\cos^3(4x)\\cos^3x$.",
+    "statement_zh": "角度以度计，求 $100<x<200$ 内满足 $\\cos^3(3x)+\\cos^3(5x)=8\\cos^3(4x)\\cos^3x$ 的所有 $x$ 之和。",
+    "answer": 906,
+    "solution_en": [
+      "Use $2\\cos4x\\cos x=\\cos3x+\\cos5x$. Setting these latter cosines to $u,v$ turns the equation into $u^3+v^3=(u+v)^3$, so $uv(u+v)=0$.",
+      "Thus zeros come from $\\cos3x=0$, $\\cos5x=0$, $\\cos4x=0$, or $\\cos x=0$. In the given interval their distinct solutions are $150;126,162,198;112.5,157.5;$ and none, respectively.",
+      "The sum is $906$."
+    ],
+    "solution_zh": [
+      "用积化和差公式 $2\\cos4x\\cos x=\\cos3x+\\cos5x$，将两项余弦记为 $u,v$，原式化为 $uv(u+v)=0$。",
+      "因此分别求 $\\cos3x,\\cos5x,\\cos4x,\\cos x$ 的零点，在区间内为 $150;126,162,198;112.5,157.5;$ 以及无解。",
+      "各解互异，和为 $906$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/12",
+    "method_chain": [
+      "Trigonometric algebra & equations",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q13",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "For $1\\le j<n$, exactly $2^{n-1-j}$ summands have value $2^j$, while the endpoint contributes $2^n$. Thus $S_n=(n-1)2^{n-1}+2^n=(n+1)2^{n-1}$.",
+      "reason_zh": "对 $1\\le j<n$，恰有 $2^{n-1-j}$ 项取值 $2^j$，末项为 $2^n$，所以 $S_n=(n+1)2^{n-1}$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "For $1\\le j<n$, exactly $2^{n-1-j}$ summands have value $2^j$, while the endpoint contributes $2^n$. Thus $S_n=(n-1)2^{n-1}+2^n=(n+1)2^{n-1}$.",
+        "reason_zh": "对 $1\\le j<n$，恰有 $2^{n-1-j}$ 项取值 $2^j$，末项为 $2^n$，所以 $S_n=(n+1)2^{n-1}$。"
+      }
+    ],
+    "statement_en": "For even $x>0$, let $g(x)$ be its largest dividing power of two, and define $S_n=\\sum_{k=1}^{2^{n-1}}g(2k)$. Find the greatest $n<1000$ for which $S_n$ is square.",
+    "statement_zh": "对正偶数 $x$，令 $g(x)$ 为整除它的最大二次幂，$S_n=\\sum_{k=1}^{2^{n-1}}g(2k)$。求使 $S_n$ 为平方数的最大 $n<1000$。",
+    "answer": 899,
+    "solution_en": [
+      "For $1\\le j<n$, exactly $2^{n-1-j}$ summands have value $2^j$, while the endpoint contributes $2^n$. Thus $S_n=(n-1)2^{n-1}+2^n=(n+1)2^{n-1}$.",
+      "Even $n$ gives odd two-adic valuation and fails. For odd $n$, the power of two is already square, so $n+1$ must be square. The largest even square at most one thousand is $900$, giving $n=899$."
+    ],
+    "solution_zh": [
+      "对 $1\\le j<n$，恰有 $2^{n-1-j}$ 项取值 $2^j$，末项为 $2^n$，所以 $S_n=(n+1)2^{n-1}$。",
+      "$n$ 偶数时二的指数为奇，不能为平方。$n$ 奇数时要求 $n+1$ 本身为平方，最大不超过一千的偶平方为九百，故 $n=899$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/13",
+    "method_chain": [
+      "Prime factorization & valuations",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q14",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Use top $T=(0,0,4)$ and feet $A=(3,0,0)$, $B=(-3/2,3\\sqrt3/2,0)$, $C=(-3/2,-3\\sqrt3/2,0)$. Shortening $TA$ by one gives $A\\prime=(12/5,0,4/5)$.",
+      "reason_zh": "取顶点 $T=(0,0,4)$，三足为 $A=(3,0,0),B=(-3/2,3\\sqrt3/2,0),C=(-3/2,-3\\sqrt3/2,0)$。缩短第一腿后新足为 $A\\prime=(12/5,0,4/5)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE09",
+        "reason_en": "The new supporting plane contains the vertical-$y$ line $BC$. In the $xz$ cross-section its equation through $(-3/2,0),(12/5,4/5)$ is $8x-39z+12=0$. The height is the distance from $T$ to this plane, $144/\\sqrt{1585}$.",
+        "reason_zh": "新地面经过平行 $y$ 轴的 $BC$。在 $xz$ 截面，过 $(-3/2,0),(12/5,4/5)$ 的直线为 $8x-39z+12=0$。顶点到面的距离为 $144/\\sqrt{1585}$。"
+      }
+    ],
+    "statement_en": "A rigid tripod has three length-five legs with equal mutual angles and initially stands with its top four feet high. One leg loses its bottom foot while the mutual angles remain fixed. The new height is $h=m/\\sqrt n$ with squarefree $n$. Find $\\lfloor m+\\sqrt n\\rfloor$.",
+    "statement_zh": "刚性三脚架三腿均长五英尺，两两夹角相同，原顶高四。某一腿底部断去一英尺而夹角保持不变。新高度为 $m/\\sqrt n$，$n$ 无平方素因子，求 $\\lfloor m+\\sqrt n\\rfloor$。",
+    "answer": 183,
+    "solution_en": [
+      "Use top $T=(0,0,4)$ and feet $A=(3,0,0)$, $B=(-3/2,3\\sqrt3/2,0)$, $C=(-3/2,-3\\sqrt3/2,0)$. Shortening $TA$ by one gives $A\\prime=(12/5,0,4/5)$.",
+      "The new supporting plane contains the vertical-$y$ line $BC$. In the $xz$ cross-section its equation through $(-3/2,0),(12/5,4/5)$ is $8x-39z+12=0$. The height is the distance from $T$ to this plane, $144/\\sqrt{1585}$.",
+      "$1585=5\\cdot317$ is squarefree and $39<\\sqrt{1585}<40$, so the requested floor is $183$."
+    ],
+    "solution_zh": [
+      "取顶点 $T=(0,0,4)$，三足为 $A=(3,0,0),B=(-3/2,3\\sqrt3/2,0),C=(-3/2,-3\\sqrt3/2,0)$。缩短第一腿后新足为 $A\\prime=(12/5,0,4/5)$。",
+      "新地面经过平行 $y$ 轴的 $BC$。在 $xz$ 截面，过 $(-3/2,0),(12/5,4/5)$ 的直线为 $8x-39z+12=0$。顶点到面的距离为 $144/\\sqrt{1585}$。",
+      "$1585=5\\cdot317$ 无平方素因子，且根号值在三十九至四十之间，故所求为 $183$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/14",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Spheres & spatial distances"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2006-I-Q15",
+    "paper_id": "AIME-2006-I",
+    "exam_year": 2006,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Squaring gives $x_k^2-x_{k-1}^2=6x_{k-1}+9$. Summing through $k=2007$ yields $\\sum_{k=1}^{2006}x_k=(x_{2007}^2-18063)/6$.",
+      "reason_zh": "平方得 $x_k^2-x_{k-1}^2=6x_{k-1}+9$，累加至 $k=2007$，得到所求普通和为 $(x_{2007}^2-18063)/6$。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Induction shows $x_k/3$ is an integer of parity $k$. Thus $x_{2007}$ is an odd multiple of three. The nearest such square to $18063$ is $135^2=18225$; neighboring candidates $129^2,141^2$ are farther. The resulting absolute sum is $27$.",
+        "reason_zh": "归纳可知 $x_k/3$ 为与 $k$ 同奇偶的整数，因此 $x_{2007}$ 为三的奇倍数。其平方最接近 $18063$ 的是 $135^2=18225$，邻近的 $129,141$ 均更远，所以绝对和至少为 $27$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Induction shows $x_k/3$ is an integer of parity $k$. Thus $x_{2007}$ is an odd multiple of three. The nearest such square to $18063$ is $135^2=18225$; neighboring candidates $129^2,141^2$ are farther. The resulting absolute sum is $27$.",
+        "reason_zh": "归纳可知 $x_k/3$ 为与 $k$ 同奇偶的整数，因此 $x_{2007}$ 为三的奇倍数。其平方最接近 $18063$ 的是 $135^2=18225$，邻近的 $129,141$ 均更远，所以绝对和至少为 $27$。"
+      }
+    ],
+    "statement_en": "A real sequence satisfies $x_0=0$ and $|x_k|=|x_{k-1}+3|$ for $k\\ge1$. Minimize $|\\sum_{k=1}^{2006}x_k|$.",
+    "statement_zh": "实数列满足 $x_0=0,|x_k|=|x_{k-1}+3|$，$k\\ge1$。求 $|\\sum_{k=1}^{2006}x_k|$ 的最小值。",
+    "answer": 27,
+    "solution_en": [
+      "Squaring gives $x_k^2-x_{k-1}^2=6x_{k-1}+9$. Summing through $k=2007$ yields $\\sum_{k=1}^{2006}x_k=(x_{2007}^2-18063)/6$.",
+      "Induction shows $x_k/3$ is an integer of parity $k$. Thus $x_{2007}$ is an odd multiple of three. The nearest such square to $18063$ is $135^2=18225$; neighboring candidates $129^2,141^2$ are farther. The resulting absolute sum is $27$.",
+      "Attain it by $x_k=3k$ through $k=45$, then alternate $-138$ at even indices and $135$ at odd indices. This obeys the recurrence and finishes at $x_{2007}=135$."
+    ],
+    "solution_zh": [
+      "平方得 $x_k^2-x_{k-1}^2=6x_{k-1}+9$，累加至 $k=2007$，得到所求普通和为 $(x_{2007}^2-18063)/6$。",
+      "归纳可知 $x_k/3$ 为与 $k$ 同奇偶的整数，因此 $x_{2007}$ 为三的奇倍数。其平方最接近 $18063$ 的是 $135^2=18225$，邻近的 $129,141$ 均更远，所以绝对和至少为 $27$。",
+      "取前四十五项 $x_k=3k$，之后偶数项 $-138$、奇数项 $135$，即可满足递推并达到该下界。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2006I/problem/15",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Discrete extrema & constructions",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

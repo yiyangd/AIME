@@ -1,0 +1,21 @@
+sources/raw/
+sources/records/
+sources/assets/
+sources_*.html
+node_modules/
+.astro/
+web/dist/
+tmp/
+*.pyc
+__pycache__/
+.DS_Store
+output/qa/rendered/
+# Private source snapshots/evidence are never public repository inputs.
+/sources/*
+!/sources/README-audit.md
+!/sources/inventory.json
+!/sources/fetch_manifest.json
+!/sources/asset_manifest.json
+/debug.log
+/output/release/
+/output/qa/publish-auth-probe.json

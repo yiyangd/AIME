@@ -1,0 +1,975 @@
+{
+  "subtype_id": "GE10",
+  "introduction_en": "Choose the solid model before computing: similarity controls scale, a perpendicular section controls height, and coordinates control clipping. Surface area, volume and surface path length require different decompositions. Every additive calculation must respect overlap and newly created faces.",
+  "introduction_zh": "先确定立体模型，再计算：相似控制缩放，垂直截面控制高度，坐标控制截割。表面积、体积与表面路径需使用不同分解；相加之前必须核实重叠及新产生的面。",
+  "prerequisites": [
+    "GE03",
+    "GE07"
+  ],
+  "methods": [
+    {
+      "method_id": "GE10-M01",
+      "title_en": "Similarity has different area and volume exponents",
+      "title_zh": "相似的面积与体积具有不同指数",
+      "steps_en": [
+        "Identify a common linear scale $t$ between corresponding solids.",
+        "Use area scale $t^2$ and volume scale $|t|^3$; for a complementary piece subtract from the whole.",
+        "Distinguish inherited paint from a newly cut face, and check $0<t<1$ for a true subdivision."
+      ],
+      "steps_zh": [
+        "确定对应立体的线性相似比 $t$。",
+        "面积比为 $t^2$，体积比为 $|t|^3$；补块须从整体相减。",
+        "区分原有油漆与新切面，真正分割须满足 $0<t<1$。"
+      ],
+      "example_en": "A cone of height $8$ contains liquid to depth $6$ with its apex down. After reversal, find the liquid depth.",
+      "example_zh": "高 $8$ 的圆锥尖朝下时液深为 $6$，反转后求液深。",
+      "solution_en": [
+        "The liquid fraction is $(6/8)^3=27/64$.",
+        "After reversal the empty apex cone occupies $37/64$ of the volume, so its height is $8\\sqrt[3]{37/64}=2\\sqrt[3]{37}$.",
+        "The liquid depth is $8-2\\sqrt[3]{37}$. The positive depth and complementary fractions check the model."
+      ],
+      "solution_zh": [
+        "液体体积占比为 $(6/8)^3=27/64$。",
+        "反转后顶端空圆锥占 $37/64$，其高为 $8\\sqrt[3]{37/64}=2\\sqrt[3]{37}$。",
+        "液深为 $8-2\\sqrt[3]{37}$，其为正且两部分体积互补。"
+      ],
+      "tip_en": "A fresh cut surface carries no original paint.",
+      "tip_zh": "新切面没有原来的油漆。",
+      "question_ids": [
+        "AIME-2000-I-Q08",
+        "AIME-2003-II-Q04",
+        "AIME-2004-I-Q11"
+      ],
+      "prerequisites": [
+        "GE01"
+      ],
+      "extensions_en": [
+        "For a tetrahedron with centroid $G$, the opposite face centroid is $G-(A-G)/3$; the four face centroids form a tetrahedron of volume $1/27$ of the original."
+      ],
+      "extensions_zh": [
+        "四面体重心为 $G$ 时，顶点 $A$ 对面重心为 $G-(A-G)/3$；四个面重心形成的四面体体积为原来的 $1/27$。"
+      ]
+    },
+    {
+      "method_id": "GE10-M02",
+      "title_en": "Recursive face counts require non-overlap certification",
+      "title_zh": "递归面数需要不重叠证明",
+      "steps_en": [
+        "Track the number of exposed faces and their common linear scale at each stage.",
+        "Multiply the number of newly attached copies by the cube of their scale, forming an exact increment sequence.",
+        "Before summing, prove distinct attachments have disjoint interiors and the counted faces remain exposed."
+      ],
+      "steps_zh": [
+        "逐阶段记录外露面数及其共同线性尺度。",
+        "新附加副本数乘以尺度立方，得到精确体积增量数列。",
+        "相加之前，先证明各附加块内部不交，所计表面仍然外露。"
+      ],
+      "example_en": "A unit-volume tetrahedron has one outward half-scale tetrahedron attached to each of its four faces. Assume these four attached interiors are disjoint. Find the new volume.",
+      "example_zh": "体积一的四面体在四个面各向外附加一个半尺度四面体，已知四个附加块内部互不相交，求新体积。",
+      "solution_en": [
+        "Each attached tetrahedron has volume $(1/2)^3=1/8$.",
+        "There are four attachments, so the volume increment is $4/8=1/2$.",
+        "The new volume is $3/2$. This addition is valid precisely because the interiors are disjoint."
+      ],
+      "solution_zh": [
+        "每个附加四面体体积为 $(1/2)^3=1/8$。",
+        "四块带来增量 $4/8=1/2$。",
+        "新体积为 $3/2$，相加成立的关键是各块内部不交。"
+      ],
+      "tip_en": "A plausible face recursion can fail after self-intersections; do not extend it without proof.",
+      "tip_zh": "发生自交后，貌似合理的面数递推也可能失效，不能无证明推广。",
+      "question_ids": [
+        "AIME-2001-II-Q12"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [
+        "For convex polyhedra, separating-axis tests use face normals and cross products of edge directions. A disjoint projection interval proves interior separation; exact rational coordinates prevent numerical ambiguity at boundary contacts. For repeated attachments, also test final boundary faces for hidden positive-area overlap."
+      ],
+      "extensions_zh": [
+        "凸多面体的分离轴可取各面法向及两棱方向叉积。投影区间内部不交即可证明内部隔离；使用精确有理坐标可避免边界接触的浮点歧义。递归附加还需检验最终表面是否存在隐藏的正面积重叠。"
+      ]
+    },
+    {
+      "method_id": "GE10-M03",
+      "title_en": "Coordinate planes recover solid geometry and exposed surfaces",
+      "title_zh": "坐标平面重建立体几何与外露表面",
+      "steps_en": [
+        "Place known faces in coordinate planes and translate planarity into linear equations.",
+        "Use equal-distance subtraction or a linear combination of squared distances to cancel unknown coordinates.",
+        "For a drilled solid, split surface area into retained exterior faces and new tunnel-wall polygons; count both separately."
+      ],
+      "steps_zh": [
+        "将已知面放在坐标面内，把共面条件写成线性方程。",
+        "通过等距相减或距离平方线性组合消去未知坐标。",
+        "对钻孔立体，把表面积分为保留外表面及新隧道壁多边形，分别计数。"
+      ],
+      "example_en": "In a cube with vertex $A=(0,0,0)$, let $B,C,D$ be its three neighbors and $G$ the opposite vertex. If $PB^2+PC^2+PD^2-PG^2=50$, find $PA$.",
+      "example_zh": "立方体顶点 $A=(0,0,0)$，$B,C,D$ 为三个邻点，$G$ 为对顶点。若 $PB^2+PC^2+PD^2-PG^2=50$，求 $PA$。",
+      "solution_en": [
+        "Write neighbors as $(s,0,0),(0,s,0),(0,0,s)$, opposite vertex $(s,s,s)$, and $P=(x,y,z)$.",
+        "Expanding the four squared distances cancels all linear terms and all $s^2$ terms, leaving $2(x^2+y^2+z^2)=50$.",
+        "Therefore $PA^2=25$ and $PA=5$, independently of cube side length."
+      ],
+      "solution_zh": [
+        "把三邻点写为 $(s,0,0),(0,s,0),(0,0,s)$，对顶点为 $(s,s,s)$，并设 $P=(x,y,z)$。",
+        "展开四个距离平方，线性项与全部 $s^2$ 项消去，得 $2(x^2+y^2+z^2)=50$。",
+        "因此 $PA=5$，与立方体棱长无关。"
+      ],
+      "tip_en": "Distance to a filled face equals distance to its plane only when the perpendicular foot lies in the face.",
+      "tip_zh": "只有垂足在面内时，到填满面的距离才等于到所在平面的距离。",
+      "question_ids": [
+        "AIME-2001-II-Q15",
+        "AIME-2002-I-Q15",
+        "AIME-2021-I-Q06",
+        "AIME-2026-II-Q12"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [
+        "A tunnel bounded by planes parallel to a cube diagonal can meet each cube face in different polygons. Solve each plane–face intersection before subtracting exterior openings or adding wall areas.",
+        "If a tetrahedron has two faces with exceptional edge length $2a$ and two with exceptional length $2b$, the exceptional edges must be opposite: adjacent exceptional edges would belong to one face together. With four equal cross edges $L$, use vertices $(\\pm a,0,h),(0,\\pm b,0)$, where $h^2=L^2-a^2-b^2$. This differs from a tetrahedron whose three opposite-edge pairs are equal."
+      ],
+      "extensions_zh": [
+        "由平行于立方体体对角线的平面围成的隧道，可能在不同立方体面上截出不同多边形。必须先求各平面与面的交线，才能扣除外部开口并加入隧道壁面积。",
+        "若四面体两面含特殊棱长 $2a$，另两面含特殊棱长 $2b$，两特殊棱必为对棱；若相邻，它们会同时出现在某一面。其余四棱均为 $L$ 时，可取顶点 $(\\pm a,0,h),(0,\\pm b,0)$，其中 $h^2=L^2-a^2-b^2$。此模型不同于三组对棱各自相等的四面体。"
+      ]
+    },
+    {
+      "method_id": "GE10-M04",
+      "title_en": "Cube-vertex distances have only three types",
+      "title_zh": "立方体顶点距离只有三类",
+      "steps_en": [
+        "Normalize the cube side to $s$; vertex-pair squared distances are $s^2,2s^2,3s^2$.",
+        "Use adjacency and opposite-vertex constraints to reject impossible triples of distance types.",
+        "Count triangles by their squared-side patterns and check their counts against $\\binom83$."
+      ],
+      "steps_zh": [
+        "设立方体棱长为 $s$，顶点间距离平方仅为 $s^2,2s^2,3s^2$。",
+        "利用邻接与唯一对顶点关系排除不可能的三边类别。",
+        "按边长平方型统计三角形，并与 $\\binom83$ 核对总数。"
+      ],
+      "example_en": "Three mutually equidistant cube vertices are distance $6$ apart. Find the cube surface area.",
+      "example_zh": "立方体三个顶点两两距离都为 $6$，求立方体表面积。",
+      "solution_en": [
+        "Three pairwise edges cannot form a triangle in the bipartite cube graph. Three pairwise space diagonals are impossible because each vertex has only one opposite.",
+        "Thus the three equal lengths are face diagonals, so $2s^2=36$.",
+        "The surface area is $6s^2=108$."
+      ],
+      "solution_zh": [
+        "立方体图为二分图，三条棱不能成三角形；每顶点只有唯一对顶点，三条体对角线也不可能两两连接。",
+        "所以这三条等长线段为面对角线，$2s^2=36$。",
+        "表面积为 $6s^2=108$。"
+      ],
+      "tip_en": "An equilateral vertex triple is not a face triangle.",
+      "tip_zh": "顶点组成的等边三角形不在某一个正方形面内。",
+      "question_ids": [
+        "AIME-2002-II-Q02",
+        "AIME-2003-I-Q06"
+      ],
+      "prerequisites": [
+        "CO06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M05",
+      "title_en": "Rounded boxes decompose by the nearest feature",
+      "title_zh": "圆角长方体按最近特征分解",
+      "steps_en": [
+        "Separate the original box, face slabs, edge quarter-cylinders and corner sphere octants.",
+        "Group congruent fractional pieces before evaluating their volumes.",
+        "Use the nearest-feature partition to justify disjoint interiors and complete coverage."
+      ],
+      "steps_zh": [
+        "分成原长方体、面上薄层、棱旁四分之一圆柱及顶点八分之一球。",
+        "先合并全等的分数块，再计算体积。",
+        "按最近特征划分可证明各块内部不交且完整覆盖。"
+      ],
+      "example_en": "Find the volume of all points at distance at most one from a solid $2\\times2\\times3$ box.",
+      "example_zh": "求距实心 $2\\times2\\times3$ 长方体不超过一的所有点所成区域体积。",
+      "solution_en": [
+        "The box contributes $12$. Face slabs contribute $2(4+6+6)=32$.",
+        "The twelve quarter-cylinders combine into axial length $2+2+3=7$, contributing $7\\pi$.",
+        "The eight octants form one unit sphere, adding $4\\pi/3$. Total volume is $44+25\\pi/3$."
+      ],
+      "solution_zh": [
+        "原长方体贡献 $12$，面上薄层贡献 $2(4+6+6)=32$。",
+        "十二个四分之一圆柱合并的轴长为 $2+2+3=7$，贡献 $7\\pi$。",
+        "八个八分之一球合成单位球，贡献 $4\\pi/3$，总体积为 $44+25\\pi/3$。"
+      ],
+      "tip_en": "Adding a full radius to each box dimension would incorrectly replace curved corners by square ones.",
+      "tip_zh": "直接把各边长加上两倍半径，会错误地把曲面角部换成方角。",
+      "question_ids": [
+        "AIME-2003-I-Q05"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M06",
+      "title_en": "An affine height averages to its value at the base centroid",
+      "title_zh": "仿射高度的平均值等于底面重心处高度",
+      "steps_en": [
+        "Write the upper-minus-lower plane separation as an affine height $h(x,y)$.",
+        "On a centrally symmetric base, pair opposite points: their heights sum to twice the central height.",
+        "Multiply base area by this average height, checking the height is nonnegative throughout."
+      ],
+      "steps_zh": [
+        "将上下平面之差写为仿射高度 $h(x,y)$。",
+        "在中心对称底面上配对相反点，其高度和为中心高度的两倍。",
+        "底面积乘平均高度，并检查高度在整个底面非负。"
+      ],
+      "example_en": "Above the disk $x^2+y^2\\le4$, a solid lies between $z=0$ and $z=3+x$. Find its volume.",
+      "example_zh": "立体位于圆盘 $x^2+y^2\\le4$ 上方、$z=0$ 与 $z=3+x$ 之间，求体积。",
+      "solution_en": [
+        "The height is nonnegative because $-2\\le x\\le2$, so $1\\le3+x\\le5$.",
+        "Opposite disk points have heights $3+x$ and $3-x$, averaging to $3$.",
+        "The disk area is $4\\pi$, so volume is $12\\pi$."
+      ],
+      "solution_zh": [
+        "由于 $-2\\le x\\le2$，高度介于 $1$ 与 $5$，始终非负。",
+        "相反圆盘点的高度为 $3+x,3-x$，平均值为 $3$。",
+        "底面积为 $4\\pi$，所以体积为 $12\\pi$。"
+      ],
+      "tip_en": "If height changes sign, the desired solid needs a separate region split.",
+      "tip_zh": "若高度变号，所求立体必须另行分区。",
+      "question_ids": [
+        "AIME-2003-II-Q05"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M07",
+      "title_en": "Visibility and paint depend on a cube cell’s boundary position",
+      "title_zh": "可见性与油漆取决于单位格的边界位置",
+      "steps_en": [
+        "Encode whether a cell touches each designated outer face.",
+        "Count hidden cells with shifted dimensions, such as $(p-1)(q-1)(r-1)$ for three adjacent visible faces.",
+        "For exposed or unpainted face pairs, classify corner, edge, face-interior and solid-interior positions before counting orientations."
+      ],
+      "steps_zh": [
+        "记录单位格是否接触各指定外表面。",
+        "用平移后的尺寸计隐藏格，例如三个相邻可见面对应 $(p-1)(q-1)(r-1)$。",
+        "计外露或未染面组合时，先按角、棱、面内及体内位置分类，再计朝向。"
+      ],
+      "example_en": "A $3\\times4\\times5$ block of unit cubes is viewed with three adjacent faces visible. How many cubes touch none of those faces?",
+      "example_zh": "从三个相邻面观察 $3\\times4\\times5$ 单位立方体块，有多少小立方体完全不接触这些面？",
+      "solution_en": [
+        "In each coordinate direction exclude the first layer touching the corresponding visible face.",
+        "The remaining index choices are $2,3,4$ independently.",
+        "Thus the hidden count is $2\\cdot3\\cdot4=24$. This is different from removing all six outer layers."
+      ],
+      "solution_zh": [
+        "每个坐标方向排除与相应可见面相接的首层。",
+        "三个方向独立剩余 $2,3,4$ 个指标。",
+        "所以隐藏格数为 $24$；这不同于移除全部六个外表面层。"
+      ],
+      "tip_en": "Visible from three faces does not mean exposed on any of six faces.",
+      "tip_zh": "从三个面可见，不等于是否接触六个表面中的任意一个。",
+      "question_ids": [
+        "AIME-2004-II-Q03",
+        "AIME-2005-I-Q09"
+      ],
+      "prerequisites": [
+        "NT05",
+        "PS01"
+      ],
+      "extensions_en": [
+        "Two adjacent marked cube faces meet along one of twelve equally likely edges. To keep both inward, count unordered inward-face pairs minus opposite-face pairs. For a corner, edge position and face center these counts are $\\binom32=3$, $\\binom42-1=5$ and $\\binom52-2=8$, respectively, each out of twelve."
+      ],
+      "extensions_zh": [
+        "立方体两个相邻标记面交于十二条等可能棱之一。要使两面均朝内，可计向内面的无序二元组，再扣除对面组合。大立方体角格、棱格、面心格的合法数分别为 $\\binom32=3,\\binom42-1=5,\\binom52-2=8$，总朝向类别均为十二。"
+      ]
+    },
+    {
+      "method_id": "GE10-M08",
+      "title_en": "Develop curved surfaces before measuring paths or rolling",
+      "title_zh": "测量路径或滚动前先展开曲面",
+      "steps_en": [
+        "A cylinder develops to a rectangle; a cone of slant height $\\ell$ and base radius $r$ develops to angle $2\\pi r/\\ell$.",
+        "Taut geodesics become straight lines in a valid development; compare angular lifts or winding classes.",
+        "For rolling, equate no-slip arc lengths and then recover the desired height or length.",
+        "At a tangent departure from a cylinder, preserve the developed line’s pitch in the free segment."
+      ],
+      "steps_zh": [
+        "圆柱展开为矩形；母线长 $\\ell$、底半径 $r$ 的圆锥展开角为 $2\\pi r/\\ell$。",
+        "绷紧最短路径在合法展开中成为直线，并须比较绕行或角度提升类别。",
+        "对无滑动滚动令对应弧长相等，再恢复目标高度或长度。",
+        "从圆柱相切离开的自由线段，须保持展开直线的坡度。"
+      ],
+      "example_en": "A cone has slant height $10$ and base radius $5$. Two surface points lie three and four units from its apex on opposite generators. Find the shortest surface distance.",
+      "example_zh": "圆锥母线长 $10$、底半径 $5$。两表面点位于相对母线上，距顶点分别为三与四，求最短表面距离。",
+      "solution_en": [
+        "The developed sector angle is $2\\pi(5/10)=\\pi$. Opposite generators differ by half this, $\\pi/2$.",
+        "The developed points have radial lengths three and four with a right included angle, so their straight separation is five.",
+        "The straight segment stays within the unfolded sector; other lifts have no smaller angular separation. Thus the shortest surface path is $5$."
+      ],
+      "solution_zh": [
+        "展开扇形角为 $2\\pi(5/10)=\\pi$，相对母线的展开夹角为其一半 $\\pi/2$。",
+        "展开后两点径长三、四，夹直角，所以直线距离为五。",
+        "线段在展开扇形内，其他角度提升不可能有更小夹角，故最短表面距离为 $5$。"
+      ],
+      "tip_en": "A planar angle between generators is not generally their developed angle.",
+      "tip_zh": "母线的空间角通常不等于展开后的角。",
+      "question_ids": [
+        "AIME-2004-I-Q14",
+        "AIME-2004-II-Q11",
+        "AIME-2008-I-Q05"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [
+        "For a rolling cone completing one circuit about its fixed vertex, the contact travel is $2\\pi\\ell$, equal to the number of axial spins times $2\\pi r$. For a cylinder rope, the free tangent’s horizontal length is $\\sqrt{d^2-R^2}$; use the common length-to-horizontal-projection ratio."
+      ],
+      "extensions_zh": [
+        "圆锥绕固定顶点滚完一圈，接触路程为 $2\\pi\\ell$，等于轴向自转圈数乘 $2\\pi r$。圆柱绳索自由切线的水平长度为 $\\sqrt{d^2-R^2}$，再用共同的实际长度与水平投影比。"
+      ]
+    },
+    {
+      "method_id": "GE10-M09",
+      "title_en": "Find the perpendicular height before using a solid-volume formula",
+      "title_zh": "套用立体体积公式前先求垂直高度",
+      "steps_en": [
+        "Distinguish edge length, face slant height and perpendicular solid height.",
+        "Use a right section, base circumradius or explicit center coordinates to recover that height.",
+        "Apply $V=Kh/3$ for a pyramid, or a dimension product for a box; only then simplify or optimize."
+      ],
+      "steps_zh": [
+        "区分棱长、面上斜高及立体的垂直高度。",
+        "用直角截面、底面外接圆半径或明确圆心坐标求垂直高。",
+        "棱锥用 $V=Kh/3$，长方体用三维乘积；最后再化简或优化。"
+      ],
+      "example_en": "A square pyramid has base edge $6$ and face slant height $5$. Find its volume.",
+      "example_zh": "正四棱锥底边为 $6$，面斜高为 $5$，求体积。",
+      "solution_en": [
+        "The base apothem is $3$. The slant-height section gives vertical height $h=\\sqrt{5^2-3^2}=4$.",
+        "The base area is $36$, so volume is $36\\cdot4/3=48$.",
+        "Using the slant height directly would give the wrong volume; the right section checks that the height is perpendicular."
+      ],
+      "solution_zh": [
+        "底面边心距为三，斜高截面给出垂直高 $h=\\sqrt{5^2-3^2}=4$。",
+        "底面积为 $36$，故体积为 $36\\cdot4/3=48$。",
+        "直接使用斜高会算错体积；直角截面核实了高度的垂直性。"
+      ],
+      "tip_en": "Equal lateral edges put the apex over the base circumcenter, not necessarily its centroid.",
+      "tip_zh": "侧棱相等使顶点在底面外心上方，不一定在重心上方。",
+      "question_ids": [
+        "AIME-2005-II-Q10",
+        "AIME-2008-II-Q03",
+        "AIME-2012-II-Q05",
+        "AIME-2017-I-Q04",
+        "AIME-2022-II-Q03"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE05"
+      ],
+      "extensions_en": [
+        "For the regular octahedron with axial vertices $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$, two square pyramids give volume $4/3$. Its face centers are $(\\pm1/3,\\pm1/3,\\pm1/3)$, a cube of side $2/3$.",
+        "If box cuts preserve a fixed sum of the remaining dimensions, AM–GM bounds the volume; confirm the equal-dimension candidate uses an allowed integral number of cuts."
+      ],
+      "extensions_zh": [
+        "轴上顶点为 $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$ 的正八面体，可由两个正四棱锥求得体积 $4/3$。各面重心为 $(\\pm1/3,\\pm1/3,\\pm1/3)$，形成边长 $2/3$ 的立方体。",
+        "若切割长方体后剩余三维和固定，可由均值不等式限制体积；还须确认等边长候选对应合法的整数切片数。"
+      ]
+    },
+    {
+      "method_id": "GE10-M10",
+      "title_en": "Planar section area is projected area divided by a cosine",
+      "title_zh": "平面截面积等于投影面积除以余弦",
+      "steps_en": [
+        "Find the actual section polygon by intersecting the cutting plane with solid edges or curved boundaries.",
+        "Project to a convenient coordinate plane, retaining exactly the allowed projected region.",
+        "If the section plane is $z=px+qy+c$, multiply projected area by $\\sqrt{1+p^2+q^2}$."
+      ],
+      "steps_zh": [
+        "将截平面与立体各棱或曲边相交，确定实际截面多边形。",
+        "向方便的坐标面投影，精确保留合法投影区域。",
+        "若截平面为 $z=px+qy+c$，则投影面积乘 $\\sqrt{1+p^2+q^2}$。"
+      ],
+      "example_en": "A plane $z=x+y$ cuts the vertical prism over the unit square, with enough height to contain the entire patch. Find the patch area.",
+      "example_zh": "平面 $z=x+y$ 截过以单位正方形为底的直棱柱，棱柱高度足以包含整片截面，求截片面积。",
+      "solution_en": [
+        "The four section vertices are $(0,0,0),(1,0,1),(1,1,2),(0,1,1)$.",
+        "Their horizontal projection is the unit square of area one. Here $p=q=1$.",
+        "The section area is $1\\sqrt{1+1+1}=\\sqrt3$. The same value follows from the cross product of adjacent section edges."
+      ],
+      "solution_zh": [
+        "四个截面顶点为 $(0,0,0),(1,0,1),(1,1,2),(0,1,1)$。",
+        "水平投影为面积一的单位正方形，且 $p=q=1$。",
+        "实际面积为 $\\sqrt{1+1+1}=\\sqrt3$，亦可由相邻截面边叉积核实。"
+      ],
+      "tip_en": "An infinite-plane ellipse is not always the cylinder’s bounded section: top and bottom caps may truncate it.",
+      "tip_zh": "无限平面与圆柱面的椭圆，不一定就是有限圆柱截面；上下底面可能将它截断。",
+      "question_ids": [
+        "AIME-2007-I-Q13",
+        "AIME-2015-I-Q15"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE02"
+      ],
+      "extensions_en": [
+        "A tilted plane through a cylinder center can project to a disk strip. Compute the strip by subtracting circular caps, then apply the tilt factor; do not replace the strip by a full ellipse."
+      ],
+      "extensions_zh": [
+        "过圆柱中心的斜平面可能投影为圆盘条带，应先扣除圆弓形计算条带，再乘倾斜系数，不可直接当成完整椭圆。"
+      ]
+    },
+    {
+      "method_id": "GE10-M11",
+      "title_en": "Fold rigid panels by matching their projected seam points",
+      "title_zh": "通过拼缝投影相合求刚性侧板折叠",
+      "steps_en": [
+        "Choose coordinates in the original sheet and locate the hinge lines and cut vertices.",
+        "After folding, distances to a hinge line remain fixed; symmetry determines which seam points must coincide.",
+        "Split the invariant panel distance into horizontal and vertical components and solve for height."
+      ],
+      "steps_zh": [
+        "在原纸面取坐标，定位折线与切口顶点。",
+        "折叠后到铰链直线的距离保持不变，对称性确定必须重合的拼缝点。",
+        "把不变的侧板距离分成水平与竖直分量，求高度。"
+      ],
+      "example_en": "Two perpendicular hinge lines are $x=3,y=3$. Points $(2,0)$ and $(0,2)$ on their respective symmetric panels are folded up and joined above $(2,2)$. Find the common height.",
+      "example_zh": "两条垂直折线为 $x=3,y=3$。对称侧板上的点 $(2,0),(0,2)$ 折起后在 $(2,2)$ 正上方拼合，求高度。",
+      "solution_en": [
+        "The point $(2,0)$ is distance three from its hinge $y=3$. Its perpendicular hinge foot is $(2,3)$.",
+        "After joining, its horizontal separation from that foot is one. Rigid folding keeps the total separation three.",
+        "Thus $h^2+1^2=3^2$, giving $h=2\\sqrt2$. The other panel gives the same height by reflection."
+      ],
+      "solution_zh": [
+        "点 $(2,0)$ 到折线 $y=3$ 的距离为三，垂足为 $(2,3)$。",
+        "拼合后其到垂足的水平距离为一，刚性折叠使总距离仍为三。",
+        "故 $h^2+1^2=3^2$，得 $h=2\\sqrt2$；另一侧板由对称给出同高。"
+      ],
+      "tip_en": "Folding a tray does not imply its walls become vertical.",
+      "tip_zh": "托盘折起后，其侧壁不一定竖直。",
+      "question_ids": [
+        "AIME-2008-I-Q15"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M12",
+      "title_en": "Revolve a triangle as two cones sharing a base",
+      "title_zh": "将三角形旋转分成共底双圆锥",
+      "steps_en": [
+        "Resolve all planar inequalities to locate the triangular region and the rotation axis.",
+        "Project the off-axis vertex perpendicularly and check whether its foot lies on the base segment.",
+        "If the foot is internal, the two cones share radius equal to that perpendicular distance; their heights sum to the base length."
+      ],
+      "steps_zh": [
+        "先解平面不等式，确定三角形区域及旋转轴。",
+        "从轴外顶点作垂足，并检查垂足是否在底边线段内。",
+        "若垂足在内部，两圆锥共底半径为该垂距，其高之和为底边长。"
+      ],
+      "example_en": "Revolve triangle $A=(-2,0),B=(4,0),C=(1,3)$ about the $x$ axis. Find its volume.",
+      "example_zh": "将三角形 $A=(-2,0),B=(4,0),C=(1,3)$ 绕 $x$ 轴旋转，求体积。",
+      "solution_en": [
+        "The perpendicular foot of $C$ is $(1,0)$, inside $AB$. Both cone radii are three.",
+        "The left and right heights are three and three, summing to six.",
+        "Total volume is $\\pi\\cdot3^2(3+3)/3=18\\pi$. Their interiors meet only at the common base."
+      ],
+      "solution_zh": [
+        "$C$ 的垂足为 $(1,0)$，位于 $AB$ 内，两圆锥半径均为三。",
+        "左右高分别为三，总高为六。",
+        "总体积为 $\\pi\\cdot3^2(3+3)/3=18\\pi$；两块仅在共底边界接触。"
+      ],
+      "tip_en": "If the foot is outside, adding two cones double-counts; a difference model is required.",
+      "tip_zh": "若垂足在外，相加会重复计算，应改用圆锥差。",
+      "question_ids": [
+        "AIME-2010-I-Q11"
+      ],
+      "prerequisites": [
+        "AL06",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M13",
+      "title_en": "Clip a first-octant tetrahedron by box constraints",
+      "title_zh": "用长方体限制截割第一卦限四面体",
+      "steps_en": [
+        "Write the cutting plane in edge coordinates and choose the desired half-space.",
+        "Use the first-octant simplex volume $abc/6$ from its three intercepts.",
+        "Subtract portions beyond the box faces, using translated intercepts and inclusion–exclusion when needed.",
+        "For a tilted immersed cube, derive the height functional from orthonormal edge projections before clipping."
+      ],
+      "steps_zh": [
+        "在棱坐标中写出截平面，并选择目标半空间。",
+        "由三轴截距 $a,b,c$ 使用第一卦限四面体体积 $abc/6$。",
+        "扣除超出长方体各面的部分，使用平移截距，必要时作容斥。",
+        "倾斜浸水立方体应先由正交棱投影求出高度函数，再进行截割。"
+      ],
+      "example_en": "Find the volume in $[0,2]^3$ satisfying $x+y+z<3$.",
+      "example_zh": "求 $[0,2]^3$ 内满足 $x+y+z<3$ 的部分体积。",
+      "solution_en": [
+        "The full first-octant tetrahedron has intercepts three, so volume $27/6$.",
+        "Beyond each of $x=2,y=2,z=2$, translate that coordinate by two; the excluded simplex has intercepts one and volume $1/6$.",
+        "No point can exceed two coordinates of two while their sum is below three, so there are no overlapping exclusions. Volume is $27/6-3/6=4$."
+      ],
+      "solution_zh": [
+        "完整第一卦限四面体三截距均为三，体积为 $27/6$。",
+        "超出 $x=2,y=2,z=2$ 的每块，分别平移相应坐标二，得到截距均一、体积 $1/6$ 的四面体。",
+        "坐标和小于三时，不可能有两个坐标同时大于二，因此排除块不重叠，体积为 $4$。"
+      ],
+      "tip_en": "Check every coordinate ceiling; not all three truncations necessarily occur.",
+      "tip_zh": "各坐标上界须分别检查，不一定三个方向都发生截割。",
+      "question_ids": [
+        "AIME-2012-I-Q08",
+        "AIME-2015-II-Q09",
+        "AIME-2023-II-Q14"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE03"
+      ],
+      "extensions_en": [
+        "For a cube with a body diagonal vertical, a near-corner horizontal section has equal edge intercepts and is equilateral. Verify those intercepts are below the edge length and that the submerged depth is below the container bottom."
+      ],
+      "extensions_zh": [
+        "立方体体对角线竖直时，靠近角的水平截面具有相等棱截距，为等边三角形。须检查截距小于棱长，并检查浸没深度小于容器深度。"
+      ]
+    },
+    {
+      "method_id": "GE10-M14",
+      "title_en": "Dihedral angles live in a perpendicular section",
+      "title_zh": "二面角应在垂直截面中测量",
+      "steps_en": [
+        "Locate the line where the two planes meet.",
+        "Choose one line in each plane perpendicular to that common line at the same point.",
+        "The angle between these section lines is the dihedral angle; use planar trigonometry to recover spatial height."
+      ],
+      "steps_zh": [
+        "找出两平面的公共交线。",
+        "在交线同一点，分别于两平面内作垂直交线的直线。",
+        "这两截线夹角才是二面角，再用平面三角法求空间高度。"
+      ],
+      "example_en": "A triangular base has altitude $4$ from vertex $A$ to side $UV$. A point $W$ is directly $h$ above $A$. If planes $AUV,WUV$ form $60^\\circ$, find $h$.",
+      "example_zh": "三角形底面中 $A$ 到边 $UV$ 的高为四，点 $W$ 位于 $A$ 正上方高 $h$ 处。若平面 $AUV,WUV$ 的二面角为 $60^\\circ$，求 $h$。",
+      "solution_en": [
+        "Let $M$ be the perpendicular foot from $A$ to $UV$. Since $AW$ is normal to the base, $WM$ is also perpendicular to $UV$.",
+        "The required section angle is $\\angle AMW=60^\\circ$. Triangle $AMW$ is right at $A$.",
+        "Thus $h=AM\\tan60^\\circ=4\\sqrt3$."
+      ],
+      "solution_zh": [
+        "令 $M$ 为 $A$ 到 $UV$ 的垂足；因 $AW$ 垂直底面，$WM$ 也垂直 $UV$。",
+        "所需截面角为 $\\angle AMW=60^\\circ$，而 $AMW$ 在 $A$ 为直角。",
+        "所以 $h=4\\tan60^\\circ=4\\sqrt3$。"
+      ],
+      "tip_en": "Two arbitrary lines in the planes do not measure their dihedral.",
+      "tip_zh": "分别取两平面内任意两条线，不能测得二面角。",
+      "question_ids": [
+        "AIME-2016-I-Q04",
+        "AIME-2016-II-Q14"
+      ],
+      "prerequisites": [
+        "GE03",
+        "AL08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M15",
+      "title_en": "Face diagonals determine a Gram volume",
+      "title_zh": "面对角线确定格拉姆体积",
+      "steps_en": [
+        "Choose generating edge vectors $u,v,w$ and use $|u\\pm v|^2$ to recover edge norms and dot products.",
+        "Form their Gram matrix, whose determinant equals squared parallelepiped volume.",
+        "Keep all feasible dot-product sign choices; the sign of the triple product of pairwise dots can change volume."
+      ],
+      "steps_zh": [
+        "取生成棱向量 $u,v,w$，用 $|u\\pm v|^2$ 求棱范数与点积。",
+        "组成格拉姆矩阵，其行列式等于平行六面体体积平方。",
+        "保留全部可行点积符号组合；三个两两点积之积的符号可能改变体积。"
+      ],
+      "example_en": "Unit vectors $u,v,w$ satisfy $u\\cdot v=u\\cdot w=v\\cdot w=1/2$. Find the parallelepiped volume.",
+      "example_zh": "单位向量 $u,v,w$ 的两两点积均为 $1/2$，求所生成平行六面体体积。",
+      "solution_en": [
+        "The Gram matrix has diagonal entries one and off-diagonal entries $1/2$.",
+        "Its determinant is $1-3(1/2)^2+2(1/2)^3=1/2$.",
+        "The volume is $1/\\sqrt2$. Positive determinant together with positive leading principal minors confirms a nondegenerate realization."
+      ],
+      "solution_zh": [
+        "格拉姆矩阵对角元均一，非对角元均 $1/2$。",
+        "行列式为 $1-3(1/2)^2+2(1/2)^3=1/2$。",
+        "体积为 $1/\\sqrt2$；各顺序主子式均正，确认存在非退化空间实现。"
+      ],
+      "tip_en": "An algebraic dot-product pattern needs a positive semidefinite Gram matrix to be geometrically feasible.",
+      "tip_zh": "代数点积模式需有半正定格拉姆矩阵，才能在几何上实现。",
+      "question_ids": [
+        "AIME-2023-I-Q13"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE10-M16",
+      "title_en": "Opposite equal edges embed a tetrahedron in a box",
+      "title_zh": "对棱相等可把四面体嵌入长方体",
+      "steps_en": [
+        "Use alternate vertices of a box so opposite tetrahedron edges are diagonals of corresponding box faces.",
+        "Solve the three pair-sum equations for squared box dimensions and require positivity.",
+        "Compute volume as one third of box volume; compute face area and use $3V=rS$ for an insphere."
+      ],
+      "steps_zh": [
+        "取长方体相间顶点，使四面体对棱成为相应长方体面的对角线。",
+        "解三组平方和方程求长方体边长平方，并要求均为正。",
+        "四面体体积为长方体的三分之一；求各面面积后，用 $3V=rS$ 求内切球。"
+      ],
+      "example_en": "A tetrahedron has opposite edges of lengths $\\sqrt{13},\\sqrt{20},5$. Find its volume.",
+      "example_zh": "四面体三组对棱长度分别为 $\\sqrt{13},\\sqrt{20},5$，求体积。",
+      "solution_en": [
+        "Let box dimensions be $a,b,c$. The equations are $a^2+b^2=13,a^2+c^2=20,b^2+c^2=25$.",
+        "Adding and subtracting yields $(a^2,b^2,c^2)=(4,9,16)$, so the dimensions are $2,3,4$.",
+        "The alternate-vertex tetrahedron has volume $abc/3=8$, obtainable from the edge-vector determinant."
+      ],
+      "solution_zh": [
+        "设长方体三边为 $a,b,c$，则 $a^2+b^2=13,a^2+c^2=20,b^2+c^2=25$。",
+        "相加相减得 $(a^2,b^2,c^2)=(4,9,16)$，所以三边为 $2,3,4$。",
+        "相间顶点四面体体积为 $abc/3=8$，也可由棱向量行列式核实。"
+      ],
+      "tip_en": "If exceptional edge lengths occur in pairs of faces, first establish which edges are opposite.",
+      "tip_zh": "若特殊棱长通过各面条件给出，应先确定哪些棱互为对棱。",
+      "question_ids": [
+        "AIME-2024-I-Q14"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ],
+      "extensions_en": [
+        "For face squared sides $A,B,C$, $16K^2=2(AB+BC+CA)-(A^2+B^2+C^2)$. When all four faces are congruent, total surface area is $4K$."
+      ],
+      "extensions_zh": [
+        "若一面的三边平方为 $A,B,C$，则 $16K^2=2(AB+BC+CA)-(A^2+B^2+C^2)$；四面全等时总表面积为 $4K$。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-I-Q08",
+    "AIME-2001-II-Q12",
+    "AIME-2001-II-Q15",
+    "AIME-2002-I-Q15",
+    "AIME-2002-II-Q02",
+    "AIME-2003-I-Q05",
+    "AIME-2003-I-Q06",
+    "AIME-2003-II-Q04",
+    "AIME-2003-II-Q05",
+    "AIME-2004-I-Q11",
+    "AIME-2004-I-Q14",
+    "AIME-2004-II-Q11",
+    "AIME-2005-II-Q10",
+    "AIME-2007-I-Q13",
+    "AIME-2008-I-Q05",
+    "AIME-2008-I-Q15",
+    "AIME-2010-I-Q11",
+    "AIME-2012-I-Q08",
+    "AIME-2012-II-Q05",
+    "AIME-2015-I-Q15",
+    "AIME-2015-II-Q09",
+    "AIME-2016-I-Q04",
+    "AIME-2017-I-Q04",
+    "AIME-2021-I-Q06",
+    "AIME-2023-I-Q13",
+    "AIME-2023-II-Q14",
+    "AIME-2024-I-Q14"
+  ],
+  "coverage_by_question": {
+    "AIME-2000-I-Q08": {
+      "method_ids": [
+        "GE10-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2003-II-Q04": {
+      "method_ids": [
+        "GE10-M01"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2004-I-Q11": {
+      "method_ids": [
+        "GE10-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2001-II-Q12": {
+      "method_ids": [
+        "GE10-M02"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2001-II-Q15": {
+      "method_ids": [
+        "GE10-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2002-I-Q15": {
+      "method_ids": [
+        "GE10-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2021-I-Q06": {
+      "method_ids": [
+        "GE10-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2026-II-Q12": {
+      "method_ids": [
+        "GE10-M03"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE09"
+      ]
+    },
+    "AIME-2002-II-Q02": {
+      "method_ids": [
+        "GE10-M04"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2003-I-Q06": {
+      "method_ids": [
+        "GE10-M04"
+      ],
+      "prerequisites": [
+        "CO06"
+      ]
+    },
+    "AIME-2003-I-Q05": {
+      "method_ids": [
+        "GE10-M05"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2003-II-Q05": {
+      "method_ids": [
+        "GE10-M06"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2004-II-Q03": {
+      "method_ids": [
+        "GE10-M07"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2005-I-Q09": {
+      "method_ids": [
+        "GE10-M07"
+      ],
+      "prerequisites": [
+        "PS01"
+      ]
+    },
+    "AIME-2004-I-Q14": {
+      "method_ids": [
+        "GE10-M08"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2004-II-Q11": {
+      "method_ids": [
+        "GE10-M08"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2008-I-Q05": {
+      "method_ids": [
+        "GE10-M08"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2005-II-Q10": {
+      "method_ids": [
+        "GE10-M09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2008-II-Q03": {
+      "method_ids": [
+        "GE10-M09"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2012-II-Q05": {
+      "method_ids": [
+        "GE10-M09"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2017-I-Q04": {
+      "method_ids": [
+        "GE10-M09"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE05"
+      ]
+    },
+    "AIME-2022-II-Q03": {
+      "method_ids": [
+        "GE10-M09"
+      ],
+      "prerequisites": [
+        "GE09"
+      ]
+    },
+    "AIME-2007-I-Q13": {
+      "method_ids": [
+        "GE10-M10"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2015-I-Q15": {
+      "method_ids": [
+        "GE10-M10"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2008-I-Q15": {
+      "method_ids": [
+        "GE10-M11"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07"
+      ]
+    },
+    "AIME-2010-I-Q11": {
+      "method_ids": [
+        "GE10-M12"
+      ],
+      "prerequisites": [
+        "AL06",
+        "GE07"
+      ]
+    },
+    "AIME-2012-I-Q08": {
+      "method_ids": [
+        "GE10-M13"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE07"
+      ]
+    },
+    "AIME-2015-II-Q09": {
+      "method_ids": [
+        "GE10-M13"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2023-II-Q14": {
+      "method_ids": [
+        "GE10-M13"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2016-I-Q04": {
+      "method_ids": [
+        "GE10-M14"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2016-II-Q14": {
+      "method_ids": [
+        "GE10-M14"
+      ],
+      "prerequisites": [
+        "AL08",
+        "GE09"
+      ]
+    },
+    "AIME-2023-I-Q13": {
+      "method_ids": [
+        "GE10-M15"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2024-I-Q14": {
+      "method_ids": [
+        "GE10-M16"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    }
+  },
+  "review": {
+    "author": "print_builder",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

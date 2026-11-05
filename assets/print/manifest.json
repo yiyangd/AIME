@@ -1,0 +1,5 @@
+{
+  "katex": "assets/print/katex",
+  "license": "assets/print/katex/LICENSE",
+  "purpose": "Local mathematical typesetting; no network dependency"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "family": "workbook",
+    "pdf_sha256": "ffa0140d21d184d610c1b2d7884ac3a806174618588966f940297f270cce85c8",
+    "layout_manifest_sha256": "0fd96603daba337d0a19e5f878a3b54186dbb3248dae9067b538570cb5bafde8",
+    "pdf_pages": 828,
+    "question_anchors": 810,
+    "method_anchors": 0,
+    "section_files": 44,
+    "passed": true
+  },
+  {
+    "family": "textbook",
+    "pdf_sha256": "b790376e6d4f195678edbc9f329fc5e9c76344d595acd98f87ae654f5c33fc33",
+    "layout_manifest_sha256": "e0aaf9763767a193a2cc5e86c00d59384d0b014d83a4c4ebf22b76da05dd37f5",
+    "pdf_pages": 897,
+    "question_anchors": 0,
+    "method_anchors": 399,
+    "section_files": 44,
+    "passed": true
+  },
+  {
+    "family": "solutions_en",
+    "pdf_sha256": "e665c9bb44d4cd05faa39a0c0ce028e2869253562ef5d636e9bc3e47012bcb53",
+    "layout_manifest_sha256": "4b58d46da3510520cffae8c9d7497f87917f1f769e32c6c03a1d88d722e914d8",
+    "pdf_pages": 830,
+    "question_anchors": 810,
+    "method_anchors": 0,
+    "section_files": 44,
+    "passed": true
+  },
+  {
+    "family": "solutions_zh",
+    "pdf_sha256": "d4283f2ba6bee581ce8f7bfc6e2802407cfed1594c7801ed66d7b741549e945c",
+    "layout_manifest_sha256": "2d3e2569628ef4633e97b852b61764dc884ea00ff4c3f7049bf97c76f8463437",
+    "pdf_pages": 828,
+    "question_anchors": 810,
+    "method_anchors": 0,
+    "section_files": 44,
+    "passed": true
+  }
+]

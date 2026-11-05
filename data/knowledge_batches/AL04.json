@@ -1,0 +1,671 @@
+{
+  "subtype_id": "AL04",
+  "introduction_en": "Take domains seriously, then let logarithms turn multiplication into addition or exponentials turn a shared exponent into one positive variable. Combine identities before solving, and distinguish existence from uniqueness.",
+  "introduction_zh": "先认真处理定义域，再用对数把乘法变为加法，或用指数把共同指数化为一个正变量。求解前先合并恒等式，并区分存在性与唯一性。",
+  "prerequisites": [
+    "AL01",
+    "AL02"
+  ],
+  "methods": [
+    {
+      "method_id": "AL04-M01",
+      "title_en": "Change base and combine powers before solving variables",
+      "title_zh": "求变量前先换底并合并幂",
+      "steps_en": [
+        "Use $\\log_a b=\\ln b/\\ln a$ with $a>0,a\\ne1,b>0$.",
+        "Use reciprocal logarithms and $c^{\\log_c d}=d$ to simplify the target directly.",
+        "Combine weighted log sums as a single product logarithm; retain positivity when extracting real powers."
+      ],
+      "steps_zh": [
+        "在 $a>0,a\\ne1,b>0$ 下使用 $\\log_a b=\\ln b/\\ln a$。",
+        "使用互反对数及 $c^{\\log_c d}=d$，直接化简目标。",
+        "把加权对数和合成乘积的对数；取实幂时保留正性。"
+      ],
+      "example_en": "Evaluate $(\\log_2 9)(\\log_3 4)$.",
+      "example_zh": "计算 $(\\log_2 9)(\\log_3 4)$。",
+      "solution_en": [
+        "Extract powers: $\\log_2 9=2\\log_2 3$ and $\\log_3 4=2\\log_3 2$.",
+        "Change of base gives $(\\log_2 3)(\\log_3 2)=1$.",
+        "The result is $4$. All logarithm bases and arguments are valid."
+      ],
+      "solution_zh": [
+        "提出幂：$\\log_2 9=2\\log_2 3,\\log_3 4=2\\log_3 2$。",
+        "换底得 $(\\log_2 3)(\\log_3 2)=1$。",
+        "结果为 $4$，各底数与真数均有效。"
+      ],
+      "tip_en": "A logarithm of a sum does not split into a sum of logarithms.",
+      "tip_zh": "和的对数不能拆为对数之和。",
+      "question_ids": [
+        "AIME-2000-II-Q01",
+        "AIME-2003-I-Q04",
+        "AIME-2006-II-Q02",
+        "AIME-2009-II-Q02",
+        "AIME-2015-II-Q04",
+        "AIME-2024-I-Q02",
+        "AIME-2002-II-Q03"
+      ],
+      "prerequisites": [
+        "AL01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M02",
+      "title_en": "Use logarithmic coordinates and a shared value",
+      "title_zh": "使用对数坐标与共同值",
+      "steps_en": [
+        "Choose one fixed base and replace positive variables by their logarithms.",
+        "Products and quotients become linear sums and differences; a common variable-base logarithm can be denoted by one shared value.",
+        "Add or subtract the resulting equations to eliminate repeated coordinates or a repeated exponential term.",
+        "Reconstruct positive original variables and verify every original base differs from one."
+      ],
+      "steps_zh": [
+        "选择统一底数，把正变量换为其对数。",
+        "乘除变为线性和差；变底对数的共同值可统一设为一个变量。",
+        "将所得方程相加或相减，消去重复坐标或共同指数项。",
+        "还原正的原变量，并检查每个原底数不为一。"
+      ],
+      "example_en": "Positive $x,y$ satisfy $\\log_2(xy)=5$ and $\\log_2(x/y)=1$. Find $x,y$.",
+      "example_zh": "正数 $x,y$ 满足 $\\log_2(xy)=5,\\log_2(x/y)=1$，求 $x,y$。",
+      "solution_en": [
+        "Put $u=\\log_2x,v=\\log_2y$. The equations become $u+v=5,u-v=1$.",
+        "Adding and subtracting gives $u=3,v=2$.",
+        "Hence $x=8,y=4$; their product and quotient are $32,2$ as required."
+      ],
+      "solution_zh": [
+        "令 $u=\\log_2x,v=\\log_2y$，方程化为 $u+v=5,u-v=1$。",
+        "相加与相减得 $u=3,v=2$。",
+        "故 $x=8,y=4$，积与商分别为 $32,2$，符合条件。"
+      ],
+      "tip_en": "The logarithmic variables may be negative even though the original variables are positive.",
+      "tip_zh": "原变量为正，对数变量仍可能为负。",
+      "question_ids": [
+        "AIME-2000-I-Q09",
+        "AIME-2002-I-Q06",
+        "AIME-2006-I-Q09",
+        "AIME-2010-II-Q05",
+        "AIME-2012-I-Q09",
+        "AIME-2016-II-Q03",
+        "AIME-2019-I-Q07",
+        "AIME-2019-II-Q06",
+        "AIME-2022-II-Q04",
+        "AIME-2024-II-Q04"
+      ],
+      "prerequisites": [
+        "AL01",
+        "AL02",
+        "NT01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M03",
+      "title_en": "Turn an exponential equation into a polynomial on a restricted range",
+      "title_zh": "把指数方程转为受限范围内的多项式",
+      "steps_en": [
+        "If all exponents are multiples of one expression, put $t=b^{cx}$ with the exact range $t>0$.",
+        "Solve or analyze the resulting polynomial; discard nonpositive roots before returning to $x$.",
+        "Use Vieta for a sum of logarithms or product of original variables, avoiding individual roots when possible.",
+        "For equations such as $x^y=y^x$, take logarithms or a positive real root only within the original positive domain."
+      ],
+      "steps_zh": [
+        "若所有指数均为某表达式的倍数，令 $t=b^{cx}$ 并明确范围 $t>0$。",
+        "求解或分析所得多项式，返回 $x$ 前剔除非正根。",
+        "对数和或原变量乘积可用韦达，尽量避免逐个求根。",
+        "对 $x^y=y^x$ 等式，只在原正性定义域内取对数或正实根。"
+      ],
+      "example_en": "Classify the number of real solutions to $4^x-a2^x+1=0$ as real $a$ varies.",
+      "example_zh": "按实参数 $a$ 分类 $4^x-a2^x+1=0$ 的实数解个数。",
+      "solution_en": [
+        "Put $t=2^x>0$. The equation is $t^2-at+1=0$.",
+        "Real roots require $|a|\\ge2$. Their product is one and sum is $a$, so they are positive exactly when $a\\ge2$.",
+        "At $a=2$ there is one root $t=1$, giving one real $x$; at $a>2$ there are two; for $a<2$ there are none."
+      ],
+      "solution_zh": [
+        "令 $t=2^x>0$，方程为 $t^2-at+1=0$。",
+        "实根要求 $|a|\\ge2$；根积为一、根和为 $a$，所以恰在 $a\\ge2$ 时为正。",
+        "$a=2$ 时只有根 $t=1$，对应一个实数 $x$；$a>2$ 时有两个；$a<2$ 时没有。"
+      ],
+      "tip_en": "A real polynomial root may lie outside the range of the exponential substitution.",
+      "tip_zh": "多项式的实根可能位于指数代换的值域之外。",
+      "question_ids": [
+        "AIME-2005-I-Q08",
+        "AIME-2005-II-Q05",
+        "AIME-2010-I-Q03",
+        "AIME-2018-I-Q05",
+        "AIME-2020-I-Q02",
+        "AIME-2023-I-Q02",
+        "AIME-2026-I-Q06"
+      ],
+      "prerequisites": [
+        "AL02",
+        "AL01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M04",
+      "title_en": "Undo nested logarithms and prove uniqueness monotonically",
+      "title_zh": "逐层还原嵌套对数，并用单调性证明唯一",
+      "steps_en": [
+        "Work from the outermost equation inward, recording positivity of every inner argument.",
+        "If the base is unknown, a reciprocal logarithm variable can turn the remaining relation into a scalar equation.",
+        "Compare monotonicity of the two sides to prove at most one admissible solution; then verify a candidate exactly.",
+        "For integer base exponents, reduce the result to prime-exponent or bounded divisor conditions."
+      ],
+      "steps_zh": [
+        "从最外层方程向内处理，记录每个内层真数的正性。",
+        "底数未知时，可用互反对数变量把剩余关系变成单变量方程。",
+        "比较两侧单调性，证明至多一个允许解，再精确验证候选。",
+        "若底数指数要求为整数，将结果化为质指数或有界约数条件。"
+      ],
+      "example_en": "Find the base $b>1$ for which $\\log_b(\\log_b16)=2$.",
+      "example_zh": "求使 $\\log_b(\\log_b16)=2$ 的底数 $b>1$。",
+      "solution_en": [
+        "Exponentiating the outer logarithm gives $\\log_b16=b^2$, or $\\ln16=b^2\\ln b$.",
+        "For $b>1$, both positive factors $b^2,\\ln b$ strictly increase, so their product strictly increases.",
+        "The value $b=2$ works because $4\\ln2=\\ln16$. Monotonicity proves it is unique, and the inner logarithm equals four and is positive."
+      ],
+      "solution_zh": [
+        "还原外层对数得 $\\log_b16=b^2$，即 $\\ln16=b^2\\ln b$。",
+        "当 $b>1$，正因子 $b^2,\\ln b$ 均严格增加，所以乘积严格增加。",
+        "$b=2$ 成立，因为 $4\\ln2=\\ln16$；单调性证明唯一，内层对数为正的四。"
+      ],
+      "tip_en": "Checking one guessed base establishes existence; monotonicity establishes uniqueness.",
+      "tip_zh": "验证猜到的底数只证明存在，单调性才证明唯一。",
+      "question_ids": [
+        "AIME-2013-II-Q02",
+        "AIME-2016-II-Q03",
+        "AIME-2017-I-Q14"
+      ],
+      "prerequisites": [
+        "AL07",
+        "NT01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M05",
+      "title_en": "Partition logarithmic floors at exact power thresholds",
+      "title_zh": "按精确幂门槛分割对数取整",
+      "steps_en": [
+        "Use $\\lfloor\\log_b t\\rfloor=k\\iff b^k\\le t<b^{k+1}$ for $b>1$.",
+        "For a floor in an exponent, partition the original variable into its unit intervals before evaluating its image.",
+        "Convert the problem into interval lengths, integer counts or a monotone threshold sum; preserve half-open endpoints.",
+        "At a proposed greatest integer, verify the neighboring integer and invoke monotonicity to exclude all later ones."
+      ],
+      "steps_zh": [
+        "当 $b>1$，使用 $\\lfloor\\log_b t\\rfloor=k\\iff b^k\\le t<b^{k+1}$。",
+        "指数中含取整时，先将原变量按单位区间分块，再求其像。",
+        "将题目化为区间长度、整数计数或单调门槛和，并保留半开端点。",
+        "拟定最大整数后，检验相邻整数，再用单调性排除其后全部整数。"
+      ],
+      "example_en": "Choose $x$ uniformly from $[1,4]$. Find the probability that $\\lfloor\\log_2(3x)\\rfloor-\\lfloor\\log_2x\\rfloor=1$.",
+      "example_zh": "从 $[1,4]$ 按长度均匀取 $x$，求 $\\lfloor\\log_2(3x)\\rfloor-\\lfloor\\log_2x\\rfloor=1$ 的概率。",
+      "solution_en": [
+        "On $[1,2)$ the second floor is zero. The first floor is one precisely on $[1,4/3)$.",
+        "On $[2,4)$ the second floor is one. The first floor is two precisely on $[2,8/3)$.",
+        "The favorable lengths total $1/3+2/3=1$. Divide by sample length three to obtain $1/3$; endpoints have zero measure."
+      ],
+      "solution_zh": [
+        "在 $[1,2)$ 上，第二个取整为零；第一个恰在 $[1,4/3)$ 为一。",
+        "在 $[2,4)$ 上，第二个取整为一；第一个恰在 $[2,8/3)$ 为二。",
+        "有利长度合计 $1/3+2/3=1$，除以样本长度三得 $1/3$，端点测度为零。"
+      ],
+      "tip_en": "A ceiling-floor difference vanishes at integral logarithms; these are exact powers, not approximate ones.",
+      "tip_zh": "上取整减下取整在整数对数处为零；这些是精确幂，不能以近似判断。",
+      "question_ids": [
+        "AIME-2004-I-Q12",
+        "AIME-2007-I-Q07",
+        "AIME-2009-I-Q06",
+        "AIME-2010-I-Q14"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M06",
+      "title_en": "Telescope logarithmic products and exponent progressions",
+      "title_zh": "使对数乘积与指数等差式望远镜消去",
+      "steps_en": [
+        "Change all logarithms to one base and factor rational exponents before multiplying.",
+        "Cancel consecutive ratios over the full index range, retaining the first and last factors.",
+        "For a geometric sequence of powers, its logarithms form an arithmetic sequence; compare a positive sum with its largest term using a rigorous geometric tail bound."
+      ],
+      "steps_zh": [
+        "所有对数换至统一底数，并在相乘前分解有理指数。",
+        "在完整下标范围内消去相邻比值，保留首尾因子。",
+        "幂的等比数列取对数后为等差数列；正项和与最大项之间用严格等比尾和界比较。"
+      ],
+      "example_en": "Evaluate $\\prod_{k=2}^{7}\\log_k(k+1)$.",
+      "example_zh": "计算 $\\prod_{k=2}^{7}\\log_k(k+1)$。",
+      "solution_en": [
+        "The $k$th factor is $\\ln(k+1)/\\ln k$.",
+        "All intermediate logarithms cancel, leaving $\\ln8/\\ln2$.",
+        "The product equals $3$. Every base in the range is positive and different from one."
+      ],
+      "solution_zh": [
+        "第 $k$ 个因子为 $\\ln(k+1)/\\ln k$。",
+        "所有中间对数相消，留下 $\\ln8/\\ln2$。",
+        "乘积等于 $3$；范围内所有底数均为正且不为一。"
+      ],
+      "tip_en": "Cancel factors across products, never terms across sums.",
+      "tip_zh": "只能在乘积中约去因子，不能在和式中随意消项。",
+      "question_ids": [
+        "AIME-2007-II-Q12",
+        "AIME-2009-I-Q07",
+        "AIME-2014-II-Q07",
+        "AIME-2025-II-Q04"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL04-M07",
+      "title_en": "Enforce logarithm domains before inequalities and root counts",
+      "title_zh": "先施加对数定义域，再处理不等式与根数",
+      "steps_en": [
+        "List positive arguments, positive bases different from one, and any inverse-trigonometric range restrictions.",
+        "When exponentiating inequalities, distinguish bases above one from bases between zero and one.",
+        "After a substitution or squaring, test every branch in the original logarithmic domain.",
+        "Only then count integer parameters or admissible real roots."
+      ],
+      "steps_zh": [
+        "列出真数为正、底数为正且不为一，以及反三角函数的范围限制。",
+        "指数化不等式时，区分大于一的底数与零一之间的底数。",
+        "代换或平方之后，将每个分支代回原对数定义域检验。",
+        "之后才统计整数参数或允许实根。"
+      ],
+      "example_en": "Find the real domain of $\\arcsin(\\log_{1/2}x)$.",
+      "example_zh": "求 $\\arcsin(\\log_{1/2}x)$ 的实数定义域。",
+      "solution_en": [
+        "The logarithm requires $x>0$ and its fixed base is valid.",
+        "The arcsine requires $-1\\le\\log_{1/2}x\\le1$. Since the base is below one, exponentiation reverses the order.",
+        "Thus $1/2\\le x\\le2$, with both endpoints allowed."
+      ],
+      "solution_zh": [
+        "对数要求 $x>0$，固定底数有效。",
+        "反正弦要求 $-1\\le\\log_{1/2}x\\le1$；底数小于一，指数化会反转顺序。",
+        "因此 $1/2\\le x\\le2$，两端点均允许。"
+      ],
+      "tip_en": "The algebraic equation alone cannot certify that its logarithms exist.",
+      "tip_zh": "单有代数方程不能保证其中的对数存在。",
+      "question_ids": [
+        "AIME-2005-II-Q05",
+        "AIME-2009-II-Q11",
+        "AIME-2011-I-Q09",
+        "AIME-2013-I-Q08",
+        "AIME-2017-II-Q07",
+        "AIME-2018-I-Q05",
+        "AIME-2020-I-Q02",
+        "AIME-2020-II-Q03",
+        "AIME-2023-I-Q02"
+      ],
+      "prerequisites": [
+        "AL01",
+        "AL06",
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-II-Q01",
+    "AIME-2003-I-Q04",
+    "AIME-2005-II-Q05",
+    "AIME-2006-II-Q02",
+    "AIME-2009-II-Q02",
+    "AIME-2010-I-Q03",
+    "AIME-2010-II-Q05",
+    "AIME-2013-II-Q02",
+    "AIME-2016-II-Q03",
+    "AIME-2018-I-Q05",
+    "AIME-2020-I-Q02",
+    "AIME-2020-II-Q03",
+    "AIME-2022-II-Q04",
+    "AIME-2023-I-Q02",
+    "AIME-2024-I-Q02",
+    "AIME-2024-II-Q04",
+    "AIME-2025-II-Q04",
+    "AIME-2000-I-Q09",
+    "AIME-2002-I-Q06",
+    "AIME-2005-I-Q08",
+    "AIME-2011-I-Q09",
+    "AIME-2012-I-Q09",
+    "AIME-2013-I-Q08",
+    "AIME-2017-II-Q07",
+    "AIME-2019-II-Q06",
+    "AIME-2026-I-Q06",
+    "AIME-2017-I-Q14"
+  ],
+  "coverage_by_question": {
+    "AIME-2000-II-Q01": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2003-I-Q04": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2005-II-Q05": {
+      "method_ids": [
+        "AL04-M03",
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2006-II-Q02": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2009-II-Q02": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2010-I-Q03": {
+      "method_ids": [
+        "AL04-M03"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2010-II-Q05": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2013-II-Q02": {
+      "method_ids": [
+        "AL04-M04"
+      ],
+      "prerequisites": [
+        "NT01"
+      ]
+    },
+    "AIME-2016-II-Q03": {
+      "method_ids": [
+        "AL04-M02",
+        "AL04-M04"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2018-I-Q05": {
+      "method_ids": [
+        "AL04-M03",
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2020-I-Q02": {
+      "method_ids": [
+        "AL04-M03",
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2020-II-Q03": {
+      "method_ids": [
+        "AL04-M07"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2022-II-Q04": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2023-I-Q02": {
+      "method_ids": [
+        "AL04-M03",
+        "AL04-M07"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2024-I-Q02": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2024-II-Q04": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2025-II-Q04": {
+      "method_ids": [
+        "AL04-M06"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2000-I-Q09": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2002-I-Q06": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2005-I-Q08": {
+      "method_ids": [
+        "AL04-M03"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2011-I-Q09": {
+      "method_ids": [
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2012-I-Q09": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2013-I-Q08": {
+      "method_ids": [
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "NT02"
+      ]
+    },
+    "AIME-2017-II-Q07": {
+      "method_ids": [
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2019-II-Q06": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2026-I-Q06": {
+      "method_ids": [
+        "AL04-M03"
+      ],
+      "prerequisites": [
+        "AL02",
+        "NT08"
+      ]
+    },
+    "AIME-2017-I-Q14": {
+      "method_ids": [
+        "AL04-M04"
+      ],
+      "prerequisites": [
+        "NT03",
+        "NT04"
+      ]
+    },
+    "AIME-2009-I-Q07": {
+      "method_ids": [
+        "AL04-M06"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2014-II-Q07": {
+      "method_ids": [
+        "AL04-M06"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2007-II-Q12": {
+      "method_ids": [
+        "AL04-M06"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2007-I-Q07": {
+      "method_ids": [
+        "AL04-M05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL06"
+      ]
+    },
+    "AIME-2009-I-Q06": {
+      "method_ids": [
+        "AL04-M05"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2004-I-Q12": {
+      "method_ids": [
+        "AL04-M05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL06"
+      ]
+    },
+    "AIME-2009-II-Q11": {
+      "method_ids": [
+        "AL04-M07"
+      ],
+      "prerequisites": [
+        "AL06",
+        "NT05"
+      ]
+    },
+    "AIME-2010-I-Q14": {
+      "method_ids": [
+        "AL04-M05"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2015-II-Q04": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2006-I-Q09": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": [
+        "NT01",
+        "NT05"
+      ]
+    },
+    "AIME-2019-I-Q07": {
+      "method_ids": [
+        "AL04-M02"
+      ],
+      "prerequisites": [
+        "NT01",
+        "NT02"
+      ]
+    },
+    "AIME-2002-II-Q03": {
+      "method_ids": [
+        "AL04-M01"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT05"
+      ]
+    }
+  },
+  "review": {
+    "author": "source_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Mapped against every currently integrated primary and secondary route. General steps and worked examples are separate. Original question conditions and full solutions remain in the companion question bank."
+  },
+  "unresolved_issues": []
+}

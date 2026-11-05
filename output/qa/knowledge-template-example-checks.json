@@ -1,0 +1,822 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "method_id": "NT01-M01",
+      "result": "81",
+      "expected": "81",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M02",
+      "result": "280",
+      "expected": "280",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M04",
+      "result": "(8, 540)",
+      "expected": "(8, 540)",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M05",
+      "result": "539",
+      "expected": "539",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M06",
+      "result": "4",
+      "expected": "4",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M07",
+      "result": "[(16, 64)]",
+      "expected": "[(16, 64)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M08",
+      "result": "9",
+      "expected": "9",
+      "passed": true
+    },
+    {
+      "method_id": "NT01-M01-growth",
+      "result": "42",
+      "expected": "42",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M01",
+      "result": "[8]",
+      "expected": "[8]",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M02",
+      "result": "44",
+      "expected": "44",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M03",
+      "result": "7",
+      "expected": "7",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M04",
+      "result": "[15, 15]",
+      "expected": "[15, 15]",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M05",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M06",
+      "result": "44",
+      "expected": "44",
+      "passed": true
+    },
+    {
+      "method_id": "NT02-M07",
+      "result": "9",
+      "expected": "9",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M01",
+      "result": "16",
+      "expected": "16",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M02",
+      "result": "[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",
+      "expected": "[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M03",
+      "result": "[0, 1, 16, 25]",
+      "expected": "[0, 1, 16, 25]",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M04",
+      "result": "False",
+      "expected": "False",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M05",
+      "result": "214",
+      "expected": "214",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M06",
+      "result": "6",
+      "expected": "6",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M07",
+      "result": "[2]",
+      "expected": "[2]",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M08",
+      "result": "17",
+      "expected": "17",
+      "passed": true
+    },
+    {
+      "method_id": "NT03-M09",
+      "result": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99]",
+      "expected": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99]",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M01",
+      "result": "(3, 4)",
+      "expected": "(3, 4)",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M02",
+      "result": "1",
+      "expected": "1",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M03",
+      "result": "16",
+      "expected": "16",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M04",
+      "result": "20",
+      "expected": "20",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M05",
+      "result": "[7, 13]",
+      "expected": "[7, 13]",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M06",
+      "result": "20",
+      "expected": "20",
+      "passed": true
+    },
+    {
+      "method_id": "NT04-M04-cube-classes",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M01",
+      "result": "[(3, 11), (7, 4)]",
+      "expected": "[(3, 11), (7, 4)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M02",
+      "result": "[(7, 2), (9, 6), (23, 22)]",
+      "expected": "[(7, 2), (9, 6), (23, 22)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M03",
+      "result": "[(7, 42), (8, 24), (9, 18), (10, 15), (12, 12)]",
+      "expected": "[(7, 42), (8, 24), (9, 18), (10, 15), (12, 12)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M04",
+      "result": "[(1, 36), (4, 25), (9, 16)]",
+      "expected": "[(1, 36), (4, 25), (9, 16)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M05",
+      "result": "[(1, 2, 3)]",
+      "expected": "[(1, 2, 3)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M06",
+      "result": "[(1, 3)]",
+      "expected": "[(1, 3)]",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M07",
+      "result": "5",
+      "expected": "5",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M08",
+      "result": "8",
+      "expected": "8",
+      "passed": true
+    },
+    {
+      "method_id": "NT05-M10",
+      "result": "[4, 6, 8, 10, 12]",
+      "expected": "[4, 6, 8, 10, 12]",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M01",
+      "result": "[]",
+      "expected": "[]",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M02",
+      "result": "([6], 3)",
+      "expected": "([6], 3)",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M03",
+      "result": "(30, Fraction(5601, 10))",
+      "expected": "(30, Fraction(5601, 10))",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M04",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M04-boundary",
+      "result": "(1, 1)",
+      "expected": "(1, 1)",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M05",
+      "result": "10",
+      "expected": "10",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M06",
+      "result": "99",
+      "expected": "99",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M07",
+      "result": "8",
+      "expected": "8",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M08",
+      "result": "(-1, 0, 1)",
+      "expected": "(-1, 0, 1)",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M09",
+      "result": "9",
+      "expected": "9",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M10",
+      "result": "13500",
+      "expected": "13500",
+      "passed": true
+    },
+    {
+      "method_id": "NT06-M04-zero-cases",
+      "result": "738",
+      "expected": "738",
+      "passed": true
+    },
+    {
+      "method_id": "NT07-M01",
+      "result": "4/11",
+      "expected": "4/11",
+      "passed": true
+    },
+    {
+      "method_id": "NT07-M02",
+      "result": "[6, 12, 24, 30, 42, 48, 60, 66, 78, 84, 96]",
+      "expected": "[6, 12, 24, 30, 42, 48, 60, 66, 78, 84, 96]",
+      "passed": true
+    },
+    {
+      "method_id": "NT07-M03",
+      "result": "[1, 2, 3, 5, 7, 11]",
+      "expected": "[1, 2, 3, 5, 7, 11]",
+      "passed": true
+    },
+    {
+      "method_id": "NT07-M04",
+      "result": "[]",
+      "expected": "[]",
+      "passed": true
+    },
+    {
+      "method_id": "NT07-M05",
+      "result": "33/32",
+      "expected": "33/32",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M01",
+      "result": "(6, 210)",
+      "expected": "(6, 210)",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M02",
+      "result": "24",
+      "expected": "24",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M03",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M04",
+      "result": "8/15",
+      "expected": "8/15",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M05",
+      "result": "10",
+      "expected": "10",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M06",
+      "result": "10",
+      "expected": "10",
+      "passed": true
+    },
+    {
+      "method_id": "NT08-M07",
+      "result": "(4, Fraction(100, 9801))",
+      "expected": "(4, Fraction(100, 9801))",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M01",
+      "result": "27/5",
+      "expected": "27/5",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M02",
+      "result": "10",
+      "expected": "10",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M03",
+      "result": "20",
+      "expected": "20",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M04",
+      "result": "46",
+      "expected": "46",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M05",
+      "result": "343",
+      "expected": "343",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M06",
+      "result": "[(-2, 1, 1), (0, 0, 0), (1, -2, 1), (1, 1, -2)]",
+      "expected": "[(-2, 1, 1), (0, 0, 0), (1, -2, 1), (1, 1, -2)]",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M07",
+      "result": "1",
+      "expected": "1",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M08",
+      "result": "(35, 12, 36)",
+      "expected": "(35, 12, 36)",
+      "passed": true
+    },
+    {
+      "method_id": "AL01-M10",
+      "result": "0",
+      "expected": "0",
+      "passed": true
+    },
+    {
+      "method_id": "AL02-M01",
+      "result": "23",
+      "expected": "23",
+      "passed": true
+    },
+    {
+      "method_id": "AL02-M02",
+      "result": "(7, 1)",
+      "expected": "(7, 1)",
+      "passed": true
+    },
+    {
+      "method_id": "AL02-M03",
+      "result": "[1, 2, 3, 2, 1]",
+      "expected": "[1, 2, 3, 2, 1]",
+      "passed": true
+    },
+    {
+      "method_id": "AL02-M06",
+      "result": "[(1, 12), (2, 6), (3, 4)]",
+      "expected": "[(1, 12), (2, 6), (3, 4)]",
+      "passed": true
+    },
+    {
+      "method_id": "AL02-M09",
+      "result": "[1, -3, 4, -4, 3, -1]",
+      "expected": "[1, -3, 4, -4, 3, -1]",
+      "passed": true
+    },
+    {
+      "method_id": "AL03-M01",
+      "result": "(6+1j)",
+      "expected": "(6+1j)",
+      "passed": true
+    },
+    {
+      "method_id": "AL03-M02",
+      "result": "(15-0j)",
+      "expected": "15",
+      "passed": true
+    },
+    {
+      "method_id": "AL03-M04",
+      "result": "(0.5+0.5j)",
+      "expected": "(0.5+0.5j)",
+      "passed": true
+    },
+    {
+      "method_id": "AL03-M08",
+      "result": "(Fraction(5, 1), Fraction(1, 1))",
+      "expected": "(5, 1)",
+      "passed": true
+    },
+    {
+      "method_id": "AL03-M09",
+      "result": "[2, Fraction(-1, 1), Fraction(1, 2), Fraction(2, 1)]",
+      "expected": "[2, -1, Fraction(1, 2), 2]",
+      "passed": true
+    },
+    {
+      "method_id": "AL04-M02",
+      "result": "(32, Fraction(2, 1))",
+      "expected": "(32, 2)",
+      "passed": true
+    },
+    {
+      "method_id": "AL04-M05",
+      "result": "1",
+      "expected": "1",
+      "passed": true
+    },
+    {
+      "method_id": "AL04-M06",
+      "result": "8",
+      "expected": "8",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M01",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M02",
+      "result": "16/21",
+      "expected": "16/21",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M03",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M04",
+      "result": "3/4",
+      "expected": "3/4",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M05",
+      "result": "[0, 2, 8, 26, 80, 242, 728, 2186, 6560, 19682, 59048, 177146, 531440]",
+      "expected": "[0, 2, 8, 26, 80, 242, 728, 2186, 6560, 19682, 59048, 177146, 531440]",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M06",
+      "result": "[2, 5, 12, 23, 38, 57, 80, 107, 138, 173, 212, 255, 302, 353]",
+      "expected": "[2, 5, 12, 23, 38, 57, 80, 107, 138, 173, 212, 255, 302, 353]",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M07",
+      "result": "22",
+      "expected": "22",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M08",
+      "result": "3",
+      "expected": "3",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M09",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M10",
+      "result": "[Fraction(2, 1), Fraction(3, 1), Fraction(1, 2), Fraction(1, 3)]",
+      "expected": "[Fraction(2, 1), Fraction(3, 1), Fraction(1, 2), Fraction(1, 3)]",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M11",
+      "result": "8",
+      "expected": "8",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M05-tribonacci",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "AL05-M05-antiperiod",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M01",
+      "result": "18/35",
+      "expected": "18/35",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M02",
+      "result": "2/3",
+      "expected": "2/3",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M03",
+      "result": "27/64",
+      "expected": "27/64",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M04",
+      "result": "1/3",
+      "expected": "1/3",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M05",
+      "result": "1/2",
+      "expected": "1/2",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M06",
+      "result": "1/4",
+      "expected": "1/4",
+      "passed": true
+    },
+    {
+      "method_id": "PS01-M07",
+      "result": "1/3",
+      "expected": "1/3",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M01",
+      "result": "1/2",
+      "expected": "1/2",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M02",
+      "result": "(Fraction(5, 6), Fraction(3, 4))",
+      "expected": "(Fraction(5, 6), Fraction(3, 4))",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M03",
+      "result": "(Fraction(3, 8), Fraction(1, 3))",
+      "expected": "(Fraction(3, 8), Fraction(1, 3))",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M04",
+      "result": "1/2",
+      "expected": "1/2",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M05",
+      "result": "1/6",
+      "expected": "1/6",
+      "passed": true
+    },
+    {
+      "method_id": "PS02-M06",
+      "result": "(True, Fraction(2, 5))",
+      "expected": "(True, Fraction(2, 5))",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M01",
+      "result": "2/3",
+      "expected": "2/3",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M02",
+      "result": "3/16",
+      "expected": "3/16",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M03",
+      "result": "7/16",
+      "expected": "7/16",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M04",
+      "result": "4/9",
+      "expected": "4/9",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M05",
+      "result": "3/8",
+      "expected": "3/8",
+      "passed": true
+    },
+    {
+      "method_id": "PS03-M04-four-arcs",
+      "result": "17/36",
+      "expected": "17/36",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M01",
+      "result": "(Fraction(40, 1), Fraction(90, 1), Fraction(8, 27))",
+      "expected": "(40, 90, Fraction(8, 27))",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M02",
+      "result": "2",
+      "expected": "2",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M03",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M04",
+      "result": "(8, Fraction(1, 7), {(1, 1, 2): 24, (1, 2, 3): 24, (2, 2, 2): 8})",
+      "expected": "(8, Fraction(1, 7), {(1, 1, 2): 24, (1, 2, 3): 24, (2, 2, 2): 8})",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M05",
+      "result": "(32, Fraction(25, 3))",
+      "expected": "(32, Fraction(25, 3))",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M06",
+      "result": "3",
+      "expected": "3",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M07",
+      "result": "(24, 3, 5, 8)",
+      "expected": "(24, 3, 5, 8)",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M08",
+      "result": "25",
+      "expected": "25",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M08-two-paths",
+      "result": "2",
+      "expected": "2",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M09",
+      "result": "96",
+      "expected": "96",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M10",
+      "result": "3",
+      "expected": "3",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M11",
+      "result": "8",
+      "expected": "8",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M12",
+      "result": "18",
+      "expected": "18",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M13",
+      "result": "4",
+      "expected": "4",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M14",
+      "result": "48",
+      "expected": "48",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M15",
+      "result": "1/2",
+      "expected": "1/2",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M16",
+      "result": "-1/2",
+      "expected": "-1/2",
+      "passed": true
+    },
+    {
+      "method_id": "GE10-M16-midpoint-box",
+      "result": "True",
+      "expected": "True",
+      "passed": true
+    }
+  ],
+  "note": "Independent finite arithmetic and example checks. General theorem hypotheses and bilingual derivations were separately inspected in exact-content review receipts."
+}

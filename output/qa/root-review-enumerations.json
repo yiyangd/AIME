@@ -1,0 +1,55 @@
+{
+  "2010II08-complementary-sets": 772,
+  "2010II11-all-weight-five-grids": 68,
+  "2011I15-integer-roots": [
+    [
+      39,
+      10,
+      -49
+    ]
+  ],
+  "2011II06-four-subsets": 80,
+  "2011II12-valid-country-patterns": 1230,
+  "2012I01-reversible-multiples-four": 40,
+  "2012I03-exactly-one-correct-meal": 216,
+  "2012I05-weight-preserving-increment": 330,
+  "2012I10-tenth-positive-root": 2484,
+  "2012I11-invariant-diamond-points": 1373,
+  "2012I15-possible-moduli": 332,
+  "2014II09-circular-chair-subsets": 581,
+  "2018I07-isosceles-prism-triples": 52,
+  "2018I09-fixed-sum-four-subsets": 210,
+  "2018I10-directed-wheel-state-DP": 3004,
+  "2018II10-all-functions-five": 756,
+  "2018II11-indecomposable-permutations": 461,
+  "2018II15-all-increment-words": 185,
+  "2023I09-all-coefficient-pairs": 738,
+  "2023I11-all-subsets": 235,
+  "2023I15-prime-norm-candidates": [
+    17,
+    53,
+    241,
+    349
+  ],
+  "2023I15-weaker-norm-candidates": [
+    10,
+    17,
+    53,
+    68,
+    130,
+    153,
+    212,
+    241,
+    272,
+    349,
+    386,
+    520,
+    565,
+    725,
+    778,
+    905,
+    964
+  ],
+  "2023I14-all-periodic-clock-rules": 1608,
+  "2023II07-all-two-colorings": 928
+}

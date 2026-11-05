@@ -1,0 +1,2841 @@
+[
+  {
+    "question_id": "AIME-2020-I-Q01",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "A chain of equal-side angle relations determines the angle.",
+      "reason_zh": "连续利用等腰三角形的角关系确定所求角。"
+    },
+    "secondary": [],
+    "statement_en": "An isosceles triangle has $AB=AC$. Choose $D\\in AC$ and $E\\in AB$, both in the interiors of those sides, with $AE=ED=DB=BC$. Write $\\angle ABC=m/n$ degrees in lowest terms. Determine $m+n$.",
+    "statement_zh": "等腰三角形满足 $AB=AC$。在 $AC,AB$ 的内部依次取点 $D,E$，使 $AE=ED=DB=BC$。若 $\\angle ABC$ 的度数约分为 $m/n$，求 $m+n$。",
+    "answer": "547",
+    "solution_en": [
+      "Put $\\angle A=\\alpha$. Equal sides in $AED$ give $\\angle ADE=\\alpha$; because $EA$ and $EB$ are opposite rays, $\\angle DEB=2\\alpha$.",
+      "Next $ED=DB$ gives $\\angle DBE=2\\alpha$ and $\\angle EDB=180^\\circ-4\\alpha$. The straight angle along $ADC$ then gives $\\angle BDC=3\\alpha$.",
+      "From $DB=BC$ and $AB=AC$, both base angles of $ABC$ are $3\\alpha$. Thus $7\\alpha=180^\\circ$, so $\\angle B=540/7$ degrees and the requested sum is $547$."
+    ],
+    "solution_zh": [
+      "设 $\\angle A=\\alpha$。由 $AE=ED$ 得 $\\angle ADE=\\alpha$，而 $EA,EB$ 为反向射线，故 $\\angle DEB=2\\alpha$。",
+      "由 $ED=DB$ 得 $\\angle DBE=2\\alpha$、$\\angle EDB=180^\\circ-4\\alpha$。利用 $A,D,C$ 共线得到 $\\angle BDC=3\\alpha$。",
+      "再由 $DB=BC$ 和 $AB=AC$，大三角形两底角均为 $3\\alpha$。所以 $7\\alpha=180^\\circ$，$\\angle B=540/7$ 度，答案为 $547$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/1",
+    "method_chain": [
+      "Isosceles angles",
+      "Straight-angle chase",
+      "Triangle angle sum"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q02",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Changing all logarithms to one base is decisive.",
+      "reason_zh": "统一对数底数是解题关键。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Use the defining relation of a geometric progression.",
+        "reason_zh": "利用等比数列的中项关系。"
+      }
+    ],
+    "statement_en": "For $x>0$, the ordered list $\\log_8(2x),\\log_4 x,\\log_2 x$ is geometric with a positive ratio. If $x=m/n$ is reduced, find $m+n$.",
+    "statement_zh": "当 $x>0$ 时，$\\log_8(2x),\\log_4 x,\\log_2 x$ 依次构成公比为正的等比数列。将 $x$ 约分为 $m/n$，求 $m+n$。",
+    "answer": "17",
+    "solution_en": [
+      "Use $t=\\log_2 x$ to rewrite the terms as $(1+t)/3,t/2,t$. Their relation is $t^2/4=t(1+t)/3$.",
+      "$t=0$ produces $1/3,0,0$, which has no positive common ratio. For $t\\ne0$, $3t=4+4t$, giving $t=-4$.",
+      "Therefore $x=1/16$; the terms are $-1,-2,-4$, so the ratio is indeed $2$. The result is $17$."
+    ],
+    "solution_zh": [
+      "令 $t=\\log_2 x$，三项变成 $(1+t)/3,t/2,t$，故 $t^2/4=t(1+t)/3$。",
+      "$t=0$ 时三项为 $1/3,0,0$，不满足正公比。其余情况约去 $t$，得到 $3t=4+4t$，即 $t=-4$。",
+      "所以 $x=1/16$；原三项为 $-1,-2,-4$，公比确为 $2$，答案 $17$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/2",
+    "method_chain": [
+      "Common-base substitution",
+      "Geometric-mean equation",
+      "Domain check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q03",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "The repeated digit positions give the decisive base equation.",
+      "reason_zh": "重复数位的位权展开给出关键方程。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Digit bounds reduce an integer linear equation.",
+        "reason_zh": "数位范围约束整数方程。"
+      }
+    ],
+    "statement_en": "A number has digit strings $abc$ in base $11$ and $1bca$ in base $8$; repeated letters indicate the same digit, and distinct letters need not differ. Find its least decimal value.",
+    "statement_zh": "某正整数的十一进制表示为 $abc$，八进制表示为 $1bca$；相同字母代表同一数位，不同字母可相等。求该整数最小的十进制值。",
+    "answer": "621",
+    "solution_en": [
+      "Place-value expansion gives $121a+11b+c=512+64b+8c+a$, or $120a=512+53b+7c$, where $1\\le a\\le7$ and $0\\le b,c\\le7$.",
+      "Necessarily $a\\ge5$. At $a=5$, solve $53b+7c=88$: $b=0$ fails divisibility, $b\\ge2$ is too large, and $b=1$ gives $c=5$.",
+      "The value is $515_{11}=621=1155_8$. Any $a\\ge6$ gives at least $726>621$, proving minimality."
+    ],
+    "solution_zh": [
+      "按位展开得 $121a+11b+c=512+64b+8c+a$，即 $120a=512+53b+7c$，且 $1\\le a\\le7$、$0\\le b,c\\le7$。",
+      "右端至少为 $512$，所以 $a\\ge5$。取 $a=5$ 时，$53b+7c=88$；只有 $b=1,c=5$ 可行。",
+      "于是 $N=515_{11}=621=1155_8$。若 $a\\ge6$，则 $N\\ge726$，故最小值为 $621$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/3",
+    "method_chain": [
+      "Place-value expansion",
+      "Digit bounds",
+      "Minimum verification"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q04",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT02",
+      "reason_en": "Reducing prefix divisibility to a divisor condition controls the finite set.",
+      "reason_zh": "将前缀整除条件化为约数条件，确定有限集合。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT06",
+        "reason_en": "Add the digit sums of a fixed suffix and the prefix.",
+        "reason_zh": "将固定尾数和前缀的数位和相加。"
+      }
+    ],
+    "statement_en": "Consider positive integers whose decimal expansion ends in $2020$. Require that deleting these four digits leaves a positive divisor of the original integer. Sum the decimal digits of every integer satisfying this requirement.",
+    "statement_zh": "考虑十进制末四位为 $2020$ 的正整数，删去末四位后所得正整数须整除原数。求所有符合条件的数的数位和之和。",
+    "answer": "93",
+    "solution_en": [
+      "If the prefix is $k$, the number is $10000k+2020$. Its divisibility by $k$ is equivalent to $k\\mid2020$.",
+      "As $2020=2^2\\cdot5\\cdot101$, its positive divisors are $1,2,4,5,10,20,101,202,404,505,1010,2020$. Their digit sums total $45$.",
+      "Each of the $12$ suffixes contributes $4$, so the total is $45+48=93$."
+    ],
+    "solution_zh": [
+      "设前缀为 $k$，原数为 $10000k+2020$。整除条件等价于 $k\\mid2020$。",
+      "$2020=2^2\\cdot5\\cdot101$，正约数为 $1,2,4,5,10,20,101,202,404,505,1010,2020$，其数位和合计 $45$。",
+      "共 $12$ 个数，每个尾部 $2020$ 贡献 $4$，总和为 $45+12\\cdot4=93$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/4",
+    "method_chain": [
+      "Prefix divisibility",
+      "Divisor list",
+      "Digit-sum aggregation"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q05",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO01",
+      "reason_en": "Count restricted orderings by insertion with explicit multiplicity correction.",
+      "reason_zh": "通过插入并修正重复计数求受限排列。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "Correct repeated insertions of the sorted row and adjacent swaps.",
+        "reason_zh": "修正有序行及相邻交换的重复计数。"
+      }
+    ],
+    "statement_en": "Permute the six distinct labels $1,2,3,4,5,6$. How many permutations permit deletion of one label so that the remaining sequence is strictly increasing or strictly decreasing?",
+    "statement_zh": "排列 $1,2,3,4,5,6$ 六个不同标号。若删去一个标号后，其余五个数可严格递增或严格递减，求这样的排列数。",
+    "answer": "52",
+    "solution_en": [
+      "For increasing remainders, insert a chosen exceptional label into the increasing order of the other five: $6\\cdot6=36$ constructions.",
+      "The increasing row is counted six times, and each of the five adjacent swaps twice. No other duplication is possible: two possible deleted labels would have to form the only inverted pair, hence be adjacent. The distinct count is $36-5-5=26$.",
+      "Reversal gives another $26$. An increasing and a decreasing subsequence of length five in six distinct labels would overlap in at least four labels, impossible since two such subsequences share at most one label. Total $52$."
+    ],
+    "solution_zh": [
+      "先要求剩下五个递增。选被删标号，再将它插入其余五数的递增排列的六个位置，共 $36$ 次构造。",
+      "完全递增排列重复六次，五种相邻交换各重复两次。若两种删除都可行，唯一逆序只能发生在这两标号之间，因此没有其他重复。得到 $36-5-5=26$。",
+      "反转顺序得到 $26$ 个递减型。长度五的递增和递减子序列至多共用一个数，却在六数中必共用至少四个，故两类不相交。总数 $52$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/5",
+    "method_chain": [
+      "Insert an exceptional label",
+      "Multiplicity correction",
+      "Reverse symmetry"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q06",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE09",
+      "reason_en": "Sphere cross-sections convert tangency into a spatial center-distance equation.",
+      "reason_zh": "球的平面截面将相切化为空间球心距方程。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Solve the radical distance equation and check its sign.",
+        "reason_zh": "求解根式距离方程并核对符号。"
+      }
+    ],
+    "statement_en": "Two holes of radii $1$ and $2$ are cut in a plane board, their centers $7$ apart. Identical spheres rest in the holes on the same side and touch each other. For their common radius $r$, write $r^2=m/n$ reduced and find $m+n$.",
+    "statement_zh": "平面板上两圆孔半径为 $1,2$，孔心距为 $7$。两个等半径球在板的同侧分别置于圆孔中，且互相相切。若球半径平方约分为 $m/n$，求 $m+n$。",
+    "answer": "173",
+    "solution_en": [
+      "The centers have heights $\\sqrt{r^2-1}$ and $\\sqrt{r^2-4}$. Hence $49+(\\sqrt{r^2-1}-\\sqrt{r^2-4})^2=4r^2$.",
+      "Put $u=r^2$. Rearrangement gives $\\sqrt{(u-1)(u-4)}=22-u$. Squaring cancels $u^2$ and yields $39u=480$.",
+      "Thus $u=160/13>4$ and $22-u>0$, so the unsquared equation is satisfied. The requested sum is $173$."
+    ],
+    "solution_zh": [
+      "两球心离板高度分别为 $\\sqrt{r^2-1}$、$\\sqrt{r^2-4}$。球心距为 $2r$，故 $49+(\\sqrt{r^2-1}-\\sqrt{r^2-4})^2=4r^2$。",
+      "令 $u=r^2$，整理为 $\\sqrt{(u-1)(u-4)}=22-u$。平方消去二次项，得到 $39u=480$。",
+      "$u=160/13>4$，且右端 $22-u>0$，通过原式检验。因此答案为 $160+13=173$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/6",
+    "method_chain": [
+      "Sphere-plane section",
+      "Center-distance equation",
+      "Radical check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q07",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "Vandermonde collapses the committee count to one binomial coefficient.",
+      "reason_zh": "范德蒙德恒等式将委员会计数化为一个组合数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Compute prime exponents of a binomial coefficient.",
+        "reason_zh": "计算二项式系数的质因数指数。"
+      }
+    ],
+    "statement_en": "A group contains $11$ men and $12$ women. Count all committees with exactly one more woman than man, allowing every possible size. If this count is $N$, find the sum of its distinct prime divisors.",
+    "statement_zh": "一个团体有 $11$ 名男性和 $12$ 名女性。委员会须恰好多一名女性，人数不限。设委员会数为 $N$，求 $N$ 的不同质因数之和。",
+    "answer": "81",
+    "solution_en": [
+      "Choosing $k$ men and $k+1$ women gives $N=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{11-k}=\\binom{23}{11}$. The second equality counts eleven selections from two disjoint groups.",
+      "In $23!/(11!12!)$, the nonzero prime exponents are those of $2,7,13,17,19,23$, each equal to one. For example $v_2=19-8-10=1$, while $v_3=9-4-5=0$.",
+      "The sum of these primes is $2+7+13+17+19+23=81$."
+    ],
+    "solution_zh": [
+      "若选 $k$ 名男性，须选 $k+1$ 名女性，故 $N=\\sum_{k=0}^{11}\\binom{11}{k}\\binom{12}{11-k}=\\binom{23}{11}$。最后一步为范德蒙德恒等式。",
+      "对 $23!/(11!12!)$ 计算质因数指数，仅 $2,7,13,17,19,23$ 的指数非零且都为 $1$。例如 $v_2=19-8-10=1$，$v_3=9-4-5=0$。",
+      "所以所求和为 $2+7+13+17+19+23=81$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/7",
+    "method_chain": [
+      "Vandermonde convolution",
+      "Factorial valuations"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q08",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Complex multiplication simultaneously encodes shrinking and turning.",
+      "reason_zh": "复数乘法同时描述缩短和旋转。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Sum an infinite geometric series.",
+        "reason_zh": "求无限等比级数的和。"
+      }
+    ],
+    "statement_en": "Starting at $O$, a walker moves $5$ units east. Each subsequent displacement is half the preceding length and is rotated $60^\\circ$ counterclockwise. The positions converge to $P$. If $OP^2=m/n$ in lowest terms, find $m+n$.",
+    "statement_zh": "从 $O$ 出发，首段向东走 $5$ 单位；以后每段长度为前段一半，方向相对前段逆时针转 $60^\\circ$。位置趋于 $P$。若 $OP^2=m/n$ 已约分，求 $m+n$。",
+    "answer": "103",
+    "solution_en": [
+      "Identify east with the positive real direction. The displacement multiplier is $z=\\tfrac12e^{i\\pi/3}=(1+i\\sqrt3)/4$, whose modulus is less than one.",
+      "The limiting displacement is $5/(1-z)$. Since $|1-z|^2=(3/4)^2+(\\sqrt3/4)^2=3/4$, its squared modulus is $25/(3/4)=100/3$.",
+      "The required integer is $100+3=103$."
+    ],
+    "solution_zh": [
+      "以东为复平面实轴正向，位移公比为 $z=\\tfrac12e^{i\\pi/3}=(1+i\\sqrt3)/4$，且 $|z|<1$。",
+      "极限位移为 $5/(1-z)$。由 $|1-z|^2=9/16+3/16=3/4$，得 $OP^2=25/(3/4)=100/3$。",
+      "所以答案为 $103$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/8",
+    "method_chain": [
+      "Complex displacement",
+      "Infinite geometric sum",
+      "Squared modulus"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q09",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "The goal is a finite sampling probability with an exponent-based favorable count.",
+      "reason_zh": "目标为有限抽样概率，用指数计数有利结果。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Divisibility becomes monotonicity of prime exponents.",
+        "reason_zh": "整除转化为各质因数指数的非降关系。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "Count weakly increasing triples as multisets.",
+        "reason_zh": "将非降三元组视为可重复组合。"
+      }
+    ],
+    "statement_en": "Select three positive divisors of $20^9$ independently and uniformly, calling them $a_1,a_2,a_3$. The chance that $a_1\\mid a_2$ and $a_2\\mid a_3$ is $m/n$ reduced. Find $m$.",
+    "statement_zh": "从 $20^9$ 的正约数中独立等概率选取 $a_1,a_2,a_3$。若 $a_1\\mid a_2\\mid a_3$ 的概率约分为 $m/n$，求 $m$。",
+    "answer": "77",
+    "solution_en": [
+      "Every divisor is uniquely $2^u5^v$, with $u\\in\\{0,\\ldots,18\\}$ and $v\\in\\{0,\\ldots,9\\}$. Both exponent coordinates are independent uniform choices.",
+      "For $k$ possible exponents, a nondecreasing triple has $\\binom{k+2}{3}$ possibilities. Consequently the probability is $\\binom{21}{3}\\binom{12}{3}/190^3$.",
+      "This equals $(70/361)(11/50)=77/1805$. As $77$ and $1805$ are coprime, the numerator is $77$."
+    ],
+    "solution_zh": [
+      "每个约数唯一写作 $2^u5^v$，其中 $0\\le u\\le18$、$0\\le v\\le9$，两类指数独立均匀。",
+      "从 $k$ 个指数中选非降三元组共有 $\\binom{k+2}{3}$ 种。因此概率为 $\\binom{21}{3}\\binom{12}{3}/190^3$。",
+      "化简为 $(70/361)(11/50)=77/1805$，分子分母互质，所求为 $77$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/9",
+    "method_chain": [
+      "Prime-exponent sample space",
+      "Multiset triples",
+      "Probability reduction"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q10",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "Comparing prime valuations supplies both the bound and the construction.",
+      "reason_zh": "比较质因数赋值同时给出下界和构造。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "A lower bound reduces the search to n=121 and finitely many m.",
+        "reason_zh": "下界将搜索缩至 n=121 和有限个 m。"
+      }
+    ],
+    "statement_en": "Find the smallest $m+n$ for positive integers $m,n$ such that $\\gcd(m+n,210)=1$, $n^n\\mid m^m$, and $n\\nmid m$.",
+    "statement_zh": "正整数 $m,n$ 满足 $\\gcd(m+n,210)=1$、$n^n\\mid m^m$，但 $n\\nmid m$。求 $m+n$ 的最小值。",
+    "answer": "407",
+    "solution_en": [
+      "Every prime of $n$ also divides $m$, so it divides $m+n$ and is at least $11$. Since $n\\nmid m$, some such prime has exponents $a=v_p(n)>b=v_p(m)\\ge1$. Divisibility requires $bm\\ge an$.",
+      "A candidate is $n=121,m=286$: $v_{11}(n^n)=242\\le286=v_{11}(m^m)$ and $407=11\\cdot37$ is coprime to $210$.",
+      "To rule out smaller sums, assume $m+n<407$. An exponent $a\\ge3$ forces $n\\ge1331$, impossible. Hence $a=2,b=1$, so $m\\ge2n$ and $n\\le135$. Only $n=121$ can contain a square of a prime at least $11$ in this range.",
+      "For $242\\le m<286$, the multiples of $11$ are $242,253,264,275$. The first is divisible by $121$; the others give sums divisible respectively by $2,5,2$. None works. The minimum is $407$."
+    ],
+    "solution_zh": [
+      "$n$ 的每个质因数也整除 $m$ 及 $m+n$，故均至少为 $11$。因 $n\\nmid m$，存在 $a=v_p(n)>b=v_p(m)\\ge1$，且 $bm\\ge an$。",
+      "取 $n=121,m=286$，有 $242=v_{11}(n^n)\\le v_{11}(m^m)=286$，且 $407=11\\cdot37$ 与 $210$ 互质，故可达到 $407$。",
+      "若和小于 $407$，则 $a\\ge3$ 会使 $n\\ge1331$，矛盾。因此 $a=2,b=1$，于是 $m\\ge2n$、$n\\le135$。该范围内只可能 $n=121$。",
+      "$242\\le m<286$ 的 $11$ 的倍数为 $242,253,264,275$。第一个是 $121$ 的倍数，后三个所得和分别含因数 $2,5,2$，均不合要求。最小和为 $407$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/10",
+    "method_chain": [
+      "Prime valuation inequality",
+      "Candidate construction",
+      "Exhaustive bounded proof"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q11",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The repeated-input exception and root-sum relation determine the count.",
+      "reason_zh": "重合输入的特殊情形和根和关系决定计数。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "Count bounded integer coefficient pairs after Vieta reduction.",
+        "reason_zh": "韦达化简后统计有界整数系数对。"
+      }
+    ],
+    "statement_en": "Let $f(x)=x^2+ax+b$ and $g(x)=x^2+cx+d$ have integer coefficients. Count ordered triples $(a,b,c)\\in[-10,10]^3$ for which some integer $d$ makes $g(f(2))=g(f(4))=0$.",
+    "statement_zh": "整数系数多项式 $f(x)=x^2+ax+b$、$g(x)=x^2+cx+d$。统计满足 $-10\\le a,b,c\\le10$ 且存在整数 $d$ 使 $g(f(2))=g(f(4))=0$ 的有序三元组 $(a,b,c)$。",
+    "answer": "510",
+    "solution_en": [
+      "The inputs $u=f(2)$ and $v=f(4)$ coincide precisely when $a=-6$. Then every $b,c$ works by setting $d=-u^2-cu$, giving $441$ triples.",
+      "Otherwise $u,v$ are distinct roots, so $c=-u-v=-20-6a-2b$. Thus $-15\\le3a+b\\le-5$, with $b\\in[-10,10]$.",
+      "For $a=-8,-7,-5,-4,-3,-2,-1,0,1$ the counts of $b$ are $2,5,11,11,11,11,9,6,3$; all other allowed $a\\ne-6$ contribute zero. Their sum is $69$, and the total is $510$."
+    ],
+    "solution_zh": [
+      "$u=f(2),v=f(4)$ 当且仅当 $a=-6$ 时相等。此时任意 $b,c$ 都可令 $d=-u^2-cu$，得到 $21^2=441$ 组。",
+      "否则 $u,v$ 为不同两根，韦达关系给出 $c=-20-6a-2b$，从而 $-15\\le3a+b\\le-5$。",
+      "$a=-8,-7,-5,-4,-3,-2,-1,0,1$ 对应的 $b$ 数量为 $2,5,11,11,11,11,9,6,3$，合计 $69$。总数 $441+69=510$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/11",
+    "method_chain": [
+      "Equal-root exception",
+      "Vieta coefficient relation",
+      "Bounded interval count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q12",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "A modular order is needed before the prime-power divisibility can be lifted.",
+      "reason_zh": "先求模阶，再提升到所需质数幂整除。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Use lifting of valuations and then the divisor-count formula.",
+        "reason_zh": "利用赋值提升并计算约数个数。"
+      }
+    ],
+    "statement_en": "Let $n$ be the least positive exponent with $3^3 5^5 7^7\\mid149^n-2^n$. How many positive divisors does $n$ have?",
+    "statement_zh": "令 $n$ 为满足 $3^3 5^5 7^7\\mid149^n-2^n$ 的最小正整数。求 $n$ 的正约数个数。",
+    "answer": "270",
+    "solution_en": [
+      "Because $149-2=3\\cdot7^2$, the odd-prime lifting formula gives $v_3=1+v_3(n)$ and $v_7=2+v_7(n)$. Thus $3^2 7^5\\mid n$.",
+      "Modulo $5$, $(149/2)^n\\equiv2^n$, whose order is $4$. Write $n=4k$. Since $v_5(149^4-2^4)=1$, lifting gives $v_5(149^n-2^n)=1+v_5(k)$, so $4\\cdot5^4\\mid n$.",
+      "These conditions are necessary and sufficient. The least exponent is $2^2 3^2 5^4 7^5$, which has $(2+1)(2+1)(4+1)(5+1)=270$ divisors."
+    ],
+    "solution_zh": [
+      "$149-2=3\\cdot7^2$，对奇质数用指数提升得 $v_3=1+v_3(n)$、$v_7=2+v_7(n)$，故 $3^2 7^5\\mid n$。",
+      "模 $5$ 时 $149/2\\equiv2$ 的阶为 $4$，故写 $n=4k$。因 $v_5(149^4-2^4)=1$，再提升得 $v_5=1+v_5(k)$，于是 $4\\cdot5^4\\mid n$。",
+      "上述条件充要，最小 $n=2^2 3^2 5^4 7^5$。正约数数为 $3\\cdot3\\cdot5\\cdot6=270$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/12",
+    "method_chain": [
+      "Multiplicative order",
+      "Odd-prime exponent lifting",
+      "Divisor count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q13",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "The bisector and perpendicular-bisector intersection controls the construction.",
+      "reason_zh": "角平分线与垂直平分线交点的性质控制构型。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Evaluate half-angle tangents and angle-bisector length.",
+        "reason_zh": "计算半角正切和角平分线长。"
+      }
+    ],
+    "statement_en": "In $ABC$, $AB=4,BC=5,CA=6$, and the internal bisector from $A$ meets $BC$ at $D$. The perpendicular bisector of $AD$ meets the internal angle-bisector lines from $B,C$ at $E,F$. If $[AEF]=m\\sqrt n/p$ with $\\gcd(m,p)=1$ and $n$ squarefree, find $m+n+p$.",
+    "statement_zh": "在 $AB=4,BC=5,CA=6$ 的三角形中，$A$ 的内角平分线交 $BC$ 于 $D$。$AD$ 的垂直平分线与 $B,C$ 的内角平分线所在直线分别交于 $E,F$。设 $[AEF]=m\\sqrt n/p$，其中 $m,p$ 互质且 $n$ 无平方因子，求 $m+n+p$。",
+    "answer": "36",
+    "solution_en": [
+      "Let $M$ be the midpoint of $AD$. In the circle through $A,B,D$, the bisector at $B$ meets the midpoint of arc $AD$ away from $B$; this is $E$, because it is equidistant from $A,D$. Thus $\\angle EAD=B/2$. Similarly $\\angle FAD=C/2$, on the opposite side.",
+      "Therefore $[AEF]=\\tfrac12 AM^2(\\tan(B/2)+\\tan(C/2))$. The bisector theorem gives $BD=2,DC=3$, and $AD^2=AB\\cdot AC-BD\\cdot DC=18$, so $AM^2=9/2$.",
+      "Cosine law gives $\\cos B=1/8$, $\\cos C=3/4$. Hence the half-angle tangents are $\\sqrt7/3$ and $1/\\sqrt7$, with sum $10\\sqrt7/21$.",
+      "The area is $15\\sqrt7/14$, so $15+7+14=36$."
+    ],
+    "solution_zh": [
+      "设 $M$ 为 $AD$ 中点。在 $ABD$ 的外接圆中，$B$ 的角平分线交不含 $B$ 的弧 $AD$ 中点，该点同时位于 $AD$ 垂直平分线上，故为 $E$。由圆周角得 $\\angle EAD=B/2$；类似有 $\\angle FAD=C/2$，且位于另一侧。",
+      "因此 $[AEF]=\\tfrac12 AM^2(\\tan(B/2)+\\tan(C/2))$。角平分线定理给出 $BD=2,DC=3$，故 $AD^2=24-6=18$、$AM^2=9/2$。",
+      "余弦定理得 $\\cos B=1/8,\\cos C=3/4$，故两半角正切为 $\\sqrt7/3,1/\\sqrt7$，和为 $10\\sqrt7/21$。",
+      "代入面积为 $15\\sqrt7/14$，所求为 $36$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/13",
+    "method_chain": [
+      "Arc-midpoint characterization",
+      "Bisector length",
+      "Half-angle area"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q14",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The repeated root-sum structure of a quadratic composition determines both cases.",
+      "reason_zh": "二次复合多项式的配对根和结构决定两种情况。"
+    },
+    "secondary": [],
+    "statement_en": "A monic quadratic $P$ over $\\mathbb C$ has the property that $P(P(x))=0$ has four distinct roots $3,4,a,b$. Add all distinct possible values of $(a+b)^2$.",
+    "statement_zh": "复系数首一二次多项式 $P$ 满足 $P(P(x))=0$ 有四个不同根 $3,4,a,b$。求 $(a+b)^2$ 所有不同可能值之和。",
+    "answer": "85",
+    "solution_en": [
+      "Write $P=x^2-sx+q$. The four roots split into two pairs, each satisfying $P(x)=r$ for one root $r$ of $P$; each pair sums to $s$.",
+      "If $3,4$ are paired, then $s=7$ and $a+b=7$, giving $49$. This case exists: take $q=12+r$ with $r^2-6r+12=0$; the other pair is distinct from $3,4$ and from itself.",
+      "If they are in different pairs, the other roots are $s-3,s-4$. Since $P(3),P(4)$ are the roots of $P$, their sum gives $q=4s-25/2$. Thus $P(3)=s-7/2,P(4)=7/2$, and their product condition gives $(7/2)(s-7/2)=4s-25/2$.",
+      "Solve $s=1/2$, obtaining $a+b=-6$ and $36$. All four roots $3,4,-5/2,-7/2$ are distinct, so the final sum is $49+36=85$."
+    ],
+    "solution_zh": [
+      "写 $P=x^2-sx+q$。四根按 $P(x)=r$ 分成两对，其中 $r$ 为 $P$ 的根；每对根和都为 $s$。",
+      "若 $3,4$ 同对，则 $s=7$、$a+b=7$，得到 $49$。取 $q=12+r$ 且 $r^2-6r+12=0$ 可构造此情况，另两根也互异。",
+      "若不同对，另两根为 $s-3,s-4$。利用 $P(3),P(4)$ 是 $P$ 的两根，根和给出 $q=4s-25/2$。于是 $P(3)=s-7/2,P(4)=7/2$，根积给出 $(7/2)(s-7/2)=4s-25/2$。",
+      "解得 $s=1/2$，所以 $a+b=-6$，得到 $36$。此时四根为 $3,4,-5/2,-7/2$，确实互异。两值之和 $85$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/14",
+    "method_chain": [
+      "Pair roots of a composition",
+      "Vieta case split",
+      "Distinctness check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-I-Q15",
+    "paper_id": "AIME-2020-I",
+    "exam_year": 2020,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The decisive route uses reflected-circle centers and vector coordinates.",
+      "reason_zh": "核心解法是反射圆心关系与向量坐标。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Use the reflection of an orthocenter in the opposite side and chord geometry.",
+        "reason_zh": "利用垂心关于对边的反射点及圆弦性质。"
+      }
+    ],
+    "statement_en": "An acute triangle $ABC$ has circumcircle $\\omega$ and orthocenter $H$. The tangent at $H$ to the circle through $H,B,C$ cuts $\\omega$ at $X,Y$. Suppose $HA=3,HX=2,HY=6$. If $[ABC]=m\\sqrt n$ with $n$ squarefree, find $m+n$.",
+    "statement_zh": "锐角三角形 $ABC$ 的外接圆为 $\\omega$，垂心为 $H$。过 $H,B,C$ 的圆在 $H$ 处的切线交 $\\omega$ 于 $X,Y$。已知 $HA=3,HX=2,HY=6$。设面积为 $m\\sqrt n$，$n$ 无平方因子，求 $m+n$。",
+    "answer": "58",
+    "solution_en": [
+      "With circumcenter $O$ as vector origin, $H=A+B+C$. The circle $HBC$ is the reflection of $\\omega$ across $BC$, so its center is $B+C=H-A$. Its radius toward $H$ is therefore parallel to $OA$, and $XY\\perp OA$.",
+      "Set $A=(0,R)$ and $H=(h,k)$ with chord $XY$ horizontal. Since $H$ is inside the circle and $HX,HY$ are $2,6$, the half-chord is $4$ and $h^2=4$. Thus $R^2-k^2=16$, while $HA^2=4+(R-k)^2=9$. Hence $R-k=\\sqrt5$ and $R=21/(2\\sqrt5)$.",
+      "The midpoint $M$ of $BC$ is $(H-A)/2=(h/2,-\\sqrt5/2)$, giving $OM=3/2$. Hence $BC=2\\sqrt{R^2-9/4}=2\\sqrt{99/5}$.",
+      "The distance from $A$ to the chord line $BC$, whose normal is $OM$, is $|A\\cdot M-|M|^2|/|M|=(21/4+9/4)/(3/2)=5$. Thus the area is $5\\sqrt{99/5}=3\\sqrt{55}$, and the answer is $58$."
+    ],
+    "solution_zh": [
+      "以外心 $O$ 为向量原点，有 $H=A+B+C$。圆 $HBC$ 是 $\\omega$ 关于 $BC$ 的对称圆，圆心为 $B+C=H-A$，故指向 $H$ 的半径平行 $OA$，从而 $XY\\perp OA$。",
+      "取 $A=(0,R),H=(h,k)$，使 $XY$ 水平。因 $H$ 在圆内且到两端距离为 $2,6$，半弦长为 $4$，$h^2=4$。于是 $R^2-k^2=16$、$4+(R-k)^2=9$，得到 $R-k=\\sqrt5$、$R=21/(2\\sqrt5)$。",
+      "$BC$ 中点为 $M=(H-A)/2=(h/2,-\\sqrt5/2)$，故 $OM=3/2$，$BC=2\\sqrt{99/5}$。",
+      "$BC$ 的法向量为 $OM$，所以 $A$ 到 $BC$ 距离为 $(21/4+9/4)/(3/2)=5$。面积为 $3\\sqrt{55}$，答案 $58$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020I/problem/15",
+    "method_chain": [
+      "Orthocenter vector identity",
+      "Reflected circumcircle",
+      "Chord coordinates",
+      "Area from a normal vector"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q01",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "Independent prime exponents count all solutions.",
+      "reason_zh": "独立选择各质因数指数即可穷尽所有解。"
+    },
+    "secondary": [],
+    "statement_en": "How many ordered pairs of positive integers $(m,n)$ satisfy $m^2n=20^{20}$?",
+    "statement_zh": "正整数有序对 $(m,n)$ 满足 $m^2n=20^{20}$，共有多少组？",
+    "answer": "231",
+    "solution_en": [
+      "Factor $20^{20}=2^{40}5^{20}$. Necessarily $m=2^a5^b$, and $n=2^{40-2a}5^{20-2b}$.",
+      "Nonnegative remaining exponents require $0\\le a\\le20$ and $0\\le b\\le10$. Each exponent pair determines exactly one $n$, giving $21\\cdot11=231$."
+    ],
+    "solution_zh": [
+      "$20^{20}=2^{40}5^{20}$，所以 $m=2^a5^b$，且 $n=2^{40-2a}5^{20-2b}$。",
+      "指数须非负，故 $0\\le a\\le20,0\\le b\\le10$。每个指数对唯一确定 $n$，共 $21\\cdot11=231$ 组。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/1",
+    "method_chain": [
+      "Prime factorization",
+      "Exponent choices"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q02",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS03",
+      "reason_en": "Uniform area is the probability measure.",
+      "reason_zh": "连续均匀概率等于相应区域面积。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Split the slope inequality on either side of the fixed x-coordinate.",
+        "reason_zh": "按固定横坐标两侧拆分斜率不等式。"
+      }
+    ],
+    "statement_en": "Choose $(x,y)$ uniformly from the unit square. Let $Q=(5/8,3/8)$. The probability that the line from $Q$ to $(x,y)$ has slope at least $1/2$ is $m/n$ reduced. Find $m+n$.",
+    "statement_zh": "在单位正方形内均匀选点 $(x,y)$。固定 $Q=(5/8,3/8)$，连接两点的直线斜率至少为 $1/2$ 的概率约分为 $m/n$，求 $m+n$。",
+    "answer": "171",
+    "solution_en": [
+      "The threshold line is $y=x/2+1/16$. To its right of $x=5/8$ the desired points lie above it; to its left they lie below it. The vertical line itself has area zero.",
+      "The right trapezoid has area $\\frac38\\frac{5/8+7/16}{2}=51/256$; the left one has area $\\frac58\\frac{1/16+3/8}{2}=35/256$.",
+      "The total area, hence probability, is $86/256=43/128$. The answer is $171$."
+    ],
+    "solution_zh": [
+      "临界直线为 $y=x/2+1/16$。当 $x>5/8$ 时取直线上方，$x<5/8$ 时取下方；竖直线本身面积为零。",
+      "右侧梯形面积为 $\\frac38(5/8+7/16)/2=51/256$，左侧为 $\\frac58(1/16+3/8)/2=35/256$。",
+      "概率等于总面积 $86/256=43/128$，故答案 $171$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/2",
+    "method_chain": [
+      "Slope sign split",
+      "Trapezoid areas"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q03",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Changing logarithmic bases eliminates the logarithms.",
+      "reason_zh": "换底公式直接消去对数。"
+    },
+    "secondary": [],
+    "statement_en": "Solve $\\log_{2^x}(3^{20})=\\log_{2^{x+3}}(3^{2020})$. If the solution is $m/n$ reduced with positive integers $m,n$, find $m+n$.",
+    "statement_zh": "解 $\\log_{2^x}(3^{20})=\\log_{2^{x+3}}(3^{2020})$。若解约分为正整数之比 $m/n$，求 $m+n$。",
+    "answer": "103",
+    "solution_en": [
+      "Logarithm bases impose $x\\ne0,-3$. Changing to one fixed base and cancelling $\\log3/\\log2$ gives $20/x=2020/(x+3)$.",
+      "Thus $20x+60=2020x$, so $x=3/100$, which satisfies both base restrictions. The result is $103$."
+    ],
+    "solution_zh": [
+      "对数底数要求 $x\\ne0,-3$。换底后约去 $\\log3/\\log2$，得到 $20/x=2020/(x+3)$。",
+      "于是 $20x+60=2020x$，$x=3/100$，符合定义域，答案 $103$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/3",
+    "method_chain": [
+      "Change of base",
+      "Linear equation",
+      "Base-domain check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q04",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "A rotation formula determines the center and angle.",
+      "reason_zh": "旋转坐标公式确定中心和角度。"
+    },
+    "secondary": [],
+    "statement_en": "A clockwise rotation through $m\\in(0,180)$ degrees about $(x,y)$ maps $A=(0,0),B=(0,12),C=(16,0)$ respectively to $(24,18),(36,18),(24,2)$. Find $m+x+y$.",
+    "statement_zh": "绕 $(x,y)$ 顺时针旋转 $m$ 度，$0<m<180$，将 $(0,0),(0,12),(16,0)$ 依次变为 $(24,18),(36,18),(24,2)$。求 $m+x+y$。",
+    "answer": "108",
+    "solution_en": [
+      "The direction $(0,12)$ becomes $(12,0)$, so $m=90$. A clockwise quarter-turn around $(x,y)$ maps $(p,q)$ to $(x+q-y,y-p+x)$.",
+      "The origin image gives $x-y=24,x+y=18$, hence $(x,y)=(21,-3)$. Substitution also gives both remaining images, so the requested sum is $90+21-3=108$."
+    ],
+    "solution_zh": [
+      "方向 $(0,12)$ 变成 $(12,0)$，故顺时针转角为 $90^\\circ$。绕 $(x,y)$ 的该旋转将 $(p,q)$ 变为 $(x+q-y,y-p+x)$。",
+      "原点的像给出 $x-y=24,x+y=18$，所以 $(x,y)=(21,-3)$；代入另两点也吻合。所求 $108$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/4",
+    "method_chain": [
+      "Quarter-turn coordinates",
+      "Center equations",
+      "Image verification"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q05",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "Successive base digit sums dictate the minimum.",
+      "reason_zh": "多层进位制数位和决定最小值。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Minimize successively through the digit-sum maps.",
+        "reason_zh": "逐层反推最小数位和输入。"
+      }
+    ],
+    "statement_en": "Let $f(n)$ be the sum of the base-$4$ digits of $n$, and let $g(n)$ be the sum of the base-$8$ digits of $f(n)$. For the smallest positive $N$ whose $g(N)$ has a hexadecimal digit $A,B,C,D,E$, or $F$, find $N\\bmod1000$.",
+    "statement_zh": "令 $f(n)$ 为 $n$ 的四进制数位和，$g(n)$ 为 $f(n)$ 的八进制数位和。设 $N$ 是使 $g(N)$ 的十六进制表示出现 $A$ 至 $F$ 中某个数字的最小正整数，求 $N$ 除以 $1000$ 的余数。",
+    "answer": "151",
+    "solution_en": [
+      "The first hexadecimal value needing a digit beyond $9$ is $10$. For an integer $k<31$, its base-$8$ digit sum is at most $9$, while $31=37_8$ has digit sum $10$.",
+      "The least base-$4$ number with digit sum at least $31$ uses eleven digits, with leading digit $1$ and ten trailing $3$ digits. This greedy placement puts as much digit mass as possible in low places; thus it also proves minimality.",
+      "$N=13333333333_4=2\\cdot4^{10}-1=2097151$, so the remainder is $151$."
+    ],
+    "solution_zh": [
+      "十六进制首次出现大于 $9$ 的数字是在数值 $10$。任意 $k<31$ 的八进制数位和不超过 $9$，而 $31=37_8$ 的数位和是 $10$。",
+      "四进制数位和至少为 $31$ 的最小数需十一位：首位为 $1$，后十位为 $3$。把数位贡献尽量放在低位可使数值最小。",
+      "所以 $N=13333333333_4=2\\cdot4^{10}-1=2097151$，余数为 $151$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/5",
+    "method_chain": [
+      "Reverse digit-sum thresholds",
+      "Greedy place-value minimization"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q06",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "A symbolic period proof, rather than empirical pattern spotting, resolves the recurrence.",
+      "reason_zh": "通过符号计算证明五周期，再处理下标。"
+    },
+    "secondary": [],
+    "statement_en": "Define $t_1=20,t_2=21$ and $t_n=(5t_{n-1}+1)/(25t_{n-2})$ for $n\\ge3$. Write $t_{2020}=p/q$ reduced and find $p+q$.",
+    "statement_zh": "数列满足 $t_1=20,t_2=21$，且 $n\\ge3$ 时 $t_n=(5t_{n-1}+1)/(25t_{n-2})$。将 $t_{2020}$ 约分为 $p/q$，求 $p+q$。",
+    "answer": "626",
+    "solution_en": [
+      "Rescale by $u_n=5t_n$. Then $u_n=(u_{n-1}+1)/u_{n-2}$. Starting from arbitrary positive $a,b$, the next three values are $(b+1)/a,(a+b+1)/(ab),(a+1)/b$, followed by $a,b$.",
+      "The recurrence therefore repeats every five indices. Since $2020\\equiv0\\pmod5$, use $u_5=(100+1)/105=101/105$.",
+      "It follows that $t_{2020}=101/525$ in lowest terms, and the answer is $626$."
+    ],
+    "solution_zh": [
+      "令 $u_n=5t_n$，递推变成 $u_n=(u_{n-1}+1)/u_{n-2}$。若首两项为正数 $a,b$，接着三项为 $(b+1)/a,(a+b+1)/(ab),(a+1)/b$，再接着回到 $a,b$。",
+      "所以数列五项一循环。$2020\\equiv0\\pmod5$，且 $u_5=(100+1)/105=101/105$。",
+      "故 $t_{2020}=101/525$，答案为 $626$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/6",
+    "method_chain": [
+      "Rescale recurrence",
+      "Symbolic five-cycle",
+      "Index reduction"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q07",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE09",
+      "reason_en": "Sphere fitting is governed by spatial distances to the two cone surfaces.",
+      "reason_zh": "球的容纳由到两个圆锥侧面的空间距离决定。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Add two distance bounds and prove the bound is attained.",
+        "reason_zh": "相加两个距离上界，并证明可达到。"
+      }
+    ],
+    "statement_en": "Two congruent solid cones have radius $3$ and height $8$. Their axes meet perpendicularly at an interior point $O$ that is $3$ from each base plane. A sphere lies in their intersection. If the greatest possible radius squared is $m/n$ reduced, find $m+n$.",
+    "statement_zh": "两个全等实心圆锥的底面半径为 $3$、高为 $8$，轴线在内部点 $O$ 垂直相交，且 $O$ 距两底面均为 $3$。球同时包含在两个圆锥内。若最大球半径平方约分为 $m/n$，求 $m+n$。",
+    "answer": "298",
+    "solution_en": [
+      "Orient each axis from its base toward its apex, with origin $O$. In an axial half-plane, the side is $3u+8\\rho=15$, since the apex is at $u=5$ and the base edge at $(u,\\rho)=(-3,3)$.",
+      "For sphere center axial coordinates $u,v$, its distances to the axes are at least $|v|,|u|$. Thus $\\sqrt{73}r\\le15-3u-8|v|$ and $\\sqrt{73}r\\le15-3v-8|u|$. Adding yields $2\\sqrt{73}r\\le30$.",
+      "At $O$, the sphere with $r=15/\\sqrt{73}$ touches each lateral surface, and $r<3$ keeps it above both base planes. Hence the maximum square is $225/73$, giving $298$."
+    ],
+    "solution_zh": [
+      "沿各轴由底面指向顶点取坐标，以 $O$ 为原点。轴截面的侧边方程为 $3u+8\\rho=15$，对应顶点 $u=5$ 和底边点 $(-3,3)$。",
+      "球心轴向坐标为 $u,v$ 时，到两轴的距离至少为 $|v|,|u|$。所以 $\\sqrt{73}r\\le15-3u-8|v|$，$\\sqrt{73}r\\le15-3v-8|u|$。相加得 $2\\sqrt{73}r\\le30$。",
+      "球心取 $O$ 时，$r=15/\\sqrt{73}$ 同时切两侧面，且 $r<3$ 不越过底面，因此上界可达到。最大平方为 $225/73$，答案 $298$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/7",
+    "method_chain": [
+      "Cone axial section",
+      "Distance bound",
+      "Equality construction"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q08",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Iteration changes the zero set through preimages.",
+      "reason_zh": "函数迭代通过原像关系改变零点集合。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL06",
+        "reason_en": "Take preimages through absolute values and track nonnegative zeros.",
+        "reason_zh": "通过绝对值求原像并追踪非负零点。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Sum an arithmetic progression of zeros.",
+        "reason_zh": "将零点组成的等差数列求和。"
+      }
+    ],
+    "statement_en": "Let $f_1(x)=|x-1|$ and $f_n(x)=f_{n-1}(|x-n|)$ for $n>1$. Find the first positive index $n$ for which the sum of all distinct real zeros of $f_n$ is greater than $500000$.",
+    "statement_zh": "定义 $f_1(x)=|x-1|$，$n>1$ 时 $f_n(x)=f_{n-1}(|x-n|)$。求使 $f_n$ 全部不同实零点之和首次超过 $500000$ 的正整数下标 $n$。",
+    "answer": "101",
+    "solution_en": [
+      "If $z\\ge0$ is a zero of $f_{n-1}$, its preimages are $n\\pm z$; negative zeros give no preimages. With $T_j=j(j+1)/2$, induction shows that the zero set is the step-$2$ progression from $n-T_{n-1}$ to $T_n$.",
+      "The endpoints sum to $2n$, and the number of terms is $T_{n-1}+1$. Hence the sum is $S_n=n(n(n-1)/2+1)$, an increasing expression.",
+      "$S_{100}=495100$, while $S_{101}=510151$. Therefore the first index is $101$."
+    ],
+    "solution_zh": [
+      "若 $z\\ge0$ 是前一函数零点，则原像为 $n\\pm z$；负零点无原像。令 $T_j=j(j+1)/2$，归纳可证零点为从 $n-T_{n-1}$ 到 $T_n$、公差为 $2$ 的等差数列。",
+      "两端和为 $2n$，项数为 $T_{n-1}+1$，故零点和 $S_n=n(n(n-1)/2+1)$，随 $n$ 递增。",
+      "$S_{100}=495100$，$S_{101}=510151$，因此最小下标为 $101$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/8",
+    "method_chain": [
+      "Iterated preimage sets",
+      "Arithmetic-progression induction",
+      "Threshold comparison"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q09",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO04",
+      "reason_en": "Overlapping adjacency restrictions require inclusion-exclusion.",
+      "reason_zh": "重叠的禁邻条件需要用容斥处理。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Glue selected neighboring labels into reversible blocks.",
+        "reason_zh": "将指定相邻标号合并为可反转区块。"
+      }
+    ],
+    "statement_en": "Six distinct people initially sit in the order $1,2,3,4,5,6$. In how many new linear seating orders is every originally neighboring pair separated?",
+    "statement_zh": "六人最初依次坐为 $1,2,3,4,5,6$。重新排成一行时，原来相邻的任意两人都不得相邻，求排法数。",
+    "answer": "90",
+    "solution_en": [
+      "Use inclusion-exclusion on the five forbidden edges $12,23,34,45,56$. A selected subset of $k$ edges forming $r$ nonempty runs forces $r$ blocks, each orientable in two ways, leaving $(6-k)!$ block arrangements.",
+      "Summing $2^r(6-k)!$ over subsets of size $k=0,1,2,3,4,5$ gives $720,1200,768,228,32,2$. These follow by grouping edge subsets into runs; for $k=3$ the run counts are $3,6,1$ for $r=1,2,3$.",
+      "Alternating the totals gives $720-1200+768-228+32-2=90$."
+    ],
+    "solution_zh": [
+      "对五条禁邻边 $12,23,34,45,56$ 使用容斥。若选中 $k$ 条边形成 $r$ 段，每段合为一个区块且可正反排列，故共有 $2^r(6-k)!$ 种。",
+      "按 $k=0,1,2,3,4,5$ 汇总，得到 $720,1200,768,228,32,2$。例如 $k=3$ 时，形成 $1,2,3$ 段的边集分别有 $3,6,1$ 个。",
+      "交替相减得到 $720-1200+768-228+32-2=90$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/9",
+    "method_chain": [
+      "Forbidden-edge inclusion-exclusion",
+      "Run block count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q10",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "A variable modulus becomes a fixed divisor list.",
+      "reason_zh": "可变模数被化为固定整数的约数集合。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Replace the sum of cubes by a triangular-number square.",
+        "reason_zh": "用三角数平方表示立方和。"
+      }
+    ],
+    "statement_en": "Add all positive integers $n$ for which the remainder of $\\sum_{j=1}^n j^3$ upon division by $n+5$ is $17$.",
+    "statement_zh": "求所有正整数 $n$ 之和，使 $1^3+\\cdots+n^3$ 除以 $n+5$ 的余数为 $17$。",
+    "answer": "239",
+    "solution_en": [
+      "Put $K=n(n+1)/2$, so the sum is $K^2$. Modulo $d=n+5$, $2K\\equiv20$ and therefore $4K^2\\equiv400$. The desired condition implies $d\\mid332$, with $d>17$.",
+      "Thus $d=83,166,332$, corresponding to $n=78,161,327$. Since multiplication by $4$ may lose information, test the original congruence: the respective residues $K^2\\bmod d$ are $17,17,100$.",
+      "Only $78,161$ work, and their sum is $239$."
+    ],
+    "solution_zh": [
+      "令 $K=n(n+1)/2$，立方和为 $K^2$。模 $d=n+5$ 有 $2K\\equiv20$，故 $4K^2\\equiv400$。所求条件推出 $d\\mid332$，且 $d>17$。",
+      "所以 $d=83,166,332$，即 $n=78,161,327$。因乘以 $4$ 可能丢失条件，逐个检验原式，余数分别为 $17,17,100$。",
+      "有效值仅 $78,161$，和为 $239$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/10",
+    "method_chain": [
+      "Sum-of-cubes identity",
+      "Divisor congruence",
+      "Original-modulus check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q11",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "Shared roots encode all three quadratics through Vieta relations.",
+      "reason_zh": "公共根通过韦达关系同时编码三个二次多项式。"
+    },
+    "secondary": [],
+    "statement_en": "Let $P=x^2-3x-7$, and let $Q,R$ be monic quadratics. Each pair among $P+Q,P+R,Q+R$ shares a root, and the three shared roots are distinct. If $Q(0)=2$ and $R(0)=m/n$ reduced with $m,n>0$, find $m+n$.",
+    "statement_zh": "设 $P=x^2-3x-7$，$Q,R$ 为首一二次多项式。$P+Q,P+R,Q+R$ 两两有公共根，且三个公共根互异。已知 $Q(0)=2$，$R(0)=m/n$ 已约分且为正，求 $m+n$。",
+    "answer": "71",
+    "solution_en": [
+      "Name the shared roots so that $P+Q=2(x-a)(x-b)$, $P+R=2(x-a)(x-c)$, $Q+R=2(x-b)(x-c)$. Combining these expressions recovers $2P$, whose linear coefficient yields $a=3/2$.",
+      "The constant term of $P+Q$ gives $2ab=-5$, hence $b=-5/3$. If $s=R(0)$, the other constants give $2ac=s-7$ and $2bc=s+2$.",
+      "Subtract to get $2c(b-a)=9$, so $c=-27/19$. Then $s=2bc-2=52/19$; the three roots are distinct and the answer is $71$."
+    ],
+    "solution_zh": [
+      "设公共根使 $P+Q=2(x-a)(x-b)$、$P+R=2(x-a)(x-c)$、$Q+R=2(x-b)(x-c)$。前两式相加减第三式得到 $2P$，比较一次项得 $a=3/2$。",
+      "$P+Q$ 常数项给出 $2ab=-5$，故 $b=-5/3$。设 $s=R(0)$，另有 $2ac=s-7$、$2bc=s+2$。",
+      "相减得 $2c(b-a)=9$，所以 $c=-27/19$，$s=2bc-2=52/19$。三根确实不同，答案 $71$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/11",
+    "method_chain": [
+      "Pairwise-root factorization",
+      "Coefficient comparison",
+      "Constant-term elimination"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q12",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "A midpoint and slope characterization turn the incidence condition into intervals.",
+      "reason_zh": "中点和斜率将穿格条件转化为整数区间。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Enumerate the four feasible odd row counts and interval constraints.",
+        "reason_zh": "枚举四种奇数行数及整数范围。"
+      }
+    ],
+    "statement_en": "An $m$-row, $n$-column grid, with odd $m,n>1$, is numbered consecutively left to right in each row, starting at the top. Label $200$ lies in row $1$, and label $2000$ in row $m$. Count ordered pairs $(m,n)$ for which the line through those two cell centers crosses the interior of cell $1099$.",
+    "statement_zh": "一个 $m$ 行 $n$ 列单位方格阵中，$m,n>1$ 均为奇数，从顶行起逐行由左向右连续编号。$200$ 号在顶行，$2000$ 号在底行。求使这两格中心连线穿过 $1099$ 号格内部的有序对 $(m,n)$ 数量。",
+    "answer": "248",
+    "solution_en": [
+      "Use cell centers $(\\text{column},\\text{row})$. The endpoints are $(200,1)$ and $(b,m)$, where $b=2000-(m-1)n$. Since $m,n$ are odd, $b$ is even. Their midpoint is the center of cell $1100$; cell $1099$ is immediately to its left.",
+      "The line reaches the left neighbor interior exactly when its absolute slope is below $1$: $m-1<|b-200|=|1800-(m-1)n|$. Also $n\\ge201$ and $(m-1)n<2000\\le mn$, so $m=3,5,7,9$.",
+      "The odd-column ranges are respectively $667\\le n\\le999$, $401\\le n\\le499$, $287\\le n\\le333$, $223\\le n\\le249$. Their sizes are $167,50,24,14$.",
+      "The slope test excludes respectively $\\{899,901\\},\\{449,451\\},\\{299,301\\},\\{225\\}$. The valid total is $165+48+22+13=248$."
+    ],
+    "solution_zh": [
+      "用列、行编号表示格心。两端为 $(200,1)$、$(b,m)$，其中 $b=2000-(m-1)n$ 是偶数。中点恰为 $1100$ 号格中心，而 $1099$ 在其左邻。",
+      "连线进入左邻格内部当且仅当斜率绝对值小于 $1$，即 $m-1<|1800-(m-1)n|$。同时 $n\\ge201$、$(m-1)n<2000\\le mn$，故 $m=3,5,7,9$。",
+      "对应奇数 $n$ 范围为 $[667,999],[401,499],[287,333],[223,249]$，数量依次为 $167,50,24,14$。",
+      "斜率条件依次排除 $899,901$；$449,451$；$299,301$；$225$。有效总数 $165+48+22+13=248$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/12",
+    "method_chain": [
+      "Grid-center midpoint",
+      "Slope interior test",
+      "Odd-integer ranges"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q13",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Tangency determines tangent lengths and an inradius closure relation.",
+      "reason_zh": "相切关系决定切线长和内切圆半径闭合条件。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Use a half-angle closure equation and reject the wrong branch.",
+        "reason_zh": "使用半角闭合方程并排除错误分支。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Area of a tangential polygon is inradius times semiperimeter.",
+        "reason_zh": "外切多边形面积等于内切圆半径乘半周长。"
+      }
+    ],
+    "statement_en": "A convex pentagon has consecutive side lengths $5,6,6,6,7$ and a circle tangent to all five sides. Determine its area.",
+    "statement_zh": "凸五边形的连续五边长为 $5,6,6,6,7$，且存在与五边均相切的内切圆。求面积。",
+    "answer": "60",
+    "solution_en": [
+      "Equal tangents at each vertex give tangent lengths $3,2,4,2,4$. If the inradius is $r$, the half-angle at a vertex of tangent length $t$ has tangent $r/t$. The five half-angles sum to $270^\\circ$.",
+      "Put $\\beta=\\arctan(r/2)$ and $\\gamma=\\arctan(r/4)$. Then $r/3=\\cot(2\\beta+2\\gamma)$. With $T=\\tan(\\beta+\\gamma)=6r/(8-r^2)$, this gives $2rT=3(1-T^2)$ and hence $5r^4-84r^2+64=0$.",
+      "The candidates are $r^2=16$ and $4/5$. The latter has every half-angle below $45^\\circ$, so cannot sum to $270^\\circ$. For $r=4$ the half-angles have the required sum (the sum is strictly increasing in $r$).",
+      "The semiperimeter is $15$, so area $=15r=60$."
+    ],
+    "solution_zh": [
+      "各顶点两切线长相等，解得切线长依次为 $3,2,4,2,4$。若半径为 $r$，切线长为 $t$ 的顶点半角正切为 $r/t$。五个半角之和为 $270^\\circ$。",
+      "令 $\\beta=\\arctan(r/2),\\gamma=\\arctan(r/4)$，则 $r/3=\\cot(2\\beta+2\\gamma)$。再令 $T=6r/(8-r^2)$，得到 $2rT=3(1-T^2)$，整理为 $5r^4-84r^2+64=0$。",
+      "候选 $r^2=16,4/5$。后者每个半角小于 $45^\\circ$，不可能合为 $270^\\circ$。$r=4$ 满足原角和；且角和随 $r$ 严格递增。",
+      "半周长为 $15$，面积为 $15\\cdot4=60$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/13",
+    "method_chain": [
+      "Equal tangent lengths",
+      "Half-angle closure",
+      "Branch check",
+      "Inradius area"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q14",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "Piecewise monotone ranges make the iterated inverse count exact.",
+      "reason_zh": "分段单调的值域使迭代原像计数可精确完成。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Nested interval indices give a binomial coefficient.",
+        "reason_zh": "嵌套区间下标构成组合数计数。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL09",
+        "reason_en": "Count three successive preimage layers.",
+        "reason_zh": "统计三层函数原像。"
+      }
+    ],
+    "statement_en": "For real $x$, let $\\{x\\}=x-\\lfloor x\\rfloor$ and $f(x)=x\\{x\\}$. Let $N$ count real $x\\in[0,2020]$ satisfying $f(f(f(x)))=17$. Find $N\\bmod1000$.",
+    "statement_zh": "定义小数部分 $\\{x\\}=x-\\lfloor x\\rfloor$，$f(x)=x\\{x\\}$。设 $N$ 为区间 $[0,2020]$ 内满足 $f(f(f(x)))=17$ 的实数解个数，求 $N$ 除以 $1000$ 的余数。",
+    "answer": "10",
+    "solution_en": [
+      "On $[j,j+1)$, $f(j+t)=(j+t)t$ increases bijectively from $0$ to the range $[0,j+1)$. In particular integer endpoints cannot solve the target equation.",
+      "The inverse of $17$ has one point in each interval $(n,n+1)$ for $n\\ge17$. Taking another inverse produces one point in every $(k,k+1)$ with $k\\ge n$. A third inverse in $(j,j+1)$ exists exactly for $17\\le n\\le k\\le j$.",
+      "For fixed $j$, the count is $\\binom{j-15}{2}$. Sum for $17\\le j\\le2019$ to obtain $N=\\binom{2005}{3}=1341349010$. The remainder is $10$."
+    ],
+    "solution_zh": [
+      "在 $[j,j+1)$ 上，$f(j+t)=(j+t)t$ 严格递增，值域为 $[0,j+1)$。整数端点不能满足目标等式。",
+      "$17$ 的第一层原像在每个 $(n,n+1)$ 中有一个，$n\\ge17$。第二层原像所在区间下标 $k\\ge n$；第三层在 $(j,j+1)$ 中存在当且仅当 $17\\le n\\le k\\le j$。",
+      "固定 $j$ 有 $\\binom{j-15}{2}$ 个解。对 $j=17$ 至 $2019$ 求和得 $N=\\binom{2005}{3}=1341349010$，余数 $10$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/14",
+    "method_chain": [
+      "Monotone floor intervals",
+      "Three-level inverse indices",
+      "Hockey-stick sum"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2020-II-Q15",
+    "paper_id": "AIME-2020-II",
+    "exam_year": 2020,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "The tangent and cyclic projection relations set up the decisive metric identity.",
+      "reason_zh": "切线和垂足共圆关系建立关键度量恒等式。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Coordinates eliminate the remaining free vertex.",
+        "reason_zh": "坐标消去剩余自由顶点。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Sine-law relations express projection and chord lengths.",
+        "reason_zh": "正弦定理表示投影与弦长。"
+      }
+    ],
+    "statement_en": "For an acute scalene triangle $ABC$, tangents to its circumcircle at $B,C$ meet at $T$. Drop perpendiculars from $T$ to the lines $AB,AC$, with feet $X,Y$. Given $TB=TC=16$, $BC=22$, and $TX^2+TY^2+XY^2=1143$, find $XY^2$.",
+    "statement_zh": "锐角不等边三角形 $ABC$ 的外接圆在 $B,C$ 处的切线交于 $T$。从 $T$ 向直线 $AB,AC$ 作垂线，垂足为 $X,Y$。已知 $TB=TC=16$、$BC=22$、$TX^2+TY^2+XY^2=1143$，求 $XY^2$。",
+    "answer": "717",
+    "solution_en": [
+      "Tangent-chord and sine-law relations yield $TX=16\\sin C$, $TY=16\\sin B$. Since $A,X,T,Y$ are concyclic with diameter $AT$, $XY=AT\\sin A$. For circumradius $R$, the given sum is $[64(AB^2+AC^2)+121AT^2]/R^2=1143$.",
+      "Set $B=(-11,0),C=(11,0),T=(0,-\\sqrt{135})$. Perpendicular radius and tangent give circumcenter $O=(0,121/\\sqrt{135})$, hence $R^2=30976/135$.",
+      "For $A=(u,v)$ on the circle, $u^2+v^2=242v/\\sqrt{135}+121$. Therefore $AB^2+AC^2=484v/\\sqrt{135}+484$ and $AT^2=512v/\\sqrt{135}+256$.",
+      "The sum condition gives $v=291/\\sqrt{135}$. Thus $AT^2=183552/135$ and $XY^2=121AT^2/R^2=183552/256=717$."
+    ],
+    "solution_zh": [
+      "切弦角及正弦定理给出 $TX=16\\sin C,TY=16\\sin B$。因 $A,X,T,Y$ 共圆且直径为 $AT$，$XY=AT\\sin A$。于是给定和为 $[64(AB^2+AC^2)+121AT^2]/R^2=1143$。",
+      "取 $B=(-11,0),C=(11,0),T=(0,-\\sqrt{135})$。由半径垂直切线，外心 $O=(0,121/\\sqrt{135})$，所以 $R^2=30976/135$。",
+      "设 $A=(u,v)$，圆方程给出 $u^2+v^2=242v/\\sqrt{135}+121$。从而 $AB^2+AC^2=484v/\\sqrt{135}+484$，$AT^2=512v/\\sqrt{135}+256$。",
+      "代入已知和得到 $v=291/\\sqrt{135}$，于是 $AT^2=183552/135$，最终 $XY^2=121AT^2/R^2=717$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2020II/problem/15",
+    "method_chain": [
+      "Tangent-chord angle",
+      "Diameter circle",
+      "Circumcircle coordinates",
+      "Linear elimination"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q01",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "Race probabilities depend on the previous result.",
+      "reason_zh": "每场概率依赖前一场结果。"
+    },
+    "secondary": [],
+    "statement_en": "Two runners contest six races. Runner Z wins the first; subsequently the winner of the previous race wins again with probability $2/3$. If the probability that Z wins exactly five races is $m/n$ reduced, find $m+n$.",
+    "statement_zh": "两人赛跑六次，Z 赢得第一次。以后每次前一场胜者再次获胜的概率为 $2/3$。若 Z 恰赢五次的概率约分为 $m/n$，求 $m+n$。",
+    "answer": "97",
+    "solution_en": [
+      "Exactly one of races $2$ through $6$ must be a loss. If the loss is last, the path has four repeats and one switch, with probability $16/243$.",
+      "At any of the other four positions, there are two switches and three repeats, each path having probability $8/243$. Thus the total is $(16+4\\cdot8)/243=16/81$, giving $97$."
+    ],
+    "solution_zh": [
+      "第 $2$ 至第 $6$ 场中须恰输一次。若最后一场输，包含四次保持和一次转换，概率为 $16/243$。",
+      "若输在其余四个位置，各有两次转换和三次保持，每种概率为 $8/243$。总概率 $(16+4\\cdot8)/243=16/81$，答案 $97$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/1",
+    "method_chain": [
+      "Outcome transitions",
+      "Loss-position cases"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q02",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Coordinates recover the diagram and describe the exact overlap.",
+      "reason_zh": "坐标重建图形并准确描述交叠区域。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Compute the area of the resulting overlap parallelogram.",
+        "reason_zh": "计算交叠平行四边形的面积。"
+      }
+    ],
+    "statement_en": "Rectangle $ABCD$ has $AB=3,BC=11$. A second rectangle, in cyclic order $AECF$, shares opposite vertices $A,C$ and has $AF=7,FC=9$, with $F$ on the opposite side of line $AC$ from $B$. Its overlap with $ABCD$ has area $m/n$ reduced. Find $m+n$.",
+    "statement_zh": "矩形 $ABCD$ 中 $AB=3,BC=11$。另一矩形按 $A,E,C,F$ 顺序取顶点，共用对角顶点 $A,C$，且 $AF=7,FC=9$；$F$ 与 $B$ 位于直线 $AC$ 两侧。两矩形重叠面积约分为 $m/n$，求 $m+n$。",
+    "answer": "109",
+    "solution_en": [
+      "Set $A=(0,3),B=(0,0),C=(11,0),D=(11,3)$. The stated orientation and lengths give $F=(28/5,36/5)$ and $E=(27/5,-21/5)$. These satisfy the distance equations and $A+C=E+F$.",
+      "The second rectangle is bounded by $9\\le4x+3y\\le44$ and $-12\\le3x-4y\\le33$. Throughout $0\\le x\\le11,0\\le y\\le3$, the latter pair already holds.",
+      "The overlap is therefore a parallelogram of height $3$ and horizontal width $(44-9)/4=35/4$. Its area is $105/4$, giving $109$."
+    ],
+    "solution_zh": [
+      "取 $A=(0,3),B=(0,0),C=(11,0),D=(11,3)$。由长度和方位得 $F=(28/5,36/5),E=(27/5,-21/5)$，可核对距离及 $A+C=E+F$。",
+      "第二矩形由 $9\\le4x+3y\\le44$、$-12\\le3x-4y\\le33$ 围成。在第一矩形内，后一组不等式自动成立。",
+      "所以交叠为高 $3$、水平宽 $35/4$ 的平行四边形，面积 $105/4$，答案 $109$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/2",
+    "method_chain": [
+      "Shared-diagonal coordinates",
+      "Rectangle half-planes",
+      "Parallelogram area"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Source SVG inspected; its orientation is explicitly included in the restatement. Coordinate distances and half-plane bounds recomputed."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q03",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "The unique power-of-two factor gives a duplicate-free count.",
+      "reason_zh": "提取唯一的二次幂因子可避免重复计数。"
+    },
+    "secondary": [],
+    "statement_en": "How many positive integers below $1000$ are a difference of two integer powers of $2$?",
+    "statement_zh": "小于 $1000$ 的正整数中，有多少个可写为两个 $2$ 的整数次幂之差？",
+    "answer": "50",
+    "solution_en": [
+      "A positive integral difference must be $2^b(2^c-1)$ with integers $b\\ge0,c\\ge1$. Negative lower exponents would leave an odd numerator over a power of two, so cannot give an integer. Unique odd parts ensure no double counting.",
+      "For $c=1,\\ldots,9$, the admissible counts of $b$ are $10,9,8,7,6,4,3,2,1$. For $c\\ge10$ even the smallest value exceeds $999$.",
+      "These counts sum to $50$."
+    ],
+    "solution_zh": [
+      "正整数之差必为 $2^b(2^c-1)$，其中 $b\\ge0,c\\ge1$；若较小指数为负，则奇数分子不能约去分母中的 $2$，不可能为整数。由奇数部分唯一性，不会重复计数。",
+      "$c=1$ 至 $9$ 时可取的 $b$ 个数依次为 $10,9,8,7,6,4,3,2,1$。$c\\ge10$ 时最小值也超过 $999$。",
+      "相加得 $50$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/3",
+    "method_chain": [
+      "Odd-part factorization",
+      "Exponent bounds"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q04",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "The problem counts increasing integer partitions of a fixed total.",
+      "reason_zh": "本题统计固定总和的严格递增整数分拆。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Divide distinct ordered triples by their six orderings.",
+        "reason_zh": "将互异有序三元组按六种排列合并。"
+      }
+    ],
+    "statement_en": "Count positive integer triples $a<b<c$ with $a+b+c=66$.",
+    "statement_zh": "求满足 $a<b<c$ 且 $a+b+c=66$ 的正整数三元组个数。",
+    "answer": "331",
+    "solution_en": [
+      "There are $\\binom{65}{2}=2080$ ordered positive triples. One has all entries equal.",
+      "For exactly two equal entries, use the multiset $\\{u,u,66-2u\\}$ with $1\\le u\\le32$ and $u\\ne22$. The $31$ multisets have three orderings each, giving $93$.",
+      "The remaining $2080-1-93=1986$ triples have distinct entries. Each increasing triple has six orderings, so the answer is $1986/6=331$."
+    ],
+    "solution_zh": [
+      "正整数有序三元组总数为 $\\binom{65}{2}=2080$，其中三数全等的仅一组。",
+      "恰有两数相等时写成 $\\{u,u,66-2u\\}$，$1\\le u\\le32,u\\ne22$。有 $31$ 种多重集，每种三种排列，共 $93$ 组。",
+      "互异有序三元组为 $2080-1-93=1986$，每个递增三元组对应六种排列，故答案 $331$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/4",
+    "method_chain": [
+      "Positive compositions",
+      "Repeated-entry correction",
+      "Ordering symmetry"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q05",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Integrality reduces a quadratic relation to six divisor cases.",
+      "reason_zh": "整数性将二次关系缩为六个约数情形。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Parameterize an arithmetic progression by its midpoint and difference.",
+        "reason_zh": "用中项与公差表示等差数列。"
+      }
+    ],
+    "statement_en": "Consider strictly increasing three-term arithmetic progressions of integers. Require that the sum of the three squared terms equals the middle term times the square of the common difference. Sum the last terms of all such progressions.",
+    "statement_zh": "考虑严格递增的三项整数等差数列，要求三项平方和等于中项乘公差的平方。求所有此类数列末项之和。",
+    "answer": "31",
+    "solution_en": [
+      "Write the terms as $a-d,a,a+d$ with $d\\ge1$. The equation is $d^2(a-2)=3a^2$, forcing $a>2$.",
+      "With $t=a-2$, obtain $d^2=3t+12+12/t$, so $t$ is a positive divisor of $12$. For $t=1,2,3,4,6,12$ the squared differences are $27,24,25,27,32,49$.",
+      "Only $(a,d)=(5,5),(14,7)$ work. Their last terms are $10,21$, summing to $31$."
+    ],
+    "solution_zh": [
+      "写三项为 $a-d,a,a+d$，$d\\ge1$。条件化为 $d^2(a-2)=3a^2$，故 $a>2$。",
+      "令 $t=a-2$，得 $d^2=3t+12+12/t$，所以 $t\\mid12$。依次试 $t=1,2,3,4,6,12$，得到 $27,24,25,27,32,49$。",
+      "仅 $(a,d)=(5,5),(14,7)$ 可行，末项为 $10,21$，和为 $31$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/5",
+    "method_chain": [
+      "Midpoint parameterization",
+      "Divisor reduction",
+      "Square check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q06",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "A cube distance identity removes the unknown side length.",
+      "reason_zh": "立方体的距离恒等式消去未知棱长。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Cancel unknown coordinates in squared-distance expansions.",
+        "reason_zh": "展开距离平方并消去未知坐标。"
+      }
+    ],
+    "statement_en": "From one cube vertex $A$, the adjacent vertices are $B,C,D$, and the opposite vertex is $G$. A point $P$ has distances $PB=60\\sqrt{10},PC=60\\sqrt5,PD=120\\sqrt2,PG=36\\sqrt7$. Determine $PA$.",
+    "statement_zh": "立方体中，与顶点 $A$ 相邻的三点为 $B,C,D$，对顶点为 $G$。一点 $P$ 满足 $PB=60\\sqrt{10},PC=60\\sqrt5,PD=120\\sqrt2,PG=36\\sqrt7$，求 $PA$。",
+    "answer": "192",
+    "solution_en": [
+      "Set $A=0$, with $B,C,D$ on perpendicular coordinate axes at distance $s$, and $G=(s,s,s)$. Expanding distances to $P=(x,y,z)$ gives $PB^2+PC^2+PD^2-PG^2=2PA^2$; both linear coordinate terms and $s^2$ cancel.",
+      "Therefore $2PA^2=36000+18000+28800-9072=73728$. Thus $PA=\\sqrt{36864}=192$."
+    ],
+    "solution_zh": [
+      "取 $A$ 为原点，$B,C,D$ 分别在三条垂直坐标轴上，距原点均为 $s$，$G=(s,s,s)$。展开到 $P=(x,y,z)$ 的距离得 $PB^2+PC^2+PD^2-PG^2=2PA^2$，坐标一次项和 $s^2$ 均消去。",
+      "所以 $2PA^2=36000+18000+28800-9072=73728$，从而 $PA=192$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/6",
+    "method_chain": [
+      "Cube coordinates",
+      "Squared-distance cancellation"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q07",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "The sine maximum converts simultaneous phase equations into arithmetic constraints.",
+      "reason_zh": "正弦最大值条件将相位方程化为算术约束。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "A linear Diophantine equation gives the gcd criterion.",
+        "reason_zh": "线性丢番图方程给出最大公因数判据。"
+      }
+    ],
+    "statement_en": "Count integer pairs $1\\le m<n\\le30$ for which $\\sin(mx)+\\sin(nx)=2$ has at least one real solution $x$.",
+    "statement_zh": "统计 $1\\le m<n\\le30$ 的整数对，使方程 $\\sin(mx)+\\sin(nx)=2$ 有实数解。",
+    "answer": "63",
+    "solution_en": [
+      "Both sines must equal $1$. Thus $mx=(4a+1)\\pi/2$ and $nx=(4b+1)\\pi/2$. Eliminating $x$ gives $4(na-mb)=m-n$.",
+      "Let $g=\\gcd(m,n)$, $m=gu,n=gv$. Integer $a,b$ exist exactly when $u\\equiv v\\pmod4$; coprimality then forces both odd.",
+      "For $g=1,2,3,4,5,6$, coprime pairs $u<v\\le\\lfloor30/g\\rfloor$ in the same odd residue class mod $4$ number $44,11,4,2,1,1$. For $g\\ge7$ there are none. The total is $63$."
+    ],
+    "solution_zh": [
+      "两正弦都必须为 $1$，所以 $mx=(4a+1)\\pi/2,nx=(4b+1)\\pi/2$。消去 $x$ 得 $4(na-mb)=m-n$。",
+      "设 $g=\\gcd(m,n),m=gu,n=gv$。整数解存在当且仅当 $u\\equiv v\\pmod4$；由互质性知二者均为奇数。",
+      "按 $g=1,2,3,4,5,6$，上界 $\\lfloor30/g\\rfloor$ 内的同余互质对数依次为 $44,11,4,2,1,1$；更大的 $g$ 无解。总数为 $63$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/7",
+    "method_chain": [
+      "Sine maximum condition",
+      "Linear congruence feasibility",
+      "Gcd-group count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q08",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "Counting graph intersections across breakpoints determines all valid levels.",
+      "reason_zh": "按分段临界值统计水平线交点即可确定参数。"
+    },
+    "secondary": [],
+    "statement_en": "For how many integers $c$ does $\\bigl||20|x|-x^2|-c\\bigr|=21$ have exactly twelve distinct real solutions?",
+    "statement_zh": "有多少个整数 $c$，使 $\\bigl||20|x|-x^2|-c\\bigr|=21$ 恰有十二个不同实数解？",
+    "answer": "57",
+    "solution_en": [
+      "Let $F(x)=|20|x|-x^2|$, an even function. On $x\\ge0$, it rises from $0$ to $100$, falls to $0$ at $20$, then rises without bound.",
+      "Thus the level $F(x)=k$ has $6$ roots for $0<k<100$, $4$ at $k=100$, $2$ for $k>100$, $3$ at $k=0$, and none for $k<0$.",
+      "The two distinct levels are $c-21,c+21$. Twelve roots require six from each, so $0<c-21<c+21<100$. The integer range is $22\\le c\\le78$, giving $57$."
+    ],
+    "solution_zh": [
+      "令偶函数 $F(x)=|20|x|-x^2|$。在非负半轴上，它从 $0$ 升至 $100$，再降到 $x=20$ 处的 $0$，随后无限增大。",
+      "水平线高度 $k$ 在 $(0,100)$ 内有六根，$k=100$ 有四根，$k>100$ 有两根，$k=0$ 有三根，负高度无根。",
+      "原式对应不同高度 $c-21,c+21$，十二根只能各取六根。因此 $22\\le c\\le78$，共 $57$ 个整数。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/8",
+    "method_chain": [
+      "Even piecewise graph",
+      "Level intersection counts"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q09",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Two coordinate distance equations determine the trapezoid.",
+      "reason_zh": "两个点到直线距离方程确定梯形。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Use the trapezoid area formula after recovering its bases.",
+        "reason_zh": "确定两底后使用梯形面积公式。"
+      }
+    ],
+    "statement_en": "In an isosceles trapezoid $ABCD$ with parallel bases $AB<CD$ and legs $AD=BC$, the distances from $A$ to the lines $BC,CD,BD$ are $15,18,10$. If its area is $K$, determine $\\sqrt2K$.",
+    "statement_zh": "等腰梯形 $ABCD$ 的底边 $AB\\parallel CD$、$AB<CD$，腰 $AD=BC$。点 $A$ 到直线 $BC,CD,BD$ 的距离依次为 $15,18,10$。若面积为 $K$，求 $\\sqrt2K$。",
+    "answer": "567",
+    "solution_en": [
+      "The height is $18$. Set $D=(0,0),C=(u+2a,0),A=(a,18),B=(u+a,18)$, where $u=AB$. Point-line distances give $18u/\\sqrt{324+a^2}=15$ and $18u/\\sqrt{324+(u+a)^2}=10$.",
+      "Squaring and subtracting yields $u+2a=9u/5$, hence $a=2u/5$. Then $324=32u^2/25$, so $u=45\\sqrt2/4$ and $CD=81\\sqrt2/4$.",
+      "$K=9(AB+CD)=567\\sqrt2/2$, giving $\\sqrt2K=567$."
+    ],
+    "solution_zh": [
+      "高为 $18$。取 $D=(0,0),C=(u+2a,0),A=(a,18),B=(u+a,18)$，$u=AB$。点线距离公式给出 $18u/\\sqrt{324+a^2}=15$、$18u/\\sqrt{324+(u+a)^2}=10$。",
+      "平方相减得 $u+2a=9u/5$，故 $a=2u/5$。代回得 $324=32u^2/25$，所以 $AB=45\\sqrt2/4,CD=81\\sqrt2/4$。",
+      "$K=9(AB+CD)=567\\sqrt2/2$，故答案 $567$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/9",
+    "method_chain": [
+      "Symmetric trapezoid coordinates",
+      "Point-line distance",
+      "Area"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q10",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT02",
+      "reason_en": "The gcd of the current difference and an invariant controls every reset.",
+      "reason_zh": "差值与不变量的最大公因数控制每次重置。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO01",
+        "reason_en": "Track the invariant 19m-18n under shift and cancellation.",
+        "reason_zh": "追踪平移及约分下的 19m-18n 不变量。"
+      }
+    ],
+    "statement_en": "Start with $a_1=2020/2021$. Whenever $a_k=m/n$ is in lowest positive terms, define $a_{k+1}=(m+18)/(n+19)$. Add all positive indices $j$ for which $a_j=t/(t+1)$ for a positive integer $t$.",
+    "statement_zh": "从 $a_1=2020/2021$ 开始。若 $a_k=m/n$ 已约分，定义 $a_{k+1}=(m+18)/(n+19)$。求所有满足 $a_j=t/(t+1)$（$t$ 为正整数）的下标 $j$ 之和。",
+    "answer": "59",
+    "solution_en": [
+      "For each reduced pair define $d=n-m$ and $I=19m-18n$. Before reduction the shift preserves $I$ and changes the difference to $d+1$. The reduction factor is $g=\\gcd(d+1,I)$, so the updated quantities are $(d+1)/g,I/g$.",
+      "Initially $(d,I)=(1,2002)$ with $2002=2\\cdot7\\cdot11\\cdot13$. Cancellation successively uses factors $2,7,11,13$, returning $d$ to $1$ at indices $2,8,18,30$. Including the initial term gives indices $1,2,8,18,30$.",
+      "After $I$ becomes $1$, no reduction is possible and $d$ grows forever. Hence the sum is $59$."
+    ],
+    "solution_zh": [
+      "对约分后的分子分母令 $d=n-m,I=19m-18n$。平移保持 $I$、将差变为 $d+1$。约分因子为 $g=\\gcd(d+1,I)$，所以新状态为 $((d+1)/g,I/g)$。",
+      "初始 $(d,I)=(1,2002)$，且 $2002=2\\cdot7\\cdot11\\cdot13$。依次约去 $2,7,11,13$，在下标 $2,8,18,30$ 处使 $d$ 回到 $1$，加上初始下标 $1$。",
+      "此后 $I=1$，不能再约分，$d$ 永远递增。所求下标和 $1+2+8+18+30=59$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/10",
+    "method_chain": [
+      "Reduced-pair invariant",
+      "Gcd cancellation states",
+      "No-further-return proof"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q11",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Cyclic metric identities determine the projection scale.",
+      "reason_zh": "圆内接四边形的度量恒等式确定投影缩放比。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Brahmagupta area and diagonal area determine the diagonal angle.",
+        "reason_zh": "用婆罗摩笈多面积与对角线面积求夹角。"
+      }
+    ],
+    "statement_en": "A cyclic quadrilateral has successive side lengths $4,5,6,7$. Project each vertex perpendicularly onto the other diagonal, obtaining $A_1,C_1\\in BD$ and $B_1,D_1\\in AC$. If the perimeter of $A_1B_1C_1D_1$ is $m/n$ reduced, find $m+n$.",
+    "statement_zh": "圆内接四边形 $ABCD$ 连续边长为 $4,5,6,7$。将 $A,C$ 向 $BD$ 投影得 $A_1,C_1$，将 $B,D$ 向 $AC$ 投影得 $B_1,D_1$。若 $A_1B_1C_1D_1$ 周长约分为 $m/n$，求 $m+n$。",
+    "answer": "301",
+    "solution_en": [
+      "Let $P$ be the diagonal intersection and $\\theta$ their acute angle. Reflection across an angle bisector swaps the two diagonal lines; multiplying by $\\cos\\theta$ then sends every vertex to its foot on the other diagonal. Thus all side lengths scale by $\\cos\\theta$ and the new perimeter is $22\\cos\\theta$.",
+      "Ptolemy gives $AC\\cdot BD=4\\cdot6+5\\cdot7=59$. The area is $\\sqrt{7\\cdot6\\cdot5\\cdot4}=2\\sqrt{210}$, so $\\sin\\theta=4\\sqrt{210}/59$.",
+      "Therefore $\\cos\\theta=11/59$, and the perimeter is $242/59$. The requested sum is $301$."
+    ],
+    "solution_zh": [
+      "设对角线交于 $P$，锐夹角为 $\\theta$。关于夹角平分线反射可交换两条对角线，再缩放 $\\cos\\theta$ 即把每个顶点变为其在另一对角线上的垂足。因此新周长为 $22\\cos\\theta$。",
+      "托勒密定理给出 $AC\\cdot BD=59$。面积为 $\\sqrt{7\\cdot6\\cdot5\\cdot4}=2\\sqrt{210}$，故 $\\sin\\theta=4\\sqrt{210}/59$。",
+      "于是 $\\cos\\theta=11/59$，周长为 $242/59$，答案 $301$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/11",
+    "method_chain": [
+      "Projection similarity",
+      "Ptolemy",
+      "Brahmagupta",
+      "Diagonal-angle area"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q12",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS04",
+      "reason_en": "Stopping-time expectation is computed from a finite state system.",
+      "reason_zh": "用有限状态的首步方程求停止时间期望。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO05",
+        "reason_en": "Classify gap states and their eight possible transitions.",
+        "reason_zh": "分类间隔状态及八种跳跃转移。"
+      }
+    ],
+    "statement_en": "Three frogs start at vertices $4,8,12$ of a cycle of twelve vertices. Each minute each independently moves to either neighbor with equal probability. They stop at the first simultaneous landing that places two frogs together. If the expected stopping time is $m/n$ reduced, find $m+n$.",
+    "statement_zh": "十二顶点环上三只蛙初始位于第 $4,8,12$ 点。每分钟每只蛙独立等概率跳到左右相邻顶点之一，首次出现两蛙同时落在同一点时停止。若期望分钟数约分为 $m/n$，求 $m+n$。",
+    "answer": "19",
+    "solution_en": [
+      "The three cyclic gaps stay even. Before collision their unordered possibilities are $A=(4,4,4)$, $B=(2,4,6)$, $C=(2,2,8)$. Enumerating the eight jump-sign triples gives transition counts: $A\\to(A,B)=(2,6)$; $B\\to(A,B,C,\\text{stop})=(1,4,1,2)$; $C\\to(B,C,\\text{stop})=(2,2,4)$.",
+      "With expected remaining times $a,b,c$, first-step equations are $a=1+a/4+3b/4$, $b=1+a/8+b/2+c/8$, $c=1+b/4+c/4$.",
+      "The last gives $c=4/3+b/3$ and the first $a=4/3+b$. Substitution gives $b=4$, hence $a=16/3$ and the requested sum $19$."
+    ],
+    "solution_zh": [
+      "三段环间隔始终为偶数。碰撞前无序状态仅为 $A=(4,4,4),B=(2,4,6),C=(2,2,8)$。枚举八种跳跃方向，转移次数为 $A\\to(A,B)=(2,6)$；$B\\to(A,B,C,停止)=(1,4,1,2)$；$C\\to(B,C,停止)=(2,2,4)$。",
+      "设三态剩余期望为 $a,b,c$，则 $a=1+a/4+3b/4$，$b=1+a/8+b/2+c/8$，$c=1+b/4+c/4$。",
+      "由第三式 $c=4/3+b/3$，第一式 $a=4/3+b$，代入得 $b=4$，所以 $a=16/3$，答案 $19$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/12",
+    "method_chain": [
+      "Even-gap Markov states",
+      "First-step expectation",
+      "Linear system"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q13",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Tangency and the radical axis eliminate the unknown third radius.",
+      "reason_zh": "相切与根轴性质消去第三圆未知半径。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Compare powers using signed distance from the radical axis.",
+        "reason_zh": "用到根轴的有向距离比较圆幂。"
+      }
+    ],
+    "statement_en": "Two intersecting circles have radii $961,625$ and common chord line $AB$. Another circle is externally tangent to both, and line $AB$ cuts it in a chord whose minor arc measures $120^\\circ$. Find the distance between the first two centers.",
+    "statement_zh": "半径为 $961,625$ 的两圆相交于 $A,B$。第三圆与前两圆均外切，直线 $AB$ 截第三圆所得弦的劣弧为 $120^\\circ$。求前两圆圆心距。",
+    "answer": "672",
+    "solution_en": [
+      "Let the third center and radius be $O,r$, and the required center distance be $d$. External tangency makes the difference of the powers of $O$ equal to $(r+961)^2-961^2-[(r+625)^2-625^2]=672r$.",
+      "The power difference is a linear function vanishing on $AB$, with gradient magnitude $2d$. Hence its absolute value at $O$ is $2d\\operatorname{dist}(O,AB)$.",
+      "The $120^\\circ$ chord gives distance $r\\cos60^\\circ=r/2$. Thus $672r=dr$, giving $d=672$."
+    ],
+    "solution_zh": [
+      "设第三圆圆心、半径为 $O,r$，所求圆心距为 $d$。由外切，$O$ 对两圆的幂差为 $(r+961)^2-961^2-[(r+625)^2-625^2]=672r$。",
+      "幂差是在线 $AB$ 上为零的线性函数，其梯度长为 $2d$，所以在 $O$ 处的绝对值等于 $2d\\operatorname{dist}(O,AB)$。",
+      "$120^\\circ$ 弦对应弦心距 $r/2$，故 $672r=dr$，得到 $d=672$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/13",
+    "method_chain": [
+      "External tangency powers",
+      "Radical-axis distance",
+      "Chord central angle"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q14",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "The universal divisor-sum condition is analyzed prime-power by prime-power.",
+      "reason_zh": "对全体整数的约数和条件按质数幂逐项分析。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT04",
+        "reason_en": "Use unit-group exponents modulo 43 and 47.",
+        "reason_zh": "使用模 43 与 47 的乘法群指数。"
+      }
+    ],
+    "statement_en": "Write $\\sigma(u)$ for the sum of positive divisors of $u$. Find the least positive $n$ such that $\\sigma(a^n)\\equiv1\\pmod{2021}$ for every positive integer $a$. Add the prime factors of $n$, counted with their multiplicities.",
+    "statement_zh": "令 $\\sigma(u)$ 为 $u$ 的正约数和。求使每个正整数 $a$ 均满足 $\\sigma(a^n)\\equiv1\\pmod{2021}$ 的最小正整数 $n$，并求 $n$ 的质因数之和，按重数计算。",
+    "answer": "125",
+    "solution_en": [
+      "Factor $2021=43\\cdot47$. For a prime power factor of $a$, its divisor sum is $1+p+\\cdots+p^{en}$. It suffices that the nonconstant part vanish modulo each $q=43,47$.",
+      "If $p\\equiv0\\pmod q$ it vanishes automatically; if $p\\equiv1$, it requires $q\\mid en$; otherwise $p^{en}=1$ suffices. Thus $q(q-1)\\mid n$ is sufficient.",
+      "The $q$ factors are necessary by taking prime $a=173\\equiv1\\pmod{43}$ and $a=283\\equiv1\\pmod{47}$. For $q-1$, take primes $a=3$ of order $42$ modulo $43$ and $a=5$ of order $46$ modulo $47$.",
+      "Hence $n=\\operatorname{lcm}(43\\cdot42,47\\cdot46)=2\\cdot3\\cdot7\\cdot23\\cdot43\\cdot47$. Its prime-factor sum is $125$."
+    ],
+    "solution_zh": [
+      "$2021=43\\cdot47$。对 $a$ 的质数幂因子，约数和为 $1+p+\\cdots+p^{en}$。只需非恒定部分在模 $q=43,47$ 下分别为零。",
+      "$p\\equiv0$ 时自动成立；$p\\equiv1$ 时要求 $q\\mid en$；其他情况只需 $p^{en}=1$。故 $q(q-1)\\mid n$ 是充分条件。",
+      "必要性可取质数 $a=173\\equiv1\\pmod{43}$、$a=283\\equiv1\\pmod{47}$，强制 $43,47\\mid n$。再取模 $43$ 阶为 $42$ 的质数 $3$，及模 $47$ 阶为 $46$ 的质数 $5$，强制对应阶整除 $n$。",
+      "于是 $n=2\\cdot3\\cdot7\\cdot23\\cdot43\\cdot47$，质因数之和为 $125$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/14",
+    "method_chain": [
+      "Multiplicative divisor sums",
+      "Explicit order witnesses",
+      "Least common multiple"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Replaced source appeal to Dirichlet with explicit prime witnesses 173,283 and checked orders ord_43(3)=42,ord_47(5)=46."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-I-Q15",
+    "paper_id": "AIME-2021-I",
+    "exam_year": 2021,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE08",
+      "reason_en": "Combining the conics produces their common intersection circle.",
+      "reason_zh": "组合两圆锥曲线方程得到交点所在圆。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Use quartic signs to prove four distinct intersections.",
+        "reason_zh": "利用四次式符号证明四个不同交点。"
+      }
+    ],
+    "statement_en": "For positive integers $k$, consider $y=x^2-k$ and $x=2(y-20)^2-k$. Among $k$ for which they have four distinct intersections lying on a circle of radius at most $21$, add the least and greatest values.",
+    "statement_zh": "对正整数 $k$，考虑 $y=x^2-k$ 与 $x=2(y-20)^2-k$。要求两曲线有四个不同交点，且这些点位于半径不超过 $21$ 的同一圆上。求符合条件的最小与最大 $k$ 之和。",
+    "answer": "285",
+    "solution_en": [
+      "Add the first parabola equation to half the second to obtain the circle $x^2+y^2-x/2-41y+400-3k/2=0$. Its squared radius is $325/16+3k/2$, so the radius condition gives $k\\le280$.",
+      "Let $c=k+20$ and $F(x)=2(x^2-c)^2-x-k$. For $1\\le k\\le4$, $F(x)>0$ for $x\\le-k$; for $-k<x\\le0$, $x^2<16<c$ gives $F(x)>50-k>0$. Thus there are no negative roots. Its derivative has only one positive zero, so there cannot be four roots.",
+      "For $k\\ge5$, $F(-\\sqrt c)=\\sqrt c-k\\le0$, $F(0)>0$, $F(\\sqrt c)<0$, and both tails are positive. For $k>5$, the four sign intervals give four distinct roots. At $k=5$, the root $-\\sqrt c=-5$ has derivative $-1$, so the second negative root still exists.",
+      "Thus the allowed integers run from $5$ to $280$, and their extreme sum is $285$."
+    ],
+    "solution_zh": [
+      "将第一条抛物线方程与第二条的一半相加，得到过交点的圆 $x^2+y^2-x/2-41y+400-3k/2=0$。半径平方为 $325/16+3k/2$，所以 $k\\le280$。",
+      "令 $c=k+20,F(x)=2(x^2-c)^2-x-k$。当 $1\\le k\\le4$，$x\\le-k$ 时 $F>0$；$-k<x\\le0$ 时 $x^2<16<c$，故 $F>50-k>0$。因此无负根，而导数在正半轴仅一零点，不能有四根。",
+      "若 $k\\ge5$，$F(-\\sqrt c)\\le0,F(0)>0,F(\\sqrt c)<0$，且两端趋正无穷。$k>5$ 时四个变号区间各有一根；$k=5$ 时 $-5$ 本身为根且导数为 $-1$，其右侧仍有另一负根。",
+      "因此有效整数从 $5$ 至 $280$，两端之和为 $285$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021I/problem/15",
+    "method_chain": [
+      "Circle from a conic pencil",
+      "Radius bound",
+      "Quartic sign intervals"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q01",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS06",
+      "reason_en": "The required quantity is a descriptive mean of an explicitly parameterized data set.",
+      "reason_zh": "目标是参数化数据集的算术平均数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT06",
+        "reason_en": "Expand each palindrome by place value.",
+        "reason_zh": "按位权展开回文数。"
+      }
+    ],
+    "statement_en": "What is the mean of all three-digit decimal palindromes?",
+    "statement_zh": "所有三位十进制回文数的算术平均数是多少？",
+    "answer": "550",
+    "solution_en": [
+      "Each palindrome is $101a+10b$ for $1\\le a\\le9,0\\le b\\le9$, with every pair occurring once.",
+      "The mean digits are $5$ and $9/2$, so the mean number is $101\\cdot5+10\\cdot9/2=550$."
+    ],
+    "solution_zh": [
+      "每个数可写为 $101a+10b$，其中 $1\\le a\\le9,0\\le b\\le9$，每对数位恰出现一次。",
+      "两数位平均值为 $5,9/2$，故平均数为 $101\\cdot5+10\\cdot9/2=550$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/1",
+    "method_chain": [
+      "Place-value model",
+      "Linearity of the mean"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q02",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "Area comparison determines the scale of the parallel section.",
+      "reason_zh": "面积比较确定平行截线的相似比例。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "A parallel section gives a smaller equilateral triangle.",
+        "reason_zh": "平行截线产生较小等边三角形。"
+      }
+    ],
+    "statement_en": "An equilateral triangle $ABC$ has side $840$. On the perpendicular ray from $B$ toward the side containing $A$, choose $D$. The line through $D$ parallel to $BC$ meets $AB,AC$ at $E,F$. Choose $G$ on the same line beyond $F$ from $E$, so $AFG$ is isosceles and $[AFG]:[BED]=8:9$. Find $AF$.",
+    "statement_zh": "等边三角形 $ABC$ 边长为 $840$。由 $B$ 向含 $A$ 一侧作 $BC$ 的垂线并取点 $D$。过 $D$ 作 $BC$ 平行线交 $AB,AC$ 于 $E,F$。在该线上取 $G$，使 $F$ 位于 $E,G$ 之间，$AFG$ 为等腰三角形，且 $[AFG]:[BED]=8:9$。求 $AF$。",
+    "answer": "336",
+    "solution_en": [
+      "Let $s=AF$. Triangle $AEF$ is equilateral, so $BD=h=\\sqrt3(840-s)/2$. The horizontal distance from $E$ to $BD$ is $h/\\sqrt3$, giving $[BED]=h^2/(2\\sqrt3)$.",
+      "$\\angle AFG=120^\\circ$, so it must be the apex of the isosceles triangle; hence $FG=FA=s$ and $[AFG]=\\sqrt3s^2/4$.",
+      "The ratio gives $3s^2/(2h^2)=8/9$, or $s=4h/(3\\sqrt3)=2(840-s)/3$. Thus $s=336$."
+    ],
+    "solution_zh": [
+      "设 $s=AF$。$AEF$ 为等边三角形，所以 $BD=h=\\sqrt3(840-s)/2$。$E$ 到 $BD$ 的水平距离为 $h/\\sqrt3$，故 $[BED]=h^2/(2\\sqrt3)$。",
+      "$\\angle AFG=120^\\circ$ 必为等腰三角形顶角，故 $FG=FA=s$，$[AFG]=\\sqrt3s^2/4$。",
+      "面积比给出 $3s^2/(2h^2)=8/9$，于是 $s=2(840-s)/3$，解得 $s=336$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/2",
+    "method_chain": [
+      "Parallel-section similarity",
+      "Obtuse apex identification",
+      "Area ratio"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q03",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO01",
+      "reason_en": "A modular restriction selects allowable permutations.",
+      "reason_zh": "同余限制筛选允许的排列。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Reduce the cyclic product sum modulo three.",
+        "reason_zh": "将循环乘积和模三化简。"
+      }
+    ],
+    "statement_en": "For a permutation $(x_1,\\ldots,x_5)$ of $1,2,3,4,5$, form $\\sum_{i=1}^5x_ix_{i+1}x_{i+2}$ with cyclic indices. How many permutations make this sum divisible by $3$?",
+    "statement_zh": "将 $1,2,3,4,5$ 排成 $(x_1,\\ldots,x_5)$，下标循环使用。求使 $\\sum_{i=1}^5x_ix_{i+1}x_{i+2}$ 被 $3$ 整除的排列数。",
+    "answer": "80",
+    "solution_en": [
+      "Fix the position $i$ occupied by $3$. Exactly two summands avoid it; modulo $3$ their sum is $x_{i+2}x_{i+3}(x_{i+1}+x_{i+4})$.",
+      "The product factor is nonzero, so the two cyclic neighbors of $3$ must lie in opposite nonzero residue classes. There are two choices per class and two orders, giving $8$ neighbor assignments.",
+      "The other two labels have $2$ orders, and $3$ has $5$ positions. Total $5\\cdot8\\cdot2=80$."
+    ],
+    "solution_zh": [
+      "固定 $3$ 所在位置 $i$。仅两个乘积不含它，模三和为 $x_{i+2}x_{i+3}(x_{i+1}+x_{i+4})$。",
+      "前因子模三非零，所以 $3$ 的两个循环邻居必须分别来自余 $1$ 和余 $2$ 类。各类两种选择，再乘两种顺序，共 $8$ 种。",
+      "另两数有两种排列，$3$ 有五个位置，故总数 $80$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/3",
+    "method_chain": [
+      "Distinguished residue-zero label",
+      "Neighbor condition",
+      "Product count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q04",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "Missing coefficients give two root-symmetric equations.",
+      "reason_zh": "缺失项系数给出两条根的对称关系。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL03",
+        "reason_en": "Real coefficients force a complex conjugate root pair.",
+        "reason_zh": "实系数迫使非实根成共轭对。"
+      }
+    ],
+    "statement_en": "Two real monic cubics are $x^3+ax+b$ and $x^3+cx^2+d$. They have real roots $-20,-21$ respectively and share a root $m+i\\sqrt n$, where $m,n$ are positive integers. Find $m+n$.",
+    "statement_zh": "两个实系数首一三次式为 $x^3+ax+b$ 和 $x^3+cx^2+d$，分别有实根 $-20,-21$，并有公共根 $m+i\\sqrt n$，其中 $m,n$ 为正整数。求 $m+n$。",
+    "answer": "330",
+    "solution_en": [
+      "Both also have root $m-i\\sqrt n$. The first cubic has zero quadratic coefficient, so $-20+2m=0$ and $m=10$.",
+      "The second has zero linear coefficient, so the pairwise root products sum to zero: $m^2+n-42m=0$. Hence $n=320$, and $m+n=330$."
+    ],
+    "solution_zh": [
+      "两式也都有根 $m-i\\sqrt n$。第一式二次项为零，根和给出 $-20+2m=0$，所以 $m=10$。",
+      "第二式一次项为零，两两根积之和给出 $m^2+n-42m=0$，故 $n=320$。答案 $330$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/4",
+    "method_chain": [
+      "Conjugate roots",
+      "Vieta missing coefficients"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q05",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Triangle metric laws determine when the second noncongruent triangle is obtuse.",
+      "reason_zh": "三角形度量定理判断第二个非全等候选何时为钝角。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Use the included-angle area formula to compare the two angle branches.",
+        "reason_zh": "用夹角面积公式比较互补角两支。"
+      }
+    ],
+    "statement_en": "For each $s>0$, consider all obtuse triangles of area $s$ having sides of lengths $4$ and $10$. The values of $s$ for which at least one exists and all are congruent form $[a,b)$. Find $a^2+b^2$.",
+    "statement_zh": "对每个 $s>0$，考虑面积为 $s$ 且有两边长 $4,10$ 的全部钝角三角形。使其非空且全部全等的 $s$ 构成区间 $[a,b)$。求 $a^2+b^2$。",
+    "answer": "736",
+    "solution_en": [
+      "If the included angle is $\\theta$, area is $20\\sin\\theta$. Its obtuse branch supplies exactly one triangle for each $0<s<20$.",
+      "For the acute branch, the third side satisfies $c^2=116-80\\cos\\theta$. The only possible obtuse angle is opposite side $10$, requiring $16+c^2<100$, or $\\cos\\theta>2/5$. This branch exists as obtuse exactly for $s<4\\sqrt{21}$.",
+      "Thus uniqueness among obtuse triangles holds for $4\\sqrt{21}\\le s<20$; at the lower endpoint the competing triangle is right. Therefore $a^2+b^2=336+400=736$."
+    ],
+    "solution_zh": [
+      "设两给定边夹角为 $\\theta$，则面积 $s=20\\sin\\theta$。钝角夹角分支对每个 $0<s<20$ 恰给出一个三角形。",
+      "锐角夹角分支第三边满足 $c^2=116-80\\cos\\theta$。只有长 $10$ 的边所对角可能为钝角，要求 $16+c^2<100$，即 $\\cos\\theta>2/5$，对应 $s<4\\sqrt{21}$。",
+      "故唯一钝角三角形的面积范围为 $[4\\sqrt{21},20)$，下端点另一候选恰为直角。答案 $336+400=736$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/5",
+    "method_chain": [
+      "Included-angle branches",
+      "Cosine-law obtuseness",
+      "Endpoint check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q06",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "A subset relation gives a product count over elements.",
+      "reason_zh": "集合包含关系使逐元素乘法计数成为可能。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "Subtract equal-set pairs counted in both containment directions.",
+        "reason_zh": "减去两种包含方向重复计入的相等集合。"
+      }
+    ],
+    "statement_en": "Count ordered pairs of subsets $(A,B)$ of a five-element set such that $|A||B|=|A\\cap B||A\\cup B|$. Equal subsets are permitted.",
+    "statement_zh": "五元集合的子集有序对 $(A,B)$ 满足 $|A||B|=|A\\cap B||A\\cup B|$，允许 $A=B$，共有多少对？",
+    "answer": "454",
+    "solution_en": [
+      "Let $a=|A|,b=|B|,i=|A\\cap B|$. The equation factors as $(a-i)(b-i)=0$, so one set contains the other.",
+      "For $A\\subseteq B$, each element is in neither, in $B$ only, or in both: $3^5$ choices. Reverse containment contributes another $3^5$, while equality contributes $2^5$ to both. The answer is $2\\cdot3^5-2^5=454$."
+    ],
+    "solution_zh": [
+      "令 $a=|A|,b=|B|,i=|A\\cap B|$，条件化为 $(a-i)(b-i)=0$，即两集合之一包含另一。",
+      "$A\\subseteq B$ 时每个元素有不在二者、仅在 $B$、在二者三种状态，共 $3^5$。反向包含同样多，重复的 $A=B$ 有 $2^5$。所以答案为 $454$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/6",
+    "method_chain": [
+      "Set-size factorization",
+      "Three-state element count",
+      "Containment overlap"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q07",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Grouped equations remove variables without solving for a and b individually.",
+      "reason_zh": "分组消元避免分别求出 a,b。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Factor the eliminated polynomial and use real-root discriminants.",
+        "reason_zh": "分解消元多项式并用判别式筛选实根。"
+      }
+    ],
+    "statement_en": "Real numbers $a,b,c,d$ satisfy $a+b=-3$, $ab+bc+ca=-4$, $abc+bcd+cda+dab=14$, and $abcd=30$. If $a^2+b^2+c^2+d^2=m/n$ reduced with $m,n>0$, find $m+n$.",
+    "statement_zh": "实数 $a,b,c,d$ 满足 $a+b=-3$、$ab+bc+ca=-4$、$abc+bcd+cda+dab=14$、$abcd=30$。若平方和约分为 $m/n$，求 $m+n$。",
+    "answer": "145",
+    "solution_en": [
+      "From the first two equations, $ab=3c-4$. Grouping the cubic relation gives $ab(c+d)-3cd=14$, hence $d=(3c^2-4c-14)/4$.",
+      "Substitute in $abcd=30$ to get $(c+2)(3c-10)(3c^2-4c+6)=0$. The last factor has no real root. For $c=10/3$, $ab=6$ and $a+b=-3$ would give a negative discriminant, so this case is impossible.",
+      "Thus $c=-2,d=3/2,ab=-10$. The square sum is $9-2(-10)+4+9/4=141/4$, giving $145$."
+    ],
+    "solution_zh": [
+      "由前两式得 $ab=3c-4$。将三次式分组为 $ab(c+d)-3cd=14$，得到 $d=(3c^2-4c-14)/4$。",
+      "代入乘积条件后分解为 $(c+2)(3c-10)(3c^2-4c+6)=0$。后二次因子无实根；$c=10/3$ 时 $ab=6,a+b=-3$ 导致负判别式，亦不可能。",
+      "故 $c=-2,d=3/2,ab=-10$。平方和为 $9+20+4+9/4=141/4$，答案 $145$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/7",
+    "method_chain": [
+      "Grouped elimination",
+      "Polynomial factorization",
+      "Real-domain check"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q08",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS05",
+      "reason_en": "Repeated constrained trials are handled by a memory-aware distribution recurrence.",
+      "reason_zh": "带一步记忆的分布递推处理受限重复行走。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO05",
+        "reason_en": "Use face and last-edge type as the recurrence state.",
+        "reason_zh": "以所在面及上一条边类型作为递推状态。"
+      }
+    ],
+    "statement_en": "An ant begins at a bottom vertex of a cube. Its first step chooses uniformly among the three edges. Later it chooses uniformly among the two edges that do not return immediately to the previous vertex. The chance of being on the top face after eight steps is $m/n$ reduced. Find $m+n$.",
+    "statement_zh": "蚂蚁从立方体底面顶点出发，第一步等概率选三条边之一。以后每步从不立即返回前一顶点的两条边中等概率选择。八步后在顶面的概率约分为 $m/n$，求 $m+n$。",
+    "answer": "49",
+    "solution_en": [
+      "All $3\\cdot2^7=384$ allowed paths are equally likely. Count paths by states $(B_h,B_v,T_h,T_v)$, recording bottom/top face and horizontal/vertical last edge.",
+      "The update is $(B_h+2B_v,T_h,T_h+2T_v,B_h)$, because a vertical edge must be followed horizontally, whereas a horizontal edge allows one horizontal and one vertical continuation.",
+      "Starting after one step at $(2,0,0,1)$, successive states through steps $2$ to $8$ are $(2,0,2,2),(2,2,6,2),(6,6,10,2),(18,10,14,6),(38,14,26,18),(66,26,62,38),(118,62,138,66)$.",
+      "The top count is $204$, so the probability is $204/384=17/32$, giving $49$."
+    ],
+    "solution_zh": [
+      "允许路径共 $3\\cdot2^7=384$ 条，且等概率。以 $(B_h,B_v,T_h,T_v)$ 记录底/顶面及末步水平/竖直类型。",
+      "递推为 $(B_h+2B_v,T_h,T_h+2T_v,B_h)$。竖直步后只能水平走，水平步后则可各选一条水平或竖直边。",
+      "首步状态为 $(2,0,0,1)$，继续递推至第八步得 $(118,62,138,66)$；例如第七步为 $(66,26,62,38)$。",
+      "故顶面路径数为 $204$，概率为 $17/32$，所求 $49$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/8",
+    "method_chain": [
+      "Nonbacktracking walk states",
+      "Path-count recurrence",
+      "Finite probability"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q09",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "Multiplicative order characterizes when the two exponential numbers share a prime.",
+      "reason_zh": "乘法阶刻画两个指数数何时共享质因数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Classify exponents by their powers of two.",
+        "reason_zh": "按指数的二进赋值分类。"
+      }
+    ],
+    "statement_en": "Count ordered pairs $1\\le m,n\\le30$ with $\\gcd(2^m+1,2^n-1)>1$.",
+    "statement_zh": "求 $1\\le m,n\\le30$ 中满足 $\\gcd(2^m+1,2^n-1)>1$ 的有序对数。",
+    "answer": "295",
+    "solution_en": [
+      "If an odd prime divides both numbers, the order of $2$ modulo that prime has $2$-adic valuation exactly $v_2(m)+1$ and divides $n$. Necessarily $v_2(n)>v_2(m)$.",
+      "Conversely, under this inequality let $g=\\gcd(m,n)$. Then $m/g$ is odd and $n/g$ even, so $2^g+1$ divides both numbers. Thus the criterion is sufficient too.",
+      "The counts of $v_2=0,1,2,3,4$ in $1$ through $30$ are $15,8,4,2,1$. Therefore the pair count is $15\\cdot15+8\\cdot7+4\\cdot3+2\\cdot1=295$."
+    ],
+    "solution_zh": [
+      "若奇质数同时整除两数，则模该质数时 $2$ 的阶的二进赋值恰为 $v_2(m)+1$，且此阶整除 $n$，故必须 $v_2(n)>v_2(m)$。",
+      "反之若该不等式成立，令 $g=\\gcd(m,n)$，则 $m/g$ 奇、$n/g$ 偶，所以 $2^g+1$ 同时整除两数。因此条件充要。",
+      "$1$ 至 $30$ 中赋值为 $0,1,2,3,4$ 的数量为 $15,8,4,2,1$，故总数为 $225+56+12+2=295$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/9",
+    "method_chain": [
+      "Order of two",
+      "Valuation criterion",
+      "Grouped pair count"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q10",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE09",
+      "reason_en": "Spatial sphere centers reduce to a dihedral cross-section and an axial distance.",
+      "reason_zh": "球心关系化为二面角截面及沿交线距离。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Use the right triangle in a dihedral cross-section.",
+        "reason_zh": "利用二面角截面的直角三角形。"
+      }
+    ],
+    "statement_en": "Three spheres of radii $36,36,13$ are pairwise externally tangent and each tangent to two intersecting planes $\\mathcal P,\\mathcal Q$. Let their intersection line be $\\ell$. The radius-$13$ sphere touches $\\mathcal P$ at $U$. If $\\operatorname{dist}(U,\\ell)=m/n$ reduced, find $m+n$.",
+    "statement_zh": "半径为 $36,36,13$ 的三个球两两外切，且每球均与相交平面 $\\mathcal P,\\mathcal Q$ 相切。设交线为 $\\ell$，小球与 $\\mathcal P$ 切于 $U$。若 $U$ 到 $\\ell$ 的距离约分为 $m/n$，求 $m+n$。",
+    "answer": "335",
+    "solution_en": [
+      "All three spheres lie on the same side of each tangent plane. If two were on opposite sides, external tangency would force the same contact point; tangency of the third to the opposite-side sphere would force that contact point again, making its center lie on the same normal line as the same-side sphere and preventing their external tangency. Let the sector angle be $2\\theta$. A radius-$r$ center has transverse distance $r/\\sin\\theta$ from $\\ell$.",
+      "The two equal centers differ by $72$ along $\\ell$. The small center is midway along that direction, so tangency gives $(23/\\sin\\theta)^2+36^2=49^2$. Thus $\\sin\\theta=23/\\sqrt{1105}$ and $\\cos\\theta=24/\\sqrt{1105}$.",
+      "The contact-point distance is $13\\cot\\theta=312/23$, giving $335$."
+    ],
+    "solution_zh": [
+      "三个球在每个公共切平面的同侧。若两球分居两侧，外切迫使它们共用切点；第三球与异侧球相切又迫使共用该切点，其球心便与同侧球心同处法线上，两球不能外切。设角域角为 $2\\theta$，半径 $r$ 的球心到交线的横向距离为 $r/\\sin\\theta$。",
+      "两个大球心沿交线相距 $72$，小球心在该方向中点。因此 $(23/\\sin\\theta)^2+36^2=49^2$，得 $\\sin\\theta=23/\\sqrt{1105},\\cos\\theta=24/\\sqrt{1105}$。",
+      "切点到交线距离为 $13\\cot\\theta=312/23$，所求为 $335$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/10",
+    "method_chain": [
+      "Dihedral bisector centers",
+      "Sphere tangency triangle",
+      "Contact-point projection"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q11",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO03",
+      "reason_en": "The answer depends on what all students learn from the public replies.",
+      "reason_zh": "关键在于学生从公开回答中获得的共同信息。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "Enumerate admissible consecutive runs containing distinct multiples of six and seven.",
+        "reason_zh": "枚举包含不同的六、七倍数的连续整数段。"
+      }
+    ],
+    "statement_en": "A teacher gives each of four perfectly logical students one distinct member of an unknown set $S$. Publicly, $S$ consists of four consecutive two-digit positive integers, including a multiple of $6$ and a different multiple of $7$. All four initially say they cannot determine $S$ from their own number; after hearing the four replies, each can determine it. Sum all possible largest members of $S$.",
+    "statement_zh": "老师给四名完全理性的学生各一个不同整数，组成未知集合 $S$。公开信息是：$S$ 为四个连续两位正整数，含一个 $6$ 的倍数及另一个不同的 $7$ 的倍数。四人起初都表示不能仅由自己的数确定 $S$，听到四人的回答后各自都能确定。求 $S$ 最大元素所有可能值之和。",
+    "answer": "258",
+    "solution_en": [
+      "List all valid four-integer runs allowed by the announcement. A student can initially identify the run exactly when their number occurs in only one candidate run. Thus the unanimous failure removes every run containing such a unique number.",
+      "Enumerating the starts $10$ through $96$ leaves exactly the runs $[34,37],[47,50],[76,79],[89,92]$. Equivalently these have the consecutive $6$- and $7$-multiples in their two middle positions.",
+      "The four surviving runs are disjoint, so every number now identifies its run, meeting the second condition. Their largest values sum to $37+50+79+92=258$."
+    ],
+    "solution_zh": [
+      "先列出公开条件允许的全部四整数段。若某学生的数仅出现在一段中，他起初就能确定。因此全体回答“不知道”后，应删去包含此类唯一数字的候选段。",
+      "枚举起点 $10$ 至 $96$ 后，只剩 $[34,37],[47,50],[76,79],[89,92]$。它们恰使相邻的 $6$、$7$ 倍数位于中间两格。",
+      "这四段互不相交，故每个数现在都能唯一确定所属段，符合第二次推理。最大值和为 $37+50+79+92=258$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/11",
+    "method_chain": [
+      "Public-information candidate sets",
+      "Eliminate uniquely identifying numbers",
+      "Second-round deduction"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q12",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Dot and cross products recover the angle without diagonal lengths.",
+      "reason_zh": "点积与叉积在无需对角线长度时求出夹角。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Relate diagonal cross product to area.",
+        "reason_zh": "用对角线叉积表示面积。"
+      }
+    ],
+    "statement_en": "A convex quadrilateral has consecutive side lengths $5,6,9,7$ and area $30$. Its diagonals meet at acute angle $\\theta$. Write $\\tan\\theta=m/n$ reduced and find $m+n$.",
+    "statement_zh": "凸四边形连续边长为 $5,6,9,7$，面积为 $30$。两对角线的锐夹角为 $\\theta$。将 $\\tan\\theta$ 约分为 $m/n$，求 $m+n$。",
+    "answer": "47",
+    "solution_en": [
+      "Let the diagonal vectors be $u=C-A$ and $v=D-B$. Expanding squared side lengths gives $BC^2+DA^2-AB^2-CD^2=2u\\cdot v=-21$. Hence $|u||v|\\cos\\theta=21/2$.",
+      "The quadrilateral area is $|u\\times v|/2$, so $|u||v|\\sin\\theta=60$. Dividing gives $\\tan\\theta=60/(21/2)=40/7$, and the sum is $47$."
+    ],
+    "solution_zh": [
+      "设对角线向量为 $u=C-A,v=D-B$。展开边长平方得 $BC^2+DA^2-AB^2-CD^2=2u\\cdot v=-21$，故 $|u||v|\\cos\\theta=21/2$。",
+      "面积等于对角线叉积绝对值的一半，所以 $|u||v|\\sin\\theta=60$。相除得 $\\tan\\theta=40/7$，答案 $47$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/12",
+    "method_chain": [
+      "Diagonal dot-product identity",
+      "Area cross product",
+      "Tangent ratio"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q13",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "The final solution combines two coprime congruences.",
+      "reason_zh": "最终通过两个互质模数的同余合并确定解。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT04",
+        "reason_en": "Lift the exponent residue from modulus 5 to 25 and 125.",
+        "reason_zh": "将指数同余从模 5 逐步提升到 25 和 125。"
+      }
+    ],
+    "statement_en": "Find the least positive $n$ with $2^n+5^n\\equiv n\\pmod{1000}$.",
+    "statement_zh": "求满足 $2^n+5^n\\equiv n\\pmod{1000}$ 的最小正整数 $n$。",
+    "answer": "797",
+    "solution_en": [
+      "$n=1,2$ fail. For $n\\ge3$, modulo $8$ forces $n$ odd and $n\\equiv5\\pmod8$; modulo $125$ the condition is $n\\equiv2^n\\pmod{125}$.",
+      "First $n\\equiv1\\pmod4$ yields $2^n\\equiv2\\pmod5$, so $n\\equiv17\\pmod{20}$. Then $2^{17}\\equiv22\\pmod{25}$ implies $n\\equiv97\\pmod{100}$.",
+      "Finally $2^{97}\\equiv47\\pmod{125}$, giving $n\\equiv47\\pmod{125}$. Together with $n\\equiv5\\pmod8$, this forces $n\\equiv797\\pmod{1000}$. Direct modular substitution verifies $797$, so it is least."
+    ],
+    "solution_zh": [
+      "$n=1,2$ 直接不符。$n\\ge3$ 时模 $8$ 迫使 $n$ 为奇数且 $n\\equiv5\\pmod8$；模 $125$ 时要求 $n\\equiv2^n$。",
+      "先由 $n\\equiv1\\pmod4$ 得 $2^n\\equiv2\\pmod5$，从而 $n\\equiv17\\pmod{20}$。再用 $2^{17}\\equiv22\\pmod{25}$，得 $n\\equiv97\\pmod{100}$。",
+      "于是 $2^n\\equiv2^{97}\\equiv47\\pmod{125}$。结合模 $8$ 条件，得到 $n\\equiv797\\pmod{1000}$。代入模幂验证 $797$ 可行，因此为最小值。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/13",
+    "method_chain": [
+      "Split coprime moduli",
+      "Exponent residue lifting",
+      "Chinese remainders"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2021-II-Q14",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Two auxiliary cyclic quadrilaterals transfer the required angle.",
+      "reason_zh": "两个辅助圆内接四边形实现角度转移。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Use the centroid median and circumcenter chord midpoint.",
+        "reason_zh": "利用重心中线和外心到弦中点的关系。"
+      }
+    ],
+    "statement_en": "An acute triangle has circumcenter $O$ and centroid $G$. The tangent at $A$ meets the perpendicular to $GO$ through $G$ at $X$; let $Y=XG\\cap BC$. Given $\\angle B:\\angle C:\\angle XOY=13:2:17$, write $\\angle A=m/n$ degrees reduced and find $m+n$.",
+    "statement_zh": "锐角三角形外心为 $O$、重心为 $G$。$A$ 处切线与过 $G$ 且垂直 $GO$ 的直线交于 $X$，令 $Y=XG\\cap BC$。已知 $\\angle B:\\angle C:\\angle XOY=13:2:17$。若 $\\angle A$ 的度数约分为 $m/n$，求 $m+n$。",
+    "answer": "592",
+    "solution_en": [
+      "Let $M$ be the midpoint of $BC$. Then $A,G,M$ are collinear. The right angles $OAX,OGX$ put $O,A,X,G$ on one circle; similarly $O,G,Y,M$ are cyclic because $OM\\perp BC$.",
+      "Using these circles and the collinearities gives the angle relation $\\angle XOY=\\angle AOM$ in the present acute configuration. Write $B=13t,C=2t$, so $A=180^\\circ-15t$. The center-to-chord-midpoint ray bisects the central angle of $BC$, yielding $\\angle AOM=A+2C=180^\\circ-11t$.",
+      "Thus $17t=180^\\circ-11t$, or $t=45/7$. Therefore $A=585/7$ degrees, and $B=585/7,C=90/7$ are all acute as required. The requested sum is $592$."
+    ],
+    "solution_zh": [
+      "设 $M$ 为 $BC$ 中点，则 $A,G,M$ 共线。因 $OAX,OGX$ 为直角，$O,A,X,G$ 共圆；又因 $OM\\perp BC$，$O,G,Y,M$ 也共圆。",
+      "结合两圆圆周角与共线关系，在本锐角构型中得 $\\angle XOY=\\angle AOM$。令 $B=13t,C=2t$，则 $A=180^\\circ-15t$。圆心至弦中点射线平分相应圆心角，所以 $\\angle AOM=A+2C=180^\\circ-11t$。",
+      "故 $17t=180^\\circ-11t$，$t=45/7$，得到 $A=585/7$ 度，答案 $592$；另外两角为 $585/7,90/7$，均为锐角。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/14",
+    "method_chain": [
+      "Two right-angle circles",
+      "Median collinearity",
+      "Central-angle relation"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": false,
+      "notes": "Angle transfer checked against the constrained acute-angle branch; independent synthetic review of ray orientation is still requested."
+    },
+    "unresolved_issues": [
+      "Independent verification requested for ray orientations in the auxiliary-circle angle transfer."
+    ]
+  },
+  {
+    "question_id": "AIME-2021-II-Q15",
+    "paper_id": "AIME-2021-II",
+    "exam_year": 2021,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "The recursively defined functions become explicit next-square formulas.",
+      "reason_zh": "递归函数转化为下一个平方数的显式公式。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "The recurrence stops at the next square of the required parity.",
+        "reason_zh": "递推在满足奇偶性的下一个平方数停止。"
+      }
+    ],
+    "statement_en": "For positive integers, define $f(n)=\\sqrt n$ at squares and $f(n)=1+f(n+1)$ otherwise. Define $g(n)=\\sqrt n$ at squares and $g(n)=2+g(n+2)$ otherwise. Find the least $n$ with $f(n)/g(n)=4/7$.",
+    "statement_zh": "对正整数，若 $n$ 是平方数，令 $f(n)=g(n)=\\sqrt n$；否则 $f(n)=1+f(n+1)$、$g(n)=2+g(n+2)$。求使 $f(n)/g(n)=4/7$ 的最小 $n$。",
+    "answer": "258",
+    "solution_en": [
+      "Let $k=\\lceil\\sqrt n\\rceil$. Then $f(n)=k+k^2-n$. The $g$ recurrence reaches the first square having the parity of $n$; if $k\\equiv n\\pmod2$, the ratio is one, so we need the opposite parity.",
+      "In that case $g(n)=k+1+(k+1)^2-n=f(n)+2k+2$. The ratio gives $f(n)=8(k+1)/3$, hence $k\\equiv2\\pmod3$ and $n=k^2+k-8(k+1)/3$.",
+      "For $k=2,5,8,11$, the resulting $n=-2,14,48,100$ lies below $(k-1)^2$. At $k=14$, $n=170$ has the wrong parity. At $k=17$, $n=258$ satisfies the interval and parity conditions.",
+      "Indeed $f(258)=48,g(258)=84$, so the ratio is $4/7$. Since $k$ increases with $n$, the exhaustive smaller $k$ check proves minimality."
+    ],
+    "solution_zh": [
+      "令 $k=\\lceil\\sqrt n\\rceil$，则 $f(n)=k+k^2-n$。$g$ 保持自变量奇偶性，抵达第一个同奇偶平方数；若 $k\\equiv n\\pmod2$，两函数相等，故须奇偶相反。",
+      "此时 $g(n)=f(n)+2k+2$。由比例得 $f(n)=8(k+1)/3$，所以 $k\\equiv2\\pmod3$，且 $n=k^2+k-8(k+1)/3$。",
+      "$k=2,5,8,11$ 时得到 $n=-2,14,48,100$，均不大于 $(k-1)^2$；$k=14$ 得 $170$，奇偶不符；$k=17$ 得 $258$，满足全部要求。",
+      "核算 $f(258)=48,g(258)=84$。因 $k$ 随 $n$ 递增，已穷尽更小的候选，故最小值为 $258$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2021II/problem/15",
+    "method_chain": [
+      "Next-square stopping formulas",
+      "Parity branch",
+      "Bounded index search"
+    ],
+    "review": {
+      "author": "source_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Algebra and numerical values recomputed while authoring."
+    },
+    "unresolved_issues": []
+  }
+]

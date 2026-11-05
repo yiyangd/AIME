@@ -1,0 +1,92 @@
+{
+  "reviewer": "source_audit",
+  "reviewed_at": "2026-11-05T11:57:25.545949+00:00",
+  "status": "passed",
+  "pdf": "output/solutions/AIME_2000-2026_solutions_en.pdf",
+  "pdf_sha256": "e665c9bb44d4cd05faa39a0c0ce028e2869253562ef5d636e9bc3e47012bcb53",
+  "canonical_questions_sha256": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+  "physical_pages": 830,
+  "body_pages": 812,
+  "contact_sheet_review": {
+    "sheets": 13,
+    "covered_physical_pages": [
+      1,
+      830
+    ],
+    "all_sheets_visually_inspected": true,
+    "render_source_pdf_sha256": "36ee231c5e1c02cf5067ba3a7a381037ec55e67a5d71a43112fe192330ab2c6a",
+    "files": {
+      "contact-0001-0064.jpg": "7b76095b196559c14a14617b471ea917176d20012c0d32b15274689ba1b4953d",
+      "contact-0065-0128.jpg": "a9f71e798e1a461bef6cc8bd4f70308e179d1b40c7b4359fbbe4d8ccdb05e7bd",
+      "contact-0129-0192.jpg": "9d0757694b825295c7195b0e5b397dab950c31a3c28b3cec359c7c074872c6db",
+      "contact-0193-0256.jpg": "eec8c2f9ac9ddeaf7fcbd11dc68130bead7305f3bb678de3b437d31349c13978",
+      "contact-0257-0320.jpg": "ab3ce9b6424c97e2299768405c30f6678ece7c97b0ecbf232d61bdbfe2bce71f",
+      "contact-0321-0384.jpg": "e544bfe4d73945554a7c7918306698806d077d0c41c8e3497602e719a1ab1948",
+      "contact-0385-0448.jpg": "2391ebf5037d11a2bcb80d0b0b2411f49218bc704505849b7fabf07de7660e37",
+      "contact-0449-0512.jpg": "a8a4b7d4138393bfa6b7cfa4edb8eb86c624c46a1f6642c70c1607fd4aef8361",
+      "contact-0513-0576.jpg": "4e3d3b477049650c5557ddadb027f24f025a053de90d15a66a929b1f9d1a9256",
+      "contact-0577-0640.jpg": "c5e1f1afbdfdce15465c9a657e491652a71acecf989d8807e337f5f90880fcde",
+      "contact-0641-0704.jpg": "ebd17e608c7207cf09459af852a358ed936fda919abd709c7375eaf6ade2923d",
+      "contact-0705-0768.jpg": "a62133eb375fd51ab0e794fc63cf022e632e91eaa080c959c7c41195935469a8",
+      "contact-0769-0830.jpg": "278214000dd54aa7fa177b8edce1f4e37f2a4e502503db6c6d4d30868d8ea08f"
+    }
+  },
+  "final_render_comparison": {
+    "compared_pages": 830,
+    "changed_pages": [
+      202,
+      203,
+      346
+    ],
+    "pixel_identical_other_pages": 827,
+    "renderer": "Poppler pdftoppm at35dpi",
+    "meaning": "827 final page PNGs are byte-identical to the previously inspected contact-sheet source pages; all3 changed final pages were rendered at130dpi and visually inspected."
+  },
+  "high_resolution_pages": [
+    1,
+    2,
+    3,
+    18,
+    19,
+    197,
+    198,
+    202,
+    203,
+    319,
+    327,
+    346,
+    684,
+    728,
+    828
+  ],
+  "final_changed_pages_inspected": [
+    202,
+    203,
+    346
+  ],
+  "checks": [
+    "cover and bilingual atlas alignment",
+    "all16 contents pages in contact sheets; first and last contents pages at full resolution",
+    "original diagram detail",
+    "headers/footers and body numbering",
+    "long proof continuations on197–198",
+    "corrected result and historical key distinction on202–203",
+    "dense geometry/discrete arguments",
+    "LaTeX glyphs and long formulas",
+    "no clipping, text collisions or overprinting seen"
+  ],
+  "resolved_findings": [
+    {
+      "question_id": "AIME-2016-I-Q09",
+      "finding": "Missing English spaces adjoining744",
+      "resolved": true
+    },
+    {
+      "question_id": "AIME-2022-I-Q14",
+      "finding": "Plain-text vector algebra and degree expressions",
+      "resolved": true
+    }
+  ],
+  "unresolved_findings": [],
+  "limitation": "Contact sheets establish whole-book layout review; detailed legibility was sampled at high resolution. This visual receipt is separate from the mathematical data reviews."
+}

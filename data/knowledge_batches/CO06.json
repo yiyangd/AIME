@@ -1,0 +1,919 @@
+{
+  "subtype_id": "CO06",
+  "introduction_en": "Draw the correct graph before counting. Vertices may represent cells, faces, subsets, or states; edges may represent adjacency, compatibility, or an incidence constraint. Geometric counts also need a proof that every construction is legal and that its witness multiplicity is known.",
+  "introduction_zh": "计数前先建立正确的图。顶点可以代表单元格、面、子集或状态，边可以代表相邻、相容或关联限制。几何计数还须证明每个构造合法，并明确见证重数。",
+  "prerequisites": [
+    "CO01",
+    "CO02",
+    "CO04"
+  ],
+  "methods": [
+    {
+      "method_id": "CO06-M01",
+      "title_en": "Translate adjacency into a finite graph",
+      "title_zh": "把相邻关系转成有限图",
+      "steps_en": [
+        "Specify exactly what vertices and edges represent, and whether the edges are directed.",
+        "Use coordinates, parity, a dual graph, or an explicit edge list to prove the representation preserves every legal move.",
+        "Count graph objects or states, retaining visited-set memory or reachability constraints when required."
+      ],
+      "steps_zh": [
+        "明确顶点与边各代表什么，以及边是否有方向。",
+        "用坐标、奇偶、对偶图或明确边表，证明图表示保留全部合法动作。",
+        "再计算图对象或状态，必要时保留已访问集合或可达性条件。"
+      ],
+      "example_en": "A counter moves between side-adjacent cells of a two-by-three board. Can it return to its start after an odd number of moves?",
+      "example_zh": "棋子在两行三列棋盘的共边相邻格之间移动，能否在奇数步后回到起点？",
+      "solution_en": [
+        "Color each cell by the parity of its row plus column. Every graph edge joins opposite colors.",
+        "Each move flips the color, so after an odd number the counter is on the other color.",
+        "It cannot be at the starting cell. This is a bipartite-graph obstruction independent of the chosen route."
+      ],
+      "solution_zh": [
+        "按行号加列号的奇偶给格子两色染色，每条图边连接异色格。",
+        "每步翻转颜色，奇数步后必位于另一色。",
+        "因此不能回起点，这是二部图障碍，与具体路线无关。"
+      ],
+      "tip_en": "For face-adjacency problems, the dual graph often turns a solid into a small familiar graph.",
+      "tip_zh": "面的相邻问题常可通过对偶图，把立体变成小型常见图。",
+      "question_ids": [
+        "AIME-2001-I-Q15",
+        "AIME-2001-II-Q01",
+        "AIME-2012-I-Q11",
+        "AIME-2018-I-Q14"
+      ],
+      "prerequisites": [
+        "CO05",
+        "NT03"
+      ],
+      "extensions_en": [
+        "An octahedron has the cube as its face-adjacency dual. Label cube vertices by binary triples: adjacent vertices differ in one bit, so avoiding face adjacency means Hamming distance two or three. For a digit rule, use digits as vertices and allowed consecutive digit blocks as directed edges; a directed cycle may produce unbounded lengths, while a finite acyclic graph has a longest path."
+      ],
+      "extensions_zh": [
+        "八面体的面相邻对偶图是立方体。用三位二进制标顶点，相邻恰差一位，因此避开共边面意味着相差两位或三位。数位规则可把数位作顶点、允许相邻数位块作有向边；有向环可能产生无限长度，无环有限图则有最长路径。"
+      ]
+    },
+    {
+      "method_id": "CO06-M02",
+      "title_en": "Count geometric witnesses and certify their multiplicity",
+      "title_zh": "计几何见证并证明其重数",
+      "steps_en": [
+        "Choose an elementary witness: a vertex tuple, an apex, a pair of lines, or a pair of monotone branches.",
+        "Classify all degenerate or exceptional configurations and determine their witness multiplicity.",
+        "Subtract invalid cases or correct multiplicities only after proving every remaining witness produces one valid object.",
+        "For intersections of curves, prove existence and uniqueness within each counted branch pair; monotonicity of both curves alone does not suffice."
+      ],
+      "steps_zh": [
+        "选择基本见证：顶点元组、顶角、一对直线或一对单调分支。",
+        "分类全部退化与例外构型，并确定见证重数。",
+        "证明剩余每个见证均产生合法对象之后，再扣除无效情形或修正重数。",
+        "曲线交点按分支对计数时，须证明每对中的存在性与唯一性，两曲线各自单调并不足够。"
+      ],
+      "example_en": "Four vertices of a square and its center are marked. How many nondegenerate triangles use three marked points?",
+      "example_zh": "标记正方形四顶点与中心，从中选三个点能组成多少个非退化三角形？",
+      "solution_en": [
+        "All triples number $\\binom53=10$.",
+        "Exactly two triples are collinear: the center with either opposite vertex pair. No other line contains three marked points.",
+        "Subtract these two invalid witnesses to obtain eight triangles."
+      ],
+      "solution_zh": [
+        "全部三元组有 $\\binom53=10$ 个。",
+        "恰有两个共线三元组，即中心与任一对对顶点；没有其他含三个标记点的直线。",
+        "扣除两个退化见证，得到八个三角形。"
+      ],
+      "tip_en": "A count of branch rectangles requires a local intersection certificate; never infer one crossing from a picture.",
+      "tip_zh": "分支矩形的计数需要局部交点证书，不能凭图猜定一个交点。",
+      "question_ids": [
+        "AIME-2002-I-Q05",
+        "AIME-2003-I-Q06",
+        "AIME-2004-I-Q03",
+        "AIME-2010-II-Q11",
+        "AIME-2015-II-Q05",
+        "AIME-2017-I-Q01",
+        "AIME-2017-II-Q13",
+        "AIME-2018-I-Q07",
+        "AIME-2022-II-Q05",
+        "AIME-2023-I-Q03",
+        "AIME-2023-II-Q11",
+        "AIME-2024-I-Q12"
+      ],
+      "prerequisites": [
+        "CO04",
+        "GE03"
+      ],
+      "extensions_en": [
+        "An isosceles triangle has one apex witness except for an equilateral triangle, which has three. For a regular $n$-gon, apex counting gives $n\\lfloor(n-1)/2\\rfloor$ incidences; subtract two extra copies of each equilateral triangle. For pairwise-intersecting edge families, two edges $ab,ac$ force every edge either through $a$ or equal to $bc$, leaving star families and the triangle exception.",
+        "For a curve-branch pair, use endpoint signs for existence. Opposite orientations can give direct uniqueness; equal orientations need a further derivative or convexity argument. A sufficient crossing certificate is that the difference of the two graphs has the same nonzero derivative sign at every zero: two such crossings would force an intervening zero of the opposite orientation. The full trigonometric-fold certificate is supplied with its companion solution."
+      ],
+      "extensions_zh": [
+        "一般等腰三角形只有一个顶角见证，等边三角形有三个。正 $n$ 边形按顶角计数有 $n\\lfloor(n-1)/2\\rfloor$ 次关联，应对每个等边三角形扣掉额外两份。两两相交边族中，已有 $ab,ac$ 后，其他边要么经过 $a$，要么为 $bc$，只剩星形与三角形例外。",
+        "每对曲线分支可用端点符号证明存在；方向相反时可直接唯一，方向相同时还须导数或凸性。一个充分的穿越证书是两图差在每个零点的导数均具有相同非零符号；若有两个同向穿越，中间必有反向零点。完整三角折叠证书见配套解析。"
+      ]
+    },
+    {
+      "method_id": "CO06-M03",
+      "title_en": "Count planar regions by Euler or incremental crossings",
+      "title_zh": "用欧拉公式或逐段交点计平面区域",
+      "steps_en": [
+        "Replace each intersection by a graph vertex and split every segment there.",
+        "Use $V-E+F=1+C$ with the correct component and exterior-face counts, or add one segment at a time.",
+        "A new segment with $r$ distinct interior crossing points creates $r+1$ regions; if crossing points coincide, count distinct points rather than intersecting pairs."
+      ],
+      "steps_zh": [
+        "将每个交点作为图顶点，并把线段在交点处分边。",
+        "用 $V-E+F=1+C$ 并正确处理连通分量与外部面，或逐条添加线段。",
+        "新线段若有 $r$ 个不同内部交点，就新增 $r+1$ 区域；交点重合时须计不同点，而非相交线段对。"
+      ],
+      "example_en": "Three distinct diameters of a disk pass through its center. How many disk regions do they form, and why does a generic pair-crossing formula overcount?",
+      "example_zh": "圆盘内三条不同直径都过圆心，形成多少个区域？为什么一般位置的线段对交点公式会多数？",
+      "solution_en": [
+        "The first diameter creates two regions. The second crosses it at one point and adds two, giving four.",
+        "The third meets both old diameters at the same center point, so it also adds two, giving six.",
+        "Using three pairwise crossings in the generic formula $1+3+3$ gives seven because the last two crossings are not distinct."
+      ],
+      "solution_zh": [
+        "第一条直径得到两个区域，第二条有一个交点，新增两个，得到四个。",
+        "第三条与旧直径都在同一圆心相交，仍只新增两个，最终六个。",
+        "把三对相交代入一般公式 $1+3+3$ 会得七，因为第三条上的两个交点并不不同。"
+      ],
+      "tip_en": "Probability-one general position is valid only after excluding the finitely described degeneracies.",
+      "tip_zh": "只有排除明确描述的退化事件后，才能使用概率一的一般位置。",
+      "question_ids": [
+        "AIME-2022-II-Q09",
+        "AIME-2025-I-Q13"
+      ],
+      "prerequisites": [
+        "CO02",
+        "PS04"
+      ],
+      "extensions_en": [
+        "For complete bipartite segments between $m,n$ ordered points on parallel lines with no triple interior crossing, $X=\\binom m2\\binom n2$ crossings and Euler give $mn+X-1$ bounded faces. For a random chord arrangement, linearity of expectation applies to crossing indicators; endpoint interleaving determines whether two chords cross."
+      ],
+      "extensions_zh": [
+        "平行两线上分别有 $m,n$ 个有序点，连全两组之间线段且无三线内部共点，则交点 $X=\\binom m2\\binom n2$，欧拉公式给有界面数 $mn+X-1$。随机弦安排可对相交指示变量使用期望线性性，两弦是否相交由端点是否交错决定。"
+      ]
+    },
+    {
+      "method_id": "CO06-M04",
+      "title_en": "Normalize lattice directions and count crossed cells",
+      "title_zh": "归一格点方向并计算穿越单元",
+      "steps_en": [
+        "Divide an integer direction vector by the gcd of its coordinates to obtain the primitive step.",
+        "Use coordinate spans to bound possible directions when a line contains a prescribed number of grid points.",
+        "Normalize a line by its first boundary point or least coordinate to avoid counting it from several points.",
+        "For a segment joining lattice points, count crossed unit-cell interiors with the gcd correction."
+      ],
+      "steps_zh": [
+        "将整数方向向量各坐标除以最大公因数，得到本原步长。",
+        "规定直线含多少格点时，利用坐标跨度限制方向。",
+        "按首个边界点或最小坐标归一每条线，避免从多个点重复计。",
+        "格点连线穿越单位格内部时，使用最大公因数修正。"
+      ],
+      "example_en": "Find all lattice points on the segment from $(0,0)$ to $(6,4)$, and count the unit-square interiors crossed by the segment.",
+      "example_zh": "求从 $(0,0)$ 到 $(6,4)$ 线段上的全部整点，并计算线段穿过多少个单位正方形内部。",
+      "solution_en": [
+        "The coordinate gcd is two, so the primitive step is $(3,2)$. The lattice points are $(0,0),(3,2),(6,4)$.",
+        "A segment with positive integer spans $a,b$ crosses $a+b-\\gcd(a,b)$ unit-square interiors: simultaneous grid-line crossings at internal lattice points merge two changes.",
+        "The count here is $6+4-2=8$. Using the nonprimitive step would miss the interior lattice point."
+      ],
+      "solution_zh": [
+        "坐标最大公因数为二，本原步长为 $(3,2)$，整点为 $(0,0),(3,2),(6,4)$。",
+        "横纵正整数跨度为 $a,b$ 的线段穿过 $a+b-\\gcd(a,b)$ 个单位格内部；内部整点同时穿两条格线，将两次变化合并。",
+        "本题为 $6+4-2=8$；用非本原方向会漏掉中间整点。"
+      ],
+      "tip_en": "A line and a directed traversal are different objects; identify opposite primitive directions when counting lines.",
+      "tip_zh": "直线与有向行进不同，计直线时须归并相反本原方向。",
+      "question_ids": [
+        "AIME-2007-II-Q05",
+        "AIME-2017-II-Q14"
+      ],
+      "prerequisites": [
+        "NT02",
+        "GE07"
+      ]
+    },
+    {
+      "method_id": "CO06-M05",
+      "title_en": "Decompose regular graphs into cycles and gcd components",
+      "title_zh": "把规则图分解为循环与最大公因数组件",
+      "steps_en": [
+        "Use degree two or a fixed modular step to identify disjoint cycle components.",
+        "For a step $k$ modulo $n$, there are $\\gcd(n,k)$ cycles, each of length $n/\\gcd(n,k)$.",
+        "Apply the local cycle count, then multiply across independent components; remember diameter or single-edge degeneracies.",
+        "If the labels of components are being assigned, correct for indistinguishable components of the same size."
+      ],
+      "steps_zh": [
+        "通过度为二或固定模步长识别互不相交的循环分量。",
+        "模 $n$ 步长 $k$ 产生 $\\gcd(n,k)$ 个长度 $n/\\gcd(n,k)$ 的循环。",
+        "使用局部圈计数，再按独立分量相乘，并处理直径或单边退化。",
+        "若需给分量分配标签，还须按相同大小分量的可交换性修正。"
+      ],
+      "example_en": "A graph is the disjoint union of a four-cycle and a six-cycle. Count its perfect matchings.",
+      "example_zh": "一个图是四循环与六循环的不交并，求其完美匹配数。",
+      "solution_en": [
+        "In an even cycle, choosing which of the two edges at a fixed vertex is matched forces every remaining edge alternately.",
+        "Each component therefore has exactly two perfect matchings.",
+        "The components are disjoint, so the total is $2\\cdot2=4$. An odd-cycle component would make the total zero."
+      ],
+      "solution_zh": [
+        "偶循环中，选定某顶点两条邻边中哪一条属于匹配后，其余边被迫交替确定。",
+        "因此每个分量恰有两种完美匹配。",
+        "不交分量独立，总数为四；若含奇循环分量，则总数为零。"
+      ],
+      "tip_en": "A permutation cycle is oriented; an undirected graph cycle identifies its two orientations.",
+      "tip_zh": "置换循环有方向，无向图循环则归并正反两方向。",
+      "question_ids": [
+        "AIME-2004-I-Q08",
+        "AIME-2012-II-Q14",
+        "AIME-2014-II-Q13",
+        "AIME-2016-II-Q12",
+        "AIME-2024-I-Q11",
+        "AIME-2025-II-Q11"
+      ],
+      "prerequisites": [
+        "CO01",
+        "NT02"
+      ],
+      "extensions_en": [
+        "An undirected cycle on $k$ fixed labels has $(k-1)!/2$ realizations for $k\\ge3$. A proper $q$-coloring of an $n$-cycle has $(q-1)^n+(-1)^n(q-1)$ choices, obtainable by the row-versus-cycle recurrence. A primitive regular-star step requires $\\gcd(n,k)=1$; complementing the step reverses traversal, and step one must be excluded if crossings are required."
+      ],
+      "extensions_zh": [
+        "$k\\ge3$ 个固定标签的无向圈有 $(k-1)!/2$ 种。$n$ 循环的合法 $q$ 色染色数为 $(q-1)^n+(-1)^n(q-1)$，可由一行与环的关系递推得到。规则星形的本原步长须与 $n$ 互素；互补步长反转方向，要求交叉时还须排除步长一。"
+      ]
+    },
+    {
+      "method_id": "CO06-M06",
+      "title_en": "Use layers and distance levels to bound simple paths",
+      "title_zh": "用层次与距离等级限制简单路径",
+      "steps_en": [
+        "Identify a quantity that cannot decrease along the path, such as height.",
+        "Decompose the path into one visit to each layer and count its simple horizontal pieces.",
+        "If edge lengths must increase strictly, list all possible lengths to bound the edge count.",
+        "For an extremal path, enforce every required length in reverse order and exhibit all surviving constructions."
+      ],
+      "steps_zh": [
+        "找出沿路径不能减少的量，例如高度。",
+        "把路径分成对各层的一次访问，计算各层内简单横向部分。",
+        "若步长严格增加，列全可用长度以限制边数。",
+        "最大路径须反向依次满足每个必要长度，并展示所有幸存构造。"
+      ],
+      "example_en": "A graph has top $T$, bottom $B$, and one middle triangular cycle. $T$ joins every middle vertex, and every middle vertex joins $B$. Count simple paths from $T$ to $B$ with no return to an earlier level.",
+      "example_zh": "图由顶点 $T$、底点 $B$ 与中间三角循环组成，顶点与底点各连接全部中层点。求不返回较高层的简单 $T$ 到 $B$ 路径数。",
+      "solution_en": [
+        "Choose the first middle vertex in three ways.",
+        "From it, a simple path within the triangle has one zero-edge option and two options each for one or two edges, totaling five.",
+        "It then goes to $B$ uniquely, giving $3\\cdot5=15$ paths. Turning back around the triangle would revisit a vertex and is excluded."
+      ],
+      "solution_zh": [
+        "进入中层的首点有三种选择。",
+        "从该点沿三角形的简单路径有零步一种、一步和两步各两种，共五种。",
+        "之后唯一走到底点，所以有十五条，沿循环折返会重访顶点，已排除。"
+      ],
+      "tip_en": "A bound from the number of distance levels needs an explicit path to prove that it is achievable.",
+      "tip_zh": "由距离等级数得到的上界，还须有具体路径证明可达到。",
+      "question_ids": [
+        "AIME-2008-II-Q10",
+        "AIME-2016-I-Q03"
+      ],
+      "prerequisites": [
+        "LO02",
+        "CO01"
+      ]
+    },
+    {
+      "method_id": "CO06-M07",
+      "title_en": "Normalize graph equilibrium by degree and apply a maximum principle",
+      "title_zh": "按度数归一平衡并使用最大值原理",
+      "steps_en": [
+        "Write the fixed transfer equation $c_v=\\sum_{u\\sim v}c_u/d_u$.",
+        "Divide by $d_v$ so $c_v/d_v$ is the average of its neighbors corresponding ratios.",
+        "At a maximal ratio, every neighboring ratio must equal it; connectedness propagates equality.",
+        "Use the total amount to recover the common constant and all vertex allocations."
+      ],
+      "steps_zh": [
+        "写固定转移方程 $c_v=\\sum_{u\\sim v}c_u/d_u$。",
+        "除以 $d_v$，使 $c_v/d_v$ 成为邻居相应比值的平均。",
+        "最大比值处所有邻居都须同值，连通性将等值传遍全图。",
+        "用总量求公共常数及每个顶点的分配。"
+      ],
+      "example_en": "Three vertices form a path $A-B-C$. At every simultaneous step each sends its entire amount equally to its neighbors. A nonnegative total of forty is unchanged at every vertex. Find the amounts.",
+      "example_zh": "三个顶点组成路径 $A-B-C$，每步同时把全部数量平分给邻居。非负总量为四十且每点数量保持不变，求各点数量。",
+      "solution_en": [
+        "The degrees are one, two, one. Degree-normalized ratios must be constant by the connected-graph maximum principle.",
+        "Therefore the amounts are proportional to $1:2:1$.",
+        "The common factor is $40/4=10$, so the amounts are $(10,20,10)$. Direct transfer verifies the fixed state."
+      ],
+      "solution_zh": [
+        "度数为一、二、一，连通图最大值原理使按度归一的比值恒定。",
+        "故数量比为一比二比一。",
+        "公共系数为十，数量为 $(10,20,10)$，直接转移也可核验。"
+      ],
+      "tip_en": "The averaging identity uses an undirected graph; a directed transfer graph has a different stationary law.",
+      "tip_zh": "此平均关系使用无向图，有向转移图具有不同的平衡规律。",
+      "question_ids": [
+        "AIME-2012-I-Q07"
+      ],
+      "prerequisites": []
+    },
+    {
+      "method_id": "CO06-M08",
+      "title_en": "Analyze tournament strong components before counting orientations",
+      "title_zh": "先分析竞赛图强分量再计方向",
+      "steps_en": [
+        "A tournament has exactly one directed edge between each vertex pair.",
+        "Collapse strongly connected components; their directions form a total order.",
+        "Use small component sizes to determine the possible source or sink obstruction, then count its event intersections."
+      ],
+      "steps_zh": [
+        "竞赛图每对顶点间恰有一条有向边。",
+        "将强连通分量缩点，各分量之间形成全序方向。",
+        "利用小分量大小确定源点或汇点障碍，再计算相关事件交集。"
+      ],
+      "example_en": "Start with a directed triangle cycle and add a fourth vertex with one edge to each old vertex. How many choices of its three edge directions make the whole graph strongly connected?",
+      "example_zh": "从一个有向三角循环出发，加第四顶点并与每个旧顶点各连一条有向边。三个方向有多少种选择使全图强连通？",
+      "solution_en": [
+        "The old cycle already allows every old vertex to reach every other.",
+        "The new vertex must have at least one outgoing and one incoming edge. This condition also suffices, because the old cycle connects the entry and exit points.",
+        "Of the $2^3=8$ orientations, exclude all-outgoing and all-incoming, leaving six."
+      ],
+      "solution_zh": [
+        "旧循环中各点已能互相到达。",
+        "新顶点须至少有一条出边与一条入边；这也充分，因为旧循环连接进出点。",
+        "八种方向中排除全出与全入，剩六种。"
+      ],
+      "tip_en": "A nonstrong tournament need not have a global source or sink for arbitrary vertex counts.",
+      "tip_zh": "一般大小的非强连通竞赛图未必有全局源点或汇点。",
+      "question_ids": [
+        "AIME-2017-II-Q11"
+      ],
+      "prerequisites": [
+        "CO04"
+      ],
+      "extensions_en": [
+        "A nontrivial strongly connected tournament has at least three vertices. On five vertices, a nonstrong tournament cannot have both its first and last strong components nontrivial, since they would require at least six vertices. Thus its first or last component is a singleton, giving a global source or sink. This is why the source/sink inclusion-exclusion is complete specifically in the five-vertex problem."
+      ],
+      "extensions_zh": [
+        "非平凡强连通竞赛图至少有三个顶点。五顶点非强竞赛图的首尾强分量不可能都非平凡，否则至少需六点，因此首分量或末分量必为单点，形成全局源点或汇点。这才保证五顶点题中的源汇容斥完备。"
+      ]
+    },
+    {
+      "method_id": "CO06-M09",
+      "title_en": "Use circular order to characterize strict separation",
+      "title_zh": "用圆周顺序刻画严格分隔",
+      "steps_en": [
+        "Restrict a separating circle to the common circumcircle of the points.",
+        "Two distinct circles meet at at most two points, so membership can change at most twice around the cyclic order.",
+        "For sufficiency, strictly separate a consecutive run by a line in the adjoining gaps, then approximate the finite half-plane choice by a sufficiently large circle."
+      ],
+      "steps_zh": [
+        "将分隔圆限制到所有点的公共外接圆上。",
+        "两个不同圆至多相交两点，所以沿循环顺序成员身份至多改变两次。",
+        "证明充分性时，在相邻空隙中用直线严格分隔连续段，再用足够大的圆在有限点集上近似该半平面。"
+      ],
+      "example_en": "Can a circle contain one opposite pair of a square strictly inside while placing the other opposite pair strictly outside?",
+      "example_zh": "能否用一个圆，使正方形一对对顶点严格在圆内、另一对严格在圆外？",
+      "solution_en": [
+        "Along the square circumcircle the required membership pattern alternates inside, outside, inside, outside.",
+        "This requires at least four boundary changes, but two distinct circles have at most two intersection points.",
+        "The circles cannot coincide under strict separation, so the configuration is impossible."
+      ],
+      "solution_zh": [
+        "沿正方形外接圆，要求成员状态交替为内、外、内、外。",
+        "这至少需要四次边界变化，而两个不同圆至多有两个交点。",
+        "严格分隔也不允许两圆重合，因此不可能。"
+      ],
+      "tip_en": "Strict separation leaves positive margins on a finite point set; those margins justify the large-circle approximation.",
+      "tip_zh": "有限点集的严格分隔具有正余量，这一余量保证大圆近似有效。",
+      "question_ids": [
+        "AIME-2014-I-Q05"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    {
+      "method_id": "CO06-M10",
+      "title_en": "Count chord-supported rectangles by perpendicular offsets",
+      "title_zh": "按垂直弦的偏移量计算弦支撑矩形",
+      "steps_en": [
+        "Group chords by direction and pair perpendicular direction classes.",
+        "Represent each chord by its signed distance from the circumcenter.",
+        "Choose two offsets in each class; all four corners lie on their finite chords exactly when the largest squared offsets sum to at most the radius squared.",
+        "Count offset-pair multiplicities, taking care not to count the same perpendicular class pair twice."
+      ],
+      "steps_zh": [
+        "将弦按方向分组，再配对互相垂直的方向类。",
+        "用弦到外心的带符号距离表示每条弦。",
+        "各类选两个偏移量，四角都在有限弦上当且仅当两类最大偏移绝对值的平方和不超过半径平方。",
+        "按偏移对重数计数，避免同一垂直方向对被数两次。"
+      ],
+      "example_en": "In a unit disk, two vertical chords have offsets $\\pm3/5$. What is the greatest symmetric horizontal offset $\\pm t$ that forms a rectangle with corners on all four chord segments?",
+      "example_zh": "单位圆盘中两条竖弦偏移量为 $\\pm3/5$，两横弦偏移量为 $\\pm t$。矩形四角均落在这些有限弦上时，$t$ 最大为多少？",
+      "solution_en": [
+        "The four corners are $(\\pm3/5,\\pm t)$.",
+        "Every corner lies in the disk exactly when $9/25+t^2\\le1$. This also ensures it lies on each relevant chord segment.",
+        "Thus $t\\le4/5$, attained when all four corners are on the circumcircle."
+      ],
+      "solution_zh": [
+        "四角为 $(\\pm3/5,\\pm t)$。",
+        "它们在圆盘内恰要求 $9/25+t^2\\le1$，这同时保证位于各自有限弦段上。",
+        "所以最大 $t=4/5$，等号时四角都在圆周。"
+      ],
+      "tip_en": "Perpendicular supporting lines alone do not guarantee their intersections lie on the available chord segments.",
+      "tip_zh": "支撑直线互相垂直，并不保证交点落在可用弦段上。",
+      "question_ids": [
+        "AIME-2024-II-Q15"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    {
+      "method_id": "CO06-M11",
+      "title_en": "Recover a Hamiltonian rule from one incoming edge",
+      "title_zh": "由唯一入边恢复哈密顿转移规则",
+      "steps_en": [
+        "Encode each allowed outgoing choice by a binary rule at the state.",
+        "Impose one incoming edge at every state; compare the two possible predecessors.",
+        "Propagate the resulting equality to reduce the rule to diagonal classes.",
+        "Compute the displacement after one rule period and use a gcd condition to distinguish one full cycle from several short cycles."
+      ],
+      "steps_zh": [
+        "用每个状态的二元规则编码出边选择。",
+        "每态要求恰一入边，比较两种可能前驱。",
+        "传播所得等式，将规则压缩到对角类别。",
+        "计算一个规则周期后的位移，用最大公因数区分一个大循环与多个短循环。"
+      ],
+      "example_en": "On $\\mathbb Z_3^2$, repeat commands $A,A,B$, where $A$ increases the first coordinate and $B$ the second. Show the resulting walk from $(0,0)$ visits all nine states before returning.",
+      "example_zh": "在 $\\mathbb Z_3^2$ 上重复指令 $A,A,B$，其中 $A$ 增第一坐标，$B$ 增第二坐标。证明从原点出发先遍历九态再返回。",
+      "solution_en": [
+        "Each command increases the coordinate sum by one modulo three, so states within a three-step block have different diagonal classes.",
+        "One block changes coordinates by $(2,1)=(2,-2)$ modulo three. This translation has order three because $\\gcd(2,3)=1$.",
+        "The three diagonal classes and three distinct block translations give nine distinct states, followed by the return."
+      ],
+      "solution_zh": [
+        "每条指令使坐标和模三增加一，同一三步块的状态位于不同对角类。",
+        "一块位移为 $(2,1)=(2,-2)$，因 $\\gcd(2,3)=1$，此平移的阶为三。",
+        "三个对角类配三个不同块平移，得到九个不同状态后返回。"
+      ],
+      "tip_en": "A locally bijective successor rule gives a union of cycles; the gcd test is what proves there is one Hamiltonian cycle.",
+      "tip_zh": "局部一入一出的规则只保证若干循环，最大公因数检验才证明只有一个哈密顿大循环。",
+      "question_ids": [
+        "AIME-2023-I-Q14"
+      ],
+      "prerequisites": [
+        "NT02",
+        "CO02"
+      ],
+      "extensions_en": [
+        "For states $(a,b)\\in\\mathbb Z_n^2$, let $h(a,b)=1$ choose the first-coordinate move and zero the second. One incoming edge gives $h(a-1,b)=h(a,b-1)$, so $h$ depends only on $a+b$. If the resulting length-$n$ rule has $c$ first-coordinate moves, each period translates by $(c,-c)$, and the walk covers all $n^2$ states exactly when $\\gcd(c,n)=1$."
+      ],
+      "extensions_zh": [
+        "对模 $n$ 二维状态，以 $h(a,b)=1$ 选第一坐标步、零选第二坐标步。唯一入边给出 $h(a-1,b)=h(a,b-1)$，故规则只依赖 $a+b$。长度 $n$ 规则若含 $c$ 个第一坐标步，每周期平移 $(c,-c)$，遍历全部 $n^2$ 状态的充要条件为 $\\gcd(c,n)=1$。"
+      ]
+    },
+    {
+      "method_id": "CO06-M12",
+      "title_en": "Use finite incidence geometry to count signed configurations",
+      "title_zh": "用有限关联几何计算符号构型",
+      "steps_en": [
+        "Recognize the small hypergraph and prove its point-line incidences.",
+        "Condition on zero positions; only hyperedges avoiding zeros contribute to a product sum.",
+        "Translate the remaining signs into line-product signs, or into degrees of a smaller auxiliary graph.",
+        "Count every incidence type disjointly and verify the small total by exhaustive enumeration when available."
+      ],
+      "steps_zh": [
+        "识别小型超图并证明点线关联规律。",
+        "按零位置分类，只有避开零的超边对乘积和有贡献。",
+        "把余下正负号转成线乘积符号，或转成更小辅助图的度数。",
+        "按不交关联类型求和，可用穷举独立核验小规模总量。"
+      ],
+      "example_en": "The Fano plane has seven points and seven three-point lines, with three lines through each point and one line through each point pair. Give every point sign $+1$ except one point of sign $-1$. What is the sum of the seven line products? What changes with two negative points?",
+      "example_zh": "法诺平面有七点七条三点线，每点过三线、每对点恰共一线。仅一个点为负一，其余为正一，七条线的符号乘积和为多少？若有两个负点呢？",
+      "solution_en": [
+        "One negative point lies on exactly three lines, making three products negative and four positive. The sum is one.",
+        "Two negative points share one line, whose product is positive. Their other two lines each are distinct, giving four negative products.",
+        "There are then three positive products and four negative ones, so the sum is negative one. The shared line must not be counted as negative twice."
+      ],
+      "solution_zh": [
+        "一个负点所在三条线乘积负，其余四条正，和为一。",
+        "两个负点共用的一条线乘积反为正，各自其余两线不同，共四条负乘积线。",
+        "于是三正四负，和为负一；公共线不能被当作两条负线。"
+      ],
+      "tip_en": "Finite geometry is useful only after verifying the claimed incidence pattern, not merely recognizing its name.",
+      "tip_zh": "须验证所声称的关联结构，不能只认出有限几何名称。",
+      "question_ids": [
+        "AIME-2026-II-Q15"
+      ],
+      "prerequisites": [
+        "NT03",
+        "CO04"
+      ],
+      "extensions_en": [
+        "The cyclic triples $\\{i,i+1,i+3\\}$ modulo seven form the Fano plane: every pair occurs in one triple. With one zero point, four lines survive. Each of the six remaining points lies on exactly two surviving lines, identifying it with an edge of $K_4$. A choice of negative points becomes a graph edge set; a line product is negative exactly when that vertex degree is odd.",
+        "With three negative signs among those six points, exactly two of the four products must be negative to make their sum zero modulo three. Three-edge subsets of $K_4$ with exactly two odd-degree vertices are precisely its spanning three-edge paths, numbering $4!/2=12$. With two zero points, the two surviving lines meet once, and a minority sign changes only one line product exactly when it is outside their intersection. These lemmas justify the nontrivial zero strata in the full enumeration."
+      ],
+      "extensions_zh": [
+        "模七的循环三元组 $\\{i,i+1,i+3\\}$ 构成法诺平面，每对点恰出现一次。一个零点后剩四条线，每个其余点属于其中两线，故对应 $K_4$ 的一条边。选择负点就成为选择边，某线乘积为负恰对应其顶点度为奇数。",
+        "这六点中若三个为负，要使四个乘积之和模三为零，必须恰有两个负乘积。$K_4$ 三边子集中恰有两个奇度顶点的正是覆盖四点的三边路径，有 $4!/2=12$ 个。两个零点时剩两线且相交一次，少数符号只有放在非交点位置才仅改变一个线乘积。这些引理支撑完整枚举中的非平凡零分层。"
+      ]
+    },
+    {
+      "method_id": "CO06-M13",
+      "title_en": "Condition on shared edges and multiply boundary completions",
+      "title_zh": "按公共边分类并相乘边界补全",
+      "steps_en": [
+        "Choose the colors of all edges shared by multiple local regions.",
+        "For each region determine the number of remaining boundary choices compatible with its fixed internal edges.",
+        "Multiply only when those remaining boundary edge sets are disjoint, then sum over shared-edge patterns."
+      ],
+      "steps_zh": [
+        "先选择被多个局部区域共用边的颜色。",
+        "对每个区域按已定内部边计算剩余边界补全数。",
+        "只有剩余边界集合互不重叠时才相乘，再对公共边模式求和。"
+      ],
+      "example_en": "Two unit squares share one edge. Color their seven distinct edges red or blue so each square has exactly one blue edge. Count the colorings.",
+      "example_zh": "两个单位正方形共用一条边，将七条不同边染红蓝，使每个正方形恰有一条蓝边，求染色数。",
+      "solution_en": [
+        "If the shared edge is blue, all six outside edges are forced red, giving one coloring.",
+        "If the shared edge is red, each square chooses one of its three outside edges to be blue; these edge sets are disjoint.",
+        "The count is $1+3\\cdot3=10$. Conditioning on the shared edge is what makes the completions independent."
+      ],
+      "solution_zh": [
+        "公共边蓝时，六条外边均被迫红，只有一种。",
+        "公共边红时，每个正方形各从自己的三条外边选一条蓝，两组边互不相交。",
+        "共有 $1+3\\cdot3=10$ 种，按公共边分类后，补全过程才独立。"
+      ],
+      "tip_en": "Regions sharing unassigned edges do not have independent completion counts.",
+      "tip_zh": "仍共用未定边的区域，其补全数不能独立相乘。",
+      "question_ids": [
+        "AIME-2025-II-Q03"
+      ],
+      "prerequisites": []
+    },
+    {
+      "method_id": "CO06-M14",
+      "title_en": "Bound graph edge differences by weighted deviations",
+      "title_zh": "用加权偏差限制图边差总和",
+      "steps_en": [
+        "Orient every edge from its lower label to its higher label and collect the coefficient of each vertex value.",
+        "The coefficient sum is zero and its absolute value is at most the vertex degree. Subtract a common center from every label.",
+        "Use rearrangement to pair the largest absolute deviations with the largest degrees.",
+        "Prove equality by a compatible low-high bipartition and the required degree allocations; a numerical bound alone is insufficient."
+      ],
+      "steps_zh": [
+        "将边从较小标签定向到较大标签，收集每个顶点值的系数。",
+        "系数和为零，绝对值不超过度数，因此可给所有标签减同一中心。",
+        "用重排把最大偏差绝对值配最大度数。",
+        "以相容的低高二部分配及指定度数分配证明等号，只有数值上界并不够。"
+      ],
+      "example_en": "Place labels one through four on the four vertices of a path. Maximize the sum of absolute differences on its three edges.",
+      "example_zh": "将一至四放在四顶点路径上，求三条边绝对差之和的最大值。",
+      "solution_en": [
+        "Center labels at $5/2$. Their absolute deviations are $3/2,3/2,1/2,1/2$; the path degrees are two, two, one, one.",
+        "The degree-weighted bound is $2(3/2+3/2)+(1/2+1/2)=7$.",
+        "The order $2,4,1,3$ has differences $2,3,2$, attaining seven. Its interior vertices receive the largest deviations and every edge joins low to high."
+      ],
+      "solution_zh": [
+        "将标签减去 $5/2$，偏差绝对值为 $3/2,3/2,1/2,1/2$，度数为二、二、一、一。",
+        "加权上界为 $2(3/2+3/2)+(1/2+1/2)=7$。",
+        "排列 $2,4,1,3$ 的边差为二、三、二，达到七；内部点占最大偏差，每条边均连接低值与高值。"
+      ],
+      "tip_en": "The degree multiset alone gives a bound; the graph must permit the equality sign pattern and value allocation.",
+      "tip_zh": "度数多重集只能给界，还须图结构允许等号符号模式与数值分配。",
+      "question_ids": [
+        "AIME-2026-I-Q11"
+      ],
+      "prerequisites": [
+        "AL07",
+        "LO02"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2002-I-Q05",
+    "AIME-2004-I-Q03",
+    "AIME-2007-II-Q05",
+    "AIME-2008-II-Q10",
+    "AIME-2012-I-Q07",
+    "AIME-2012-II-Q14",
+    "AIME-2014-I-Q05",
+    "AIME-2016-I-Q03",
+    "AIME-2017-II-Q11",
+    "AIME-2017-II-Q13",
+    "AIME-2017-II-Q14",
+    "AIME-2018-I-Q07",
+    "AIME-2022-II-Q05",
+    "AIME-2022-II-Q09",
+    "AIME-2023-I-Q14",
+    "AIME-2024-II-Q15",
+    "AIME-2025-II-Q03",
+    "AIME-2025-II-Q11",
+    "AIME-2026-II-Q15"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-I-Q15": {
+      "method_ids": [
+        "CO06-M01"
+      ],
+      "prerequisites": [
+        "CO05",
+        "PS01"
+      ]
+    },
+    "AIME-2001-II-Q01": {
+      "method_ids": [
+        "CO06-M01"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2012-I-Q11": {
+      "method_ids": [
+        "CO06-M01"
+      ],
+      "prerequisites": [
+        "LO01",
+        "NT03"
+      ]
+    },
+    "AIME-2018-I-Q14": {
+      "method_ids": [
+        "CO06-M01"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2002-I-Q05": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2003-I-Q06": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2004-I-Q03": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2010-II-Q11": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2015-II-Q05": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "PS01"
+      ]
+    },
+    "AIME-2017-I-Q01": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2017-II-Q13": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2018-I-Q07": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "GE09"
+      ]
+    },
+    "AIME-2022-II-Q05": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2023-I-Q03": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2023-II-Q11": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2024-I-Q12": {
+      "method_ids": [
+        "CO06-M02"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL07",
+        "AL08"
+      ]
+    },
+    "AIME-2022-II-Q09": {
+      "method_ids": [
+        "CO06-M03"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2025-I-Q13": {
+      "method_ids": [
+        "CO06-M03"
+      ],
+      "prerequisites": [
+        "PS03",
+        "PS04"
+      ]
+    },
+    "AIME-2007-II-Q05": {
+      "method_ids": [
+        "CO06-M04"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2017-II-Q14": {
+      "method_ids": [
+        "CO06-M04"
+      ],
+      "prerequisites": [
+        "CO04",
+        "GE07"
+      ]
+    },
+    "AIME-2004-I-Q08": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "NT08"
+      ]
+    },
+    "AIME-2012-II-Q14": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "CO01",
+        "CO03"
+      ]
+    },
+    "AIME-2014-II-Q13": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "CO01",
+        "PS01"
+      ]
+    },
+    "AIME-2016-II-Q12": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2024-I-Q11": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "CO04",
+        "PS01"
+      ]
+    },
+    "AIME-2025-II-Q11": {
+      "method_ids": [
+        "CO06-M05"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2008-II-Q10": {
+      "method_ids": [
+        "CO06-M06"
+      ],
+      "prerequisites": [
+        "LO02"
+      ]
+    },
+    "AIME-2016-I-Q03": {
+      "method_ids": [
+        "CO06-M06"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2012-I-Q07": {
+      "method_ids": [
+        "CO06-M07"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2017-II-Q11": {
+      "method_ids": [
+        "CO06-M08"
+      ],
+      "prerequisites": [
+        "CO04"
+      ]
+    },
+    "AIME-2014-I-Q05": {
+      "method_ids": [
+        "CO06-M09"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2024-II-Q15": {
+      "method_ids": [
+        "CO06-M10"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2023-I-Q14": {
+      "method_ids": [
+        "CO06-M11"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2026-II-Q15": {
+      "method_ids": [
+        "CO06-M12"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2025-II-Q03": {
+      "method_ids": [
+        "CO06-M13"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2026-I-Q11": {
+      "method_ids": [
+        "CO06-M14"
+      ],
+      "prerequisites": [
+        "AL07",
+        "LO02"
+      ]
+    }
+  },
+  "review": {
+    "author": "template_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Every current primary and necessary secondary route was read in full. Original teaching examples and general procedures are separate from source problems. Independent review remains required."
+  },
+  "unresolved_issues": []
+}

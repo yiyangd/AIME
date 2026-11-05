@@ -1,0 +1,3822 @@
+[
+  {
+    "question_id": "AIME-2000-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Rechecked all zero-free factor candidates through n=8: 2^n and5^n are the only possible pair;5^8=390625 is the first forced zero. Both languages preserve the universal-factor condition."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce decimal factor restrictions to the two prime-power factors"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Reflection coordinates give area u(u+3v)=451. The divisor possibilities leave u11,v10; reflected vertex order and strict first-quadrant inequalities checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use reflection coordinates and decompose polygon area",
+        "Filter integer dimensions by factor pairs"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently equated coefficients:2000C2 a²b1998=2000C3 a³b1997, hence b=666a. Coprimality gives1,666. Reclassified from selection counting to AL10 because coefficient extraction is decisive."
+    ],
+    "patch": {
+      "primary": {
+        "category_id": "AL",
+        "subtype_id": "AL10",
+        "reason_en": "The decisive step compares adjacent coefficients in a binomial expansion.",
+        "reason_zh": "关键步骤是比较二项式展开中相邻两项的系数。"
+      },
+      "method_chain": [
+        "Compare adjacent binomial coefficients by a ratio",
+        "Apply coprimality after a rational coefficient relation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked the original nine-square arrangement against the original diagram coordinates. The side list2,5,7,9,16,25,28,33,36 tiles69 by61; the two boundary sums enforce5x=2y. Coprime integer rectangle dimensions then force scale1. Diagram present and no dimensions introduced into its labels. Removed GE02 secondary after verifying that the complete route uses only boundary lengths and perimeter, not area."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Propagate square side lengths across a tiling",
+        "Use coprime boundary dimensions to fix scale"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Recomputed50pq=27ab and50|a(25-a); only size pairs5/20 and10/15 survive. Feasible black counts3/18 and9/9 both give white probability1/25. All both-color and unequal-box constraints retained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Translate independent draws into an integer product equation",
+        "Enumerate admissible box sizes by divisibility"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Verified radical gap2, rational sum and difference of square roots, hence integral square roots. Parameter a runs1 through997 because y=(a+2)²<10^6. Removed routine algebra secondary tag."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Use rational radical sums and differences to force integer square roots"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Expanded xyz(1+x)(1+y)(1+z)=2+A+B+C under xyz=1;145t=36+t gives t1/4. Positivity and reduced fraction sum5 checked in both languages."
+    ],
+    "patch": {
+      "method_chain": [
+        "Expand a cyclic product under a fixed product constraint"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cone similarity independently gives27/64 filled and37/64 empty after reversal; new liquid depth12-3*cuberoot37 and sum52 checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use complementary volume fractions in similar cones"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Shifted logarithms give ab=bc=L and ac=1, hence a=c=±1 and y5 or20. Domain positivity and both sign branches checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Shift logarithms to a bilinear system and retain both signs"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Summing2x_k=S-k gives98S=5050; x50=75/98, numerator-denominator sum173. No indexing or sign discrepancy between languages."
+    ],
+    "patch": {
+      "method_chain": [
+        "Sum a symmetric linear system before solving one coordinate"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Coprime numerator and denominator give unique prime-exponent differences from-3 to3. Independently multiplied reciprocal geometric sums127/8 and19531/125, obtaining2480437/1000 and floor248 after division10."
+    ],
+    "patch": {
+      "method_chain": [
+        "Encode reduced rational divisors by signed prime exponents",
+        "Factor a rational-divisor sum into geometric series"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Composed the three reflections to periods1760 and1056, gcd352. Reflection residue map46-x has fixed points23,199 and177 orbits. The proposed cosine separates these residue orbits, proving attainment, not just an upper bound."
+    ],
+    "patch": {
+      "method_chain": [
+        "Compose reflections to obtain the period lattice",
+        "Count residue orbits and construct a separating periodic function"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Recomputed tangent envelope7x+24y=35 and its symmetric counterpart, intersection35/31 each. Returning between road portions can be replaced by faster road travel since50/14>sqrt2. The quarter union is the stated polygon, giving700/31 and731."
+    ],
+    "patch": {
+      "method_chain": [
+        "Replace slower off-road detours and form a reachability envelope",
+        "Find common tangents and integrate polygonal reachability area"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently derived2cosα+1=1/(2sin(α/2)); nondegenerate APQ imposesα<90, excluding the100-degree root. α20 gives ratio4/7 and floor571. Checked P andQ remain on the segments."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine isosceles angle chasing with a half-angle length equation",
+        "Exclude trigonometric roots using segment geometry"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently simulated the queue removal permutation for2000 cards; the last two original positions are928,1952, hence1999 sits below927 cards. This checks the recurrence and its orientation."
+    ],
+    "patch": {
+      "method_chain": [
+        "Track the inverse queue-removal permutation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Reciprocal-base logarithms combine to log base2000^6 of2000=1/6. Added a multiplication dot to prevent ambiguous juxtaposition of prime powers."
+    ],
+    "patch": {
+      "solution_en": [
+        "Reciprocal logarithms convert the expression to $2\\log_{2000^6}4+3\\log_{2000^6}5=\\log_{2000^6}(4^2\\cdot5^3)$.",
+        "Since $4^2\\cdot5^3=2000$, the value is $1/6$ and the answer is $7$."
+      ],
+      "solution_zh": [
+        "用对数倒数关系，原式为 $\\log_{2000^6}(4^2\\cdot5^3)$。",
+        "$4^2\\cdot5^3=2000$，故原式为 $1/6$，所求 $7$。"
+      ],
+      "method_chain": [
+        "Combine reciprocal logarithms in a common base"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Same-parity factors must both be even. Independent divisor count for ab=10^6 gives49 positive ordered pairs and49 simultaneous negatives; zero-coordinate cases are counted once."
+    ],
+    "patch": {
+      "method_chain": [
+        "Factor a difference of squares with parity control"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Remaining multiplicities9*4 and1*2 give55 favorable unordered pairs out of703, gcd1. Both versions retain removal without replacement."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count favorable pairs from label multiplicities"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "WritingN=2^a*m givesa2 andtau(m)6. Checked both odd exponent patterns5 and2+1; minimizing assigns exponent2 to3, yieldingm45 andN180, attained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Split even and odd divisor counts before minimizing prime exponents"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Bijection between arrangements and an ordered chosen5-tuple plus four weak finger lengths is valid even for empty fingers. Recomputed56*120*56=376320, requested nonzero digits376."
+    ],
+    "patch": {
+      "method_chain": [
+        "Order selected objects and cut the list by a weak composition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Midpoint areas give bases75 and175. Squared parallel-section lengths interpolate areas after extending the legs, sox²=(75²+175²)/2=18125."
+    ],
+    "patch": {
+      "method_chain": [
+        "Extend trapezoid legs and interpolate squared section lengths"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently evaluated19N=2^18-20=262124, N13796 and strict floor137. CO02 explicitly includes binomial identities, matching this symmetry-based coefficient sum."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convert factorial reciprocals to a half binomial sum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Coordinate dot product givesh²=sqrt11*d; substituting AD produces(u-110)(u+99). Onlyu110 is positive and yields a nondegenerate convex trapezoid."
+    ],
+    "patch": {
+      "method_chain": [
+        "Encode perpendicular diagonals with a coordinate dot product"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Quadratic roots are exp(±i3degrees);2000-fold angle reduces6000 to240, value-1. The requested strict successor is0, not-1."
+    ],
+    "patch": {
+      "method_chain": [
+        "Solve a reciprocal complex equation on the unit circle"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Half-angle tangentsr/19,r/26,r/37,r/23 sum in angle toπ. Opposite-pair tangent equation givesr²647, between598 and703, so tangent signs and the angle branch are correct. Monotonic half-angle sum certifies unique attainable radius."
+    ],
+    "patch": {
+      "method_chain": [
+        "Express tangent lengths through vertex half-angles",
+        "Resolve a tangent-sum branch by monotonicity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Enumerated all12 integer vectors of norm squared50 and excluded exactly4 invalid vectors. The remaining eight slopes match the list and sum119/12. Long integer base vectors give convex non-parallelogram attainments."
+    ],
+    "patch": {
+      "method_chain": [
+        "Enumerate equal-length lattice leg vectors and recover base directions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Acuteness225<169+196 guarantees the sphere-center projection lies in the filled triangle. Recomputed area84, circumradius65/8, distance15sqrt95/8, and sum118."
+    ],
+    "patch": {
+      "method_chain": [
+        "Project a sphere center to a triangle circumcenter",
+        "Check the perpendicular foot lies in the filled triangle"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Multiplied the proposed quartic-times-quadratic factorization; all polynomial coefficients match and quartic is strictly positive. Restored the source given fact of exactly two real roots in both restatements."
+    ],
+    "patch": {
+      "statement_en": "The equation $2000x^6+100x^5+10x^3+x-2=0$ has exactly two real roots, one of which is $(m+\\sqrt n)/r$ with integers $m,n,r$, $r>0$, and $\\gcd(m,r)=1$. Find $m+n+r$.",
+      "statement_zh": "方程 $2000x^6+100x^5+10x^3+x-2=0$ 恰有两个实根，其中一个为 $(m+\\sqrt n)/r$，其中 $m,n,r$ 为整数，$r>0$，$m,r$ 互质。求 $m+n+r$。",
+      "method_chain": [
+        "Extract a positive quartic factor using a cube difference"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Telescoping factorial identity yields62 disjoint16-digit blocks and lone f16=1. All digits are legal without carrying; each block contributes8 and the lone even-index digit-1, total495."
+    ],
+    "patch": {
+      "method_chain": [
+        "Borrow in factorial base through a telescoping factorial identity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2000-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cotangent difference identity verified. Alternating signs agree on supplementary index pairs, so45 remains,90 contributes0, and every46..134 partner cancels. n1 is attained and minimal."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convert reciprocal sine products to cotangent differences",
+        "Pair supplementary angles in an alternating sum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated valid two-digit numbers; sum630. The digit quotient proof k|10 produces precisely k1,2,5 and forbids zeros."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use divisibility by the leading digit to relate the two digits"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Set-union wording correctly excludes preexisting1 and2001. Recomputed n49 andM651; the equations and both changes of sign are correct."
+    ],
+    "patch": {
+      "method_chain": [
+        "Compare old and new total sums when a mean changes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked cancellation lowers degree to2000 and coefficients2001/2 and-C(2001,2)/4. Vieta yields500. Replaced selection-count secondary tag by AL10."
+    ],
+    "patch": {
+      "secondary": [
+        {
+          "category_id": "AL",
+          "subtype_id": "AL10",
+          "reason_en": "The first two surviving coefficients are extracted from a binomial expansion.",
+          "reason_zh": "通过二项式展开提取相消后剩下的前两个系数。"
+        }
+      ],
+      "method_chain": [
+        "Locate the true polynomial degree after cancellation",
+        "Extract two coefficients and apply Vieta"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Angle ACT75 and CTA75 forceAC=AT24. The altitude foot lies betweenA andB; special right triangles give area216+72sqrt3 and291."
+    ],
+    "patch": {
+      "method_chain": [
+        "Exploit an angle-bisector-created isosceles triangle",
+        "Evaluate area with30-60-90 and45-45-90 triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Symmetric equilateral vertices satisfyv=1-sqrt3*u and the ellipse givesu=8sqrt3/13. Excludedu0; checkedv=-11/13 and squared side768/169."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use symmetry and equilateral height to intersect an ellipse"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Multiset-to-sorted-outcome bijection givesC(9,4)126; divided1296 and reduced7/72. Repeated die values and weak inequalities retained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count monotone outcomes by multiplicity compositions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently derivedr/h=a/(a+b+c)=20/63; the parallel length860/63 is inside the triangle and gives923."
+    ],
+    "patch": {
+      "method_chain": [
+        "Cancel the area from inradius-to-altitude ratios"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Digit-weight differences-1,-4,2,314 bound every higher nonzero position out. Choosing largest hundreds digit is valid since49>48; the remaining equation then maximizes at630base7=315, attained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Bound possible digit positions by signed base-weight differences",
+        "Optimize remaining digits lexicographically with a weight bound"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Corner area fractions independently checked by shared-angle area ratios. Pairwise products1/45 give central area16/45; side lengths do not enter this affine ratio and are preserved in restatement."
+    ],
+    "patch": {
+      "method_chain": [
+        "Subtract the three corner area fractions",
+        "Recover symmetric products from the sum and square sum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Same-parity ordered coordinate counts5,8,13 multiply520; removed exactly60 equal-point pairs. Probability460/3540=23/177 and200; midpoint box containment automatic by convexity."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count lattice midpoints using coordinate parity classes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Recomputed both numbering formulas and all five given equalities at columns32,7,141,88,107. Congruence c2=7mod31 forces leastN149, with every selected column in range."
+    ],
+    "patch": {
+      "method_chain": [
+        "Translate row and column numbering into coupled linear equations",
+        "Use an integrality congruence and then exhibit a feasible array"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Coordinate center(r,r,r), plane normal(2,3,6) length7, and interior signed distance give r2/3. Positive center lies inside all four halfspaces, so the sphere is attained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Locate a tetrahedron insphere using distances to four planes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Chord-ratio double/triple-angle identities give44c²-22c-1=0. The positive root lies between1/2 and1 as required; resulting3d chord -9+sqrt165 is positive and sum174."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce multiple-arc chord relations to a cosine quadratic"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all2^19 binary strings and verified351 satisfying no11 and no000. Three-state trailing-zero recurrence matches each terminal class."
+    ],
+    "patch": {
+      "method_chain": [
+        "Track forbidden binary patterns by trailing-zero states"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all7! assignments after fixing one cube vertex;60 cyclic paths have every Hamming distance at least2. Dual graph, cyclic8-to1 condition, probability1/84 and85 verified."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use a polyhedron dual graph to encode face adjacency",
+        "Count Hamilton cycles in the allowed graph by subset states"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked all six square transitions; the digraph is acyclic and unique maximum-length path8,1,6,4,9 gives largest number81649. Both languages preserve overlapping blocks."
+    ],
+    "patch": {
+      "method_chain": [
+        "Build a digit-transition digraph and maximize a directed path"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked exact integer enrollment endpoints1601..1700 and601..800. Inclusion-exclusion overlaps201 and499 are both realized by nonnegative disjoint region sizes, difference298."
+    ],
+    "patch": {
+      "method_chain": [
+        "Apply inclusion-exclusion after rounding population bounds"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Substituting adjacent recurrence equations givesx(n+5)=-x(n), valid from first available recurrence onward. Ten-period index residues1,3,5 andx5=267 give898."
+    ],
+    "patch": {
+      "method_chain": [
+        "Cancel adjacent recurrences to expose anti-periodicity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Parameterizing the two rays yieldst4/7,u8/7 and displacement48/7,-36/7. Hypotenuse60/7 reduces and gives67."
+    ],
+    "patch": {
+      "method_chain": [
+        "Parameterize two lines and solve a midpoint constraint"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Greedy triangle-free lower recurrence gives tenth term254. Verified necessity from consecutive triples and sufficiency since the two largest smaller terms bound every pair;253 attained as claimed."
+    ],
+    "patch": {
+      "method_chain": [
+        "Force Fibonacci growth in a triangle-free sorted set"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Both square orientations checked. Outward factorization(5t-s)(t+s)=0 gives side ratio1/5; inward positive solution is the original square and violates strict area ratio. Area1/25 gives251."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use equal-height circle intersections to center an inscribed square"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Verified incircle center30,30 and non-side tangentsx60,y60. Similarity gives centers75,15 and10,70; distance squared7250. Nondegenerate tangent selection explicit in restatements."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use incircle tangents to cut similar right triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Scaling formula holds for all integer exponents including negative intervals. f2001=186, earlier tents have height at most81; first feasible height243 gives first crossing429."
+    ],
+    "patch": {
+      "method_chain": [
+        "Propagate a piecewise tent function by multiplicative scaling"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated512 colorings:95 contain a red2-by2 block,417 avoid. Inclusion-exclusion pair union sizes6,7 and triple8 checked; fraction417/512 reduced."
+    ],
+    "patch": {
+      "method_chain": [
+        "Classify overlapping forbidden blocks for inclusion-exclusion"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Orders of10 modulo7,11,13 are6,2,6, hence overall order6. Decimal nines-and-zeros pattern certifies distinct pairs; summing100-6d for1..16 gives784. Removed unsupported composition secondary tag."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Use multiplicative order to restrict exponent gaps",
+        "Certify pair uniqueness from a decimal digit pattern"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Win-loss swap is measure-preserving. Equal-count multinomial cases1,30,90,20 total141; strict-win count294 of729 reduces98/243."
+    ],
+    "patch": {
+      "method_chain": [
+        "Pair wins and losses by an involution and count the fixed balance cases"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Read complete original construction and both language versions. Independently generated all first-three-stage tetrahedra with exact rational coordinates. SAT checks:10,396,14472 tetrahedron pairs per stage; exposed-face checks276,10296,372816. No positive-volume or positive-area overlaps. Arithmetic69/32 and101 verified. Geometric progression is genuinely needed, not a routine secondary tag. Cleared the spatial flag. Certificate audit/certificates/2001II-Q12-spatial-certificate.json."
+    ],
+    "patch": {
+      "unresolved_issues": [],
+      "solution_en": [
+        "Each face becomes three corner triangles and three outer tetrahedron faces, all of half side length. Thus at stage $i$ there are $4\\cdot6^i$ faces, with side scale $2^{-i}$.",
+        "The attached tetrahedra in the next step have scale $2^{-(i+1)}$, hence volume $8^{-(i+1)}$ each. The increment is $\\tfrac12(3/4)^i$.",
+        "The first three additions give total volume $1+1/2+3/8+9/32=69/32$. The requested sum is $101$.",
+        "The required non-overlap through three stages can be checked exactly: start with vertices $(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)$. Each outward apex and face midpoint remains rational. Separating-axis tests on the resulting $173$ tetrahedra and coplanar-triangle tests on the $864$ final boundary faces show only boundary contact, with no positive-volume or hidden positive-area overlap. The accompanying executable certificate uses exact integer projections, so the stated face count and additive volume are valid through stage three."
+      ],
+      "solution_zh": [
+        "每个原面变成三个角部三角形及三个新增四面体外侧面，边长均减半。因此第 $i$ 步有 $4\\cdot6^i$ 个面，边长比例 $2^{-i}$。",
+        "下一步附加小四面体的相似比为 $2^{-(i+1)}$，单体积为 $8^{-(i+1)}$，故新增体积为 $\\tfrac12(3/4)^i$。",
+        "前三次增加后体积为 $1+1/2+3/8+9/32=69/32$，所求 $101$。",
+        "前三步所需的不重叠条件可精确核验：从顶点 $(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)$ 出发，所有新增外顶点和面中点均为有理坐标。对最终一百七十三个四面体作分离轴检验、对八百六十四个边界面作共面三角形检验，仅有边界接触，没有正体积重叠或被遮盖的正面积重合。配套可执行证书使用精确整数投影，因此前三步的面数和体积相加成立。"
+      ],
+      "method_chain": [
+        "Count exposed faces and scale attached tetrahedra",
+        "Certify spatial non-overlap by exact separating axes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked the two extension-triangle similarities, givingPC/PB=PB/PD=3/5. PD20,PB12,PC36/5 satisfy the complete original lengths and angles, yieldingCD64/5."
+    ],
+    "patch": {
+      "method_chain": [
+        "Extend quadrilateral sides to reveal nested similar triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Unit-circle chord equation forces z20=cis(±60). Algebra recovers z4 classes15 or75mod90; direct substitution confirms all eight arguments and no extra candidates. Even-index sum840."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use a unit-circle chord length to determine complex phases",
+        "Intersect angular congruences and sort the resulting arguments"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2001-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked each tunnel-wall plane, rectangular area12sqrt6 and end triangle areasqrt6. Removed face quadrilaterals have shoelace area2, so remaining exterior372 plus wall39sqrt6 is correct."
+    ],
+    "patch": {
+      "method_chain": [
+        "Intersect tunnel planes with cube faces in coordinates",
+        "Decompose drilled-solid surfaces into exterior losses and tunnel walls"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent palindrome probabilities1/26 and1/10 produce union7/52. Both three-symbol blocks, repetitions and leading digit zero allowed are preserved."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce three-symbol palindrome events to matching endpoints"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Staggered rows7,6,7 give width14r and two equilateral row gaps sqrt3*r, height2r+2sqrt3*r. Rationalized ratio(sqrt147-7)/2 and154 independently checked. Full tangency layout is described without requiring raw source SVG."
+    ],
+    "patch": {
+      "method_chain": [
+        "Connect tangent-circle centers to equilateral triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Future Jane ages with larger reversed digit number are26..29 and digit pairs with tens3..8. Count4+6+5+4+3+2+1=25; the formulas recover unique positive present age and time for each."
+    ],
+    "patch": {
+      "method_chain": [
+        "Encode reversed ages by decimal digit inequalities"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Telescoping gives1/m-1/n=1/29. Factored(29-m)(29+n)=841 with positivity selecting1,841, hence28,812. No missed divisor pair."
+    ],
+    "patch": {
+      "method_chain": [
+        "Telescope reciprocal consecutive products",
+        "Factor the resulting reciprocal Diophantine equation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Counted three squares per unordered vertex pair, giving198 incidences. Only squares with at least3 chosen vertices cause duplicate multiplicity; regular12 geometry makes them exactly the three fully inscribed squares, each counted6. Added the90=3*30 explanation, result183."
+    ],
+    "patch": {
+      "solution_en": [
+        "Each pair among twelve vertices determines three squares: two with the pair as a side and one with it as a diagonal. This gives $3\\binom{12}{2}=198$ incidences.",
+        "If three square vertices lie on the dodecagon circumcircle, the fourth lies on the same circle. Successive square vertices are $90^\\circ=3\\cdot30^\\circ$ apart, so the fourth is also a dodecagon vertex. There are exactly three such squares, obtained by taking every third vertex.",
+        "Each of those is counted six times, rather than once. Subtract $3(6-1)$ to get $183$."
+      ],
+      "solution_zh": [
+        "每对十二边形顶点确定三个正方形：该线段作边有两个，作对角线有一个，共 $3\\binom{12}{2}=198$ 次。",
+        "若正方形三个顶点在十二边形外接圆上，则第四点也在该圆上。相邻正方形顶点的圆心角为 $90^\\circ=3\\cdot30^\\circ$，故第四点也属于十二边形顶点集。每隔三个顶点取一点，共有三个这样的正方形。",
+        "每个被六对顶点计入六次，须各减五次，得 $198-15=183$。"
+      ],
+      "method_chain": [
+        "Count geometric figures by their determining vertex pairs",
+        "Correct incidence multiplicities for exceptional fully inscribed figures"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Logarithmic variables obeyp+q4 and reciprocal difference1, givingp²-6p+4. Both p and q roots avoid zero and their sums6,2 yield30^12. Added multiplication dot for prime-power clarity."
+    ],
+    "patch": {
+      "solution_en": [
+        "Let $p=\\log_{225}x,q=\\log_{64}y$, with $p,q\\ne0$. Then $p+q=4$ and $1/p-1/q=1$, yielding $p^2-6p+4=0$.",
+        "The two p-values sum to $6$, and the q-values to $2$. Hence the product is $225^6\\cdot64^2=30^{12}$, so the required logarithm is $12$."
+      ],
+      "solution_zh": [
+        "令 $p=\\log_{225}x,q=\\log_{64}y$，二者非零。方程变成 $p+q=4,1/p-1/q=1$，消元得 $p^2-6p+4=0$。",
+        "两组 $p$ 的和为 $6$，$q$ 的和为 $2$。故所求乘积为 $225^6\\cdot64^2=30^{12}$，答案 $12$。"
+      ],
+      "method_chain": [
+        "Use reciprocal logarithms and Vieta without finding individual solutions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked Taylor remainder via decreasing positive second derivative:0<R<(15/49)T^(-4/7)<10^-1000. First term10^2860 integer, second10^859/7 has residue3/7, gap to.429 is3/7000>.0004. Thus no unproved decimal-stability step remains. AL10 primary and modular-order secondary are decisive."
+    ],
+    "patch": {
+      "statement_en": "Find the first three digits after the decimal point of $(10^{2002}+1)^{10/7}$. You may use the binomial expansion for noninteger exponents.",
+      "statement_zh": "求 $(10^{2002}+1)^{10/7}$ 小数点后前三位数字。 可使用非整数指数的二项式展开。",
+      "method_chain": [
+        "Bound the remainder of a fractional binomial expansion",
+        "Locate decimal digits using modular residue and a boundary gap"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent recurrence givesa9=13x+21y. Distinct representations force first-coordinate difference a positive multiple21; u,v≥22 establishes748, and(1,35),(22,22) attain."
+    ],
+    "patch": {
+      "method_chain": [
+        "Express a recurrence term as a linear form in its initial values",
+        "Use coprime coefficient differences to find the first collision"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked early-picket forcing eliminatesh1,2 andh≥5, then leaves exactly(3,3,3) and(4,2,4). Their residue classes are disjoint covers and numerical values333+424=757."
+    ],
+    "patch": {
+      "method_chain": [
+        "Force small uncovered positions in an arithmetic-progression cover"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Pythagorean sides12,35,37 give area210. Two angle-bisector ratios yieldADC1110/7 andAGF5250/481; their difference147.6567 rounds148. G intersection added explicitly from source diagram."
+    ],
+    "patch": {
+      "method_chain": [
+        "Apply one angle bisector in nested triangles and subtract areas"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Unfolding gives straight ray(12t,7t,5t); common12-grid vertex first occurs t12 using coprimality. No earlier edge event changes the path; distance12sqrt218 gives230. Coordinate restatement is congruent to source beam layout."
+    ],
+    "patch": {
+      "method_chain": [
+        "Unfold specular reflections into a lattice ray",
+        "Find the first vertex using simultaneous divisibility"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Directly verified F²=i(z+1)/(z-1), F³=z. Orbit from1/137+i avoids poles and2002=1mod3 gives1+274i and275."
+    ],
+    "patch": {
+      "method_chain": [
+        "Expose finite order by composing a complex fractional-linear map"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Centroid relations giveAE=AP12,EP9. Intersecting-chord powerEF16/3, isosceles height3sqrt55/2 and two area scalings produce8sqrt55, sum63. Direction pastE is explicit."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine centroid ratios with intersecting-chord power",
+        "Scale areas along a shared collinear base"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Deletion integrality gives common residue1mod(n-1) and divisor n-1 of2001. Distinctness bounds n-1≤44; largest allowed divisor29. Checked explicit30-element construction including813 and2002, establishing attainment."
+    ],
+    "patch": {
+      "method_chain": [
+        "Turn every-deletion mean conditions into a common congruence class",
+        "Bound a distinct residue-class set and construct the maximum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Verified the filled-square distance issue explicitly: ify<0, distance²160>144; ify>12, distance equation would forcey20/3<12. Thus E6,4,12. Plane ADE givesGx3,z6 and y12±sqrt19; specified minus radical yieldsEG²128-16sqrt19, sum163."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recover spatial coordinates from equal distances and face planarity",
+        "Check projection feasibility before using a plane distance"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Difference99|a-c| with both endpoint digits1..9 gives exactly nine attained values0..792. Both three-digit requirements and palindrome possibility are preserved."
+    ],
+    "patch": {
+      "method_chain": [
+        "Cancel middle digits in a reversal difference"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "All pairwise squared distances independently computed98. Equal-distance triples in a cube must use face diagonals, because edges form a bipartite graph and opposite vertices are unique. Side square49 gives294."
+    ],
+    "patch": {
+      "method_chain": [
+        "Identify cube distance types from an equilateral vertex triple"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Product6^6 and geometric identity b³ fixb36. Independently checked square-gap candidates35,32,27,20,11, only27 dividing1296. Changed primary to the decisive integer feasibility route NT05; logarithm and geometric identities are explicit secondary needs."
+    ],
+    "patch": {
+      "primary": {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "After the logarithm fixes the middle geometric term, square differences and divisibility select the integer triple.",
+        "reason_zh": "对数固定等比数列中项后，利用平方差与整除条件筛选整数三元组。"
+      },
+      "secondary": [
+        {
+          "category_id": "AL",
+          "subtype_id": "AL04",
+          "reason_en": "Combine logarithms to determine the product.",
+          "reason_zh": "合并对数确定乘积。"
+        },
+        {
+          "category_id": "AL",
+          "subtype_id": "AL05",
+          "reason_en": "Use the middle-term identity of a geometric progression.",
+          "reason_zh": "使用等比数列中项恒等式。"
+        }
+      ],
+      "method_chain": [
+        "Fix a geometric mean term from a logarithmic product",
+        "Enumerate square differences under a divisor constraint"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Counted interior hex rings through radius n-2:1+3(n-2)(n-1)=120601. Each unit hexagon contributes3sqrt3/2, so361803 gives remainder803. Outer paved ring is correctly excluded."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count concentric hexagonal cell rings and convert cells to area"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Prime valuation failure is a<6n ora<6m. Verified exponential bounds for mixed-positive exponents and all boundary one-prime cases; failures2,4,8,16,3,9 sum42, noa1 failure."
+    ],
+    "patch": {
+      "method_chain": [
+        "Compare prime valuations with the integer appearing in an exponent",
+        "Close infinite exponent cases with inductive exponential bounds"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Partial fraction telescoping leaves four endpoint reciprocals. TailR<1000/9999<1/3 places value strictly above520.5 and below521.5, nearest521. Removed routine inequality secondary tag; this endpoint estimate is part of the telescoping route."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Telescope a fixed-gap reciprocal difference and bound the remaining tail"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently searched square sums and first divisible by200 occurs at112. Derived residues0,15mod16 and0,24,12mod25; CRT representatives112,175,224,287,399,400 exhaust all cases."
+    ],
+    "patch": {
+      "method_chain": [
+        "Split polynomial divisibility into prime-power residue conditions",
+        "Combine residue classes and identify the least positive solution"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "The half-open n interval always contains an integer for k≤44 because length≥1. Explicit values45..48 occur, and monotonic jump fromn41 to40 skips49. Negative n cannot yield positive k."
+    ],
+    "patch": {
+      "method_chain": [
+        "Invert a floor quotient into a half-open integer interval",
+        "Use interval length and the first quotient jump to find a missing value"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Three membership states give59049 ordered assignments; excluding either empty side leaves57002. Nonempty disjoint sets cannot coincide, so free swapping divides exactly2;28501 remainder501."
+    ],
+    "patch": {
+      "method_chain": [
+        "Encode disjoint subsets by three element-membership states",
+        "Remove empty subsets and quotient by free interchange"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Both sine-equality families derived in radians. Compared their first members and next odd branch usingπ<4; first values about3.09 and6.39, third candidate9.26. Parameters sum900 and angular units are explicit."
+    ],
+    "patch": {
+      "method_chain": [
+        "Separate equal-sine solutions into difference and supplementary branches",
+        "Order two trigonometric solution progressions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Common second term forces ratiosr,1-r; convergence of both requires0<r<1. Factored cubic roots and rejected r1/2 because series would coincide, negative root because companion diverges. Remaining ratio gives(sqrt5-1)/8 and518."
+    ],
+    "patch": {
+      "method_chain": [
+        "Pair geometric-series ratios with the same second term",
+        "Filter polynomial roots by convergence and distinctness"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all1024 shot strings; exactly23 have four hits and all prefix fractions≤2/5. Every valid string must end in a hit. Probability23*2^4*3^6/5^10 and encoded660 verified."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count weighted ballot paths with a rational prefix boundary"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Masses5,6,15 satisfy BD/DC5/2 andAE/EC3. ThusFP/FC15/26; centered homothety maps both sides to the given parallels. Squared ratio225/676 gives901."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use mass points to locate a cevian intersection",
+        "Apply a centered homothety to parallel-cut triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Tangency givesAO19 andMT=MA. Similar right-triangle perimeter equation yieldsMA38 exactly; solved remaining legsPA152/3,PM190/3 andOP95/3. Tangency points are on the segments and circle center is interior toAP."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine equal tangents with similarity of right triangles",
+        "Use the perimeter of a similar triangle to force a repeated root"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2002-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked common-tangent same-side requirement, center bisector parameterization and radius-product equation117t²68. The obtuse upper sector requires|t|>1 and is excluded; acute-sector root gives positive intersecting circles and slope12sqrt221/49."
+    ],
+    "patch": {
+      "method_chain": [
+        "Place circle centers on a common tangent-angle bisector",
+        "Apply Vieta to circle-incidence equations and recover a doubled angle"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Nested factorials are720!/6. Factorization120*719! gives existence; positivity excludes n≥720 by magnitude, so maximal n719 and sum839."
+    ],
+    "patch": {
+      "method_chain": [
+        "Peel a factorial and bound the maximal factorial divisor by size"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Alternating green annuli correspond to consecutive square differences3,7,..199; their sum5050 divided10000 reduces101/200 and301."
+    ],
+    "patch": {
+      "method_chain": [
+        "Pair adjacent squared radii to sum alternating annulus areas"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Sorting assigns multiplicityj-1 to rankj. Recomputed weighted maximum sum484; unordered distinct pairs and all eight elements retained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Double count pair maxima by the rank of their larger element"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Log domains ensure sine and cosine positive; their product1/10 and squared sum1.2 give n12. No invalid logarithm/square-root branch."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine logarithmic products with the squared sine-cosine sum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Nearest-feature decomposition partitions the one-neighborhood without positive-volume overlap:box60,face slabs94,edge cylinders12π,corner sphere4π/3. Total(462+40π)/3 gives505."
+    ],
+    "patch": {
+      "method_chain": [
+        "Decompose a rounded box by nearest face, edge and vertex"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all56 cube vertex triples by squared side pattern:24 right face triangles,8 equilateral,24 with a space diagonal. Summed areas12+4sqrt3+12sqrt2, encoded348."
+    ],
+    "patch": {
+      "method_chain": [
+        "Classify cube-vertex triangles by squared side lengths"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "The perpendicular bisector fixes baseline offsets15 and6. Positive odd factor pairs of189 give four candidate(a,b) pairs; excluded the15,6 degenerate pair, all other heights positive. Perimeters220,96,64 sum380."
+    ],
+    "patch": {
+      "method_chain": [
+        "Subtract two Pythagorean equations and factor the integer difference"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Expanded the mixed progression relation independently. Positivity forces7.5<d<10; only integerd8,9 to test, andd9 yieldsa18. Full increasing sequence18,27,36,48 meets every condition."
+    ],
+    "patch": {
+      "method_chain": [
+        "Parameterize mixed arithmetic-geometric progressions and bound the gap"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all9000 four-digit numbers and found615 balanced. Piecewise digit-sum multiplicities correctly treat the nonzero first digit and upper digit bound."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convolve bounded digit-sum multiplicities with a nonzero leading digit"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Sine law inAMC givesCM2sin7; cos83=sin7 then makesBM²1 by cosine law. The83-degree base angle is the interior angle requested."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use sine and cosine laws to reveal a hidden equal side"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "On half the interval largest side is cos²x; triangle failure boundary tan2x2. Two reflected intervals totalarctan2 degrees, probabilityarctan2/90 and parameter sum92. Equality endpoints have zero measure."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use angular symmetry and a triangle inequality to measure a probability interval"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cosine-law equations for shared diagonal subtract to(u-v)(u+v-360cosA)=0. Given unequal legs legitimizes cancellation; perimeter givescosA7/9 and floor777. Convexity retained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Subtract cosine laws across a common quadrilateral diagonal"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent binary enumeration1..2003 gives1155. Binomial-row upper halves sum1199 through2047; each of44 removed tail integers has at least six ones in11 digits. Remainder155."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count binary majority digits by binomial-row symmetry",
+        "Trim a power-of-two range using its fixed binary prefix"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Decimal shifting reduces the denominator and sends the target block to[.251,.252). Lettingh4m-n gives n>125h; excluded126 by mod4, and32/127 lies inside and is reduced. This proves both global lower bound and attainment."
+    ],
+    "patch": {
+      "method_chain": [
+        "Shift an internal decimal block to a leading fractional interval",
+        "Use a nearby rational and an integer gap to bound denominators"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Bisector-axis coordinates give D on the axis and both E,F on one vertical. E lies strictly betweenD andF; absolute distance ratio simplifies147/720=49/240, giving289. BC/AB values and irrelevant CA remain in statements."
+    ],
+    "patch": {
+      "method_chain": [
+        "Align coordinates with an angle bisector and intersect a median"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cancelling positivec=a+b givesab12; unordered factor pairs1/12,2/6,3/4 give distinct products156,96,84 and total336."
+    ],
+    "patch": {
+      "method_chain": [
+        "Cancel a sum variable and enumerate the remaining factor pairs"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Ten distinct digits allow a maximal descending prefix9876543. Only suffix120 of six permutations of0,1,2 is divisible by8, proving both feasibility and lexicographic maximality."
+    ],
+    "patch": {
+      "method_chain": [
+        "Maximize a distinct-digit prefix subject to a modular suffix"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent enumeration of all3^7 words confirms192. Every allowed current letter has exactly two successors, so product rule3*2^6 is sufficient without recurrence."
+    ],
+    "patch": {
+      "method_chain": [
+        "Apply a uniform number of allowed successors"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Face centroid vector identity checked at every tetrahedron vertex. Signed scale-1/3 has positive volume scale1/27 and gives28."
+    ],
+    "patch": {
+      "method_chain": [
+        "Express face centroids as a common homothety of the vertices"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "The45-degree cut creates an affine height from0 to12 over a radius6 disk. Opposite-point height pairing proves average6 without calculus; volume216π."
+    ],
+    "patch": {
+      "method_chain": [
+        "Average an affine wedge height by central symmetry"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Parallel sides after a half-turn make three exterior corners similar at scale1/3 and disjoint. Heron area84 and union factor4/3 give112. Coordinate secondary tag removed because this complete solution uses no coordinates; similarity is the separate need."
+    ],
+    "patch": {
+      "secondary": [
+        {
+          "category_id": "GE",
+          "subtype_id": "GE01",
+          "reason_en": "Parallel edges make the three added corner triangles similar at scale1/3.",
+          "reason_zh": "平行边使三个新增角部三角形以三分之一比例相似。"
+        }
+      ],
+      "method_chain": [
+        "Use centroid distances to identify three similar exterior corner regions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Extended sine law independently gives radii s/(2cosα),s/(2sinα), hence tanα1/2 and side10sqrt5. Diagonal product yields400, with acute half-angle branch."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recover a rhombus half-angle from two circumradii"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Product of affine sequences is quadratic; finite differences give coefficient-72 and348. Evaluating index7 gives348, and displayed factorization verifies realizability."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use quadratic finite differences for a termwise product of arithmetic sequences"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Expanded polynomial division identity independently. Remainderx²-x+1 and Vieta root sums1 and3 lead3-1+4=6; multiplicities handled correctly."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce a polynomial modulo the root polynomial before summing",
+        "Recover root power sums from Vieta relations"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Same-parity factor pairs of900 yieldx196,48,20,4 and excluded0. Largest196 violates the nonsquare resulting-radicand condition;48 attains156 with radicand300. Both upper bound and valid maximum checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Rationalize a radical-sum condition into a factor-pair equation",
+        "Reject maximal algebraic candidates using the original nonsquare condition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Coordinate difference-of-squares givesC_x49/25 and median x25/2. DM5sqrt11/2 and perpendicular distance527/50 yield527sqrt11/40, withgcd1 and sum578. Same-side branch preserved."
+    ],
+    "patch": {
+      "method_chain": [
+        "Choose a symmetry-axis base for an area computation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Vote inequality forces t>100 andceil(t/(t-100)) votes per candidate. Every t≤133 needs at least135 votes; t134 admits26*4+30, all inequalities checked. Removed generic continuous-inequality secondary tag from this integer extremum."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Combine a rounded per-person lower bound with a total-count obstruction",
+        "Construct a minimum by distributing the remaining excess"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "One-step return recurrence p_next=(1-p)/2 has fixed point1/3. Shifted geometric expression gives171/512 at10, reduced and sum683."
+    ],
+    "patch": {
+      "method_chain": [
+        "Collapse a symmetric random walk to a return-probability recurrence"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Verified central symmetry, both possible residual height assignments, and eliminated the wrong one explicitly by opposite cross-product signs. Dot product for120 degrees gives b²100/3 andp8/sqrt3; direct determinant area48sqrt3. Added the omitted convexity branch proof."
+    ],
+    "patch": {
+      "solution_en": [
+        "Equal parallel opposite sides make the hexagon centrally symmetric, so opposite vertex heights sum to $10$. Thus $D_y=10,E_y=8$. Reflect horizontally so $b>0$. If $C_y=4,F_y=6$, the first two equal edge vectors are $(b,2),(-b,2)$, while the third is $(q,6)$ with $|q|<b$. Their consecutive cross products are $4b>0$ and $-6b-2q<0$, contradicting convexity. Hence $C_y=6,F_y=4$.",
+        "Reflect horizontally if needed to take $b>0$. Put $AB=(b,2),BC=(p,4),CD=(q,4)$. Equal lengths and noncollinearity give $p=-q$ and $q^2=b^2-12$. The angle at $A$ gives $bq+8=-(b^2+4)/2$.",
+        "Thus $q<0$ and $b\\sqrt{b^2-12}=(b^2+20)/2$, yielding $b^2=100/3$, $q=-8/\\sqrt3$, $p=8/\\sqrt3$.",
+        "The parallelogram $ABDE$ has area $8b$, and the two remaining triangles each area $4p$. Total $8(b+p)=48\\sqrt3$, so the sum is $51$."
+      ],
+      "solution_zh": [
+        "等长且平行的对边使六边形中心对称，对顶点纵坐标和为十，故 $D_y=10,E_y=8$。水平反射后可令 $b>0$。若 $C_y=4,F_y=6$，前两条等长且不共线的边向量为 $(b,2),(-b,2)$，第三条为 $(q,6)$ 且 $|q|<b$。相邻叉积分别为 $4b>0$ 与 $-6b-2q<0$，违背凸性。因此只能 $C_y=6,F_y=4$。",
+        "必要时水平反射使 $b>0$。令 $AB=(b,2),BC=(p,4),CD=(q,4)$。等边且不共线给出 $p=-q,q^2=b^2-12$。顶角点积得 $bq+8=-(b^2+4)/2$。",
+        "故 $q<0$，平方求解得到 $b^2=100/3,q=-8/\\sqrt3,p=8/\\sqrt3$。",
+        "平行四边形 $ABDE$ 面积为 $8b$，余下两三角形各为 $4p$。总面积 $48\\sqrt3$，答案 $51$。"
+      ],
+      "method_chain": [
+        "Use equal parallel opposite edges to impose central symmetry",
+        "Eliminate a height assignment by consistent convex turning signs",
+        "Recover edge vectors from length and angle dot products"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2003-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Convolution factorizationx(1+...+x23)^2 checked with degree47 and central coefficient24. Distinct roots zero plus23 nontrivial24th roots; absolute imaginary squares sum8+4sqrt3 and encoding15. Multiplicities are not counted twice."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recognize triangular polynomial coefficients as a convolution square",
+        "Sum absolute imaginary parts over distinct roots of unity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Place-value formula1111a-123 witha3..9 gives remainders28..34. Distinctness and sum217 checked directly."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce a consecutive-digit place-value formula modulo a divisor"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Means2 and1/2 give maxima(m+3)/2 andm, withm odd. Absolute difference producesm201 as only positive root; valid consecutive sets exist. Removed routine absolute-value secondary tag."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Recover endpoints of consecutive integer sets from their means"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "All325 vertex pairs partition into60edges,24face diagonals and241space diagonals. Convex polyhedron faces meet only in faces/edges/vertices, preventing shared face diagonals. Full36-face count preserved implicitly as24+12."
+    ],
+    "patch": {
+      "method_chain": [
+        "Partition polyhedron vertex pairs by edge, face and space incidence"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Right-triangle hypotenuse midpoint gives radius1 quarter-circle locus, with converse endpoint construction2x,2y valid along length2 sides. Four corner quarter-disks have disjoint interiors, central area4-π rounds.86 and86."
+    ],
+    "patch": {
+      "method_chain": [
+        "Identify a midpoint locus using a right-triangle circumcircle",
+        "Subtract disjoint corner sectors from a square"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Both daily ratios below.7 force total integer score≤349. Explicit day allocations1/2 and348/498 satisfy each stricter original daily ratio and different first-day attempt condition. Ratio349/500 is reduced;849 attained. Generic inequality secondary tag removed."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Bound a weighted aggregate ratio and use integrality",
+        "Exhibit a two-day allocation attaining the integer upper bound"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all9000 four-digit integers, result882. Rank-alternation has five permutations per four-digit set and exactly three admissible with zero included; leading zero correctly excluded."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count alternating rank permutations before assigning digit values",
+        "Separate zero-containing digit sets to enforce a valid leading digit"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Coefficient is elementary symmetric sum e2=[(sumu)²-sumu²]/2. Alternating sum-8 and square sum1240 produce-588. Correctly remains polynomial symmetric-sum primary, rather than a binomial-power expansion."
+    ],
+    "patch": {
+      "method_chain": [
+        "Extract a product coefficient through elementary symmetric sums"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Equal-turn edge vectors form a regular circular orbit. Primitive step requiresgcd(d,1000)1 and crossing removesd1; complementary step pairing givesphi1000/2-1=199. No three collinear follows because vertices lie on a circle."
+    ],
+    "patch": {
+      "method_chain": [
+        "Classify regular star polygons by primitive step sizes",
+        "Pair complementary steps and exclude the convex polygon"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Enumerated all rectangle cut-leg orientations:only6with9/2 and7with21/4 fit. Angle matching forces original cut parallel to length3 leg; both trapezoid height/base and base ratios agree. Small-triangle scales5/14 and1/8 yield75/98 and3/32; latter is attained and globally minimum."
+    ],
+    "patch": {
+      "method_chain": [
+        "Enumerate cut orientations and match the trapezoid angles",
+        "Compare squared similarity scales after checking shape feasibility"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Allowed center rectangle area442. All these centers project onto the diagonal segment, so line distance test|5x-12y|>13 is equivalent to avoiding the segment. Two favorable triangles area375/2 each give375/442 and817."
+    ],
+    "patch": {
+      "method_chain": [
+        "Erode a placement rectangle and use distance-to-diagonal halfplanes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Original painted area24π includes the base, while the small cone retains only15πt² lateral paint. Equating area and volume ratios cancels to t5/8 in(0,1), ratio125/387 gives512. New cut faces correctly unpainted."
+    ],
+    "patch": {
+      "method_chain": [
+        "Distinguish inherited paint from new cut surfaces under similarity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Even logarithm floors define disjoint intervals(b^(-2j-1),b^(-2j)]. Summing their lengths givesb/(b+1); Cartesian-product area(2/3)(5/6)=5/9 and14. Endpoint measures do not affect area."
+    ],
+    "patch": {
+      "method_chain": [
+        "Invert logarithm-floor parity into geometric interval bands",
+        "Sum Cartesian-factor lengths using geometric series"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Multiplied the factor identity to verify exponents19,17. Removed only two roots at1, leaving34 distinct nontrivial roots. Ordered first five fractions correctly; sum159/323 gives482. Clarified the Chinese root-cancellation wording."
+    ],
+    "patch": {
+      "solution_zh": [
+        "乘 $(x-1)^2$ 后，得到 $(x^{18}-1)^2-x^{17}(x-1)^2=(x^{19}-1)(x^{17}-1)$。在 $x=1$ 处的两个根被消去，且 $P(1)=323\\ne0$。",
+        "所以根为全部非一的十七、十九次单位根。前五个辐角比例为 $1/19,1/17,2/19,2/17,3/19$。",
+        "其和为 $159/323$，答案 $482$。"
+      ],
+      "method_chain": [
+        "Multiply a reciprocal polynomial by a geometric-sum denominator",
+        "Interlace two families of roots of unity by their arguments"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Taut developed path has constant pitch, horizontal projection8sqrt6. Free segment projection4sqrt5 gives free length5sqrt30/3 and contact20-that. Encoding(60-sqrt750)/3 satisfies prime denominator3 and yields813."
+    ],
+    "patch": {
+      "method_chain": [
+        "Develop a cylindrical geodesic and keep its constant pitch into the tangent segment"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently regenerated every reverse first-hit level through20:final260608. Predecessorz-1 restrictions z>2 andznot1mod10 correctly exclude absorbing1 and multiples10; no repeated predecessor across a level. Factor2^9*509 and primality509 checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Build first-hit levels by reversing a deterministic integer map",
+        "Factor a recurrence count into distinct prime divisors"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Scaled chord distance1/radius2 gives120-degree central angle. Segment and complement areas4π/3-sqrt3 and8π/3+sqrt3 normalize to8,3,3,4,3,3; product2592 mod1000=592."
+    ],
+    "patch": {
+      "method_chain": [
+        "Subtract a central triangle from a circular sector"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Conditional color cases RR/RR, BB/BB andmixed/mixed give14,14,90 over323. Sequential depletion counts are correct and total118/323 is reduced."
+    ],
+    "patch": {
+      "method_chain": [
+        "Condition on an initial sample composition and update remaining multiplicities"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Hidden-unit formula(p-1)(q-1)(r-1)=231 exhausts five unordered factor triples. Added-one volume totals384,624,544,528,928 checked;4-by8-by12 attains384."
+    ],
+    "patch": {
+      "method_chain": [
+        "Translate occluded box cells into shifted integer dimensions",
+        "Enumerate unordered factor triples to minimize a box volume"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent enumeration1..9999 gives927. Leading digit fixes the primary symbol, so choosing a distinct second symbol creates no pair-label overcount; single-symbol cases added separately."
+    ],
+    "patch": {
+      "method_chain": [
+        "Fix the leading symbol to count numbers using at most two digits"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Normalized first three times sum121/36 and remaining23/36. Required workforce36000/23, ceiling1566 gives766 hires, while1565 fails. Removed routine inequality secondary tag; ceiling is inherent in integer worker model."
+    ],
+    "patch": {
+      "secondary": [],
+      "method_chain": [
+        "Add reciprocal work rates and round the final staffing requirement up"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Integer split denominators force portions8x,8y,24z. Independently checked final linear totals and ratio equations; solutions11t,13t,9t yield408t and positive integral t≥1. Each sequential portion is feasible at t1."
+    ],
+    "patch": {
+      "method_chain": [
+        "Choose portion units that make every sharing operation integral",
+        "Solve final-total ratios as a homogeneous linear system"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Reflection fixes crease points equidistant fromB andBprime.8-15-17 right triangle givesBprime0,15, crease equation y5(x-8)/3;CF3 givesF_x22, height70/3 and perimeter290/3. Foot remains onAD."
+    ],
+    "patch": {
+      "method_chain": [
+        "Model a fold crease as the perpendicular bisector of reflected points"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Divisor condition gives(i+1)(j+1)(k+1)=2²*3*167; every factor≤2004 so exponent upper bounds are safe. Distributing prime factors across three ordered slots gives6*3*3=54."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count divisor-count equations by distributing prime exponents among slots"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Inductive odd-square and even-product formulas checked directly from both alternating progression conditions. Given sum factors(r-5)(36r+125), only positive r5. Increasing boundary957 at16 and1089 at17 proves973."
+    ],
+    "patch": {
+      "method_chain": [
+        "Discover alternating square-product formulas in mixed progressions",
+        "Filter the initial ratio by positivity and a given distant sum"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Exactly two ones below2^40 uniquely use exponents0..39. Order6 modulo9 makes gap3mod6; pair counts37,31,25,19,13,7,1 total133 over780, gcd1 and913."
+    ],
+    "patch": {
+      "method_chain": [
+        "Encode a binary two-one number by a pair of exponent positions",
+        "Count exponent gaps satisfying a modular power condition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cone slant800 gives sector270 degrees; opposite generator lifts at±135. Nearest lifts are135 apart and farther winding lifts cannot shorten the path; the straight chord stays inside radius800. Cosine-law square390625 gives625."
+    ],
+    "patch": {
+      "method_chain": [
+        "Unroll a conical surface and select the nearest angular lift",
+        "Apply cosine law to the developed geodesic chord"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Radical equation independently yields23r²+120r-144=0, root(-60+48sqrt3)/23. Squaring branch r<12 checked; circle-to-base and leg distances exceed r, so containment is attained. Added external-tangency/containment explanation to make symmetry and feasibility explicit."
+    ],
+    "patch": {
+      "solution_en": [
+        "The trapezoid height is $\\sqrt{25-1}=\\sqrt{24}$. Equal tangency distances to each equal-radius pair put the inner center on the symmetry axis. If its radius is $r$, its distances from the two base lines are $\\sqrt{r^2+6r}$ and $\\sqrt{r^2+4r}$.",
+        "Their sum is $\\sqrt{24}$. Isolating and squaring gives $\\sqrt{24(r^2+4r)}=12-r$, then $23r^2+120r-144=0$.",
+        "The positive root is $(-60+48\\sqrt3)/23$; it is positive, below $12$, and satisfies the original radical equation. The parameter sum is $134$.",
+        "The root gives a circle wholly inside the trapezoid: both base distances exceed $r$, and its distance to either leg is $(3\\sqrt{24}-\\sqrt{r^2+6r})/5>r$. Internal tangency to one member of a base pair is impossible: the two equal corner circles are externally tangent to each other, so such a circle touching the other member would have to touch the base line, contradicting containment with positive radius. Thus all four distance sums used above are valid."
+      ],
+      "solution_zh": [
+        "梯形高为 $\\sqrt{24}$。对两个等半径圆心对等距使内圆心位于对称轴。设半径为 $r$，距两底直线分别为 $\\sqrt{r^2+6r},\\sqrt{r^2+4r}$。",
+        "两距离和为 $\\sqrt{24}$。移项平方得 $\\sqrt{24(r^2+4r)}=12-r$，再平方得 $23r^2+120r-144=0$。",
+        "正根为 $(-60+48\\sqrt3)/23$，代回满足原式，参数和为 $134$。",
+        "还须检验圆确在梯形内：两底距离均大于 $r$，到任一腰的距离为 $(3\\sqrt{24}-\\sqrt{r^2+6r})/5>r$。若与某底端点圆内切，再与同底另一圆相切，因两个端点圆彼此外切，只能在底边切点处接触，正半径圆不可能同时完全处于梯形内。因此上述四个外切距离条件有效。"
+      ],
+      "method_chain": [
+        "Use paired circle tangencies to locate a center on a symmetry axis",
+        "Eliminate radicals and verify all tangency and containment conditions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cosine law givesAC7. With a parallelogram extension, convexity selects the external similar triangle with baseDE15; heights relative to B areh+h+15h/7. Area ratio49/435 and484 checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Extend parallel sides to form a parallelogram and similar triangles",
+        "Combine cosine law with base-height area ratios"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated nonnegative multiplicities of1,11,111 summing1000;108 distinct string lengths. Interval union for v=y+12z is0..106 plus108, with107 missing, and all corresponding n positive."
+    ],
+    "patch": {
+      "method_chain": [
+        "Replace repeated-digit summands by bounded integer multiplicities",
+        "Count attainable objective values by merging integer intervals"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2004-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently simulated all1024 physical stack lists, reversing each right stack onto its mirror left stack at every fold. Square942 ends at zero-based bottom index593, matching the coordinate-layer recurrence."
+    ],
+    "patch": {
+      "method_chain": [
+        "Track position and bottom-up layer under repeated reflection folds"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Verified the angle chainα,2α,3α, with both points strictly on their sides. Base angle540/7 and547 checked. Moved primary from similarity GE01 to triangle angle relations GE03 to match the actual decisive route."
+    ],
+    "patch": {
+      "primary": {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "A chain of isosceles triangles determines the angles; no similarity ratio is used.",
+        "reason_zh": "通过连续等腰三角形的角度关系求角，没有使用相似比例。"
+      },
+      "method_chain": [
+        "Propagate equal-base angles through a chain of isosceles triangles"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Common-base logarithms give t²/4=t(1+t)/3. Rejectedt0 because the original ordered terms have no positive common ratio; t-4 gives valid terms-1,-2,-4 and x1/16."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convert logarithmic progressions to a common-base variable and check zero terms"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "All shared digits must fit base8. Place-value equation gives leadinga≥5, and a5 leaves onlyb1,c5; any highera forcesN≥726. Minimal621 checked in both bases."
+    ],
+    "patch": {
+      "method_chain": [
+        "Equate two base expansions with shared digit variables",
+        "Use a leading-digit bound to prove global minimality"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Deletion prefixk divides suffix2020 exactly. Enumerated all12 divisors and independently summed prefix digits45 plus suffix contribution48, total93. Positive prefix requirement explicit."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce a decimal suffix divisibility condition to divisors of the suffix"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all720 permutations and52 satisfy deletion monotonicity. Increasing insertion incidences36 have only identity multiplicity6 and five adjacent-swap multiplicities2, giving26; increasing/decreasing families cannot intersect."
+    ],
+    "patch": {
+      "method_chain": [
+        "Insert an exceptional element and correct multiple deletion witnesses"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Centers on the same board side have the stated two positive heights. Rearranged radical equation sqrt((u-1)(u-4))=22-u givesu160/13. Checkedu>4 andpositive right side to exclude squaring artifacts;173."
+    ],
+    "patch": {
+      "method_chain": [
+        "Express sphere-center heights from circular cross sections",
+        "Eliminate a radical distance equation and verify its sign branch"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Complemented the female choice to11-k, so Vandermonde gives23C11. Independent prime factorization1352078=2*7*13*17*19*23 yields distinct-prime sum81."
+    ],
+    "patch": {
+      "method_chain": [
+        "Complement one group selection to apply Vandermonde",
+        "Factor a binomial coefficient using factorial prime valuations"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Complex multiplier(1+i*sqrt3)/4 has modulus1/2. Geometric displacement sum5/(1-z), squared modulus100/3 and103 independently checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Sum rotated shrinking displacements as a complex geometric series"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Divisor lattice exponents independently uniform in19-by10 grid. Weakly increasing triples counts21C3 and12C3; reduced probability77/1805 and required numerator77. Replacement and order conditions preserved."
+    ],
+    "patch": {
+      "method_chain": [
+        "Translate a divisor chain into independent nondecreasing exponent triples",
+        "Count repeated selections through weak compositions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Every deficient prime in n is at least11. For sums<407, exponent deficiency must2versus1, forcingn≤135 andn121. Checked four possible m before286; each fails original gcd or nondivisibility. Candidate286,121 attains407."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use a deficient prime valuation to bound the two bases",
+        "Complete an extremal valuation argument with a bounded integer search"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent enumeration of all21^3 coefficient triples confirms510. Coincident inputs a-6 contribute441; distinct-root Vieta relation gives69 bounded lattice cases. Integral d exists in both branches."
+    ],
+    "patch": {
+      "method_chain": [
+        "Separate coincident composition inputs from distinct polynomial roots",
+        "Count coefficient-lattice points in a clipped linear band"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked LTE hypotheses for odd primes3,7 and valuation starts1,2. Mod5 order4 followed byv5(149^4-2^4)=1 forces4*5^4. Necessary and sufficient lcm exponent2²3²5^4*7^5 gives270 divisors."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine multiplicative order with odd-prime lifting of valuations"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Auxiliary circle arc-midpoint argument places E,F on opposite sides ofAD; an independent bisector-axis coordinate check confirms this orientation. AD²18 and half-angle tangentssqrt7/3,1/sqrt7 produce area15sqrt7/14 and36."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use an arc midpoint to intersect an angle bisector with a perpendicular bisector",
+        "Evaluate a common-altitude area with half-angle tangents"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Partitioning composition roots into preimage pairs of equal sum exhausts the two arrangements of3,4. Same-pair branch exists with r3±i*sqrt3 and nonzero remaining discriminant; split branch s1/2 has four distinct roots. Values49,36 total85."
+    ],
+    "patch": {
+      "method_chain": [
+        "Pair roots of a composed quadratic by their common inner value",
+        "Verify distinct-root attainment after using Vieta constraints"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Vector orthocenter identity and reflection-circle centerB+C independently checked. Horizontal chord giveshalf-length4 andh²4; HA3 determinesR21/(2sqrt5). ChordBC midpoint norm3/2 givesaltitude5 and area3sqrt55,58. All directed-distance absolute signs checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use the orthocenter vector identity to locate a reflected circumcenter",
+        "Recover a triangle area from chord midpoints and a normal-vector distance"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Prime exponents ofm can be a0..20,b0..10 and uniquely fix n. No other primes allowed, giving231 ordered pairs."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count square-divisor choices by independent prime exponents"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Dividing the slope inequality reverses direction left ofx5/8. Two clipped trapezoid areas51/256 and35/256 give43/128 and171; vertical undefined slope has zero area."
+    ],
+    "patch": {
+      "method_chain": [
+        "Split a slope inequality by the sign of its horizontal denominator"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Logarithm domains xnot0,-3 retained. Common-base cancellation gives20/x=2020/(x+3), root3/100 and103, with valid bases."
+    ],
+    "patch": {
+      "method_chain": [
+        "Change variable logarithm bases into a rational equation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Displacement direction forces clockwise90-degree rotation; image-origin equations givecenter21,-3. Verified both other images exactly, total108."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recover a rotation angle from edge vectors and solve its center"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Earliest base8 digit sum needing hexadecimal letter occurs at31=37base8, sum10. Minimal base4 integer with digit sum≥31 is1 followed byten3s; its actual sum31 makes the threshold attainable. N2097151 and151."
+    ],
+    "patch": {
+      "method_chain": [
+        "Find the least nested digit-sum threshold across different bases",
+        "Pack digit mass into low positions to minimize the represented number"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Rescaling u5t gives the positive Lyness recurrence. Symbolically verified arbitrary(a,b) returns afterfive steps, no denominator zero. Index2020 usesu5=101/105, t101/525 and626."
+    ],
+    "patch": {
+      "method_chain": [
+        "Rescale a nonlinear recurrence to a five-period rational map"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Support-plane inequalities for both cones hold for an arbitrary spatial sphere center. Adding uses3u+8|u|≥0 and3v+8|v|≥0, provingr≤15/sqrt73. CenterO attains andr<3 respects both bases;298."
+    ],
+    "patch": {
+      "method_chain": [
+        "Bound an insphere using supporting planes of intersecting cones",
+        "Sum symmetric absolute-value bounds and certify a central attainment"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently generated all zero sets through101 using nonnegative preimagesn±z. Every set exactly matches the step2 progression, including negative zeros that are discarded at the next inverse. Counts and sum endpoints give495100 then510151, first101."
+    ],
+    "patch": {
+      "method_chain": [
+        "Propagate zero sets through absolute-value preimages",
+        "Sum an inductively preserved arithmetic progression of zeros"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent permutation enumeration confirms90 forbidden-neighbor seating orders. Edge-subset run block counts verify all six inclusion-exclusion totals720,1200,768,228,32,2."
+    ],
+    "patch": {
+      "method_chain": [
+        "Glue runs of forbidden adjacencies and count block orientations"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Cube-sum formula and n=-5mod(n+5) produce necessaryd|332. Original residue checks remove the extraneousd332 introduced by multiplying by4; validn78,161 sum239. Remainder strictboundd>17 retained."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce a power sum modulo a shifted variable divisor",
+        "Recheck congruences after multiplying by a nonunit"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Shared-root factorization exhausts distinct common roots. Coefficient comparison fixesa3/2,b-5/3,c-27/19 andR0=52/19; reconstructed constants and pairwise distinctness verified."
+    ],
+    "patch": {
+      "method_chain": [
+        "Assign pairwise shared quadratic roots and compare reconstructed coefficients"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Midpoint labels1100 and immediate left neighbor1099 verified algebraically. Interior crossing requires strictslope<1, not≤. Four odd-row cases yield255candidatecolumncounts minus7, independently checked248."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use the center of two numbered cells to identify a neighboring target",
+        "Count odd grid dimensions under a strict slope-interior condition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Equal tangents solve to3,2,4,2,4. Half-angle total270deg leads5r4-84r²+64; low root4/5 cannot supply angle total. r4 gives arctan(4/3)+2arctan2+90=270, area60. Branch and uniqueness checked."
+    ],
+    "patch": {
+      "method_chain": [
+        "Solve tangent-length equations around an odd-sided polygon",
+        "Use a half-angle sum to determine an inradius and filter branches"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "On each half-open interval f is monotone onto[0,j+1), giving exactly one preimage per eligible branch. Three inverse levels correspond17≤n≤k≤j; summing choose(j-15,2) giveschoose2005,3 and remainder10. Integer endpoints give0, correctly excluded."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count iterated fractional-part preimages by nested interval indices",
+        "Apply weak-index counting and the hockey-stick binomial identity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2020-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Tangent-circle geometry independently givesR²30976/135. Circle equation linearizes AB²+AC² andAT² inheightv; sum constraint yieldsv291/sqrt135. ResultXY²717, andu²692/45>0 supplies an acute scalene attainable configuration."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use tangent-chord angles and a diameter circle for projection distances",
+        "Linearize squared-distance sums using the circumcircle equation"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Conditioned on location of the unique loss in races2..6. Terminal loss has four stays, internal loss two switches;16+4*8 over243 reduces16/81,97. Initial win fixed, not randomly resampled."
+    ],
+    "patch": {
+      "method_chain": [
+        "Weight dependent outcome strings by stays and switches"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked AF7,FC9 and right angle forF28/5,36/5; its side ofAC is oppositeB. Four second-rectangle halfplanes reduce to one strip inside the first, constant horizontal width35/4 gives105/4 and109. Diagram orientation preserved explicitly."
+    ],
+    "patch": {
+      "method_chain": [
+        "Intersect rotated rectangles using linear halfplanes"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Negative integral exponents cannot produce an integer difference after factoring the odd part. Unique2-adic valuation avoids duplicate representations. Counts10,9,8,7,6,4,3,2,1 sum50."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use the unique odd part to count differences of powers of two"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "All2080 ordered positive compositions split into all-equal1, exactly-two-equal93, and distinct1986. The increasing representatives have free6-permutation orbits, giving331."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count positive compositions and remove repeated-part cases before dividing by symmetry"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Centered progression gives d²(a-2)=3a², forcingpositivea-2 dividing12. Tested every divisor and square candidate; sequences0,5,10 and7,14,21 are valid because source terms need only be integers, not positive. Last-term sum31."
+    ],
+    "patch": {
+      "method_chain": [
+        "Center a three-term progression and force a divisor condition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Expanded all four cube-distance squares; side-length and linear terms cancel exactly to2PA². Recomputed73728/2=36864, square root192. PointP was not restricted to inside cube."
+    ],
+    "patch": {
+      "method_chain": [
+        "Cancel coordinate terms in a cube squared-distance identity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Both sines must reach1. After gcd reduction, a Bezout equation gives necessary and sufficient u=vmod4. Independently counted all435 pairs, exactly63. Realx allows any integer phase parameters."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convert simultaneous sine maxima into a Bezout congruence condition"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Level-root counts checked at negative,zero,100 andabove100:0,3,4,2; genericpositivebelow100 gives6. Distinct target levelsc±21 require both in(0,100), hence57integerc. No endpoint could also total12."
+    ],
+    "patch": {
+      "method_chain": [
+        "Build a complete horizontal-level root-count table for an even folded parabola"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Distance determinants give both numerators18u, with denominatorsleg anddiagonal lengths. Subtracting their squared conditions givesa2u/5, thenu45sqrt2/4. Base sum and area yield567 aftersqrt2 scaling."
+    ],
+    "patch": {
+      "method_chain": [
+        "Convert point-to-line distances into trapezoid coordinate equations"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "InvariantI=m-18d and gcd(d+1,I) transition verified. Successive smallest prime cancellations2,7,11,13 occur atindices2,8,18,30; including1 gives59. OnceI1 no future cancellation or d1 is possible."
+    ],
+    "patch": {
+      "method_chain": [
+        "Find a linear invariant compatible with reduction of rational iterates"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Reflection across a diagonal-angle bisector followed by scale cosθ is one global similarity giving all four perpendicular feet. Ptolemy product59, Brahmagupta area2sqrt210 givecosθ11/59, perimeter242/59 and301."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recognize crossed diagonal projections as one reflection-dilation similarity",
+        "Combine Ptolemy and cyclic-quadrilateral area to recover a diagonal angle"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated all eight sign triples in each cyclic gap state and verified all transition counts. Even gaps prevent overtaking before a collision. Solved exact first-step equations tostart expectation16/3 and19."
+    ],
+    "patch": {
+      "method_chain": [
+        "Lump symmetric collision-walk states by cyclic gap patterns",
+        "Solve first-step expectation equations with absorbing collisions"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "External tangency gives power difference672r, while radical-axis gradient magnitude2d times distance r/2 givesdr. The common-chord line, not chord segment, is used correctly; distance672 is consistent with two-circle intersection bounds."
+    ],
+    "patch": {
+      "method_chain": [
+        "Relate a circle-power difference to distance from the radical axis"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked primes173,283 and primitive-root witnesses3mod43,5mod47 by independent orders42,46. These explicitly forceq andq-1; multiplicative divisor-sum proof gives sufficiency for every prime exponent en. Leastlcm factors are distinct and sum125."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce a universal divisor-sum congruence to prime-power factors",
+        "Prove a universal exponent is least using explicit prime witnesses"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-I-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Circle-combination equation givesR²325/16+3k/2 andk≤280. For1..4 verified no negative quartic root; positive derivative has only one zero, so cannot have4roots. For5..280 four sign-separated roots, including derivative check atboundaryk5, prove attainment. Extreme sum285."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine two conic equations to identify the common intersection circle",
+        "Certify four quartic intersections with sign intervals and boundary derivatives"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q01",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Every leadinga1..9 andmiddleb0..9 pair occurs uniformly in palindromes101a+10b. Mean digits5 and4.5 give550; all90 palindromes included."
+    ],
+    "patch": {
+      "method_chain": [
+        "Average independent decimal digit positions by linearity"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q02",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Parallel cut makesAEF equilateral. The120-degree angle atF must be the isosceles apex, forcingFG=FA. Two area formulas give s2(840-s)/3 and336; all relevant cut points lie inside their sides."
+    ],
+    "patch": {
+      "method_chain": [
+        "Determine an isosceles apex from an obtuse angle and use parallel-cut areas"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q03",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated120 permutations and80 satisfy the cyclic product condition. Mod3 removes exactly the three products containing3; remaining factorization requires opposite-residue neighbors, giving5*8*2."
+    ],
+    "patch": {
+      "method_chain": [
+        "Factor a cyclic modular sum after fixing its zero-residue entry"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q04",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Real coefficients force the conjugate pair; missing quadratic coefficient fixes m10 and missing linear coefficient then n320. All roots and coefficients real as required, sum330."
+    ],
+    "patch": {
+      "method_chain": [
+        "Combine conjugate-root pairing with missing-coefficient Vieta identities"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q05",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Both included-angle branches counted. Obtuse included-angle branch exists for0<s20; acute branch gives an obtuse angle opposite10 exactly forcosθ>2/5, s<4sqrt21. Lower endpoint excludes a right competing triangle, upper has no obtuse triangle;736."
+    ],
+    "patch": {
+      "method_chain": [
+        "Analyze the two sine-area angle branches under an obtuse-triangle constraint"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q06",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Set-size identity factors(a-i)(b-i)=0, exactly one containment direction or equality. Three membership states count243 each way, equality32 double-counted;454."
+    ],
+    "patch": {
+      "method_chain": [
+        "Factor a set-cardinality identity into a containment condition",
+        "Count comparable subsets and subtract equality overlap"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q07",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Elimination and quartic factorization independently multiplied. Real quadratic factor3c²-4c+6 has negative discriminant; c10/3 makesa,b nonreal and must be rejected. c-2 givesd3/2 and valid a,b5,-2, square sum141/4 and145."
+    ],
+    "patch": {
+      "method_chain": [
+        "Group symmetric products to eliminate one variable",
+        "Filter algebraic branches by the reality of a quadratic root pair"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q08",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Checked four-state transition by allowable edge types. The nonbacktracking constraint removes one horizontal option only after horizontal moves; eighth state sums384 and top204, probability17/32 and49."
+    ],
+    "patch": {
+      "method_chain": [
+        "Track the previous edge type in a nonbacktracking cube walk"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q09",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independent exact gcd enumeration over900pairs gives295. Order valuation necessity and explicit common divisor2^g+1 prove equivalentcriterionv2(n)>v2(m); valuation class counts15,8,4,2,1 confirm result."
+    ],
+    "patch": {
+      "method_chain": [
+        "Characterize mixed-sign power gcds by the two-adic valuation of their orders"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q10",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Same-side lemma for three pairwise tangent spheres verified; opposite-side pair would force all contact points onto one normal and make same-side tangency impossible. In common sector, large centers separated72 and small center midway give transverse23/sinθ, hencecotθ24/23. Contact distance312/23 and335."
+    ],
+    "patch": {
+      "method_chain": [
+        "Reduce spheres tangent to two planes to an angle-bisector cross section",
+        "Use equal-radius center symmetry to solve a three-sphere tangency triangle"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q11",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently enumerated valid public candidate runs and number frequencies. Unanimous initial ignorance leaves exactly34..37,47..50,76..79,89..92; they are disjoint so every student can identify after the announcement. Maximum sum258."
+    ],
+    "patch": {
+      "method_chain": [
+        "Update possible worlds after a public announcement of ignorance"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q12",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Expanded diagonal dot-product identity gives-21, whose absolute value is21. Area30 fixes cross-product magnitude60. Acute diagonal angle thereforetan40/7, sum47; signed-versus-acute angle handled correctly."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recover diagonal dot and cross products from side squares and area"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q13",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently checked all positive n<1000 and first solution797. Successive modulus lifts8,5,25,125 force17mod20 then97mod100 then47mod125, compatible797mod1000. n1,2 excluded separately."
+    ],
+    "patch": {
+      "method_chain": [
+        "Lift a self-referential exponent congruence through increasing moduli"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q14",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Read original acute-triangle and angle-ratio conditions and both language records. Independently derived the auxiliary-circle equality only modulo180 degrees, then resolved the exact ray branch by6<t<90/13: both required angles are obtuse. This fills the source orientation gap instead of relying on a diagram. Verified t45/7 and A585/7; secondary triangle-center relation is essential."
+    ],
+    "patch": {
+      "solution_en": [
+        "Let $M$ be the midpoint of $BC$. The centroid gives $A,G,M$ collinear. Since $OA\\perp AX$ and $OG\\perp GX$, points $O,A,X,G$ are cyclic. Also $OM\\perp BC$ and $OG\\perp GY$, so $O,G,Y,M$ are cyclic.",
+        "The two cyclic quadrilaterals imply the same directed angle modulo $180^\\circ$: $\\angle(OX,OA)=\\angle(GX,GA)$ and $\\angle(OY,OM)=\\angle(GY,GM)$. The right-hand angles are equal modulo $180^\\circ$ because $X,G,Y$ and $A,G,M$ are collinear. Hence ordinary $\\angle XOY$ is either $\\angle AOM$ or its supplement; this step alone does not fix the rays.",
+        "Write $B=13t,C=2t,A=180^\\circ-15t$. Acuteness forces $6<t<90/13$. Consequently the given $\\angle XOY=17t$ is obtuse. The ray $OM$ points toward the midpoint of the minor arc $BC$; the chord/arc-angle relations give $\\angle AOM=A+2C=180^\\circ-11t$, also obtuse throughout this interval. Therefore the supplementary alternative is excluded.",
+        "We must have $17t=180^\\circ-11t$, yielding $t=45/7$. Thus $A=585/7$ degrees; all three angles are acute and the indicated nondegenerate intersections exist. The reduced numerator-denominator sum is $585+7=592$."
+      ],
+      "solution_zh": [
+        "设 $M$ 为 $BC$ 中点，由重心性质 $A,G,M$ 共线。因 $OA\\perp AX,OG\\perp GX$，四点 $O,A,X,G$ 共圆；又因 $OM\\perp BC,OG\\perp GY$，$O,G,Y,M$ 共圆。",
+        "两圆给出模一百八十度的有向角关系 $\\angle(OX,OA)=\\angle(GX,GA)$、$\\angle(OY,OM)=\\angle(GY,GM)$。由于 $X,G,Y$ 共线且 $A,G,M$ 共线，右侧两角相同。因此普通角 $\\angle XOY$ 或等于 $\\angle AOM$，或等于其补角；单靠共圆尚不能确定射线方向。",
+        "令 $B=13t,C=2t,A=180^\\circ-15t$，由锐角条件 $6<t<90/13$，所以题给 $\\angle XOY=17t$ 为钝角。外接圆的圆弧角关系给出 $\\angle AOM=A+2C=180^\\circ-11t$，在上述区间也恒为钝角，因此只能取相等而不能取补角。",
+        "于是 $17t=180^\\circ-11t$，得 $t=45/7,A=585/7$ 度，各角均锐且交点构型非退化。最简分子分母和为 $592$。"
+      ],
+      "unresolved_issues": [],
+      "method_chain": [
+        "Transfer directed angles through two right-angle circles",
+        "Select the ray branch using acute-angle bounds"
+      ]
+    }
+  },
+  {
+    "question_id": "AIME-2021-II-Q15",
+    "reviewer": "template_audit",
+    "verdict": "pass",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "findings": [
+      "Independently derived next-square formulas, then strengthened the minimality proof: candidate n always even, so k5mod6; square-root lower interval requiresk>11, makingk17 first. Recomputed258,48,84. Confirmed the author knowledge-audit correction: parity is not prime valuation, so secondaryNT01 is replaced byNT05."
+    ],
+    "patch": {
+      "solution_en": [
+        "Put $k=\\lceil\\sqrt n\\rceil$. Iterating to the next square gives $f(n)=k^2+k-n$. The $g$ iteration preserves parity, so if $n\\equiv k\\pmod2$, it reaches the same square and $f(n)/g(n)=1$. We therefore need opposite parity.",
+        "Then the first square of the parity of $n$ is $(k+1)^2$, so $g(n)=f(n)+2k+2$. The ratio $4/7$ gives $f(n)=8(k+1)/3$ and $n=k^2+k-8(k+1)/3$. Integrality requires $k\\equiv2\\pmod3$. This formula always makes $n$ even, so the opposite-parity condition requires odd $k$, hence $k\\equiv5\\pmod6$.",
+        "The defining interval $(k-1)^2<n\\le k^2$ has lower inequality equivalent to $k>11$; its upper inequality is automatic. The least eligible integer $k$ is therefore $17$, yielding $n=258$. This minimizes $n$ because the square-root intervals are ordered by $k$.",
+        "Finally $17^2-258+17=48$ and $18^2-258+18=84$, giving $48/84=4/7$. Thus the least positive input is $258$."
+      ],
+      "solution_zh": [
+        "令 $k=\\lceil\\sqrt n\\rceil$。逐次递推到下一个平方数得 $f(n)=k^2+k-n$。$g$ 的递推保持自变量奇偶性；若 $n\\equiv k\\pmod2$，两者抵达同一平方数，比例为一。因此两者必须奇偶相反。",
+        "此时首个与 $n$ 同奇偶的平方数为 $(k+1)^2$，所以 $g(n)=f(n)+2k+2$。由比例得 $f(n)=8(k+1)/3$，从而 $n=k^2+k-8(k+1)/3$。整数性要求 $k\\equiv2\\pmod3$，且该公式总使 $n$ 为偶数。故 $k$ 必为奇数，即 $k\\equiv5\\pmod6$。",
+        "定义区间 $(k-1)^2<n\\le k^2$ 的下界化简后恰为 $k>11$，上界自动成立。因此最小可用的 $k$ 为十七，得到 $n=258$。由于各平方根区间随 $k$ 排序，这也使 $n$ 最小。",
+        "核验 $f(258)=17^2-258+17=48$，$g(258)=18^2-258+18=84$，比例确为 $4/7$。所求最小正整数为 $258$。"
+      ],
+      "secondary": [
+        {
+          "category_id": "NT",
+          "subtype_id": "NT05",
+          "reason_en": "Interval bounds and an exhaustive congruence/parity candidate search establish the least positive integer.",
+          "reason_zh": "区间界与穷尽的同余奇偶候选筛选共同证明最小正整数。"
+        }
+      ],
+      "method_chain": [
+        "Unroll a recursive function to the first reachable square",
+        "Combine square-root interval bounds with parity and congruence restrictions"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1506 @@
+[
+  {
+    "name": "AIME 2000-2026 matrix bilingual",
+    "href": "downloads/matrix/AIME_2000-2026_matrix_bilingual.pdf",
+    "family": "matrix",
+    "format": "PDF",
+    "bytes": 265438,
+    "section": false
+  },
+  {
+    "name": "AIME 2000-2026 matrix bilingual poster",
+    "href": "downloads/matrix/AIME_2000-2026_matrix_bilingual_poster.pdf",
+    "family": "matrix",
+    "format": "PDF",
+    "bytes": 248821,
+    "section": false
+  },
+  {
+    "name": "AIME 2000-2026 matrix en",
+    "href": "downloads/matrix/AIME_2000-2026_matrix_en.pdf",
+    "family": "matrix",
+    "format": "PDF",
+    "bytes": 140006,
+    "section": false
+  },
+  {
+    "name": "AIME 2000-2026 matrix zh",
+    "href": "downloads/matrix/AIME_2000-2026_matrix_zh.pdf",
+    "family": "matrix",
+    "format": "PDF",
+    "bytes": 240596,
+    "section": false
+  },
+  {
+    "name": "AIME Matrix bilingual",
+    "href": "downloads/matrix/AIME_Matrix_bilingual.html",
+    "family": "matrix",
+    "format": "HTML",
+    "bytes": 4058734,
+    "section": false
+  },
+  {
+    "name": "AIME Matrix Bilingual",
+    "href": "downloads/matrix/AIME_Matrix_Bilingual.xlsx",
+    "family": "matrix",
+    "format": "XLSX",
+    "bytes": 899906,
+    "section": false
+  },
+  {
+    "name": "AIME Matrix en",
+    "href": "downloads/matrix/AIME_Matrix_en.html",
+    "family": "matrix",
+    "format": "HTML",
+    "bytes": 4058724,
+    "section": false
+  },
+  {
+    "name": "AIME Matrix zh",
+    "href": "downloads/matrix/AIME_Matrix_zh.html",
+    "family": "matrix",
+    "format": "HTML",
+    "bytes": 4058724,
+    "section": false
+  },
+  {
+    "name": "AIME 2000-2026 workbook",
+    "href": "downloads/workbook/AIME_2000-2026_workbook.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 3385926,
+    "section": false
+  },
+  {
+    "name": "1.10 AL10",
+    "href": "downloads/workbook/sections/1.10_AL10.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 480051,
+    "section": true
+  },
+  {
+    "name": "1.1 AL01",
+    "href": "downloads/workbook/sections/1.1_AL01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 569898,
+    "section": true
+  },
+  {
+    "name": "1.2 AL02",
+    "href": "downloads/workbook/sections/1.2_AL02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 571829,
+    "section": true
+  },
+  {
+    "name": "1.3 AL03",
+    "href": "downloads/workbook/sections/1.3_AL03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 591488,
+    "section": true
+  },
+  {
+    "name": "1.4 AL04",
+    "href": "downloads/workbook/sections/1.4_AL04.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 561743,
+    "section": true
+  },
+  {
+    "name": "1.5 AL05",
+    "href": "downloads/workbook/sections/1.5_AL05.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 576271,
+    "section": true
+  },
+  {
+    "name": "1.6 AL06",
+    "href": "downloads/workbook/sections/1.6_AL06.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 539278,
+    "section": true
+  },
+  {
+    "name": "1.7 AL07",
+    "href": "downloads/workbook/sections/1.7_AL07.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 513787,
+    "section": true
+  },
+  {
+    "name": "1.8 AL08",
+    "href": "downloads/workbook/sections/1.8_AL08.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 528924,
+    "section": true
+  },
+  {
+    "name": "1.9 AL09",
+    "href": "downloads/workbook/sections/1.9_AL09.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 509835,
+    "section": true
+  },
+  {
+    "name": "2.10 GE10",
+    "href": "downloads/workbook/sections/2.10_GE10.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 566496,
+    "section": true
+  },
+  {
+    "name": "2.1 GE01",
+    "href": "downloads/workbook/sections/2.1_GE01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 532073,
+    "section": true
+  },
+  {
+    "name": "2.2 GE02",
+    "href": "downloads/workbook/sections/2.2_GE02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 542661,
+    "section": true
+  },
+  {
+    "name": "2.3 GE03",
+    "href": "downloads/workbook/sections/2.3_GE03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 553501,
+    "section": true
+  },
+  {
+    "name": "2.4 GE04",
+    "href": "downloads/workbook/sections/2.4_GE04.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 569786,
+    "section": true
+  },
+  {
+    "name": "2.5 GE05",
+    "href": "downloads/workbook/sections/2.5_GE05.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 531026,
+    "section": true
+  },
+  {
+    "name": "2.6 GE06",
+    "href": "downloads/workbook/sections/2.6_GE06.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 540938,
+    "section": true
+  },
+  {
+    "name": "2.7 GE07",
+    "href": "downloads/workbook/sections/2.7_GE07.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 701139,
+    "section": true
+  },
+  {
+    "name": "2.8 GE08",
+    "href": "downloads/workbook/sections/2.8_GE08.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 499473,
+    "section": true
+  },
+  {
+    "name": "2.9 GE09",
+    "href": "downloads/workbook/sections/2.9_GE09.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 519710,
+    "section": true
+  },
+  {
+    "name": "3.1 NT01",
+    "href": "downloads/workbook/sections/3.1_NT01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 534155,
+    "section": true
+  },
+  {
+    "name": "3.2 NT02",
+    "href": "downloads/workbook/sections/3.2_NT02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 500781,
+    "section": true
+  },
+  {
+    "name": "3.3 NT03",
+    "href": "downloads/workbook/sections/3.3_NT03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 542975,
+    "section": true
+  },
+  {
+    "name": "3.4 NT04",
+    "href": "downloads/workbook/sections/3.4_NT04.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 507844,
+    "section": true
+  },
+  {
+    "name": "3.5 NT05",
+    "href": "downloads/workbook/sections/3.5_NT05.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 558619,
+    "section": true
+  },
+  {
+    "name": "3.6 NT06",
+    "href": "downloads/workbook/sections/3.6_NT06.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 571548,
+    "section": true
+  },
+  {
+    "name": "3.7 NT07",
+    "href": "downloads/workbook/sections/3.7_NT07.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 492539,
+    "section": true
+  },
+  {
+    "name": "3.8 NT08",
+    "href": "downloads/workbook/sections/3.8_NT08.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 514406,
+    "section": true
+  },
+  {
+    "name": "4.1 CO01",
+    "href": "downloads/workbook/sections/4.1_CO01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 521034,
+    "section": true
+  },
+  {
+    "name": "4.2 CO02",
+    "href": "downloads/workbook/sections/4.2_CO02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 532900,
+    "section": true
+  },
+  {
+    "name": "4.3 CO03",
+    "href": "downloads/workbook/sections/4.3_CO03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 502017,
+    "section": true
+  },
+  {
+    "name": "4.4 CO04",
+    "href": "downloads/workbook/sections/4.4_CO04.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 509710,
+    "section": true
+  },
+  {
+    "name": "4.5 CO05",
+    "href": "downloads/workbook/sections/4.5_CO05.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 528472,
+    "section": true
+  },
+  {
+    "name": "4.6 CO06",
+    "href": "downloads/workbook/sections/4.6_CO06.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 540125,
+    "section": true
+  },
+  {
+    "name": "4.7 CO07",
+    "href": "downloads/workbook/sections/4.7_CO07.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 502546,
+    "section": true
+  },
+  {
+    "name": "5.1 PS01",
+    "href": "downloads/workbook/sections/5.1_PS01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 563039,
+    "section": true
+  },
+  {
+    "name": "5.2 PS02",
+    "href": "downloads/workbook/sections/5.2_PS02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 524862,
+    "section": true
+  },
+  {
+    "name": "5.3 PS03",
+    "href": "downloads/workbook/sections/5.3_PS03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 498433,
+    "section": true
+  },
+  {
+    "name": "5.4 PS04",
+    "href": "downloads/workbook/sections/5.4_PS04.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 500345,
+    "section": true
+  },
+  {
+    "name": "5.5 PS05",
+    "href": "downloads/workbook/sections/5.5_PS05.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 502535,
+    "section": true
+  },
+  {
+    "name": "5.6 PS06",
+    "href": "downloads/workbook/sections/5.6_PS06.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 484576,
+    "section": true
+  },
+  {
+    "name": "6.1 LO01",
+    "href": "downloads/workbook/sections/6.1_LO01.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 483399,
+    "section": true
+  },
+  {
+    "name": "6.2 LO02",
+    "href": "downloads/workbook/sections/6.2_LO02.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 502963,
+    "section": true
+  },
+  {
+    "name": "6.3 LO03",
+    "href": "downloads/workbook/sections/6.3_LO03.pdf",
+    "family": "workbook",
+    "format": "PDF",
+    "bytes": 478233,
+    "section": true
+  },
+  {
+    "name": "AIME 2000-2026 textbook",
+    "href": "downloads/textbook/AIME_2000-2026_textbook.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 4366354,
+    "section": false
+  },
+  {
+    "name": "1.10 AL10",
+    "href": "downloads/textbook/sections/1.10_AL10.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 596572,
+    "section": true
+  },
+  {
+    "name": "1.1 AL01",
+    "href": "downloads/textbook/sections/1.1_AL01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 654625,
+    "section": true
+  },
+  {
+    "name": "1.2 AL02",
+    "href": "downloads/textbook/sections/1.2_AL02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 645713,
+    "section": true
+  },
+  {
+    "name": "1.3 AL03",
+    "href": "downloads/textbook/sections/1.3_AL03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 649244,
+    "section": true
+  },
+  {
+    "name": "1.4 AL04",
+    "href": "downloads/textbook/sections/1.4_AL04.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 623121,
+    "section": true
+  },
+  {
+    "name": "1.5 AL05",
+    "href": "downloads/textbook/sections/1.5_AL05.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 672660,
+    "section": true
+  },
+  {
+    "name": "1.6 AL06",
+    "href": "downloads/textbook/sections/1.6_AL06.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 666162,
+    "section": true
+  },
+  {
+    "name": "1.7 AL07",
+    "href": "downloads/textbook/sections/1.7_AL07.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 712712,
+    "section": true
+  },
+  {
+    "name": "1.8 AL08",
+    "href": "downloads/textbook/sections/1.8_AL08.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 673951,
+    "section": true
+  },
+  {
+    "name": "1.9 AL09",
+    "href": "downloads/textbook/sections/1.9_AL09.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 683519,
+    "section": true
+  },
+  {
+    "name": "2.10 GE10",
+    "href": "downloads/textbook/sections/2.10_GE10.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 717112,
+    "section": true
+  },
+  {
+    "name": "2.1 GE01",
+    "href": "downloads/textbook/sections/2.1_GE01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 634190,
+    "section": true
+  },
+  {
+    "name": "2.2 GE02",
+    "href": "downloads/textbook/sections/2.2_GE02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 657981,
+    "section": true
+  },
+  {
+    "name": "2.3 GE03",
+    "href": "downloads/textbook/sections/2.3_GE03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 652852,
+    "section": true
+  },
+  {
+    "name": "2.4 GE04",
+    "href": "downloads/textbook/sections/2.4_GE04.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 671279,
+    "section": true
+  },
+  {
+    "name": "2.5 GE05",
+    "href": "downloads/textbook/sections/2.5_GE05.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 663381,
+    "section": true
+  },
+  {
+    "name": "2.6 GE06",
+    "href": "downloads/textbook/sections/2.6_GE06.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 654551,
+    "section": true
+  },
+  {
+    "name": "2.7 GE07",
+    "href": "downloads/textbook/sections/2.7_GE07.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 707531,
+    "section": true
+  },
+  {
+    "name": "2.8 GE08",
+    "href": "downloads/textbook/sections/2.8_GE08.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 637616,
+    "section": true
+  },
+  {
+    "name": "2.9 GE09",
+    "href": "downloads/textbook/sections/2.9_GE09.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 666111,
+    "section": true
+  },
+  {
+    "name": "3.1 NT01",
+    "href": "downloads/textbook/sections/3.1_NT01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 646408,
+    "section": true
+  },
+  {
+    "name": "3.2 NT02",
+    "href": "downloads/textbook/sections/3.2_NT02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 627656,
+    "section": true
+  },
+  {
+    "name": "3.3 NT03",
+    "href": "downloads/textbook/sections/3.3_NT03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 652435,
+    "section": true
+  },
+  {
+    "name": "3.4 NT04",
+    "href": "downloads/textbook/sections/3.4_NT04.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 624273,
+    "section": true
+  },
+  {
+    "name": "3.5 NT05",
+    "href": "downloads/textbook/sections/3.5_NT05.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 640408,
+    "section": true
+  },
+  {
+    "name": "3.6 NT06",
+    "href": "downloads/textbook/sections/3.6_NT06.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 649890,
+    "section": true
+  },
+  {
+    "name": "3.7 NT07",
+    "href": "downloads/textbook/sections/3.7_NT07.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 608305,
+    "section": true
+  },
+  {
+    "name": "3.8 NT08",
+    "href": "downloads/textbook/sections/3.8_NT08.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 623506,
+    "section": true
+  },
+  {
+    "name": "4.1 CO01",
+    "href": "downloads/textbook/sections/4.1_CO01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 634711,
+    "section": true
+  },
+  {
+    "name": "4.2 CO02",
+    "href": "downloads/textbook/sections/4.2_CO02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 632062,
+    "section": true
+  },
+  {
+    "name": "4.3 CO03",
+    "href": "downloads/textbook/sections/4.3_CO03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 627183,
+    "section": true
+  },
+  {
+    "name": "4.4 CO04",
+    "href": "downloads/textbook/sections/4.4_CO04.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 620642,
+    "section": true
+  },
+  {
+    "name": "4.5 CO05",
+    "href": "downloads/textbook/sections/4.5_CO05.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 647028,
+    "section": true
+  },
+  {
+    "name": "4.6 CO06",
+    "href": "downloads/textbook/sections/4.6_CO06.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 690581,
+    "section": true
+  },
+  {
+    "name": "4.7 CO07",
+    "href": "downloads/textbook/sections/4.7_CO07.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 632106,
+    "section": true
+  },
+  {
+    "name": "5.1 PS01",
+    "href": "downloads/textbook/sections/5.1_PS01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 626498,
+    "section": true
+  },
+  {
+    "name": "5.2 PS02",
+    "href": "downloads/textbook/sections/5.2_PS02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 621337,
+    "section": true
+  },
+  {
+    "name": "5.3 PS03",
+    "href": "downloads/textbook/sections/5.3_PS03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 608654,
+    "section": true
+  },
+  {
+    "name": "5.4 PS04",
+    "href": "downloads/textbook/sections/5.4_PS04.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 651299,
+    "section": true
+  },
+  {
+    "name": "5.5 PS05",
+    "href": "downloads/textbook/sections/5.5_PS05.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 638043,
+    "section": true
+  },
+  {
+    "name": "5.6 PS06",
+    "href": "downloads/textbook/sections/5.6_PS06.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 601274,
+    "section": true
+  },
+  {
+    "name": "6.1 LO01",
+    "href": "downloads/textbook/sections/6.1_LO01.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 624044,
+    "section": true
+  },
+  {
+    "name": "6.2 LO02",
+    "href": "downloads/textbook/sections/6.2_LO02.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 711068,
+    "section": true
+  },
+  {
+    "name": "6.3 LO03",
+    "href": "downloads/textbook/sections/6.3_LO03.pdf",
+    "family": "textbook",
+    "format": "PDF",
+    "bytes": 609052,
+    "section": true
+  },
+  {
+    "name": "AIME 2000-2026 solutions en",
+    "href": "downloads/solutions/AIME_2000-2026_solutions_en.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 3164873,
+    "section": false
+  },
+  {
+    "name": "AIME 2000-2026 solutions zh",
+    "href": "downloads/solutions/AIME_2000-2026_solutions_zh.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 3219817,
+    "section": false
+  },
+  {
+    "name": "1.10 AL10",
+    "href": "downloads/solutions/en/sections/1.10_AL10.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 188108,
+    "section": true
+  },
+  {
+    "name": "1.1 AL01",
+    "href": "downloads/solutions/en/sections/1.1_AL01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 265040,
+    "section": true
+  },
+  {
+    "name": "1.2 AL02",
+    "href": "downloads/solutions/en/sections/1.2_AL02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 269338,
+    "section": true
+  },
+  {
+    "name": "1.3 AL03",
+    "href": "downloads/solutions/en/sections/1.3_AL03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 293943,
+    "section": true
+  },
+  {
+    "name": "1.4 AL04",
+    "href": "downloads/solutions/en/sections/1.4_AL04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 249977,
+    "section": true
+  },
+  {
+    "name": "1.5 AL05",
+    "href": "downloads/solutions/en/sections/1.5_AL05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 276132,
+    "section": true
+  },
+  {
+    "name": "1.6 AL06",
+    "href": "downloads/solutions/en/sections/1.6_AL06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 258052,
+    "section": true
+  },
+  {
+    "name": "1.7 AL07",
+    "href": "downloads/solutions/en/sections/1.7_AL07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 234111,
+    "section": true
+  },
+  {
+    "name": "1.8 AL08",
+    "href": "downloads/solutions/en/sections/1.8_AL08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 227567,
+    "section": true
+  },
+  {
+    "name": "1.9 AL09",
+    "href": "downloads/solutions/en/sections/1.9_AL09.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 221174,
+    "section": true
+  },
+  {
+    "name": "2.10 GE10",
+    "href": "downloads/solutions/en/sections/2.10_GE10.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 271059,
+    "section": true
+  },
+  {
+    "name": "2.1 GE01",
+    "href": "downloads/solutions/en/sections/2.1_GE01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 224848,
+    "section": true
+  },
+  {
+    "name": "2.2 GE02",
+    "href": "downloads/solutions/en/sections/2.2_GE02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 247534,
+    "section": true
+  },
+  {
+    "name": "2.3 GE03",
+    "href": "downloads/solutions/en/sections/2.3_GE03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 255758,
+    "section": true
+  },
+  {
+    "name": "2.4 GE04",
+    "href": "downloads/solutions/en/sections/2.4_GE04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 284980,
+    "section": true
+  },
+  {
+    "name": "2.5 GE05",
+    "href": "downloads/solutions/en/sections/2.5_GE05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 239334,
+    "section": true
+  },
+  {
+    "name": "2.6 GE06",
+    "href": "downloads/solutions/en/sections/2.6_GE06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 249823,
+    "section": true
+  },
+  {
+    "name": "2.7 GE07",
+    "href": "downloads/solutions/en/sections/2.7_GE07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 410740,
+    "section": true
+  },
+  {
+    "name": "2.8 GE08",
+    "href": "downloads/solutions/en/sections/2.8_GE08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 205293,
+    "section": true
+  },
+  {
+    "name": "2.9 GE09",
+    "href": "downloads/solutions/en/sections/2.9_GE09.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 220714,
+    "section": true
+  },
+  {
+    "name": "3.1 NT01",
+    "href": "downloads/solutions/en/sections/3.1_NT01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 243477,
+    "section": true
+  },
+  {
+    "name": "3.2 NT02",
+    "href": "downloads/solutions/en/sections/3.2_NT02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 203095,
+    "section": true
+  },
+  {
+    "name": "3.3 NT03",
+    "href": "downloads/solutions/en/sections/3.3_NT03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 253427,
+    "section": true
+  },
+  {
+    "name": "3.4 NT04",
+    "href": "downloads/solutions/en/sections/3.4_NT04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 216242,
+    "section": true
+  },
+  {
+    "name": "3.5 NT05",
+    "href": "downloads/solutions/en/sections/3.5_NT05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 263103,
+    "section": true
+  },
+  {
+    "name": "3.6 NT06",
+    "href": "downloads/solutions/en/sections/3.6_NT06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 281373,
+    "section": true
+  },
+  {
+    "name": "3.7 NT07",
+    "href": "downloads/solutions/en/sections/3.7_NT07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 193293,
+    "section": true
+  },
+  {
+    "name": "3.8 NT08",
+    "href": "downloads/solutions/en/sections/3.8_NT08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 221832,
+    "section": true
+  },
+  {
+    "name": "4.1 CO01",
+    "href": "downloads/solutions/en/sections/4.1_CO01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 225546,
+    "section": true
+  },
+  {
+    "name": "4.2 CO02",
+    "href": "downloads/solutions/en/sections/4.2_CO02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 231529,
+    "section": true
+  },
+  {
+    "name": "4.3 CO03",
+    "href": "downloads/solutions/en/sections/4.3_CO03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 211960,
+    "section": true
+  },
+  {
+    "name": "4.4 CO04",
+    "href": "downloads/solutions/en/sections/4.4_CO04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 225644,
+    "section": true
+  },
+  {
+    "name": "4.5 CO05",
+    "href": "downloads/solutions/en/sections/4.5_CO05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 250011,
+    "section": true
+  },
+  {
+    "name": "4.6 CO06",
+    "href": "downloads/solutions/en/sections/4.6_CO06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 263510,
+    "section": true
+  },
+  {
+    "name": "4.7 CO07",
+    "href": "downloads/solutions/en/sections/4.7_CO07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 213260,
+    "section": true
+  },
+  {
+    "name": "5.1 PS01",
+    "href": "downloads/solutions/en/sections/5.1_PS01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 264225,
+    "section": true
+  },
+  {
+    "name": "5.2 PS02",
+    "href": "downloads/solutions/en/sections/5.2_PS02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 227625,
+    "section": true
+  },
+  {
+    "name": "5.3 PS03",
+    "href": "downloads/solutions/en/sections/5.3_PS03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 199993,
+    "section": true
+  },
+  {
+    "name": "5.4 PS04",
+    "href": "downloads/solutions/en/sections/5.4_PS04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 211723,
+    "section": true
+  },
+  {
+    "name": "5.5 PS05",
+    "href": "downloads/solutions/en/sections/5.5_PS05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 210067,
+    "section": true
+  },
+  {
+    "name": "5.6 PS06",
+    "href": "downloads/solutions/en/sections/5.6_PS06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 189403,
+    "section": true
+  },
+  {
+    "name": "6.1 LO01",
+    "href": "downloads/solutions/en/sections/6.1_LO01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 187814,
+    "section": true
+  },
+  {
+    "name": "6.2 LO02",
+    "href": "downloads/solutions/en/sections/6.2_LO02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 213802,
+    "section": true
+  },
+  {
+    "name": "6.3 LO03",
+    "href": "downloads/solutions/en/sections/6.3_LO03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 167031,
+    "section": true
+  },
+  {
+    "name": "1.10 AL10",
+    "href": "downloads/solutions/zh/sections/1.10_AL10.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 511426,
+    "section": true
+  },
+  {
+    "name": "1.1 AL01",
+    "href": "downloads/solutions/zh/sections/1.1_AL01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 582280,
+    "section": true
+  },
+  {
+    "name": "1.2 AL02",
+    "href": "downloads/solutions/zh/sections/1.2_AL02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 584855,
+    "section": true
+  },
+  {
+    "name": "1.3 AL03",
+    "href": "downloads/solutions/zh/sections/1.3_AL03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 606938,
+    "section": true
+  },
+  {
+    "name": "1.4 AL04",
+    "href": "downloads/solutions/zh/sections/1.4_AL04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 566952,
+    "section": true
+  },
+  {
+    "name": "1.5 AL05",
+    "href": "downloads/solutions/zh/sections/1.5_AL05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 591935,
+    "section": true
+  },
+  {
+    "name": "1.6 AL06",
+    "href": "downloads/solutions/zh/sections/1.6_AL06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 566344,
+    "section": true
+  },
+  {
+    "name": "1.7 AL07",
+    "href": "downloads/solutions/zh/sections/1.7_AL07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 544073,
+    "section": true
+  },
+  {
+    "name": "1.8 AL08",
+    "href": "downloads/solutions/zh/sections/1.8_AL08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 546731,
+    "section": true
+  },
+  {
+    "name": "1.9 AL09",
+    "href": "downloads/solutions/zh/sections/1.9_AL09.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 540544,
+    "section": true
+  },
+  {
+    "name": "2.10 GE10",
+    "href": "downloads/solutions/zh/sections/2.10_GE10.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 579078,
+    "section": true
+  },
+  {
+    "name": "2.1 GE01",
+    "href": "downloads/solutions/zh/sections/2.1_GE01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 543311,
+    "section": true
+  },
+  {
+    "name": "2.2 GE02",
+    "href": "downloads/solutions/zh/sections/2.2_GE02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 564377,
+    "section": true
+  },
+  {
+    "name": "2.3 GE03",
+    "href": "downloads/solutions/zh/sections/2.3_GE03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 572229,
+    "section": true
+  },
+  {
+    "name": "2.4 GE04",
+    "href": "downloads/solutions/zh/sections/2.4_GE04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 598490,
+    "section": true
+  },
+  {
+    "name": "2.5 GE05",
+    "href": "downloads/solutions/zh/sections/2.5_GE05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 558207,
+    "section": true
+  },
+  {
+    "name": "2.6 GE06",
+    "href": "downloads/solutions/zh/sections/2.6_GE06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 565954,
+    "section": true
+  },
+  {
+    "name": "2.7 GE07",
+    "href": "downloads/solutions/zh/sections/2.7_GE07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 715161,
+    "section": true
+  },
+  {
+    "name": "2.8 GE08",
+    "href": "downloads/solutions/zh/sections/2.8_GE08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 526507,
+    "section": true
+  },
+  {
+    "name": "2.9 GE09",
+    "href": "downloads/solutions/zh/sections/2.9_GE09.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 540551,
+    "section": true
+  },
+  {
+    "name": "3.1 NT01",
+    "href": "downloads/solutions/zh/sections/3.1_NT01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 560709,
+    "section": true
+  },
+  {
+    "name": "3.2 NT02",
+    "href": "downloads/solutions/zh/sections/3.2_NT02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 525355,
+    "section": true
+  },
+  {
+    "name": "3.3 NT03",
+    "href": "downloads/solutions/zh/sections/3.3_NT03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 565183,
+    "section": true
+  },
+  {
+    "name": "3.4 NT04",
+    "href": "downloads/solutions/zh/sections/3.4_NT04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 531575,
+    "section": true
+  },
+  {
+    "name": "3.5 NT05",
+    "href": "downloads/solutions/zh/sections/3.5_NT05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 579260,
+    "section": true
+  },
+  {
+    "name": "3.6 NT06",
+    "href": "downloads/solutions/zh/sections/3.6_NT06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 594370,
+    "section": true
+  },
+  {
+    "name": "3.7 NT07",
+    "href": "downloads/solutions/zh/sections/3.7_NT07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 515735,
+    "section": true
+  },
+  {
+    "name": "3.8 NT08",
+    "href": "downloads/solutions/zh/sections/3.8_NT08.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 541093,
+    "section": true
+  },
+  {
+    "name": "4.1 CO01",
+    "href": "downloads/solutions/zh/sections/4.1_CO01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 542253,
+    "section": true
+  },
+  {
+    "name": "4.2 CO02",
+    "href": "downloads/solutions/zh/sections/4.2_CO02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 550191,
+    "section": true
+  },
+  {
+    "name": "4.3 CO03",
+    "href": "downloads/solutions/zh/sections/4.3_CO03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 531755,
+    "section": true
+  },
+  {
+    "name": "4.4 CO04",
+    "href": "downloads/solutions/zh/sections/4.4_CO04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 544064,
+    "section": true
+  },
+  {
+    "name": "4.5 CO05",
+    "href": "downloads/solutions/zh/sections/4.5_CO05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 565559,
+    "section": true
+  },
+  {
+    "name": "4.6 CO06",
+    "href": "downloads/solutions/zh/sections/4.6_CO06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 577403,
+    "section": true
+  },
+  {
+    "name": "4.7 CO07",
+    "href": "downloads/solutions/zh/sections/4.7_CO07.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 532399,
+    "section": true
+  },
+  {
+    "name": "5.1 PS01",
+    "href": "downloads/solutions/zh/sections/5.1_PS01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 577641,
+    "section": true
+  },
+  {
+    "name": "5.2 PS02",
+    "href": "downloads/solutions/zh/sections/5.2_PS02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 547197,
+    "section": true
+  },
+  {
+    "name": "5.3 PS03",
+    "href": "downloads/solutions/zh/sections/5.3_PS03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 521665,
+    "section": true
+  },
+  {
+    "name": "5.4 PS04",
+    "href": "downloads/solutions/zh/sections/5.4_PS04.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 536928,
+    "section": true
+  },
+  {
+    "name": "5.5 PS05",
+    "href": "downloads/solutions/zh/sections/5.5_PS05.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 530181,
+    "section": true
+  },
+  {
+    "name": "5.6 PS06",
+    "href": "downloads/solutions/zh/sections/5.6_PS06.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 512362,
+    "section": true
+  },
+  {
+    "name": "6.1 LO01",
+    "href": "downloads/solutions/zh/sections/6.1_LO01.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 510606,
+    "section": true
+  },
+  {
+    "name": "6.2 LO02",
+    "href": "downloads/solutions/zh/sections/6.2_LO02.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 533867,
+    "section": true
+  },
+  {
+    "name": "6.3 LO03",
+    "href": "downloads/solutions/zh/sections/6.3_LO03.pdf",
+    "family": "solutions",
+    "format": "PDF",
+    "bytes": 490567,
+    "section": true
+  }
+]

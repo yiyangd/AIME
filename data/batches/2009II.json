@@ -1,0 +1,731 @@
+[
+  {
+    "question_id": "AIME-2009-II-Q01",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "If each stripe uses $s$, red use beyond its pure stripe is $164-130=34$ and white extra use is $188-130=58$. These combine to the pink stripe, so $s=34+58=92$.",
+      "reason_zh": "设每条用 $s$，红色用于粉色的量为 $164-130=34$，白色额外量为 $188-130=58$，所以粉色总量 $s=92$。"
+    },
+    "secondary": [],
+    "statement_en": "Initially there are $130,164,188$ ounces of blue,red,white paint. Four equal-area stripes use equal paint amounts: one of each pure color and one pink mixture of red and white. All three original colors have equal amounts left. Find total paint left.",
+    "statement_zh": "原有蓝、红、白漆分别一百三十、一百六十四、一百八十八盎司，用等量油漆刷四条同面积条纹：蓝、红、白及红白混合粉色。之后三种原漆余量相等，求总余量。",
+    "answer": 114,
+    "solution_en": [
+      "If each stripe uses $s$, red use beyond its pure stripe is $164-130=34$ and white extra use is $188-130=58$. These combine to the pink stripe, so $s=34+58=92$.",
+      "Each leftover is $130-92=38$, hence total $114$."
+    ],
+    "solution_zh": [
+      "设每条用 $s$，红色用于粉色的量为 $164-130=34$，白色额外量为 $188-130=58$，所以粉色总量 $s=92$。",
+      "各色剩三十八，总余量为 $114$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q02",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Raise each given equality to its own logarithmic exponent. The terms become $27^{\\log_3 7}=7^3$, $49^{\\log_7 11}=11^2$, and $(\\sqrt{11})^{\\log_{11}25}=5$.",
+      "reason_zh": "将各已知等式再乘方至相应对数指数，三项分别化为 $7^3,11^2,5$。"
+    },
+    "secondary": [],
+    "statement_en": "Positive $a,b,c$ satisfy $a^{\\log_3 7}=27,b^{\\log_7 11}=49,c^{\\log_{11}25}=\\sqrt{11}$. Find $a^{(\\log_3 7)^2}+b^{(\\log_7 11)^2}+c^{(\\log_{11}25)^2}$.",
+    "statement_zh": "正数 $a,b,c$ 满足 $a^{\\log_3 7}=27,b^{\\log_7 11}=49,c^{\\log_{11}25}=\\sqrt{11}$，求 $a^{(\\log_3 7)^2}+b^{(\\log_7 11)^2}+c^{(\\log_{11}25)^2}$。",
+    "answer": 469,
+    "solution_en": [
+      "Raise each given equality to its own logarithmic exponent. The terms become $27^{\\log_3 7}=7^3$, $49^{\\log_7 11}=11^2$, and $(\\sqrt{11})^{\\log_{11}25}=5$.",
+      "The sum is $343+121+5=469$."
+    ],
+    "solution_zh": [
+      "将各已知等式再乘方至相应对数指数，三项分别化为 $7^3,11^2,5$。",
+      "相加得 $469$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/2",
+    "method_chain": [
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q03",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "With $A=(0,0),B=(100,0),D=(0,h)$, vectors $AC=(100,h)$ and $BE=(-100,h/2)$ have dot product $-10000+h^2/2$.",
+      "reason_zh": "取标准坐标，向量 $AC=(100,h),BE=(-100,h/2)$，内积为 $-10000+h^2/2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "With $A=(0,0),B=(100,0),D=(0,h)$, vectors $AC=(100,h)$ and $BE=(-100,h/2)$ have dot product $-10000+h^2/2$.",
+        "reason_zh": "取标准坐标，向量 $AC=(100,h),BE=(-100,h/2)$，内积为 $-10000+h^2/2$。"
+      }
+    ],
+    "statement_en": "Rectangle $ABCD$ has $AB=100$ and midpoint $E$ of $AD$. If $AC\\perp BE$, find the greatest integer smaller than $AD$.",
+    "statement_zh": "矩形 $ABCD$ 中 $AB=100$，$E$ 为 $AD$ 中点。若 $AC\\perp BE$，求小于 $AD$ 的最大整数。",
+    "answer": 141,
+    "solution_en": [
+      "With $A=(0,0),B=(100,0),D=(0,h)$, vectors $AC=(100,h)$ and $BE=(-100,h/2)$ have dot product $-10000+h^2/2$.",
+      "Perpendicularity yields $h=100\\sqrt2$, between $141$ and $142$. The answer is $141$."
+    ],
+    "solution_zh": [
+      "取标准坐标，向量 $AC=(100,h),BE=(-100,h/2)$，内积为 $-10000+h^2/2$。",
+      "令其为零得 $h=100\\sqrt2$，所求为 $141$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/3",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q04",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "For $c$ children, the arithmetic-series sum is $c(n+1-c)=2009$. Hence $c\\mid2009$ and $n=2009/c+c-1$. Last-place nonnegativity imposes $c(c-1)\\le2009$.",
+      "reason_zh": "若有 $c$ 个孩子，等差求和得 $c(n+1-c)=2009$，故 $c$ 整除 $2009$，且 $n=2009/c+c-1$。末位非负要求 $c(c-1)\\le2009$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "For $c$ children, the arithmetic-series sum is $c(n+1-c)=2009$. Hence $c\\mid2009$ and $n=2009/c+c-1$. Last-place nonnegativity imposes $c(c-1)\\le2009$.",
+        "reason_zh": "若有 $c$ 个孩子，等差求和得 $c(n+1-c)=2009$，故 $c$ 整除 $2009$，且 $n=2009/c+c-1$。末位非负要求 $c(c-1)\\le2009$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Since $2009=7^2\\cdot41$, allowed divisors are $c=1,7,41$; larger divisors already exceed the inequality. They give $n=2009,293,89$.",
+        "reason_zh": "由 $2009=7^2\\cdot41$，仅 $c=1,7,41$ 合法，给出 $n=2009,293,89$。"
+      }
+    ],
+    "statement_en": "In an eating contest the first-place child eats $n$ grapes, and place $k$ eats $n+2-2k$, a nonnegative count. The total eaten is $2009$. Minimize $n$.",
+    "statement_zh": "吃葡萄比赛第一名吃 $n$ 个，第 $k$ 名吃 $n+2-2k$ 个且非负，总数为 $2009$。求最小 $n$。",
+    "answer": 89,
+    "solution_en": [
+      "For $c$ children, the arithmetic-series sum is $c(n+1-c)=2009$. Hence $c\\mid2009$ and $n=2009/c+c-1$. Last-place nonnegativity imposes $c(c-1)\\le2009$.",
+      "Since $2009=7^2\\cdot41$, allowed divisors are $c=1,7,41$; larger divisors already exceed the inequality. They give $n=2009,293,89$.",
+      "The minimum is $89$, attained by forty-one children ending at nine grapes."
+    ],
+    "solution_zh": [
+      "若有 $c$ 个孩子，等差求和得 $c(n+1-c)=2009$，故 $c$ 整除 $2009$，且 $n=2009/c+c-1$。末位非负要求 $c(c-1)\\le2009$。",
+      "由 $2009=7^2\\cdot41$，仅 $c=1,7,41$ 合法，给出 $n=2009,293,89$。",
+      "最小值为八十九，四十一人时末名吃九个，确实可行。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/4",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Sequences & summation",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q05",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Place the first small-circle center at $(0,7)$ and the equal pair at $(\\pm4\\sqrt3,-4)$. Equal distances to that pair force the fourth center to be $(0,y)$.",
+      "reason_zh": "取三个小圆心为 $(0,7),(\\pm4\\sqrt3,-4)$。到后两者等距迫使目标圆心为 $(0,y)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Place the first small-circle center at $(0,7)$ and the equal pair at $(\\pm4\\sqrt3,-4)$. Equal distances to that pair force the fourth center to be $(0,y)$.",
+        "reason_zh": "取三个小圆心为 $(0,7),(\\pm4\\sqrt3,-4)$。到后两者等距迫使目标圆心为 $(0,y)$。"
+      }
+    ],
+    "statement_en": "An equilateral triangle is inscribed in a radius-ten circle. At its three vertices place internally tangent circles with radii $3,2,2$, respectively. A fourth circle is externally tangent to all three. If its radius is reduced $m/n$, find $m+n$.",
+    "statement_zh": "半径十的圆内接等边三角形，在三个顶点分别作与大圆内切的半径三、二、二小圆。另一圆与三个小圆均外切，半径为最简分数 $m/n$，求 $m+n$。",
+    "answer": 32,
+    "solution_en": [
+      "Place the first small-circle center at $(0,7)$ and the equal pair at $(\\pm4\\sqrt3,-4)$. Equal distances to that pair force the fourth center to be $(0,y)$.",
+      "If its radius is $r$, tangency to the top circle requires $y=4-r$ or $10+r$. The latter is impossible in the equation for either lower circle, so use $y=4-r$. Then $48+(8-r)^2=(r+2)^2$.",
+      "Solve $r=27/5$, giving $32$."
+    ],
+    "solution_zh": [
+      "取三个小圆心为 $(0,7),(\\pm4\\sqrt3,-4)$。到后两者等距迫使目标圆心为 $(0,y)$。",
+      "与顶部圆外切给出 $y=4-r$ 或 $10+r$，后者与下方圆相切条件不相容，故用前者。得 $48+(8-r)^2=(r+2)^2$。",
+      "解得 $r=27/5$，所求 $32$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/5",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q06",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "For the complement, write selected numbers $a_1<\\cdots<a_5$ with gaps at least two. Set $b_i=a_i-(i-1)$, a bijection to ordinary five-subsets of $\\{1,\\ldots,10\\}$.",
+      "reason_zh": "不含相邻数时，令 $b_i=a_i-(i-1)$，将间隔至少二的五元子集一一对应到一至十的普通五元子集。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO07",
+        "reason_en": "For the complement, write selected numbers $a_1<\\cdots<a_5$ with gaps at least two. Set $b_i=a_i-(i-1)$, a bijection to ordinary five-subsets of $\\{1,\\ldots,10\\}$.",
+        "reason_zh": "不含相邻数时，令 $b_i=a_i-(i-1)$，将间隔至少二的五元子集一一对应到一至十的普通五元子集。"
+      }
+    ],
+    "statement_en": "Let $m$ count five-element subsets of $\\{1,\\ldots,14\\}$ containing at least one consecutive pair. Find $m\\bmod1000$.",
+    "statement_zh": "令 $m$ 为 $\\{1,\\ldots,14\\}$ 的五元素子集中至少含一对相邻整数者的个数，求其除以一千的余数。",
+    "answer": 750,
+    "solution_en": [
+      "For the complement, write selected numbers $a_1<\\cdots<a_5$ with gaps at least two. Set $b_i=a_i-(i-1)$, a bijection to ordinary five-subsets of $\\{1,\\ldots,10\\}$.",
+      "Thus $m=\\binom{14}{5}-\\binom{10}{5}=2002-252=1750$, remainder $750$."
+    ],
+    "solution_zh": [
+      "不含相邻数时，令 $b_i=a_i-(i-1)$，将间隔至少二的五元子集一一对应到一至十的普通五元子集。",
+      "所以 $m=2002-252=1750$，余数为 $750$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/6",
+    "method_chain": [
+      "Subsets & binomial identities",
+      "Bijections & structural counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q07",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "The summand equals $\\binom{2i}{i}/4^i$, so its reduced denominator is purely a power of two. Its original numerator is odd and $(2i)!!=2^ii!$, hence its reduced denominator exponent is $e_i=i+v_2(i!)$.",
+      "reason_zh": "单项为 $\\binom{2i}{i}/4^i$，故最简分母只有二的幂。原分子为奇，原分母为 $2^ii!$，所以其二次幂指数为 $e_i=i+v_2(i!)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT07",
+        "reason_en": "The summand equals $\\binom{2i}{i}/4^i$, so its reduced denominator is purely a power of two. Its original numerator is odd and $(2i)!!=2^ii!$, hence its reduced denominator exponent is $e_i=i+v_2(i!)$.",
+        "reason_zh": "单项为 $\\binom{2i}{i}/4^i$，故最简分母只有二的幂。原分子为奇，原分母为 $2^ii!$，所以其二次幂指数为 $e_i=i+v_2(i!)$。"
+      }
+    ],
+    "statement_en": "Reduce $\\sum_{i=1}^{2009}(2i-1)!!/(2i)!!$ to lowest terms. If its denominator is $2^ab$ with odd $b$, find $ab/10$.",
+    "statement_zh": "将 $\\sum_{i=1}^{2009}(2i-1)!!/(2i)!!$ 约成最简分数，若分母为 $2^ab$ 且 $b$ 奇，求 $ab/10$。",
+    "answer": 401,
+    "solution_en": [
+      "The summand equals $\\binom{2i}{i}/4^i$, so its reduced denominator is purely a power of two. Its original numerator is odd and $(2i)!!=2^ii!$, hence its reduced denominator exponent is $e_i=i+v_2(i!)$.",
+      "These exponents strictly increase. With common denominator $2^{e_{2009}}$, only the final summand contributes an odd numerator; all others contribute even numerators. Thus no final two-factor cancellation occurs, and $b=1$.",
+      "Legendre gives $v_2(2009!)=1004+502+251+125+62+31+15+7+3+1=2001$. Hence $a=4010$ and $ab/10=401$."
+    ],
+    "solution_zh": [
+      "单项为 $\\binom{2i}{i}/4^i$，故最简分母只有二的幂。原分子为奇，原分母为 $2^ii!$，所以其二次幂指数为 $e_i=i+v_2(i!)$。",
+      "$e_i$ 严格递增，统一分母为最大二次幂后，只有最后项分子为奇，其余均偶，故总分子奇而不能再约二，且 $b=1$。",
+      "勒让德公式得 $v_2(2009!)=2001$，所以 $a=4010$，所求 $401$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/7",
+    "method_chain": [
+      "Prime factorization & valuations",
+      "Rational fractions & repeating decimals"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q08",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS05",
+      "reason_en": "First-six probability at roll $k$ is $p_k=(5/6)^{k-1}/6$. Equal counts have probability $\\sum p_k^2=(1/36)/(1-25/36)=1/11$.",
+      "reason_zh": "第 $k$ 次首次出六的概率为 $p_k=(5/6)^{k-1}/6$。次数相等概率为 $\\sum p_k^2=1/11$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "First-six probability at roll $k$ is $p_k=(5/6)^{k-1}/6$. Equal counts have probability $\\sum p_k^2=(1/36)/(1-25/36)=1/11$.",
+        "reason_zh": "第 $k$ 次首次出六的概率为 $p_k=(5/6)^{k-1}/6$。次数相等概率为 $\\sum p_k^2=1/11$。"
+      }
+    ],
+    "statement_en": "Two players independently roll fair dice until their first six. If the probability their roll counts differ by at most one is reduced $m/n$, find $m+n$.",
+    "statement_zh": "两人独立掷公平骰直至第一次出现六。掷次相差至多一次的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 41,
+    "solution_en": [
+      "First-six probability at roll $k$ is $p_k=(5/6)^{k-1}/6$. Equal counts have probability $\\sum p_k^2=(1/36)/(1-25/36)=1/11$.",
+      "One specified player needing exactly one more roll contributes $(5/6)\\sum p_k^2=5/66$. Both directions give total $1/11+10/66=8/33$, so the answer is $41$."
+    ],
+    "solution_zh": [
+      "第 $k$ 次首次出六的概率为 $p_k=(5/6)^{k-1}/6$。次数相等概率为 $\\sum p_k^2=1/11$。",
+      "指定一人多一次的概率为 $5/66$，两方向相加得总概率 $8/33$，所求 $41$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/8",
+    "method_chain": [
+      "Distributions & repeated trials",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q09",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Subtract one from each variable in the first equation. It bijects to nonnegative solutions of the second. Thus the difference counts its solutions with at least one zero variable.",
+      "reason_zh": "首式每个变量减一，恰对应次式非负解。因此差等于次式至少一变量为零的解数。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "For $x=0$, even $y=0,2,\\ldots,666$ gives $334$; for $y=0$, $x=0,\\ldots,500$ gives $501$; for $z=0$, $y=0,4,\\ldots,664$ gives $167$. Only the two axial solutions $(0,0,1000),(500,0,0)$ are double counted.",
+        "reason_zh": "$x=0$ 有 $334$ 个，$y=0$ 有 $501$ 个，$z=0$ 有 $167$ 个；只有两条轴上的解被重复计数。"
+      }
+    ],
+    "statement_en": "Let $m,n$ count positive integer solutions of $4x+3y+2z=2009$ and $4x+3y+2z=2000$, respectively. Find $(m-n)\\bmod1000$.",
+    "statement_zh": "令 $m,n$ 分别为 $4x+3y+2z=2009$ 和 $4x+3y+2z=2000$ 的正整数解数，求差除以一千的余数。",
+    "answer": 0,
+    "solution_en": [
+      "Subtract one from each variable in the first equation. It bijects to nonnegative solutions of the second. Thus the difference counts its solutions with at least one zero variable.",
+      "For $x=0$, even $y=0,2,\\ldots,666$ gives $334$; for $y=0$, $x=0,\\ldots,500$ gives $501$; for $z=0$, $y=0,4,\\ldots,664$ gives $167$. Only the two axial solutions $(0,0,1000),(500,0,0)$ are double counted.",
+      "Difference $334+501+167-2=1000$, so remainder $0$."
+    ],
+    "solution_zh": [
+      "首式每个变量减一，恰对应次式非负解。因此差等于次式至少一变量为零的解数。",
+      "$x=0$ 有 $334$ 个，$y=0$ 有 $501$ 个，$z=0$ 有 $167$ 个；只有两条轴上的解被重复计数。",
+      "差为一千，余数为 $0$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/9",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q10",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Take $A=(0,0),B=(5,0),C=(5,12)$. The bisector through $A$ has slope $(12/13)/(1+5/13)=2/3$.",
+      "reason_zh": "取 $A=(0,0),B=(5,0),C=(5,12)$，由半角公式，$A$ 处角平分线斜率为 $2/3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Take $A=(0,0),B=(5,0),C=(5,12)$. The bisector through $A$ has slope $(12/13)/(1+5/13)=2/3$.",
+        "reason_zh": "取 $A=(0,0),B=(5,0),C=(5,12)$，由半角公式，$A$ 处角平分线斜率为 $2/3$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Take $A=(0,0),B=(5,0),C=(5,12)$. The bisector through $A$ has slope $(12/13)/(1+5/13)=2/3$.",
+        "reason_zh": "取 $A=(0,0),B=(5,0),C=(5,12)$，由半角公式，$A$ 处角平分线斜率为 $2/3$。"
+      }
+    ],
+    "statement_en": "Points $A,B,C$ have $AB=5,BC=12,AC=13$. A fourth point $D$ satisfies $\\angle BAD=\\angle CAD$ and $\\angle ACB=\\angle DCB$, with nondegenerate rays. If $AD=p\\sqrt r/q$ is reduced and $r$ squarefree, find $p+q+r$.",
+    "statement_zh": "$AB=5,BC=12,AC=13$，另有点 $D$ 满足 $\\angle BAD=\\angle CAD,\\angle ACB=\\angle DCB$，各射线不退化。若 $AD=p\\sqrt r/q$ 为约简形式，求 $p+q+r$。",
+    "answer": 96,
+    "solution_en": [
+      "Take $A=(0,0),B=(5,0),C=(5,12)$. The bisector through $A$ has slope $(12/13)/(1+5/13)=2/3$.",
+      "At $C$, the ray toward $D$ is the reflection of $CA$ across vertical line $CB$, so it lies through $(10,0)$, with equation $5y=120-12x$.",
+      "Intersection gives $D=(180/23,120/23)$, hence $AD=60\\sqrt{13}/23$ and the answer $96$."
+    ],
+    "solution_zh": [
+      "取 $A=(0,0),B=(5,0),C=(5,12)$，由半角公式，$A$ 处角平分线斜率为 $2/3$。",
+      "$CD$ 为 $CA$ 关于竖直 $CB$ 的反射，经过 $(10,0)$，故方程为 $5y=120-12x$。",
+      "联立得 $D=(180/23,120/23)$，距离为 $60\\sqrt{13}/23$，所求 $96$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/10",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q11",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "The interval is $m/n<k<mn$. Write $m=nq+r$, $0\\le r<n$, $q\\ge1$. The count is $mn-q-1$, so $q(n^2-1)+nr=51$; also $n\\ge2$.",
+      "reason_zh": "不等式为 $m/n<k<mn$。写 $m=nq+r,0\\le r<n$，计数为 $mn-q-1$，故 $q(n^2-1)+nr=51$，且 $n\\ge2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "For $n\\ge8$ the first term already exceeds fifty-one. Testing $2\\le n\\le7$ with $0\\le r<n$ leaves $(n,q,r)=(2,17,0),(3,6,1)$, giving $(m,n)=(34,2),(19,3)$.",
+        "reason_zh": "$n\\ge8$ 时已不可能；对二至七检查，仅有 $(n,q,r)=(2,17,0),(3,6,1)$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "The interval is $m/n<k<mn$. Write $m=nq+r$, $0\\le r<n$, $q\\ge1$. The count is $mn-q-1$, so $q(n^2-1)+nr=51$; also $n\\ge2$.",
+        "reason_zh": "不等式为 $m/n<k<mn$。写 $m=nq+r,0\\le r<n$，计数为 $mn-q-1$，故 $q(n^2-1)+nr=51$，且 $n\\ge2$。"
+      }
+    ],
+    "statement_en": "For positive integers $m\\ge n$, exactly fifty positive integers $k$ satisfy $|\\log m-\\log k|<\\log n$. Sum all possible products $mn$.",
+    "statement_zh": "正整数 $m\\ge n$ 使恰有五十个正整数 $k$ 满足 $|\\log m-\\log k|<\\log n$，求所有可能乘积 $mn$ 之和。",
+    "answer": 125,
+    "solution_en": [
+      "The interval is $m/n<k<mn$. Write $m=nq+r$, $0\\le r<n$, $q\\ge1$. The count is $mn-q-1$, so $q(n^2-1)+nr=51$; also $n\\ge2$.",
+      "For $n\\ge8$ the first term already exceeds fifty-one. Testing $2\\le n\\le7$ with $0\\le r<n$ leaves $(n,q,r)=(2,17,0),(3,6,1)$, giving $(m,n)=(34,2),(19,3)$.",
+      "The distinct products are $68,57$ and their sum is $125$."
+    ],
+    "solution_zh": [
+      "不等式为 $m/n<k<mn$。写 $m=nq+r,0\\le r<n$，计数为 $mn-q-1$，故 $q(n^2-1)+nr=51$，且 $n\\ge2$。",
+      "$n\\ge8$ 时已不可能；对二至七检查，仅有 $(n,q,r)=(2,17,0),(3,6,1)$。",
+      "乘积为 $68,57$，和为 $125$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/11",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Diophantine equations & factor pairs",
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q12",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO02",
+      "reason_en": "The sum of used elements is at least $1+\\cdots+2k=k(2k+1)$. The distinct pair sums total at most $2009+2008+\\cdots+(2010-k)=k(4019-k)/2$. Thus $5k\\le4017$, so $k\\le803$.",
+      "reason_zh": "使用元素总和至少为 $k(2k+1)$，而互异且有上界的对和总和至多为 $k(4019-k)/2$。比较得 $5k\\le4017$，所以 $k\\le803$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "The sum of used elements is at least $1+\\cdots+2k=k(2k+1)$. The distinct pair sums total at most $2009+2008+\\cdots+(2010-k)=k(4019-k)/2$. Thus $5k\\le4017$, so $k\\le803$.",
+        "reason_zh": "使用元素总和至少为 $k(2k+1)$，而互异且有上界的对和总和至多为 $k(4019-k)/2$。比较得 $5k\\le4017$，所以 $k\\le803$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO07",
+        "reason_en": "Attain this with $401$ pairs $(i,1206+i)$ for $1\\le i\\le401$, giving even sums $1208,\\ldots,2008$, and $402$ pairs $(a,a+403)$ for $402\\le a\\le803$, giving odd sums $1207,\\ldots,2009$.",
+        "reason_zh": "构造四百零一对 $(i,1206+i)$，$1\\le i\\le401$，其和为偶数 $1208$ 至 $2008$；再取四百零二对 $(a,a+403)$，$402\\le a\\le803$，其和为奇数 $1207$ 至 $2009$。"
+      }
+    ],
+    "statement_en": "Choose disjoint pairs of distinct elements from $\\{1,\\ldots,2009\\}$, requiring all pair sums distinct and at most $2009$. Maximize the number $k$ of pairs.",
+    "statement_zh": "从一至 $2009$ 中选互不重用元素的数对，每对两数不同，所有对和互异且不超过 $2009$。求最多对数 $k$。",
+    "answer": 803,
+    "solution_en": [
+      "The sum of used elements is at least $1+\\cdots+2k=k(2k+1)$. The distinct pair sums total at most $2009+2008+\\cdots+(2010-k)=k(4019-k)/2$. Thus $5k\\le4017$, so $k\\le803$.",
+      "Attain this with $401$ pairs $(i,1206+i)$ for $1\\le i\\le401$, giving even sums $1208,\\ldots,2008$, and $402$ pairs $(a,a+403)$ for $402\\le a\\le803$, giving odd sums $1207,\\ldots,2009$.",
+      "Used elements are $1$–$803$ and $805$–$1607$, with no repeats, and all sums satisfy the rule. Maximum $803$."
+    ],
+    "solution_zh": [
+      "使用元素总和至少为 $k(2k+1)$，而互异且有上界的对和总和至多为 $k(4019-k)/2$。比较得 $5k\\le4017$，所以 $k\\le803$。",
+      "构造四百零一对 $(i,1206+i)$，$1\\le i\\le401$，其和为偶数 $1208$ 至 $2008$；再取四百零二对 $(a,a+403)$，$402\\le a\\le803$，其和为奇数 $1207$ 至 $2009$。",
+      "两组元素互不重复，所有和合规，因此上界 $803$ 可达到。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/12",
+    "method_chain": [
+      "Discrete extrema & constructions",
+      "Inequalities & continuous optimization",
+      "Bijections & structural counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q13",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Use complex coordinates $A=-2,B=2,C_i=2\\omega^i$, with $\\omega=e^{i\\pi/7}$. Then $AC_i\\cdot BC_i=4|1-\\omega^{2i}|$.",
+      "reason_zh": "取复坐标 $A=-2,B=2,C_i=2\\omega^i$，$\\omega=e^{i\\pi/7}$，则每对弦积为 $4|1-\\omega^{2i}|$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Use complex coordinates $A=-2,B=2,C_i=2\\omega^i$, with $\\omega=e^{i\\pi/7}$. Then $AC_i\\cdot BC_i=4|1-\\omega^{2i}|$.",
+        "reason_zh": "取复坐标 $A=-2,B=2,C_i=2\\omega^i$，$\\omega=e^{i\\pi/7}$，则每对弦积为 $4|1-\\omega^{2i}|$。"
+      }
+    ],
+    "statement_en": "Divide a radius-two semicircle from endpoint $A$ to endpoint $B$ into seven equal arcs by points $C_1,\\ldots,C_6$. Multiply all twelve lengths $AC_i,BC_i$ to obtain $N$. Find $N\\bmod1000$.",
+    "statement_zh": "半径二的半圆弧端点为 $A,B$，用六点 $C_i$ 分成七等弧。十二条弦 $AC_i,BC_i$ 长度之积为 $N$，求其除以一千的余数。",
+    "answer": 672,
+    "solution_en": [
+      "Use complex coordinates $A=-2,B=2,C_i=2\\omega^i$, with $\\omega=e^{i\\pi/7}$. Then $AC_i\\cdot BC_i=4|1-\\omega^{2i}|$.",
+      "The numbers $\\omega^{2i}$ are the six nontrivial seventh roots. Evaluating $(x^7-1)/(x-1)$ at one gives $\\prod_{i=1}^6|1-\\omega^{2i}|=7$.",
+      "Thus $N=4^6\\cdot7=28672$, remainder $672$."
+    ],
+    "solution_zh": [
+      "取复坐标 $A=-2,B=2,C_i=2\\omega^i$，$\\omega=e^{i\\pi/7}$，则每对弦积为 $4|1-\\omega^{2i}|$。",
+      "六个 $\\omega^{2i}$ 为非平凡七次单位根，在 $(x^7-1)/(x-1)$ 中代一，得六个绝对值之积为七。",
+      "所以 $N=28672$，余数为 $672$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/13",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q14",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Normalize $u_n=a_n/2^n$. Then $u_{n+1}=(4/5)u_n+(3/5)\\sqrt{1-u_n^2}$. Put $\\sin\\theta=3/5,\\cos\\theta=4/5$, with $30^\\circ<\\theta<45^\\circ$.",
+      "reason_zh": "归一化 $u_n=a_n/2^n$，递推为 $u_{n+1}=4u_n/5+3\\sqrt{1-u_n^2}/5$。令 $\\sin\\theta=3/5,\\cos\\theta=4/5$，角在三十至四十五度之间。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Normalize $u_n=a_n/2^n$. Then $u_{n+1}=(4/5)u_n+(3/5)\\sqrt{1-u_n^2}$. Put $\\sin\\theta=3/5,\\cos\\theta=4/5$, with $30^\\circ<\\theta<45^\\circ$.",
+        "reason_zh": "归一化 $u_n=a_n/2^n$，递推为 $u_{n+1}=4u_n/5+3\\sqrt{1-u_n^2}/5$。令 $\\sin\\theta=3/5,\\cos\\theta=4/5$，角在三十至四十五度之间。"
+      }
+    ],
+    "statement_en": "Let $a_0=0$ and $a_{n+1}=8a_n/5+(6/5)\\sqrt{4^n-a_n^2}$. Find $\\lfloor a_{10}\\rfloor$.",
+    "statement_zh": "令 $a_0=0$，$a_{n+1}=8a_n/5+(6/5)\\sqrt{4^n-a_n^2}$，求 $\\lfloor a_{10}\\rfloor$。",
+    "answer": 983,
+    "solution_en": [
+      "Normalize $u_n=a_n/2^n$. Then $u_{n+1}=(4/5)u_n+(3/5)\\sqrt{1-u_n^2}$. Put $\\sin\\theta=3/5,\\cos\\theta=4/5$, with $30^\\circ<\\theta<45^\\circ$.",
+      "Starting at zero, normalized values are $\\sin\\theta,\\sin2\\theta,\\sin3\\theta$. Since $\\cos3\\theta<0$, the positive square root reverses the angle change, so subsequent values alternate $\\sin2\\theta,\\sin3\\theta$.",
+      "Thus $a_{10}=2^{10}\\sin2\\theta=1024\\cdot24/25=983.04$, whose floor is $983$."
+    ],
+    "solution_zh": [
+      "归一化 $u_n=a_n/2^n$，递推为 $u_{n+1}=4u_n/5+3\\sqrt{1-u_n^2}/5$。令 $\\sin\\theta=3/5,\\cos\\theta=4/5$，角在三十至四十五度之间。",
+      "从零出发依次为 $\\sin\\theta,\\sin2\\theta,\\sin3\\theta$；三倍角余弦为负，正平方根使角增减反向，于是此后在后二者间交替。",
+      "故 $a_{10}=1024\\cdot24/25=983.04$，取整为 $983$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/14",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-II-Q15",
+    "paper_id": "AIME-2009-II",
+    "exam_year": 2009,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "Let intersections be $Q=AC\\cap MN$, $P=BC\\cap MN$ and $x=CM/CN>0$. Pythagoras gives $BN=4/5$, while $AM=AN$. Cyclic sine-area ratios yield $MP/PN=BM\\cdot CM/(BN\\cdot CN)=3x/4$ and $MQ/QN=x$.",
+      "reason_zh": "设交点为 $Q,P$，令 $x=CM/CN>0$。由勾股，$BN=4/5$，而 $AM=AN$。利用圆内正弦面积比，$MP/PN=3x/4,MQ/QN=x$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Let intersections be $Q=AC\\cap MN$, $P=BC\\cap MN$ and $x=CM/CN>0$. Pythagoras gives $BN=4/5$, while $AM=AN$. Cyclic sine-area ratios yield $MP/PN=BM\\cdot CM/(BN\\cdot CN)=3x/4$ and $MQ/QN=x$.",
+        "reason_zh": "设交点为 $Q,P$，令 $x=CM/CN>0$。由勾股，$BN=4/5$，而 $AM=AN$。利用圆内正弦面积比，$MP/PN=3x/4,MQ/QN=x$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Let intersections be $Q=AC\\cap MN$, $P=BC\\cap MN$ and $x=CM/CN>0$. Pythagoras gives $BN=4/5$, while $AM=AN$. Cyclic sine-area ratios yield $MP/PN=BM\\cdot CM/(BN\\cdot CN)=3x/4$ and $MQ/QN=x$.",
+        "reason_zh": "设交点为 $Q,P$，令 $x=CM/CN>0$。由勾股，$BN=4/5$，而 $AM=AN$。利用圆内正弦面积比，$MP/PN=3x/4,MQ/QN=x$。"
+      }
+    ],
+    "statement_en": "A circle has diameter $MN=1$. On one semicircle, $A$ is its arc midpoint and $MB=3/5$. For $C$ on the opposite semicircle, chords $AC,BC$ meet $MN$ at two points distance $d$ apart. Its greatest value is $r-s\\sqrt t$ in squarefree form. Find $r+s+t$.",
+    "statement_zh": "圆的直径 $MN=1$，一侧半圆弧中点为 $A$，该侧另有点 $B$ 满足 $MB=3/5$。$C$ 在另一半圆弧上，$AC,BC$ 与直径交点间距为 $d$，其最大值为 $r-s\\sqrt t$，求 $r+s+t$。",
+    "answer": 14,
+    "solution_en": [
+      "Let intersections be $Q=AC\\cap MN$, $P=BC\\cap MN$ and $x=CM/CN>0$. Pythagoras gives $BN=4/5$, while $AM=AN$. Cyclic sine-area ratios yield $MP/PN=BM\\cdot CM/(BN\\cdot CN)=3x/4$ and $MQ/QN=x$.",
+      "As $MN=1$, $d=x/(x+1)-3x/(3x+4)=1/(3x+4/x+7)$. The full opposite semicircle makes $x$ range over all positive values.",
+      "AM–GM gives $3x+4/x\\ge4\\sqrt3$, with equality at $x=2/\\sqrt3$, an attainable ratio. Hence maximum $d=1/(7+4\\sqrt3)=7-4\\sqrt3$, giving $14$."
+    ],
+    "solution_zh": [
+      "设交点为 $Q,P$，令 $x=CM/CN>0$。由勾股，$BN=4/5$，而 $AM=AN$。利用圆内正弦面积比，$MP/PN=3x/4,MQ/QN=x$。",
+      "因直径为一，$d=1/(3x+4/x+7)$，且 $C$ 遍历对侧半圆时 $x$ 遍历全部正值。",
+      "均值不等式给出 $3x+4/x\\ge4\\sqrt3$，在可达到的 $x=2/\\sqrt3$ 取等。因此最大为 $7-4\\sqrt3$，所求 $14$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009II/problem/15",
+    "method_chain": [
+      "Inequalities & continuous optimization",
+      "Circle power & cyclic geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

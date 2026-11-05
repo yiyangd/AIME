@@ -1,0 +1,719 @@
+[
+  {
+    "question_id": "AIME-2010-I-Q01",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "$2010^2=2^23^25^267^2$ has $3^4=81$ divisors. Square divisors choose each exponent from $0,2$, so there are $16$ squares and $65$ nonsquares.",
+      "reason_zh": "$2010^2=2^23^25^267^2$ 有 $3^4=81$ 个约数；平方约数各素因子指数只能为 $0,2$，故有十六个平方数、六十五个非平方数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT08",
+        "reason_en": "$2010^2=2^23^25^267^2$ has $3^4=81$ divisors. Square divisors choose each exponent from $0,2$, so there are $16$ squares and $65$ nonsquares.",
+        "reason_zh": "$2010^2=2^23^25^267^2$ 有 $3^4=81$ 个约数；平方约数各素因子指数只能为 $0,2$，故有十六个平方数、六十五个非平方数。"
+      }
+    ],
+    "statement_en": "Choose two distinct positive divisors of $2010^2$ uniformly. If the probability that exactly one is a square is $m/n$ in lowest terms, find $m+n$.",
+    "statement_zh": "从 $2010^2$ 的正约数中等可能选出两个不同的数，恰有一个为平方数的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 107,
+    "solution_en": [
+      "$2010^2=2^23^25^267^2$ has $3^4=81$ divisors. Square divisors choose each exponent from $0,2$, so there are $16$ squares and $65$ nonsquares.",
+      "The probability is $16\\cdot65/\\binom{81}{2}=26/81$, giving $107$."
+    ],
+    "solution_zh": [
+      "$2010^2=2^23^25^267^2$ 有 $3^4=81$ 个约数；平方约数各素因子指数只能为 $0,2$，故有十六个平方数、六十五个非平方数。",
+      "概率为 $16\\cdot65/\\binom{81}{2}=26/81$，答案 $107$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/1",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Divisor functions & totients"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q02",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "For every $j\\ge3$, the factor is $-1$ modulo $1000$. There are $997$ such factors.",
+      "reason_zh": "当 $j\\ge3$ 时，各因子模 $1000$ 均为 $-1$，共 $997$ 个。"
+    },
+    "secondary": [],
+    "statement_en": "Find $\\prod_{j=1}^{999}(10^j-1)$ modulo $1000$.",
+    "statement_zh": "求 $\\prod_{j=1}^{999}(10^j-1)$ 除以 $1000$ 的余数。",
+    "answer": 109,
+    "solution_en": [
+      "For every $j\\ge3$, the factor is $-1$ modulo $1000$. There are $997$ such factors.",
+      "The product is therefore $9\\cdot99(-1)^{997}=-891\\equiv109\\pmod{1000}$."
+    ],
+    "solution_zh": [
+      "当 $j\\ge3$ 时，各因子模 $1000$ 均为 $-1$，共 $997$ 个。",
+      "所以乘积为 $9\\cdot99(-1)^{997}=-891\\equiv109\\pmod{1000}$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/2",
+    "method_chain": [
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q03",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Take the positive $x$th root after substitution: $x^{3/4}=3x/4$. Thus $x^{-1/4}=3/4$ and $x=256/81$.",
+      "reason_zh": "代入后取正的 $x$ 次方根，得到 $x^{3/4}=3x/4$，故 $x^{-1/4}=3/4,x=256/81$。"
+    },
+    "secondary": [],
+    "statement_en": "Positive reals satisfy $y=3x/4$ and $x^y=y^x$. Write $x+y=r/s$ in lowest terms and find $r+s$.",
+    "statement_zh": "正实数满足 $y=3x/4$ 及 $x^y=y^x$。将 $x+y$ 约为 $r/s$，求 $r+s$。",
+    "answer": 529,
+    "solution_en": [
+      "Take the positive $x$th root after substitution: $x^{3/4}=3x/4$. Thus $x^{-1/4}=3/4$ and $x=256/81$.",
+      "Then $y=64/27$, so $x+y=448/81$ in lowest terms. The answer is $529$."
+    ],
+    "solution_zh": [
+      "代入后取正的 $x$ 次方根，得到 $x^{3/4}=3x/4$，故 $x^{-1/4}=3/4,x=256/81$。",
+      "再得 $y=64/27$，总和为最简分数 $448/81$，答案 $529$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/3",
+    "method_chain": [
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q04",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "The generating polynomial for one head count is $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$.",
+      "reason_zh": "一次投掷的正面数生成式为 $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS05",
+        "reason_en": "The generating polynomial for one head count is $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$.",
+        "reason_zh": "一次投掷的正面数生成式为 $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$。"
+      }
+    ],
+    "statement_en": "Two players independently toss the same three coins once each. Two coins are fair; the third has head probability $4/7$. Their head counts agree with reduced probability $m/n$. Find $m+n$.",
+    "statement_zh": "两名玩家各独立投掷三枚硬币一次；其中两枚公平，另一枚正面概率为 $4/7$。两人正面数相同的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 515,
+    "solution_en": [
+      "The generating polynomial for one head count is $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$.",
+      "Independence makes the matching probability the sum of the squared coefficients: $(3^2+10^2+11^2+4^2)/28^2=123/392$.",
+      "The requested sum is $515$."
+    ],
+    "solution_zh": [
+      "一次投掷的正面数生成式为 $[(1+t)/2]^2(3+4t)/7=(3+10t+11t^2+4t^3)/28$。",
+      "由独立性，相同概率为各概率的平方和，即 $(3^2+10^2+11^2+4^2)/28^2=123/392$。",
+      "所以答案为 $515$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/4",
+    "method_chain": [
+      "Conditional probability & independence",
+      "Distributions & repeated trials"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q05",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Factor the squared differences. Since $a-b,c-d\\ge1$, one has $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$, with equality only when both differences are $1$.",
+      "reason_zh": "平方差分解后，由 $a-b,c-d\\ge1$，有 $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$，等号仅在两差均为一时成立。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Factor the squared differences. Since $a-b,c-d\\ge1$, one has $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$, with equality only when both differences are $1$.",
+        "reason_zh": "平方差分解后，由 $a-b,c-d\\ge1$，有 $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$，等号仅在两差均为一时成立。"
+      }
+    ],
+    "statement_en": "Positive integers obey $a>b>c>d$, $a+b+c+d=2010$ and $a^2-b^2+c^2-d^2=2010$. How many values of $a$ are possible?",
+    "statement_zh": "正整数满足 $a>b>c>d,a+b+c+d=2010,a^2-b^2+c^2-d^2=2010$。求 $a$ 的可能值数目。",
+    "answer": 501,
+    "solution_en": [
+      "Factor the squared differences. Since $a-b,c-d\\ge1$, one has $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$, with equality only when both differences are $1$.",
+      "Thus $b=a-1,d=c-1$ and $a+c=1006$. The strict middle inequality gives $a\\ge504$, while $d\\ge1$ gives $a\\le1004$.",
+      "Every integer in that interval gives $(a,a-1,1006-a,1005-a)$, so the count is $1004-504+1=501$."
+    ],
+    "solution_zh": [
+      "平方差分解后，由 $a-b,c-d\\ge1$，有 $(a-b)(a+b)+(c-d)(c+d)\\ge a+b+c+d$，等号仅在两差均为一时成立。",
+      "故 $b=a-1,d=c-1,a+c=1006$。条件 $b>c$ 给出 $a\\ge504$，$d\\ge1$ 给出 $a\\le1004$。",
+      "区间内每个整数均可构成 $(a,a-1,1006-a,1005-a)$，共 $501$ 个。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/5",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q06",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The bounds are $(x-1)^2+1$ and $2(x-1)^2+1$, so $P(1)=1$. The nonnegative quadratic $P(x)-[(x-1)^2+1]$ vanishes at $1$ and must have a double root there.",
+      "reason_zh": "两界分别为 $(x-1)^2+1,2(x-1)^2+1$，故 $P(1)=1$。非负二次式 $P(x)-[(x-1)^2+1]$ 在 $1$ 处为零，必以其为二重根。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "The bounds are $(x-1)^2+1$ and $2(x-1)^2+1$, so $P(1)=1$. The nonnegative quadratic $P(x)-[(x-1)^2+1]$ vanishes at $1$ and must have a double root there.",
+        "reason_zh": "两界分别为 $(x-1)^2+1,2(x-1)^2+1$，故 $P(1)=1$。非负二次式 $P(x)-[(x-1)^2+1]$ 在 $1$ 处为零，必以其为二重根。"
+      }
+    ],
+    "statement_en": "A real quadratic $P$ satisfies $x^2-2x+2\\le P(x)\\le2x^2-4x+3$ for every real $x$. Given $P(11)=181$, find $P(16)$.",
+    "statement_zh": "实系数二次多项式 $P$ 对一切实数 $x$ 满足 $x^2-2x+2\\le P(x)\\le2x^2-4x+3$。已知 $P(11)=181$，求 $P(16)$。",
+    "answer": 406,
+    "solution_en": [
+      "The bounds are $(x-1)^2+1$ and $2(x-1)^2+1$, so $P(1)=1$. The nonnegative quadratic $P(x)-[(x-1)^2+1]$ vanishes at $1$ and must have a double root there.",
+      "Consequently $P(x)=a(x-1)^2+1$. Its value at $11$ gives $a=9/5$, within the required interval $[1,2]$.",
+      "Therefore $P(16)=(9/5)225+1=406$."
+    ],
+    "solution_zh": [
+      "两界分别为 $(x-1)^2+1,2(x-1)^2+1$，故 $P(1)=1$。非负二次式 $P(x)-[(x-1)^2+1]$ 在 $1$ 处为零，必以其为二重根。",
+      "所以 $P(x)=a(x-1)^2+1$。由 $P(11)$ 得 $a=9/5$，确在要求的 $[1,2]$ 内。",
+      "因此 $P(16)=(9/5)225+1=406$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/6",
+    "method_chain": [
+      "Polynomials & Vieta relations",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q07",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "The unique elements in $A\\cap B,B\\cap C,C\\cap A$ must be distinct. Assign them in $7\\cdot6\\cdot5=210$ ways.",
+      "reason_zh": "$A\\cap B,B\\cap C,C\\cap A$ 的唯一元素必各不相同，分配方法为 $7\\cdot6\\cdot5=210$。"
+    },
+    "secondary": [],
+    "statement_en": "For ordered subsets $A,B,C$ of a seven-element set, require each pairwise intersection to have exactly one element and the triple intersection to be empty. Count these ordered triples modulo $1000$.",
+    "statement_zh": "七元集合的有序子集三元组 $(A,B,C)$ 满足三个两两交集各含一元素，三者公共交集为空。求三元组数模 $1000$ 的余数。",
+    "answer": 760,
+    "solution_en": [
+      "The unique elements in $A\\cap B,B\\cap C,C\\cap A$ must be distinct. Assign them in $7\\cdot6\\cdot5=210$ ways.",
+      "Each of the four remaining elements may belong only to $A$, only to $B$, only to $C$, or none. These $4^4$ choices introduce no new intersections.",
+      "The count is $210\\cdot256=53760$, with remainder $760$."
+    ],
+    "solution_zh": [
+      "$A\\cap B,B\\cap C,C\\cap A$ 的唯一元素必各不相同，分配方法为 $7\\cdot6\\cdot5=210$。",
+      "余下四元素各只能独属 $A$、独属 $B$、独属 $C$ 或完全不选，共 $4^4$ 种，均不增加交集。",
+      "总数 $53760$，余数为 $760$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/7",
+    "method_chain": [
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q08",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "The integer floor pairs are $(\\pm5,0),(0,\\pm5),(\\pm3,\\pm4),(\\pm4,\\pm3)$. Each contributes a half-open unit square; any closed enclosing disk also contains their closures.",
+      "reason_zh": "整数取整值对为 $(\\pm5,0),(0,\\pm5),(\\pm3,\\pm4),(\\pm4,\\pm3)$，各对应一个半开单位方格。闭圆盘若包含这些方格，也包含其闭包。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "The union of closed squares is centrally symmetric about $Q=(1/2,1/2)$. An opposite pair $X,2Q-X$ forces every enclosing radius to be at least $|X-Q|$.",
+        "reason_zh": "闭方格并集关于 $Q=(1/2,1/2)$ 中心对称。对任意点 $X$，其对称点也在集合内，故任何包围圆盘的半径至少为 $|X-Q|$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The greatest corner distance from $Q$ is attained at $(4,5)$ and its symmetric counterparts: its square is $(7/2)^2+(9/2)^2=130/4$. All other corners have no greater distance, so the disk centered at $Q$ with radius $\\sqrt{130}/2$ attains the bound.",
+        "reason_zh": "各顶点中，$(4,5)$ 及其对称点距 $Q$ 最远，距离平方为 $(7/2)^2+(9/2)^2=130/4$。检查其余顶点均不超过此值，以 $Q$ 为心的该圆盘能包含全部方格。"
+      }
+    ],
+    "statement_en": "Let $R=\\{(x,y):\\lfloor x\\rfloor^2+\\lfloor y\\rfloor^2=25\\}$. The smallest disk enclosing $R$ has radius $\\sqrt m/n$, with squarefree $m$. Find $m+n$.",
+    "statement_zh": "设 $R=\\{(x,y):\\lfloor x\\rfloor^2+\\lfloor y\\rfloor^2=25\\}$。包含 $R$ 的最小圆盘半径为 $\\sqrt m/n$，其中 $m$ 无平方因子。求 $m+n$。",
+    "answer": 132,
+    "solution_en": [
+      "The integer floor pairs are $(\\pm5,0),(0,\\pm5),(\\pm3,\\pm4),(\\pm4,\\pm3)$. Each contributes a half-open unit square; any closed enclosing disk also contains their closures.",
+      "The union of closed squares is centrally symmetric about $Q=(1/2,1/2)$. An opposite pair $X,2Q-X$ forces every enclosing radius to be at least $|X-Q|$.",
+      "The greatest corner distance from $Q$ is attained at $(4,5)$ and its symmetric counterparts: its square is $(7/2)^2+(9/2)^2=130/4$. All other corners have no greater distance, so the disk centered at $Q$ with radius $\\sqrt{130}/2$ attains the bound.",
+      "Thus $m+n=130+2=132$."
+    ],
+    "solution_zh": [
+      "整数取整值对为 $(\\pm5,0),(0,\\pm5),(\\pm3,\\pm4),(\\pm4,\\pm3)$，各对应一个半开单位方格。闭圆盘若包含这些方格，也包含其闭包。",
+      "闭方格并集关于 $Q=(1/2,1/2)$ 中心对称。对任意点 $X$，其对称点也在集合内，故任何包围圆盘的半径至少为 $|X-Q|$。",
+      "各顶点中，$(4,5)$ 及其对称点距 $Q$ 最远，距离平方为 $(7/2)^2+(9/2)^2=130/4$。检查其余顶点均不超过此值，以 $Q$ 为心的该圆盘能包含全部方格。",
+      "所以最小半径为 $\\sqrt{130}/2$，答案 $132$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/8",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Coordinates, vectors & transformations",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q09",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Put $t=xyz$. Multiplying $x^3=t+2,y^3=t+6,z^3=t+20$ gives $t^3=(t+2)(t+6)(t+20)$.",
+      "reason_zh": "令 $t=xyz$，将 $x^3=t+2,y^3=t+6,z^3=t+20$ 相乘，得到 $t^3=(t+2)(t+6)(t+20)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "After cancellation, $7t^2+43t+60=0$, whose roots are $-4,-15/7$. Both are achieved by the real cube roots of the three expressions: their product has cube $t^3$, hence equals $t$.",
+        "reason_zh": "约去三次项，得 $7t^2+43t+60=0$，根为 $-4,-15/7$。两者均可取：取各右式的实立方根，其乘积的立方为 $t^3$，故乘积即 $t$。"
+      }
+    ],
+    "statement_en": "Real $x,y,z$ satisfy $x^3-xyz=2,y^3-xyz=6,z^3-xyz=20$. The maximum of $x^3+y^3+z^3$ is the reduced fraction $m/n$. Find $m+n$.",
+    "statement_zh": "实数满足 $x^3-xyz=2,y^3-xyz=6,z^3-xyz=20$。$x^3+y^3+z^3$ 的最大值为最简分数 $m/n$，求 $m+n$。",
+    "answer": 158,
+    "solution_en": [
+      "Put $t=xyz$. Multiplying $x^3=t+2,y^3=t+6,z^3=t+20$ gives $t^3=(t+2)(t+6)(t+20)$.",
+      "After cancellation, $7t^2+43t+60=0$, whose roots are $-4,-15/7$. Both are achieved by the real cube roots of the three expressions: their product has cube $t^3$, hence equals $t$.",
+      "The desired sum is $28+3t$, maximized at $t=-15/7$, giving $151/7$ and answer $158$."
+    ],
+    "solution_zh": [
+      "令 $t=xyz$，将 $x^3=t+2,y^3=t+6,z^3=t+20$ 相乘，得到 $t^3=(t+2)(t+6)(t+20)$。",
+      "约去三次项，得 $7t^2+43t+60=0$，根为 $-4,-15/7$。两者均可取：取各右式的实立方根，其乘积的立方为 $t^3$，故乘积即 $t$。",
+      "目标和为 $28+3t$，取较大的根得最大值 $151/7$，答案 $158$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/9",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q10",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO07",
+      "reason_en": "Write $a_i=10b_i+c_i$ with digits $b_i,c_i$. Then the equation is $10B+C=2010$, where $B=\\sum b_i10^i,C=\\sum c_i10^i$.",
+      "reason_zh": "将 $a_i=10b_i+c_i$ 拆成十进制数字，原式成为 $10B+C=2010$，其中 $B=\\sum b_i10^i,C=\\sum c_i10^i$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT06",
+        "reason_en": "Write $a_i=10b_i+c_i$ with digits $b_i,c_i$. Then the equation is $10B+C=2010$, where $B=\\sum b_i10^i,C=\\sum c_i10^i$.",
+        "reason_zh": "将 $a_i=10b_i+c_i$ 拆成十进制数字，原式成为 $10B+C=2010$，其中 $B=\\sum b_i10^i,C=\\sum c_i10^i$。"
+      }
+    ],
+    "statement_en": "Count the quadruples of integers $0\\le a_0,a_1,a_2,a_3\\le99$ satisfying $a_0+10a_1+100a_2+1000a_3=2010$.",
+    "statement_zh": "求满足 $0\\le a_0,a_1,a_2,a_3\\le99$ 且 $a_0+10a_1+100a_2+1000a_3=2010$ 的整数四元组数。",
+    "answer": 202,
+    "solution_en": [
+      "Write $a_i=10b_i+c_i$ with digits $b_i,c_i$. Then the equation is $10B+C=2010$, where $B=\\sum b_i10^i,C=\\sum c_i10^i$.",
+      "Conversely, every choice $B=0,\\ldots,201$ gives nonnegative $C=2010-10B$. Both are at most four-digit numbers, so padding their decimal digits with zeros uniquely recovers the coefficients.",
+      "This is a bijection with $202$ choices of $B$, so the count is $202$."
+    ],
+    "solution_zh": [
+      "将 $a_i=10b_i+c_i$ 拆成十进制数字，原式成为 $10B+C=2010$，其中 $B=\\sum b_i10^i,C=\\sum c_i10^i$。",
+      "反过来，任取 $B=0$ 至 $201$，对应 $C=2010-10B\\ge0$。两者均不超过四位数，补前导零后唯一恢复所有数字与原系数。",
+      "故这是与 $202$ 个 $B$ 一一对应的双射，答案为 $202$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/10",
+    "method_chain": [
+      "Bijections & structural counting",
+      "Number bases, digits & palindromes"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q11",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "The region is a triangle with apex $C=(8,10)$ and base endpoints $A=(9/2,13/2),B=(39/4,33/4)$ on the rotation axis.",
+      "reason_zh": "区域为三角形，顶点为 $C=(8,10)$，底边在转轴上，端点为 $A=(9/2,13/2),B=(39/4,33/4)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL06",
+        "reason_en": "The region is a triangle with apex $C=(8,10)$ and base endpoints $A=(9/2,13/2),B=(39/4,33/4)$ on the rotation axis.",
+        "reason_zh": "区域为三角形，顶点为 $C=(8,10)$，底边在转轴上，端点为 $A=(9/2,13/2),B=(39/4,33/4)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "The perpendicular foot of $C$ is $(87/10,79/10)$, lying within $AB$. Therefore rotation gives two cones sharing a base, with total axial height $AB=7\\sqrt{10}/4$ and base radius $7/\\sqrt{10}$.",
+        "reason_zh": "$C$ 到轴的垂足为 $(87/10,79/10)$，位于底边内，所以旋转得到共底的两个圆锥。总轴向高为 $AB=7\\sqrt{10}/4$，半径为 $7/\\sqrt{10}$。"
+      }
+    ],
+    "statement_en": "Revolve the region $|8-x|+y\\le10$, $3y-x\\ge15$ about the line $3y-x=15$. Its volume is $m\\pi/(n\\sqrt p)$, with $m,n$ coprime and $p$ squarefree. Find $m+n+p$.",
+    "statement_zh": "将满足 $|8-x|+y\\le10,3y-x\\ge15$ 的平面区域绕直线 $3y-x=15$ 旋转。体积为 $m\\pi/(n\\sqrt p)$，$m,n$ 互质，$p$ 无平方因子。求 $m+n+p$。",
+    "answer": 365,
+    "solution_en": [
+      "The region is a triangle with apex $C=(8,10)$ and base endpoints $A=(9/2,13/2),B=(39/4,33/4)$ on the rotation axis.",
+      "The perpendicular foot of $C$ is $(87/10,79/10)$, lying within $AB$. Therefore rotation gives two cones sharing a base, with total axial height $AB=7\\sqrt{10}/4$ and base radius $7/\\sqrt{10}$.",
+      "The volume is $\\pi(49/10)(7\\sqrt{10}/4)/3=343\\pi/(12\\sqrt{10})$. Hence the answer is $343+12+10=365$."
+    ],
+    "solution_zh": [
+      "区域为三角形，顶点为 $C=(8,10)$，底边在转轴上，端点为 $A=(9/2,13/2),B=(39/4,33/4)$。",
+      "$C$ 到轴的垂足为 $(87/10,79/10)$，位于底边内，所以旋转得到共底的两个圆锥。总轴向高为 $AB=7\\sqrt{10}/4$，半径为 $7/\\sqrt{10}$。",
+      "体积为 $343\\pi/(12\\sqrt{10})$，故所求为 $365$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/11",
+    "method_chain": [
+      "Volumes & solid geometry",
+      "Absolute values, floors & piecewise graphs",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q12",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO01",
+      "reason_en": "For $m=243$, suppose there is no monochromatic product, and color $3$ red. Then $9$ is blue, $81$ red, and $243$ blue. If $27$ is red, $3\\cdot27=81$ fails; if blue, $9\\cdot27=243$ fails. This proves the upper bound.",
+      "reason_zh": "$m=243$ 时，若无同色乘积，令 $3$ 为红，则 $9$ 蓝、$81$ 红、$243$ 蓝。$27$ 若红，$3\\cdot27=81$ 违例；若蓝，$9\\cdot27=243$ 违例，证明必然性。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "For $m=242$, color $[3,8]\\cup[81,242]$ red and $[9,80]$ blue. Products of two small red numbers lie in $[9,64]$, hence blue; any product involving a large red number exceeds $242$. Products of two blue numbers exceed $80$, hence are not blue within the set.",
+        "reason_zh": "$m=242$ 时，将 $[3,8]\\cup[81,242]$ 染红，$[9,80]$ 染蓝。两小红数乘积在蓝区间，含大红数的乘积超过 $242$；两蓝数乘积超过 $80$，不可能仍蓝。"
+      }
+    ],
+    "statement_en": "Find the least $m\\ge3$ such that every two-coloring of $\\{3,4,\\ldots,m\\}$ contains same-colored numbers $a,b,c$, not necessarily distinct, with $ab=c$.",
+    "statement_zh": "求最小整数 $m\\ge3$，使 $\\{3,4,\\ldots,m\\}$ 的任意二染色中，必有同色的 $a,b,c$ 满足 $ab=c$，三数允许重复。",
+    "answer": 243,
+    "solution_en": [
+      "For $m=243$, suppose there is no monochromatic product, and color $3$ red. Then $9$ is blue, $81$ red, and $243$ blue. If $27$ is red, $3\\cdot27=81$ fails; if blue, $9\\cdot27=243$ fails. This proves the upper bound.",
+      "For $m=242$, color $[3,8]\\cup[81,242]$ red and $[9,80]$ blue. Products of two small red numbers lie in $[9,64]$, hence blue; any product involving a large red number exceeds $242$. Products of two blue numbers exceed $80$, hence are not blue within the set.",
+      "This product-free coloring also restricts to every smaller initial set. Therefore the least value is $243$."
+    ],
+    "solution_zh": [
+      "$m=243$ 时，若无同色乘积，令 $3$ 为红，则 $9$ 蓝、$81$ 红、$243$ 蓝。$27$ 若红，$3\\cdot27=81$ 违例；若蓝，$9\\cdot27=243$ 违例，证明必然性。",
+      "$m=242$ 时，将 $[3,8]\\cup[81,242]$ 染红，$[9,80]$ 染蓝。两小红数乘积在蓝区间，含大红数的乘积超过 $242$；两蓝数乘积超过 $80$，不可能仍蓝。",
+      "此构造限制到更小集合仍有效，故最小值为 $243$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/12",
+    "method_chain": [
+      "Games, invariants & state strategies",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q13",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "The radius is $126$. With $O$ the midpoint of $AB$, $AN=AO=ON$, so $AON$ is equilateral. If $P$ is the foot from $N$ to $AB$, then $AP=63,NP=63\\sqrt3,UP=21,UO=42$.",
+      "reason_zh": "半径为 $126$，$O$ 为 $AB$ 中点，则 $AN=AO=ON$，所以 $AON$ 等边。设 $N$ 向 $AB$ 的垂足为 $P$，则 $AP=63,NP=63\\sqrt3,UP=21,UO=42$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "It must be exactly one-third, so $[NUO]=[UQT]$. Relative to $[NUP]$, the first area has ratio $UO/UP=2$, while the similar triangle $UQT$ has area ratio $(UQ/NP)^2$.",
+        "reason_zh": "因此该侧恰占三分之一，得到 $[NUO]=[UQT]$。两者与 $[NUP]$ 的面积比分别为 $UO/UP=2$ 及相似比平方 $(UQ/NP)^2$。"
+      }
+    ],
+    "statement_en": "A rectangle $ABCD$ and a semicircle on diameter $AB$ have disjoint interiors. A line meets the semicircle at $N$, $AB$ at $U$, and $CD$ at $T$, all distinct, dividing their combined region in area ratio $1:2$. Given $AU=84,UB=168,AN=126$, write $DA=m\\sqrt n$ with squarefree $n$ and find $m+n$.",
+    "statement_zh": "矩形 $ABCD$ 与以 $AB$ 为直径的半圆内部不重叠。一条直线依次交半圆弧、$AB,CD$ 于不同点 $N,U,T$，将合并区域面积分成 $1:2$。已知 $AU=84,UB=168,AN=126$，若 $DA=m\\sqrt n$ 且 $n$ 无平方因子，求 $m+n$。",
+    "answer": 69,
+    "solution_en": [
+      "The radius is $126$. With $O$ the midpoint of $AB$, $AN=AO=ON$, so $AON$ is equilateral. If $P$ is the foot from $N$ to $AB$, then $AP=63,NP=63\\sqrt3,UP=21,UO=42$.",
+      "Let $Q$ be the foot from $U$ to $CD$. The region on the $A$ side of the cutting line has one-third of the semicircle minus $[NUO]$, plus one-third of the rectangle plus $[UQT]$. Its rectangle portion is at most two-thirds (its widths are $84$ and $DT\\le252$), and its semicircle portion is less than one-third; hence this side cannot be the larger two-thirds portion.",
+      "It must be exactly one-third, so $[NUO]=[UQT]$. Relative to $[NUP]$, the first area has ratio $UO/UP=2$, while the similar triangle $UQT$ has area ratio $(UQ/NP)^2$.",
+      "Thus $DA=UQ=\\sqrt2\\,NP=63\\sqrt6$, giving $69$. The resulting $T$ lies on $CD$, since $DT=84+21\\sqrt2<252$."
+    ],
+    "solution_zh": [
+      "半径为 $126$，$O$ 为 $AB$ 中点，则 $AN=AO=ON$，所以 $AON$ 等边。设 $N$ 向 $AB$ 的垂足为 $P$，则 $AP=63,NP=63\\sqrt3,UP=21,UO=42$。",
+      "设 $U$ 向 $CD$ 的垂足为 $Q$。切线的 $A$ 侧面积为三分之一半圆减 $[NUO]$，加三分之一矩形及 $[UQT]$。矩形部分的上下宽为 $84,DT\\le252$，面积至多为矩形的三分之二；半圆部分小于三分之一，所以该侧不可能占总面积三分之二。",
+      "因此该侧恰占三分之一，得到 $[NUO]=[UQT]$。两者与 $[NUP]$ 的面积比分别为 $UO/UP=2$ 及相似比平方 $(UQ/NP)^2$。",
+      "故 $DA=UQ=63\\sqrt6$，答案 $69$。此时 $DT=84+21\\sqrt2<252$，交点确在线段 $CD$ 上。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/13",
+    "method_chain": [
+      "Areas & area ratios",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Included justification that the A-side is the smaller area; the source solution leaves this choice implicit.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q14",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "Every term is nondecreasing in $n$. It therefore suffices to exhibit adjacent integers where the bound changes.",
+      "reason_zh": "每一项均随 $n$ 单调不减，只需找到跨过上界的两个相邻整数。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "Every term is nondecreasing in $n$. It therefore suffices to exhibit adjacent integers where the bound changes.",
+        "reason_zh": "每一项均随 $n$ 单调不减，只需找到跨过上界的两个相邻整数。"
+      }
+    ],
+    "statement_en": "For positive integers $n$, put $f(n)=\\sum_{k=1}^{100}\\lfloor\\log_{10}(kn)\\rfloor$. Find the greatest $n$ with $f(n)\\le300$.",
+    "statement_zh": "对正整数 $n$，定义 $f(n)=\\sum_{k=1}^{100}\\lfloor\\log_{10}(kn)\\rfloor$。求满足 $f(n)\\le300$ 的最大 $n$。",
+    "answer": 109,
+    "solution_en": [
+      "Every term is nondecreasing in $n$. It therefore suffices to exhibit adjacent integers where the bound changes.",
+      "At $n=109$, the products have floor logarithms $2$ for $k=1,\\ldots,9$, $3$ for $10,\\ldots,91$, and $4$ for $92,\\ldots,100$. Their sum is $18+246+36=300$.",
+      "At $n=110$, the threshold for $10^4$ shifts to $k=91$, so the sum is $18+243+40=301$. Monotonicity proves the maximum is $109$."
+    ],
+    "solution_zh": [
+      "每一项均随 $n$ 单调不减，只需找到跨过上界的两个相邻整数。",
+      "$n=109$ 时，$k=1$ 至 $9$ 的取整对数为二，$10$ 至 $91$ 为三，$92$ 至 $100$ 为四，总和 $18+246+36=300$。",
+      "$n=110$ 时，$10^4$ 的门槛移到 $k=91$，总和为 $18+243+40=301$。由单调性，最大值为 $109$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/14",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2010-I-Q15",
+    "paper_id": "AIME-2010-I",
+    "exam_year": 2010,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "Let $k=AM/CM$ and $d=BM$. The area ratio is $k$; equal area-to-semiperimeter ratios give $(12+AM+d)/(13+CM+d)=k$. Since $AM=kCM$, this reduces to $d=(13k-12)/(1-k)>0$, requiring $12/13<k<1$.",
+      "reason_zh": "令 $k=AM/CM,d=BM$。两三角形面积比为 $k$；内切圆半径相等使半周长比也为 $k$，即 $(12+AM+d)/(13+CM+d)=k$。代入 $AM=kCM$ 得 $d=(13k-12)/(1-k)>0$，所以 $12/13<k<1$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Using $AM=15k/(1+k),CM=15/(1+k)$, Stewart gives $d^2=(144+169k)/(1+k)-225k/(1+k)^2$.",
+        "reason_zh": "由 $AM=15k/(1+k),CM=15/(1+k)$ 及斯图尔特定理，$d^2=(144+169k)/(1+k)-225k/(1+k)^2$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Let $k=AM/CM$ and $d=BM$. The area ratio is $k$; equal area-to-semiperimeter ratios give $(12+AM+d)/(13+CM+d)=k$. Since $AM=kCM$, this reduces to $d=(13k-12)/(1-k)>0$, requiring $12/13<k<1$.",
+        "reason_zh": "令 $k=AM/CM,d=BM$。两三角形面积比为 $k$；内切圆半径相等使半周长比也为 $k$，即 $(12+AM+d)/(13+CM+d)=k$。代入 $AM=kCM$ 得 $d=(13k-12)/(1-k)>0$，所以 $12/13<k<1$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=12,BC=13,AC=15$. A point $M$ on $AC$ makes the incircles of $ABM$ and $BCM$ have equal radii. Express $AM/CM=p/q$ in lowest terms and find $p+q$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=12,BC=13,AC=15$。边 $AC$ 上点 $M$ 使三角形 $ABM,BCM$ 的内切圆半径相等。若 $AM/CM=p/q$ 为最简分数，求 $p+q$。",
+    "answer": 45,
+    "solution_en": [
+      "Let $k=AM/CM$ and $d=BM$. The area ratio is $k$; equal area-to-semiperimeter ratios give $(12+AM+d)/(13+CM+d)=k$. Since $AM=kCM$, this reduces to $d=(13k-12)/(1-k)>0$, requiring $12/13<k<1$.",
+      "Using $AM=15k/(1+k),CM=15/(1+k)$, Stewart gives $d^2=(144+169k)/(1+k)-225k/(1+k)^2$.",
+      "Equate the two formulas for $d^2$ and clear positive denominators. The result is $4k(69k^2-112k+44)=0$, with roots $0,2/3,22/23$. Only $22/23$ lies in the required interval.",
+      "It is attainable: $AM=22/3,CM=23/3,d=10$ satisfy Stewart and the perimeter ratio. Hence $p+q=45$."
+    ],
+    "solution_zh": [
+      "令 $k=AM/CM,d=BM$。两三角形面积比为 $k$；内切圆半径相等使半周长比也为 $k$，即 $(12+AM+d)/(13+CM+d)=k$。代入 $AM=kCM$ 得 $d=(13k-12)/(1-k)>0$，所以 $12/13<k<1$。",
+      "由 $AM=15k/(1+k),CM=15/(1+k)$ 及斯图尔特定理，$d^2=(144+169k)/(1+k)-225k/(1+k)^2$。",
+      "将两种 $d^2$ 表达式相等并清除正分母，得 $4k(69k^2-112k+44)=0$，根为 $0,2/3,22/23$，仅最后一根在规定区间内。",
+      "此时 $AM=22/3,CM=23/3,d=10$，满足距离及半周长比条件，确可达到，故答案 $45$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2010I/problem/15",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

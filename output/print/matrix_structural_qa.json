@@ -1,0 +1,30 @@
+[
+  {
+    "path": "output\\matrix\\AIME_2000-2026_matrix_en.pdf",
+    "pages": 10,
+    "question_cells": 810,
+    "dictionary_subtypes": 44,
+    "primary_labels_complete": true
+  },
+  {
+    "path": "output\\matrix\\AIME_2000-2026_matrix_zh.pdf",
+    "pages": 10,
+    "question_cells": 810,
+    "dictionary_subtypes": 44,
+    "primary_labels_complete": true
+  },
+  {
+    "path": "output\\matrix\\AIME_2000-2026_matrix_bilingual.pdf",
+    "pages": 11,
+    "question_cells": 810,
+    "dictionary_subtypes": 44,
+    "primary_labels_complete": true
+  },
+  {
+    "path": "output\\matrix\\AIME_2000-2026_matrix_bilingual_poster.pdf",
+    "pages": 4,
+    "question_cells": 810,
+    "dictionary_subtypes": 44,
+    "primary_labels_complete": true
+  }
+]

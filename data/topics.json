@@ -1,0 +1,106 @@
+[
+  {
+    "id": "AL",
+    "name_en": "Algebra",
+    "name_zh": "代数",
+    "color": "#dbeafe",
+    "order": 1,
+    "section_ids": [
+      "AL01",
+      "AL02",
+      "AL03",
+      "AL04",
+      "AL05",
+      "AL06",
+      "AL07",
+      "AL08",
+      "AL09",
+      "AL10"
+    ],
+    "question_count": 219
+  },
+  {
+    "id": "GE",
+    "name_en": "Geometry",
+    "name_zh": "几何",
+    "color": "#dcfce7",
+    "order": 2,
+    "section_ids": [
+      "GE01",
+      "GE02",
+      "GE03",
+      "GE04",
+      "GE05",
+      "GE06",
+      "GE07",
+      "GE08",
+      "GE09",
+      "GE10"
+    ],
+    "question_count": 243
+  },
+  {
+    "id": "NT",
+    "name_en": "Number Theory",
+    "name_zh": "数论",
+    "color": "#ffedd5",
+    "order": 3,
+    "section_ids": [
+      "NT01",
+      "NT02",
+      "NT03",
+      "NT04",
+      "NT05",
+      "NT06",
+      "NT07",
+      "NT08"
+    ],
+    "question_count": 150
+  },
+  {
+    "id": "CO",
+    "name_en": "Counting & Combinatorics",
+    "name_zh": "计数与组合",
+    "color": "#f3e8ff",
+    "order": 4,
+    "section_ids": [
+      "CO01",
+      "CO02",
+      "CO03",
+      "CO04",
+      "CO05",
+      "CO06",
+      "CO07"
+    ],
+    "question_count": 106
+  },
+  {
+    "id": "PS",
+    "name_en": "Probability & Statistics",
+    "name_zh": "概率与统计",
+    "color": "#fce7f3",
+    "order": 5,
+    "section_ids": [
+      "PS01",
+      "PS02",
+      "PS03",
+      "PS04",
+      "PS05",
+      "PS06"
+    ],
+    "question_count": 78
+  },
+  {
+    "id": "LO",
+    "name_en": "Logic & Strategy",
+    "name_zh": "逻辑与策略",
+    "color": "#e2e8f0",
+    "order": 6,
+    "section_ids": [
+      "LO01",
+      "LO02",
+      "LO03"
+    ],
+    "question_count": 14
+  }
+]

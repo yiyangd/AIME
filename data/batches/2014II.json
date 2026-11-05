@@ -1,0 +1,754 @@
+[
+  {
+    "question_id": "AIME-2014-II-Q01",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "The per-minute rates are $1/900,1/600,1/450$. After ninety minutes, one-tenth of the room is done.",
+      "reason_zh": "三人每分钟效率分别为 $1/900,1/600,1/450$，前九十分钟完成十分之一。"
+    },
+    "secondary": [],
+    "statement_en": "Worker $A$ paints a room in fifteen hours; $B$ works fifty percent faster and $C$ twice as fast as $A$. First $A$ works ninety minutes alone, then $A,B$ work until half the room is done, then all three finish. Find the total minutes.",
+    "statement_zh": "甲独刷一房需十五小时，乙效率比甲高百分之五十，丙为甲两倍。甲先单独工作九十分钟，再与乙一起刷到一半，最后三人共同完成。求总分钟数。",
+    "answer": 334,
+    "solution_en": [
+      "The per-minute rates are $1/900,1/600,1/450$. After ninety minutes, one-tenth of the room is done.",
+      "The next two-fifths take $360(2/5)=144$ minutes at combined rate $1/360$. The final half takes one hundred minutes at rate $1/200$.",
+      "The total is $90+144+100=334$."
+    ],
+    "solution_zh": [
+      "三人每分钟效率分别为 $1/900,1/600,1/450$，前九十分钟完成十分之一。",
+      "甲乙合速 $1/360$，接着五分之二需一百四十四分；三人合速 $1/200$，余下一半需一百分。",
+      "总时间三百三十四分。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q02",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "Let the triple-intersection probability be $t$. Then $t/(0.14+t)=1/3$, giving $t=0.07$.",
+      "reason_zh": "令三交概率为 $t$，则 $t/(0.14+t)=1/3$，解得 $t=0.07$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "The union has probability $3(0.1)+3(0.14)+0.07=0.79$, while $A$ has probability $0.1+2(0.14)+0.07=0.45$.",
+        "reason_zh": "并集概率为 $0.79$，$A$ 的概率为 $0.45$。"
+      }
+    ],
+    "statement_en": "Three events $A,B,C$ have each exactly-one region probability $0.1$ and each exactly-two region probability $0.14$. Given $\\Pr(C\\mid A\\cap B)=1/3$, reduce $\\Pr(\\overline{A\\cup B\\cup C}\\mid\\bar A)=p/q$ and find $p+q$.",
+    "statement_zh": "三个事件的每个恰一事件区域概率为 $0.1$，每个恰两事件区域概率为 $0.14$。已知 $\\Pr(C\\mid A\\cap B)=1/3$，将无事件发生且已知 $A$ 不发生时的条件概率约为 $p/q$，求 $p+q$。",
+    "answer": 76,
+    "solution_en": [
+      "Let the triple-intersection probability be $t$. Then $t/(0.14+t)=1/3$, giving $t=0.07$.",
+      "The union has probability $3(0.1)+3(0.14)+0.07=0.79$, while $A$ has probability $0.1+2(0.14)+0.07=0.45$.",
+      "The desired probability is $0.21/0.55=21/55$, giving $76$."
+    ],
+    "solution_zh": [
+      "令三交概率为 $t$，则 $t/(0.14+t)=1/3$，解得 $t=0.07$。",
+      "并集概率为 $0.79$，$A$ 的概率为 $0.45$。",
+      "所求条件概率为 $0.21/0.55=21/55$，答案七十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/2",
+    "method_chain": [
+      "Conditional probability & independence",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q03",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "Each eighteen-unit half-bar spans half of the twenty-four-unit separation. Its outward horizontal displacement is $\\sqrt{18^2-12^2}=6\\sqrt5$.",
+      "reason_zh": "每根十八长半杆跨越一半间距十二，向外偏移为 $\\sqrt{18^2-12^2}=6\\sqrt5$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Each eighteen-unit half-bar spans half of the twenty-four-unit separation. Its outward horizontal displacement is $\\sqrt{18^2-12^2}=6\\sqrt5$.",
+        "reason_zh": "每根十八长半杆跨越一半间距十二，向外偏移为 $\\sqrt{18^2-12^2}=6\\sqrt5$。"
+      }
+    ],
+    "statement_en": "A hinged rectangle has side lengths $a,36$, with hinges at its corners and at the midpoints of its length-$36$ sides. Press the $a$-sides symmetrically inward, keeping them parallel and their midpoints perpendicularly aligned, to form a convex hexagon. When the separation is $24$, its area equals the rectangle area. Find $a^2$.",
+    "statement_zh": "边长为 $a,36$ 的矩形在各顶点及三十六长边中点设铰链。将两条 $a$ 边对称向内压，保持平行且两中点连线垂直于它们，形成凸六边形。两边相距二十四时，面积与原矩形相同。求 $a^2$。",
+    "answer": 720,
+    "solution_en": [
+      "Each eighteen-unit half-bar spans half of the twenty-four-unit separation. Its outward horizontal displacement is $\\sqrt{18^2-12^2}=6\\sqrt5$.",
+      "The middle width is therefore $a+12\\sqrt5$. Two congruent height-twelve trapezoids give total hexagon area $24a+144\\sqrt5$.",
+      "Equate with $36a$ to get $a=12\\sqrt5$, hence $a^2=720$."
+    ],
+    "solution_zh": [
+      "每根十八长半杆跨越一半间距十二，向外偏移为 $\\sqrt{18^2-12^2}=6\\sqrt5$。",
+      "中间宽度为 $a+12\\sqrt5$，两块高十二的全等梯形总面积为 $24a+144\\sqrt5$。",
+      "令其等于原面积 $36a$，得 $a=12\\sqrt5,a^2=720$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/3",
+    "method_chain": [
+      "Areas & area ratios",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "The pictured symmetric compression is stated explicitly; arbitrary parallel-side shear is not the indicated hinge motion.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q04",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT07",
+      "reason_en": "Let the digit integers be $u=10a+b,v=100a+10b+c$. Then $u/99+v/999=33/37$, or $111u+11v=9801$.",
+      "reason_zh": "记两位、三位整数为 $u,v$，则 $u/99+v/999=33/37$，化为 $111u+11v=9801$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Modulo eleven, $u$ is divisible by eleven, forcing $a=b$. Divide by eleven and substitute $u=11a,v=110a+c$ to get $221a+c=891$.",
+        "reason_zh": "模十一知 $u$ 被十一整除，故 $a=b$。除十一再代入，得到 $221a+c=891$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT06",
+        "reason_en": "With $0\\le c\\le9$, only $a=4,c=7$ work, so the answer is $447$.",
+        "reason_zh": "由数字范围仅 $a=4,c=7$，答案四百四十七。"
+      }
+    ],
+    "statement_en": "Decimal digits $a,b,c$, with $a\\ne0$, satisfy $0.\\overline{ab}+0.\\overline{abc}=33/37$. Find $\\overline{abc}$.",
+    "statement_zh": "十进数字 $a,b,c$，其中 $a$ 非零，满足 $0.\\overline{ab}+0.\\overline{abc}=33/37$，求三位数 $\\overline{abc}$。",
+    "answer": 447,
+    "solution_en": [
+      "Let the digit integers be $u=10a+b,v=100a+10b+c$. Then $u/99+v/999=33/37$, or $111u+11v=9801$.",
+      "Modulo eleven, $u$ is divisible by eleven, forcing $a=b$. Divide by eleven and substitute $u=11a,v=110a+c$ to get $221a+c=891$.",
+      "With $0\\le c\\le9$, only $a=4,c=7$ work, so the answer is $447$."
+    ],
+    "solution_zh": [
+      "记两位、三位整数为 $u,v$，则 $u/99+v/999=33/37$，化为 $111u+11v=9801$。",
+      "模十一知 $u$ 被十一整除，故 $a=b$。除十一再代入，得到 $221a+c=891$。",
+      "由数字范围仅 $a=4,c=7$，答案四百四十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/4",
+    "method_chain": [
+      "Rational fractions & repeating decimals",
+      "Congruences & Chinese remainders",
+      "Number bases, digits & palindromes"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q05",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "Let the third root of $p$ be $t=-r-s$. The other cubic has third root $t-1$. Equality of their pairwise root-product sums gives $t=4r-3s+13$.",
+      "reason_zh": "设第三根 $t=-r-s$，另一三次式的第三根为 $t-1$。两式一次项相同，比较根的两两积和，得 $t=4r-3s+13$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "The constant-term difference is $rst-(r+4)(s-3)(t-1)=240$. Using the preceding linear relation reduces this to $(r-s)^2+7(r-s)-8=0$. Thus $r-s=1$ or $-8$.",
+        "reason_zh": "常数差给出 $rst-(r+4)(s-3)(t-1)=240$，代入前一关系，化为 $(r-s)^2+7(r-s)-8=0$，故差为一或负八。"
+      }
+    ],
+    "statement_en": "Real $r,s$ are roots of $p(x)=x^3+ax+b$, while $r+4,s-3$ are roots of $p(x)+240$. Find the sum of distinct possible $|b|$.",
+    "statement_zh": "实数 $r,s$ 为 $p(x)=x^3+ax+b$ 的根，而 $r+4,s-3$ 为 $p(x)+240$ 的根。求所有不同可能 $|b|$ 之和。",
+    "answer": 420,
+    "solution_en": [
+      "Let the third root of $p$ be $t=-r-s$. The other cubic has third root $t-1$. Equality of their pairwise root-product sums gives $t=4r-3s+13$.",
+      "The constant-term difference is $rst-(r+4)(s-3)(t-1)=240$. Using the preceding linear relation reduces this to $(r-s)^2+7(r-s)-8=0$. Thus $r-s=1$ or $-8$.",
+      "Combining with $t=-r-s$ gives the respective root triples $(-5,-6,11)$ and $(1,9,-10)$. Their constant terms are $-330$ and $90$. Each shifted triple verifies the required second cubic.",
+      "The absolute-value sum is $420$."
+    ],
+    "solution_zh": [
+      "设第三根 $t=-r-s$，另一三次式的第三根为 $t-1$。两式一次项相同，比较根的两两积和，得 $t=4r-3s+13$。",
+      "常数差给出 $rst-(r+4)(s-3)(t-1)=240$，代入前一关系，化为 $(r-s)^2+7(r-s)-8=0$，故差为一或负八。",
+      "与根和为零联立，分别得 $(-5,-6,11),(1,9,-10)$，常数项为负三百三十、九十。两组移位根均可验证第二多项式。",
+      "绝对值和为四百二十。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/5",
+    "method_chain": [
+      "Polynomials & Vieta relations",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q06",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "Bayes gives posterior odds biased:fair equal to $(2/3)^2:(1/6)^2=16:1$. Thus their posterior probabilities are $16/17,1/17$.",
+      "reason_zh": "贝叶斯更新后的偏骰与公平骰概率比为 $(2/3)^2:(1/6)^2=16:1$，故概率分别为十七分之十六、十七分之一。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS05",
+        "reason_en": "The predictive probability is $(16/17)(2/3)+(1/17)(1/6)=65/102$, already reduced.",
+        "reason_zh": "第三次六点概率为 $(16/17)(2/3)+(1/17)(1/6)=65/102$，已最简。"
+      }
+    ],
+    "statement_en": "Choose equally between a fair die and a die whose six-probability is $2/3$ and each other face has probability $1/15$. Roll the selected die three times. Given the first two are sixes, reduce the chance the third is also six to $p/q$ and find $p+q$.",
+    "statement_zh": "等可能选公平骰或一枚六点概率为 $2/3$、其余各点概率 $1/15$ 的骰子，固定该骰投三次。已知前两次均为六，第三次也为六的概率约为 $p/q$，求 $p+q$。",
+    "answer": 167,
+    "solution_en": [
+      "Bayes gives posterior odds biased:fair equal to $(2/3)^2:(1/6)^2=16:1$. Thus their posterior probabilities are $16/17,1/17$.",
+      "The predictive probability is $(16/17)(2/3)+(1/17)(1/6)=65/102$, already reduced.",
+      "The requested sum is $167$."
+    ],
+    "solution_zh": [
+      "贝叶斯更新后的偏骰与公平骰概率比为 $(2/3)^2:(1/6)^2=16:1$，故概率分别为十七分之十六、十七分之一。",
+      "第三次六点概率为 $(16/17)(2/3)+(1/17)(1/6)=65/102$，已最简。",
+      "答案一百六十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/6",
+    "method_chain": [
+      "Conditional probability & independence",
+      "Distributions & repeated trials"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q07",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "At integer $k$, $f(k)=[(k+1)(k+2)]^{(-1)^k}$. The sum of logs is the log of their telescoping product.",
+      "reason_zh": "整数处 $f(k)=[(k+1)(k+2)]^{(-1)^k}$，对数和可合并为交错望远镜乘积的对数。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "At integer $k$, $f(k)=[(k+1)(k+2)]^{(-1)^k}$. The sum of logs is the log of their telescoping product.",
+        "reason_zh": "整数处 $f(k)=[(k+1)(k+2)]^{(-1)^k}$，对数和可合并为交错望远镜乘积的对数。"
+      }
+    ],
+    "statement_en": "Let $f(x)=(x^2+3x+2)^{\\cos\\pi x}$. Find the sum of positive integers $n$ such that $|\\sum_{k=1}^n\\log_{10}f(k)|=1$.",
+    "statement_zh": "令 $f(x)=(x^2+3x+2)^{\\cos\\pi x}$，求使 $|\\sum_{k=1}^n\\log_{10}f(k)|=1$ 的所有正整数 $n$ 之和。",
+    "answer": 21,
+    "solution_en": [
+      "At integer $k$, $f(k)=[(k+1)(k+2)]^{(-1)^k}$. The sum of logs is the log of their telescoping product.",
+      "For even $n$, the product is $(n+2)/2$; for odd $n$, it is $1/[2(n+2)]$. Absolute log one means a product of ten or one-tenth.",
+      "The even case gives $n=18$, and the odd case $n=3$. No other sign choices fit their product ranges. Their sum is $21$."
+    ],
+    "solution_zh": [
+      "整数处 $f(k)=[(k+1)(k+2)]^{(-1)^k}$，对数和可合并为交错望远镜乘积的对数。",
+      "$n$ 偶时乘积为 $(n+2)/2$，奇时为 $1/[2(n+2)]$。对数绝对值一对应乘积十或十分之一。",
+      "偶数情形给出十八，奇数情形给出三，其他组合不符乘积范围，和为二十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/7",
+    "method_chain": [
+      "Sequences & summation",
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q08",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Let the smaller radius be $s$, so $D$ has radius $3s$. Set the outer center at $(0,0),A=(-2,0)$, the center of $D$ at $(-2+3s,0)$, and the center of $E$ at $(x,s)$, choosing the upper orientation.",
+      "reason_zh": "设 $E$ 半径为 $s$，$D$ 半径为 $3s$。取大圆心原点、$A=(-2,0)$，则 $D$ 圆心为 $(-2+3s,0)$，取上方的 $E$ 圆心为 $(x,s)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Let the smaller radius be $s$, so $D$ has radius $3s$. Set the outer center at $(0,0),A=(-2,0)$, the center of $D$ at $(-2+3s,0)$, and the center of $E$ at $(x,s)$, choosing the upper orientation.",
+        "reason_zh": "设 $E$ 半径为 $s$，$D$ 半径为 $3s$。取大圆心原点、$A=(-2,0)$，则 $D$ 圆心为 $(-2+3s,0)$，取上方的 $E$ 圆心为 $(x,s)$。"
+      }
+    ],
+    "statement_en": "A radius-two circle has diameter $AB$. An inner circle $D$ is tangent to it at $A$. A circle $E$ is internally tangent to the outer circle, externally tangent to $D$, and tangent to segment $AB$. The radius of $D$ is three times that of $E$ and equals $\\sqrt m-n$. Find $m+n$.",
+    "statement_zh": "半径二的圆以 $AB$ 为直径，内圆 $D$ 与它在 $A$ 内切。圆 $E$ 与大圆内切、与 $D$ 外切，并与直径线段相切。$D$ 半径为 $E$ 的三倍，且为 $\\sqrt m-n$，求 $m+n$。",
+    "answer": 254,
+    "solution_en": [
+      "Let the smaller radius be $s$, so $D$ has radius $3s$. Set the outer center at $(0,0),A=(-2,0)$, the center of $D$ at $(-2+3s,0)$, and the center of $E$ at $(x,s)$, choosing the upper orientation.",
+      "Internal tangency gives $x^2=4-4s$. External tangency to $D$ gives $(x+2-3s)^2+s^2=16s^2$. Eliminate $x^2$ to get $x(2-3s)=3s^2+8s-4$.",
+      "Squaring this equation and using $x^2=4-4s$ yields $s^2(9s^2+84s-44)=0$. The only positive root is $s=(-14+4\\sqrt{15})/3$. It has $0<3s<2$, and the positive value of $x$ satisfies the unsquared equation, so it is valid.",
+      "Thus the requested radius is $3s=4\\sqrt{15}-14=\\sqrt{240}-14$, giving $254$."
+    ],
+    "solution_zh": [
+      "设 $E$ 半径为 $s$，$D$ 半径为 $3s$。取大圆心原点、$A=(-2,0)$，则 $D$ 圆心为 $(-2+3s,0)$，取上方的 $E$ 圆心为 $(x,s)$。",
+      "内切给出 $x^2=4-4s$，外切给出 $(x+2-3s)^2+s^2=16s^2$。消去平方项，得 $x(2-3s)=3s^2+8s-4$。",
+      "再平方并代入，得到 $s^2(9s^2+84s-44)=0$，唯一正根为 $(-14+4\\sqrt{15})/3$。它满足 $0<3s<2$，且正的 $x$ 代回未平方关系成立，故未引入伪根。",
+      "所求半径为 $\\sqrt{240}-14$，答案二百五十四。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/8",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q09",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO04",
+      "reason_en": "Except for the full set, each maximal selected run of length at least three begins just after an unselected chair. Mark an unselected-selected-selected-selected pattern. There are ten starts and $2^6$ assignments of the other chairs, giving $640$ marked subsets.",
+      "reason_zh": "除全集外，每个至少三长的选中段前都有未选座位。标记一个“未选、选、选、选”模式，有十个起点，余六座自由，得到六百四十个带标记子集。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Except for the full set, each maximal selected run of length at least three begins just after an unselected chair. Mark an unselected-selected-selected-selected pattern. There are ten starts and $2^6$ assignments of the other chairs, giving $640$ marked subsets.",
+        "reason_zh": "除全集外，每个至少三长的选中段前都有未选座位。标记一个“未选、选、选、选”模式，有十个起点，余六座自由，得到六百四十个带标记子集。"
+      }
+    ],
+    "statement_en": "Ten labeled chairs form a circle. Count subsets containing a run of at least three consecutive selected chairs.",
+    "statement_zh": "十个固定座位围成圆，求含至少连续三个被选座位的子集数。",
+    "answer": 581,
+    "solution_en": [
+      "Except for the full set, each maximal selected run of length at least three begins just after an unselected chair. Mark an unselected-selected-selected-selected pattern. There are ten starts and $2^6$ assignments of the other chairs, giving $640$ marked subsets.",
+      "Two such marked starts require disjoint four-chair patterns. The second start has three positions for each first start, so there are $10\\cdot3/2=15$ unordered start pairs, each leaving two free chairs. This counts sixty subsets with two long runs. Three runs require at least twelve chairs and are impossible.",
+      "Subtract the double counts and add the full set: $640-60+1=581$."
+    ],
+    "solution_zh": [
+      "除全集外，每个至少三长的选中段前都有未选座位。标记一个“未选、选、选、选”模式，有十个起点，余六座自由，得到六百四十个带标记子集。",
+      "若有两个起点，两模式须不重叠，第二起点各有三个位置，故无序起点对有十五种，余两座自由，共六十个被重计子集。三段至少需十二座，不可能。",
+      "扣除重计再加全集，得 $640-60+1=581$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/9",
+    "method_chain": [
+      "Inclusion-exclusion & double counting",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q10",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The nonzero denominators permit multiplication, yielding $z^2+zw+w^2=0$. Hence $w/z$ is one of the two primitive cube roots of unity; both make all original denominators nonzero.",
+      "reason_zh": "清除非零分母得 $z^2+zw+w^2=0$，所以 $w/z$ 为两个本原三次单位根之一，均使原式有意义。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The vertices form an equilateral triangle of circumradius $2014$. Its area is $(3\\sqrt3/4)2014^2=3\\cdot1007^2\\sqrt3$.",
+        "reason_zh": "三顶点构成外接圆半径二千零一十四的等边三角形，面积为 $3\\cdot1007^2\\sqrt3$。"
+      }
+    ],
+    "statement_en": "Fix complex $z$ with $|z|=2014$. A polygon has vertices $z$ and every complex $w$ satisfying $1/(z+w)=1/z+1/w$. Its area is $n\\sqrt3$ for an integer $n$. Find $n\\bmod1000$.",
+    "statement_zh": "固定模为二千零一十四的复数 $z$，以 $z$ 及所有满足 $1/(z+w)=1/z+1/w$ 的复数 $w$ 为顶点构成多边形。面积为整数 $n$ 乘 $\\sqrt3$，求 $n$ 模 $1000$。",
+    "answer": 147,
+    "solution_en": [
+      "The nonzero denominators permit multiplication, yielding $z^2+zw+w^2=0$. Hence $w/z$ is one of the two primitive cube roots of unity; both make all original denominators nonzero.",
+      "The vertices form an equilateral triangle of circumradius $2014$. Its area is $(3\\sqrt3/4)2014^2=3\\cdot1007^2\\sqrt3$.",
+      "The coefficient modulo one thousand is $3\\cdot7^2=147$."
+    ],
+    "solution_zh": [
+      "清除非零分母得 $z^2+zw+w^2=0$，所以 $w/z$ 为两个本原三次单位根之一，均使原式有意义。",
+      "三顶点构成外接圆半径二千零一十四的等边三角形，面积为 $3\\cdot1007^2\\sqrt3$。",
+      "系数模一千为 $3\\cdot7^2=147$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/10",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q11",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Take $D=(0,0),R=(1/2,\\sqrt3/2)$. The sine rule gives $E=((1+\\sqrt3)/2,0)$ and $M=(1/4,\\sqrt3/4)$.",
+      "reason_zh": "取 $D=(0,0),R=(1/2,\\sqrt3/2)$，正弦定理得 $E=((1+\\sqrt3)/2,0)$，$M=(1/4,\\sqrt3/4)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Take $D=(0,0),R=(1/2,\\sqrt3/2)$. The sine rule gives $E=((1+\\sqrt3)/2,0)$ and $M=(1/4,\\sqrt3/4)$.",
+        "reason_zh": "取 $D=(0,0),R=(1/2,\\sqrt3/2)$，正弦定理得 $E=((1+\\sqrt3)/2,0)$，$M=(1/4,\\sqrt3/4)$。"
+      }
+    ],
+    "statement_en": "Triangle $RED$ has $RD=1,\\angle R=75^\\circ,\\angle E=45^\\circ$. Let $M$ be the midpoint of $RD$ and take $C$ on $ED$ so $RC\\perp EM$. Extend $DE$ past $E$ to $A$ with $CA=AR$. If $AE=(a-\\sqrt b)/c$ with coprime $a,c$, find $a+b+c$.",
+    "statement_zh": "三角形 $RED$ 中 $RD=1,\\angle R=75^\\circ,\\angle E=45^\\circ$，$M$ 为 $RD$ 中点。在 $ED$ 上取 $C$ 使 $RC\\perp EM$。延长 $DE$ 过 $E$ 至 $A$，使 $CA=AR$。若 $AE=(a-\\sqrt b)/c$、$a,c$ 互质，求三者和。",
+    "answer": 56,
+    "solution_en": [
+      "Take $D=(0,0),R=(1/2,\\sqrt3/2)$. The sine rule gives $E=((1+\\sqrt3)/2,0)$ and $M=(1/4,\\sqrt3/4)$.",
+      "Perpendicular slopes give the horizontal coordinate of $C$ as $u=(7-3\\sqrt3)/11$, lying between $D$ and $E$.",
+      "For $A=(t,0)$, equate $(t-u)^2=(t-1/2)^2+3/4$. This gives $t=(1-u^2)/(1-2u)=(9+4\\sqrt3)/11$, which lies beyond $E$.",
+      "Therefore $AE=(7-3\\sqrt3)/22=(7-\\sqrt{27})/22$, giving $56$."
+    ],
+    "solution_zh": [
+      "取 $D=(0,0),R=(1/2,\\sqrt3/2)$，正弦定理得 $E=((1+\\sqrt3)/2,0)$，$M=(1/4,\\sqrt3/4)$。",
+      "由两线斜率负倒数，$C$ 的横坐标为 $u=(7-3\\sqrt3)/11$，确在 $DE$ 内。",
+      "设 $A=(t,0)$，距离相等给出 $(t-u)^2=(t-1/2)^2+3/4$，解得 $t=(9+4\\sqrt3)/11$，确在 $E$ 之外。",
+      "故 $AE=(7-\\sqrt{27})/22$，答案五十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/11",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q12",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "Using $A+B+C=\\pi$ and sum-to-product identities gives $1-(\\cos3A+\\cos3B+\\cos3C)=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$.",
+      "reason_zh": "利用三角形角和及和差化积，得 $1-(\\cos3A+\\cos3B+\\cos3C)=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The largest possible third side puts this angle between the known sides, giving squared length $10^2+13^2+130=399$. If the obtuse angle is opposite a known side, the third side is shorter than that side and cannot exceed this value.",
+        "reason_zh": "最大第三边将此角置于两已知边之间，余弦定理给出平方 $100+169+130=399$。若钝角对着已知边，第三边反而更短，不会超过此值。"
+      }
+    ],
+    "statement_en": "Triangle angles satisfy $\\cos3A+\\cos3B+\\cos3C=1$. Two side lengths are ten and thirteen. If the greatest third side is $\\sqrt m$, find $m$.",
+    "statement_zh": "三角形角满足 $\\cos3A+\\cos3B+\\cos3C=1$，其中两边长为十、十三。若第三边最大值为 $\\sqrt m$，求 $m$。",
+    "answer": 399,
+    "solution_en": [
+      "Using $A+B+C=\\pi$ and sum-to-product identities gives $1-(\\cos3A+\\cos3B+\\cos3C)=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$.",
+      "The product is zero. For a triangle angle $0<X<\\pi$, the only possible zero of $\\sin(3X/2)$ is $X=120^\\circ$, so one angle must be one hundred twenty degrees. Conversely such an angle satisfies the identity.",
+      "The largest possible third side puts this angle between the known sides, giving squared length $10^2+13^2+130=399$. If the obtuse angle is opposite a known side, the third side is shorter than that side and cannot exceed this value.",
+      "Thus $m=399$."
+    ],
+    "solution_zh": [
+      "利用三角形角和及和差化积，得 $1-(\\cos3A+\\cos3B+\\cos3C)=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$。",
+      "乘积为零。三角形角在零与 $\\pi$ 之间，故对应正弦为零仅可能角为一百二十度；反之此角也满足原关系。",
+      "最大第三边将此角置于两已知边之间，余弦定理给出平方 $100+169+130=399$。若钝角对着已知边，第三边反而更短，不会超过此值。",
+      "所以 $m=399$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/12",
+    "method_chain": [
+      "Trigonometric algebra & equations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q13",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Pairings are permutations of owners: left shoe $j$ goes to right shoe $\\pi(j)$. A collection using exactly its owners full pairs is an invariant subset of $\\pi$, hence a union of cycles.",
+      "reason_zh": "每种配法对应鞋主排列 $\\pi$：第 $j$ 只左鞋配第 $\\pi(j)$ 只右鞋。恰含某组鞋主全部鞋的配对子集，就是排列的不变子集，即若干循环的并。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Thus there may be no cycle shorter than five. The only partitions of ten into allowable cycle lengths are ten or five plus five.",
+        "reason_zh": "因此不允许长度小于五的循环，十的合法循环分拆仅十或五加五。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "Pairings are permutations of owners: left shoe $j$ goes to right shoe $\\pi(j)$. A collection using exactly its owners full pairs is an invariant subset of $\\pi$, hence a union of cycles.",
+        "reason_zh": "每种配法对应鞋主排列 $\\pi$：第 $j$ 只左鞋配第 $\\pi(j)$ 只右鞋。恰含某组鞋主全部鞋的配对子集，就是排列的不变子集，即若干循环的并。"
+      }
+    ],
+    "statement_en": "Ten people contribute one left and one right shoe each. Pair all left shoes bijectively with right shoes uniformly. Require that no selection of $k$ resulting pairs contains exactly the shoes of $k$ owners for any $1\\le k<5$. Reduce the probability to $m/n$ and find $m+n$.",
+    "statement_zh": "十人各提供一左一右鞋，将十左鞋与十右鞋随机等可能一一配对。要求任取 $k$ 双配成鞋都不能恰好包含 $k$ 人的全部鞋，$1\\le k<5$。将概率约为 $m/n$，求 $m+n$。",
+    "answer": 28,
+    "solution_en": [
+      "Pairings are permutations of owners: left shoe $j$ goes to right shoe $\\pi(j)$. A collection using exactly its owners full pairs is an invariant subset of $\\pi$, hence a union of cycles.",
+      "Thus there may be no cycle shorter than five. The only partitions of ten into allowable cycle lengths are ten or five plus five.",
+      "The favorable counts are $9!$ and $\\binom{10}5(4!)^2/2=9!/5$. Dividing their sum by $10!$ gives $3/25$.",
+      "The requested sum is $28$."
+    ],
+    "solution_zh": [
+      "每种配法对应鞋主排列 $\\pi$：第 $j$ 只左鞋配第 $\\pi(j)$ 只右鞋。恰含某组鞋主全部鞋的配对子集，就是排列的不变子集，即若干循环的并。",
+      "因此不允许长度小于五的循环，十的合法循环分拆仅十或五加五。",
+      "有利数为 $9!$ 及 $\\binom{10}5(4!)^2/2=9!/5$，除以总数 $10!$ 得 $3/25$。",
+      "答案二十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/13",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Restricted permutations & arrangements",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q14",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "Let the bisector meet the circumcircle again at $E$. It is the midpoint of arc $BC$ not containing $A$, so its perpendicular projection onto line $BC$ is $M$.",
+      "reason_zh": "设角平分线再交外接圆于 $E$。它是不含 $A$ 的 $BC$ 弧中点，所以垂直投影为 $M$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Projection takes collinear points $A,P,E$ to $H,N,M$ and preserves affine ratios. Since $N$ is the midpoint, $P$ is the midpoint of $AE$.",
+        "reason_zh": "共线点 $A,P,E$ 投影为 $H,N,M$，投影保持仿射比例，故 $P$ 为 $AE$ 中点。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The angle at $B$ is $105^\\circ$. Arc angles give $\\angle CBE=15^\\circ$, hence $\\angle ABE=120^\\circ$, while $\\angle AEB=45^\\circ$. The sine rule gives $AE=10\\sin120^\\circ/\\sin45^\\circ=5\\sqrt6$.",
+        "reason_zh": "$B$ 角一百零五度，圆周角给出 $\\angle CBE=15^\\circ$，所以 $\\angle ABE=120^\\circ$，且 $\\angle AEB=45^\\circ$。正弦定理得 $AE=5\\sqrt6$。"
+      }
+    ],
+    "statement_en": "In triangle $ABC$, $AB=10,A=30^\\circ,C=45^\\circ$. On line $BC$, let $H$ be the altitude foot, $D$ the internal bisector endpoint from $A$, and $M$ the midpoint of $BC$. Let $N$ be the midpoint of $HM$, and $P$ on ray $AD$ have perpendicular projection $N$. Reduce $AP^2=m/n$ and find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=10,A=30^\\circ,C=45^\\circ$。直线 $BC$ 上，$H$ 为高足，$D$ 为 $A$ 内角平分线交点，$M$ 为 $BC$ 中点。$N$ 为 $HM$ 中点，射线 $AD$ 上点 $P$ 的垂足为 $N$。若 $AP^2=m/n$ 已最简，求 $m+n$。",
+    "answer": 77,
+    "solution_en": [
+      "Let the bisector meet the circumcircle again at $E$. It is the midpoint of arc $BC$ not containing $A$, so its perpendicular projection onto line $BC$ is $M$.",
+      "Projection takes collinear points $A,P,E$ to $H,N,M$ and preserves affine ratios. Since $N$ is the midpoint, $P$ is the midpoint of $AE$.",
+      "The angle at $B$ is $105^\\circ$. Arc angles give $\\angle CBE=15^\\circ$, hence $\\angle ABE=120^\\circ$, while $\\angle AEB=45^\\circ$. The sine rule gives $AE=10\\sin120^\\circ/\\sin45^\\circ=5\\sqrt6$.",
+      "Thus $AP^2=AE^2/4=75/2$, and the answer is $77$."
+    ],
+    "solution_zh": [
+      "设角平分线再交外接圆于 $E$。它是不含 $A$ 的 $BC$ 弧中点，所以垂直投影为 $M$。",
+      "共线点 $A,P,E$ 投影为 $H,N,M$，投影保持仿射比例，故 $P$ 为 $AE$ 中点。",
+      "$B$ 角一百零五度，圆周角给出 $\\angle CBE=15^\\circ$，所以 $\\angle ABE=120^\\circ$，且 $\\angle AEB=45^\\circ$。正弦定理得 $AE=5\\sqrt6$。",
+      "故 $AP^2=75/2$，答案七十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/14",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Circle power & cyclic geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2014-II-Q15",
+    "paper_id": "AIME-2014-II",
+    "exam_year": 2014,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "Index primes as $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$. The invariant is $x_n=\\prod_i\\rho_i^{d_i}$, where $d_i$ are the binary digits of $n$. It holds at zero, giving the empty product.",
+      "reason_zh": "将素数按 $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$ 编号。不变量为 $x_n=\\prod_i\\rho_i^{d_i}$，$d_i$ 为 $n$ 的二进制数字，初始空积对应零。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Index primes as $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$. The invariant is $x_n=\\prod_i\\rho_i^{d_i}$, where $d_i$ are the binary digits of $n$. It holds at zero, giving the empty product.",
+        "reason_zh": "将素数按 $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$ 编号。不变量为 $x_n=\\prod_i\\rho_i^{d_i}$，$d_i$ 为 $n$ 的二进制数字，初始空积对应零。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL09",
+        "reason_en": "For the first missing prime $\\rho_j$, all preceding primes occur once. The update removes them and inserts $\\rho_j$, leaving higher primes unchanged. This is exactly a binary carry through the trailing one-bits, so induction proves the invariant and squarefreeness.",
+        "reason_zh": "设首个缺失素数为 $\\rho_j$，则之前素数均恰出现一次。递推删去这些素数并加入 $\\rho_j$，较高素数不变，恰等于二进制尾部连续一的进位。归纳证明不变量及无平方因子性。"
+      }
+    ],
+    "statement_en": "Let $p(k)$ be the least prime not dividing positive $k$, and let $X(k)$ be the product of all smaller primes, using the empty product one. Starting $x_0=1$, define $x_{n+1}=x_np(x_n)/X(x_n)$. Find the first positive index $t$ with $x_t=2090$.",
+    "statement_zh": "设 $p(k)$ 为不整除正整数 $k$ 的最小素数，$X(k)$ 为所有更小素数的乘积，空积取一。由 $x_0=1,x_{n+1}=x_np(x_n)/X(x_n)$ 定义序列，求首次 $x_t=2090$ 的正下标 $t$。",
+    "answer": 149,
+    "solution_en": [
+      "Index primes as $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$. The invariant is $x_n=\\prod_i\\rho_i^{d_i}$, where $d_i$ are the binary digits of $n$. It holds at zero, giving the empty product.",
+      "For the first missing prime $\\rho_j$, all preceding primes occur once. The update removes them and inserts $\\rho_j$, leaving higher primes unchanged. This is exactly a binary carry through the trailing one-bits, so induction proves the invariant and squarefreeness.",
+      "Now $2090=2\\cdot5\\cdot11\\cdot19=\\rho_0\\rho_2\\rho_4\\rho_7$, so its unique binary index is $2^0+2^2+2^4+2^7=149$. Uniqueness of prime and binary representations proves this is the first occurrence."
+    ],
+    "solution_zh": [
+      "将素数按 $\\rho_0=2,\\rho_1=3,\\rho_2=5,\\ldots$ 编号。不变量为 $x_n=\\prod_i\\rho_i^{d_i}$，$d_i$ 为 $n$ 的二进制数字，初始空积对应零。",
+      "设首个缺失素数为 $\\rho_j$，则之前素数均恰出现一次。递推删去这些素数并加入 $\\rho_j$，较高素数不变，恰等于二进制尾部连续一的进位。归纳证明不变量及无平方因子性。",
+      "$2090=2\\cdot5\\cdot11\\cdot19$ 对应位零、二、四、七，唯一二进制下标为 $149$。素因数分解与二进制表示唯一，故也是首次。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2014II/problem/15",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Prime factorization & valuations",
+      "Functional constraints & iteration"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

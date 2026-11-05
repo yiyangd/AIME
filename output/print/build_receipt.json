@@ -1,0 +1,71 @@
+{
+  "source_hashes": {
+    "questions.json": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+    "taxonomy.json": "228c73de65f4518742d175d1643e775c96820627dac60f138cca032c24880adc"
+  },
+  "question_count": 810,
+  "section_count": 44,
+  "math_review": "source data review status retained; printing does not certify mathematical correctness",
+  "visual_review": "passed: all four books and four matrix PDFs have exact visual-review evidence",
+  "matrix": [
+    {
+      "path": "output\\matrix\\AIME_2000-2026_matrix_en.pdf",
+      "sha256": "0e59ca3dcec3148be0a34048cdc9eecdaebd40fb88b28ab88ef2cfdac342a49a",
+      "pages": 10,
+      "matrix_pages": 8,
+      "dictionary_pages": 2,
+      "size_pt": [
+        906,
+        775
+      ],
+      "questions": 810,
+      "visual_review": "passed: every newly rebuilt page is pixel-identical to the all-page renders inspected by root; see output/qa/matrix-refresh-verification.json"
+    },
+    {
+      "path": "output\\matrix\\AIME_2000-2026_matrix_zh.pdf",
+      "sha256": "5d6f76e9c0da05027f4995c0e037a8e85247013fd3754ada7e3ba7f0c42056da",
+      "pages": 10,
+      "matrix_pages": 8,
+      "dictionary_pages": 2,
+      "size_pt": [
+        906,
+        775
+      ],
+      "questions": 810,
+      "visual_review": "passed: every newly rebuilt page is pixel-identical to the all-page renders inspected by root; see output/qa/matrix-refresh-verification.json"
+    },
+    {
+      "path": "output\\matrix\\AIME_2000-2026_matrix_bilingual.pdf",
+      "sha256": "8eb1b40054c65a2da4bf40e0df052042bcb43878b5cfb15f760f4834ecd30106",
+      "pages": 11,
+      "matrix_pages": 8,
+      "dictionary_pages": 3,
+      "size_pt": [
+        976,
+        940
+      ],
+      "questions": 810,
+      "visual_review": "passed: every newly rebuilt page is pixel-identical to the all-page renders inspected by root; see output/qa/matrix-refresh-verification.json"
+    },
+    {
+      "path": "output\\matrix\\AIME_2000-2026_matrix_bilingual_poster.pdf",
+      "sha256": "ac043d20d7c3b4ab4c308fd3c5b70a609953bda9b1c4f056260862a952127129",
+      "pages": 4,
+      "matrix_pages": 1,
+      "dictionary_pages": 3,
+      "size_pt": [
+        7086,
+        940
+      ],
+      "questions": 810,
+      "visual_review": "passed: every newly rebuilt page is pixel-identical to the all-page renders inspected by root; see output/qa/matrix-refresh-verification.json"
+    }
+  ],
+  "visual_review_reports": {
+    "workbook": "audit/workbook-visual-qa-template.json",
+    "solutions_en": "output/qa/solutions-en-visual-review.json",
+    "solutions_zh": "audit/final-root-visual-qa.json",
+    "textbook": "output/qa/textbook_visual_receipt.json",
+    "matrix": "output/qa/matrix-refresh-verification.json"
+  }
+}

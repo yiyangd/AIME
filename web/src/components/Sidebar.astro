@@ -1,0 +1,12 @@
+---
+import {chapters,sections,url,chapterUrl,sectionUrl} from '../lib/content';
+import Bi from './Bi.astro';
+interface Props {chapterId?:number;sectionId?:string}
+const {chapterId,sectionId}=Astro.props;
+---
+<aside class="sidebar" id="site-sidebar" aria-label="Workbook contents"><nav aria-label="Chapters and sections">
+<a class="nav-home" href={url()}>← <Bi en="All chapters" zh="全部章节" /></a>
+<div class="resource-nav"><a href={url('matrix/')}><Bi en="Topic matrix" zh="题型矩阵" /></a><a href={url('knowledge/')}><Bi en="Method notes" zh="知识教材" /></a><a href={url('downloads/')}><Bi en="Downloads" zh="资料下载" /></a></div>
+<div class="sidebar-label"><Bi en="WORKBOOK CONTENTS" zh="练习册目录" /></div>
+{chapters.map(chapter=><details class="chapter-nav" open={chapter.id===chapterId}><summary><span class="nav-chapter-number">{String(chapter.id).padStart(2,'0')}</span><span class="nav-chapter-title" data-title-en={chapter.titleEn} data-title-zh={chapter.titleZh}>{chapter.titleEn}<small lang="zh">{chapter.titleZh}</small></span></summary><div class="section-nav"><a class="chapter-overview-link" href={chapterUrl(chapter.id)} aria-current={chapter.id===chapterId&&!sectionId?'page':undefined}><Bi en="Chapter overview" zh="章节概览" /></a>{sections.filter(s=>s.chapterId===chapter.id).map(s=><a href={sectionUrl(s)} aria-current={s.id===sectionId?'page':undefined}><span class="section-number">{s.id}</span><span class="section-label" data-title-en={s.titleEn} data-title-zh={s.titleZh}>{s.titleEn}<small lang="zh">{s.titleZh}</small></span></a>)}</div></details>)}
+</nav></aside>

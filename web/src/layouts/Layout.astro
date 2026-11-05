@@ -1,0 +1,22 @@
+---
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '../styles/global.css';
+import '../styles/aime.css';
+import Sidebar from '../components/Sidebar.astro';
+import Bi from '../components/Bi.astro';
+import {url,questions,yearRange} from '../lib/content';
+interface Props {title?:string;chapterId?:number;sectionId?:string;reading?:boolean}
+const {title,chapterId,sectionId,reading=false}=Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={`${questions.length} AIME I/II questions from ${yearRange}, with bilingual statements, solutions, topic matrix and method notes.`}/><meta name="theme-color" content="#132d4c"/><link rel="icon" type="image/svg+xml" href={url('favicon.svg')}/><link rel="canonical" href={new URL(Astro.url.pathname,Astro.site)}/><link rel="stylesheet" href={url('vendor/katex/katex.min.css')}/><title>{title?`${title} · STEMHUB AIME`:'STEMHUB · AIME Topic-Based Practice Workbook'}</title></head>
+<body data-base={import.meta.env.BASE_URL} data-language="bi"><a class="skip-link" href="#main-content"><Bi en="Skip to content" zh="跳至正文"/></a><header class="site-header"><div class="header-inner"><a class="brand" href={url()} aria-label="STEMHUB AIME home"><span class="brand-mark" aria-hidden="true"><svg width="34" height="28" viewBox="0 0 40 28" fill="none"><path d="M20 14C12-3 1 2 2 14c1 13 13 12 18 0s17-12 18 0c1 12-11 17-18 0Z" stroke="currentColor" stroke-width="2.3"/><path d="M20 14C13 3 6 6 6 14s8 9 14 0 14-9 14 0-7 11-14 0Z" stroke="currentColor" stroke-width="1.3"/></svg></span><span class="brand-copy"><strong>STEMHUB <span class="brand-divider">/</span> AIME</strong><small><Bi en="Topic-Based Practice Workbook" zh="按题型编排的专题练习册"/></small></span></a><div class="header-actions"><div class="language-switch" aria-label="Reading language"><button data-language-choice="en" type="button">EN</button><button data-language-choice="zh" type="button">中文</button><button data-language-choice="bi" type="button" aria-pressed="true">双语</button></div><button type="button" class="search-trigger" aria-label="Search workbook" aria-haspopup="dialog" aria-controls="search-dialog"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span><Bi en="Search" zh="搜索" /></span><kbd>⌘ K</kbd></button>{reading&&<button class="menu-toggle" type="button" aria-label="Open contents" aria-controls="site-sidebar" aria-expanded="false"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>}</div></div></header>
+{reading?<div class="reading-layout"><Sidebar chapterId={chapterId} sectionId={sectionId}/><button class="drawer-overlay" aria-label="Close contents" tabindex="-1" hidden></button><main class="main-content" id="main-content"><slot/></main></div>:<main class="home-main" id="main-content"><slot/></main>}
+<footer class="site-footer"><span>STEMHUB · <Bi en="Learn with purpose. Practise with confidence." zh="明确目标，稳步练习。"/></span><span>AIME I / II · {yearRange}</span></footer>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="search-dialog-header"><label class="sr-only" id="search-title" for="workbook-search">Search workbook</label><input id="workbook-search" type="search" placeholder="Question ID, year, or topic… / 题号、年份、题型" autocomplete="off" spellcheck="false"/><button type="button" class="dialog-close" data-close-dialog aria-label="Close search">✕</button></div><p class="search-help"><Bi en="Try a question ID, year, or topic name." zh="可输入题号、年份或题型名称。"/></p><div class="search-results" aria-live="polite"></div></dialog>
+<dialog class="image-dialog" id="image-dialog" aria-labelledby="image-title"><div class="image-dialog-header"><strong id="image-title">Question</strong><button type="button" class="dialog-close" data-close-dialog aria-label="Close enlarged question">✕</button></div><img class="zoom-image" alt=""/></dialog>
+<script is:inline src={url('vendor/katex/katex.min.js')}></script><script is:inline src={url('vendor/katex/contrib/auto-render.min.js')}></script>
+<script>import '../scripts/workbook'; import '../scripts/language';</script></body></html>
+

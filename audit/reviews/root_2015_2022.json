@@ -1,0 +1,2314 @@
+[
+  {
+    "question_id": "AIME-2016-I-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "source_discrepancy_documented",
+    "findings": [
+      "The original MAA problem PDF uses segments QR and RS. The official equality at beta=gamma places B outside QR, so its key744 is not the literal constrained maximum. Independent constrained optimization gives the exact value below. No MAA acknowledgment of an erratum is asserted."
+    ],
+    "patch": {
+      "source_answer": 744,
+      "answer_status": "source_discrepancy",
+      "corrected_answer_en": "$\\displaystyle\\frac{248(1600-496\\sqrt6)}{2561-992\\sqrt6}\\approx728.365125470659$",
+      "corrected_answer_zh": "$\\displaystyle\\frac{248(1600-496\\sqrt6)}{2561-992\\sqrt6}\\approx728.365125470659$",
+      "editorial_note_en": "The historical source key is 744. Its equality configuration does not satisfy B on segment QR. With all original segment conditions retained, the maximum is the exact value shown above, attained when B=R. This is an independently documented source discrepancy; no official acknowledgment of an erratum is claimed.",
+      "editorial_note_zh": "历史来源答案为744，但其等号构型不满足 B 在线段 QR 上。保留原题全部线段条件时，最大值为上列精确值，在 B=R 时达到。这是独立核对发现的来源矛盾，并不声称官方已承认勘误。",
+      "solution_en": [
+        "Put $A=(0,0),Q=(w,0),R=(w,h),S=(0,h)$, $B=(w,b),C=(c,h)$ with $0\\le b\\le h,0\\le c\\le w$. Let $\\beta=\\angle BAQ$, $\\gamma=\\angle CAS$, and $\\alpha=\\angle BAC$. The triangle lies inside a rectangle corner, so $\\alpha$ is acute and $\\cos\\alpha=2\\sqrt6/5$. Also $\\beta+\\gamma=90^\\circ-\\alpha$.",
+        "The side lengths give $w=40\\cos\\beta$, $b=40\\sin\\beta$, $c=31\\sin\\gamma$, $h=31\\cos\\gamma$. Consequently $K=wh=620[\\cos(\\beta-\\gamma)+1/5]\\le744$. However equality needs $\\beta=\\gamma$, where $\\tan\\beta=\\sqrt{2/3}$. Then $b\\le h$ would require $40\\sqrt{2/3}\\le31$, which is false. Thus 744 is an unattainable upper bound for the stated segment problem.",
+        "Impose $b\\le h$: using $\\cos\\gamma=\\sin(\\alpha+\\beta)$ gives $\\tan\\beta\\le31/(200-62\\sqrt6)$. The other condition is automatic since $c=31\\cos(\\alpha+\\beta)\\le31\\cos\\alpha\\cos\\beta<40\\cos\\beta=w$. The feasible interval is therefore $0\\le\\beta\\le\\arctan[31/(200-62\\sqrt6)]\\approx32.78425^\\circ$.",
+        "The unconstrained area increases until $\\beta=(90^\\circ-\\alpha)/2\\approx39.23152^\\circ$, beyond that feasible interval. Hence the constrained maximum occurs at its right endpoint, where $b=h$ and $B=R$.",
+        "At this endpoint, $d=BC$ is horizontal and cosine law gives $d^2=2561-992\\sqrt6$. The determinant and dot product of $AB,AC$ give $hd=40\\cdot31\\sin\\alpha=248$ and $wd=40^2-40\\cdot31\\cos\\alpha=1600-496\\sqrt6$.",
+        "Thus $K_{\\max}=248(1600-496\\sqrt6)/(2561-992\\sqrt6)\\approx728.365125470659$. It is attained by $h=248/d,w=(1600-496\\sqrt6)/d,C=(w-d,h),B=R$; these satisfy all original lengths and containment conditions. The value 744 remains recorded only as the historical source key."
+      ],
+      "solution_zh": [
+        "取 $A=(0,0),Q=(w,0),R=(w,h),S=(0,h)$，并令 $B=(w,b),C=(c,h)$，其中 $0\\le b\\le h,0\\le c\\le w$。设 $\\beta=\\angle BAQ,\\gamma=\\angle CAS,\\alpha=\\angle BAC$。三角形位于矩形直角内，故 $\\alpha$ 为锐角，$\\cos\\alpha=2\\sqrt6/5$，且 $\\beta+\\gamma=90^\\circ-\\alpha$。",
+        "由边长得 $w=40\\cos\\beta,b=40\\sin\\beta,c=31\\sin\\gamma,h=31\\cos\\gamma$。所以面积 $K=620[\\cos(\\beta-\\gamma)+1/5]\\le744$。但等号要求 $\\beta=\\gamma$，此时 $\\tan\\beta=\\sqrt{2/3}$。线段条件 $b\\le h$ 却要求 $40\\sqrt{2/3}\\le31$，实际不成立。因此744只是不可达到的放宽上界。",
+        "保留 $b\\le h$，利用 $\\cos\\gamma=\\sin(\\alpha+\\beta)$ 可得 $\\tan\\beta\\le31/(200-62\\sqrt6)$。另一条件自动成立，因为 $c=31\\cos(\\alpha+\\beta)\\le31\\cos\\alpha\\cos\\beta<40\\cos\\beta=w$。所以允许 $\\beta$ 从零至约 $32.78425^\\circ$。",
+        "未加线段限制时，面积一直递增到 $\\beta=(90^\\circ-\\alpha)/2\\approx39.23152^\\circ$，已超出允许范围。因此真实最大值在允许区间右端取得，此时 $b=h$，即 $B=R$。",
+        "此时令水平边 $d=BC$。余弦定理给出 $d^2=2561-992\\sqrt6$；向量行列式和点积分别给出 $hd=248$、$wd=1600-496\\sqrt6$。",
+        "故真实最大面积为 $248(1600-496\\sqrt6)/(2561-992\\sqrt6)\\approx728.365125470659$。取 $h=248/d,w=(1600-496\\sqrt6)/d,C=(w-d,h),B=R$ 可达到，并满足原题全部边长及包含条件。744仅作为历史来源答案保留。"
+      ],
+      "unresolved_issues": [],
+      "method_chain": [
+        "Impose segment containment before claiming a trigonometric equality case",
+        "Find the true boundary maximizer by determinant and dot product"
+      ],
+      "secondary": [
+        {
+          "category_id": "AL",
+          "subtype_id": "AL08",
+          "reason_en": "The quoted equality requires $\\beta=\\gamma$ and $\\tan\\beta=\\sqrt{2/3}$. However, segment membership also requires $40\\sin\\beta\\le31\\cos\\gamma$. At the claimed equality this fails, since $40\\sqrt{2/3}>31$.",
+          "reason_zh": "来源的等号要求 $\\beta=\\gamma,\\tan\\beta=\\sqrt{2/3}$。但在线段上的条件还要求 $40\\sin\\beta\\le31\\cos\\gamma$；在所称等号处，这不成立，因为 $40\\sqrt{2/3}>31$。"
+        },
+        {
+          "category_id": "GE",
+          "subtype_id": "GE03",
+          "reason_en": "Let $\\beta=BAQ,\\gamma=CAS$. The usual source calculation gives $\\beta+\\gamma=90^\\circ-A$ and rectangle area $1240\\cos\\beta\\cos\\gamma=620[\\sin A+\\cos(\\beta-\\gamma)]\\le744$.",
+          "reason_zh": "令 $\\beta=BAQ,\\gamma=CAS$。来源的通常计算给出 $\\beta+\\gamma=90^\\circ-A$，面积为 $1240\\cos\\beta\\cos\\gamma=620[\\sin A+\\cos(\\beta-\\gamma)]\\le744$。"
+        },
+        {
+          "category_id": "GE",
+          "subtype_id": "GE07",
+          "reason_en": "The complete corrected proof uses coordinate containment, determinant area and dot products to establish the attainable boundary maximum.",
+          "reason_zh": "完整更正证明使用坐标包含条件、行列式面积与点积，建立可达到的边界最大值。"
+        }
+      ]
+    },
+    "references": [
+      "https://www.isinj.com/mt-aime/2016AIME-IProblems.pdf#page=3",
+      "https://www.isinj.com/mt-aime/2016AIME-ISolutions.pdf#page=4",
+      "audit/reviews/2016I-Q09-feasibility.md",
+      "sources/2016I-problem-p2.png",
+      "sources/2016I-sol-p4.png"
+    ]
+  },
+  {
+    "question_id": "AIME-2016-I-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Expanded the synthetic proof with directed angles modulo180 degrees, a proof that the radical axes are not parallel, explicit tangent-chord parallels, and the ray ordering Z-M-X-Y."
+    ],
+    "patch": {
+      "solution_en": [
+        "Let $M$ be the midpoint of the common tangent segment $AB$. Its powers to the two circles are $MA^2=MB^2$, so it lies on their radical axis $XY$. Both circles, and hence $X,Y$, lie in the same half-plane of $AB$. Their near/far order is therefore $M,X,Y$, with $MX\\cdot MY=MA^2$.",
+        "All angles in the next two steps are directed modulo $180^\\circ$, so replacing a ray by its opposite does not affect the statements. Cyclicity gives $\\angle(DAX)=\\angle(DYX)$ and $\\angle(CBX)=\\angle(CYX)$. Since $D,Y,C$ are collinear, these angles agree. If $AD\\parallel BC$, this would force $AX\\parallel BX$, contradicting $X\\notin AB$. Thus $Z=AD\\cap BC$ exists, and the radical-axis theorem places it on $XY$.",
+        "The same angle equality now reads $\\angle ZAX=\\angle ZBX$, proving $A,B,X,Z$ concyclic. From this circle and the tangent-chord theorem on the second original circle, $\\angle AZX=\\angle ABX=\\angle BYX$. Since $ZX\\parallel YX$, it follows that $ZA\\parallel BY$. Interchanging the two original circles similarly gives $ZB\\parallel AY$.",
+        "Thus $AYBZ$ is a parallelogram. Its diagonals $AB,YZ$ bisect each other at $M$, so $Z$ is the reflection of $Y$ through $M$. The full order on their common line is $Z,M,X,Y$. In particular $XZ=MX+MY$ and $XY=MY-MX$.",
+        "For the similarity, $Z,C,B$ are collinear and $Z,D,A$ are collinear. Cyclicity of $B,C,Y,X$ gives $\\angle XCZ=\\angle XYB=\\angle XZD$, using $YB\\parallel ZA$. Likewise $\\angle XZC=\\angle XYA=\\angle XDZ$, using $ZC\\parallel YA$ and cyclicity of $A,D,Y,X$. Therefore triangles $XZC$ and $XDZ$ are similar, and $XZ/XD=XC/XZ$, hence $XZ^2=XC\\cdot XD$.",
+        "Finally $AB^2=4MX\\cdot MY=(MX+MY)^2-(MY-MX)^2=XZ^2-XY^2=67\\cdot37-47^2=270$."
+      ],
+      "solution_zh": [
+        "令 $M$ 为公切线段 $AB$ 中点，其对两圆的幂为 $MA^2=MB^2$，所以在根轴 $XY$ 上。两相交圆位于公切线同侧，故 $X,Y$ 也同侧；结合远近条件，点序为 $M,X,Y$，且 $MX\\cdot MY=MA^2$。",
+        "以下角均按模一百八十度的有向角理解，因此可替换反向射线。由共圆得 $\\angle DAX=\\angle DYX$、$\\angle CBX=\\angle CYX$。因 $D,Y,C$ 共线，两角相等。若 $AD\\parallel BC$，便推出 $AX\\parallel BX$，与 $X$ 不在切线 $AB$ 上矛盾。因此 $Z=AD\\cap BC$ 存在，根轴定理使 $Z$ 位于 $XY$。",
+        "同一角等式给出 $\\angle ZAX=\\angle ZBX$，故 $A,B,X,Z$ 共圆。再用该圆及第二原圆切弦角，$\\angle AZX=\\angle ABX=\\angle BYX$。因 $ZX\\parallel YX$，得到 $ZA\\parallel BY$；交换两原圆同理得 $ZB\\parallel AY$。",
+        "所以 $AYBZ$ 为平行四边形，两对角线 $AB,YZ$ 在 $M$ 互相平分。$Z$ 是 $Y$ 关于 $M$ 的反射，完整点序为 $Z,M,X,Y$。故 $XZ=MX+MY$、$XY=MY-MX$。",
+        "由于 $Z,C,B$ 及 $Z,D,A$ 分别共线，利用 $B,C,Y,X$ 共圆和 $YB\\parallel ZA$，得到 $\\angle XCZ=\\angle XYB=\\angle XZD$。再用 $ZC\\parallel YA$ 及 $A,D,Y,X$ 共圆，得 $\\angle XZC=\\angle XYA=\\angle XDZ$。因此 $XZC\\sim XDZ$，比例给出 $XZ^2=XC\\cdot XD$。",
+        "最后 $AB^2=4MX\\cdot MY=(MX+MY)^2-(MY-MX)^2=XC\\cdot XD-XY^2=67\\cdot37-47^2=270$。"
+      ],
+      "secondary": [
+        {
+          "category_id": "GE",
+          "subtype_id": "GE01",
+          "reason_en": "The parallelogram and two-angle similarity transfer circle incidences into the product XZ²=XC·XD.",
+          "reason_zh": "平行四边形与两角相似将圆上关联转化为乘积关系 XZ²=XC·XD。"
+        }
+      ],
+      "unresolved_issues": [],
+      "method_chain": [
+        "Use directed radical-axis angles to prove a tangent parallelogram",
+        "Prove a crossed similarity and track its full ray order",
+        "Convert tangent power into a difference of squared secant lengths"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Pair adjacent product sums"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Count the nationality pattern 2+1"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Split a cube difference into prime-constrained factors",
+        "Check the final prime by trial division"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Place equilateral apices and midpoint coordinates",
+        "Take a two-vector determinant area"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Exchange day labels in uniform dealing",
+        "Track complete pairs after a mismatch"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Relate two minor-arc partitions through an inscribed angle",
+        "Check opposite-side ray order before adding angles"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Rotate a square side and impose line incidence",
+        "Rescale nested-square areas from a normalized model"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use the nine-per-carry digit-sum defect",
+        "Minimize digits under an exact carry pattern"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Find absorbing-zero triggers in a multiplicative recurrence",
+        "Prove permanent growth with adjacent gaps at least two",
+        "Count overlapping trigger sets by their complement"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Partition level-set inputs into cubic root triples",
+        "Match root sums and pairwise products"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Relate incenter distance to half-angle cosine",
+        "Use side-length integrality after a short geometric bound"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Average subset minima by exchangeable gap compositions"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Cancel sine products using complementary angles and doubling",
+        "Use a prime exponent to fix an integer power representation"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Sum unit trapezoids under a square-root floor graph",
+        "Track half-integer area parity across square blocks"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-I-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Project a tilted cylinder section to a central disk strip",
+        "Subtract two circular caps and apply the section tilt factor"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Convert integral rational percentages to numerator multiples"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Normalize subgroup enrollment counts inside the selected class"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Filter a minimal multiple by digit-sum congruence"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Recognize a logarithm-scaled 3–4–5 triangle"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Remove AL07: the solution uses an elementary finite integer threshold/comparison, not a substantive continuous inequality or optimization method.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Count horizontal and vertical cell-neighbor edges",
+        "Compare grid adjacency probability with a strict threshold"
+      ],
+      "secondary": [
+        {
+          "category_id": "CO",
+          "subtype_id": "CO06",
+          "reason_en": "The grid has $n(n-1)$ horizontal and the same number of vertical neighboring pairs. Among $\\binom{n^2}{2}$ unordered pairs, the probability is $2n(n-1)/\\binom{n^2}{2}=4/[n(n+1)]$.",
+          "reason_zh": "水平相邻小格对有 $n(n-1)$ 个，竖直也一样。总无序小格对数为 $\\binom{n^2}{2}$，所以概率为 $2n(n-1)/\\binom{n^2}{2}=4/[n(n+1)]$。"
+        }
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Extract a fixed root-square sum from Vieta coefficients",
+        "Enumerate positive sorted square triples",
+        "Use remaining coefficient ambiguity to choose a root-sum class"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Find the base altitude from Heron area",
+        "Express inscribed-rectangle height as a linear function of width"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Remove AL07: the solution uses an elementary finite integer threshold/comparison, not a substantive continuous inequality or optimization method.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Turn a rational bound into a short odd-factor product list",
+        "Compare all admissible integer targets"
+      ],
+      "secondary": []
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Find a diagonal-perpendicular equilateral cube section",
+        "Compute a submerged corner tetrahedron and check barrel depth"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Insert the maximum at exactly three admissible slots",
+        "Prove deletion reverses the insertion without creating a forbidden descent"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use circumcenter dot products and a perpendicular line equation"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Encode binary runs as parts of size one to three",
+        "Use a tribonacci composition recurrence"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Telescope a sine sum into a cosine endpoint difference",
+        "Order one integer from each irrational moving interval"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Replace symmetric monomials by sum and product variables",
+        "Eliminate by an equation ratio before recovering the requested invariant"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2015-II-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use negative-radius homothety at an external tangency point",
+        "Impose a signed point-line distance ratio for equal areas",
+        "Recover a circle chord from center-to-line distance"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Cancel opposite leading terms before interpolation"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Expand a cyclic mixed-base digit rotation",
+        "Use a small modulus to filter bounded digits"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Turn adjacent trapezoid bisectors into an isosceles median",
+        "Subtract midpoint coordinates at a common height"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Convert unit complex powers into an angle congruence",
+        "Count a linear congruence in bounded residue classes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Subtract squared water-relative speed equations",
+        "Add the current vector to swimmer velocities"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Classify forbidden arithmetic progressions by variable usage",
+        "Correct the overlap of one-variable forbidden cases"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Separate numerator-one candidates from an integer quotient bound",
+        "Exhaust the six larger-denominator digit complements"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Internal circle tangency initially has an absolute center-distance branch. Exclude the between-vertex-and-circumcenter branch explicitly before writing d-18.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Solve vertex-circle tangency with both center-location branches",
+        "Intersect two symmetric equal-radius circles on their common axis"
+      ],
+      "solution_en": [
+        "For the vertex-A circle, let its center distance from A be d>0. Its radius is d/2 by the 30-degree half-angle. Internal tangency is |18-d|=18-d/2. If d<=18 this forces d=0, impossible; hence d>18 and d-18=18-d/2, giving d=24 and radius12.",
+        "Put the circumcenter at $(0,0)$ and $A=(0,18)$. The small-circle centers are $(0,-6),(3\\sqrt3,3),(-3\\sqrt3,3)$. The last two circles meet on $x=0$ at $y=3\\pm\\sqrt{117}$.",
+        "The smaller triangle has circumradius $\\sqrt{117}-3$. Its side equals $\\sqrt3(\\sqrt{117}-3)=\\sqrt{351}-\\sqrt{27}$, giving $351+27=378$."
+      ],
+      "solution_zh": [
+        "设顶点 A 对应圆的圆心距 A 为 d>0。由三十度半角，半径为 d/2。内切条件是 |18-d|=18-d/2。若 d<=18，会推出 d=0，矛盾。因此 d>18，解 d-18=18-d/2 得 d=24，半径为12。",
+        "取外接圆心为 $(0,0),A=(0,18)$。三个小圆圆心为 $(0,-6),(3\\sqrt3,3),(-3\\sqrt3,3)$。后两个圆在 $x=0$ 上的交点满足 $y=3\\pm\\sqrt{117}$。",
+        "较小三角形的外接圆半径为 $\\sqrt{117}-3$，边长为 $\\sqrt3(\\sqrt{117}-3)=\\sqrt{351}-\\sqrt{27}$，所以答案为 $378$。"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Place every color once in each position parity class"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Compare sphere-section heights by a difference of squares",
+        "Project tangent-sphere center distances onto the section plane"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Replace GE06 secondary: the method uses one circle tangent within an angle and an inradius-half-angle relation, so GE05 is the fitting subtype.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Recover endpoint tangent lengths from a diagonal secant",
+        "Relate angle tangency to radius and half-angle tangent"
+      ],
+      "secondary": [
+        {
+          "category_id": "GE",
+          "subtype_id": "GE03",
+          "reason_en": "The cosine law along $AC=28$ gives $784=x^2+(x+14)^2+2x(x+14)\\cos2t$. Substitute $\\cos2t=12/x-1$ to obtain $784=24x+532$, hence $x=21/2$ and $\\cos^2t=4/7$.",
+          "reason_zh": "在 $AC=28$ 对应的三角形中用余弦定理：$784=x^2+(x+14)^2+2x(x+14)\\cos2t$。代入 $\\cos2t=12/x-1$ 得 $784=24x+532$，所以 $x=21/2,\\cos^2t=4/7$。"
+        },
+        {
+          "category_id": "GE",
+          "subtype_id": "GE05",
+          "reason_en": "The angle-bisector center gives r=6 tan(A/2), linking tangent lengths to the separation of parallel tangent sides.",
+          "reason_zh": "角平分线上的圆心给出 r=6 tan(A/2)，将切线长与两平行切边距离联系起来。"
+        }
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Replace intersection-size sums with marked-element incidences",
+        "Collapse squared binomial sums by Vandermonde"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Characterize reduced repeating-decimal numerators by a coprime divisor bound",
+        "Partition numerator classes by shared denominator primes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Replace the informal cleaver assertion with an exact unit-vector construction and explicitly equal boundary paths; retain all side-length checks.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Prove the midpoint-cleaver direction with unit vectors and equal boundary paths",
+        "Recover a triangle angle from two cleaver directions",
+        "Reduce an integer-side cosine equation by congruences and a short square table"
+      ],
+      "solution_en": [
+        "To prove the midpoint-cleaver lemma, put $C$ at the origin and use unit vectors $u$ along $CA$ and $v$ along $CB$. Write $a=CB,b=CA,c=AB$ and $M=(bu+av)/2$. If $a\\ge b$, let $X=M-b(u+v)/2=((a-b)/2)v$, a point on $CB$. Then $MX$ is parallel to $u+v$, the internal bisector direction at $C$. The boundary route $M-A-C-X$ has length $c/2+b+(a-b)/2=(a+b+c)/2$; the other route $M-B-X$ has the same length $c/2+a-(a-b)/2$. Their common cut segment adds equally to both polygon perimeters. If $b>a$, swap the roles and choose $X=((b-a)/2)u$. Thus the midpoint perimeter bisector is parallel to the opposite internal angle bisector.",
+        "Apply the lemma at the midpoints of $AB$ and $AC$: the two lines are parallel to the internal bisectors at $C$ and $B$. Their acute angle is $90^\\circ-A/2$, so the given $30^\\circ$ forces $A=120^\\circ$.",
+        "Put $b=AC,c=AB,p=b+c,k=|b-c|$. The cosine law gives $219^2=b^2+c^2+bc$, hence $k^2=4\\cdot219^2-3p^2$. Modulo $3$, then modulo $9$, both $k$ and $p$ are multiples of $3$.",
+        "Write $p=3r,k=3u$. Then $u^2+3r^2=146^2$. Triangle inequality and a nonnegative discriminant restrict $r$ to $74,75,\\ldots,84$. The values $146^2-3r^2$ are $4888,4441,3988,3529,3064,2593,2116,1633,1144,649,148$; only $2116=46^2$ is a square.",
+        "Thus $r=80,p=240,k=138$, so the side lengths are $189,51,219$. They satisfy the strict triangle inequality and the cosine equation. The perimeter is $459$."
+      ],
+      "solution_zh": [
+        "严格证明中点周长平分线引理：取 C 为原点，u,v 分别为 CA,CB 方向单位向量，写 a=CB,b=CA,c=AB，则 M=(bu+av)/2。若 a>=b，令 X=M-b(u+v)/2=((a-b)/2)v，位于 CB 上。MX 平行内角平分线方向 u+v。边界路径 M-A-C-X 长为 c/2+b+(a-b)/2=(a+b+c)/2，另一条 M-B-X 长为 c/2+a-(a-b)/2，完全相同。公共切割线段对两个多边形周长的贡献相等。若 b>a，交换两边，取 X=((b-a)/2)u 即可。所以中点周长平分线平行对角的内角平分线。",
+        "将引理用于 AB 与 AC 中点，所得两线分别平行 C、B 的内角平分线。两线锐夹角为九十度减 A/2，所以给定三十度推出 A=一百二十度。",
+        "令 $b=AC,c=AB,p=b+c,k=|b-c|$。余弦定理给出 $219^2=b^2+c^2+bc$，故 $k^2=4\\cdot219^2-3p^2$。先模 $3$ 再模 $9$，可知 $k,p$ 都是 $3$ 的倍数。",
+        "写成 $p=3r,k=3u$，得 $u^2+3r^2=146^2$。三角形不等式及判别式非负将 $r$ 限制为 $74$ 至 $84$。对应 $146^2-3r^2$ 为 $4888,4441,3988,3529,3064,2593,2116,1633,1144,649,148$，只有 $2116=46^2$ 是平方数。",
+        "所以 $r=80,p=240,k=138$，两未知边为 $189,51$。与第三边 $219$ 满足严格三角形不等式及余弦关系，周长为 $459$。"
+      ],
+      "secondary": [
+        {
+          "category_id": "GE",
+          "subtype_id": "GE03",
+          "reason_en": "Put $b=AC,c=AB,p=b+c,k=|b-c|$. The cosine law gives $219^2=b^2+c^2+bc$, hence $k^2=4\\cdot219^2-3p^2$. Modulo $3$, then modulo $9$, both $k$ and $p$ are multiples of $3$.",
+          "reason_zh": "令 $b=AC,c=AB,p=b+c,k=|b-c|$。余弦定理给出 $219^2=b^2+c^2+bc$，故 $k^2=4\\cdot219^2-3p^2$。先模 $3$ 再模 $9$，可知 $k,p$ 都是 $3$ 的倍数。"
+        },
+        {
+          "category_id": "NT",
+          "subtype_id": "NT05",
+          "reason_en": "Write $p=3r,k=3u$. Then $u^2+3r^2=146^2$. Triangle inequality and a nonnegative discriminant restrict $r$ to $74,75,\\ldots,84$. The values $146^2-3r^2$ are $4888,4441,3988,3529,3064,2593,2116,1633,1144,649,148$; only $2116=46^2$ is a square.",
+          "reason_zh": "写成 $p=3r,k=3u$，得 $u^2+3r^2=146^2$。三角形不等式及判别式非负将 $r$ 限制为 $74$ 至 $84$。对应 $146^2-3r^2$ 为 $4888,4441,3988,3529,3064,2593,2116,1633,1144,649,148$，只有 $2116=46^2$ 是平方数。"
+        },
+        {
+          "category_id": "GE",
+          "subtype_id": "GE07",
+          "reason_en": "Unit direction vectors construct the cleaver intersection and verify the two equal boundary paths.",
+          "reason_zh": "单位方向向量构造周长平分线交点并核对两条等长边界路径。"
+        }
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-I-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use bounded sine-square substitution to linearize radicals",
+        "Enumerate complementary pair-angle branches"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Convert population ratios into an integral scale and verify bus counts"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Condition on tournament pairings and the final opponent"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Equate apex and base-vertex distances to an axial sphere center"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Subtract equal-exponent logarithm equations to eliminate the input"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Encode circle triangles by two prime label gaps"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Bound sorted coordinates by total positive and negative mass",
+        "Construct the three-level equality tuple"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Locate external tangent-line intersection by a radius ratio",
+        "Use the tangent angle to recover the bounded triangle"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Characterize singleton floor blocks by consecutive jumps",
+        "Combine jump divisibility into residue classes modulo sixty"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Count generic bipartite segment crossings",
+        "Apply Euler after splitting edges at crossings"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Rewrite a nested binomial coefficient as a shifted one",
+        "Telescope a binomial row with the hockey-stick identity"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Reflect side endpoints across internal bisectors",
+        "Impose the midpoint twice to determine the common height"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Translate two ellipses into four focal distances",
+        "Choose a crossed-focus pairing with simultaneous triangle-inequality equality"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Read a low coefficient from geometric-series exponents",
+        "Normalize each coefficient variable by complementary prime moduli",
+        "Count the remaining weak composition by stars and bars"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Prove the no-gap stamp interval criterion",
+        "Give a uniform sub-97 construction over a full denomination interval",
+        "Prove sharp stamp minima by mandatory low denominations"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2022-II-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Split a cyclic hexagon into two cyclic quadrilaterals",
+        "Derive and compare their common circumradius formulas",
+        "Use Brahmagupta after eliminating the radius product"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Relate sums and products of opposite-ratio geometric series"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Normalize proportional die weights and multiply independent outcomes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Decompose a monotone polyhedron path by its horizontal layers",
+        "Count simple paths on a cycle from a fixed start"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Take a perpendicular section to measure a tetrahedron dihedral"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Subtract parallel arithmetic-sum equations to fix the day count"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Prove arc-midpoint distance equality to the incenter",
+        "Use two inscribed-angle similar triangles for a secant product"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Separate real-radical and imaginary-radical cancellation branches",
+        "Count signed factor pairs with a required sum sign"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Optimize column digit sums under a last-digit constraint",
+        "Permute each fixed digit column independently"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Parametrize an alternating geometric-arithmetic recurrence by linear factors",
+        "Find the largest square divisor permitted by a late term"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Extract forced roots from a shifted polynomial identity",
+        "Prove a periodic polynomial is constant by finite differences"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Exclude all small prime divisors by quadratic residue tables",
+        "Compare the first two four-prime products",
+        "Reject a polynomial value with a nonsquare discriminant"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Solve a reflecting-boundary hitting-time equation",
+        "Reduce a constant second difference to an arithmetic first difference"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-I-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Preserve the original circles as circumferences rather than replace them by filled disks. The final intersection count is unchanged, because every qualifying long segment crosses or touches the circumference.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Use a linear-form distance test for a thin square and circle lattice",
+        "Repeat a primitive lattice segment with shared-endpoint correction"
+      ],
+      "statement_en": "At each lattice point, center a circle of radius $1/10$ and an axis-aligned closed square of side $1/5$. The segment from $(0,0)$ to $(1001,429)$ intersects $m$ squares and $n$ circle circumferences, with tangency included. Find $m+n$.",
+      "statement_zh": "每个整点为圆心作半径 $1/10$ 的圆周，并以该点为中心作边长 $1/5$、边平行坐标轴的闭正方形。从 $(0,0)$ 到 $(1001,429)$ 的线段与 $m$ 个正方形、$n$ 个圆周相交，切触也计入。求 $m+n$。",
+      "solution_en": [
+        "The segment direction reduces to $(7,3)$, repeated143 times, because $\\gcd(1001,429)=143$. Its supporting line is $3x-7y=0$.",
+        "For square center $(u,v)$, the linear form ranges within $|3|/10+|7|/10=1$ of $3u-7v$, so intersection requires $|3u-7v|\\le1$. On one primitive segment the centers are $(0,0),(2,1),(5,2),(7,3)$, with the middle two touched at corners.",
+        "A circle can be met only if $|3u-7v|/\\sqrt{58}\\le1/10$. Since $\\sqrt{58}<10$, this forces $3u-7v=0$, so only the two primitive endpoints qualify. No centers beyond the full segment endpoints can intersect it, by the $1/10$ coordinate extents. Every center on the segment contributes a true circumference intersection, including the two full-segment endpoints, because the segment extends at least one radius into each corresponding disk.",
+        "There are144 lattice centers on the full segment and two additional square-only centers per primitive copy. Hence $m=144+2\\cdot143=430$, $n=144$, and $m+n=574$."
+      ],
+      "solution_zh": [
+        "因 $\\gcd(1001,429)=143$，原线段由方向 $(7,3)$ 的基本段平移重复143次组成，所在直线为 $3x-7y=0$。",
+        "对中心 $(u,v)$ 的正方形，线性式相对中心最多变化 $3/10+7/10=1$，所以相交要求 $|3u-7v|\\le1$。在一个基本段内，对应中心为 $(0,0),(2,1),(5,2),(7,3)$，中间两者仅在角点接触。",
+        "圆周相交须 $|3u-7v|/\\sqrt{58}\\le1/10$。因 $\\sqrt{58}<10$，整数性迫使 $3u-7v=0$，即仅有基本段两端点。利用坐标方向的 $1/10$ 范围，也可排除整段端点外的中心。 每个在线段上的圆心都产生实际圆周交点，包括整段两端，因为线段在相应圆盘内至少延伸一个半径。",
+        "全段上有144个格点中心，每个基本段另增两个仅碰正方形的中心。因此 $m=144+2\\cdot143=430,n=144$，总和 $574$。"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use the middle arithmetic term after unequal removals"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Recover conditional rain rates from a total probability equation"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Sum logarithmic variables to a monotone scalar equation"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Double-count colored layers in perpendicular directions",
+        "Construct identical rows attaining a divisibility volume bound"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Find the constant similarity ratio of iterated right-triangle altitudes",
+        "Recover a primitive Pythagorean triple from a sum identity"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Make all coefficient signs nonnegative by evaluating the variable at its negative",
+        "Evaluate the coefficient absolute sum at minus one"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use supporting-coordinate widths for nested rotated squares",
+        "Test square-divisibility of the middle square area"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Distribute prime exponents into three ordered factors",
+        "Remove repeated-factor triples before dividing by six"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Combine arithmetic-linear and geometric-exponential terms at separated indices",
+        "Use the universal divisibility of r-power times r-squared-minus-one",
+        "Exhaust a bounded ratio-and-index list"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Construct an auxiliary cyclic quadrilateral from equal secant products",
+        "Transfer chord angles to a length-ratio similarity"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Characterize possible divisor counts of kth powers",
+        "Count the union of two divisor-count residue classes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Compare path colorings with cycle colorings by merging equal endpoints"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Average a discrete minimum through tail probabilities",
+        "Count permutations with nested allowed-column sets"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use two axial sphere points as a diameter and a right-triangle altitude",
+        "Recover two positive tangent heights from their sum and product"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Rewrite a pair-product constraint as equality in weighted Cauchy",
+        "Sum a finite geometric weight list exactly"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Subtract collinear triples from all boundary-point triples"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Take the gcd of pairwise differences for a common remainder"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Prove the triangular-number last-digit period is twenty"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Locate an equidistant apex above the base circumcenter",
+        "Recover a base circumradius from triangle area"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Separate integer and fractional parts in two positional bases"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Use the complement event that both chord endpoints occupy one arc",
+        "Recover both geometric angle branches from a quadratic probability"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Complete a triple binomial sum to a fixed-size selection"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Cut a diagonal band from an angle-parameter square"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Reduce decimal concatenation modulo ninety-nine",
+        "Separate coprime consecutive factors and combine residue choices"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Recognize a real cross-ratio as a generalized-circle locus",
+        "Find a circumcenter from two perpendicular bisectors"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Classify low-median and high-median rows around the central digit",
+        "Separate symbol-pattern arrangements from within-class digit permutations"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Condition product-free subsets on their least element"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Locate the last failing interval between consecutive cubes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Reduce a nested logarithm equation to opposite monotone functions",
+        "Reduce a large power separately modulo eight and one hundred twenty-five"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-I-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Parametrize an equilateral triangle by its two axis intercepts",
+        "Maximize a sine-cosine linear form and verify every segment constraint"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q01",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Count two forbidden power-set containments by inclusion-exclusion"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q02",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Condition a championship on the random final opponent"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q03",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Intersect a triangle with two perpendicular-bisector half-planes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q04",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Count nonzero ternary digits lexicographically under a fixed upper bound"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q05",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Pair four-number pair sums into three equal complementary totals",
+        "Construct a distinct-number realization of the extremal pair-sum assignment"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q06",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Factor a completed-square difference and enforce positive factor pairs"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q07",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Enforce logarithm domains before counting quadratic roots"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q08",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Clear factorial denominators and test the prime-power divisibility"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q09",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Model a coverage-conditioned hand by repeated row and column degrees",
+        "Count a unique removable intersection card versus its absent case"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q10",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Intersect two cevian lines and move an area bisector along an edge"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q11",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Reduce nonstrong five-vertex tournaments to a source or a sink",
+        "Correct the overlap of global-source and global-sink orientations"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q12",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [
+      "Replace ambiguous Chinese fraction wording with an explicit reduced-fraction instruction; the mathematical construction and solution are correct.",
+      "Correction applied and final canonical record rechecked for original conditions, mathematics, necessary classifications and bilingual equivalence; accepted on 2026-11-05."
+    ],
+    "patch": {
+      "method_chain": [
+        "Sum rotating internal-tangency center displacements",
+        "Prove the nested-disk limit is the unique common interior point"
+      ],
+      "statement_zh": "圆 $C_0$ 半径为1，标记点为 $A_0$。对 $0<r<1$，圆 $C_n$ 半径为 $r^n$，并在 $A_{n-1}$ 与 $C_{n-1}$ 内切。将从其圆心指向 $A_{n-1}$ 的半径逆时针旋转90度得到 $A_n$。所有闭圆盘共有一点 $B$。当 $r=11/60$，将 $C_0$ 圆心到 $B$ 的距离写成最简分数 $m/n$，求 $m+n$。"
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q13",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Count symmetric apex pairs and subtract equilateral overcount",
+        "Split a polygon-count difference into six residue classes"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q14",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Classify primitive grid-line directions by the required point span",
+        "Count normalized diagonal lines by requiring both endpoint coordinate levels"
+      ]
+    },
+    "references": []
+  },
+  {
+    "question_id": "AIME-2017-II-Q15",
+    "reviewer": "source_audit",
+    "review_type": "separate_agent",
+    "source_checked": true,
+    "math_checked": true,
+    "classification_checked": true,
+    "language_checked": true,
+    "verdict": "pass",
+    "findings": [],
+    "patch": {
+      "method_chain": [
+        "Realize an opposite-edge-equal tetrahedron with sign-pattern coordinates",
+        "Sum supporting-vector norm bounds when equal-radius vertex vectors cancel"
+      ]
+    },
+    "references": []
+  }
+]

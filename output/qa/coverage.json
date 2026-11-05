@@ -1,0 +1,61 @@
+{
+  "scope": {
+    "years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "exam_forms": [
+      "I",
+      "II"
+    ],
+    "expected_papers": 54,
+    "expected_questions_per_paper": 15
+  },
+  "source_papers": 54,
+  "source_questions": 810,
+  "authored_questions": 810,
+  "missing_ids": [],
+  "primary_counts": {
+    "AL": 219,
+    "GE": 243,
+    "NT": 150,
+    "CO": 106,
+    "PS": 78,
+    "LO": 14
+  },
+  "primary_subtypes": 44,
+  "topics": 6,
+  "cross_reviewed": 810,
+  "documented_source_discrepancies": [
+    "AIME-2016-I-Q09"
+  ],
+  "unresolved": {},
+  "content_sha256": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+  "complete_coverage": true,
+  "mathematical_review": "Independent review statuses and patches are preserved per question; structure checks do not certify mathematics. Historical source keys are labeled separately wherever a proven discrepancy is documented."
+}

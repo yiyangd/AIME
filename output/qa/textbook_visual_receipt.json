@@ -1,0 +1,62 @@
+{
+  "reviewer": "print_builder",
+  "pdf": "output\\textbook\\AIME_2000-2026_textbook.pdf",
+  "pdf_sha256": "b790376e6d4f195678edbc9f329fc5e9c76344d595acd98f87ae654f5c33fc33",
+  "question_sha256": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+  "knowledge_sha256": "cc83dab75e0cbf7db4f5d1b4cc4b10cd315a8a8e85537a9f59d1cf6a6f14d360",
+  "diagram_manifest_sha256": "82f57aa2706bc0859e6deb14d038b051cff354d0b6ee8113371c4945b761bfaa",
+  "physical_pages": 897,
+  "all_pages_rendered": 897,
+  "contact_sheets_inspected": [
+    "contact-0001-0064.jpg",
+    "contact-0065-0128.jpg",
+    "contact-0129-0192.jpg",
+    "contact-0193-0256.jpg",
+    "contact-0257-0320.jpg",
+    "contact-0321-0384.jpg",
+    "contact-0385-0448.jpg",
+    "contact-0449-0512.jpg",
+    "contact-0513-0576.jpg",
+    "contact-0577-0640.jpg",
+    "contact-0641-0704.jpg",
+    "contact-0705-0768.jpg",
+    "contact-0769-0832.jpg",
+    "contact-0833-0896.jpg",
+    "contact-0897-0897.jpg"
+  ],
+  "full_resolution_pages_inspected": [
+    1,
+    2,
+    4,
+    128,
+    273,
+    295,
+    387,
+    406,
+    423,
+    444,
+    479,
+    726,
+    747,
+    848,
+    897
+  ],
+  "independent_root_full_resolution_pages": [
+    362,
+    363,
+    443,
+    444
+  ],
+  "method_page_anchors_verified": 399,
+  "section_splits_verified": 44,
+  "math_fragments_checked": 24590,
+  "horizontal_overflows": [],
+  "math_errors": [],
+  "findings": [
+    "All 15 contact sheets covering all 897 pages inspected; no clipping, overlapping text, missing diagrams or orphan headings found.",
+    "Full-resolution pages include the cover, atlas, contents, long derivative certificate, maximum-content-bottom pages, circle/ellipse/sphere/solid diagrams, and final lesson.",
+    "Ten original diagrams were constructed from canonical examples and visually checked; template_audit independently inspected their contact sheet.",
+    "Workbook practice references display actual verified WB body-page labels. Sparse continuation pages retain intentional complete content."
+  ],
+  "status": "pass"
+}

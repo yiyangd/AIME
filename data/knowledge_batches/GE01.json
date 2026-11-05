@@ -1,0 +1,733 @@
+{
+  "subtype_id": "GE01",
+  "introduction_en": "Similarity is a statement about ordered correspondence, not a picture’s appearance. Prove two angles, name matching vertices and choose a directed scale before transferring lengths, areas or volumes. Parallel cuts and reflections often create the needed triangles.",
+  "introduction_zh": "相似是有序对应关系，不是图形看起来相似。先证明两角、写明对应顶点并选择有向比例，再转移长度、面积或体积；平行截线与反射常能产生所需三角形。",
+  "prerequisites": [
+    "GE03"
+  ],
+  "methods": [
+    {
+      "method_id": "GE01-M01",
+      "title_en": "Parallel cuts turn heights into linear scales and areas into squares",
+      "title_zh": "平行截线将高度转为线性比、面积转为平方比",
+      "steps_en": [
+        "Locate the shared apex and prove the cut triangle is similar by parallel-line angles.",
+        "Its linear scale equals the ratio of heights measured from that apex.",
+        "Use the square of scale for area and cube for similar-solid volume; subtract complements only afterward.",
+        "For equal-area bands, cumulative area determines a square-root length scale, not equal length spacing."
+      ],
+      "steps_zh": [
+        "找到公共顶点，由平行线角证明截出三角形相似。",
+        "线性相似比等于从该顶点量起的高之比。",
+        "面积用比例平方，相似立体体积用立方；之后再扣补集。",
+        "等面积条带应由累积面积求平方根长度比例，不是等距截长。"
+      ],
+      "example_en": "A triangle has base ten. A parallel chord cuts off one quarter of its area at the apex. Find the chord length.",
+      "example_zh": "三角形底边十，一条平行截线在顶端截出原面积的四分之一，求截段长。",
+      "solution_en": [
+        "The small and original triangles are similar, with positive linear scale $t$.",
+        "Their area ratio gives $t^2=1/4$, so $t=1/2$.",
+        "The chord is $10t=5$. The remaining trapezoid has three quarters of the original area."
+      ],
+      "solution_zh": [
+        "小三角形与原者相似，正线性比例设为 $t$。",
+        "由面积比 $t^2=1/4$ 得 $t=1/2$。",
+        "截段为 $10t=5$，余梯形面积占原来的四分之三。"
+      ],
+      "tip_en": "Equal-height strips usually have unequal areas.",
+      "tip_zh": "等高条带通常并不等面积。",
+      "question_ids": [
+        "AIME-2000-I-Q08",
+        "AIME-2000-II-Q06",
+        "AIME-2001-I-Q07",
+        "AIME-2001-II-Q07",
+        "AIME-2003-II-Q06",
+        "AIME-2004-I-Q11",
+        "AIME-2006-I-Q07",
+        "AIME-2008-I-Q02",
+        "AIME-2010-I-Q13",
+        "AIME-2011-I-Q08",
+        "AIME-2012-I-Q08",
+        "AIME-2015-II-Q07",
+        "AIME-2018-II-Q07"
+      ],
+      "prerequisites": [
+        "GE02"
+      ],
+      "extensions_en": [
+        "Extend trapezoid legs to their common apex. Equal area on the two sides of an intermediate parallel section of length $x$ gives $x^2=(a^2+b^2)/2$, where $a,b$ are the two base lengths.",
+        "A half-turn about a triangle centroid leaves three exterior corner triangles of linear scale $1/3$, so the union area is $4/3$ of the original.",
+        "For a rectangle of width $w$ inscribed above a triangle base of length $b$ and altitude $h$, similarity gives rectangle height $h(1-w/b)$."
+      ],
+      "extensions_zh": [
+        "延长梯形两腰至公共顶点。中间平行截段长 $x$ 将梯形等面积分开时，若底长为 $a,b$，则 $x^2=(a^2+b^2)/2$。",
+        "三角形绕重心半周旋转，产生三个线性比例 $1/3$ 的外角三角形，故并集面积是原来的 $4/3$。",
+        "三角形底长 $b$、高 $h$，内部贴底矩形宽为 $w$ 时，相似给出矩形高 $h(1-w/b)$。"
+      ]
+    },
+    {
+      "method_id": "GE01-M02",
+      "title_en": "Ordered similar triangles transfer ratios and secant products",
+      "title_zh": "有序相似三角形转移比例与割线乘积",
+      "steps_en": [
+        "Write a named similarity in matching vertex order, justified by two angles.",
+        "List corresponding sides before choosing a ratio; crossed diagrams can reverse the visual order.",
+        "Multiply equal ratios to produce a length product when an intermediate side is unknown.",
+        "For cyclic or tangent configurations, use directed angles first, then verify the positive ray order."
+      ],
+      "steps_zh": [
+        "以对应顶点顺序写出相似，并用两个角证明。",
+        "选比例前先列对应边；交叉图形可能颠倒视觉次序。",
+        "中间边未知时，可相乘比例得到长度乘积。",
+        "圆或切线构型先用有向角，再核实正射线点序。"
+      ],
+      "example_en": "Triangles $ABC,DEF$ are similar in that order. If $(AB,BC,CA)=(6,9,12)$ and $DE=4$, find $EF,FD$ and their area ratio.",
+      "example_zh": "$ABC,DEF$ 按所写顺序相似，$(AB,BC,CA)=(6,9,12)$ 且 $DE=4$，求 $EF,FD$ 及面积比。",
+      "solution_en": [
+        "The correspondence is $AB\\leftrightarrow DE$, $BC\\leftrightarrow EF$, $CA\\leftrightarrow FD$.",
+        "The scale from the first to second is $4/6=2/3$, giving $EF=6,FD=8$.",
+        "The second-to-first area ratio is $(2/3)^2=4/9$. All three side ratios agree."
+      ],
+      "solution_zh": [
+        "对应关系为 $AB\\leftrightarrow DE,BC\\leftrightarrow EF,CA\\leftrightarrow FD$。",
+        "从前者到后者的比例为 $4/6=2/3$，故 $EF=6,FD=8$。",
+        "后者对前者面积比为 $4/9$，三组边比均一致。"
+      ],
+      "tip_en": "Writing only “the triangles are similar” can hide the crucial correspondence.",
+      "tip_zh": "只写三角形相似，可能掩盖关键对应关系。",
+      "question_ids": [
+        "AIME-2001-II-Q13",
+        "AIME-2002-II-Q14",
+        "AIME-2006-II-Q12",
+        "AIME-2007-I-Q12",
+        "AIME-2007-I-Q15",
+        "AIME-2013-I-Q13",
+        "AIME-2016-I-Q06",
+        "AIME-2016-I-Q15",
+        "AIME-2016-II-Q10",
+        "AIME-2019-I-Q06",
+        "AIME-2019-II-Q15",
+        "AIME-2023-II-Q03",
+        "AIME-2015-I-Q06"
+      ],
+      "prerequisites": [
+        "GE04"
+      ],
+      "extensions_en": [
+        "For a right-triangle altitude foot $D$ on hypotenuse $AB$, similarity gives $AD\\cdot AB=AC^2$, $BD\\cdot AB=BC^2$ and $CD^2=AD\\cdot BD$.",
+        "For an infinite geometric area construction, first identify the retained linear scale and square it; target pieces may require subtracting two similar areas before summing."
+      ],
+      "extensions_zh": [
+        "直角三角形高的垂足 $D$ 在斜边 $AB$ 上时，相似给出 $AD\\cdot AB=AC^2,BD\\cdot AB=BC^2,CD^2=AD\\cdot BD$。",
+        "无穷等比面积构造应先确定保留的线性比例并平方；每个目标块可能需先作两相似面积之差，再求和。"
+      ]
+    },
+    {
+      "method_id": "GE01-M03",
+      "title_en": "Extend parallel sides to reveal a homothety",
+      "title_zh": "延长平行边发现位似",
+      "steps_en": [
+        "Extend the relevant sides until triangles share an apex or an auxiliary parallelogram appears.",
+        "Use parallel sides to identify corresponding angles and the homothety center.",
+        "Keep the scale signed when the image lies across the center; length and area use its absolute value and square.",
+        "For three parallel-to-side lines, affine or barycentric level equations give the signed scale directly."
+      ],
+      "steps_zh": [
+        "延长相关边，使三角形共享顶点或出现辅助平行四边形。",
+        "由平行边确定对应角及位似中心。",
+        "像在中心另一侧时保留负位似比，长度用绝对值、面积用平方。",
+        "三条分别平行于三边的直线，可用仿射或重心坐标水平式直接求有向比例。"
+      ],
+      "example_en": "An equilateral-sided centrally symmetric hexagon is formed by cutting three corners from a triangle of sides $6,8,12$, with cuts parallel to the opposite sides. Find the hexagon side length.",
+      "example_zh": "在边长六、八、十二的三角形三角处各作平行于对边的截线，截成六边等长且对边平行的六边形，求其边长。",
+      "solution_en": [
+        "Let the common side be $s$. Along the side of length six, the two removed corner pieces have lengths $6s/8$ and $6s/12$.",
+        "Thus $6=s+6s/8+6s/12$, or $1=s(1/6+1/8+1/12)$.",
+        "The reciprocal sum is $3/8$, so $s=8/3$. The positive remaining central pieces satisfy the same relation on all three sides."
+      ],
+      "solution_zh": [
+        "设公共边长为 $s$。沿六长边，两端切去段为 $6s/8,6s/12$。",
+        "所以 $6=s+6s/8+6s/12$，即 $1=s(1/6+1/8+1/12)$。",
+        "倒数和为 $3/8$，故 $s=8/3$；另两边同样满足关系且保留中央段为正。"
+      ],
+      "tip_en": "Parallel-sided triangles may be oppositely oriented.",
+      "tip_zh": "各边平行的两个三角形可能方向相反。",
+      "question_ids": [
+        "AIME-2002-II-Q13",
+        "AIME-2004-II-Q13",
+        "AIME-2008-II-Q05",
+        "AIME-2009-I-Q05",
+        "AIME-2019-II-Q07",
+        "AIME-2022-II-Q07",
+        "AIME-2024-II-Q05"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [
+        "For barycentric coordinates $\\alpha+\\beta+\\gamma=1$, lines $\\alpha=a,\\beta=b,\\gamma=c$ form a triangle similar to the reference triangle with absolute ratio $|1-a-b-c|$.",
+        "Common external tangents of unequal circles meet at their external homothety center; center distances have the radius ratio."
+      ],
+      "extensions_zh": [
+        "在重心坐标 $\\alpha+\\beta+\\gamma=1$ 中，三线 $\\alpha=a,\\beta=b,\\gamma=c$ 所围三角形对参考三角形的绝对相似比为 $|1-a-b-c|$。",
+        "两不等圆公外切线交于外位似中心，到两圆心距离比等于半径比。"
+      ]
+    },
+    {
+      "method_id": "GE01-M04",
+      "title_en": "Equal lengths and polygon angle sums determine the orientation",
+      "title_zh": "等长与多边形角和确定方向",
+      "steps_en": [
+        "Mark equal sides and assign the matching base angles in every isosceles triangle.",
+        "Use the polygon interior sum or exterior turns to determine the remaining angles.",
+        "An obtuse angle in an isosceles triangle must be its apex; use this to decide which sides are equal.",
+        "Check positive side portions and convexity before accepting a trigonometric candidate."
+      ],
+      "steps_zh": [
+        "标记等边，并给各等腰三角形分配相等底角。",
+        "利用多边形内角和或外转角求余角。",
+        "等腰三角形中的钝角必为顶角，可据此决定相等的两边。",
+        "接受三角方程候选前，检查分段正性及凸性。"
+      ],
+      "example_en": "An isosceles triangle has one angle $120^\\circ$. Determine all its angles and the ratio of its base to an equal side.",
+      "example_zh": "等腰三角形有一角为 $120^\\circ$，求三角及底边与腰的比。",
+      "solution_en": [
+        "The $120^\\circ$ angle cannot be a base angle, since two such angles exceed $180^\\circ$.",
+        "The other two angles are $(180-120)/2=30^\\circ$.",
+        "For equal side $a$, cosine law gives base squared $2a^2-2a^2\\cos120^\\circ=3a^2$, so the ratio is $\\sqrt3$."
+      ],
+      "solution_zh": [
+        "$120^\\circ$ 不可能是底角，否则两个这样的角超过 $180^\\circ$。",
+        "另两角均为 $30^\\circ$。",
+        "腰长为 $a$ 时，余弦定理给出底边平方 $3a^2$，故比例为 $\\sqrt3$。"
+      ],
+      "tip_en": "Do not assign the two equal sides from a sketch alone.",
+      "tip_zh": "不能仅凭草图决定哪两边相等。",
+      "question_ids": [
+        "AIME-2000-I-Q14",
+        "AIME-2006-II-Q01",
+        "AIME-2007-II-Q03",
+        "AIME-2011-II-Q03",
+        "AIME-2013-I-Q12",
+        "AIME-2021-II-Q02",
+        "AIME-2025-II-Q05"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE01-M05",
+      "title_en": "Bisector reflections expose midpoint lines",
+      "title_zh": "角平分线反射显露中点线",
+      "steps_en": [
+        "Reflect a vertex across a known internal angle bisector to place it on the other side ray at the same distance.",
+        "Combine two such reflections with equal-distance or midpoint information.",
+        "Use the midpoint theorem or an isosceles median to convert the reflected geometry into a parallel segment."
+      ],
+      "steps_zh": [
+        "关于已知内角平分线反射顶点，使其落在另一边射线上且到顶点距离不变。",
+        "把两次反射与等距或中点信息结合。",
+        "用中点定理或等腰中线，将反射构型化为平行线段。"
+      ],
+      "example_en": "In triangle $ABC$, $AB=AC$ and $D$ is the midpoint of $BC$. Prove $AD$ is both an angle bisector and perpendicular to $BC$.",
+      "example_zh": "三角形中 $AB=AC$，$D$ 为 $BC$ 中点，证明 $AD$ 既平分角又垂直于 $BC$。",
+      "solution_en": [
+        "Triangles $ABD,ACD$ have equal sides $AB=AC$, $BD=DC$ and common $AD$.",
+        "SSS congruence gives equal angles at $A$ and equal adjacent angles $ADB,ADC$.",
+        "The latter sum to $180^\\circ$, so each is $90^\\circ$; hence both conclusions hold."
+      ],
+      "solution_zh": [
+        "$ABD,ACD$ 有 $AB=AC,BD=DC$ 及公共边 $AD$。",
+        "SSS 全等给出 $A$ 处两角相等，以及相邻的 $ADB,ADC$ 相等。",
+        "后两角和为 $180^\\circ$，故各为 $90^\\circ$，两结论均成立。"
+      ],
+      "tip_en": "An angle bisector becomes a median only after an isosceles relation is proved.",
+      "tip_zh": "只有证明等腰后，角平分线才能直接视为中线。",
+      "question_ids": [
+        "AIME-2011-I-Q04",
+        "AIME-2022-I-Q03"
+      ],
+      "prerequisites": [
+        "GE05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE01-M06",
+      "title_en": "Similar pieces must fit the entire original shapes",
+      "title_zh": "相似切块必须容纳于整个原图形",
+      "steps_en": [
+        "List all possible side correspondences and cut orientations compatible with the required angles.",
+        "Express every cut length or altitude in a common linear scale.",
+        "Enforce the full original side lengths and pairwise non-overlap inequalities, rather than one visible constraint.",
+        "Construct the equality case to show the best candidate is attainable."
+      ],
+      "steps_zh": [
+        "列出符合角条件的全部边对应及切割方向。",
+        "把每条截长或高写为共同线性比例。",
+        "施加原图全部边长及两两不重叠不等式，不能只检查一个明显限制。",
+        "构造等号情形，证明最优候选可达。"
+      ],
+      "example_en": "A $3$–$4$–$5$ right triangle is placed axis-aligned in a $4\\times5$ rectangle. What is the largest scale if its legs must lie along rectangle sides?",
+      "example_zh": "三、四、五直角三角形两直角边沿长方形边方向放入四乘五矩形，求最大线性比例。",
+      "solution_en": [
+        "With the three-leg along the four-side and four-leg along the five-side, $t\\le\\min(4/3,5/4)=5/4$.",
+        "The exchanged orientation requires $t\\le\\min(4/4,5/3)=1$.",
+        "Thus the maximum is $5/4$, attained by legs $15/4$ and five inside the rectangle."
+      ],
+      "solution_zh": [
+        "三长边沿四边、四长边沿五边时，$t\\le\\min(4/3,5/4)=5/4$。",
+        "交换方向时，$t\\le\\min(4/4,5/3)=1$。",
+        "故最大比例为 $5/4$，直角边 $15/4$ 与五确能放入矩形。"
+      ],
+      "tip_en": "A local angle match does not guarantee global containment.",
+      "tip_zh": "局部角度匹配并不保证整体容纳。",
+      "question_ids": [
+        "AIME-2004-I-Q09",
+        "AIME-2011-I-Q08",
+        "AIME-2013-I-Q12"
+      ],
+      "prerequisites": [
+        "LO02",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE01-M07",
+      "title_en": "Iterated right-triangle altitudes have a constant similarity ratio",
+      "title_zh": "迭代直角三角形高具有固定相似比",
+      "steps_en": [
+        "Identify the fixed acute angle shared by every new right triangle.",
+        "Use AA similarity to find the linear ratio from one altitude to the next.",
+        "Compute the first altitude from leg product divided by hypotenuse.",
+        "Sum the resulting geometric progression, checking the ratio lies strictly between zero and one."
+      ],
+      "steps_zh": [
+        "找出各新直角三角形共享的固定锐角。",
+        "由 AA 相似求相继高的线性比例。",
+        "第一条高由两直角边乘积除以斜边求得。",
+        "求所得等比级数和，并检验公比严格介于零与一。"
+      ],
+      "example_en": "Let $ABC_0$ be right at $C_0$, with $BC_0=3,AC_0=4$. Let $C_1$ be the foot from $C_0$ to $AB$; for $n\\ge2$, let $C_n$ be the foot from $C_{n-1}$ to line $C_{n-2}B$. Find $\\sum_{n\\ge1}C_{n-1}C_n$.",
+      "example_zh": "直角三角形 $ABC_0$ 在 $C_0$ 为直角，$BC_0=3,AC_0=4$。$C_1$ 为 $C_0$ 到 $AB$ 的垂足；对 $n\\ge2$，$C_n$ 为 $C_{n-1}$ 到直线 $C_{n-2}B$ 的垂足。求 $\\sum_{n\\ge1}C_{n-1}C_n$。",
+      "solution_en": [
+        "The first altitude is $3\\cdot4/5=12/5$.",
+        "The shared-angle similarity ratio is $3/5$, so subsequent altitudes are multiplied by $3/5$.",
+        "The total is $(12/5)/(1-3/5)=6$, and convergence follows from $3/5<1$."
+      ],
+      "solution_zh": [
+        "第一高为 $3\\cdot4/5=12/5$。",
+        "共享角相似比为 $3/5$，以后每条高乘此比例。",
+        "总和为 $(12/5)/(1-3/5)=6$，且因公比小于一而收敛。"
+      ],
+      "tip_en": "The first altitude and the ratio come from different parts of the original triangle.",
+      "tip_zh": "第一高与公比来自原三角形的不同度量关系。",
+      "question_ids": [
+        "AIME-2016-II-Q05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2001-I-Q07",
+    "AIME-2001-II-Q13",
+    "AIME-2002-II-Q13",
+    "AIME-2004-I-Q09",
+    "AIME-2004-II-Q13",
+    "AIME-2006-II-Q12",
+    "AIME-2007-I-Q15",
+    "AIME-2008-II-Q05",
+    "AIME-2009-I-Q05",
+    "AIME-2013-I-Q13",
+    "AIME-2015-II-Q07",
+    "AIME-2016-II-Q05",
+    "AIME-2018-II-Q07",
+    "AIME-2019-I-Q06",
+    "AIME-2019-II-Q07",
+    "AIME-2024-II-Q05"
+  ],
+  "coverage_by_question": {
+    "AIME-2000-I-Q08": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2000-II-Q06": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2001-I-Q07": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2001-II-Q07": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE07"
+      ]
+    },
+    "AIME-2003-II-Q06": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2004-I-Q11": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2006-I-Q07": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2008-I-Q02": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2010-I-Q13": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2011-I-Q08": {
+      "method_ids": [
+        "GE01-M01",
+        "GE01-M06"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2012-I-Q08": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE10"
+      ]
+    },
+    "AIME-2015-II-Q07": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2018-II-Q07": {
+      "method_ids": [
+        "GE01-M01"
+      ],
+      "prerequisites": [
+        "NT01"
+      ]
+    },
+    "AIME-2001-II-Q13": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2002-II-Q14": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    },
+    "AIME-2006-II-Q12": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2007-I-Q12": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2007-I-Q15": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2013-I-Q13": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "AL05",
+        "GE02"
+      ]
+    },
+    "AIME-2016-I-Q06": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2016-I-Q15": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2016-II-Q10": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2019-I-Q06": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2019-II-Q15": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2023-II-Q03": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2015-I-Q06": {
+      "method_ids": [
+        "GE01-M02"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2002-II-Q13": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2004-II-Q13": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2008-II-Q05": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2009-I-Q05": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2019-II-Q07": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2022-II-Q07": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    },
+    "AIME-2024-II-Q05": {
+      "method_ids": [
+        "GE01-M03"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2000-I-Q14": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2006-II-Q01": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2007-II-Q03": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2011-II-Q03": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2013-I-Q12": {
+      "method_ids": [
+        "GE01-M04",
+        "GE01-M06"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2021-II-Q02": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2025-II-Q05": {
+      "method_ids": [
+        "GE01-M04"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2011-I-Q04": {
+      "method_ids": [
+        "GE01-M05"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2022-I-Q03": {
+      "method_ids": [
+        "GE01-M05"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE07"
+      ]
+    },
+    "AIME-2004-I-Q09": {
+      "method_ids": [
+        "GE01-M06"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2016-II-Q05": {
+      "method_ids": [
+        "GE01-M07"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT05"
+      ]
+    }
+  },
+  "review": {
+    "author": "print_builder",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

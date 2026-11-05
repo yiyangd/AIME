@@ -1,0 +1,82 @@
+{
+  "GE01-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE01-M01.svg",
+    "alt_en": "A parallel chord cuts a triangle at half its linear scale.",
+    "alt_zh": "平行截线位于三角形的一半线性比例处。",
+    "example_sha256": "b6ac8797d89f3d0ab1fb573897e741521443acd4461479da6a4e18a13a4b99c6",
+    "svg_sha256": "ca8b4e4885fadd8f2b61348f2a374f3fd2298715b3632e3952d5f8ce166009c1",
+    "construction_check": "DE/BC=1/2; [ADE]/[ABC]=1/4."
+  },
+  "GE02-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE02-M01.svg",
+    "alt_en": "The inner triangle joins successive one-third division points.",
+    "alt_zh": "内三角形连接三条边上依次取的三等分点。",
+    "example_sha256": "dc06a057a5ada91aef71ef5790907d90bc7bf8a55f58fc24edae7f63e2d74862",
+    "svg_sha256": "02b94508b9e0c30b7fa2c8a04f2f1d429c917822a1b13f7ba1c198d4c1b49694",
+    "construction_check": "Affine coordinates verify the three edge ratios and inner area fraction 1/3."
+  },
+  "GE03-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE03-M01.svg",
+    "alt_en": "The apex altitude bisects the base of an isosceles 13-13-10 triangle.",
+    "alt_zh": "两腰为十三、底边为十的等腰三角形，其顶点高平分底边。",
+    "example_sha256": "68794c678199d67700c62d84906a6262036b706c9606c1e7f7e21dcce02617cf",
+    "svg_sha256": "ca7d71cb8d980ef59a720b3f526c93a9f4cd9ae69905652538cf66dfa964b2ca",
+    "construction_check": "Drawn half-legs are in ratio 5:12:13; the altitude meets the base at its midpoint."
+  },
+  "GE04-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE04-M01.svg",
+    "alt_en": "A 120-degree central angle and an inscribed vertex on the opposite arc.",
+    "alt_zh": "一百二十度圆心角与位于另一段圆弧上的圆周角顶点。",
+    "example_sha256": "75514281230e4f83d6d0ab06118a0d26004102ac68d4b5fbdea8e17e3af47884",
+    "svg_sha256": "c10536845007efd73d1ecf83c5c76e2abb3952f6f7d74b614ebbb739f3d355f6",
+    "construction_check": "Central angle 120 degrees; inscribed point C is on the major arc, so angle ACB is 60 degrees."
+  },
+  "GE05-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE05-M01.svg",
+    "alt_en": "The internal bisector meets the length-ten base in ratio two to three.",
+    "alt_zh": "内角平分线将长度十的底边按二比三分割。",
+    "example_sha256": "f71b2a990feae6451d1dadc846c6a0c636b4df0df53a17358a1358029dbf44ce",
+    "svg_sha256": "f37c936e1d9d44446f256242625e0af8210ae2270a14f52391404636af7685fb",
+    "construction_check": "Coordinates realize AB=6, AC=9, BC=10; BD/DC=2/3 and AD^2=30."
+  },
+  "GE06-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE06-M01.svg",
+    "alt_en": "Two internal tangent circles and their external tangency, drawn to one scale.",
+    "alt_zh": "两内切圆及其相互外切关系，使用统一比例绘制。",
+    "example_sha256": "143f77cd5dbd43fc0bf718ccab66f901da254352ab8a1fd52a8c9191f4f19680",
+    "svg_sha256": "76d30a4e2268d80732fdaf0f2fe48d05f49a229bbbb53455ab43213a4df99cb3",
+    "construction_check": "R=5, unit-circle center=(4,0), third center=(-1,0), radius=4; both tangency equalities hold."
+  },
+  "GE07-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE07-M01.svg",
+    "alt_en": "The segment between two lines has the specified midpoint.",
+    "alt_zh": "两直线上两点的连线具有给定中点。",
+    "example_sha256": "59ffdd76d25d84dcd09a851eb3baf7c1779a3f449980f58e142212bebe4eb839",
+    "svg_sha256": "dcf51f4d8ca14e1e981106de5a566774907df2c41b249be711564e52e61ef2ef",
+    "construction_check": "P=(2,4), Q=(2,-2), M=(2,1), PQ=6; axes use equal scales."
+  },
+  "GE08-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE08-M01.svg",
+    "alt_en": "An equilateral triangle inscribed in the ellipse with vertical altitude.",
+    "alt_zh": "内接于椭圆且高位于纵轴上的等边三角形。",
+    "example_sha256": "8b93404174f3c904de8cdf68b2b9f33d404b56e704b5dd40af7da7166ef523fb",
+    "svg_sha256": "d88f7894919d9b01224bb68adfb8597cb10bdeb610e724facb43e9aa09ff3b9d",
+    "construction_check": "Base vertices=(±16sqrt(3)/13,-22/13); both satisfy the ellipse, and all three Euclidean sides agree."
+  },
+  "GE09-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE09-M01.svg",
+    "alt_en": "An axial cross section of tangent spheres cut by a plane, with equal section radii.",
+    "alt_zh": "相切球被平面截得等半径截圆时的轴截面。",
+    "example_sha256": "08fbe97bae75a6f1ac2f1696e10a2def09ca65c126cfe6242ffcd24fa3008f23",
+    "svg_sha256": "ac47db6208cf7a28e51ada99d2fdef203bf0180fc5ebe6f0b7e02f1edde1a01e",
+    "construction_check": "Sphere radii 5,7; heights 1,5; projected separation 8sqrt(2); common section radius sqrt(24)."
+  },
+  "GE10-M01": {
+    "diagram_path": "data/diagrams/knowledge/GE10-M01.svg",
+    "alt_en": "Two similar closed boxes with edge ratio two to three and total surface area 130.",
+    "alt_zh": "两个相似闭长方体棱长比为二比三，总表面积为一百三十。",
+    "example_sha256": "528839aea596e7f91d35e8681f7bc77088b17c655d7b5d273e1deb443afc0694",
+    "svg_sha256": "bb51530fbf29f453643ae2a77490f0661addf618da8a00c8b15b9c710b47c218",
+    "construction_check": "All depicted edge vectors have scale 3/2; area ratio=4:9, volume ratio=8:27, total areas 40+90=130."
+  }
+}

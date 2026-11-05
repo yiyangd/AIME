@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Bi from '../../components/Bi.astro';
+import {chapters,sections,knowledgeUrl} from '../../lib/content';
+---
+<Layout title="Method notes / 知识教材" reading><header class="page-heading"><p class="eyebrow"><Bi en="LEARN THE METHOD" zh="掌握解题方法"/></p><h1><Bi en="Method notes" zh="知识教材" /></h1><p class="page-meta"><Bi en="Core ideas, worked examples and the questions that use them." zh="掌握核心方法，阅读例题，再进入对应真题练习。" /></p></header>{chapters.map(c=><section class="note-card"><h2 data-title-en={`${c.id}. ${c.titleEn}`} data-title-zh={`${c.id}. ${c.titleZh}`}>{c.id}. {c.titleEn}</h2><p class="title-zh">{c.titleZh}</p><div class="section-list">{sections.filter(s=>s.chapterId===c.id).map(s=><a class="section-link" href={knowledgeUrl(s)}><span class="section-link-number">{s.id}</span><span class="section-link-main"><strong class="section-link-title" data-title-en={s.titleEn} data-title-zh={s.titleZh}>{s.titleEn}</strong><span class="section-link-zh">{s.titleZh}</span><span class="section-link-meta">{s.methods.length} <Bi en="methods" zh="方法" /> · {s.questionIds.length} <Bi en="practice questions" zh="配套真题" /></span></span><span>→</span></a>)}</div></section>)}</Layout>

@@ -1,0 +1,698 @@
+[
+  {
+    "question_id": "AIME-2007-I-Q01",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "For $u^2$ divisible by $2^3\\cdot3$, the integer $u$ must be divisible by $2^2\\cdot3=12$, and this condition is sufficient.",
+      "reason_zh": "$u^2$ 被 $2^3\\cdot3$ 整除当且仅当 $u$ 被十二整除。"
+    },
+    "secondary": [],
+    "statement_en": "Count positive perfect squares below $10^6$ divisible by $24$.",
+    "statement_zh": "求小于 $10^6$ 且能被 $24$ 整除的正平方数个数。",
+    "answer": 83,
+    "solution_en": [
+      "For $u^2$ divisible by $2^3\\cdot3$, the integer $u$ must be divisible by $2^2\\cdot3=12$, and this condition is sufficient.",
+      "The positive multiples of twelve below one thousand are $12,24,\\ldots,996$, numbering $83$."
+    ],
+    "solution_zh": [
+      "$u^2$ 被 $2^3\\cdot3$ 整除当且仅当 $u$ 被十二整除。",
+      "一千以下正的十二倍数有 $83$ 个，故所求为 $83$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/1",
+    "method_chain": [
+      "Prime factorization & valuations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q02",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "At time $t\\ge4$, positions are $6t,10(t-2),8(t-4)$. Set twice each candidate position equal to the sum of the others.",
+      "reason_zh": "$t\\ge4$ 时三人位置为 $6t,10(t-2),8(t-4)$，分别令候选中间位置的两倍等于另两者之和。"
+    },
+    "secondary": [],
+    "statement_en": "A $100$-foot walkway moves at $6$ ft/s. Person A rides from time zero, B starts two seconds later walking at $4$ ft/s relative to the walkway, and C starts two more seconds later beside it at $8$ ft/s. After all start and before anyone finishes, one is midway between the others. Find that person’s distance from the start.",
+    "statement_zh": "百英尺长的传送步道速度为六英尺每秒。甲在零时登上后站立，乙晚两秒登上并相对步道以四英尺每秒行走，丙再晚两秒沿旁边以八英尺每秒前行。三人都出发且尚未走完时，一人位于另两人正中，求此人的位置。",
+    "answer": 52,
+    "solution_en": [
+      "At time $t\\ge4$, positions are $6t,10(t-2),8(t-4)$. Set twice each candidate position equal to the sum of the others.",
+      "B as midpoint gives $t=4/3$, inadmissible; C gives an inconsistent equation; A gives $12t=18t-52$, so $t=26/3$. The midpoint position is $6t=52$, before any finish."
+    ],
+    "solution_zh": [
+      "$t\\ge4$ 时三人位置为 $6t,10(t-2),8(t-4)$，分别令候选中间位置的两倍等于另两者之和。",
+      "乙为中间得 $t=4/3$，不合法；丙为中间无解；甲为中间得 $t=26/3$，位置为 $52$ 英尺，此时尚未走完。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/2",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q03",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Expansion gives imaginary parts $18b$ and $243b-b^3$. Equating and dividing by positive $b$ gives $b^2=225$.",
+      "reason_zh": "展开得到虚部分别为 $18b,243b-b^3$，相等并除以正数 $b$，得 $b^2=225$。"
+    },
+    "secondary": [],
+    "statement_en": "For $z=9+bi$ with $b>0$, the imaginary parts of $z^2,z^3$ are equal. Find $b$.",
+    "statement_zh": "$z=9+bi,b>0$，若 $z^2,z^3$ 虚部相等，求 $b$。",
+    "answer": 15,
+    "solution_en": [
+      "Expansion gives imaginary parts $18b$ and $243b-b^3$. Equating and dividing by positive $b$ gives $b^2=225$.",
+      "Thus $b=15$."
+    ],
+    "solution_zh": [
+      "展开得到虚部分别为 $18b,243b-b^3$，相等并除以正数 $b$，得 $b^2=225$。",
+      "因此 $b=15$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/3",
+    "method_chain": [
+      "Complex numbers & roots of unity"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q04",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "Collinearity allows either side of the star, so relative angular displacement must be a half-integer number of turns. The successive relative rates are both $1/60-1/84=1/84-1/140=1/210$.",
+      "reason_zh": "共线允许在恒星两侧，因此相对转数必须为半整数。相邻两周期的相对角速度均为 $1/210$ 圈每年。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Collinearity allows either side of the star, so relative angular displacement must be a half-integer number of turns. The successive relative rates are both $1/60-1/84=1/84-1/140=1/210$.",
+        "reason_zh": "共线允许在恒星两侧，因此相对转数必须为半整数。相邻两周期的相对角速度均为 $1/210$ 圈每年。"
+      }
+    ],
+    "statement_en": "Three coplanar circular orbits about one star have periods $60,84,140$ years, with uniform motion in the same direction. Starting with the star and all planets collinear, how many years until their next collinearity?",
+    "statement_zh": "三颗行星在同一平面绕恒星做同向匀速圆周运动，周期为六十、八十四、一百四十年。现四者共线，求下次共线的间隔年数。",
+    "answer": 105,
+    "solution_en": [
+      "Collinearity allows either side of the star, so relative angular displacement must be a half-integer number of turns. The successive relative rates are both $1/60-1/84=1/84-1/140=1/210$.",
+      "Thus the first positive time making relative displacement a multiple of $1/2$ is $210/2=105$ years; the third pair then differs by one full turn."
+    ],
+    "solution_zh": [
+      "共线允许在恒星两侧，因此相对转数必须为半整数。相邻两周期的相对角速度均为 $1/210$ 圈每年。",
+      "最小正时间为 $105$ 年，此时首末两行星的相对转数也为整数。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/4",
+    "method_chain": [
+      "Congruences & Chinese remainders",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q05",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "Increasing $T$ by nine raises rounded Celsius by five and the final Fahrenheit by nine. The success pattern is therefore periodic modulo nine.",
+      "reason_zh": "华氏输入加九，摄氏圆整值加五，最后华氏值加九，因此成功模式以九为周期。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Increasing $T$ by nine raises rounded Celsius by five and the final Fahrenheit by nine. The success pattern is therefore periodic modulo nine.",
+        "reason_zh": "华氏输入加九，摄氏圆整值加五，最后华氏值加九，因此成功模式以九为周期。"
+      }
+    ],
+    "statement_en": "An integer Fahrenheit temperature $32\\le T\\le1000$ is converted by $C=5(T-32)/9$, rounded to nearest integer, converted back and rounded again. How many $T$ return unchanged?",
+    "statement_zh": "将整数华氏温度 $32\\le T\\le1000$ 用 $C=5(T-32)/9$ 转成摄氏并四舍五入，再转回华氏并四舍五入。求最终与原数相同的个数。",
+    "answer": 539,
+    "solution_en": [
+      "Increasing $T$ by nine raises rounded Celsius by five and the final Fahrenheit by nine. The success pattern is therefore periodic modulo nine.",
+      "For $T=32,\\ldots,40$, final values are $32,34,34,36,36,37,37,39,39$; five inputs succeed. Through $994$ there are $107$ full blocks, giving $535$. The six remaining temperatures match the first six residues, with four successes.",
+      "Total $539$. No half-integer rounding ties arise in these conversions."
+    ],
+    "solution_zh": [
+      "华氏输入加九，摄氏圆整值加五，最后华氏值加九，因此成功模式以九为周期。",
+      "对 $32$ 至 $40$，输出依次为 $32,34,34,36,36,37,37,39,39$，五个输入保留。至 $994$ 共一百零七整块，贡献 $535$；余六个与前六个剩余类相同，另有四个。",
+      "总数为 $539$，转换过程没有恰好半整数的舍入歧义。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/5",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q06",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Split by whether the sequence visits $13$ and $26$. Between successive landmarks $0,13,26,39$, there are five routes: climb successive multiples of three, then jump to the next landmark at one of five possible starting positions.",
+      "reason_zh": "按是否经过十三、二十六分类。在相邻里程碑 $0,13,26,39$ 间，先沿三倍数前进再跳到下个里程碑，共有五个可选起跳位置，即五条路。"
+    },
+    "secondary": [],
+    "statement_en": "A frog begins at zero. Each step goes to either the next strictly larger multiple of three or the next strictly larger multiple of thirteen. Count distinct coordinate sequences ending at $39$.",
+    "statement_zh": "青蛙从零开始，每步跳到严格更大的最近三倍数或最近十三倍数。求终止于三十九的不同坐标序列数。",
+    "answer": 169,
+    "solution_en": [
+      "Split by whether the sequence visits $13$ and $26$. Between successive landmarks $0,13,26,39$, there are five routes: climb successive multiples of three, then jump to the next landmark at one of five possible starting positions.",
+      "If the intermediate landmark is omitted, each corresponding skip segment has four routes. Thus paths visiting both landmarks number $5^3=125$, only either one contribute $5\\cdot4=20$ each, and neither contributes four.",
+      "Total $125+20+20+4=169$."
+    ],
+    "solution_zh": [
+      "按是否经过十三、二十六分类。在相邻里程碑 $0,13,26,39$ 间，先沿三倍数前进再跳到下个里程碑，共有五个可选起跳位置，即五条路。",
+      "若跳过中间里程碑，相应跨段有四条路。因此两者都经有 $125$，只经其一各有 $20$，都不经有四。",
+      "合计 $169$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/6",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q07",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "The ceiling-floor difference is zero exactly for integral logarithms and one otherwise. An integer power of $\\sqrt2$ that is also an integer is a power of two.",
+      "reason_zh": "上取整减下取整恰在对数为整数时为零，其余为一。整数值的 $\\sqrt2$ 整数幂恰为二的幂。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "The ceiling-floor difference is zero exactly for integral logarithms and one otherwise. An integer power of $\\sqrt2$ that is also an integer is a power of two.",
+        "reason_zh": "上取整减下取整恰在对数为整数时为零，其余为一。整数值的 $\\sqrt2$ 整数幂恰为二的幂。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Thus subtract $1+2+\\cdots+512=1023$ from the sum of all integers one through one thousand: $N=500500-1023=499477$. The remainder is $477$.",
+        "reason_zh": "因此从 $500500$ 中减去 $1+2+\\cdots+512=1023$，得 $N=499477$，余数 $477$。"
+      }
+    ],
+    "statement_en": "Let $N=\\sum_{k=1}^{1000}k(\\lceil\\log_{\\sqrt2}k\\rceil-\\lfloor\\log_{\\sqrt2}k\\rfloor)$. Find $N\\bmod1000$.",
+    "statement_zh": "令 $N=\\sum_{k=1}^{1000}k(\\lceil\\log_{\\sqrt2}k\\rceil-\\lfloor\\log_{\\sqrt2}k\\rfloor)$，求除以一千的余数。",
+    "answer": 477,
+    "solution_en": [
+      "The ceiling-floor difference is zero exactly for integral logarithms and one otherwise. An integer power of $\\sqrt2$ that is also an integer is a power of two.",
+      "Thus subtract $1+2+\\cdots+512=1023$ from the sum of all integers one through one thousand: $N=500500-1023=499477$. The remainder is $477$."
+    ],
+    "solution_zh": [
+      "上取整减下取整恰在对数为整数时为零，其余为一。整数值的 $\\sqrt2$ 整数幂恰为二的幂。",
+      "因此从 $500500$ 中减去 $1+2+\\cdots+512=1023$，得 $N=499477$，余数 $477$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/7",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Logarithms & exponentials",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q08",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The two quadratics must share a root, since otherwise their degree-four product divides a cubic. Twice the first minus the second is $-15x-3k$, so a common root is $x=-k/5$.",
+      "reason_zh": "两二次式必须有公共根，否则四次乘积整除三次多项式。前式两倍减后式为 $-15x-3k$，故公共根为 $-k/5$。"
+    },
+    "secondary": [],
+    "statement_en": "A cubic is divisible by both $x^2+(k-29)x-k$ and $2x^2+(2k-43)x+k$. Find the largest real $k$ possible.",
+    "statement_zh": "一个三次多项式同时被 $x^2+(k-29)x-k$ 与 $2x^2+(2k-43)x+k$ 整除，求可能的最大实数 $k$。",
+    "answer": 30,
+    "solution_en": [
+      "The two quadratics must share a root, since otherwise their degree-four product divides a cubic. Twice the first minus the second is $-15x-3k$, so a common root is $x=-k/5$.",
+      "Substitution into the first gives $-4k^2+120k=0$, hence $k=0$ or $30$. For $30$, the factors are $(x+6)(x-5)$ and $(x+6)(2x+5)$, which indeed divide their cubic least common multiple.",
+      "The maximum is $30$."
+    ],
+    "solution_zh": [
+      "两二次式必须有公共根，否则四次乘积整除三次多项式。前式两倍减后式为 $-15x-3k$，故公共根为 $-k/5$。",
+      "代回得 $-4k^2+120k=0$，所以 $k=0,30$。后者两式分解为 $(x+6)(x-5),(x+6)(2x+5)$，确能同为某三次式因子。",
+      "最大值为 $30$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/8",
+    "method_chain": [
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q09",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "The hypotenuse is $34$. Circle centers share the same perpendicular distance $r$ from it, so their tangency-foot separation is $2r$. At the two ends, tangent distances are $r\\tan(A/2)$ and $r\\tan(B/2)$.",
+      "reason_zh": "斜边为三十四，两圆心距斜边均为 $r$，故两个切足间距为 $2r$。两端到切足的距离分别为 $r\\tan(A/2),r\\tan(B/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Half-angle formulas give $\\tan(A/2)=16/(34+30)=1/4$ and $\\tan(B/2)=30/(34+16)=3/5$. Hence $34=r(1/4+2+3/5)=57r/20$.",
+        "reason_zh": "半角公式给出 $\\tan(A/2)=1/4,\\tan(B/2)=3/5$，所以 $34=r(1/4+2+3/5)$。"
+      }
+    ],
+    "statement_en": "A right triangle has legs $30,16$. On the hypotenuse’s exterior side, two equal circles touch one another externally; one is tangent to the hypotenuse and the extension of the first leg, the other to the hypotenuse and the extension of the second leg. If their radius is reduced $p/q$, find $p+q$.",
+    "statement_zh": "直角三角形两直角边长为三十、十六。在斜边外侧作两个等圆相互外切，并分别与斜边及两条直角边的向外延长线相切。半径为最简分数 $p/q$，求 $p+q$。",
+    "answer": 737,
+    "solution_en": [
+      "The hypotenuse is $34$. Circle centers share the same perpendicular distance $r$ from it, so their tangency-foot separation is $2r$. At the two ends, tangent distances are $r\\tan(A/2)$ and $r\\tan(B/2)$.",
+      "Half-angle formulas give $\\tan(A/2)=16/(34+30)=1/4$ and $\\tan(B/2)=30/(34+16)=3/5$. Hence $34=r(1/4+2+3/5)=57r/20$.",
+      "Thus $r=680/57$ and $p+q=737$."
+    ],
+    "solution_zh": [
+      "斜边为三十四，两圆心距斜边均为 $r$，故两个切足间距为 $2r$。两端到切足的距离分别为 $r\\tan(A/2),r\\tan(B/2)$。",
+      "半角公式给出 $\\tan(A/2)=1/4,\\tan(B/2)=3/5$，所以 $34=r(1/4+2+3/5)$。",
+      "半径为 $680/57$，所求 $737$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/9",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q10",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "Choose the first column in $\\binom63=20$ ways. If the second overlaps it in $j$ rows, its choices number $\\binom3j\\binom3{3-j}$. There are then $j$ completed rows, $j$ empty rows and $6-2j$ singly shaded rows.",
+      "reason_zh": "首列有 $20$ 种。若第二列与其重叠 $j$ 行，选择数为 $\\binom3j\\binom3{3-j}$；此后已满、全空行各 $j$，单涂行 $6-2j$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "The last two columns must both use the empty rows, and column three chooses $3-j$ of the singly shaded rows; the final column is forced. Thus $N=20\\sum_{j=0}^3\\binom3j^2\\binom{6-2j}{3-j}=20(20+54+18+1)=1860$.",
+        "reason_zh": "末两列均须填空行，第三列再从单涂行选 $3-j$ 个，第四列唯一确定。因此 $N=20\\sum_{j=0}^3\\binom3j^2\\binom{6-2j}{3-j}=1860$。"
+      }
+    ],
+    "statement_en": "Shade twelve cells of a six-row, four-column grid so each row has two and each column three shaded cells. Find the number of shadings modulo $1000$.",
+    "statement_zh": "六行四列方格中涂十二格，使每行恰两格、每列恰三格，求涂法数除以一千的余数。",
+    "answer": 860,
+    "solution_en": [
+      "Choose the first column in $\\binom63=20$ ways. If the second overlaps it in $j$ rows, its choices number $\\binom3j\\binom3{3-j}$. There are then $j$ completed rows, $j$ empty rows and $6-2j$ singly shaded rows.",
+      "The last two columns must both use the empty rows, and column three chooses $3-j$ of the singly shaded rows; the final column is forced. Thus $N=20\\sum_{j=0}^3\\binom3j^2\\binom{6-2j}{3-j}=20(20+54+18+1)=1860$.",
+      "The remainder is $860$."
+    ],
+    "solution_zh": [
+      "首列有 $20$ 种。若第二列与其重叠 $j$ 行，选择数为 $\\binom3j\\binom3{3-j}$；此后已满、全空行各 $j$，单涂行 $6-2j$。",
+      "末两列均须填空行，第三列再从单涂行选 $3-j$ 个，第四列唯一确定。因此 $N=20\\sum_{j=0}^3\\binom3j^2\\binom{6-2j}{3-j}=1860$。",
+      "余数为 $860$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/10",
+    "method_chain": [
+      "Subsets & binomial identities",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q11",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "$b(p)=k$ exactly when $k^2-k+1\\le p\\le k^2+k$, a block of $2k$ integers. The blocks $k=1,\\ldots,44$ end at $1980$.",
+      "reason_zh": "$b(p)=k$ 等价于 $k^2-k+1\\le p\\le k^2+k$，每块有 $2k$ 个整数。一至四十四的块恰覆盖至 $1980$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "They contribute $2\\sum_{k=1}^{44}k^2=58740$. Remaining $27$ inputs each give $45$, adding $1215$. Total $59955$, remainder $955$.",
+        "reason_zh": "其贡献为 $2\\sum_{k=1}^{44}k^2=58740$，剩余二十七项各为四十五，总和 $59955$，余数为 $955$。"
+      }
+    ],
+    "statement_en": "Let $b(p)$ be the nearest positive integer to $\\sqrt p$. Find $(\\sum_{p=1}^{2007}b(p))\\bmod1000$.",
+    "statement_zh": "令 $b(p)$ 为最接近 $\\sqrt p$ 的正整数，求 $\\sum_{p=1}^{2007}b(p)$ 除以一千的余数。",
+    "answer": 955,
+    "solution_en": [
+      "$b(p)=k$ exactly when $k^2-k+1\\le p\\le k^2+k$, a block of $2k$ integers. The blocks $k=1,\\ldots,44$ end at $1980$.",
+      "They contribute $2\\sum_{k=1}^{44}k^2=58740$. Remaining $27$ inputs each give $45$, adding $1215$. Total $59955$, remainder $955$."
+    ],
+    "solution_zh": [
+      "$b(p)=k$ 等价于 $k^2-k+1\\le p\\le k^2+k$，每块有 $2k$ 个整数。一至四十四的块恰覆盖至 $1980$。",
+      "其贡献为 $2\\sum_{k=1}^{44}k^2=58740$，剩余二十七项各为四十五，总和 $59955$，余数为 $955$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/11",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q12",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "The rotation is $15^\\circ$; denote image vertices $B\\prime,C\\prime$. Define $D=AB\\prime\\cap BC$, $E=BC\\cap B\\prime C\\prime$, $F=AC\\cap B\\prime C\\prime$. The overlap is $ADEF=[AB\\prime F]-[EB\\prime D]$, and $AB\\prime\\perp BC$.",
+      "reason_zh": "旋转角为十五度，像点记为 $B\\prime,C\\prime$。令 $D=AB\\prime\\cap BC,E=BC\\cap B\\prime C\\prime,F=AC\\cap B\\prime C\\prime$，重叠为 $ADEF$，面积是 $[AB\\prime F]-[EB\\prime D]$，且 $AB\\prime\\perp BC$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "Sine rule in $AB\\prime F$ gives $B\\prime F=10\\sqrt6$, so its area is $50(3+\\sqrt3)$. Right triangle $ABD$ has area fifty. Similarity $EB\\prime D\\sim ABD$ gives its area as $50[(1-\\cos15^\\circ)/\\sin15^\\circ]^2=50(15+8\\sqrt3-6\\sqrt6-10\\sqrt2)$.",
+        "reason_zh": "对 $AB\\prime F$ 用正弦定理得 $B\\prime F=10\\sqrt6$，面积为 $50(3+\\sqrt3)$。$ABD$ 面积为五十，且 $EB\\prime D$ 与其相似，面积为 $50[(1-\\cos15^\\circ)/\\sin15^\\circ]^2=50(15+8\\sqrt3-6\\sqrt6-10\\sqrt2)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The rotation is $15^\\circ$; denote image vertices $B\\prime,C\\prime$. Define $D=AB\\prime\\cap BC$, $E=BC\\cap B\\prime C\\prime$, $F=AC\\cap B\\prime C\\prime$. The overlap is $ADEF=[AB\\prime F]-[EB\\prime D]$, and $AB\\prime\\perp BC$.",
+        "reason_zh": "旋转角为十五度，像点记为 $B\\prime,C\\prime$。令 $D=AB\\prime\\cap BC,E=BC\\cap B\\prime C\\prime,F=AC\\cap B\\prime C\\prime$，重叠为 $ADEF$，面积是 $[AB\\prime F]-[EB\\prime D]$，且 $AB\\prime\\perp BC$。"
+      }
+    ],
+    "statement_en": "Isosceles triangle $ABC$ has $A=(0,0),B=(20,0)$, $AC=BC$, $C$ in the first quadrant and $\\angle BAC=75^\\circ$. Rotate about $A$ until $C$ reaches the positive $y$ axis. The overlap area is $p\\sqrt2+q\\sqrt3+r\\sqrt6+s$ with integer coefficients. Find $(p-q+r-s)/2$.",
+    "statement_zh": "等腰三角形 $ABC$ 中 $A=(0,0),B=(20,0),AC=BC$，$C$ 在第一象限，$\\angle BAC=75^\\circ$。绕 $A$ 逆时针旋转至 $C$ 落在正 $y$ 轴，重叠面积为 $p\\sqrt2+q\\sqrt3+r\\sqrt6+s$，求 $(p-q+r-s)/2$。",
+    "answer": 875,
+    "solution_en": [
+      "The rotation is $15^\\circ$; denote image vertices $B\\prime,C\\prime$. Define $D=AB\\prime\\cap BC$, $E=BC\\cap B\\prime C\\prime$, $F=AC\\cap B\\prime C\\prime$. The overlap is $ADEF=[AB\\prime F]-[EB\\prime D]$, and $AB\\prime\\perp BC$.",
+      "Sine rule in $AB\\prime F$ gives $B\\prime F=10\\sqrt6$, so its area is $50(3+\\sqrt3)$. Right triangle $ABD$ has area fifty. Similarity $EB\\prime D\\sim ABD$ gives its area as $50[(1-\\cos15^\\circ)/\\sin15^\\circ]^2=50(15+8\\sqrt3-6\\sqrt6-10\\sqrt2)$.",
+      "Subtract to obtain $500\\sqrt2-350\\sqrt3+300\\sqrt6-600$. Thus the requested expression is $(500+350+300+600)/2=875$."
+    ],
+    "solution_zh": [
+      "旋转角为十五度，像点记为 $B\\prime,C\\prime$。令 $D=AB\\prime\\cap BC,E=BC\\cap B\\prime C\\prime,F=AC\\cap B\\prime C\\prime$，重叠为 $ADEF$，面积是 $[AB\\prime F]-[EB\\prime D]$，且 $AB\\prime\\perp BC$。",
+      "对 $AB\\prime F$ 用正弦定理得 $B\\prime F=10\\sqrt6$，面积为 $50(3+\\sqrt3)$。$ABD$ 面积为五十，且 $EB\\prime D$ 与其相似，面积为 $50[(1-\\cos15^\\circ)/\\sin15^\\circ]^2=50(15+8\\sqrt3-6\\sqrt6-10\\sqrt2)$。",
+      "相减得到 $500\\sqrt2-350\\sqrt3+300\\sqrt6-600$，所求为 $875$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/12",
+    "method_chain": [
+      "Areas & area ratios",
+      "Angles, similarity & parallel lines",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q13",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Take base $A=(0,0,0),B=(4,0,0),C=(4,4,0),D=(0,4,0)$ and apex $E=(2,2,2\\sqrt2)$. The cutting plane is $x+y+2\\sqrt2z=6$.",
+      "reason_zh": "取底面标准坐标，顶点为 $E=(2,2,2\\sqrt2)$，截平面为 $x+y+2\\sqrt2z=6$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE10",
+        "reason_en": "Take base $A=(0,0,0),B=(4,0,0),C=(4,4,0),D=(0,4,0)$ and apex $E=(2,2,2\\sqrt2)$. The cutting plane is $x+y+2\\sqrt2z=6$.",
+        "reason_zh": "取底面标准坐标，顶点为 $E=(2,2,2\\sqrt2)$，截平面为 $x+y+2\\sqrt2z=6$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Its section has vertices $(1,1,\\sqrt2),(7/2,1/2,\\sqrt2/2),(4,2,0),(2,4,0),(1/2,7/2,\\sqrt2/2)$. Their $xy$ projections have shoelace area eight.",
+        "reason_zh": "截面五顶点为 $(1,1,\\sqrt2),(7/2,1/2,\\sqrt2/2),(4,2,0),(2,4,0),(1/2,7/2,\\sqrt2/2)$，其 $xy$ 投影用鞋带公式得面积八。"
+      }
+    ],
+    "statement_en": "A square pyramid has all eight edges length four. A plane passes through the midpoints of one lateral edge $AE$ and base edges $BC,CD$. If its cross-sectional area is $\\sqrt p$, find $p$.",
+    "statement_zh": "正方锥的八条棱都长四。过侧棱 $AE$、底边 $BC,CD$ 的中点作平面，截面面积为 $\\sqrt p$，求 $p$。",
+    "answer": 80,
+    "solution_en": [
+      "Take base $A=(0,0,0),B=(4,0,0),C=(4,4,0),D=(0,4,0)$ and apex $E=(2,2,2\\sqrt2)$. The cutting plane is $x+y+2\\sqrt2z=6$.",
+      "Its section has vertices $(1,1,\\sqrt2),(7/2,1/2,\\sqrt2/2),(4,2,0),(2,4,0),(1/2,7/2,\\sqrt2/2)$. Their $xy$ projections have shoelace area eight.",
+      "Projection onto $xy$ scales area by $1/\\sqrt{1+(1/(2\\sqrt2))^2+(1/(2\\sqrt2))^2}=2/\\sqrt5$. Thus the section area is $8\\sqrt5/2=\\sqrt{80}$, giving $p=80$."
+    ],
+    "solution_zh": [
+      "取底面标准坐标，顶点为 $E=(2,2,2\\sqrt2)$，截平面为 $x+y+2\\sqrt2z=6$。",
+      "截面五顶点为 $(1,1,\\sqrt2),(7/2,1/2,\\sqrt2/2),(4,2,0),(2,4,0),(1/2,7/2,\\sqrt2/2)$，其 $xy$ 投影用鞋带公式得面积八。",
+      "该平面投影面积与实际面积之比为 $2/\\sqrt5$，故实际面积为 $4\\sqrt5=\\sqrt{80}$，所以 $p=80$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/13",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Volumes & solid geometry",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q14",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "The invariant $(a_{n+1}+a_{n-1})/a_n$ is constant: subtract consecutive product recurrences and factor to equate its consecutive values. Since $a_3=672$, that constant is $(672+3)/3=225$.",
+      "reason_zh": "连续两式相减并因式分解，可知 $(a_{n+1}+a_{n-1})/a_n$ 不变。由 $a_3=672$，常数为二百二十五。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO01",
+        "reason_en": "The invariant $(a_{n+1}+a_{n-1})/a_n$ is constant: subtract consecutive product recurrences and factor to equate its consecutive values. Since $a_3=672$, that constant is $(672+3)/3=225$.",
+        "reason_zh": "连续两式相减并因式分解，可知 $(a_{n+1}+a_{n-1})/a_n$ 不变。由 $a_3=672$，常数为二百二十五。"
+      }
+    ],
+    "statement_en": "Let $a_1=a_2=3$ and $a_{n+1}a_{n-1}=a_n^2+2007$ for $n\\ge2$. Find $\\left\\lfloor(a_{2007}^2+a_{2006}^2)/(a_{2007}a_{2006})\\right\\rfloor$.",
+    "statement_zh": "令 $a_1=a_2=3$，$n\\ge2$ 时 $a_{n+1}a_{n-1}=a_n^2+2007$。求 $\\left\\lfloor(a_{2007}^2+a_{2006}^2)/(a_{2007}a_{2006})\\right\\rfloor$。",
+    "answer": 224,
+    "solution_en": [
+      "The invariant $(a_{n+1}+a_{n-1})/a_n$ is constant: subtract consecutive product recurrences and factor to equate its consecutive values. Since $a_3=672$, that constant is $(672+3)/3=225$.",
+      "Thus $a_{n+1}=225a_n-a_{n-1}$ and $a_{n+1}^2+a_n^2+2007=225a_na_{n+1}$. Positive terms increase strictly after $a_2$, so the late adjacent product exceeds $2007$.",
+      "The target ratio is $225-2007/(a_{2006}a_{2007})$, strictly between $224$ and $225$. Its floor is $224$."
+    ],
+    "solution_zh": [
+      "连续两式相减并因式分解，可知 $(a_{n+1}+a_{n-1})/a_n$ 不变。由 $a_3=672$，常数为二百二十五。",
+      "故 $a_{n+1}=225a_n-a_{n-1}$，并有 $a_{n+1}^2+a_n^2+2007=225a_na_{n+1}$。正项在第二项后严格递增，所以后期相邻乘积大于 $2007$。",
+      "目标比为 $225-2007/(a_{2006}a_{2007})$，严格在二百二十四与二百二十五之间，取整为 $224$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/14",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Games, invariants & state strategies"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2007-I-Q15",
+    "paper_id": "AIME-2007-I",
+    "exam_year": 2007,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "Write side length $s$ and $AE=t$. Subtract the three corner triangles from $ABC$: $[DEF]=(\\sqrt3/4)[5(s-t)+2t-10]$. Hence $5(s-t)+2t=66$.",
+      "reason_zh": "设边长 $s,AE=t$，从原三角形扣去三个角三角形，面积条件化为 $5(s-t)+2t=66$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Write side length $s$ and $AE=t$. Subtract the three corner triangles from $ABC$: $[DEF]=(\\sqrt3/4)[5(s-t)+2t-10]$. Hence $5(s-t)+2t=66$.",
+        "reason_zh": "设边长 $s,AE=t$，从原三角形扣去三个角三角形，面积条件化为 $5(s-t)+2t=66$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "The sixty-degree angle at $E$ makes $AEF$ similar to $CDE$ by their remaining angles. Thus $t/5=2/(s-t)$, so $t(s-t)=10$.",
+        "reason_zh": "由 $E$ 处六十度角及其余角，$AEF$ 与 $CDE$ 相似，所以 $t/5=2/(s-t)$，即 $t(s-t)=10$。"
+      }
+    ],
+    "statement_en": "In equilateral $ABC$, $F\\in AB,D\\in BC$ satisfy $AF=5,CD=2$. A point $E\\in CA$ has $\\angle DEF=60^\\circ$ and $[DEF]=14\\sqrt3$. The two possible side lengths are $p\\pm q\\sqrt r$ with rational $p,q$ and squarefree integer $r$. Find $r$.",
+    "statement_zh": "等边三角形 $ABC$ 内，$F\\in AB,D\\in BC$ 满足 $AF=5,CD=2$。$E\\in CA$ 使 $\\angle DEF=60^\\circ$，面积 $[DEF]=14\\sqrt3$。原三角形边长两个可能值为有理数 $p,q$ 构成的 $p\\pm q\\sqrt r$，$r$ 无平方素因子，求 $r$。",
+    "answer": 989,
+    "solution_en": [
+      "Write side length $s$ and $AE=t$. Subtract the three corner triangles from $ABC$: $[DEF]=(\\sqrt3/4)[5(s-t)+2t-10]$. Hence $5(s-t)+2t=66$.",
+      "The sixty-degree angle at $E$ makes $AEF$ similar to $CDE$ by their remaining angles. Thus $t/5=2/(s-t)$, so $t(s-t)=10$.",
+      "Substitute $s-t=10/t$ to get $t^2-33t+25=0$, giving $t=(33\\pm\\sqrt{989})/2$. Then $s=t+10/t=(231\\pm3\\sqrt{989})/10$. Since $989=23\\cdot43$ is squarefree, the answer is $989$."
+    ],
+    "solution_zh": [
+      "设边长 $s,AE=t$，从原三角形扣去三个角三角形，面积条件化为 $5(s-t)+2t=66$。",
+      "由 $E$ 处六十度角及其余角，$AEF$ 与 $CDE$ 相似，所以 $t/5=2/(s-t)$，即 $t(s-t)=10$。",
+      "代入得 $t^2-33t+25=0$，所以 $s=(231\\pm3\\sqrt{989})/10$。$989=23\\cdot43$ 无平方素因子，故所求 $989$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2007I/problem/15",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Areas & area ratios",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

@@ -1,0 +1,2720 @@
+[
+  {
+    "subtype_id": "GE06",
+    "reviewer": "root",
+    "content_sha256": "8b25a2c5d2cdf1da2da0f6c2eb59310f726ee0754c855410507f886ef420eb82",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "GE06-M01",
+      "GE06-M02",
+      "GE06-M03",
+      "GE06-M04",
+      "GE06-M05",
+      "GE06-M06",
+      "GE06-M07",
+      "GE06-M08",
+      "GE06-M09",
+      "GE06-M10"
+    ],
+    "findings": [
+      "Read all ten bilingual procedures/examples/solutions/extensions and matched all25 listed routes to their canonical method chains, reading full solutions for the tangent-ray and power cases. Every worked numerical example recomputed independently.",
+      "Corrected the external-similarity-center statement for equal radii; made the contained corner-circle setup and positive homothety scale explicit.",
+      "Corrected a substantive radius-symbol error in the general rolling formula: the moving radius r, not fixed R, multiplies the ground-frame spin. The original example already used moving radius2 and correctly gave135 degrees.",
+      "Checked center-distance example(r4 at-1), hexagonal ring radius3, similarity distance5/3, triangle inradius sqrt7, ellipse a4/b²12, power-gradient distance4, corner radius1/2, torus contact radius5/2, and incidence slope4/3."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "GE06-M01",
+          "title_en": "Center-distance equations need ray and containment checks",
+          "title_zh": "圆心距离方程需要射线与容纳检验",
+          "steps_en": [
+            "Use symmetry or angle bisectors to locate the unknown center with as few variables as possible.",
+            "Write each tangency as a radius sum or difference, keeping absolute values until the center order is known.",
+            "Solve and restore all unsquared signs, positive radii, segment contact positions and containment inequalities."
+          ],
+          "steps_zh": [
+            "利用对称或角平分线，以尽可能少的变量定位未知圆心。",
+            "将各相切写为半径和或差；圆心次序未明时保留绝对值。",
+            "求解后补查未平方符号、正半径、线段切点位置及容纳不等式。"
+          ],
+          "example_en": "A radius-$5$ circle is centered at $(0,0)$ and contains a radius-$1$ circle centered at $(4,0)$. A third circle has center on the negative $x$ axis, is internally tangent to the large circle and externally tangent to the unit circle. Find its radius.",
+          "example_zh": "圆心 $(0,0)$、半径 $5$ 的圆内有圆心 $(4,0)$、半径 $1$ 的圆。第三圆圆心在负 $x$ 轴，与大圆内切、与单位圆外切，求其半径。",
+          "solution_en": [
+            "Write its center as $(-t,0)$ with $t>0$ and its radius as $r>0$. Internal tangency gives $t+r=5$.",
+            "External tangency gives $4+t=r+1$. Together these yield $t=1,r=4$.",
+            "The circle is contained in the large one because center distance plus radius is $1+4=5$; its center distance to the unit circle is five, equal to the radius sum."
+          ],
+          "solution_zh": [
+            "设圆心为 $(-t,0)$，其中 $t>0$，半径 $r>0$。内切给出 $t+r=5$。",
+            "外切给出 $4+t=r+1$，联立得 $t=1,r=4$。",
+            "圆心距加半径为 $1+4=5$，确在大圆内；到单位圆的圆心距为五，等于半径和。"
+          ],
+          "tip_en": "A squared distance equation cannot distinguish internal from external tangency by itself.",
+          "tip_zh": "仅凭距离平方方程无法区分内切与外切。",
+          "question_ids": [
+            "AIME-2004-II-Q12",
+            "AIME-2008-II-Q11",
+            "AIME-2009-II-Q05",
+            "AIME-2014-II-Q08",
+            "AIME-2019-I-Q11",
+            "AIME-2022-I-Q08",
+            "AIME-2025-II-Q06"
+          ],
+          "prerequisites": [
+            "GE05"
+          ],
+          "extensions_en": [
+            "If a center lies on a vertex angle bisector at distance $d$ from the vertex, its radius is $d\\sin(A/2)$. When the circumcenter lies on the same line, preserve both branches of $|R-d|=R-r$.",
+            "In a symmetric isosceles triangle, the incenter and excenters have explicit axial coordinates. Internal tangency may require the new circle to contain an excircle rather than lie inside it; decide from center distance before choosing the radius difference."
+          ],
+          "extensions_zh": [
+            "圆心在顶角平分线上，距顶点为 $d$ 时，半径为 $d\\sin(A/2)$。若外心也在此线上，须保留 $|R-d|=R-r$ 的两个分支。",
+            "等腰三角形的内心、旁心可取明确轴向坐标。内切时，新圆可能包含旁切圆，而非位于旁切圆内；应先比较圆心距再选半径差。"
+          ]
+        },
+        {
+          "method_id": "GE06-M02",
+          "title_en": "Equal-circle arrays are polygons of centers",
+          "title_zh": "等圆排列转化为圆心多边形",
+          "steps_en": [
+            "Replace each tangent circle by its center, with neighbor distance twice the radius.",
+            "For staggered rows use equilateral-center triangles; for a ring use a regular-center polygon.",
+            "Add radius margins to obtain enclosing dimensions, then subtract disk areas only after verifying disjoint interiors."
+          ],
+          "steps_zh": [
+            "将相切圆换成圆心，相邻圆心距为半径两倍。",
+            "交错行使用等边圆心三角形，环形排列使用正圆心多边形。",
+            "求外框尺寸时加入半径边距；扣圆盘面积前须确认内部互不重叠。"
+          ],
+          "example_en": "Six unit circles surround a central unit circle, all neighbors tangent. Find the radius of the smallest concentric enclosing circle.",
+          "example_zh": "六个单位圆围绕一个中心单位圆，相邻圆均相切，求同心最小外包圆半径。",
+          "solution_en": [
+            "Each outer center is distance two from the central center.",
+            "Neighboring outer centers also have separation two, so they form a regular hexagon of circumradius two.",
+            "The farthest point of each outer disk is one more unit away. The enclosing radius is $3$, and it is attained on each outward radial line."
+          ],
+          "solution_zh": [
+            "每个外圆圆心距中心圆心为二。",
+            "相邻外圆心间距也为二，所以形成外接圆半径二的正六边形。",
+            "每个外圆盘最远点再向外一单位，故外包半径为 $3$，在各向外半径上取到。"
+          ],
+          "tip_en": "In a regular $n$-circle ring, $2r=2d\\sin(\\pi/n)$ relates circle radius $r$ and center-ring radius $d$.",
+          "tip_zh": "正 $n$ 圆环中，圆半径 $r$ 与圆心环半径 $d$ 满足 $2r=2d\\sin(\\pi/n)$。",
+          "question_ids": [
+            "AIME-2002-I-Q02",
+            "AIME-2005-I-Q01"
+          ],
+          "prerequisites": [
+            "GE02"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE06-M03",
+          "title_en": "Homothety controls common tangents and opposite circle chords",
+          "title_zh": "位似控制公切线与相反方向圆弦",
+          "steps_en": [
+            "For unequal radii, common external tangents meet at the external similarity center, dividing center distances in the radius ratio. Equal-radius external tangents are parallel and have no finite similarity center.",
+            "Common internal tangents pass through the internal similarity center; include its directed location on the center segment.",
+            "At an external circle-contact point, a negative homothety maps a secant chord to the other circle; use signed distances when areas are compared."
+          ],
+          "steps_zh": [
+            "半径不等时，两条公外切线交于外位似中心，到两圆心距离比等于半径比；半径相等时公外切线平行，不存在有限外位似中心。",
+            "公内切线经过内位似中心，应保留其在圆心线段上的有向位置。",
+            "两圆外切点处，负位似将一圆割弦映至另一圆；比较面积时须使用有向距离。"
+          ],
+          "example_en": "Externally tangent circles have radii $1,4$. Find the distance from the smaller center to the intersection of their common external tangents.",
+          "example_zh": "两外切圆半径为 $1,4$，求小圆圆心到两条公外切线交点的距离。",
+          "solution_en": [
+            "The centers are five units apart. The external homothety center lies beyond the smaller circle.",
+            "If its distance to the smaller center is $d$, its distance to the larger center is $d+5$, and $(d+5)/d=4$.",
+            "Thus $d=5/3$. The tangent half-angle satisfies $\\sin\\theta=1/d=3/5$, consistent for both circles."
+          ],
+          "solution_zh": [
+            "两圆心距为五，外位似中心在小圆外侧。",
+            "设到小圆心距离为 $d$，则到大圆心为 $d+5$，比例给出 $(d+5)/d=4$。",
+            "所以 $d=5/3$；切线半角满足 $\\sin\\theta=1/d=3/5$，对两圆均一致。"
+          ],
+          "tip_en": "An external-contact homothety has negative scale, so corresponding chord points lie on opposite rays.",
+          "tip_zh": "以外切点为中心的位似比为负，对应弦点位于相反射线。",
+          "question_ids": [
+            "AIME-2006-II-Q09",
+            "AIME-2015-II-Q15",
+            "AIME-2022-II-Q07"
+          ],
+          "prerequisites": [
+            "GE01",
+            "GE07"
+          ],
+          "extensions_en": [
+            "If chord lengths from the contact point scale by $R/r$, equality of two triangle areas forces the opposite inverse ratio between their vertex-to-secant distances. A same-side condition determines whether those distances have the same signed ratio."
+          ],
+          "extensions_zh": [
+            "若从切点量起的弦长按 $R/r$ 缩放，两个三角形面积相等便要求相应顶点到割线距离满足逆比例。同侧条件决定其有向比例是否同号。"
+          ]
+        },
+        {
+          "method_id": "GE06-M04",
+          "title_en": "Half-angle tangent lengths solve tangential polygons and circle chains",
+          "title_zh": "半角切线长解外切多边形与圆链",
+          "steps_en": [
+            "Equal tangents give the two side portions belonging to each polygon vertex.",
+            "For tangent length $t$ and inradius $r$, write $\\tan(A/2)=r/t$; the half-angle sum is $(n-2)\\pi/2$.",
+            "Use tangent identities with branch checks; the sum of positive arctangents increases strictly with $r$.",
+            "For a row of equal circles along a triangle base, the end-center offsets are $r\\cot(B/2),r\\cot(C/2)$ and neighbor gaps are $2r$."
+          ],
+          "steps_zh": [
+            "由同点等切线长求各多边形顶点所占两段。",
+            "切线长为 $t$、内切圆半径为 $r$ 时，$\\tan(A/2)=r/t$，半角总和为 $(n-2)\\pi/2$。",
+            "使用正切恒等式并检验分支；正反正切之和随 $r$ 严格递增。",
+            "三角形底边圆链的两端圆心偏移为 $r\\cot(B/2),r\\cot(C/2)$，相邻圆心间距为 $2r$。"
+          ],
+          "example_en": "A triangle has side lengths $8,10,12$. Use half-angle tangent lengths to find its inradius.",
+          "example_zh": "三角形三边为 $8,10,12$，用半角切线长求内切圆半径。",
+          "solution_en": [
+            "The semiperimeter is fifteen, so the three vertex tangent lengths are $3,5,7$.",
+            "The three half-angles sum to $\\pi/2$. The tangent-sum denominator therefore vanishes: $1-r^2(1/15+1/21+1/35)=0$.",
+            "The parenthesis is $1/7$, so $r=\\sqrt7$. The positive half-angle sum cannot be $3\\pi/2$, since each half-angle is strictly below $\\pi/2$."
+          ],
+          "solution_zh": [
+            "半周长为十五，三个顶点切线长为 $3,5,7$。",
+            "三个半角和为 $\\pi/2$，因此正切和公式分母为零：$1-r^2(1/15+1/21+1/35)=0$。",
+            "括号等于 $1/7$，故 $r=\\sqrt7$。每个半角严格小于 $\\pi/2$，所以正半角和不可能为 $3\\pi/2$。"
+          ],
+          "tip_en": "A polynomial produced by a tangent identity can retain a wrong angle-sum branch.",
+          "tip_zh": "正切恒等式产生的多项式可能保留错误的角度和分支。",
+          "question_ids": [
+            "AIME-2000-II-Q10",
+            "AIME-2002-II-Q14",
+            "AIME-2007-I-Q09",
+            "AIME-2020-II-Q13",
+            "AIME-2024-I-Q08"
+          ],
+          "prerequisites": [
+            "AL08",
+            "GE05"
+          ],
+          "extensions_en": [
+            "An $N$-circle row of radius $r$ along base $a$ satisfies $a=r[\\cot(B/2)+\\cot(C/2)]+2r(N-1)$. The incircle corresponds to $N=1$. For an odd-sided tangential polygon, the linear side equations uniquely recover all vertex tangent lengths."
+          ],
+          "extensions_zh": [
+            "底边长为 $a$，半径 $r$ 的 $N$ 圆链满足 $a=r[\\cot(B/2)+\\cot(C/2)]+2r(N-1)$；内切圆对应 $N=1$。奇数边外切多边形的边长线性方程可唯一确定全部顶点切线长。"
+          ]
+        },
+        {
+          "method_id": "GE06-M05",
+          "title_en": "Eliminate an unknown tangent radius to obtain an ellipse",
+          "title_zh": "消去未知切圆半径得到椭圆",
+          "steps_en": [
+            "For one internal and one external tangency write $PF_1=R-r,PF_2=s+r$.",
+            "The radius cancels to $PF_1+PF_2=R+s$, identifying the center ellipse.",
+            "Check $r=R-PF_1>0$ and then impose a line-intersection discriminant if slope or direction is optimized."
+          ],
+          "steps_zh": [
+            "一内切一外切时，写为 $PF_1=R-r,PF_2=s+r$。",
+            "消去半径得 $PF_1+PF_2=R+s$，即圆心椭圆。",
+            "检验 $r=R-PF_1>0$；若优化斜率或方向，再用直线与椭圆的判别式。"
+          ],
+          "example_en": "Circles centered at $(-2,0),(2,0)$ have radii $7,1$. Describe centers of circles internally tangent to the first and externally tangent to the second.",
+          "example_zh": "两圆圆心为 $(-2,0),(2,0)$，半径为 $7,1$，求与前者内切、与后者外切的圆之圆心轨迹。",
+          "solution_en": [
+            "The center distances sum to eight, so the ellipse has $a=4,c=2,b^2=12$.",
+            "Its equation is $x^2/16+y^2/12=1$. Distance to the first focus ranges from two to six.",
+            "Thus $r=7-PF_1$ ranges from one to five and is always positive; every ellipse point gives the required internal/external tangencies."
+          ],
+          "solution_zh": [
+            "圆心到两焦点距离和为八，所以 $a=4,c=2,b^2=12$。",
+            "椭圆方程为 $x^2/16+y^2/12=1$，到第一焦点距离介于二与六。",
+            "因此 $r=7-PF_1$ 介于一与五且始终正，椭圆各点都满足所需内切与外切。"
+          ],
+          "tip_en": "The ellipse equation is necessary; the recovered radius makes it sufficient.",
+          "tip_zh": "椭圆方程只先给出必要性，恢复的半径条件才保证充分性。",
+          "question_ids": [
+            "AIME-2005-II-Q15"
+          ],
+          "prerequisites": [
+            "GE08",
+            "AL02"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE06-M06",
+          "title_en": "Power differences measure signed distance from the radical axis",
+          "title_zh": "圆幂差度量到根轴的有向距离",
+          "steps_en": [
+            "Expand the powers of a point in both circles; squared point coordinates cancel.",
+            "The resulting affine function vanishes on the common chord line and has gradient magnitude twice the center distance.",
+            "Use a chord angle or center-line ratio to express the point’s distance from that line, retaining its side."
+          ],
+          "steps_zh": [
+            "展开一点对两圆的点幂，点坐标平方项会消去。",
+            "所得仿射函数在公共弦直线上为零，其梯度长度是圆心距的两倍。",
+            "用弦所对角或圆心线比例表示到该直线的距离，并保留所在侧。"
+          ],
+          "example_en": "Two intersecting circles have radii $5,3$. A radius-$2$ circle is externally tangent to both, and its center is distance one from their radical axis. Find the two original centers’ distance.",
+          "example_zh": "两相交圆半径为 $5,3$，另一个半径 $2$ 的圆与两者外切，其圆心到原两圆根轴距离为一。求原两圆心距。",
+          "solution_en": [
+            "The new center has powers $(5+2)^2-5^2=24$ and $(3+2)^2-3^2=16$.",
+            "Their difference is eight. If original center distance is $d$, its magnitude is also $2d\\cdot1$.",
+            "Hence $d=4$, consistent with the intersection condition $|5-3|<d<5+3$."
+          ],
+          "solution_zh": [
+            "新圆心的两圆幂分别为 $(5+2)^2-5^2=24$ 与 $(3+2)^2-3^2=16$。",
+            "差为八；若原圆心距为 $d$，幂差绝对值又为 $2d\\cdot1$。",
+            "故 $d=4$，并满足相交条件 $|5-3|<d<5+3$。"
+          ],
+          "tip_en": "Use a signed affine distance when comparing points on opposite sides of the chord line.",
+          "tip_zh": "比较公共弦两侧的点时，应使用有向仿射距离。",
+          "question_ids": [
+            "AIME-2005-II-Q08",
+            "AIME-2021-I-Q13"
+          ],
+          "prerequisites": [
+            "GE04",
+            "GE07"
+          ],
+          "extensions_en": [
+            "Along the line of the two centers, signed distance to the radical axis is affine. A prescribed division point therefore has the same weighted combination of the two center distances; convert its half-chord length by $\\sqrt{R^2-d^2}$."
+          ],
+          "extensions_zh": [
+            "沿两圆心直线，到根轴的有向距离为仿射函数。按比例分点的距离是两圆心距离的同权线性组合，再由 $\\sqrt{R^2-d^2}$ 求半弦长。"
+          ]
+        },
+        {
+          "method_id": "GE06-M07",
+          "title_en": "Offset corner circles are an incenter homothety",
+          "title_zh": "内移角圆组成以内心为中心的位似",
+          "steps_en": [
+            "A circle of radius $x$ tangent to a vertex’s two sides has its center on the vertex-to-incenter line.",
+            "For corner circles inside the triangle with $0<x<r$, the three centers are images of the vertices under scale $(r-x)/r$ about the incenter, where $r$ is the triangle inradius.",
+            "A fourth equal circle tangent to all three has its center at their circumcenter; impose circumradius $2x$ and verify the fourth disk stays inside."
+          ],
+          "steps_zh": [
+            "半径 $x$ 的圆与某顶点两邻边相切时，圆心在顶点到内心的直线上。",
+            "若三个角圆均在三角形内且 $0<x<r$，圆心是三顶点以内心为中心、比例 $(r-x)/r$ 的位似像，其中 $r$ 为原内切圆半径。",
+            "第四等圆与三圆均外切时，其圆心为该圆心三角形外心，故外接半径为 $2x$；最后核实第四圆也在内部。"
+          ],
+          "example_en": "In an equilateral triangle of inradius one, three equal circles inside the triangle are each tangent to the two sides at a different vertex. A fourth circle of the same radius lies inside and is externally tangent to all three. Find the common radius.",
+          "example_zh": "内切圆半径为一的等边三角形内，有三个等圆分别与三个顶点的两邻边相切。第四个同半径圆也在三角形内，并与前三圆均外切，求公共半径。",
+          "solution_en": [
+            "The original circumradius is two. Corner-center homothety gives circumradius $2(1-x)$.",
+            "Tangency to the fourth equal circle requires $2(1-x)=2x$, hence $x=1/2$.",
+            "The fourth center is the triangle center, distance one from every side, so its radius-$1/2$ disk lies inside; the corner circles also fit."
+          ],
+          "solution_zh": [
+            "原外接圆半径为二，角圆心位似给出外接半径 $2(1-x)$。",
+            "第四等圆外切要求 $2(1-x)=2x$，所以 $x=1/2$。",
+            "第四圆心为原中心，距三边均一，故半径 $1/2$ 的圆在内部；三个角圆也可容纳。"
+          ],
+          "tip_en": "Equal center distances alone do not prove that the fourth disk fits inside the triangle.",
+          "tip_zh": "到三个圆心等距本身，并不能证明第四圆盘位于三角形内。",
+          "question_ids": [
+            "AIME-2007-II-Q15"
+          ],
+          "prerequisites": [
+            "GE05",
+            "GE03"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE06-M08",
+          "title_en": "Rolling and nested tangency use radius sums or differences",
+          "title_zh": "滚动与嵌套相切使用半径和或差",
+          "steps_en": [
+            "For a circle rolling externally around a fixed circle, the moving center follows radius $R+r$.",
+            "For fixed-circle radius $R$, moving radius $r$, ground-frame spin $\\phi$, and center sweep $\\theta$, no slip gives $r\\,d\\phi=(R+r)\\,d\\theta$.",
+            "For nested internal tangency, center displacement has length $R-r$; if radii shrink to zero, the nested disks have at most one common point."
+          ],
+          "steps_zh": [
+            "圆绕固定圆从外侧滚动时，动圆心轨迹半径为 $R+r$。",
+            "固定圆半径为 $R$、动圆半径为 $r$、对地自转角为 $\\phi$、圆心公转角为 $\\theta$ 时，无滑动给出 $r\\,d\\phi=(R+r)\\,d\\theta$。",
+            "嵌套内切时圆心位移长为 $R-r$；若半径趋零，嵌套圆盘至多有一个公共点。"
+          ],
+          "example_en": "A radius-$2$ circle rolls without slipping around a fixed radius-$1$ circle. During a $90^\\circ$ sweep of the center, how much does the moving circle spin?",
+          "example_zh": "半径 $2$ 的圆沿半径 $1$ 的固定圆从外侧无滑动滚动，圆心转过 $90^\\circ$ 时动圆自转多少度？",
+          "solution_en": [
+            "The moving center follows a circle of radius three, so its path length is $3\\pi/2$.",
+            "No slip makes this length equal to moving radius two times spin angle in radians.",
+            "The spin is $3\\pi/4=135^\\circ$."
+          ],
+          "solution_zh": [
+            "动圆心轨迹半径为三，路程为 $3\\pi/2$。",
+            "无滑动使该路程等于动圆半径二乘以弧度自转角。",
+            "自转角为 $3\\pi/4=135^\\circ$。"
+          ],
+          "tip_en": "Center revolution and circle spin are different angles.",
+          "tip_zh": "圆心公转角与圆本身自转角不同。",
+          "question_ids": [
+            "AIME-2007-II-Q11",
+            "AIME-2017-II-Q12"
+          ],
+          "prerequisites": [
+            "AL03",
+            "AL05"
+          ],
+          "extensions_en": [
+            "For a nested sequence with radii $r^n$ and successive radial directions rotating by a fixed unit complex factor $u$, center increments form a geometric series proportional to $(ru)^n$. After computing the limit, verify its distance to every stage center is less than that stage radius."
+          ],
+          "extensions_zh": [
+            "嵌套圆半径为 $r^n$、相继半径方向乘固定单位复数 $u$ 时，圆心增量形成与 $(ru)^n$ 成比例的等比级数。求极限后，仍需检验它到每阶段圆心的距离小于该阶段半径。"
+          ]
+        },
+        {
+          "method_id": "GE06-M09",
+          "title_en": "A rotational contact circle follows an axial similarity",
+          "title_zh": "旋转接触圆由轴截面相似确定",
+          "steps_en": [
+            "Cut the rotational surfaces through their common axis.",
+            "Internal and external circle tangency give center distance $R-r$ and $R+r$, respectively.",
+            "The contact point lies on the center line; scale its distance from the axis by the corresponding radius ratio."
+          ],
+          "steps_zh": [
+            "作通过旋转曲面公共轴的截面。",
+            "截圆内切、外切分别给出圆心距 $R-r,R+r$。",
+            "切点在连心线上，其到轴距离按相应半径比缩放。"
+          ],
+          "example_en": "A radius-$1$ generating circle has center distance three from a rotation axis. It is externally tangent to an axial sphere of radius five. Find the contact-circle radius.",
+          "example_zh": "半径一的母圆圆心距旋转轴为三，并与轴上圆心、半径五的球外切，求接触圆半径。",
+          "solution_en": [
+            "The two section centers are distance $5+1=6$ apart.",
+            "The contact point lies $5/6$ of the way from the sphere center to the generating-circle center.",
+            "Its distance from the axis is $(5/6)3=5/2$, the contact-circle radius. The center placement exists because six exceeds three."
+          ],
+          "solution_zh": [
+            "截面两圆心距为 $5+1=6$。",
+            "切点从球心出发沿连心线走全长的 $5/6$。",
+            "到轴距离为 $(5/6)3=5/2$；因六大于三，圆心轴向摆放确实存在。"
+          ],
+          "tip_en": "Use center distances in the section, not three-dimensional surface distances.",
+          "tip_zh": "应使用截面中的圆心距，不能使用三维曲面距离。",
+          "question_ids": [
+            "AIME-2024-II-Q08"
+          ],
+          "prerequisites": [
+            "GE09"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE06-M10",
+          "title_en": "An incidence quadratic combines two angle-bisector circles",
+          "title_zh": "过定点的二次方程联系两个角平分线圆",
+          "steps_en": [
+            "Intersecting circles tangent to the same two lines occupy one common angular sector.",
+            "Parameterize their centers by $(x,tx)$ and radii $tx$; a shared point gives one quadratic whose roots are the two center parameters.",
+            "Use Vieta to connect the radius product to $t^2$, choose the sector sign, and double the angle to recover the second tangent line."
+          ],
+          "steps_zh": [
+            "相交且同时与两直线相切的圆处于同一角域。",
+            "把圆心写为 $(x,tx)$、半径为 $tx$；共同定点给出同一二次方程，两根即两圆心参数。",
+            "用韦达定理把半径积联系到 $t^2$，筛选角域符号，再用倍角求另一切线。"
+          ],
+          "example_en": "Two circles through $(1,1)$ have radius product $1/2$. Both are tangent to the $x$ axis and a positive-slope line through the origin. Find that slope.",
+          "example_zh": "两圆均过 $(1,1)$，半径积为 $1/2$，并均与 $x$ 轴及过原点的一条正斜率直线相切，求该斜率。",
+          "solution_en": [
+            "The common point above the axis places both circles above it. Their centers $(x,tx)$ satisfy $(1-x)^2+(1-tx)^2=t^2x^2$, or $x^2-2(1+t)x+2=0$.",
+            "Vieta gives $x_1x_2=2$, so the radius product is $2t^2=1/2$. The obtuse upper sector would have $t<-1$, impossible; hence $t=1/2$.",
+            "The second tangent has slope $2t/(1-t^2)=4/3$. The center parameters are one and two, giving positive radii $1/2,1$ and two genuinely intersecting circles."
+          ],
+          "solution_zh": [
+            "共同点在轴上方，使两圆均位于上方。圆心 $(x,tx)$ 满足 $(1-x)^2+(1-tx)^2=t^2x^2$，即 $x^2-2(1+t)x+2=0$。",
+            "韦达给出 $x_1x_2=2$，故半径积为 $2t^2=1/2$。上方钝角域会有 $t<-1$，不可能，所以 $t=1/2$。",
+            "另一切线斜率为 $2t/(1-t^2)=4/3$。圆心参数为一与二，半径为 $1/2,1$，确形成两个相交圆。"
+          ],
+          "tip_en": "The sign of the angle-bisector slope carries the sector information.",
+          "tip_zh": "角平分线斜率的符号包含角域信息。",
+          "question_ids": [
+            "AIME-2002-II-Q15"
+          ],
+          "prerequisites": [
+            "AL02",
+            "AL08"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        }
+      ]
+    }
+  },
+  {
+    "subtype_id": "GE07",
+    "reviewer": "root",
+    "content_sha256": "4280a82341f633edfacd9a4345bfb9e5e00772efe3be103a791f2b4dc9d257ff",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "GE07-M01",
+      "GE07-M02",
+      "GE07-M03",
+      "GE07-M04",
+      "GE07-M05",
+      "GE07-M06",
+      "GE07-M07",
+      "GE07-M08",
+      "GE07-M09",
+      "GE07-M10",
+      "GE07-M11",
+      "GE07-M12",
+      "GE07-M13",
+      "GE07-M14",
+      "GE07-M15"
+    ],
+    "findings": [
+      "Read all fifteen complete bilingual methods, original examples, solutions and extensions; checked every linked canonical question route. Independently recomputed all fifteen worked examples, including the square partition, reflection path, river drift, oblique metric and inversion disk.",
+      "Made the lattice-box convention explicit as N integer coordinate values per axis, required a nondegenerate oblique basis, and added R>0 to the vector support inequality.",
+      "Moved 2002II2 from equal-distance centers to squared metric distances: the actual proof compares cube edge/face/body diagonal lengths. Pruned four half-plane clipping links whose actual route instead uses line intersections or unsigned area; each retains a relevant coordinate method.",
+      "Verified the cleaver extension by equal perimeter routes, distinguished unsigned self-crossing area from shoelace algebraic area, and checked the nonattained/side-branch conditions in the linked methods."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "GE07-M01",
+          "title_en": "Parameterize lines, midpoints and affine side divisions",
+          "title_zh": "参数化直线、中点及仿射分点",
+          "steps_en": [
+            "Normalize a convenient triangle, rectangle or parallelogram, preserving only the metric information actually needed.",
+            "Write a point on a line as $P+t v$ and a side point as $(1-t)A+tB$ with $0\\le t\\le1$.",
+            "Midpoint and centroid conditions are linear vector averages.",
+            "Solve the linear incidence equations before any squared-distance equation."
+          ],
+          "steps_zh": [
+            "规范方便的三角形、矩形或平行四边形，仅保留实际需要的度量信息。",
+            "直线点写为 $P+tv$，边上点写为 $(1-t)A+tB$ 并保留 $0\\le t\\le1$。",
+            "中点与重心条件是向量线性平均。",
+            "先解线性关联，再使用距离平方方程。"
+          ],
+          "example_en": "Point $P$ lies on $y=2x$, point $Q$ on $y=-x$, and their midpoint is $(2,1)$. Find $PQ$.",
+          "example_zh": "$P$ 在 $y=2x$ 上，$Q$ 在 $y=-x$ 上，中点为 $(2,1)$，求 $PQ$。",
+          "solution_en": [
+            "Write $P=(t,2t),Q=(u,-u)$. Midpoint equations are $t+u=4,2t-u=2$.",
+            "They give $t=u=2$, hence $P=(2,4),Q=(2,-2)$.",
+            "The segment is vertical of length six; its midpoint is indeed $(2,1)$."
+          ],
+          "solution_zh": [
+            "设 $P=(t,2t),Q=(u,-u)$，中点方程为 $t+u=4,2t-u=2$。",
+            "解得 $t=u=2$，所以 $P=(2,4),Q=(2,-2)$。",
+            "线段竖直，长为六，中点也确为 $(2,1)$。"
+          ],
+          "tip_en": "An affine normalization preserves ratios and area ratios, but not arbitrary lengths or angles.",
+          "tip_zh": "仿射规范保持比例与面积比，不保持一般长度或角度。",
+          "question_ids": [
+            "AIME-2001-II-Q04",
+            "AIME-2003-I-Q15",
+            "AIME-2003-II-Q11",
+            "AIME-2005-I-Q10",
+            "AIME-2006-II-Q06",
+            "AIME-2009-I-Q04",
+            "AIME-2011-I-Q02",
+            "AIME-2011-II-Q02",
+            "AIME-2011-II-Q04",
+            "AIME-2013-II-Q13",
+            "AIME-2014-II-Q11",
+            "AIME-2017-II-Q10",
+            "AIME-2019-II-Q07",
+            "AIME-2020-II-Q12",
+            "AIME-2022-I-Q03"
+          ],
+          "prerequisites": [
+            "GE01"
+          ],
+          "extensions_en": [
+            "With barycentric coordinates $\\alpha+\\beta+\\gamma=1$, a line parallel to the side opposite $A$ fixes $\\alpha$. Three fixed coordinate levels produce a signed similar triangle with scale $1-a-b-c$.",
+            "Align an angle bisector with the x-axis to place adjacent vertices at $(c\\cos t,c\\sin t),(a\\cos t,-a\\sin t)$; this keeps the bisector intercept and perpendicular cuts linear."
+          ],
+          "extensions_zh": [
+            "在重心坐标 $\\alpha+\\beta+\\gamma=1$ 下，平行于 $A$ 对边的直线固定 $\\alpha$。三条固定水平线形成有向比例为 $1-a-b-c$ 的相似三角形。",
+            "以角平分线为横轴，可把两邻顶点写为 $(c\\cos t,c\\sin t),(a\\cos t,-a\\sin t)$，使平分线截点及垂直截线保持线性。"
+          ]
+        },
+        {
+          "method_id": "GE07-M02",
+          "title_en": "Equal distances linearize centers and radical axes",
+          "title_zh": "等距线性化圆心与根轴",
+          "steps_en": [
+            "Expand squared distances to two fixed points and subtract; the quadratic point terms cancel.",
+            "Find circumcenters from two perpendicular-bisector equations, or circle centers from symmetry and tangency normals.",
+            "Subtract two circle equations to obtain their radical axis before solving a remaining quadratic.",
+            "Check positive radius, the distinct second intersection and the required side or ray."
+          ],
+          "steps_zh": [
+            "展开到两定点的距离平方并相减，点的二次项会消去。",
+            "由两垂直平分线求外心，或由对称及相切法向定位圆心。",
+            "两圆方程先相减求根轴，再解剩余二次式。",
+            "检查正半径、不同第二交点及所需边或射线。"
+          ],
+          "example_en": "Find the circle through $(0,0),(6,0),(0,8)$.",
+          "example_zh": "求经过 $(0,0),(6,0),(0,8)$ 的圆。",
+          "solution_en": [
+            "Let its center be $(u,v)$. Equality of the first two squared distances gives $12u=36$, so $u=3$.",
+            "Equality with the third gives $16v=64$, so $v=4$.",
+            "The radius is $\\sqrt{3^2+4^2}=5$, hence $(x-3)^2+(y-4)^2=25$."
+          ],
+          "solution_zh": [
+            "设圆心 $(u,v)$，前两点等距给出 $12u=36$，故 $u=3$。",
+            "与第三点等距给出 $16v=64$，故 $v=4$。",
+            "半径为五，所以圆方程为 $(x-3)^2+(y-4)^2=25$。"
+          ],
+          "tip_en": "A line of equal powers differs from a perpendicular bisector when the radii differ.",
+          "tip_zh": "半径不等时，等点幂直线不同于垂直平分线。",
+          "question_ids": [
+            "AIME-2001-II-Q06",
+            "AIME-2001-II-Q07",
+            "AIME-2002-I-Q15",
+            "AIME-2005-II-Q08",
+            "AIME-2006-II-Q09",
+            "AIME-2008-II-Q11",
+            "AIME-2009-II-Q05",
+            "AIME-2009-II-Q10",
+            "AIME-2011-II-Q13",
+            "AIME-2012-II-Q15",
+            "AIME-2014-I-Q15",
+            "AIME-2014-II-Q08",
+            "AIME-2017-I-Q10",
+            "AIME-2019-I-Q13",
+            "AIME-2019-I-Q15",
+            "AIME-2019-II-Q11",
+            "AIME-2020-II-Q15",
+            "AIME-2022-I-Q08",
+            "AIME-2023-II-Q09",
+            "AIME-2024-I-Q05",
+            "AIME-2025-I-Q08",
+            "AIME-2025-II-Q01",
+            "AIME-2025-II-Q06"
+          ],
+          "prerequisites": [
+            "GE04",
+            "GE06"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M03",
+          "title_en": "Dot and cross products encode metric constraints",
+          "title_zh": "点积与叉积编码度量约束",
+          "steps_en": [
+            "Use $u\\cdot v=|u||v|\\cos\\theta$ for angles and perpendicularity.",
+            "Use the planar determinant or spatial cross product for signed area and orientation.",
+            "Divide cross by dot only after checking the dot sign and whether the requested angle is acute.",
+            "Expand squared lengths to expose cancellations, closure identities or Gram determinants."
+          ],
+          "steps_zh": [
+            "用 $u\\cdot v=|u||v|\\cos\\theta$ 处理夹角及垂直。",
+            "用平面行列式或空间叉积处理有向面积与方向。",
+            "叉积除点积之前，检查点积符号及所求是否锐角。",
+            "展开距离平方，以显露消项、闭合恒等式或格拉姆行列式。"
+          ],
+          "example_en": "For $u=(1,2),v=(3,1)$, find their acute angle and the parallelogram area.",
+          "example_zh": "给定 $u=(1,2),v=(3,1)$，求两向量锐夹角及平行四边形面积。",
+          "solution_en": [
+            "The dot product is five and the determinant is $1-6=-5$. Both vectors are nonzero and the dot is positive.",
+            "Thus $\\tan\\theta=|-5|/5=1$, so $\\theta=45^\\circ$.",
+            "The parallelogram area is the determinant magnitude five."
+          ],
+          "solution_zh": [
+            "点积为五，行列式为 $1-6=-5$；两向量非零且点积正。",
+            "故 $\\tan\\theta=1$，锐角为 $45^\\circ$。",
+            "平行四边形面积为行列式绝对值五。"
+          ],
+          "tip_en": "An absolute cross-to-dot ratio does not distinguish an acute angle from its supplement; retain the dot sign.",
+          "tip_zh": "叉积与点积的绝对值比不能区分锐角及其补角，应保留点积符号。",
+          "question_ids": [
+            "AIME-2000-II-Q08",
+            "AIME-2002-II-Q02",
+            "AIME-2003-II-Q14",
+            "AIME-2005-II-Q12",
+            "AIME-2009-II-Q03",
+            "AIME-2011-II-Q13",
+            "AIME-2012-I-Q14",
+            "AIME-2013-I-Q07",
+            "AIME-2016-I-Q09",
+            "AIME-2017-II-Q15",
+            "AIME-2021-I-Q06",
+            "AIME-2021-II-Q12",
+            "AIME-2022-I-Q05",
+            "AIME-2023-I-Q05",
+            "AIME-2023-I-Q12",
+            "AIME-2023-I-Q13",
+            "AIME-2023-II-Q12",
+            "AIME-2026-I-Q14"
+          ],
+          "prerequisites": [
+            "GE03"
+          ],
+          "extensions_en": [
+            "A closed polygon has side-vector sum zero; squaring this equation relates pairwise side products weighted by direction cosines. In an equiangular pentagon only the72- and144-degree cosine classes remain.",
+            "For vectors $v_i$ of equal positive length $R$ and sum zero, $|v_i-x|\\ge R-v_i\\cdot x/R$ sums to $\\sum|v_i-x|\\ge nR$, attained at $x=0$.",
+            "For generating vectors $u,v,w$, the Gram determinant $\\det(u_i\\cdot u_j)$ equals squared parallelepiped volume. Face diagonals determine pairwise norms and dot products through $|u\\pm v|^2$."
+          ],
+          "extensions_zh": [
+            "闭合多边形的边向量和为零，将其平方可联系按方向余弦加权的两两边积。等角五边形只剩七十二度与一百四十四度两类余弦。",
+            "若 $v_i$ 均长 $R>0$ 且向量和为零，则 $|v_i-x|\\ge R-v_i\\cdot x/R$ 相加得到 $\\sum|v_i-x|\\ge nR$，在 $x=0$ 取等。",
+            "生成向量 $u,v,w$ 的格拉姆行列式 $\\det(u_i\\cdot u_j)$ 等于平行六面体体积平方。面对角线可由 $|u\\pm v|^2$ 求范数及点积。"
+          ]
+        },
+        {
+          "method_id": "GE07-M04",
+          "title_en": "Unit normals give signed distances and projections",
+          "title_zh": "单位法向量给出有向距离与投影",
+          "steps_en": [
+            "For line $ax+by=c$, use signed distance $(ax+by-c)/\\sqrt{a^2+b^2}$.",
+            "The perpendicular foot is $P-[(n\\cdot P-c)/|n|^2]n$.",
+            "Use the sign to identify a half-plane and retain the normalization when the line direction varies.",
+            "The spatial plane formula is identical with a three-component normal."
+          ],
+          "steps_zh": [
+            "直线 $ax+by=c$ 的有向距离为 $(ax+by-c)/\\sqrt{a^2+b^2}$。",
+            "垂足为 $P-[(n\\cdot P-c)/|n|^2]n$。",
+            "利用正负识别半平面，直线方向变化时仍须保留归一化。",
+            "空间平面公式相同，只需使用三分量法向量。"
+          ],
+          "example_en": "Find the distance and perpendicular foot from $(4,3)$ to $3x+4y=10$.",
+          "example_zh": "求点 $(4,3)$ 到直线 $3x+4y=10$ 的距离及垂足。",
+          "solution_en": [
+            "The normal is $(3,4)$ of length five, and the residual is $12+12-10=14$. Thus distance is $14/5$.",
+            "The foot is $(4,3)-(14/25)(3,4)=(58/25,19/25)$.",
+            "Substitution gives $3(58/25)+4(19/25)=10$, checking incidence."
+          ],
+          "solution_zh": [
+            "法向量为 $(3,4)$、长五，残量为十四，故距离为 $14/5$。",
+            "垂足为 $(4,3)-(14/25)(3,4)=(58/25,19/25)$。",
+            "代入 $3x+4y=10$ 成立，核实垂足在线上。"
+          ],
+          "tip_en": "Distance to a segment needs an endpoint check if the foot leaves the segment.",
+          "tip_zh": "垂足若离开线段，求线段距离还须比较端点。",
+          "question_ids": [
+            "AIME-2001-I-Q12",
+            "AIME-2004-I-Q10",
+            "AIME-2005-I-Q14",
+            "AIME-2006-I-Q14",
+            "AIME-2008-I-Q14",
+            "AIME-2011-I-Q03",
+            "AIME-2013-I-Q12",
+            "AIME-2015-II-Q11",
+            "AIME-2015-II-Q15",
+            "AIME-2016-I-Q14",
+            "AIME-2018-I-Q08",
+            "AIME-2019-II-Q13",
+            "AIME-2021-I-Q09",
+            "AIME-2023-I-Q08",
+            "AIME-2026-I-Q12",
+            "AIME-2026-II-Q12"
+          ],
+          "prerequisites": [
+            "GE09"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M05",
+          "title_en": "Rotations and reflections preserve lengths but change orientation",
+          "title_zh": "旋转与反射保持长度但改变方向",
+          "steps_en": [
+            "Use $R_\\theta(x,y)=(x\\cos\\theta-y\\sin\\theta,x\\sin\\theta+y\\cos\\theta)$.",
+            "A rotation about $C$ maps $P$ to $C+R_\\theta(P-C)$; compare edge vectors to recover its angle first.",
+            "For squares use a signed quarter-turn, and for equilateral apices use the two signed60-degree turns.",
+            "A fold crease is the perpendicular bisector of a point and its image; repeated folds also reverse layer order."
+          ],
+          "steps_zh": [
+            "使用 $R_\\theta(x,y)=(x\\cos\\theta-y\\sin\\theta,x\\sin\\theta+y\\cos\\theta)$。",
+            "绕 $C$ 旋转为 $C+R_\\theta(P-C)$，先比较边向量确定角度。",
+            "正方形用带符号四分之一转，等边顶点用正负六十度转。",
+            "折痕是点与其像的垂直平分线，重复折叠还会颠倒层序。"
+          ],
+          "example_en": "A $90^\\circ$ counterclockwise rotation sends $(0,0)$ to $(3,1)$. Find its center and the image of $(1,0)$.",
+          "example_zh": "一次逆时针九十度旋转将 $(0,0)$ 映为 $(3,1)$，求旋转中心及 $(1,0)$ 的像。",
+          "solution_en": [
+            "For center $(u,v)$, the origin image is $(u+v,v-u)=(3,1)$.",
+            "Solve to get $(u,v)=(1,2)$.",
+            "The image of $(1,0)$ is $(1,2)+R_{90}(0,-2)=(3,2)$."
+          ],
+          "solution_zh": [
+            "若中心为 $(u,v)$，原点像为 $(u+v,v-u)=(3,1)$。",
+            "解得中心 $(1,2)$。",
+            "点 $(1,0)$ 的像为 $(1,2)+R_{90}(0,-2)=(3,2)$。"
+          ],
+          "tip_en": "Both signed rotations often solve length equations; use the specified quadrant or side of a line.",
+          "tip_zh": "正负旋转常都满足长度方程，应按象限或直线两侧筛选。",
+          "question_ids": [
+            "AIME-2000-I-Q02",
+            "AIME-2004-II-Q07",
+            "AIME-2004-II-Q15",
+            "AIME-2011-I-Q14",
+            "AIME-2012-I-Q13",
+            "AIME-2012-II-Q13",
+            "AIME-2013-I-Q09",
+            "AIME-2013-II-Q04",
+            "AIME-2014-I-Q10",
+            "AIME-2015-I-Q04",
+            "AIME-2015-I-Q07",
+            "AIME-2019-II-Q01",
+            "AIME-2020-II-Q04",
+            "AIME-2022-II-Q11",
+            "AIME-2025-I-Q02",
+            "AIME-2025-I-Q09",
+            "AIME-2025-I-Q14",
+            "AIME-2026-I-Q05",
+            "AIME-2026-I-Q10"
+          ],
+          "prerequisites": [
+            "GE03"
+          ],
+          "extensions_en": [
+            "Folding the right half of an $L$-cell strip of thickness $H$ over the left maps a right-half cell position $p$ to $L+1-p$ and bottom-up layer $b$ to $2H+1-b$; left-half data remain unchanged before updating $L,H$.",
+            "For a rolling marker, compute the moving center’s orbital position and then add the marker’s ground-frame spin offset. A full spin restores the marker direction, not the center position."
+          ],
+          "extensions_zh": [
+            "将长 $L$ 格、厚 $H$ 层纸条右半折到左半上方时，右半格位置 $p$ 变为 $L+1-p$，自底层号 $b$ 变为 $2H+1-b$；左半数据不变，然后更新 $L,H$。",
+            "滚动标记点先算圆心公转位置，再加地面参照下的自转偏移。自转整周恢复的是标记方向，不是圆心位置。"
+          ]
+        },
+        {
+          "method_id": "GE07-M06",
+          "title_en": "Centroid averages expose a common homothety",
+          "title_zh": "重心平均显露共同位似",
+          "steps_en": [
+            "Write midpoint and centroid vectors as exact averages.",
+            "Rearrange all target points into $T_i=O+t(V_i-O)$ with one center and scale.",
+            "Use scale $|t|$ for length, $t^2$ for planar area and $|t|^3$ for volume.",
+            "For a centrally symmetric family, pair opposite points to prove equal area or a center bound."
+          ],
+          "steps_zh": [
+            "把中点及重心向量写为精确平均。",
+            "将各目标点整理为同一中心、同一比例的 $T_i=O+t(V_i-O)$。",
+            "长度用 $|t|$，面积用 $t^2$，体积用 $|t|^3$。",
+            "中心对称点族可配对相反点，证明等面积或圆心界。"
+          ],
+          "example_en": "Let $P$ be inside a unit square. The centroids of its four triangles with the square sides form a quadrilateral. Find its area.",
+          "example_zh": "$P$ 为单位正方形内部点，$P$ 与四条边分别组成三角形，其四重心组成四边形，求面积。",
+          "solution_en": [
+            "If $M_i$ is a side midpoint, its fan-triangle centroid is $T_i=(P+2M_i)/3$.",
+            "Thus the centroid quadrilateral is a homothety of the midpoint quadrilateral with linear scale $2/3$.",
+            "The midpoint quadrilateral has area $1/2$, so the result is $(4/9)(1/2)=2/9$, independent of $P$."
+          ],
+          "solution_zh": [
+            "若 $M_i$ 为边中点，则对应三角形重心为 $T_i=(P+2M_i)/3$。",
+            "所以重心四边形是中点四边形按 $2/3$ 缩放的位似像。",
+            "中点四边形面积为 $1/2$，故目标面积为 $2/9$，与 $P$ 无关。"
+          ],
+          "tip_en": "Writing one common center is stronger than checking separate side parallels.",
+          "tip_zh": "写出共同位似中心，比逐一验证边平行更有力。",
+          "question_ids": [
+            "AIME-2003-II-Q04",
+            "AIME-2005-II-Q10",
+            "AIME-2006-I-Q10",
+            "AIME-2010-I-Q08",
+            "AIME-2018-II-Q09",
+            "AIME-2019-II-Q01",
+            "AIME-2020-I-Q15",
+            "AIME-2022-I-Q03",
+            "AIME-2026-II-Q12"
+          ],
+          "prerequisites": [
+            "GE02"
+          ],
+          "extensions_en": [
+            "With circumcenter as origin, $h=a+b+c$ is the orthocenter vector. Reflection of the circumcircle across $BC$ has center $b+c=h-a$."
+          ],
+          "extensions_zh": [
+            "以外心为原点时，垂心向量为 $h=a+b+c$，外接圆关于 $BC$ 反射后的圆心为 $b+c=h-a$。"
+          ]
+        },
+        {
+          "method_id": "GE07-M07",
+          "title_en": "Half-plane clipping describes overlaps and nearest-point regions",
+          "title_zh": "半平面截割描述重叠及最近点区域",
+          "steps_en": [
+            "Convert each boundary into a signed linear inequality; compare squared distances to turn nearest-point conditions into perpendicular-bisector half-planes.",
+            "Intersect every inequality and find feasible pairwise boundary intersections.",
+            "For a slope inequality, split by the sign of its horizontal denominator before multiplying.",
+            "Use the resulting actual polygon for area, not the unbounded supporting lines."
+          ],
+          "steps_zh": [
+            "将边界转为有向线性不等式；相减距离平方可把最近点条件转为垂直平分线半平面。",
+            "相交全部不等式，求可行的两两边界交点。",
+            "斜率不等式先按横向分母符号分区，再相乘。",
+            "用实际截割多边形求面积，不能使用无界支撑直线。"
+          ],
+          "example_en": "Inside the unit square, find the area closer to $(0,0)$ than to either $(1,0)$ or $(0,1)$.",
+          "example_zh": "单位正方形内，求比 $(1,0),(0,1)$ 都更靠近原点的区域面积。",
+          "solution_en": [
+            "Comparison with $(1,0)$ gives $x^2+y^2<(x-1)^2+y^2$, or $x<1/2$.",
+            "Comparison with $(0,1)$ gives $y<1/2$.",
+            "The intersection is a half-by-half square, area $1/4$. Strict boundaries have area zero."
+          ],
+          "solution_zh": [
+            "与 $(1,0)$ 比较距离平方，得 $x<1/2$。",
+            "与 $(0,1)$ 比较，得 $y<1/2$。",
+            "交集为二分之一乘二分之一的正方形，面积 $1/4$；严格边界面积为零。"
+          ],
+          "tip_en": "A factorized inequality can define several sign regions; identify the bounded one before measuring.",
+          "tip_zh": "因式分解不等式可能给出多个符号区域，应先辨认有界部分。",
+          "question_ids": [
+            "AIME-2000-I-Q13",
+            "AIME-2004-I-Q10",
+            "AIME-2010-I-Q11",
+            "AIME-2012-I-Q08",
+            "AIME-2013-I-Q12",
+            "AIME-2017-II-Q03",
+            "AIME-2020-II-Q02",
+            "AIME-2021-I-Q02",
+            "AIME-2025-I-Q12"
+          ],
+          "prerequisites": [
+            "GE02",
+            "AL06"
+          ],
+          "extensions_en": [
+            "For a constant-speed road followed by slower off-road travel, moving-center endpoint disks form a reachable envelope. First prove an optimal route can be reduced to the permitted road/straight-segment form, then derive the common tangent boundaries.",
+            "For a bounded lattice-cell union enclosed by a closed disk, pass to cell closures and check all polygon corners; convexity of the disk then covers each whole cell."
+          ],
+          "extensions_zh": [
+            "先沿高速道路、再慢速离路行驶时，移动圆心的终点圆盘组成可达包络。先证明最优路径可简化为允许的道路段加直线段，再求公切线边界。",
+            "闭圆盘包围有限格单元并集时，可先取各格闭包再检查全部顶点；圆盘凸性保证整格被包含。"
+          ]
+        },
+        {
+          "method_id": "GE07-M08",
+          "title_en": "Supporting widths enforce full containment",
+          "title_zh": "支撑宽度施加整体容纳限制",
+          "steps_en": [
+            "For a unit normal $n$, compute extreme projections $\\min n\\cdot v,\\max n\\cdot v$ of the entire figure.",
+            "Their difference is its width in that direction, giving strip or square-fit bounds.",
+            "For an inscribed disk, require the center’s signed distance from every supporting side to be at least its radius.",
+            "After a formal optimum is found, check every side-segment condition and construct a feasible equality center."
+          ],
+          "steps_zh": [
+            "给定单位法向 $n$，求整个图形投影的最小及最大值。",
+            "两者差为该方向宽度，给出条带或正方形容纳界。",
+            "对内接圆，要求圆心到每条支撑边的向内有向距离至少为半径。",
+            "求形式最优后，检查全部边上线段限制并构造可行取等圆心。"
+          ],
+          "example_en": "A unit square is rotated $45^\\circ$ about its center. Find the side of the largest concentric axis-parallel square inside it.",
+          "example_zh": "单位正方形绕中心转四十五度，求其内部同心、边平行于坐标轴的最大正方形边长。",
+          "solution_en": [
+            "If the inner side is $t$, its projection width onto a rotated-side normal is $t(\\cos45^\\circ+\\sin45^\\circ)=t\\sqrt2$.",
+            "This must be at most the outer square’s width one.",
+            "Thus $t\\le1/\\sqrt2$, and the centered square of that side touches all four outer sides, attaining equality."
+          ],
+          "solution_zh": [
+            "内方边长为 $t$ 时，在外方边法向的投影宽为 $t\\sqrt2$。",
+            "它不能超过外方该方向宽一。",
+            "故 $t\\le1/\\sqrt2$，同心取此边长可同时接触四边，达到等号。"
+          ],
+          "tip_en": "A line-intersection construction can lie beyond a side even when its equations are correct.",
+          "tip_zh": "直线求交方程即使正确，构造点仍可能落在边的延长线上。",
+          "question_ids": [
+            "AIME-2005-I-Q11",
+            "AIME-2005-I-Q14",
+            "AIME-2010-I-Q08",
+            "AIME-2013-I-Q12",
+            "AIME-2016-I-Q09",
+            "AIME-2016-II-Q07",
+            "AIME-2017-I-Q15",
+            "AIME-2018-I-Q08"
+          ],
+          "prerequisites": [
+            "AL07",
+            "GE03"
+          ],
+          "extensions_en": [
+            "A side-$t$ square rotated by $\\theta$ has axis widths $t(|\\cos\\theta|+|\\sin\\theta|)$. For two concentric nested squares, apply the same support factor at both successive contacts.",
+            "For a symmetric semicircle, width in a nonparallel direction depends on both a straight-diameter endpoint and the curved support point. Derive the support function rather than treating the semicircle as a full circle."
+          ],
+          "extensions_zh": [
+            "边长 $t$ 的正方形转角 $\\theta$ 后，两坐标方向宽均为 $t(|\\cos\\theta|+|\\sin\\theta|)$；同心嵌套方形的相邻接触可连续应用同一支撑系数。",
+            "半圆在非平行方向的宽度同时取决于直径端点与曲线支撑点，应推导支撑函数，不能把半圆当整圆。"
+          ]
+        },
+        {
+          "method_id": "GE07-M09",
+          "title_en": "Primitive lattice directions and unfolded reflection rays",
+          "title_zh": "本原格点方向与反射展开射线",
+          "steps_en": [
+            "Divide integer direction components by their GCD to obtain a primitive direction.",
+            "Unfold specular reflections so the entire path becomes one straight ray in repeated boxes.",
+            "A vertex return means every unfolded coordinate is a box-side multiple; solve the simultaneous divisibility conditions.",
+            "For a thickened lattice object, test its full linear-form range and correct shared endpoints when repeating a primitive segment."
+          ],
+          "steps_zh": [
+            "整数方向分量除以最大公因数，得到本原方向。",
+            "展开镜面反射，使整个路径成为重复长方体中的一条直射线。",
+            "回到顶点等价于展开各坐标均为边长倍数，应联立整除条件。",
+            "厚格点物体应检查整个线性型范围，重复本原线段时还须修正共端点。"
+          ],
+          "example_en": "A ray in the cube $[0,2]^3$ starts at the origin in direction $(2,1,1)$ and reflects at every face. Find the distance to its first later vertex.",
+          "example_zh": "光线在立方体 $[0,2]^3$ 中从原点沿 $(2,1,1)$ 方向发出并在各面反射，求首次再到顶点的路程。",
+          "solution_en": [
+            "The unfolded ray is $(2t,t,t)$ with $t>0$. A folded vertex requires all three coordinates divisible by two.",
+            "The first coordinate requires integral $t$, and the other two then require even $t$. The first is $t=2$.",
+            "Distance is $2\\sqrt{2^2+1^2+1^2}=2\\sqrt6$."
+          ],
+          "solution_zh": [
+            "展开射线为 $(2t,t,t)$，折回顶点要求三坐标都为二的倍数。",
+            "第一坐标要求 $t$ 为整数，另两坐标进一步要求偶数，最小为二。",
+            "路程为 $2\\sqrt6$。"
+          ],
+          "tip_en": "For radius-$\\varepsilon$ circles, use Euclidean normal length; for axis-aligned squares use the sum of absolute normal components.",
+          "tip_zh": "半径 $\\varepsilon$ 圆使用法向量欧氏长度，轴平行正方形使用法向分量绝对值和。",
+          "question_ids": [
+            "AIME-2000-II-Q11",
+            "AIME-2002-I-Q11",
+            "AIME-2016-I-Q14",
+            "AIME-2017-II-Q14",
+            "AIME-2020-II-Q12"
+          ],
+          "prerequisites": [
+            "NT02",
+            "CO06"
+          ],
+          "extensions_en": [
+            "A line with primitive direction $v$ has successive lattice points separated by $v$. In the grid box $\\{0,\\ldots,N-1\\}^d$, where $N$ is a positive integer, containing $k$ grid points requires $(k-1)|v_i|\\le N-1$ for every component. Normalize one endpoint to avoid counting a line repeatedly.",
+            "For square centers $(u,v)$ near line $ax+by=0$, a side-$2\\varepsilon$ square intersects the line when $|au+bv|\\le\\varepsilon(|a|+|b|)$. A radius-$\\varepsilon$ circle instead uses $\\varepsilon\\sqrt{a^2+b^2}$. Check segment endpoints separately."
+          ],
+          "extensions_zh": [
+            "本原方向为 $v$ 的直线，相继格点间差为 $v$。在格点盒 $\\{0,\\ldots,N-1\\}^d$ 中（$N$ 为正整数），若直线含 $k$ 个格点，则各分量满足 $(k-1)|v_i|\\le N-1$；规范一个端点可避免重复计线。",
+            "格点中心 $(u,v)$ 附近的边长 $2\\varepsilon$ 轴平行方形与 $ax+by=0$ 相交，当 $|au+bv|\\le\\varepsilon(|a|+|b|)$；半径 $\\varepsilon$ 圆则使用 $\\varepsilon\\sqrt{a^2+b^2}$，线段端点还须单独检查。"
+          ]
+        },
+        {
+          "method_id": "GE07-M10",
+          "title_en": "Complex inversion maps half-planes to disks",
+          "title_zh": "复数倒数将半平面映为圆盘",
+          "steps_en": [
+            "Put $w=1/z=u+iv$ and express $z$ through $u,v$.",
+            "Translate the original half-plane inequality and multiply only by the positive quantity $u^2+v^2$.",
+            "Complete squares to identify the image disk; preserve unions, intersections and excluded zero points."
+          ],
+          "steps_zh": [
+            "令 $w=1/z=u+iv$，用 $u,v$ 表示 $z$。",
+            "翻译原半平面不等式，只乘正数 $u^2+v^2$。",
+            "配方识别像圆盘，保留并集、交集及零点排除条件。"
+          ],
+          "example_en": "Find the image of $\\Re z>1$ under $w=1/z$.",
+          "example_zh": "求半平面 $\\Re z>1$ 在 $w=1/z$ 下的像。",
+          "solution_en": [
+            "Since $z=(u-iv)/(u^2+v^2)$, the condition is $u/(u^2+v^2)>1$.",
+            "Thus $u^2+v^2-u<0$, or $(u-1/2)^2+v^2<1/4$.",
+            "The image is the open disk centered at $1/2$ of radius $1/2$; zero is on its boundary and is automatically excluded."
+          ],
+          "solution_zh": [
+            "由 $z=(u-iv)/(u^2+v^2)$，条件为 $u/(u^2+v^2)>1$。",
+            "所以 $u^2+v^2-u<0$，即 $(u-1/2)^2+v^2<1/4$。",
+            "像为圆心 $1/2$、半径 $1/2$ 的开圆盘，零在边界上而自动被排除。"
+          ],
+          "tip_en": "The exterior of a convex polygon is a union of exterior half-planes, so its inversion is a union of the corresponding disks.",
+          "tip_zh": "凸多边形外部是各外侧半平面的并，故其倒数像为相应圆盘的并。",
+          "question_ids": [
+            "AIME-2008-II-Q13"
+          ],
+          "prerequisites": [
+            "AL03",
+            "GE02"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M11",
+          "title_en": "Develop a cylindrical path and preserve tangent pitch",
+          "title_zh": "展开圆柱路径并保持相切坡度",
+          "steps_en": [
+            "Unroll the cylindrical surface into a plane with horizontal coordinate equal to circumferential arc length.",
+            "The shortest surface path is a straight segment in an appropriate winding lift.",
+            "For a taut rope leaving tangentially, extend that line’s slope into its free portion and use the same length-to-horizontal-projection ratio."
+          ],
+          "steps_zh": [
+            "展开圆柱面，水平坐标取圆周弧长。",
+            "适当绕行提升中的直线段给出最短表面路程。",
+            "绷紧绳索相切离开时，其自由段延续展开直线坡度，并使用相同实际长度与水平投影比。"
+          ],
+          "example_en": "On a radius-one cylinder, two points are on opposite generators with height difference two. Find their shortest surface distance.",
+          "example_zh": "半径一的圆柱上，两点位于相对母线、高度相差二，求最短表面距离。",
+          "solution_en": [
+            "The unfolded horizontal separation is $\\pi+2k\\pi$ for integer winding number $k$.",
+            "The smallest absolute separation is $\\pi$, attained for the two opposite winding choices.",
+            "Pythagoras gives distance $\\sqrt{\\pi^2+4}$."
+          ],
+          "solution_zh": [
+            "展开水平距离为 $\\pi+2k\\pi$，其中 $k$ 为整数绕数。",
+            "最小绝对水平距离为 $\\pi$，对应两种相反绕向。",
+            "由勾股，最短距离为 $\\sqrt{\\pi^2+4}$。"
+          ],
+          "tip_en": "The free tangent length in horizontal projection is $\\sqrt{d^2-R^2}$ for endpoint axis distance $d$.",
+          "tip_zh": "端点距轴 $d$ 时，自由切线水平投影长为 $\\sqrt{d^2-R^2}$。",
+          "question_ids": [
+            "AIME-2004-I-Q14"
+          ],
+          "prerequisites": [
+            "GE10",
+            "GE03"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M12",
+          "title_en": "Orthonormal spatial coordinates separate height, plane and solid",
+          "title_zh": "标准正交空间坐标分离高度、平面及立体",
+          "steps_en": [
+            "Choose three perpendicular solid-edge directions as a basis; encode the vertical direction by a unit vector.",
+            "Height differences along equal orthogonal edges have squared sum equal to the edge length squared.",
+            "Write cutting faces as plane equations and compute actual segment intersections, not just line intersections.",
+            "Use point–plane distances, determinants or projected-area factors according to the requested quantity."
+          ],
+          "steps_zh": [
+            "以三条垂直立体棱方向为基，用单位向量表示竖直方向。",
+            "等长正交棱的高度差平方和等于棱长平方。",
+            "把截面写为平面方程，并求实际棱线段交点，不仅是直线交点。",
+            "按目标选择点面距离、行列式或投影面积系数。"
+          ],
+          "example_en": "A cube has a lowest vertex at height zero. Its three neighboring vertices have heights two,three,six. Find its volume.",
+          "example_zh": "立方体最低顶点高度零，三个相邻顶点高度分别二、三、六，求体积。",
+          "solution_en": [
+            "Let the edge length be $s$. The three vertical direction components are $2/s,3/s,6/s$.",
+            "Their squared sum is one, so $s^2=4+9+36=49$ and $s=7$.",
+            "The volume is $343$. All three components are positive, so the nominated vertex is indeed lowest."
+          ],
+          "solution_zh": [
+            "设棱长 $s$，竖直单位向量三个分量为 $2/s,3/s,6/s$。",
+            "平方和为一，所以 $s^2=49,s=7$。",
+            "体积为 $343$；三分量皆正，给定顶点确为最低点。"
+          ],
+          "tip_en": "Plane incidence and a filled face’s nearest point are different constraints.",
+          "tip_zh": "平面关联与到填满面的最近点，是不同约束。",
+          "question_ids": [
+            "AIME-2001-II-Q15",
+            "AIME-2002-I-Q15",
+            "AIME-2006-I-Q14",
+            "AIME-2007-I-Q13",
+            "AIME-2008-I-Q15",
+            "AIME-2011-I-Q13",
+            "AIME-2012-I-Q08",
+            "AIME-2013-I-Q07",
+            "AIME-2017-II-Q15",
+            "AIME-2023-I-Q13",
+            "AIME-2023-II-Q14",
+            "AIME-2026-I-Q12",
+            "AIME-2026-II-Q12"
+          ],
+          "prerequisites": [
+            "GE09",
+            "GE10"
+          ],
+          "extensions_en": [
+            "Common same-side tangent planes to spheres resting on $z=0$ give $ux+vy-c=(1-h)\\rho$ for a unit normal $(u,v,h)$. Excluding the repeated plane $h=1$ makes radius an affine function of contact position; interpolate it from three noncollinear contacts and verify unit-normal feasibility."
+          ],
+          "extensions_zh": [
+            "球与 $z=0$ 相切、又与同侧第二平面相切时，单位法向量 $(u,v,h)$ 给出 $ux+vy-c=(1-h)\\rho$。排除重复平面 $h=1$ 后，半径成为接触位置的仿射函数，可由三个不共线接触点插值，并需检验单位法向可行性。"
+          ]
+        },
+        {
+          "method_id": "GE07-M13",
+          "title_en": "Coordinate area uses the boundary’s true order",
+          "title_zh": "坐标面积使用真实边界次序",
+          "steps_en": [
+            "Compute intersection points exactly and arrange them in actual boundary order.",
+            "Use a planar determinant or shoelace sum for a simple polygon, and a cross-product norm for a spatial triangle.",
+            "For a crossed outline, partition all bounded lobes before adding positive areas.",
+            "Normalize by an affine map only when the common determinant factor cancels from an area ratio."
+          ],
+          "steps_zh": [
+            "精确求交点，并按实际边界次序排列。",
+            "简单多边形用行列式或鞋带和，空间三角形用叉积长度。",
+            "交叉轮廓需分割全部有界叶片，再加正面积。",
+            "只有共同面积行列式因子可约去时，才作仿射规范。"
+          ],
+          "example_en": "Find the area of triangle $(1,1),(5,2),(2,4)$.",
+          "example_zh": "求三角形 $(1,1),(5,2),(2,4)$ 的面积。",
+          "solution_en": [
+            "From the first vertex, the two side vectors are $(4,1),(1,3)$.",
+            "Their determinant is $4\\cdot3-1\\cdot1=11$.",
+            "The triangle area is $|11|/2=11/2$."
+          ],
+          "solution_zh": [
+            "从第一顶点出发，两边向量为 $(4,1),(1,3)$。",
+            "行列式为 $4\\cdot3-1\\cdot1=11$。",
+            "三角形面积为 $11/2$。"
+          ],
+          "tip_en": "A global absolute shoelace value is an algebraic area for a self-intersecting polygon.",
+          "tip_zh": "自交多边形的全局鞋带绝对值仍是代数面积。",
+          "question_ids": [
+            "AIME-2005-I-Q10",
+            "AIME-2010-II-Q09",
+            "AIME-2013-I-Q07",
+            "AIME-2013-II-Q13",
+            "AIME-2014-I-Q13",
+            "AIME-2015-I-Q04",
+            "AIME-2018-II-Q04",
+            "AIME-2018-II-Q09",
+            "AIME-2019-II-Q01",
+            "AIME-2025-I-Q02",
+            "AIME-2025-I-Q12",
+            "AIME-2026-I-Q10",
+            "AIME-2026-II-Q03"
+          ],
+          "prerequisites": [
+            "GE02"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M14",
+          "title_en": "Velocity vectors distinguish the moving and ground frames",
+          "title_zh": "速度向量区分运动介质与地面参照系",
+          "steps_en": [
+            "Write ground velocity as medium-relative velocity plus the medium’s velocity.",
+            "Use the target displacement divided by time for the ground-frame components.",
+            "Apply speed norms in the correct frame, and subtract squared equations to eliminate the shared transverse component."
+          ],
+          "steps_zh": [
+            "地面速度等于相对介质速度加介质速度。",
+            "由目标位移除以时间写出地面分量。",
+            "在正确参照系下使用速率范数，并相减平方式以消去共同横向分量。"
+          ],
+          "example_en": "A river is twelve units wide and flows east at one unit per minute. A swimmer of water-relative speed $\\sqrt5$ travels directly north in the ground frame. Find the crossing time.",
+          "example_zh": "河宽十二，水流向东速度一单位每分，泳者相对水速为 $\\sqrt5$，地面轨迹正北，求过河时间。",
+          "solution_en": [
+            "To cancel east current, the swimmer’s water-relative horizontal component must be $-1$.",
+            "If its north component is $v>0$, then $1+v^2=5$, so $v=2$.",
+            "The ground north speed remains two, giving time $12/2=6$ minutes."
+          ],
+          "solution_zh": [
+            "抵消向东水流要求相对水的横向分量为 $-1$。",
+            "若向北分量为 $v>0$，则 $1+v^2=5$，所以 $v=2$。",
+            "地面向北速度仍为二，故过河时间为六分钟。"
+          ],
+          "tip_en": "The magnitude of a sum of velocities is not generally the sum of their magnitudes.",
+          "tip_zh": "速度向量和的长度一般不等于速率之和。",
+          "question_ids": [
+            "AIME-2022-I-Q05"
+          ],
+          "prerequisites": [
+            "AL01"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE07-M15",
+          "title_en": "Oblique unit-vector bases retain a Gram metric",
+          "title_zh": "斜交单位向量基保留格拉姆度量",
+          "steps_en": [
+            "Choose linearly independent unit side directions $u,v$ and record $u\\cdot v=c$, with $|c|<1$.",
+            "A point $xu+yv$ has norm square $x^2+y^2+2cxy$; incidence stays affine but Euclidean lengths use this quadratic form.",
+            "The vector $u+v$ points along the internal bisector because its dot products with the two unit sides are equal.",
+            "Subtract circle equations sharing this metric form to obtain a linear radical axis."
+          ],
+          "steps_zh": [
+            "取线性无关的单位边方向 $u,v$，记录 $u\\cdot v=c$，其中 $|c|<1$。",
+            "点 $xu+yv$ 的范数平方为 $x^2+y^2+2cxy$；关联保持仿射，但欧氏长度必须使用此二次型。",
+            "$u+v$ 对两单位边的点积相同，因此指向内角平分线。",
+            "同一度量下的两圆方程相减，仍得到线性根轴。"
+          ],
+          "example_en": "Unit vectors $u,v$ meet at $60^\\circ$. Find $|2u+v|$ and a unit vector along their internal bisector.",
+          "example_zh": "单位向量 $u,v$ 夹角六十度，求 $|2u+v|$ 及其内角平分线单位方向。",
+          "solution_en": [
+            "The Gram coefficient is $u\\cdot v=1/2$. Thus $|2u+v|^2=4+1+4(1/2)=7$.",
+            "Also $|u+v|^2=2+2(1/2)=3$, so its unit direction is $(u+v)/\\sqrt3$.",
+            "The direction has equal dot product $\\sqrt3/2$ with $u,v$, confirming that each angle is $30^\\circ$."
+          ],
+          "solution_zh": [
+            "格拉姆系数为 $1/2$，所以 $|2u+v|^2=4+1+4(1/2)=7$。",
+            "又 $|u+v|^2=3$，故单位方向为 $(u+v)/\\sqrt3$。",
+            "该方向与 $u,v$ 点积均为 $\\sqrt3/2$，核实两角各三十度。"
+          ],
+          "tip_en": "Using $x^2+y^2$ in an oblique basis silently changes the geometry.",
+          "tip_zh": "斜交坐标中若使用 $x^2+y^2$，便悄悄改变了几何度量。",
+          "question_ids": [
+            "AIME-2010-II-Q15",
+            "AIME-2022-I-Q14"
+          ],
+          "prerequisites": [
+            "GE05",
+            "GE04"
+          ],
+          "extensions_en": [
+            "For a midpoint $M$ of side $AB$, with $C=0,A=bu,B=av$, subtracting $\\min(a,b)(u+v)/2$ from $M$ locates the opposite perimeter-bisector endpoint on the longer adjacent side. The two boundary routes then have equal length; this proves the cleaver direction, rather than assuming it."
+          ],
+          "extensions_zh": [
+            "若 $M$ 为 $AB$ 中点，取 $C=0,A=bu,B=av$，从 $M$ 减去 $\\min(a,b)(u+v)/2$，便得到较长邻边上的周长平分线另一端点。两条边界路线长度相等，从而证明劈周长线方向，而非直接假设该结论。"
+          ]
+        }
+      ],
+      "coverage_by_question": {
+        "AIME-2001-II-Q04": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2003-I-Q15": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE05"
+          ]
+        },
+        "AIME-2003-II-Q11": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2005-I-Q10": {
+          "method_ids": [
+            "GE07-M01",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2006-II-Q06": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2009-I-Q04": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2011-I-Q02": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2011-II-Q02": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2011-II-Q04": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE05"
+          ]
+        },
+        "AIME-2013-II-Q13": {
+          "method_ids": [
+            "GE07-M01",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2014-II-Q11": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2017-II-Q10": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2019-II-Q07": {
+          "method_ids": [
+            "GE07-M01"
+          ],
+          "prerequisites": [
+            "GE01"
+          ]
+        },
+        "AIME-2020-II-Q12": {
+          "method_ids": [
+            "GE07-M01",
+            "GE07-M09"
+          ],
+          "prerequisites": [
+            "NT05"
+          ]
+        },
+        "AIME-2022-I-Q03": {
+          "method_ids": [
+            "GE07-M01",
+            "GE07-M06"
+          ],
+          "prerequisites": [
+            "GE01",
+            "GE05"
+          ]
+        },
+        "AIME-2001-II-Q06": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2001-II-Q07": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE01",
+            "GE05"
+          ]
+        },
+        "AIME-2002-I-Q15": {
+          "method_ids": [
+            "GE07-M02",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2002-II-Q02": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2005-II-Q08": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04",
+            "GE06"
+          ]
+        },
+        "AIME-2006-II-Q09": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE06"
+          ]
+        },
+        "AIME-2008-II-Q11": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE06"
+          ]
+        },
+        "AIME-2009-II-Q05": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE06"
+          ]
+        },
+        "AIME-2009-II-Q10": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE05"
+          ]
+        },
+        "AIME-2011-II-Q13": {
+          "method_ids": [
+            "GE07-M02",
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE05"
+          ]
+        },
+        "AIME-2012-II-Q15": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04",
+            "GE05"
+          ]
+        },
+        "AIME-2014-I-Q15": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2014-II-Q08": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE06"
+          ]
+        },
+        "AIME-2017-I-Q10": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "AL03",
+            "GE04"
+          ]
+        },
+        "AIME-2019-I-Q13": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE04"
+          ]
+        },
+        "AIME-2019-I-Q15": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2019-II-Q11": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2020-II-Q15": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE04"
+          ]
+        },
+        "AIME-2022-I-Q08": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE06"
+          ]
+        },
+        "AIME-2023-II-Q09": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE02",
+            "GE04"
+          ]
+        },
+        "AIME-2024-I-Q05": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2025-I-Q08": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "AL03"
+          ]
+        },
+        "AIME-2025-II-Q01": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2025-II-Q06": {
+          "method_ids": [
+            "GE07-M02"
+          ],
+          "prerequisites": [
+            "GE02",
+            "GE06"
+          ]
+        },
+        "AIME-2000-II-Q08": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2003-II-Q14": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2005-II-Q12": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "AL08"
+          ]
+        },
+        "AIME-2009-II-Q03": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2012-I-Q14": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "AL03",
+            "GE03"
+          ]
+        },
+        "AIME-2013-I-Q07": {
+          "method_ids": [
+            "GE07-M03",
+            "GE07-M12",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2016-I-Q09": {
+          "method_ids": [
+            "GE07-M03",
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL07",
+            "AL08",
+            "GE03"
+          ]
+        },
+        "AIME-2017-II-Q15": {
+          "method_ids": [
+            "GE07-M03",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "AL07"
+          ]
+        },
+        "AIME-2021-I-Q06": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2021-II-Q12": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2022-I-Q05": {
+          "method_ids": [
+            "GE07-M03",
+            "GE07-M14"
+          ],
+          "prerequisites": [
+            "AL01"
+          ]
+        },
+        "AIME-2023-I-Q05": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2023-I-Q12": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2023-I-Q13": {
+          "method_ids": [
+            "GE07-M03",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2023-II-Q12": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE04"
+          ]
+        },
+        "AIME-2026-I-Q14": {
+          "method_ids": [
+            "GE07-M03"
+          ],
+          "prerequisites": [
+            "AL08"
+          ]
+        },
+        "AIME-2001-I-Q12": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "GE09"
+          ]
+        },
+        "AIME-2004-I-Q10": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "PS03"
+          ]
+        },
+        "AIME-2005-I-Q14": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M08"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2006-I-Q14": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE09"
+          ]
+        },
+        "AIME-2008-I-Q14": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "AL07",
+            "GE04"
+          ]
+        },
+        "AIME-2011-I-Q03": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2013-I-Q12": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M07",
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "GE01",
+            "GE02"
+          ]
+        },
+        "AIME-2015-II-Q11": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2015-II-Q15": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "GE02",
+            "GE06"
+          ]
+        },
+        "AIME-2016-I-Q14": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M09"
+          ],
+          "prerequisites": [
+            "NT02",
+            "NT03"
+          ]
+        },
+        "AIME-2018-I-Q08": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL07"
+          ]
+        },
+        "AIME-2019-II-Q13": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2021-I-Q09": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2023-I-Q08": {
+          "method_ids": [
+            "GE07-M04"
+          ],
+          "prerequisites": [
+            "AL08"
+          ]
+        },
+        "AIME-2026-I-Q12": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE09"
+          ]
+        },
+        "AIME-2026-II-Q12": {
+          "method_ids": [
+            "GE07-M04",
+            "GE07-M06",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE09",
+            "GE10"
+          ]
+        },
+        "AIME-2000-I-Q02": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "NT05"
+          ]
+        },
+        "AIME-2004-II-Q07": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2004-II-Q15": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "LO01"
+          ]
+        },
+        "AIME-2011-I-Q14": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "AL08"
+          ]
+        },
+        "AIME-2012-I-Q13": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE02",
+            "GE03"
+          ]
+        },
+        "AIME-2012-II-Q13": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2013-I-Q09": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE03"
+          ]
+        },
+        "AIME-2013-II-Q04": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE05"
+          ]
+        },
+        "AIME-2014-I-Q10": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "AL08"
+          ]
+        },
+        "AIME-2015-I-Q04": {
+          "method_ids": [
+            "GE07-M05",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2015-I-Q07": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2019-II-Q01": {
+          "method_ids": [
+            "GE07-M05",
+            "GE07-M06",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2020-II-Q04": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": []
+        },
+        "AIME-2022-II-Q11": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE05"
+          ]
+        },
+        "AIME-2025-I-Q02": {
+          "method_ids": [
+            "GE07-M05",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2025-I-Q09": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "GE08"
+          ]
+        },
+        "AIME-2025-I-Q14": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "AL07",
+            "GE03",
+            "GE04"
+          ]
+        },
+        "AIME-2026-I-Q05": {
+          "method_ids": [
+            "GE07-M05"
+          ],
+          "prerequisites": [
+            "AL03"
+          ]
+        },
+        "AIME-2026-I-Q10": {
+          "method_ids": [
+            "GE07-M05",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2003-II-Q04": {
+          "method_ids": [
+            "GE07-M06"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2005-II-Q10": {
+          "method_ids": [
+            "GE07-M06"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2006-I-Q10": {
+          "method_ids": [
+            "GE07-M06"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2010-I-Q08": {
+          "method_ids": [
+            "GE07-M06",
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL06"
+          ]
+        },
+        "AIME-2018-II-Q09": {
+          "method_ids": [
+            "GE07-M06",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2020-I-Q15": {
+          "method_ids": [
+            "GE07-M06"
+          ],
+          "prerequisites": [
+            "GE04"
+          ]
+        },
+        "AIME-2000-I-Q13": {
+          "method_ids": [
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "AL07",
+            "GE02"
+          ]
+        },
+        "AIME-2010-I-Q11": {
+          "method_ids": [
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "AL06",
+            "GE10"
+          ]
+        },
+        "AIME-2012-I-Q08": {
+          "method_ids": [
+            "GE07-M07",
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE01",
+            "GE10"
+          ]
+        },
+        "AIME-2014-I-Q13": {
+          "method_ids": [
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "AL01",
+            "GE02"
+          ]
+        },
+        "AIME-2017-II-Q03": {
+          "method_ids": [
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "GE02",
+            "PS03"
+          ]
+        },
+        "AIME-2018-II-Q04": {
+          "method_ids": [
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2020-II-Q02": {
+          "method_ids": [
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "PS03"
+          ]
+        },
+        "AIME-2021-I-Q02": {
+          "method_ids": [
+            "GE07-M07"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2025-I-Q12": {
+          "method_ids": [
+            "GE07-M07",
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "AL06",
+            "GE02"
+          ]
+        },
+        "AIME-2026-II-Q03": {
+          "method_ids": [
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02",
+            "NT03"
+          ]
+        },
+        "AIME-2005-I-Q11": {
+          "method_ids": [
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL07"
+          ]
+        },
+        "AIME-2016-II-Q07": {
+          "method_ids": [
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL05",
+            "NT01"
+          ]
+        },
+        "AIME-2017-I-Q15": {
+          "method_ids": [
+            "GE07-M08"
+          ],
+          "prerequisites": [
+            "AL07",
+            "GE03"
+          ]
+        },
+        "AIME-2000-II-Q11": {
+          "method_ids": [
+            "GE07-M09"
+          ],
+          "prerequisites": [
+            "NT05"
+          ]
+        },
+        "AIME-2002-I-Q11": {
+          "method_ids": [
+            "GE07-M09"
+          ],
+          "prerequisites": [
+            "NT02"
+          ]
+        },
+        "AIME-2017-II-Q14": {
+          "method_ids": [
+            "GE07-M09"
+          ],
+          "prerequisites": [
+            "CO04",
+            "CO06"
+          ]
+        },
+        "AIME-2008-II-Q13": {
+          "method_ids": [
+            "GE07-M10"
+          ],
+          "prerequisites": [
+            "AL03",
+            "GE02"
+          ]
+        },
+        "AIME-2004-I-Q14": {
+          "method_ids": [
+            "GE07-M11"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2001-II-Q15": {
+          "method_ids": [
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2007-I-Q13": {
+          "method_ids": [
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE02",
+            "GE10"
+          ]
+        },
+        "AIME-2008-I-Q15": {
+          "method_ids": [
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE10"
+          ]
+        },
+        "AIME-2011-I-Q13": {
+          "method_ids": [
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE09"
+          ]
+        },
+        "AIME-2023-II-Q14": {
+          "method_ids": [
+            "GE07-M12"
+          ],
+          "prerequisites": [
+            "GE10"
+          ]
+        },
+        "AIME-2010-II-Q09": {
+          "method_ids": [
+            "GE07-M13"
+          ],
+          "prerequisites": [
+            "GE02"
+          ]
+        },
+        "AIME-2010-II-Q15": {
+          "method_ids": [
+            "GE07-M15"
+          ],
+          "prerequisites": [
+            "GE04",
+            "GE05"
+          ]
+        },
+        "AIME-2022-I-Q14": {
+          "method_ids": [
+            "GE07-M15"
+          ],
+          "prerequisites": [
+            "GE03",
+            "GE05",
+            "NT05"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "subtype_id": "GE08",
+    "reviewer": "root",
+    "content_sha256": "7999f590587390a74e99065761f66e4269df0a51da1568aedc46b15f3ec913a3",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "GE08-M01",
+      "GE08-M02",
+      "GE08-M03",
+      "GE08-M04",
+      "GE08-M05",
+      "GE08-M06",
+      "GE08-M07",
+      "GE08-M08"
+    ],
+    "findings": [
+      "Independently read all eight complete bilingual methods, examples, solutions and extensions and checked all assigned primary/secondary routes against the canonical solution chains.",
+      "Recomputed the ellipse-equilateral example (3072/169), the four real conic intersections, the ellipse/focal distance branch PF1<7, and the crossed-focal pair (sqrt10+sqrt5).",
+      "Verified the hyperbola-rhombus lower bound48 is an unattained infimum; checked the unit-segment envelope point (3sqrt3/8,1/8), the rotated-parabola quadrant condition, and the parabola normal-distance radii3 and sqrt11/2.",
+      "Both language versions preserve the relevant sign, positivity, distinctness and attainment conditions. No corrections were required."
+    ],
+    "patch": {}
+  },
+  {
+    "subtype_id": "GE09",
+    "reviewer": "root",
+    "content_sha256": "c2832eeb79dba1e9d7c6320e2c42320ded7edae6b0fca8633a992b1286685dbc",
+    "math_checked": true,
+    "language_checked": true,
+    "route_checked": true,
+    "checked_method_ids": [
+      "GE09-M01",
+      "GE09-M02",
+      "GE09-M03",
+      "GE09-M04",
+      "GE09-M05",
+      "GE09-M06",
+      "GE09-M07",
+      "GE09-M08",
+      "GE09-M09"
+    ],
+    "findings": [
+      "Read all nine complete bilingual methods and all16 linked canonical problem statements and worked solutions; checked applicability to the actual primary/secondary method chains.",
+      "Independently recomputed all nine teaching examples: sphere sections2sqrt6; hemisphere fraction1/5; tetrahedron inradius3-sqrt3; pyramid circumradius17/6; lowest cube vertex2-sqrt3; tangent spheres separation4; prism count4; torus contact15/4; affine radius5/2 with a verified distinct unit-normal tangent plane.",
+      "Made the solid-cone supporting halfspaces and beta>0 explicit, used an absolute value for unequal sphere radii, and stated the common sphere/circumcenter-axis premise for the diameter extension.",
+      "Added the coaxial premise and R>r internal-tangency domain to the torus method. Verified signed-height choices, filled-triangle foot inclusion, box compactness/attainment and the second-plane normalization in the linked routes."
+    ],
+    "patch": {
+      "methods": [
+        {
+          "method_id": "GE09-M01",
+          "title_en": "Sphere sections separate vertical and planar distances",
+          "title_zh": "球截面分离竖直距离与平面距离",
+          "steps_en": [
+            "For sphere radius $R$ and section radius $a$, write the center height as $h=\\pm\\sqrt{R^2-a^2}$.",
+            "Decompose a center-to-center squared distance as planar distance squared plus the squared height difference.",
+            "When section radii are equal, subtract height squares to obtain a difference-of-squares equation.",
+            "After any squaring, restore the chosen side of the plane and the signs of all radicals."
+          ],
+          "steps_zh": [
+            "球半径为 $R$、截圆半径为 $a$ 时，球心高度为 $h=\\pm\\sqrt{R^2-a^2}$。",
+            "把球心距平方分成平面投影距离平方与高度差平方。",
+            "截圆半径相等时，相减高度平方，得到平方差方程。",
+            "若曾平方，须补回球心所在半空间及各根式符号条件。"
+          ],
+          "example_en": "Two externally tangent spheres of radii $5,7$ are cut into equal-radius circles by one plane. Their centers are on the same side, and their projected centers are distance $8\\sqrt2$ apart. Find the common section radius.",
+          "example_zh": "半径 $5,7$ 的两外切球被同一平面截得等半径圆，球心位于平面同侧，投影圆心距为 $8\\sqrt2$。求截圆半径。",
+          "solution_en": [
+            "Let positive heights be $u<v$. Since the sphere-center distance is $12$, $(v-u)^2=144-128=16$, so $v-u=4$.",
+            "Equal section radii give $v^2-u^2=49-25=24$, hence $v+u=6$ and $(u,v)=(1,5)$.",
+            "The section radius squared is $25-1=24$, so it is $2\\sqrt6$. Both heights are positive as required."
+          ],
+          "solution_zh": [
+            "设正高度为 $u<v$。球心距为 $12$，故 $(v-u)^2=144-128=16$，得到 $v-u=4$。",
+            "截圆半径相同给出 $v^2-u^2=49-25=24$，所以 $v+u=6$，即 $(u,v)=(1,5)$。",
+            "截圆半径平方为 $25-1=24$，所以半径为 $2\\sqrt6$；两高度均正，符合要求。"
+          ],
+          "tip_en": "Use the difference of heights, not the difference of sphere radii.",
+          "tip_zh": "应使用高度差，不能直接使用球半径差。",
+          "question_ids": [
+            "AIME-2020-I-Q06",
+            "AIME-2022-I-Q10"
+          ],
+          "prerequisites": [
+            "AL01"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE09-M02",
+          "title_en": "Containment is a center-distance or diameter bound",
+          "title_zh": "容纳条件是球心距界或直径界",
+          "steps_en": [
+            "A radius-$r$ ball fits inside a radius-$R$ ball precisely when the center distance is at most $R-r$.",
+            "For a ball resting on a plane, its center height is $r$; project the containment inequality to the contact plane.",
+            "A box needs sphere radius at least half its space diagonal because opposite vertices must both fit.",
+            "The box center attains that radius; for a family of boxes, maximize the diagonal separately."
+          ],
+          "steps_zh": [
+            "半径 $r$ 的球能放入半径 $R$ 的球，当且仅当球心距不超过 $R-r$。",
+            "球在平面上相切时，球心高度为 $r$；把容纳不等式投影到接触平面。",
+            "长方体需要的球半径至少是体对角线一半，因为两个对顶点均须被容纳。",
+            "以长方体中心为球心可达到该半径；长方体族另需最大化体对角线。"
+          ],
+          "example_en": "A radius-$2$ ball rests on the equatorial disk of a radius-$5$ hemisphere and must be contained in it. What fraction of the disk allows its contact point?",
+          "example_zh": "半径 $2$ 的球在半径 $5$ 的上半球底圆盘上相切且完全被容纳，允许接触点占底圆盘面积的几分之几？",
+          "solution_en": [
+            "For contact distance $d$ from the disk center, the small center is distance $\\sqrt{d^2+4}$ from the hemisphere center.",
+            "Containment requires $\\sqrt{d^2+4}+2\\le5$, so $d^2\\le5$. The small ball is automatically above the bottom plane.",
+            "The permitted disk has radius $\\sqrt5$, giving area fraction $5/25=1/5$."
+          ],
+          "solution_zh": [
+            "设接触点距底面圆心为 $d$，小球心距半球心为 $\\sqrt{d^2+4}$。",
+            "容纳要求 $\\sqrt{d^2+4}+2\\le5$，即 $d^2\\le5$；小球同时自动位于底面上方。",
+            "允许圆盘半径为 $\\sqrt5$，面积占比为 $5/25=1/5$。"
+          ],
+          "tip_en": "The containing sphere can be positioned separately for each box; its radius is the common worst-case requirement.",
+          "tip_zh": "对每个长方体可分别摆放容球；共同要求的是最坏情形半径。",
+          "question_ids": [
+            "AIME-2024-I-Q15",
+            "AIME-2026-I-Q03"
+          ],
+          "prerequisites": [
+            "AL07"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE09-M03",
+          "title_en": "Use normalized distances to supporting planes",
+          "title_zh": "使用归一化支撑平面距离",
+          "steps_en": [
+            "Write each face or support as $ax+by+cz=d$ and divide signed distance by $\\sqrt{a^2+b^2+c^2}$.",
+            "Choose an interior sign convention before equating face distances to a radius.",
+            "Exploit coordinate-plane tangency or reflection symmetry to reduce center variables.",
+            "For a largest insphere, prove a bound using supporting planes and then verify one center attains all inequalities."
+          ],
+          "steps_zh": [
+            "将每个面或支撑写为 $ax+by+cz=d$，有向距离须除以 $\\sqrt{a^2+b^2+c^2}$。",
+            "令各面距离等于半径前，先固定内部的正负号约定。",
+            "利用坐标面相切或反射对称减少球心变量。",
+            "求最大内球时，先由支撑平面证明界，再核实某球心满足全部不等式并取等。"
+          ],
+          "example_en": "Find the inradius of the tetrahedron in the first octant bounded by $x+y+z=6$.",
+          "example_zh": "求第一卦限内由 $x+y+z=6$ 与三个坐标面围成的四面体内切球半径。",
+          "solution_en": [
+            "Tangency to the coordinate planes gives center $(r,r,r)$ with $r>0$.",
+            "The distance to the fourth face is $(6-3r)/\\sqrt3$, so $6-3r=r\\sqrt3$.",
+            "Hence $r=6/(3+\\sqrt3)=3-\\sqrt3$. Its center is interior and the four positive face distances all equal $r$."
+          ],
+          "solution_zh": [
+            "与三个坐标面相切使球心为 $(r,r,r)$，其中 $r>0$。",
+            "到第四面的距离为 $(6-3r)/\\sqrt3$，故 $6-3r=r\\sqrt3$。",
+            "所以 $r=3-\\sqrt3$。球心在内部，到四面的正距离均为 $r$。"
+          ],
+          "tip_en": "Plane coefficients alone are not distances: normalization matters.",
+          "tip_zh": "平面系数不是距离，法向量长度的归一化不可省略。",
+          "question_ids": [
+            "AIME-2001-I-Q12",
+            "AIME-2006-I-Q14",
+            "AIME-2020-II-Q07",
+            "AIME-2026-II-Q12"
+          ],
+          "prerequisites": [
+            "GE07",
+            "AL07"
+          ],
+          "extensions_en": [
+            "For a solid cone described by $\\alpha u+\\beta\\rho\\le\\gamma$, where $u$ is the axial coordinate, $\\rho$ the radial coordinate and $\\beta>0$, every lateral supporting plane stays at least a ball radius away precisely when $\\sqrt{\\alpha^2+\\beta^2}\\,r\\le\\gamma-\\alpha u-\\beta\\rho$ at its center. Two perpendicular cones give coupled absolute-value bounds; add them and check the base-plane distances too.",
+            "A rigid tripod can be kept fixed while its three contact points define a new support plane. The height is the distance of the apex to that plane, avoiding a full spatial rotation."
+          ],
+          "extensions_zh": [
+            "若实心圆锥由 $\\alpha u+\\beta\\rho\\le\\gamma$ 描述，其中 $u$ 为轴向坐标、$\\rho$ 为径向坐标且 $\\beta>0$，则各侧面支撑平面到球心距离均不小于球半径，等价于球心满足 $\\sqrt{\\alpha^2+\\beta^2}\\,r\\le\\gamma-\\alpha u-\\beta\\rho$。两个垂直圆锥给出含绝对值的耦合界，可相加求界，但仍需检验底面距离。",
+            "刚性三脚架可保持自身坐标不变，由三个接触点确定新支撑平面；高度即顶点到该平面距离，无需求整体空间旋转。"
+          ]
+        },
+        {
+          "method_id": "GE09-M04",
+          "title_en": "Symmetry locates an axial circumsphere center",
+          "title_zh": "对称性确定轴上的外接球心",
+          "steps_en": [
+            "Project a sphere center to a plane through three sphere points; the projection is their planar circumcenter.",
+            "For an axial pyramid or symmetric tetrahedron, place the center at signed height $z$ on the symmetry axis.",
+            "Equate squared distances to an apex and a base vertex; quadratic terms usually cancel.",
+            "When asked for distance to a filled triangle, verify the perpendicular foot is inside that triangle."
+          ],
+          "steps_zh": [
+            "球心向三个球面点所在平面投影，垂足即三点的平面外心。",
+            "对轴对称棱锥或对称四面体，把球心放在对称轴有向高度 $z$ 处。",
+            "令到顶点和底面顶点的距离平方相等，二次项通常会消去。",
+            "若求到填满三角形的距离，必须确认垂足在三角形内部。"
+          ],
+          "example_en": "A right square pyramid has base edge $4$ and height $3$. Find the radius of its circumsphere.",
+          "example_zh": "正四棱锥底边长 $4$、高 $3$，求外接球半径。",
+          "solution_en": [
+            "Put the base center at height zero and let the sphere center have signed height $z$. A base vertex is planar distance $2\\sqrt2$ from the axis.",
+            "Equate $z^2+8=(3-z)^2$, obtaining $z=1/6$.",
+            "The radius is $3-z=17/6$. Equal distances to all four base vertices follow by symmetry."
+          ],
+          "solution_zh": [
+            "以底面中心为零高度，球心有向高度为 $z$；底顶点到轴的平面距离为 $2\\sqrt2$。",
+            "由 $z^2+8=(3-z)^2$ 得 $z=1/6$。",
+            "半径为 $3-z=17/6$，对称性保证到另三个底顶点距离相同。"
+          ],
+          "tip_en": "The center can lie below a base plane; do not assume $z>0$ without proof.",
+          "tip_zh": "球心可能位于底面下方，不可未经证明假设 $z>0$。",
+          "question_ids": [
+            "AIME-2000-II-Q12",
+            "AIME-2022-II-Q03",
+            "AIME-2026-II-Q12"
+          ],
+          "prerequisites": [
+            "GE05",
+            "GE10"
+          ],
+          "extensions_en": [
+            "For a triangle of circumradius $R$ on a sphere of radius $L$, its plane distance is $\\sqrt{L^2-R^2}$. This equals distance to the filled triangle only when its circumcenter lies inside, for example when the triangle is acute."
+          ],
+          "extensions_zh": [
+            "若球面上三角形外接圆半径为 $R$、球半径为 $L$，球心到其平面的距离为 $\\sqrt{L^2-R^2}$。只有外心在三角形内部时，才等于到填满三角形的距离；锐角三角形即满足此条件。"
+          ]
+        },
+        {
+          "method_id": "GE09-M05",
+          "title_en": "Orthonormal edge projections have a fixed square sum",
+          "title_zh": "正交单位边投影具有固定平方和",
+          "steps_en": [
+            "Use three mutually perpendicular edge directions as an orthonormal basis.",
+            "The components of a unit vertical vector in that basis have squared sum one.",
+            "Multiply by edge length squared to relate three height differences.",
+            "Choose the root that gives all required projection signs and the specified nearest or farthest vertex."
+          ],
+          "steps_zh": [
+            "以三条相互垂直的棱方向作为标准正交基。",
+            "竖直单位向量在此基中的三个分量平方和为一。",
+            "乘以棱长平方，得到三个高度差的关系。",
+            "根据投影正负及最近、最远顶点要求筛选代数根。"
+          ],
+          "example_en": "A side-$3$ cube has a lowest vertex at height $h>0$, and its three adjacent vertices all at height $2$. Find $h$.",
+          "example_zh": "棱长 $3$ 的立方体最低顶点高度为 $h>0$，三个相邻顶点高度都为 $2$，求 $h$。",
+          "solution_en": [
+            "The three edge height projections are all $2-h>0$. Their squared sum must equal $3^2$.",
+            "Thus $3(2-h)^2=9$, giving $h=2\\pm\\sqrt3$.",
+            "The plus sign makes adjacent vertices lower, contradicting the premise. Hence $h=2-\\sqrt3>0$."
+          ],
+          "solution_zh": [
+            "三条棱的高度投影均为正数 $2-h$，平方和必须为 $3^2$。",
+            "所以 $3(2-h)^2=9$，得 $h=2\\pm\\sqrt3$。",
+            "正号会使相邻顶点更低，故只能取 $h=2-\\sqrt3>0$。"
+          ],
+          "tip_en": "The fixed square sum comes from orthogonality, not equal inclination.",
+          "tip_zh": "固定平方和来自正交性，不依赖三条棱倾角相同。",
+          "question_ids": [
+            "AIME-2011-I-Q13"
+          ],
+          "prerequisites": [
+            "GE07"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE09-M06",
+          "title_en": "A perpendicular section converts dihedrals into tangent-center triangles",
+          "title_zh": "垂直截面将二面角化为切球圆心三角形",
+          "steps_en": [
+            "Cut perpendicularly to the intersection line of the planes; their dihedral becomes a planar angle.",
+            "A sphere tangent to both planes has its center on an angle bisector, transverse distance $r/\\sin\\theta$ for half-angle $\\theta$.",
+            "Keep the along-line coordinate separate and use tangency center distances in the resulting right triangle.",
+            "For axial sphere points, identify an actual diameter before using a right-angle or altitude-product identity."
+          ],
+          "steps_zh": [
+            "作垂直于两平面交线的截面，将二面角转为平面角。",
+            "同时与两面相切的球心在角平分线上，半角为 $\\theta$ 时横向距为 $r/\\sin\\theta$。",
+            "交线方向坐标另行保留，在所得直角三角形中使用切球心距。",
+            "对轴上球面点，先证实为直径端点，再使用直角或高线乘积关系。"
+          ],
+          "example_en": "Two perpendicular planes meet along a line. Two spheres of radius $2$ lie in the same sector, tangent to both planes and each other. What is the separation of their centers along the intersection line?",
+          "example_zh": "两垂直平面相交于一直线，两个半径 $2$ 的球位于同一角域，同时与两平面及彼此外切。求两球心沿交线方向的距离。",
+          "solution_en": [
+            "In the perpendicular cross section, both centers have coordinates $(2,2)$ relative to the planes, so their transverse projections coincide.",
+            "External tangency makes their full center distance $2+2=4$.",
+            "All of that distance is along the intersection line, so the requested separation is $4$."
+          ],
+          "solution_zh": [
+            "在垂直截面内，两球心相对两面的坐标均为 $(2,2)$，所以横向投影相同。",
+            "外切使球心距为 $2+2=4$。",
+            "该距离全部沿交线方向，故所求为 $4$。"
+          ],
+          "tip_en": "The two-plane cross section does not capture separation parallel to their intersection line.",
+          "tip_zh": "两平面的垂直截面不会显示沿交线方向的间距。",
+          "question_ids": [
+            "AIME-2016-II-Q14",
+            "AIME-2021-II-Q10"
+          ],
+          "prerequisites": [
+            "GE03",
+            "AL08"
+          ],
+          "extensions_en": [
+            "For unequal radii $R,r$ in the same sector, the transverse center separation is $|R-r|/\\sin\\theta$. If a small sphere touches two equal spheres whose centers differ only along the intersection line, it lies halfway between them along that line.",
+            "A sphere through three noncollinear triangle vertices has its center on their perpendicular circumcenter axis. Two distinct sphere points on that axis are diameter endpoints. A triangle vertex then supplies a right triangle and, when its projection lies between the endpoints, the altitude-product relation."
+          ],
+          "extensions_zh": [
+            "同一角域内半径为 $R,r$ 的球心横向间距为 $|R-r|/\\sin\\theta$。若小球同时与两个仅沿交线分离的等球相切，则小球在交线方向上位于两者正中。",
+            "经过三角形三个不共线顶点的球，其球心在外心垂轴上。该轴上两个不同球面点必为直径端点。再用一个三角形顶点构造直角三角形；若其投影位于两端点之间，还可使用高线乘积关系。"
+          ]
+        },
+        {
+          "method_id": "GE09-M07",
+          "title_en": "Prism distances split into horizontal chord and height classes",
+          "title_zh": "棱柱距离分成水平弦长与高度类别",
+          "steps_en": [
+            "Classify pairs by their horizontal separation in the base polygon.",
+            "For vertices in different parallel bases, add the fixed height square to the horizontal distance square.",
+            "Test each possible equality of two sides, including equality with a base side rather than only two cross-base sides.",
+            "Count disjoint vertex classes and multiply by symmetry only when it preserves the class."
+          ],
+          "steps_zh": [
+            "按底面多边形中的水平距离对点对分类。",
+            "不同平行底面的顶点距离平方，等于水平距离平方加固定高度平方。",
+            "检查各种两边相等条件，既包括两条跨底边相等，也包括跨底边与底边相等。",
+            "对互斥顶点类别计数，仅在对称保持类别时使用对称倍数。"
+          ],
+          "example_en": "A right square prism has unit base edge and height $\\sqrt2$. Choose a diagonal pair in its bottom base. How many top vertices form an isosceles triangle with that pair?",
+          "example_zh": "正四棱柱底边为一、高为 $\\sqrt2$。固定底面一对对角顶点，顶面有多少顶点能与之组成等腰三角形？",
+          "solution_en": [
+            "The bottom diagonal has length $\\sqrt2$. A top vertex above either endpoint has cross distances $\\sqrt2,2$, so it forms an isosceles triangle by matching the bottom diagonal.",
+            "Each of the other two top vertices has horizontal distance one to both bottom endpoints, hence both cross distances are $\\sqrt3$.",
+            "All four top vertices qualify. The two mechanisms are disjoint and neither may be omitted."
+          ],
+          "solution_zh": [
+            "底面对角线长为 $\\sqrt2$。正上方对应两个端点的顶点，其跨底距离为 $\\sqrt2,2$，通过底边与跨底边相等构成等腰。",
+            "另外两个顶点到两底端点的水平距离均为一，跨底距离均为 $\\sqrt3$。",
+            "四个顶点全部符合；两种机制互斥且不能漏掉任一种。"
+          ],
+          "tip_en": "Equal-height symmetry is only one way to make an isosceles spatial triangle.",
+          "tip_zh": "等高对称不是空间等腰三角形的唯一来源。",
+          "question_ids": [
+            "AIME-2018-I-Q07"
+          ],
+          "prerequisites": [
+            "CO06"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE09-M08",
+          "title_en": "An axial torus section gives the contact-circle radius",
+          "title_zh": "圆环面轴截面给出接触圆半径",
+          "steps_en": [
+            "In the coaxial configuration, the sphere center lies on the torus rotation axis. A plane through that axis cuts the torus into its generating circles; analyze either one.",
+            "For sphere radius $R$ and tube radius $r$, use center distance $R-r$ for internal tangency (requiring $R>r$), or $R+r$ for external tangency.",
+            "The contact point lies on the center line, so its distance to the axis scales by $R/(R\\mp r)$.",
+            "Check that the required center distance is at least the major torus radius, so the axial placement exists."
+          ],
+          "steps_zh": [
+            "在同轴构型中，球心位于圆环旋转轴上。经过该轴的平面将圆环面截成母圆，分析其中一个即可。",
+            "球半径为 $R$、管半径为 $r$ 时，内切圆心距为 $R-r$（要求 $R>r$），外切为 $R+r$。",
+            "切点在连心线上，到轴距离按 $R/(R\\mp r)$ 缩放。",
+            "检查所需圆心距不小于圆环主半径，保证轴向摆放存在。"
+          ],
+          "example_en": "A torus has major radius $3$ and tube radius $1$. Find its contact-circle radius when internally tangent to a sphere of radius $5$.",
+          "example_zh": "圆环面主半径为 $3$、管半径为 $1$，与半径 $5$ 的球从内部相切，求接触圆半径。",
+          "solution_en": [
+            "The generating-circle center is distance $5-1=4$ from the sphere center and distance $3$ from the axis.",
+            "An axial displacement $\\sqrt{4^2-3^2}=\\sqrt7$ exists, so this placement is feasible.",
+            "The contact point is $5/4$ times as far from the axis as the generating-circle center. The contact-circle radius is $15/4$."
+          ],
+          "solution_zh": [
+            "母圆圆心距球心为 $5-1=4$，距旋转轴为 $3$。",
+            "轴向位移为 $\\sqrt{4^2-3^2}=\\sqrt7$，所以摆放可行。",
+            "切点到轴距离是母圆心的 $5/4$ 倍，故接触圆半径为 $15/4$。"
+          ],
+          "tip_en": "The contact circle is not generally the torus midline circle.",
+          "tip_zh": "接触圆通常不是圆环的中心圆。",
+          "question_ids": [
+            "AIME-2024-II-Q08"
+          ],
+          "prerequisites": [
+            "GE06"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        },
+        {
+          "method_id": "GE09-M09",
+          "title_en": "Two common tangent planes make sphere radii affine",
+          "title_zh": "两个公共切平面使球半径成为仿射函数",
+          "steps_en": [
+            "Put one tangent plane at $z=0$, giving center $(x,y,\\rho)$ for radius $\\rho$.",
+            "Write the second plane with unit normal $(u,v,h)$ and a consistent signed-distance equation.",
+            "Its tangency equation is linear in $x,y,\\rho$; for a distinct plane solve $\\rho=\\alpha x+\\beta y+\\gamma$.",
+            "Interpolate this affine function from three noncollinear contact points and verify a unit normal exists."
+          ],
+          "steps_zh": [
+            "把一个切平面设为 $z=0$，半径 $\\rho$ 的球心即 $(x,y,\\rho)$。",
+            "以单位法向量 $(u,v,h)$ 表示第二平面，保持有向距离符号一致。",
+            "切触式对 $x,y,\\rho$ 线性；平面不同便可解为 $\\rho=\\alpha x+\\beta y+\\gamma$。",
+            "用三个不共线接触点插值仿射函数，并验证存在单位法向量。"
+          ],
+          "example_en": "Spheres tangent above $z=0$ have radii $1,2,3$ at contact points $(0,0),(2,0),(0,2)$. They share a second tangent plane on the same side. Find the radius at contact point $(1,1)$ that shares this plane.",
+          "example_zh": "在 $z=0$ 上方相切的球，在接触点 $(0,0),(2,0),(0,2)$ 处半径分别为 $1,2,3$，并与另一个平面同侧相切。求接触点 $(1,1)$ 处与该平面也相切的球半径。",
+          "solution_en": [
+            "The interpolating radius function is $g(x,y)=1+x/2+y$. Therefore the desired radius is $g(1,1)=5/2$.",
+            "To verify the plane, set $u=(1-h)/2,v=1-h$; the unit-normal equation gives $h=1$ or $h=1/9$.",
+            "Take the distinct-plane value $h=1/9$, yielding $(u,v,h)=(4,8,1)/9$ and plane $4x+8y+z=-8$. Its signed distance from each center is exactly its radius."
+          ],
+          "solution_zh": [
+            "插值得半径函数 $g(x,y)=1+x/2+y$，因此所求为 $5/2$。",
+            "验证平面时，取 $u=(1-h)/2,v=1-h$；单位法向条件给出 $h=1$ 或 $h=1/9$。",
+            "取不同平面对应的 $h=1/9$，得单位法向量 $(4,8,1)/9$ 及平面 $4x+8y+z=-8$。各球心到该面的有向距离恰为其半径。"
+          ],
+          "tip_en": "The $h=1$ solution reproduces the first plane and must be excluded.",
+          "tip_zh": "$h=1$ 对应原来的第一个平面，必须排除。",
+          "question_ids": [
+            "AIME-2026-I-Q12"
+          ],
+          "prerequisites": [
+            "GE07"
+          ],
+          "extensions_en": [],
+          "extensions_zh": []
+        }
+      ]
+    }
+  }
+]

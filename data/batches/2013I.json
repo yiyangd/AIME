@@ -1,0 +1,751 @@
+[
+  {
+    "question_id": "AIME-2013-I-Q01",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "For swimming speed $s$, the three times are $0.5/s,3/s,1.6/s$ hours. Their sum is $5.1/s=4.25$, so $s=1.2$.",
+      "reason_zh": "设游速为 $s$，三段时间分别为 $0.5/s,3/s,1.6/s$ 小时，总和 $5.1/s=4.25$，故 $s=1.2$。"
+    },
+    "secondary": [],
+    "statement_en": "An athlete swims $1/2$ mile, cycles thirty miles, and runs eight miles at constant speeds. Running is five times swimming speed, and cycling twice running speed. The total time is $4.25$ hours. Find the cycling time in minutes.",
+    "statement_zh": "运动员以各自恒定速度游半英里、骑车三十英里、跑八英里。跑速为游速五倍，骑速为跑速两倍，总时间四点二五小时。求骑车分钟数。",
+    "answer": 150,
+    "solution_en": [
+      "For swimming speed $s$, the three times are $0.5/s,3/s,1.6/s$ hours. Their sum is $5.1/s=4.25$, so $s=1.2$.",
+      "Cycling speed is twelve mph, and thirty miles take $2.5$ hours, or $150$ minutes."
+    ],
+    "solution_zh": [
+      "设游速为 $s$，三段时间分别为 $0.5/s,3/s,1.6/s$ 小时，总和 $5.1/s=4.25$，故 $s=1.2$。",
+      "骑速为每小时十二英里，骑车需二点五小时，即一百五十分钟。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q02",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "The last digit is zero or five, but cannot be zero because it equals the first. Thus both endpoint digits are five.",
+      "reason_zh": "末位为零或五，而首位非零且相同，所以首尾均为五。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Choose the next two digits arbitrarily. The final middle digit must have one specified residue modulo five, with two available decimal digits. Hence the count is $10\\cdot10\\cdot2=200$.",
+        "reason_zh": "任取中间前两位，第三位模五的余数就被确定，十进数字中每个余数有两种，故共二百个。"
+      }
+    ],
+    "statement_en": "Count five-digit decimal multiples of five whose first and last digits agree and whose digit sum is divisible by five.",
+    "statement_zh": "求五位十进制数的个数，使其被五整除、首尾数字相同、各位数字和也被五整除。",
+    "answer": 200,
+    "solution_en": [
+      "The last digit is zero or five, but cannot be zero because it equals the first. Thus both endpoint digits are five.",
+      "Choose the next two digits arbitrarily. The final middle digit must have one specified residue modulo five, with two available decimal digits. Hence the count is $10\\cdot10\\cdot2=200$."
+    ],
+    "solution_zh": [
+      "末位为零或五，而首位非零且相同，所以首尾均为五。",
+      "任取中间前两位，第三位模五的余数就被确定，十进数字中每个余数有两种，故共二百个。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/2",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q03",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "The two square sides are $x,y$, so $x^2+y^2=(9/10)(x+y)^2$.",
+      "reason_zh": "两个小正方形边长为 $x,y$，所以 $x^2+y^2=(9/10)(x+y)^2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The two square sides are $x,y$, so $x^2+y^2=(9/10)(x+y)^2$.",
+        "reason_zh": "两个小正方形边长为 $x,y$，所以 $x^2+y^2=(9/10)(x+y)^2$。"
+      }
+    ],
+    "statement_en": "Two lines parallel to adjacent sides divide a square into two smaller squares and two nonsquare rectangles. The small squares together occupy $9/10$ of the original area. If the two segments of one cut side have lengths $x,y$, find $x/y+y/x$.",
+    "statement_zh": "两条平行于相邻边的直线将正方形分成两个小正方形及两个非正方形矩形。小正方形总面积为原面积的十分之九。一条被分边的两段长为 $x,y$，求 $x/y+y/x$。",
+    "answer": 18,
+    "solution_en": [
+      "The two square sides are $x,y$, so $x^2+y^2=(9/10)(x+y)^2$.",
+      "Rearranging gives $x^2+y^2=18xy$. Dividing by the positive product yields the required value $18$."
+    ],
+    "solution_zh": [
+      "两个小正方形边长为 $x,y$，所以 $x^2+y^2=(9/10)(x+y)^2$。",
+      "移项得 $x^2+y^2=18xy$，除以正数 $xy$，目标值为十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/3",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q04",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Each four-cell orbit must be monochromatic. Since the total red count is eight, the central cell is blue and exactly two of the three orbits are red.",
+      "reason_zh": "每个四格轨道须同色。红格共八个，迫使中心为蓝，三个轨道中恰两个红。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO07",
+        "reason_en": "Each four-cell orbit must be monochromatic. Since the total red count is eight, the central cell is blue and exactly two of the three orbits are red.",
+        "reason_zh": "每个四格轨道须同色。红格共八个，迫使中心为蓝，三个轨道中恰两个红。"
+      }
+    ],
+    "statement_en": "A thirteen-cell square array has quarter-turn symmetry about its central cell. The other twelve cells form three four-cell rotation orbits. Color eight cells red and five blue, uniformly among all choices. If the chance of a quarter-turn-invariant coloring is $1/n$, find $n$.",
+    "statement_zh": "一个十三方格阵列关于中心方格具有九十度旋转对称，其余十二格分为三个各含四格的旋转轨道。等可能将八格涂红、五格涂蓝。若染色仍具有此旋转对称的概率为 $1/n$，求 $n$。",
+    "answer": 429,
+    "solution_en": [
+      "Each four-cell orbit must be monochromatic. Since the total red count is eight, the central cell is blue and exactly two of the three orbits are red.",
+      "There are three favorable choices and $\\binom{13}8=1287$ total colorings. Thus the probability is $3/1287=1/429$, giving $429$."
+    ],
+    "solution_zh": [
+      "每个四格轨道须同色。红格共八个，迫使中心为蓝，三个轨道中恰两个红。",
+      "有利情形三种，总染色为 $\\binom{13}8=1287$，所以概率为 $1/429$，答案四百二十九。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/4",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Bijections & structural counting"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "The original array is restated by its exact rotation-orbit structure; cell adjacency is immaterial to this problem.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q05",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The equation is $9x^3=(x+1)^3$. Taking real cube roots gives $\\sqrt[3]9\\,x=x+1$, hence $x=1/(\\sqrt[3]9-1)$.",
+      "reason_zh": "原方程等价于 $9x^3=(x+1)^3$，取实立方根得 $\\sqrt[3]9\\,x=x+1$，故 $x=1/(\\sqrt[3]9-1)$。"
+    },
+    "secondary": [],
+    "statement_en": "The real solution of $8x^3-3x^2-3x-1=0$ is $(\\sqrt[3]a+\\sqrt[3]b+1)/c$ with positive integers. Find $a+b+c$.",
+    "statement_zh": "方程 $8x^3-3x^2-3x-1=0$ 的实根为 $(\\sqrt[3]a+\\sqrt[3]b+1)/c$，各参数为正整数，求三者和。",
+    "answer": 98,
+    "solution_en": [
+      "The equation is $9x^3=(x+1)^3$. Taking real cube roots gives $\\sqrt[3]9\\,x=x+1$, hence $x=1/(\\sqrt[3]9-1)$.",
+      "Use $(u-1)(u^2+u+1)=u^3-1$ to rationalize: $x=(\\sqrt[3]{81}+\\sqrt[3]9+1)/8$. The linear equation after cube roots also proves uniqueness.",
+      "The requested sum is $81+9+8=98$."
+    ],
+    "solution_zh": [
+      "原方程等价于 $9x^3=(x+1)^3$，取实立方根得 $\\sqrt[3]9\\,x=x+1$，故 $x=1/(\\sqrt[3]9-1)$。",
+      "用立方差恒等式有理化，得 $x=(\\sqrt[3]{81}+\\sqrt[3]9+1)/8$。取立方根后的方程为一次，也证明实根唯一。",
+      "答案为九十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/5",
+    "method_chain": [
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q06",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "The three math-book positions form a uniformly random three-subset of twelve slots. A box of capacity $k$ contains them in $\\binom k3$ possible slot subsets.",
+      "reason_zh": "三本数学书占据的位置是十二个槽位中的等可能三元子集。容量 $k$ 的盒子可提供 $\\binom k3$ 个有利位置集。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "The three math-book positions form a uniformly random three-subset of twelve slots. A box of capacity $k$ contains them in $\\binom k3$ possible slot subsets.",
+        "reason_zh": "三本数学书占据的位置是十二个槽位中的等可能三元子集。容量 $k$ 的盒子可提供 $\\binom k3$ 个有利位置集。"
+      }
+    ],
+    "statement_en": "Twelve distinct books, including three mathematics books, are randomly packed into boxes of capacities three, four, five. The probability that the three math books occupy one box is reduced $m/n$. Find $m+n$.",
+    "statement_zh": "十二本不同书中有三本数学书，随机装入容量分别为三、四、五本的三个盒子。三本数学书在同盒的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 47,
+    "solution_en": [
+      "The three math-book positions form a uniformly random three-subset of twelve slots. A box of capacity $k$ contains them in $\\binom k3$ possible slot subsets.",
+      "The favorable counts add because boxes are disjoint: $\\binom33+\\binom43+\\binom53=15$. Thus probability $15/\\binom{12}3=3/44$, giving $47$."
+    ],
+    "solution_zh": [
+      "三本数学书占据的位置是十二个槽位中的等可能三元子集。容量 $k$ 的盒子可提供 $\\binom k3$ 个有利位置集。",
+      "三盒事件互斥，有利数为 $1+4+10=15$，概率为 $15/220=3/44$，答案四十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/6",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q07",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "With height $h$, those centers can be $(6,8,0),(0,8,h/2),(6,0,h/2)$. Two side vectors are $(-6,0,h/2),(0,-8,h/2)$.",
+      "reason_zh": "设高为 $h$，三面中心可取 $(6,8,0),(0,8,h/2),(6,0,h/2)$，两边向量为 $(-6,0,h/2),(0,-8,h/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Their cross product is $(4h,3h,48)$, so area $\\tfrac12\\sqrt{25h^2+2304}=30$.",
+        "reason_zh": "叉积为 $(4h,3h,48)$，故面积 $\\tfrac12\\sqrt{25h^2+2304}=30$。"
+      }
+    ],
+    "statement_en": "A rectangular box measures $12$ by $16$ by $m/n$, with reduced positive $m/n$. The centers of three faces meeting at one corner form a triangle of area thirty. Find $m+n$.",
+    "statement_zh": "长方体的三尺寸为十二、十六及最简正分数 $m/n$。同一顶点处三个面的中心构成面积三十的三角形，求 $m+n$。",
+    "answer": 41,
+    "solution_en": [
+      "With height $h$, those centers can be $(6,8,0),(0,8,h/2),(6,0,h/2)$. Two side vectors are $(-6,0,h/2),(0,-8,h/2)$.",
+      "Their cross product is $(4h,3h,48)$, so area $\\tfrac12\\sqrt{25h^2+2304}=30$.",
+      "Thus $h=36/5>0$, and $m+n=41$."
+    ],
+    "solution_zh": [
+      "设高为 $h$，三面中心可取 $(6,8,0),(0,8,h/2),(6,0,h/2)$，两边向量为 $(-6,0,h/2),(0,-8,h/2)$。",
+      "叉积为 $(4h,3h,48)$，故面积 $\\tfrac12\\sqrt{25h^2+2304}=30$。",
+      "解得正高 $h=36/5$，答案四十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/7",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q08",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "The domain is $[1/(mn),m/n]$, so its length condition is $2013(m^2-1)=mn$.",
+      "reason_zh": "定义域为 $[1/(mn),m/n]$，长度条件给出 $2013(m^2-1)=mn$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "As $m$ is coprime to $m^2-1$, one must have $m\\mid2013=3\\cdot11\\cdot61$. Conversely every such divisor greater than one yields integer $n=2013(m-1/m)$.",
+        "reason_zh": "$m$ 与 $m^2-1$ 互质，所以 $m\\mid2013=3\\cdot11\\cdot61$；反之每个大于一的约数均给出整数 $n$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The sum is $2014m-2013/m$, strictly increasing for positive $m$. The least permitted divisor is three, giving $n=5368,m+n=5371$ and remainder $371$.",
+        "reason_zh": "总和为 $2014m-2013/m$，在正数上严格递增，最小可取 $m=3,n=5368$，和为 $5371$，余数三百七十一。"
+      }
+    ],
+    "statement_en": "For positive integers $m>1,n$, the real domain of $\\arcsin(\\log_m(nx))$ has length $1/2013$. Find the least possible $m+n$ modulo $1000$.",
+    "statement_zh": "正整数 $m>1,n$ 使 $\\arcsin(\\log_m(nx))$ 的实数定义域长度为 $1/2013$。求 $m+n$ 最小值模 $1000$。",
+    "answer": 371,
+    "solution_en": [
+      "The domain is $[1/(mn),m/n]$, so its length condition is $2013(m^2-1)=mn$.",
+      "As $m$ is coprime to $m^2-1$, one must have $m\\mid2013=3\\cdot11\\cdot61$. Conversely every such divisor greater than one yields integer $n=2013(m-1/m)$.",
+      "The sum is $2014m-2013/m$, strictly increasing for positive $m$. The least permitted divisor is three, giving $n=5368,m+n=5371$ and remainder $371$."
+    ],
+    "solution_zh": [
+      "定义域为 $[1/(mn),m/n]$，长度条件给出 $2013(m^2-1)=mn$。",
+      "$m$ 与 $m^2-1$ 互质，所以 $m\\mid2013=3\\cdot11\\cdot61$；反之每个大于一的约数均给出整数 $n$。",
+      "总和为 $2014m-2013/m$，在正数上严格递增，最小可取 $m=3,n=5368$，和为 $5371$，余数三百七十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/8",
+    "method_chain": [
+      "Logarithms & exponentials",
+      "Divisibility, GCD & LCM",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q09",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The crease is the perpendicular bisector of $AT$, meeting $AB,AC$ at $P,Q$. Put $AP=PT=x,AQ=QT=y$.",
+      "reason_zh": "折痕为 $AT$ 的垂直平分线，交 $AB,AC$ 于 $P,Q$。设 $AP=PT=x,AQ=QT=y$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Triangle $BPT$ gives $x^2=(12-x)^2+81-9(12-x)$, hence $x=39/5$. Similarly at $C$, $y^2=(12-y)^2+9-3(12-y)$, giving $y=39/7$. Both are between zero and twelve, so the crease endpoints are on the sides.",
+        "reason_zh": "在 $BPT$ 用余弦定理，$x^2=(12-x)^2+81-9(12-x)$，得 $x=39/5$；在 $CQT$ 同理得 $y=39/7$，均在边长范围内。"
+      }
+    ],
+    "statement_en": "Fold an equilateral paper triangle $ABC$ of side twelve so $A$ lands at $T$ on $BC$ with $BT=9$. If the crease length is $m\\sqrt p/n$, with coprime $m,n$ and squarefree $p$, find $m+n+p$.",
+    "statement_zh": "将边长十二的等边纸三角形折叠，使 $A$ 落在 $BC$ 上点 $T$，且 $BT=9$。若折痕长为 $m\\sqrt p/n$，$m,n$ 互质、$p$ 无平方因子，求三者和。",
+    "answer": 113,
+    "solution_en": [
+      "The crease is the perpendicular bisector of $AT$, meeting $AB,AC$ at $P,Q$. Put $AP=PT=x,AQ=QT=y$.",
+      "Triangle $BPT$ gives $x^2=(12-x)^2+81-9(12-x)$, hence $x=39/5$. Similarly at $C$, $y^2=(12-y)^2+9-3(12-y)$, giving $y=39/7$. Both are between zero and twelve, so the crease endpoints are on the sides.",
+      "With included angle sixty degrees, $PQ^2=x^2+y^2-xy=39^3/35^2$. Thus $PQ=39\\sqrt{39}/35$, and the answer is $113$."
+    ],
+    "solution_zh": [
+      "折痕为 $AT$ 的垂直平分线，交 $AB,AC$ 于 $P,Q$。设 $AP=PT=x,AQ=QT=y$。",
+      "在 $BPT$ 用余弦定理，$x^2=(12-x)^2+81-9(12-x)$，得 $x=39/5$；在 $CQT$ 同理得 $y=39/7$，均在边长范围内。",
+      "因夹角六十度，$PQ^2=x^2+y^2-xy=39^3/35^2$，所以折痕为 $39\\sqrt{39}/35$，答案一百一十三。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/9",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q10",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The conjugate is also a root, while the remaining root $q=a-2r$ is an integer. Their product gives $q(r^2+s^2)=65$, so $q$ is positive and $r^2+s^2$ is $5,13,$ or $65$.",
+      "reason_zh": "共轭也为根，第三根 $q=a-2r$ 为整数。根积给出 $q(r^2+s^2)=65$，所以 $q>0$，平方和只能为五、十三或六十五。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "The conjugate is also a root, while the remaining root $q=a-2r$ is an integer. Their product gives $q(r^2+s^2)=65$, so $q$ is positive and $r^2+s^2$ is $5,13,$ or $65$.",
+        "reason_zh": "共轭也为根，第三根 $q=a-2r$ 为整数。根积给出 $q(r^2+s^2)=65$，所以 $q>0$，平方和只能为五、十三或六十五。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "The unordered positive square representations are $5=1^2+2^2$, $13=2^2+3^2$, $65=1^2+8^2=4^2+7^2$. For each, $r$ may be either sign of either component, yielding four distinct polynomials; changing only $s$ sign does not change the polynomial.",
+        "reason_zh": "正平方表示分别是 $1^2+2^2,2^2+3^2,1^2+8^2,4^2+7^2$。每种允许 $r$ 为两分量的正负，共四个不同多项式；仅改变 $s$ 符号不改变多项式。"
+      }
+    ],
+    "statement_en": "For nonzero integers $a,b,r,s$, the cubic $x^3-ax^2+bx-65$ has root $r+si$. For each distinct possible coefficient pair $(a,b)$, take the sum of its three roots. Find the sum of these values over all pairs.",
+    "statement_zh": "非零整数 $a,b,r,s$ 使 $x^3-ax^2+bx-65$ 有根 $r+si$。对每个不同的可行系数对 $(a,b)$，取其三根之和，再将所有这些值相加，求总和。",
+    "answer": 80,
+    "solution_en": [
+      "The conjugate is also a root, while the remaining root $q=a-2r$ is an integer. Their product gives $q(r^2+s^2)=65$, so $q$ is positive and $r^2+s^2$ is $5,13,$ or $65$.",
+      "The unordered positive square representations are $5=1^2+2^2$, $13=2^2+3^2$, $65=1^2+8^2=4^2+7^2$. For each, $r$ may be either sign of either component, yielding four distinct polynomials; changing only $s$ sign does not change the polynomial.",
+      "The root sum is $q+2r$. The four $r$ values cancel, contributing $4q$ for each representation. The coefficients produced are all nonzero.",
+      "The total is $4(13+5+1+1)=80$."
+    ],
+    "solution_zh": [
+      "共轭也为根，第三根 $q=a-2r$ 为整数。根积给出 $q(r^2+s^2)=65$，所以 $q>0$，平方和只能为五、十三或六十五。",
+      "正平方表示分别是 $1^2+2^2,2^2+3^2,1^2+8^2,4^2+7^2$。每种允许 $r$ 为两分量的正负，共四个不同多项式；仅改变 $s$ 符号不改变多项式。",
+      "根和为 $q+2r$，四种 $r$ 抵消，每个表示贡献 $4q$，所得系数也均非零。",
+      "总和为 $4(13+5+1+1)=80$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/10",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Polynomials & Vieta relations",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q11",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "Write $N=1680k$. Below fourteen, only $9,11,13$ fail to divide $1680$, so they must be the three remainder-three divisors.",
+      "reason_zh": "写 $N=1680k$。十四以下仅九、十一、十三不能整除 $1680$，故它们必须是三个余三的除数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "Write $N=1680k$. Below fourteen, only $9,11,13$ fail to divide $1680$, so they must be the three remainder-three divisors.",
+        "reason_zh": "写 $N=1680k$。十四以下仅九、十一、十三不能整除 $1680$，故它们必须是三个余三的除数。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "The least positive $k$ is $131$, a prime. The distinct primes of $N$ are $2,3,5,7,131$, whose sum is $148$.",
+        "reason_zh": "最小正值一百三十一为素数，$N$ 的不同素因子为二、三、五、七及一百三十一，和为一百四十八。"
+      }
+    ],
+    "statement_en": "Let $N$ be divisible by $14,15,16$. For three integers $0<x<y<z<14$, division of $N$ by each leaves remainder three. Find the sum of distinct prime factors of the least such positive $N$.",
+    "statement_zh": "正整数 $N$ 被十四、十五、十六整除，且存在 $0<x<y<z<14$，分别用三数除 $N$ 均余三。求最小可行 $N$ 的不同素因子之和。",
+    "answer": 148,
+    "solution_en": [
+      "Write $N=1680k$. Below fourteen, only $9,11,13$ fail to divide $1680$, so they must be the three remainder-three divisors.",
+      "The congruences reduce to $k\\equiv2\\pmod3,k\\equiv10\\pmod{11},k\\equiv1\\pmod{13}$. Combining gives $k\\equiv131\\pmod{429}$; for example $131$ satisfies all, and the Chinese remainder theorem makes the class unique.",
+      "The least positive $k$ is $131$, a prime. The distinct primes of $N$ are $2,3,5,7,131$, whose sum is $148$."
+    ],
+    "solution_zh": [
+      "写 $N=1680k$。十四以下仅九、十一、十三不能整除 $1680$，故它们必须是三个余三的除数。",
+      "同余化为 $k\\equiv2\\pmod3,k\\equiv10\\pmod{11},k\\equiv1\\pmod{13}$，由中国剩余定理得唯一类 $k\\equiv131\\pmod{429}$。",
+      "最小正值一百三十一为素数，$N$ 的不同素因子为二、三、五、七及一百三十一，和为一百四十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/11",
+    "method_chain": [
+      "Congruences & Chinese remainders",
+      "Divisibility, GCD & LCM",
+      "Prime factorization & valuations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q12",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "The corner triangle $BQC$ is equilateral, so take $Q=(0,0),C=(1,0),D=(2,0)$. The other vertices are $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$.",
+      "reason_zh": "角部 $BQC$ 为等边三角形，可取 $Q=(0,0),C=(1,0),D=(2,0)$，其余为 $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "The corner triangle $BQC$ is equilateral, so take $Q=(0,0),C=(1,0),D=(2,0)$. The other vertices are $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$.",
+        "reason_zh": "角部 $BQC$ 为等边三角形，可取 $Q=(0,0),C=(1,0),D=(2,0)$，其余为 $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Thus $QR=2+\\sqrt3$. Intersecting with $QP:y=\\sqrt3x$ gives height $(3+\\sqrt3)/2$. The area is $(9+5\\sqrt3)/4$.",
+        "reason_zh": "因此底长为 $2+\\sqrt3$，与 $QP:y=\\sqrt3x$ 相交得到高 $(3+\\sqrt3)/2$，面积为 $(9+5\\sqrt3)/4$。"
+      }
+    ],
+    "statement_en": "Triangle $PQR$ has angles $P=75^\\circ,Q=60^\\circ$. A unit regular hexagon $ABCDEF$ lies inside it, with $AB$ on $PQ$, $CD$ on $QR$, and another vertex on $RP$. Express the triangle area as $(a+b\\sqrt c)/d$, with coprime $a,d$ and squarefree $c$, and find $a+b+c+d$.",
+    "statement_zh": "三角形 $PQR$ 的角为 $75^\\circ,60^\\circ$。单位边长正六边形 $ABCDEF$ 位于内部，$AB$ 在 $PQ$ 上，$CD$ 在 $QR$ 上，另有一顶点在 $RP$ 上。若三角形面积为 $(a+b\\sqrt c)/d$，$a,d$ 互质、$c$ 无平方因子，求四者和。",
+    "answer": 21,
+    "solution_en": [
+      "The corner triangle $BQC$ is equilateral, so take $Q=(0,0),C=(1,0),D=(2,0)$. The other vertices are $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$.",
+      "The angle at $R$ is forty-five degrees, so $RP$ is a line $x+y=t$ supporting the hexagon. The greatest value of $x+y$ at a hexagon vertex occurs at $F$, hence $t=2+\\sqrt3$; this also rules out touching only $E$.",
+      "Thus $QR=2+\\sqrt3$. Intersecting with $QP:y=\\sqrt3x$ gives height $(3+\\sqrt3)/2$. The area is $(9+5\\sqrt3)/4$.",
+      "The parameter sum is $21$."
+    ],
+    "solution_zh": [
+      "角部 $BQC$ 为等边三角形，可取 $Q=(0,0),C=(1,0),D=(2,0)$，其余为 $B=(1/2,\\sqrt3/2),A=(1,\\sqrt3),F=(2,\\sqrt3),E=(5/2,\\sqrt3/2)$。",
+      "$R$ 角四十五度，所以 $RP$ 是支撑六边形的直线 $x+y=t$。顶点中 $x+y$ 最大值在 $F$，故 $t=2+\\sqrt3$，也排除仅经过 $E$ 的构型。",
+      "因此底长为 $2+\\sqrt3$，与 $QP:y=\\sqrt3x$ 相交得到高 $(3+\\sqrt3)/2$，面积为 $(9+5\\sqrt3)/4$。",
+      "答案二十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/12",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Angles, similarity & parallel lines",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q13",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "Heron gives the initial area ninety. Let $r=17/25$. The outer corner triangle $B_0C_1C_0$ has similarity ratio $r$, while $C_0C_1=17r$, so the retained $AB_1C_1$ has linear ratio $t=1-r^2=336/625$.",
+      "reason_zh": "海伦公式得初面积九十。令 $r=17/25$，外角三角形 $B_0C_1C_0$ 的相似比为 $r$，且 $C_0C_1=17r$，所以保留三角形的线性比为 $t=1-r^2=336/625$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The total is $90r^2t/(1-t^2)=90t/(1+t)=30240/961$. Since $961=31^2$ is coprime to the numerator, $q=961$.",
+        "reason_zh": "总面积为 $90r^2t/(1-t^2)=90t/(1+t)=30240/961$，分母 $31^2$ 与分子互质，故 $q=961$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Heron gives the initial area ninety. Let $r=17/25$. The outer corner triangle $B_0C_1C_0$ has similarity ratio $r$, while $C_0C_1=17r$, so the retained $AB_1C_1$ has linear ratio $t=1-r^2=336/625$.",
+        "reason_zh": "海伦公式得初面积九十。令 $r=17/25$，外角三角形 $B_0C_1C_0$ 的相似比为 $r$，且 $C_0C_1=17r$，所以保留三角形的线性比为 $t=1-r^2=336/625$。"
+      }
+    ],
+    "statement_en": "Begin with triangle $AB_0C_0$ having sides $12,17,25$ in that order. For each $n\\ge1$, take $B_n$ on $AB_{n-1}$ and $C_n$ on $AC_{n-1}$ so that the ordered triangles $AB_nC_n$, $B_{n-1}C_nC_{n-1}$, $AB_{n-1}C_{n-1}$ are similar. The union of triangles $B_{n-1}C_nB_n$ has reduced area $p/q$. Find $q$.",
+    "statement_zh": "从三角形 $AB_0C_0$ 开始，$AB_0=12,B_0C_0=17,C_0A=25$。对每个 $n$，在 $AB_{n-1},AC_{n-1}$ 上分别取 $B_n,C_n$，使有序三角形 $AB_nC_n,B_{n-1}C_nC_{n-1},AB_{n-1}C_{n-1}$ 相似。所有 $B_{n-1}C_nB_n$ 的并集面积为最简分数 $p/q$，求 $q$。",
+    "answer": 961,
+    "solution_en": [
+      "Heron gives the initial area ninety. Let $r=17/25$. The outer corner triangle $B_0C_1C_0$ has similarity ratio $r$, while $C_0C_1=17r$, so the retained $AB_1C_1$ has linear ratio $t=1-r^2=336/625$.",
+      "The removed target triangle at the first step has area $90(1-r^2-t^2)=90r^2t$. Subsequent target triangles have disjoint interiors and successive area ratio $t^2$.",
+      "The total is $90r^2t/(1-t^2)=90t/(1+t)=30240/961$. Since $961=31^2$ is coprime to the numerator, $q=961$."
+    ],
+    "solution_zh": [
+      "海伦公式得初面积九十。令 $r=17/25$，外角三角形 $B_0C_1C_0$ 的相似比为 $r$，且 $C_0C_1=17r$，所以保留三角形的线性比为 $t=1-r^2=336/625$。",
+      "第一步目标三角形面积为 $90(1-r^2-t^2)=90r^2t$。后续目标三角形内部互不重叠，面积公比为 $t^2$。",
+      "总面积为 $90r^2t/(1-t^2)=90t/(1+t)=30240/961$，分母 $31^2$ 与分子互质，故 $q=961$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/13",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Sequences & summation",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q14",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The absolutely convergent complex series is $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$.",
+      "reason_zh": "绝对收敛的复级数为 $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The absolutely convergent complex series is $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$.",
+        "reason_zh": "绝对收敛的复级数为 $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "This factors as $(3s-1)(19s+17)=0$. The interval requires $s\\le0$, so $s=-17/19$. The original positive ratio then chooses $\\cos\\theta=6\\sqrt2/19$, a valid fourth-quadrant value.",
+        "reason_zh": "因式分解为 $(3s-1)(19s+17)=0$，角的区间要求非正，故 $s=-17/19$。原正比值再选出 $\\cos\\theta=6\\sqrt2/19$，确为第四象限可行角。"
+      }
+    ],
+    "statement_en": "For $\\pi\\le\\theta<2\\pi$, define $P=\\sum_{k\\ge1}2^{-k}\\sin(k(\\theta+\\pi/2))$ and $Q=1+\\sum_{k\\ge1}2^{-k}\\cos(k(\\theta+\\pi/2))$. Given $P/Q=2\\sqrt2/7$, write $\\sin\\theta=-m/n$ in lowest terms and find $m+n$.",
+    "statement_zh": "$\\pi\\le\\theta<2\\pi$，定义 $P=\\sum_{k\\ge1}2^{-k}\\sin(k(\\theta+\\pi/2))$，$Q=1+\\sum_{k\\ge1}2^{-k}\\cos(k(\\theta+\\pi/2))$。若 $P/Q=2\\sqrt2/7$，将 $\\sin\\theta=-m/n$ 约为最简，求 $m+n$。",
+    "answer": 36,
+    "solution_en": [
+      "The absolutely convergent complex series is $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$.",
+      "Rationalizing gives $P/Q=\\cos\\theta/(2+\\sin\\theta)$; the denominator is positive. Squaring the given equality yields $49(1-s^2)=8(2+s)^2$ for $s=\\sin\\theta$.",
+      "This factors as $(3s-1)(19s+17)=0$. The interval requires $s\\le0$, so $s=-17/19$. The original positive ratio then chooses $\\cos\\theta=6\\sqrt2/19$, a valid fourth-quadrant value.",
+      "The answer is $17+19=36$."
+    ],
+    "solution_zh": [
+      "绝对收敛的复级数为 $Q+iP=\\sum_{k\\ge0}(ie^{i\\theta}/2)^k=2/(2-ie^{i\\theta})$。",
+      "有理化得 $P/Q=\\cos\\theta/(2+\\sin\\theta)$，分母恒正。设 $s=\\sin\\theta$，平方条件成为 $49(1-s^2)=8(2+s)^2$。",
+      "因式分解为 $(3s-1)(19s+17)=0$，角的区间要求非正，故 $s=-17/19$。原正比值再选出 $\\cos\\theta=6\\sqrt2/19$，确为第四象限可行角。",
+      "答案三十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/14",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Sequences & summation",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2013-I-Q15",
+    "paper_id": "AIME-2013-I",
+    "exam_year": 2013,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "Write $a=b+d,c=b+2d$, where $0<2d<p$. If the original progression has difference $D$, then $D\\equiv-d$ and $D\\equiv2d\\pmod p$. Thus $p\\mid3d$ and $p\\nmid d$, forcing $p=3$.",
+      "reason_zh": "写 $a=b+d,c=b+2d$，有 $0<2d<p$。原数列公差 $D$ 模 $p$ 同时等于 $-d,2d$，所以 $p\\mid3d$ 而不整除 $d$，迫使 $p=3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Then $d=1$ and $(b,a,c)=(0,1,2)$. Exactly the progressions $A=1+3j,D=2+3k$ qualify, with nonnegative integers $j,k$.",
+        "reason_zh": "于是 $d=1,(b,a,c)=(0,1,2)$。符合条件的数列恰为 $A=1+3j,D=2+3k$，$j,k$ 非负。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "The upper bound is $C=5+3j+6k\\le99$, or $j+2k\\le31$. Summing $32-2k$ over $k=0,\\ldots,15$ gives $272$.",
+        "reason_zh": "上界给出 $j+2k\\le31$，对 $k=0$ 至十五累加 $32-2k$，得到二百七十二。"
+      }
+    ],
+    "statement_en": "Count increasing arithmetic progressions $0\\le A<B<C\\le99$ for which some prime $p$ has residues $A\\equiv a,B\\equiv b,C\\equiv c\\pmod p$ with $0\\le b<a<c<p$ and $(b,a,c)$ also an arithmetic progression.",
+    "statement_zh": "求递增等差数列 $0\\le A<B<C\\le99$ 的个数，使存在素数 $p$ 及余数 $A\\equiv a,B\\equiv b,C\\equiv c\\pmod p$，满足 $0\\le b<a<c<p$，且 $(b,a,c)$ 也成等差数列。",
+    "answer": 272,
+    "solution_en": [
+      "Write $a=b+d,c=b+2d$, where $0<2d<p$. If the original progression has difference $D$, then $D\\equiv-d$ and $D\\equiv2d\\pmod p$. Thus $p\\mid3d$ and $p\\nmid d$, forcing $p=3$.",
+      "Then $d=1$ and $(b,a,c)=(0,1,2)$. Exactly the progressions $A=1+3j,D=2+3k$ qualify, with nonnegative integers $j,k$.",
+      "The upper bound is $C=5+3j+6k\\le99$, or $j+2k\\le31$. Summing $32-2k$ over $k=0,\\ldots,15$ gives $272$."
+    ],
+    "solution_zh": [
+      "写 $a=b+d,c=b+2d$，有 $0<2d<p$。原数列公差 $D$ 模 $p$ 同时等于 $-d,2d$，所以 $p\\mid3d$ 而不整除 $d$，迫使 $p=3$。",
+      "于是 $d=1,(b,a,c)=(0,1,2)$。符合条件的数列恰为 $A=1+3j,D=2+3k$，$j,k$ 非负。",
+      "上界给出 $j+2k\\le31$，对 $k=0$ 至十五累加 $32-2k$，得到二百七十二。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2013I/problem/15",
+    "method_chain": [
+      "Congruences & Chinese remainders",
+      "Sequences & summation",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

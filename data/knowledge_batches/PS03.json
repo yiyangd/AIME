@@ -1,0 +1,340 @@
+{
+  "subtype_id": "PS03",
+  "introduction_en": "Continuous uniform probability is a ratio of measures in the original sampling coordinates. Draw the feasible region first, translate the event exactly, and justify all conditioning or coordinate changes before using symmetry.",
+  "introduction_zh": "连续均匀概率是原抽样坐标中的度量比。先画可行区域，再精确转化事件；使用对称之前，须证明条件化或坐标变换成立。",
+  "prerequisites": [
+    "GE02",
+    "GE07",
+    "PS02"
+  ],
+  "methods": [
+    {
+      "method_id": "PS03-M01",
+      "title_en": "Measure the valid parameter intervals after algebraic reduction",
+      "title_zh": "代数约化后度量有效参数区间",
+      "steps_en": [
+        "Keep the exact uniform parameter and its interval; a transformed variable is not automatically uniform.",
+        "Translate the event into algebraic or trigonometric inequalities, discriminants, or floor-constant intervals.",
+        "Find every favorable subinterval with the original domains restored, then divide its total length by the sample length.",
+        "Isolated endpoints have zero probability in a continuous uniform interval, but the interval interiors must be correct."
+      ],
+      "steps_zh": [
+        "保留实际均匀参数及其区间，变换后的变量不自动均匀。",
+        "将事件转为代数或三角不等式、判别式条件，或取整恒定的区间。",
+        "恢复原定义域后找出所有有利子区间，再以总长度除以样本长度。",
+        "连续均匀区间中孤立端点概率为零，但区间内部必须判断正确。"
+      ],
+      "example_en": "Choose $\\theta$ uniformly from $[0,\\pi/2]$. Find $P(\\sin\\theta\\ge\\cos2\\theta)$.",
+      "example_zh": "从 $[0,\\pi/2]$ 均匀选择 $\\theta$，求 $P(\\sin\\theta\\ge\\cos2\\theta)$。",
+      "solution_en": [
+        "Put $s=\\sin\\theta\\in[0,1]$ only to solve the inequality: $s\\ge1-2s^2$.",
+        "Factor $(2s-1)(s+1)\\ge0$, so $s\\ge1/2$ and $\\theta\\in[\\pi/6,\\pi/2]$.",
+        "The probability is the angle-length ratio $(\\pi/2-\\pi/6)/(\\pi/2)=2/3$, rather than a length ratio in $s$."
+      ],
+      "solution_zh": [
+        "仅为解不等式而令 $s=\\sin\\theta\\in[0,1]$，得 $s\\ge1-2s^2$。",
+        "分解得 $(2s-1)(s+1)\\ge0$，故 $s\\ge1/2,\\theta\\in[\\pi/6,\\pi/2]$。",
+        "概率为角度长度比 $(\\pi/2-\\pi/6)/(\\pi/2)=2/3$，而非 $s$ 区间的长度比。"
+      ],
+      "tip_en": "Uniform angle does not mean uniform sine or uniform chord length.",
+      "tip_zh": "角度均匀不代表正弦值均匀或弦长均匀。",
+      "question_ids": [
+        "AIME-2003-I-Q11",
+        "AIME-2011-II-Q15",
+        "AIME-2018-II-Q06"
+      ],
+      "prerequisites": [
+        "AL01",
+        "AL02",
+        "AL06",
+        "AL08"
+      ],
+      "extensions_en": [
+        "If a floor expression is constant on $[n,n+1)$, first check whether the other side can have the required integer value. For each surviving integer $n$, solve the exact monotone threshold where the floor changes, and intersect it with that unit interval."
+      ],
+      "extensions_zh": [
+        "若某取整表达式在 $[n,n+1)$ 恒定，先检查另一侧是否能取所需整数值。对每个存活整数 $n$，求取整改变时的精确单调门槛，并与该单位区间相交。"
+      ]
+    },
+    {
+      "method_id": "PS03-M02",
+      "title_en": "Clip the correct feasible region by half-planes and distance strips",
+      "title_zh": "以半平面与距离带裁切正确可行区域",
+      "steps_en": [
+        "Identify the actual sampling region; a moving disk center must stay its radius away from every container side.",
+        "Expand squared-distance comparisons to linear half-planes, or use distance to a line $|ax+by+c|/\\sqrt{a^2+b^2}$.",
+        "When dividing by a coordinate difference to test slope, split its positive and negative cases before changing inequality direction.",
+        "Find the clipped polygon vertices, calculate its area, and divide by the area of the feasible sampling region."
+      ],
+      "steps_zh": [
+        "确定实际抽样区域；移动圆盘的圆心须距容器每边至少其半径。",
+        "展开距离平方比较得到线性半平面，或使用点线距离 $|ax+by+c|/\\sqrt{a^2+b^2}$。",
+        "以坐标差相除判断斜率时，先按其正负分类，再决定不等号方向。",
+        "求裁切多边形顶点、计算面积，并除以可行抽样区域面积。"
+      ],
+      "example_en": "Choose a point uniformly from $[0,3]\\times[0,2]$. Find the probability that $x\\ge1/2$ and $x+y\\le2$.",
+      "example_zh": "从 $[0,3]\\times[0,2]$ 按面积均匀选点，求 $x\\ge1/2$ 且 $x+y\\le2$ 的概率。",
+      "solution_en": [
+        "The rectangle has area six. The two inequalities clip out a right triangle.",
+        "Its vertices are $(1/2,0),(2,0),(1/2,3/2)$, so its area is $\\tfrac12(3/2)^2=9/8$.",
+        "The probability is $(9/8)/6=3/16$."
+      ],
+      "solution_zh": [
+        "矩形面积为六，两不等式裁出一个直角三角形。",
+        "三顶点为 $(1/2,0),(2,0),(1/2,3/2)$，面积为 $\\tfrac12(3/2)^2=9/8$。",
+        "概率为 $(9/8)/6=3/16$。"
+      ],
+      "tip_en": "Normalize by where the point or center was actually sampled.",
+      "tip_zh": "分母须为点或圆心实际被抽取的区域。",
+      "question_ids": [
+        "AIME-2004-I-Q10",
+        "AIME-2010-II-Q02",
+        "AIME-2017-II-Q03",
+        "AIME-2020-II-Q02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS03-M03",
+      "title_en": "Use the parameter square for two independent uniform choices",
+      "title_zh": "对两个独立均匀选择使用参数正方形",
+      "steps_en": [
+        "The two original parameters form a uniform rectangle because they are independent.",
+        "Use geometry to translate a chord or distance condition into a condition on their sum or difference.",
+        "Draw the resulting diagonal half-planes or band and use a complementary triangle count where possible.",
+        "Keep any angle range needed for the monotonicity of sine or another inverse transformation."
+      ],
+      "steps_zh": [
+        "两个原参数独立，因此形成均匀参数矩形。",
+        "用几何将弦长或距离条件转为两参数和差的条件。",
+        "画出所得对角半平面或带状区域，可能时用补三角形求面积。",
+        "保留保证正弦或其他逆变换单调的角度范围。"
+      ],
+      "example_en": "Independent $U,V$ are uniform on $[0,1]$. Find $P(U+V\\ge1,\\ U-V\\le1/2)$.",
+      "example_zh": "$U,V$ 独立且均匀分布于 $[0,1]$，求 $P(U+V\\ge1,\\ U-V\\le1/2)$。",
+      "solution_en": [
+        "The joint sample square has area one. The condition $U+V\\ge1$ leaves a triangle of area $1/2$.",
+        "Within it the forbidden region $U-V>1/2$ is the triangle with vertices $(3/4,1/4),(1,0),(1,1/2)$, of area $1/16$.",
+        "The required probability is $1/2-1/16=7/16$."
+      ],
+      "solution_zh": [
+        "联合样本正方形面积为一；条件 $U+V\\ge1$ 留下面积 $1/2$ 的三角形。",
+        "其中禁用区 $U-V>1/2$ 是顶点为 $(3/4,1/4),(1,0),(1,1/2)$ 的三角形，面积为 $1/16$。",
+        "所求概率为 $1/2-1/16=7/16$。"
+      ],
+      "tip_en": "The natural probability coordinates may be angles even when the picture is a circle.",
+      "tip_zh": "即使图形为圆，天然概率坐标仍可能是角度。",
+      "question_ids": [
+        "AIME-2017-I-Q08"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS03-M04",
+      "title_en": "Translate chord events into cyclic endpoint order and arc masses",
+      "title_zh": "把弦事件转为端点循环次序与弧质量",
+      "steps_en": [
+        "For endpoints uniform on a circle, an arc is selected with probability equal to its fraction of circumference.",
+        "A chord misses a convex inscribed polygon exactly when both endpoints lie on one vertex gap arc, apart from boundaries.",
+        "Two chords cross internally exactly when their four distinct endpoints alternate cyclically.",
+        "Under arc or quadrant conditioning, enumerate arc-pair cases first, then use symmetry of endpoint order within any shared arc."
+      ],
+      "steps_zh": [
+        "端点在圆周均匀时，选到某弧的概率等于该弧占周长的比例。",
+        "除边界外，弦不交凸内接多边形，当且仅当两端点落在同一顶点间隙弧。",
+        "两弦内部相交当且仅当四个互异端点在圆周上交替出现。",
+        "附加弧或象限条件时，先枚举弧配对情形，再使用共用弧内端点次序的对称性。"
+      ],
+      "example_en": "A fixed chord cuts the circumference into arcs of fractions $1/3$ and $2/3$. Another chord has two independent uniform endpoints. Find its probability of crossing the fixed chord internally.",
+      "example_zh": "固定弦把圆周分成比例为 $1/3,2/3$ 的两弧。另一条弦的两端点独立且圆周均匀，求它与固定弦内部相交的概率。",
+      "solution_en": [
+        "Crossing requires one endpoint on each of the two open arcs.",
+        "The two ordered endpoint cases have probabilities $(1/3)(2/3)$ and $(2/3)(1/3)$.",
+        "The total is $4/9$. Coincident endpoints have probability zero."
+      ],
+      "solution_zh": [
+        "相交要求两个端点各在一条开弧上。",
+        "两种有序端点情形概率为 $(1/3)(2/3)$ 与 $(2/3)(1/3)$。",
+        "合计为 $4/9$，端点重合概率为零。"
+      ],
+      "tip_en": "Specify the chord-generation rule; uniform perimeter endpoints is a particular model.",
+      "tip_zh": "须明确弦的生成规则；圆周端点均匀是一种特定模型。",
+      "question_ids": [
+        "AIME-2017-I-Q06",
+        "AIME-2025-I-Q13"
+      ],
+      "prerequisites": [
+        "GE04",
+        "CO06",
+        "PS02"
+      ],
+      "extensions_en": [
+        "For four equal arcs and chords conditioned to use two different arcs, each chord has six equiprobable unordered arc pairs. For two chords, among the $36$ ordered pair choices, two disjoint alternating choices force crossing, four disjoint nonalternating choices forbid it, and the remaining thirty have crossing probability $1/2$ by reversal of order in a shared arc. The resulting crossing probability is $(2+30/2)/36=17/36$."
+      ],
+      "extensions_zh": [
+        "圆周分为四条等弧，弦端点条件为落在不同弧时，每弦有六种等可能无序弧对。两弦共有 $36$ 种有序弧对选择：两种互不共弧且交替的选择必相交，四种互不共弧且不交替的选择必不相交，其余三十种由共用弧内端点顺序反转而各有 $1/2$ 概率相交。故交叉概率为 $(2+30/2)/36=17/36$。"
+      ]
+    },
+    {
+      "method_id": "PS03-M05",
+      "title_en": "Condition on geometric pieces with their area weights",
+      "title_zh": "按几何分区及其面积权重取条件",
+      "steps_en": [
+        "Partition a nonrectangular region into disjoint pieces of known areas; their selection probabilities are proportional to area.",
+        "For two independent points, ordered piece choices have product probabilities.",
+        "Within a rectangular piece, coordinates are independent uniform variables; justify any further coordinate independence after conditioning.",
+        "Compute the event inside each feasible piece pair and combine by total probability, often using the complement."
+      ],
+      "steps_zh": [
+        "将非矩形区域分为已知面积的互不相交部分，各部分被选概率与面积成正比。",
+        "两个独立点的有序分区选择，其概率为两分区概率之积。",
+        "矩形分区内坐标为独立均匀变量；若继续取条件，须证明后续坐标独立性。",
+        "在每个可行分区对内求事件概率，再以全概率合并，通常可先求补事件。"
+      ],
+      "example_en": "A region consists of two disjoint rectangles of areas one and three. Choose two independent uniform points in their union. Find the chance that they occupy different rectangles.",
+      "example_zh": "某区域由面积一与三的两个互不相交矩形组成。在其并集中独立均匀选两点，求两点分属不同矩形的概率。",
+      "solution_en": [
+        "The piece probabilities are $1/4$ and $3/4$, rather than one half each.",
+        "The two disjoint ordered cases are first-small/second-large and first-large/second-small.",
+        "Their probabilities sum to $2(1/4)(3/4)=3/8$."
+      ],
+      "solution_zh": [
+        "两分区概率为 $1/4,3/4$，而非各二分之一。",
+        "两种互斥有序情形为先小后大、先大后小。",
+        "相加得 $2(1/4)(3/4)=3/8$。"
+      ],
+      "tip_en": "A region made of equal-area pieces gives uniform piece labels; unequal pieces require weights.",
+      "tip_zh": "等面积分区才给出均匀分区标签；面积不等必须加权。",
+      "question_ids": [
+        "AIME-2023-II-Q06"
+      ],
+      "prerequisites": [
+        "PS02",
+        "GE02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2010-II-Q02",
+    "AIME-2017-II-Q03",
+    "AIME-2020-II-Q02",
+    "AIME-2004-I-Q10",
+    "AIME-2017-I-Q06",
+    "AIME-2017-I-Q08",
+    "AIME-2023-II-Q06",
+    "AIME-2003-I-Q11"
+  ],
+  "coverage_by_question": {
+    "AIME-2018-II-Q06": {
+      "method_ids": [
+        "PS03-M01"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2011-II-Q15": {
+      "method_ids": [
+        "PS03-M01"
+      ],
+      "prerequisites": [
+        "AL06",
+        "NT05"
+      ]
+    },
+    "AIME-2010-II-Q02": {
+      "method_ids": [
+        "PS03-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2017-II-Q03": {
+      "method_ids": [
+        "PS03-M02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2020-II-Q02": {
+      "method_ids": [
+        "PS03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2004-I-Q10": {
+      "method_ids": [
+        "PS03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2017-I-Q06": {
+      "method_ids": [
+        "PS03-M04"
+      ],
+      "prerequisites": [
+        "AL01",
+        "GE04"
+      ]
+    },
+    "AIME-2017-I-Q08": {
+      "method_ids": [
+        "PS03-M03"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2023-II-Q06": {
+      "method_ids": [
+        "PS03-M05"
+      ],
+      "prerequisites": [
+        "PS02"
+      ]
+    },
+    "AIME-2003-I-Q11": {
+      "method_ids": [
+        "PS03-M01"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2025-I-Q13": {
+      "method_ids": [
+        "PS03-M04"
+      ],
+      "prerequisites": [
+        "CO06",
+        "PS04"
+      ]
+    }
+  },
+  "review": {
+    "author": "source_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Mapped against every currently integrated primary and secondary route. General steps and worked examples are separate. Original question conditions and full solutions remain in the companion question bank."
+  },
+  "unresolved_issues": []
+}

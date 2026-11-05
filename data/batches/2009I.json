@@ -1,0 +1,722 @@
+[
+  {
+    "question_id": "AIME-2009-I-Q01",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "The smallest possible leading digit is one; integral later digits force positive integer ratio at least two, giving minimum $124$. Zero cannot occur, since it would force repeated zeroes.",
+      "reason_zh": "最小首位可为一，后续整数数字迫使公比为至少二的整数，最小为 $124$。零不能出现，否则将重复零。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The smallest possible leading digit is one; integral later digits force positive integer ratio at least two, giving minimum $124$. Zero cannot occur, since it would force repeated zeroes.",
+        "reason_zh": "最小首位可为一，后续整数数字迫使公比为至少二的整数，最小为 $124$。零不能出现，否则将重复零。"
+      }
+    ],
+    "statement_en": "Call a three-digit decimal integer geometric if its three distinct digits form a geometric progression in order. Find the largest minus the smallest such integer.",
+    "statement_zh": "若三位十进制正整数的三个互异数字依次成等比数列，称其为等比数。求最大者减最小者。",
+    "answer": 840,
+    "solution_en": [
+      "The smallest possible leading digit is one; integral later digits force positive integer ratio at least two, giving minimum $124$. Zero cannot occur, since it would force repeated zeroes.",
+      "For maximum leading digit nine, the middle digit $b$ requires $b^2/9$ to be an integer digit distinct from nine and $b$. Thus $b=3,6$ give $931,964$, with maximum $964$. Difference $964-124=840$."
+    ],
+    "solution_zh": [
+      "最小首位可为一，后续整数数字迫使公比为至少二的整数，最小为 $124$。零不能出现，否则将重复零。",
+      "最大首位可为九，中位 $b$ 要求 $b^2/9$ 为合法互异整数数字，所以 $b=3,6$，最大数为 $964$。差为 $840$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/1",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q02",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Write $z=u+164i$ and clear the denominator: $u+164i=-656+4(u+n)i$.",
+      "reason_zh": "写成 $z=u+164i$，去分母得 $u+164i=-656+4(u+n)i$。"
+    },
+    "secondary": [],
+    "statement_en": "A complex $z$ has imaginary part $164$ and satisfies $z/(z+n)=4i$ for a positive integer $n$. Find $n$.",
+    "statement_zh": "复数 $z$ 的虚部为 $164$，且正整数 $n$ 满足 $z/(z+n)=4i$，求 $n$。",
+    "answer": 697,
+    "solution_en": [
+      "Write $z=u+164i$ and clear the denominator: $u+164i=-656+4(u+n)i$.",
+      "Compare components: $u=-656,u+n=41$. Thus $n=697$."
+    ],
+    "solution_zh": [
+      "写成 $z=u+164i$，去分母得 $u+164i=-656+4(u+n)i$。",
+      "比较实虚部得 $u=-656,u+n=41$，故 $n=697$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/2",
+    "method_chain": [
+      "Complex numbers & roots of unity"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q03",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS05",
+      "reason_en": "Equal binomial coefficients cancel in $\\binom83p^3(1-p)^5=\\binom85p^5(1-p)^3/25$, leaving $(1-p)^2=p^2/25$.",
+      "reason_zh": "将两二项分布概率写出并约分，得 $(1-p)^2=p^2/25$。"
+    },
+    "secondary": [],
+    "statement_en": "A coin has head probability $0<p<1$. In eight independent flips, the probability of three heads is one twenty-fifth of that of five heads. Write $p=m/n$ reduced and find $m+n$.",
+    "statement_zh": "硬币正面概率为 $0<p<1$。独立掷八次，恰三正面的概率为恰五正面概率的二十五分之一。若 $p=m/n$ 最简，求 $m+n$。",
+    "answer": 11,
+    "solution_en": [
+      "Equal binomial coefficients cancel in $\\binom83p^3(1-p)^5=\\binom85p^5(1-p)^3/25$, leaving $(1-p)^2=p^2/25$.",
+      "Positivity gives $1-p=p/5$, so $p=5/6$ and the answer is $11$."
+    ],
+    "solution_zh": [
+      "将两二项分布概率写出并约分，得 $(1-p)^2=p^2/25$。",
+      "由正性得 $1-p=p/5$，故 $p=5/6$，所求 $11$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/3",
+    "method_chain": [
+      "Distributions & repeated trials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q04",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Use affine coordinates $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$. Then $MN$ has intercept equation $1000x/17+2009y/17=1$.",
+      "reason_zh": "取仿射坐标 $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$，则 $MN$ 方程为 $1000x/17+2009y/17=1$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "Use affine coordinates $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$. Then $MN$ has intercept equation $1000x/17+2009y/17=1$.",
+        "reason_zh": "取仿射坐标 $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$，则 $MN$ 方程为 $1000x/17+2009y/17=1$。"
+      }
+    ],
+    "statement_en": "In parallelogram $ABCD$, $M\\in AB,N\\in AD$ satisfy $AM/AB=17/1000,AN/AD=17/2009$. Let $P=AC\\cap MN$. Find $AC/AP$.",
+    "statement_zh": "平行四边形 $ABCD$ 中，$M\\in AB,N\\in AD$ 满足 $AM/AB=17/1000,AN/AD=17/2009$。令 $P=AC\\cap MN$，求 $AC/AP$。",
+    "answer": 177,
+    "solution_en": [
+      "Use affine coordinates $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$. Then $MN$ has intercept equation $1000x/17+2009y/17=1$.",
+      "On diagonal $x=y=t$, this gives $3009t=17$. Thus $AC/AP=1/t=3009/17=177$."
+    ],
+    "solution_zh": [
+      "取仿射坐标 $A=(0,0),B=(1,0),D=(0,1),C=(1,1)$，则 $MN$ 方程为 $1000x/17+2009y/17=1$。",
+      "对角线上 $x=y=t$，得 $3009t=17$，故所求为 $177$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/4",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q05",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "In quadrilateral $APCM$, diagonals $AC,PM$ bisect each other, so it is a parallelogram. Thus $AM\\parallel CP$, making $BLP$ similar to $BAM$.",
+      "reason_zh": "$APCM$ 的对角线互相平分，因此为平行四边形，$AM\\parallel CP$，所以 $BLP$ 与 $BAM$ 相似。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Angle-bisector theorem gives $AL/LB=450/300=3/2$. Therefore $LP/AM=BL/BA=2/5$ and $LP=72$.",
+        "reason_zh": "角平分线定理给出 $AL/LB=3/2$，故 $LP/180=BL/BA=2/5$，得 $LP=72$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AC=450,BC=300$. Let $K$ be the midpoint of $AC$, $CL$ the internal angle bisector meeting $AB$, and $P=BK\\cap CL$. Reflect $P$ across $K$ to point $M$. Given $AM=180$, find $LP$.",
+    "statement_zh": "三角形 $ABC$ 中 $AC=450,BC=300$，$K$ 为 $AC$ 中点，内角平分线 $CL$ 交 $AB$ 于 $L$，$P=BK\\cap CL$。将 $P$ 关于 $K$ 对称得 $M$，若 $AM=180$，求 $LP$。",
+    "answer": 72,
+    "solution_en": [
+      "In quadrilateral $APCM$, diagonals $AC,PM$ bisect each other, so it is a parallelogram. Thus $AM\\parallel CP$, making $BLP$ similar to $BAM$.",
+      "Angle-bisector theorem gives $AL/LB=450/300=3/2$. Therefore $LP/AM=BL/BA=2/5$ and $LP=72$."
+    ],
+    "solution_zh": [
+      "$APCM$ 的对角线互相平分，因此为平行四边形，$AM\\parallel CP$，所以 $BLP$ 与 $BAM$ 相似。",
+      "角平分线定理给出 $AL/LB=3/2$，故 $LP/180=BL/BA=2/5$，得 $LP=72$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/5",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Angle bisectors & triangle centers"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q06",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "On $k\\le x<k+1$ for positive integer $k$, the image is $[k^k,(k+1)^k)$, containing $(k+1)^k-k^k$ integers. These intervals for different $k$ are disjoint.",
+      "reason_zh": "对正整数 $k$，当 $k\\le x<k+1$ 时，像区间为 $[k^k,(k+1)^k)$，含 $(k+1)^k-k^k$ 个整数，各区间互不重叠。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "On $k\\le x<k+1$ for positive integer $k$, the image is $[k^k,(k+1)^k)$, containing $(k+1)^k-k^k$ integers. These intervals for different $k$ are disjoint.",
+        "reason_zh": "对正整数 $k$，当 $k\\le x<k+1$ 时，像区间为 $[k^k,(k+1)^k)$，含 $(k+1)^k-k^k$ 个整数，各区间互不重叠。"
+      }
+    ],
+    "statement_en": "Count positive integers $N<1000$ for which $x^{\\lfloor x\\rfloor}=N$ has a real solution where the expression is defined.",
+    "statement_zh": "求正整数 $N<1000$ 的个数，使 $x^{\\lfloor x\\rfloor}=N$ 在有定义的实数范围内有解。",
+    "answer": 412,
+    "solution_en": [
+      "On $k\\le x<k+1$ for positive integer $k$, the image is $[k^k,(k+1)^k)$, containing $(k+1)^k-k^k$ integers. These intervals for different $k$ are disjoint.",
+      "For $k=1,2,3,4$ the counts are $1,5,37,369$, all below one thousand; $5^5>1000$ excludes larger $k$. Values $0<x<1$ only yield one, already counted. Negative $x$ gives a negative value or a positive value below one, so no additional integer.",
+      "Total $1+5+37+369=412$."
+    ],
+    "solution_zh": [
+      "对正整数 $k$，当 $k\\le x<k+1$ 时，像区间为 $[k^k,(k+1)^k)$，含 $(k+1)^k-k^k$ 个整数，各区间互不重叠。",
+      "$k=1,2,3,4$ 分别贡献 $1,5,37,369$，更大 $k$ 的下界已超过一千。$0<x<1$ 只给已计的一，负 $x$ 只给负数或小于一的正数。",
+      "总数为 $412$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/6",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q07",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Rewrite as $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$. Multiplication telescopes to $5^{a_k-1}=(3k+2)/5$, hence $a_k=\\log_5(3k+2)$.",
+      "reason_zh": "改写后为 $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$，连乘约去中间项得 $a_k=\\log_5(3k+2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL04",
+        "reason_en": "Rewrite as $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$. Multiplication telescopes to $5^{a_k-1}=(3k+2)/5$, hence $a_k=\\log_5(3k+2)$.",
+        "reason_zh": "改写后为 $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$，连乘约去中间项得 $a_k=\\log_5(3k+2)$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Thus $3k+2=5^j$. Modulo three this requires odd $j$; $j=1$ gives excluded $k=1$, and the next is $j=3$, giving $k=41$.",
+        "reason_zh": "故 $3k+2=5^j$，模三要求 $j$ 为奇数。$j=1$ 对应排除的一，下一次 $j=3$ 给出 $k=41$。"
+      }
+    ],
+    "statement_en": "A real sequence has $a_1=1$ and $5^{a_{n+1}-a_n}-1=1/(n+2/3)$. Find the smallest integer $k>1$ for which $a_k$ is an integer.",
+    "statement_zh": "实数列满足 $a_1=1,5^{a_{n+1}-a_n}-1=1/(n+2/3)$，求使 $a_k$ 为整数的最小整数 $k>1$。",
+    "answer": 41,
+    "solution_en": [
+      "Rewrite as $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$. Multiplication telescopes to $5^{a_k-1}=(3k+2)/5$, hence $a_k=\\log_5(3k+2)$.",
+      "Thus $3k+2=5^j$. Modulo three this requires odd $j$; $j=1$ gives excluded $k=1$, and the next is $j=3$, giving $k=41$."
+    ],
+    "solution_zh": [
+      "改写后为 $5^{a_{n+1}-a_n}=(3n+5)/(3n+2)$，连乘约去中间项得 $a_k=\\log_5(3k+2)$。",
+      "故 $3k+2=5^j$，模三要求 $j$ 为奇数。$j=1$ 对应排除的一，下一次 $j=3$ 给出 $k=41$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/7",
+    "method_chain": [
+      "Sequences & summation",
+      "Logarithms & exponentials",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q08",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Differences are all distinct: $2^j-2^i=2^i(2^{j-i}-1)$ has two-adic valuation $i$, then the odd part uniquely determines $j$. Thus summing pairs counts each difference once.",
+      "reason_zh": "所有差互异，因为 $2^j-2^i$ 中二的指数唯一确定 $i$，其奇数部分再确定 $j$。所以按对求和没有重复。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "Differences are all distinct: $2^j-2^i=2^i(2^{j-i}-1)$ has two-adic valuation $i$, then the odd part uniquely determines $j$. Thus summing pairs counts each difference once.",
+        "reason_zh": "所有差互异，因为 $2^j-2^i$ 中二的指数唯一确定 $i$，其奇数部分再确定 $j$。所以按对求和没有重复。"
+      }
+    ],
+    "statement_en": "Take all positive differences between elements of $\\{2^0,2^1,\\ldots,2^{10}\\}$. If their sum is $N$, find $N\\bmod1000$.",
+    "statement_zh": "取集合 $\\{2^0,2^1,\\ldots,2^{10}\\}$ 中元素两两的所有正差，和为 $N$，求除以一千的余数。",
+    "answer": 398,
+    "solution_en": [
+      "Differences are all distinct: $2^j-2^i=2^i(2^{j-i}-1)$ has two-adic valuation $i$, then the odd part uniquely determines $j$. Thus summing pairs counts each difference once.",
+      "The coefficient of $2^j$ is $j-(10-j)=2j-10$. Hence $N=2\\sum_{j=0}^{10}j2^j-10\\sum_{j=0}^{10}2^j=2(18434)-10(2047)=16398$.",
+      "The remainder is $398$."
+    ],
+    "solution_zh": [
+      "所有差互异，因为 $2^j-2^i$ 中二的指数唯一确定 $i$，其奇数部分再确定 $j$。所以按对求和没有重复。",
+      "$2^j$ 的系数为 $2j-10$，故 $N=2\\sum j2^j-10\\sum2^j=16398$，余数为 $398$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/8",
+    "method_chain": [
+      "Sequences & summation",
+      "Prime factorization & valuations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q09",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "Arrange the seven digits in $7!/(4!3!)=35$ ways. Then insert two cuts to form three nonempty blocks, each length at most four.",
+      "reason_zh": "七个数字排列有三十五种，再插入两刀分成三个非空且长度不超过四的块。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Arrange the seven digits in $7!/(4!3!)=35$ ways. Then insert two cuts to form three nonempty blocks, each length at most four.",
+        "reason_zh": "七个数字排列有三十五种，再插入两刀分成三个非空且长度不超过四的块。"
+      }
+    ],
+    "statement_en": "Three ordered prices are integers from one to $9999$, and their concatenated digits consist of four ones and three threes. Count all possible ordered price triples.",
+    "statement_zh": "三件有序商品价格为一至 $9999$ 的整数，三价格串联后的数字恰为四个一、三个三。求可能的有序价格三元组数。",
+    "answer": 420,
+    "solution_en": [
+      "Arrange the seven digits in $7!/(4!3!)=35$ ways. Then insert two cuts to form three nonempty blocks, each length at most four.",
+      "Allowed length patterns are permutations of $(1,2,4),(1,3,3),(2,2,3)$, with counts $6,3,3$. No leading-zero issue occurs. Thus $35\\cdot12=420$."
+    ],
+    "solution_zh": [
+      "七个数字排列有三十五种，再插入两刀分成三个非空且长度不超过四的块。",
+      "长度型为 $(1,2,4),(1,3,3),(2,2,3)$ 的排列，共十二种，且无前导零问题。故总数为 $420$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/9",
+    "method_chain": [
+      "Compositions, partitions & generating functions",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q10",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "Ignoring individuals, group patterns consist of $k$ ordered triples of nonempty $M,V,E$ runs, for $1\\le k\\le5$. The seat-one/seat-fifteen condition fixes both endpoints at run boundaries.",
+      "reason_zh": "先忽略个人，组别串由 $k$ 组非空 $M,V,E$ 连续段组成，$1\\le k\\le5$，首末座条件确保段边界已固定。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Ignoring individuals, group patterns consist of $k$ ordered triples of nonempty $M,V,E$ runs, for $1\\le k\\le5$. The seat-one/seat-fifteen condition fixes both endpoints at run boundaries.",
+        "reason_zh": "先忽略个人，组别串由 $k$ 组非空 $M,V,E$ 连续段组成，$1\\le k\\le5$，首末座条件确保段边界已固定。"
+      }
+    ],
+    "statement_en": "Fifteen labeled circular seats hold five distinct members of each of groups $M,V,E$, with seat one occupied by $M$ and seat fifteen by $E$. Clockwise changes of group are allowed only $M\\to V,V\\to E,E\\to M$. If total arrangements are $N(5!)^3$, find $N$.",
+    "statement_zh": "十五个有编号圆桌座位坐三组各五名不同成员，第一座为 $M$ 组，第十五座为 $E$ 组。按顺时针，换组只允许 $M\\to V,V\\to E,E\\to M$。若总安排数为 $N(5!)^3$，求 $N$。",
+    "answer": 346,
+    "solution_en": [
+      "Ignoring individuals, group patterns consist of $k$ ordered triples of nonempty $M,V,E$ runs, for $1\\le k\\le5$. The seat-one/seat-fifteen condition fixes both endpoints at run boundaries.",
+      "For each group, split its five occurrences into $k$ ordered positive run lengths, giving $\\binom4{k-1}$. The groups are independent, so $N=\\sum_{j=0}^4\\binom4j^3=1+64+216+64+1=346$."
+    ],
+    "solution_zh": [
+      "先忽略个人，组别串由 $k$ 组非空 $M,V,E$ 连续段组成，$1\\le k\\le5$，首末座条件确保段边界已固定。",
+      "每组的五次出现拆成 $k$ 段有 $\\binom4{k-1}$ 种，三组独立，故 $N=\\sum_{j=0}^4\\binom4j^3=346$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/10",
+    "method_chain": [
+      "Compositions, partitions & generating functions",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q11",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE02",
+      "reason_en": "The fifty points are $P_j=(j,2009-41j)$ for $0\\le j\\le49$. Determinant area is $2009|i-j|/2$.",
+      "reason_zh": "格点为 $P_j=(j,2009-41j)$，$j=0$ 至 $49$，共五十点。行列式面积为 $2009|i-j|/2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "As $2009$ is odd, integrality requires equal parity of $i,j$. There are twenty-five indices of each parity; choose unordered pairs: $2\\binom{25}{2}=600$.",
+        "reason_zh": "因 $2009$ 为奇数，整数面积要求指标同奇偶。两类各二十五个，故三角形数为 $2\\binom{25}{2}=600$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "The fifty points are $P_j=(j,2009-41j)$ for $0\\le j\\le49$. Determinant area is $2009|i-j|/2$.",
+        "reason_zh": "格点为 $P_j=(j,2009-41j)$，$j=0$ 至 $49$，共五十点。行列式面积为 $2009|i-j|/2$。"
+      }
+    ],
+    "statement_en": "Choose two distinct nonnegative lattice points $P,Q$ on $41x+y=2009$ and form triangle $OPQ$ with the origin. Count distinct triangles of positive integer area.",
+    "statement_zh": "从直线 $41x+y=2009$ 上非负整数格点中选不同两点 $P,Q$，与原点组成三角形，求正整数面积的不同三角形数。",
+    "answer": 600,
+    "solution_en": [
+      "The fifty points are $P_j=(j,2009-41j)$ for $0\\le j\\le49$. Determinant area is $2009|i-j|/2$.",
+      "As $2009$ is odd, integrality requires equal parity of $i,j$. There are twenty-five indices of each parity; choose unordered pairs: $2\\binom{25}{2}=600$."
+    ],
+    "solution_zh": [
+      "格点为 $P_j=(j,2009-41j)$，$j=0$ 至 $49$，共五十点。行列式面积为 $2009|i-j|/2$。",
+      "因 $2009$ 为奇数，整数面积要求指标同奇偶。两类各二十五个，故三角形数为 $2\\binom{25}{2}=600$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/11",
+    "method_chain": [
+      "Areas & area ratios",
+      "Subsets & binomial identities",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q12",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "Line $AB$ is tangent at $D$, so this circle is the incircle of $ABI$. Let base tangent lengths be $u=AD,v=BD$, and the equal tangent lengths from $I$ be $w$. Its inradius is $CD/2=\\sqrt{uv}/2$, using the right-triangle altitude identity.",
+      "reason_zh": "$AB$ 在 $D$ 为切线，所以此圆为 $ABI$ 内切圆。设底部切线长 $u=AD,v=BD$，从 $I$ 的切线长为 $w$。由直角三角形高性质，内切圆半径为 $\\sqrt{uv}/2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Line $AB$ is tangent at $D$, so this circle is the incircle of $ABI$. Let base tangent lengths be $u=AD,v=BD$, and the equal tangent lengths from $I$ be $w$. Its inradius is $CD/2=\\sqrt{uv}/2$, using the right-triangle altitude identity.",
+        "reason_zh": "$AB$ 在 $D$ 为切线，所以此圆为 $ABI$ 内切圆。设底部切线长 $u=AD,v=BD$，从 $I$ 的切线长为 $w$。由直角三角形高性质，内切圆半径为 $\\sqrt{uv}/2$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The semiperimeter is $s=u+v+w$. Equate area $rs$ to Heron $\\sqrt{suvw}$: $s^2uv/4=suvw$, so $s=4w$. Thus $AB=u+v=3w$.",
+        "reason_zh": "半周长 $s=u+v+w$，面积两式相等给出 $s^2uv/4=suvw$，故 $s=4w,AB=3w$。"
+      }
+    ],
+    "statement_en": "Right triangle $ABC$ has legs $AC=12,BC=35$ and altitude $CD$ to hypotenuse $AB$. The circle with diameter $CD$ is tangent to $AI,BI$ for a point $I$ outside $ABC$, with the circle inside $ABI$. Write perimeter$(ABI)/AB=m/n$ in lowest terms and find $m+n$.",
+    "statement_zh": "直角三角形 $ABC$ 两直角边为十二、三十五，$CD$ 为斜边高。以 $CD$ 为直径的圆与 $AI,BI$ 相切，$I$ 在原三角形外且圆位于 $ABI$ 内。若 $ABI$ 周长与 $AB$ 之比为最简分数 $m/n$，求 $m+n$。",
+    "answer": 11,
+    "solution_en": [
+      "Line $AB$ is tangent at $D$, so this circle is the incircle of $ABI$. Let base tangent lengths be $u=AD,v=BD$, and the equal tangent lengths from $I$ be $w$. Its inradius is $CD/2=\\sqrt{uv}/2$, using the right-triangle altitude identity.",
+      "The semiperimeter is $s=u+v+w$. Equate area $rs$ to Heron $\\sqrt{suvw}$: $s^2uv/4=suvw$, so $s=4w$. Thus $AB=u+v=3w$.",
+      "The perimeter ratio is $2s/AB=8/3$, giving $11$."
+    ],
+    "solution_zh": [
+      "$AB$ 在 $D$ 为切线，所以此圆为 $ABI$ 内切圆。设底部切线长 $u=AD,v=BD$，从 $I$ 的切线长为 $w$。由直角三角形高性质，内切圆半径为 $\\sqrt{uv}/2$。",
+      "半周长 $s=u+v+w$，面积两式相等给出 $s^2uv/4=suvw$，故 $s=4w,AB=3w$。",
+      "周长比为 $8/3$，所求 $11$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/12",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Circle power & cyclic geometry",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q13",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Subtract successive cleared recurrences to get $a_{n+2}-a_n=(a_{n+2}+1)(a_{n+3}-a_{n+1})$. If one difference were nonzero, subsequent nonzero integer absolute differences would decrease by a factor of at least two forever, impossible.",
+      "reason_zh": "将连续两递推式去分母再相减，得 $a_{n+2}-a_n=(a_{n+2}+1)(a_{n+3}-a_{n+1})$。若某差非零，之后的非零整数绝对差将每次至少减半，无限下降不可能。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Therefore the sequence has period two and $a_1a_2=2009=7^2\\cdot41$. Conversely any positive factor pair gives such a sequence.",
+        "reason_zh": "因此数列周期为二，且 $a_1a_2=2009=7^2\\cdot41$；反过来任意正因子对都可行。"
+      }
+    ],
+    "statement_en": "An infinite sequence of positive integers satisfies $a_{n+2}=(a_n+2009)/(1+a_{n+1})$. Minimize $a_1+a_2$.",
+    "statement_zh": "无限正整数列满足 $a_{n+2}=(a_n+2009)/(1+a_{n+1})$，求 $a_1+a_2$ 最小值。",
+    "answer": 90,
+    "solution_en": [
+      "Subtract successive cleared recurrences to get $a_{n+2}-a_n=(a_{n+2}+1)(a_{n+3}-a_{n+1})$. If one difference were nonzero, subsequent nonzero integer absolute differences would decrease by a factor of at least two forever, impossible.",
+      "Therefore the sequence has period two and $a_1a_2=2009=7^2\\cdot41$. Conversely any positive factor pair gives such a sequence.",
+      "The closest factors are $41,49$, minimizing their sum at $90$."
+    ],
+    "solution_zh": [
+      "将连续两递推式去分母再相减，得 $a_{n+2}-a_n=(a_{n+2}+1)(a_{n+3}-a_{n+1})$。若某差非零，之后的非零整数绝对差将每次至少减半，无限下降不可能。",
+      "因此数列周期为二，且 $a_1a_2=2009=7^2\\cdot41$；反过来任意正因子对都可行。",
+      "最接近的因子为四十一、四十九，最小和为 $90$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/13",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q14",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Let $u_j$ count entries equal to $j$. Subtract the count equation from the first- and fourth-power equations to get $u_2+2u_3+3u_4=163$ and $15u_2+80u_3+255u_4=4395$.",
+      "reason_zh": "设 $u_j$ 为数字 $j$ 的个数，由总数方程相减得 $u_2+2u_3+3u_4=163$ 及 $15u_2+80u_3+255u_4=4395$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Let $u_j$ count entries equal to $j$. Subtract the count equation from the first- and fourth-power equations to get $u_2+2u_3+3u_4=163$ and $15u_2+80u_3+255u_4=4395$.",
+        "reason_zh": "设 $u_j$ 为数字 $j$ 的个数，由总数方程相减得 $u_2+2u_3+3u_4=163$ 及 $15u_2+80u_3+255u_4=4395$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "Eliminating $u_2$ gives $5u_3+21u_4=195$. Hence $u_4$ is a multiple of five and $0\\le u_4\\le9$, leaving $u_4=0,5$. The corresponding count vectors are $(226,85,39,0),(215,112,18,5)$.",
+        "reason_zh": "消元得 $5u_3+21u_4=195$，所以 $u_4$ 为不超过九的五倍数，仅为零或五，对应数量向量 $(226,85,39,0),(215,112,18,5)$。"
+      }
+    ],
+    "statement_en": "For $350$ entries $a_i\\in\\{1,2,3,4\\}$, let $S_t=\\sum_i a_i^t$. Given $S_1=513,S_4=4745$, minimize $S_2$.",
+    "statement_zh": "三百五十个数 $a_i\\in\\{1,2,3,4\\}$，令 $S_t=\\sum_i a_i^t$。已知 $S_1=513,S_4=4745$，求 $S_2$ 最小值。",
+    "answer": 905,
+    "solution_en": [
+      "Let $u_j$ count entries equal to $j$. Subtract the count equation from the first- and fourth-power equations to get $u_2+2u_3+3u_4=163$ and $15u_2+80u_3+255u_4=4395$.",
+      "Eliminating $u_2$ gives $5u_3+21u_4=195$. Hence $u_4$ is a multiple of five and $0\\le u_4\\le9$, leaving $u_4=0,5$. The corresponding count vectors are $(226,85,39,0),(215,112,18,5)$.",
+      "Their square sums are $917,905$, so the minimum is $905$."
+    ],
+    "solution_zh": [
+      "设 $u_j$ 为数字 $j$ 的个数，由总数方程相减得 $u_2+2u_3+3u_4=163$ 及 $15u_2+80u_3+255u_4=4395$。",
+      "消元得 $5u_3+21u_4=195$，所以 $u_4$ 为不超过九的五倍数，仅为零或五，对应数量向量 $(226,85,39,0),(215,112,18,5)$。",
+      "平方和分别为 $917,905$，故最小 $905$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/14",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Equations & algebraic modeling",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2009-I-Q15",
+    "paper_id": "AIME-2009-I",
+    "exam_year": 2009,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Cosine rule gives $\\angle A=60^\\circ$. The incenter-angle identities give $\\angle BI_BD+\\angle CI_CD=180^\\circ+\\angle A/2=210^\\circ$. Cyclic-angle relations put the second intersection below $BC$ and yield $\\angle BPC=150^\\circ$, independent of $D$.",
+      "reason_zh": "余弦定理得 $\\angle A=60^\\circ$。内心角公式给出 $\\angle BI_BD+\\angle CI_CD=210^\\circ$，由圆周角关系，第二交点在 $BC$ 下侧且 $\\angle BPC=150^\\circ$，与 $D$ 无关。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Cosine rule gives $\\angle A=60^\\circ$. The incenter-angle identities give $\\angle BI_BD+\\angle CI_CD=180^\\circ+\\angle A/2=210^\\circ$. Cyclic-angle relations put the second intersection below $BC$ and yield $\\angle BPC=150^\\circ$, independent of $D$.",
+        "reason_zh": "余弦定理得 $\\angle A=60^\\circ$。内心角公式给出 $\\angle BI_BD+\\angle CI_CD=210^\\circ$，由圆周角关系，第二交点在 $BC$ 下侧且 $\\angle BPC=150^\\circ$，与 $D$ 无关。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Thus $P$ lies on a fixed circular arc through $B,C$. For fixed chord, maximal perpendicular distance occurs at the arc midpoint, where $BP=PC=x$. This point is attainable: as $D$ varies continuously from $B$ to $C$, its first circle collapses to $B$ at one end and its second to $C$ at the other, so the distinct second intersection varies continuously from $B$ to $C$ along that arc and must pass its midpoint.",
+        "reason_zh": "所以 $P$ 位于固定弦 $BC$ 的同一圆弧上，离底边最远在弧中点，此时 $BP=PC=x$。该点确可达到：$D$ 连续从 $B$ 到 $C$ 时，首圆在起端收缩至 $B$，次圆在末端收缩至 $C$，第二交点连续沿该弧从 $B$ 到 $C$，必经过中点。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=10,BC=14,CA=16$. For interior $D\\in BC$, let $I_B,I_C$ be incenters of $ABD,ACD$. The circles through $B,I_B,D$ and $C,I_C,D$ meet again at $P$. The largest area $[BPC]$ is $a-b\\sqrt c$ in squarefree form. Find $a+b+c$.",
+    "statement_zh": "三角形 $ABC$ 边长为十、十四、十六。$D$ 在 $BC$ 内，$I_B,I_C$ 为 $ABD,ACD$ 内心。圆 $BI_BD,CI_CD$ 再交于 $P$。$BPC$ 面积最大值为 $a-b\\sqrt c$，求 $a+b+c$。",
+    "answer": 150,
+    "solution_en": [
+      "Cosine rule gives $\\angle A=60^\\circ$. The incenter-angle identities give $\\angle BI_BD+\\angle CI_CD=180^\\circ+\\angle A/2=210^\\circ$. Cyclic-angle relations put the second intersection below $BC$ and yield $\\angle BPC=150^\\circ$, independent of $D$.",
+      "Thus $P$ lies on a fixed circular arc through $B,C$. For fixed chord, maximal perpendicular distance occurs at the arc midpoint, where $BP=PC=x$. This point is attainable: as $D$ varies continuously from $B$ to $C$, its first circle collapses to $B$ at one end and its second to $C$ at the other, so the distinct second intersection varies continuously from $B$ to $C$ along that arc and must pass its midpoint.",
+      "Cosine rule at the midpoint gives $196=(2+\\sqrt3)x^2$. Hence the maximal area is $x^2\\sin150^\\circ/2=49(2-\\sqrt3)=98-49\\sqrt3$, and the requested sum is $150$."
+    ],
+    "solution_zh": [
+      "余弦定理得 $\\angle A=60^\\circ$。内心角公式给出 $\\angle BI_BD+\\angle CI_CD=210^\\circ$，由圆周角关系，第二交点在 $BC$ 下侧且 $\\angle BPC=150^\\circ$，与 $D$ 无关。",
+      "所以 $P$ 位于固定弦 $BC$ 的同一圆弧上，离底边最远在弧中点，此时 $BP=PC=x$。该点确可达到：$D$ 连续从 $B$ 到 $C$ 时，首圆在起端收缩至 $B$，次圆在末端收缩至 $C$，第二交点连续沿该弧从 $B$ 到 $C$，必经过中点。",
+      "余弦定理给出 $196=(2+\\sqrt3)x^2$，最大面积为 $49(2-\\sqrt3)=98-49\\sqrt3$，所求 $150$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2009I/problem/15",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Angle bisectors & triangle centers",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

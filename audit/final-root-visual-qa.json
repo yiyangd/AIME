@@ -1,0 +1,38 @@
+{
+  "reviewer": "root",
+  "questions_sha256": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+  "snapshot_update": "The final English-only typography corrections do not change the inspected Chinese/workbook/matrix printed units. Print-builder regenerated current-data units and verified exact equality with their saved render specifications; English changed pages were separately re-inspected.",
+  "original_method_diagrams": {"count": 10, "contact_sheet_inspected": true, "result": "pass", "notes": "Checked readable labels and the parallel cut, affine area triangle, altitude, cyclic angle, internal bisector, tangent circles, line-midpoint, inscribed ellipse triangle, equal sphere sections and similar boxes against their canonical examples."},
+  "xlsx": {
+    "sheets_visually_inspected": ["Matrix", "Statistics", "Problems", "Tags", "Taxonomy", "Review"],
+    "result": "pass",
+    "notes": "Reviewed final artifact renders for all six sheets. Bilingual labels, taxonomy definitions/boundaries and review notes fit their displayed rows. Statistics reconcile; native links and print settings checked separately."
+  },
+  "matrix_pdf": {
+    "all_pages_rendered_and_contact_sheets_inspected": {"bilingual": 11, "bilingual_poster": 4, "en": 10, "zh": 10},
+    "representative_full_resolution": ["bilingual page1", "zh page1"],
+    "result": "pass",
+    "notes": "Seven-paper groups remain readable with 15 original question rows; dictionary pages and final shorter group are complete. Full-width poster is intended for zooming/large-format printing."
+  },
+  "solutions_zh_pdf": {
+    "pages": 828,
+    "contact_sheets_inspected": 13,
+    "representative_full_resolution_physical_pages": [1,3,19,201,317],
+    "result": "pass",
+    "notes": "Every page was Poppler-rendered and its contact sheet visually inspected for clipping, glyph failure, page transitions and layout outliers. Cover, linked contents, original diagram, longest synthetic proof and corrected-source page checked at110dpi. Source-note bottom on page201 is731.8pt; footer starts809.7pt, confirming adequate clearance. Mathematical correctness is documented by the independent per-question reviews, not inferred from thumbnails."
+  },
+  "offline_bilingual_matrix": {
+    "questions": 810,
+    "papers": 54,
+    "topics": 6,
+    "primary_subtypes": 44,
+    "independent_filters": "English2026 gives30 questions/2papers while ChineseII independently gives405/27",
+    "source_discrepancy": "2016I9 opens with the verified result and separately labeled historical744 key in the collapsed-answer disclosure",
+    "compact_toggle": "pass",
+    "katex_errors": 0,
+    "document_width_px": 1265,
+    "viewport_px": 1280,
+    "single_language_files": "EN:2000II filter gives15 questions/1paper and Q15 answer001; ZH:2026I15 displays083; both expanded solutions render with0KaTeXerrors. English singular-paper status verified after grammar polish.",
+    "result": "pass"
+  }
+}

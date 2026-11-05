@@ -1,0 +1,78 @@
+from content_helpers import Batch
+b=Batch('2015II')
+b.add(1,'NT02',[],
+r'Let $N$ be the smallest positive integer that equals $78\%$ of an integer and also $116\%$ of an integer. Find $N\bmod1000$.',
+r'最小正整数 $N$ 同时是某整数的 $78\%$ 和另一整数的 $116\%$。求 $N$ 除以 $1000$ 的余数。',
+[r'The ratios reduce to $39/50$ and $29/25$. Therefore the integral value $N$ must be a multiple of both $39$ and $29$.',r'These numbers are coprime, so the smallest value is $39\cdot29=1131$. It is attained using the original integers $1450,975$, and its remainder is $131$.'],
+[r'两比例约为 $39/50$ 和 $29/25$，因此整数 $N$ 必须同时为 $39$ 和 $29$ 的倍数。',r'二者互质，最小值为 $39\cdot29=1131$。原整数取 $1450,975$ 即可实现，余数为 $131$。'])
+b.add(2,'PS02',[],
+r'The four grade levels contain $40\%,30\%,20\%,10\%$ of a school. Their Latin-enrollment rates are respectively $100\%,80\%,50\%,20\%$. If the probability that a uniformly chosen Latin student is in the second grade level is reduced $m/n$, find $m+n$.',
+r'学校四个年级人数依次占 $40\%,30\%,20\%,10\%$，各年级选修拉丁语的比例依次为 $100\%,80\%,50\%,20\%$。从拉丁语学生中等可能选一人，其属于第二年级的概率为最简分数 $m/n$。求 $m+n$。',
+[r'Using a population scale of $100$, the Latin groups have sizes $40,24,10,2$, for a total of $76$. These are proportional counts, so no assumption about actual school size is needed.',r'The desired conditional probability is $24/76=6/19$. Hence $m+n=25$.'],
+[r'以全校 $100$ 个比例单位计算，四个年级的拉丁语人数为 $40,24,10,2$，共 $76$。这只是比例计数，不要求实际全校人数为 $100$。',r'所求条件概率为 $24/76=6/19$，故 $m+n=25$。'])
+b.add(3,'NT06',[('NT03',0)],
+r'Find the least positive multiple of $17$ whose decimal digit sum is $17$.',
+r'求十进制数位和为 $17$ 的最小正 $17$ 的倍数。',
+[r'Write the number as $17k$. Congruence to its digit sum modulo $9$ forces $17k\equiv17\pmod9$, hence $k\equiv1\pmod9$.',r'The first candidates are $k=1,10,19,28$, giving $17,170,323,476$. The first three have digit sum $8$ and the last has digit sum $17$. Thus the least answer is $476$.'],
+[r'将该数写成 $17k$。整数与其数位和模 $9$ 同余，故 $17k\equiv17\pmod9$，即 $k\equiv1\pmod9$。',r'依次检查 $k=1,10,19,28$，得到 $17,170,323,476$。前三个数位和均为 $8$，最后一个为 $17$，所以最小答案为 $476$。'])
+b.add(4,'GE03',[('AL04',0)],
+r'An isosceles trapezoid has parallel bases $\log3,\log192$ and altitude $\log16$, using common logarithms. Its perimeter is $\log(2^p3^q)$ for positive integers $p,q$. Find $p+q$.',
+r'等腰梯形的两底为常用对数 $\log3,\log192$，高为 $\log16$。周长为 $\log(2^p3^q)$，其中 $p,q$ 为正整数。求 $p+q$。',
+[r'Let $u=\log2>0$. The altitude is $4u$, while half the base difference is $(\log192-\log3)/2=3u$.',r'Each equal leg is the hypotenuse of a $3u$ by $4u$ right triangle, so it is $5u$. The perimeter is $\log3+\log192+10\log2=\log(2^{16}3^2)$. Therefore $p+q=18$.'],
+[r'令 $u=\log2>0$，则高为 $4u$，半底差为 $(\log192-\log3)/2=3u$。',r'每条腰为两直角边 $3u,4u$ 的斜边，长 $5u$。周长为 $\log3+\log192+10\log2=\log(2^{16}3^2)$，故 $p+q=18$。'])
+b.add(5,'PS01',[('CO06',0),('AL07',1)],
+r'Two different cells are chosen uniformly from an $n\times n$ grid, where $n\ge2$. Find the smallest $n$ such that the probability they share a full side is less than $1/2015$.',
+r'从 $n\times n$ 方格中等可能选两个不同小格，$n\ge2$。求使两格共边概率小于 $1/2015$ 的最小 $n$。',
+[r'The grid has $n(n-1)$ horizontal and the same number of vertical neighboring pairs. Among $\binom{n^2}{2}$ unordered pairs, the probability is $2n(n-1)/\binom{n^2}{2}=4/[n(n+1)]$.',r'The strict inequality becomes $n(n+1)>8060$. Since $89\cdot90=8010<8060<90\cdot91=8190$, the least possible $n$ is $90$.'],
+[r'水平相邻小格对有 $n(n-1)$ 个，竖直也一样。总无序小格对数为 $\binom{n^2}{2}$，所以概率为 $2n(n-1)/\binom{n^2}{2}=4/[n(n+1)]$。',r'严格不等式化为 $n(n+1)>8060$。因 $89\cdot90=8010<8060<90\cdot91=8190$，最小 $n$ 为 $90$。'])
+b.add(6,'AL02',[('NT05',1),('LO03',2)],
+r'A polynomial $2x^3-2ax^2+(a^2-81)x-c$ has three positive integral roots, counting multiplicity, with positive integers $a,c$. Among all such polynomials, knowing $a$ still leaves exactly two possible values of $c$. Find their sum.',
+r'多项式 $2x^3-2ax^2+(a^2-81)x-c$ 的三个根（按重数计）均为正整数，且 $a,c$ 为正整数。在所有符合条件的多项式中，已知 $a$ 后仍恰有两个可能的 $c$。求这两个 $c$ 的和。',
+[r'If the roots are $r\le s\le t$, Vieta gives $r+s+t=a$ and $rs+rt+st=(a^2-81)/2$. Subtraction yields $r^2+s^2+t^2=81$.',r'As $r\le\sqrt{27}<6$, test $r=1,2,3,4,5$ and $r\le s\le\sqrt{(81-r^2)/2}$. The only square remainders give triples $(1,4,8),(3,6,6),(4,4,7)$.',r'The root sums are respectively $13,15,15$. The stated ambiguity therefore means $a=15$. Since $c=2rst$, the two values are $216$ and $224$, with sum $440$.'],
+[r'设根为 $r\le s\le t$，韦达关系给出 $r+s+t=a$ 和 $rs+rt+st=(a^2-81)/2$，相减得 $r^2+s^2+t^2=81$。',r'由 $r\le\sqrt{27}<6$，检查 $r=1,2,3,4,5$ 以及 $r\le s\le\sqrt{(81-r^2)/2}$。平方余数仅产生 $(1,4,8),(3,6,6),(4,4,7)$ 三组。',r'对应根和为 $13,15,15$。已知 $a$ 仍有两种可能，故 $a=15$。由 $c=2rst$，两值为 $216,224$，其和为 $440$。'])
+b.add(7,'GE01',[('GE03',0)],
+r'Triangle $ABC$ has $AB=12,AC=17,BC=25$. A rectangle $PQRS$ has $P$ on $AB$, $Q$ on $AC$, and $R,S$ on $BC$, with $PQ=w$. Its area is $\alpha w-\beta w^2$. If $\beta=m/n$ in lowest terms, find $m+n$.',
+r'三角形 $ABC$ 中 $AB=12,AC=17,BC=25$。内接矩形 $PQRS$ 的 $P,Q$ 分别在 $AB,AC$ 上，$R,S$ 在 $BC$ 上，$PQ=w$。面积为 $\alpha w-\beta w^2$。若 $\beta=m/n$ 为最简分数，求 $m+n$。',
+[r'The semiperimeter is $27$, so Heron gives triangle area $\sqrt{27\cdot15\cdot10\cdot2}=90$. Its altitude to $BC$ is $h=180/25=36/5$.',r'Similarity of $APQ$ and $ABC$ gives rectangle height $h(1-w/25)$. Thus its area is $(36/5)w-(36/125)w^2$, and $\beta=36/125$.',r'The fraction is reduced, so the requested sum is $161$.'],
+[r'半周长为 $27$，海伦公式给出三角形面积 $\sqrt{27\cdot15\cdot10\cdot2}=90$，到底边 $BC$ 的高为 $h=180/25=36/5$。',r'由 $APQ\sim ABC$，矩形高为 $h(1-w/25)$。因此面积为 $(36/5)w-(36/125)w^2$，即 $\beta=36/125$。',r'此分数已最简，所求和为 $161$。'])
+b.add(8,'NT05',[('AL07',0)],
+r'Positive integers $a,b$ satisfy $(ab+1)/(a+b)<3/2$. Write the maximum of $(a^3b^3+1)/(a^3+b^3)$ as reduced $p/q$ and find $p+q$.',
+r'正整数 $a,b$ 满足 $(ab+1)/(a+b)<3/2$。将 $(a^3b^3+1)/(a^3+b^3)$ 的最大值写成最简分数 $p/q$，求 $p+q$。',
+[r'If either variable is $1$, the target is $1$. Otherwise both are at least $2$, and the condition rearranges to $(2a-3)(2b-3)<5$.',r'The two factors are positive odd integers. Their only possibilities, apart from swapping, are $(1,1),(1,3)$, giving $(a,b)=(2,2),(2,3)$.',r'The target values are $65/16$ and $217/35=31/5$. The maximum is $31/5$, larger than $1$, and $p+q=36$.'],
+[r'若任一变量为 $1$，目标式为 $1$。否则 $a,b\ge2$，原约束整理为 $(2a-3)(2b-3)<5$。',r'两因子均为正奇数，除交换顺序外，只能为 $(1,1),(1,3)$，对应 $(a,b)=(2,2),(2,3)$。',r'目标值分别为 $65/16$、$217/35=31/5$。最大值为 $31/5$，也大于 $1$，所以 $p+q=36$。'])
+b.add(9,'GE10',[('GE03',0)],
+r'A cylindrical barrel of radius $4$ ft and height $10$ ft is full of water. An $8$-ft-edge solid cube is lowered centrally into it, with one body diagonal vertical, until the cube rests on the rim. If the displaced water volume is $v$, find $v^2$.',
+r'半径 $4$ 英尺、高 $10$ 英尺的圆柱桶装满水。边长 $8$ 英尺的实心立方体沿桶轴下放，一条体对角线保持竖直，直至卡在桶口。若排水体积为 $v$，求 $v^2$。',
+[r'Near its lowest vertex, a plane perpendicular to the cube body diagonal cuts an equilateral triangle. At the rim, its circumradius is $4$, so its side length is $4\sqrt3$.',r'If the equal intercepts along the three mutually perpendicular cube edges are $t$, the section side is $t\sqrt2$, giving $t=2\sqrt6<8$. Thus the submerged part is exactly a corner tetrahedron, of volume $t^3/6=8\sqrt6$.',r'Its depth is $t/\sqrt3=2\sqrt2<10$, so it does not reach the barrel bottom. The displaced volume is the tetrahedron volume, and $v^2=384$.'],
+[r'在最低顶点附近，垂直于立方体体对角线的截面为等边三角形。到桶口时，其外接圆半径为 $4$，因此边长为 $4\sqrt3$。',r'设截平面在三条互相垂直的立方体棱上截取长度均为 $t$，则截面边长为 $t\sqrt2$，故 $t=2\sqrt6<8$。浸入部分恰为角部四面体，体积 $t^3/6=8\sqrt6$。',r'浸入深度为 $t/\sqrt3=2\sqrt2<10$，未碰桶底。排水体积等于该四面体体积，所以 $v^2=384$。'])
+b.add(10,'CO05',[('CO01',0)],
+r'Count permutations $a_1,\ldots,a_7$ of $1,\ldots,7$ satisfying $a_k\le a_{k+1}+2$ for all $k<7$.',
+r'求 $1$ 至 $7$ 的排列 $a_1,\ldots,a_7$ 中，满足对所有 $k<7$ 均有 $a_k\le a_{k+1}+2$ 的排列数。',
+[r'Let $T_n$ be the count. Insert the maximum $n$ into an admissible permutation of $1,\ldots,n-1$. The entry immediately after it, if present, must be $n-1$ or $n-2$. Hence there are exactly three insertion positions: before those entries or at the end.',r'Every insertion preserves all other inequalities. Conversely, deleting $n$ is safe: its following entry is at least $n-2$, while its preceding entry is at most $n-1$, so their newly formed adjacent inequality still holds.',r'Thus $T_n=3T_{n-1}$ for $n\ge3$, with $T_2=2$. Therefore $T_7=2\cdot3^5=486$.'],
+[r'令 $T_n$ 为符合条件的排列数。把最大数 $n$ 插入 $1$ 至 $n-1$ 的合法排列，若其后有数，则只能是 $n-1$ 或 $n-2$。因此恰有三个插入位置：这两数之前或末尾。',r'每次插入都保持其他不等式。反过来删除 $n$ 时，其后数至少为 $n-2$，其前数至多为 $n-1$，新相邻数仍满足条件。',r'所以 $n\ge3$ 时 $T_n=3T_{n-1}$，而 $T_2=2$。故 $T_7=2\cdot3^5=486$。'])
+b.add(11,'GE07',[('GE04',0)],
+r'Acute triangle $ABC$ has circumcenter $O$. The line through $O$ perpendicular to $OB$ meets lines $AB,BC$ at $P,Q$. Given $AB=5,BC=4,BQ=9/2$, express $BP=m/n$ in lowest terms and find $m+n$.',
+r'锐角三角形 $ABC$ 的外心为 $O$。过 $O$ 作垂直 $OB$ 的直线，交直线 $AB,BC$ 于 $P,Q$。已知 $AB=5,BC=4,BQ=9/2$。将 $BP=m/n$ 约为最简分数，求 $m+n$。',
+[r'Place $B$ at the vector origin, and write vectors to $A,C,O$ as $a,c,o$. Equal circumradii give $2o\cdot a=|a|^2=25$ and $2o\cdot c=|c|^2=16$.',r'The specified line has equation $o\cdot x=|o|^2$. If $P=ta,Q=sc$, then $25t=16s=2|o|^2$, so both parameters are positive and $t/s=16/25$.',r'It follows that $BP/BQ=(5t)/(4s)=4/5$. Thus $BP=(4/5)(9/2)=18/5$, giving $m+n=23$.'],
+[r'以 $B$ 为向量原点，$A,C,O$ 的位置向量分别为 $a,c,o$。由外接圆半径相等，$2o\cdot a=|a|^2=25$，$2o\cdot c=|c|^2=16$。',r'所作直线方程为 $o\cdot x=|o|^2$。若 $P=ta,Q=sc$，则 $25t=16s=2|o|^2$，所以参数为正且 $t/s=16/25$。',r'从而 $BP/BQ=(5t)/(4s)=4/5$，得 $BP=(4/5)(9/2)=18/5$，所求和为 $23$。'])
+b.add(12,'CO05',[('CO03',0)],
+r'How many length-$10$ strings over $\{A,B\}$ have every maximal run of identical letters of length at most $3$?',
+r'由 $A,B$ 组成的长度 $10$ 字符串中，连续相同字符的每个极大段长度都不超过 $3$，这样的字符串有多少个？',
+[r'Fix the first letter. A valid string is uniquely specified by its successive run lengths, each in $\{1,2,3\}$ and summing to $10$. The letters alternate automatically.',r'Let $C_n$ count these compositions, with $C_0=1$ and $C_n=0$ for $n<0$. Removing the last part gives $C_n=C_{n-1}+C_{n-2}+C_{n-3}$.',r'The values for $n=1,\ldots,10$ are $1,2,4,7,13,24,44,81,149,274$. Either first letter is possible, so the answer is $2\cdot274=548$.'],
+[r'固定首字符。合法字符串由各连续段的长度唯一确定，每段长为 $1,2,3$ 之一，总和为 $10$；字符自动交替。',r'令 $C_n$ 为这种有序拆分数，取 $C_0=1,n<0$ 时 $C_n=0$。删除末段得 $C_n=C_{n-1}+C_{n-2}+C_{n-3}$。',r'$n=1$ 至 $10$ 时依次为 $1,2,4,7,13,24,44,81,149,274$。首字符有两种，故答案 $548$。'])
+b.add(13,'AL08',[('AL05',0),('AL06',2)],
+r'Define $a_n=\sum_{k=1}^{n}\sin k$, with angles measured in radians. Find the index of the $100$th negative term of this sequence.',
+r'令 $a_n=\sum_{k=1}^{n}\sin k$，角度用弧度。求该数列第 $100$ 个负项的下标。',
+[r'The identity $2\sin(1/2)\sin k=\cos(k-1/2)-\cos(k+1/2)$ telescopes to $a_n=[\cos(1/2)-\cos(n+1/2)]/[2\sin(1/2)]$.',r'The denominator is positive. Negativity is equivalent to $n+1/2$ lying within $1/2$ of a multiple $2\pi m$, that is $2\pi m-1<n<2\pi m$.',r'For each positive integer $m$, this interval contains exactly one integer, $\lfloor2\pi m\rfloor$, because $2\pi m$ is irrational. Their order increases with $m$, so the $100$th is $\lfloor200\pi\rfloor=628$.'],
+[r'恒等式 $2\sin(1/2)\sin k=\cos(k-1/2)-\cos(k+1/2)$ 作望远镜求和，得 $a_n=[\cos(1/2)-\cos(n+1/2)]/[2\sin(1/2)]$。',r'分母为正，故负项条件等价于 $n+1/2$ 与某个 $2\pi m$ 的距离小于 $1/2$，即 $2\pi m-1<n<2\pi m$。',r'对每个正整数 $m$，因 $2\pi m$ 为无理数，此区间恰含一个整数 $\lfloor2\pi m\rfloor$。这些下标随 $m$ 递增，所以第 $100$ 个是 $\lfloor200\pi\rfloor=628$。'])
+b.add(14,'AL01',[('AL02',0)],
+r'Real numbers $x,y$ satisfy $x^4y^5+y^4x^5=810$ and $x^3y^6+y^3x^6=945$. Evaluate $2x^3+(xy)^3+2y^3$.',
+r'实数 $x,y$ 满足 $x^4y^5+y^4x^5=810$、$x^3y^6+y^3x^6=945$。求 $2x^3+(xy)^3+2y^3$。',
+[r'Put $s=x+y,p=xy$. Factoring gives $p^4s=810$ and $p^3(s^3-3ps)=945$. Both $s,p$ are nonzero.',r'Divide the second equation by the first: $(s^2-3p)/p=7/6$, so $s^2=25p/6$ and $p>0$. Squaring $p^4s=810$ then gives $(25/6)p^9=810^2$, hence $p^3=54$.',r'The second equation gives $x^3+y^3=945/54=35/2$. Therefore the target is $2(35/2)+54=89$.'],
+[r'令 $s=x+y,p=xy$。因式分解得 $p^4s=810$、$p^3(s^3-3ps)=945$，两变量 $s,p$ 均非零。',r'第二式除以第一式，得 $(s^2-3p)/p=7/6$，故 $s^2=25p/6,p>0$。将 $p^4s=810$ 平方，得 $(25/6)p^9=810^2$，所以 $p^3=54$。',r'第二式给出 $x^3+y^3=945/54=35/2$，目标值为 $2(35/2)+54=89$。'])
+b.add(15,'GE06',[('GE07',1),('GE02',0)],
+r'Circles of radii $1$ and $4$ touch externally at $A$. A common external tangent touches them at $B,C$, respectively. A line through $A$ meets the small circle again at $D$ and the large one at $E$, with $B,C$ on the same side of this line. Suppose $[DBA]=[ACE]=m/n$ in lowest terms. Find $m+n$.',
+r'半径为 $1,4$ 的两圆外切于 $A$，一条外公切线分别切两圆于 $B,C$。过 $A$ 的直线再次交小圆、大圆于 $D,E$，且 $B,C$ 在该直线同侧。若 $[DBA]=[ACE]=m/n$ 为最简分数，求 $m+n$。',
+[r'The homothety centered at $A$ with ratio $-4$ maps $D$ to $E$. Thus $AE=4AD$, and equal triangle areas require distances $d(B,\ell)=4d(C,\ell)$. The same-side condition fixes the signed ratio as positive.',r'Place centers at $(0,1),(4,4)$, so $B=(0,0),C=(4,0),A=(4/5,8/5)$. Write the line as $u(x-4/5)+v(y-8/5)=0$. The distance ratio gives $-(4u+8v)=4(16u-8v)$, hence $v/u=17/6$ and $\ell:6x+17y=32$.',r'The distances from $B$ and the small-circle center to this line are $32/\sqrt{325}$ and $15/\sqrt{325}$. Therefore its small-circle chord is $AD=2\sqrt{1-225/325}=20/\sqrt{325}$.',r'The common area is $\tfrac12(32/\sqrt{325})(20/\sqrt{325})=64/65$. Hence the requested sum is $129$.'],
+[r'以 $A$ 为中心、比为 $-4$ 的位似将 $D$ 映到 $E$，所以 $AE=4AD$。两三角形面积相等要求 $d(B,\ell)=4d(C,\ell)$；同侧条件保证有向距离之比为正。',r'取圆心为 $(0,1),(4,4)$，则 $B=(0,0),C=(4,0),A=(4/5,8/5)$。直线写为 $u(x-4/5)+v(y-8/5)=0$，距离比给出 $-(4u+8v)=4(16u-8v)$，解得 $v/u=17/6$，即 $\ell:6x+17y=32$。',r'$B$ 及小圆心到直线的距离为 $32/\sqrt{325}$、$15/\sqrt{325}$，故小圆弦长 $AD=2\sqrt{1-225/325}=20/\sqrt{325}$。',r'公共面积为 $\tfrac12(32/\sqrt{325})(20/\sqrt{325})=64/65$，所以所求和为 $129$。'])
+b.save()

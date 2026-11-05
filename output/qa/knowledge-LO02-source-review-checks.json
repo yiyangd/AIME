@@ -1,0 +1,27 @@
+{
+  "reviewer": "source_audit",
+  "examples_checked": 20,
+  "checks": [
+    "M01 lexicographic optimum",
+    "M02 consecutive-triple equivalence exhaustive finite check",
+    "M03 deletion-mean iff criterion finite exhaustive check",
+    "M04 strict local rounding",
+    "M05 subset sums interval",
+    "M06 terminal states",
+    "M06 objective sums",
+    "M07 residue optimum",
+    "M08 strict gap witness",
+    "M09 incompatible distance-level bound",
+    "M10 resource witness",
+    "M11 all in-domain products for a=2,3,4",
+    "M12 maximum run count and multiplicity",
+    "M13 independent conjugates",
+    "M14 aligned square-block iff test",
+    "M15 possible fraction class",
+    "M16 largest stamp gap",
+    "M17 complete subset sums",
+    "M18 greedy counterexample minimum",
+    "M19 star optimum",
+    "M20 additive factor-cost minimum through60"
+  ]
+}

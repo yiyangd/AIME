@@ -1,0 +1,8 @@
+---
+import Bi from './Bi.astro';
+import {url,type PrintResources} from '../lib/content';
+interface Props {resources?:PrintResources;compact?:boolean}
+const {resources={},compact=false}=Astro.props;
+const labels={workbook:{en:'Workbook PDF',zh:'练习册 PDF'},textbook:{en:'Textbook PDF',zh:'知识教材 PDF'},solutions_en:{en:'English solutions PDF',zh:'英文解析 PDF'},solutions_zh:{en:'Chinese solutions PDF',zh:'中文解析 PDF'}};
+---
+{Object.entries(resources).length>0&&<div class:list={['print-links',{compact}]}>{Object.entries(resources).map(([kind,ref])=>{const label=labels[kind as keyof typeof labels];return ref&&<a href={url(ref.href)}><Bi en={compact&&ref.bodyPage?`${kind==='workbook'?'WB':'Textbook'} p. ${ref.bodyPage}`:label.en} zh={compact&&ref.bodyPage?`${kind==='workbook'?'练习册':'教材'}第 ${ref.bodyPage} 页`:label.zh}/>{!compact&&ref.pageCount&&<span> · {ref.pageCount} <Bi en="pages" zh="页"/></span>}</a>})}</div>}

@@ -1,0 +1,1300 @@
+{
+  "subtype_id": "GE03",
+  "introduction_en": "Triangle metrics connect geometry to exact algebra. Choose a right section, the sine rule, the cosine rule or an area identity according to the known data. Every algebraic solution must still satisfy triangle inequalities, angle ranges and the stated side-segment conditions.",
+  "introduction_zh": "三角形度量把几何转为精确代数。依据已知条件选择直角截面、正弦定理、余弦定理或面积恒等式。所有代数解仍须满足三角不等式、角范围及题目规定的边上线段限制。",
+  "prerequisites": [
+    "GE01",
+    "AL01"
+  ],
+  "methods": [
+    {
+      "method_id": "GE03-M01",
+      "title_en": "Right sections and special triangles recover perpendicular heights",
+      "title_zh": "直角截面与特殊三角形恢复垂直高度",
+      "steps_en": [
+        "Drop a perpendicular or choose a symmetry-axis cross section.",
+        "Use Pythagoras, the $1:1:\\sqrt2$ or $1:\\sqrt3:2$ triangle, and scaled Pythagorean triples.",
+        "Keep a slant length separate from its perpendicular projection.",
+        "If two distances share an unknown height, subtract their squared equations before solving."
+      ],
+      "steps_zh": [
+        "作垂线或选择对称轴截面。",
+        "使用勾股、$1:1:\\sqrt2$ 或 $1:\\sqrt3:2$ 比例，以及缩放勾股数组。",
+        "把斜长与垂直投影分开。",
+        "若两个距离共用未知高度，先相减其平方方程。"
+      ],
+      "example_en": "An isosceles triangle has equal sides thirteen and base ten. Find its altitude and area.",
+      "example_zh": "等腰三角形腰十三、底十，求高与面积。",
+      "solution_en": [
+        "The apex altitude bisects the base into two lengths five.",
+        "Pythagoras gives height $\\sqrt{13^2-5^2}=12$.",
+        "The area is $10\\cdot12/2=60$; the two right sections are scaled $5$–$12$–$13$ triangles."
+      ],
+      "solution_zh": [
+        "顶角高把底边平分为两个五。",
+        "勾股得高 $\\sqrt{13^2-5^2}=12$。",
+        "面积为 $10\\cdot12/2=60$，两截块均为五、十二、十三直角三角形。"
+      ],
+      "tip_en": "A three-dimensional height must be perpendicular to the base plane.",
+      "tip_zh": "空间高度必须垂直于底面。",
+      "question_ids": [
+        "AIME-2001-I-Q04",
+        "AIME-2001-I-Q05",
+        "AIME-2002-I-Q02",
+        "AIME-2003-I-Q07",
+        "AIME-2003-II-Q11",
+        "AIME-2004-II-Q07",
+        "AIME-2006-I-Q01",
+        "AIME-2006-II-Q06",
+        "AIME-2007-II-Q03",
+        "AIME-2007-II-Q09",
+        "AIME-2008-I-Q05",
+        "AIME-2008-I-Q15",
+        "AIME-2008-II-Q05",
+        "AIME-2012-I-Q14",
+        "AIME-2012-II-Q04",
+        "AIME-2012-II-Q05",
+        "AIME-2014-I-Q01",
+        "AIME-2014-II-Q03",
+        "AIME-2014-II-Q11",
+        "AIME-2015-I-Q15",
+        "AIME-2015-II-Q04",
+        "AIME-2015-II-Q09",
+        "AIME-2016-I-Q04",
+        "AIME-2017-I-Q04",
+        "AIME-2019-I-Q03",
+        "AIME-2019-I-Q06",
+        "AIME-2019-II-Q15",
+        "AIME-2021-II-Q10",
+        "AIME-2024-II-Q15",
+        "AIME-2025-I-Q06",
+        "AIME-2025-II-Q14"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [
+        "Equal chords have center-to-chord distance $\\sqrt{R^2-c^2/4}$. A sphere section uses the same right triangle with sphere radius and section radius.",
+        "In a tilted square or cube section, establish the relevant projection or diagonal factor first; equal spatial edge lengths do not imply equal vertical heights.",
+        "An isosceles triangle with equal sides $r$ and base angle $\\alpha$ has base $2r\\cos\\alpha$. In a right-angle wedge, establish the angular order of two internal equal-length rays before subtracting their equilateral60-degree separation."
+      ],
+      "extensions_zh": [
+        "长度为 $c$ 的弦距圆心为 $\\sqrt{R^2-c^2/4}$。球截面使用球半径与截圆半径组成的同类直角三角形。",
+        "倾斜正方形或立方体截面中，应先确定投影或对角线系数；空间棱等长并不意味着竖直高度相等。",
+        "腰为 $r$、底角为 $\\alpha$ 的等腰三角形底边为 $2r\\cos\\alpha$。在直角域中，先明确两条等长内部射线的次序，再减去等边三角形的六十度夹角。"
+      ]
+    },
+    {
+      "method_id": "GE03-M02",
+      "title_en": "Sine and cosine laws eliminate a shared side or angle",
+      "title_zh": "正弦与余弦定理消去公共边或角",
+      "steps_en": [
+        "Name the same angle or diagonal consistently across all subtriangles.",
+        "Use $a/\\sin A=b/\\sin B$ for side–angle pairs and $a^2=b^2+c^2-2bc\\cos A$ for included-angle data.",
+        "Subtract two cosine-law equations to cancel the common diagonal; factor only after retaining any excluded equal-side case.",
+        "Check the original side order, positive lengths and angle interval after solving."
+      ],
+      "steps_zh": [
+        "在各子三角形中一致命名公共角或对角线。",
+        "边角对使用 $a/\\sin A=b/\\sin B$，夹角资料使用 $a^2=b^2+c^2-2bc\\cos A$。",
+        "两余弦定理相减可消公共对角线；因式分解除法前保留被排除的等边情形。",
+        "求解后检查原边次序、正长及角区间。"
+      ],
+      "example_en": "Two triangles share a diagonal. Their adjacent side pairs are $(5,u)$ and $(5,v)$ with the same included angle $\\theta$, where $u\\ne v$ and $u+v=6$. Find $\\cos\\theta$.",
+      "example_zh": "两个三角形共用一条对角线，邻边分别为 $(5,u),(5,v)$，夹角同为 $\\theta$，且 $u\\ne v,u+v=6$，求 $\\cos\\theta$。",
+      "solution_en": [
+        "Equal diagonal squares give $25+u^2-10u\\cos\\theta=25+v^2-10v\\cos\\theta$.",
+        "Factor to $(u-v)(u+v-10\\cos\\theta)=0$. Since $u\\ne v$, the second factor is zero.",
+        "Thus $\\cos\\theta=6/10=3/5$, a valid acute-angle cosine."
+      ],
+      "solution_zh": [
+        "对角线平方相等给出 $25+u^2-10u\\cos\\theta=25+v^2-10v\\cos\\theta$。",
+        "分解得 $(u-v)(u+v-10\\cos\\theta)=0$，由 $u\\ne v$ 可令第二因子为零。",
+        "故 $\\cos\\theta=3/5$，为合法锐角余弦。"
+      ],
+      "tip_en": "Routine quadratic roots may encode a point on a line extension rather than a side segment.",
+      "tip_zh": "普通二次方程根可能对应延长线上的点，而不是边内点。",
+      "question_ids": [
+        "AIME-2000-I-Q14",
+        "AIME-2003-I-Q10",
+        "AIME-2003-I-Q12",
+        "AIME-2003-II-Q07",
+        "AIME-2004-II-Q11",
+        "AIME-2004-II-Q13",
+        "AIME-2005-I-Q07",
+        "AIME-2006-II-Q12",
+        "AIME-2007-I-Q12",
+        "AIME-2008-II-Q14",
+        "AIME-2010-I-Q15",
+        "AIME-2010-II-Q14",
+        "AIME-2011-II-Q10",
+        "AIME-2012-I-Q12",
+        "AIME-2012-I-Q13",
+        "AIME-2012-II-Q13",
+        "AIME-2013-I-Q09",
+        "AIME-2013-II-Q05",
+        "AIME-2014-II-Q11",
+        "AIME-2014-II-Q12",
+        "AIME-2014-II-Q14",
+        "AIME-2018-I-Q04",
+        "AIME-2018-II-Q12",
+        "AIME-2019-I-Q13",
+        "AIME-2022-I-Q11",
+        "AIME-2022-I-Q14",
+        "AIME-2022-II-Q15",
+        "AIME-2023-I-Q05",
+        "AIME-2023-II-Q03",
+        "AIME-2023-II-Q12",
+        "AIME-2024-I-Q10",
+        "AIME-2025-II-Q12"
+      ],
+      "prerequisites": [
+        "AL08"
+      ],
+      "extensions_en": [
+        "If consecutive radial lengths have a fixed product from equal triangle areas, the radii alternate between two values. A common included angle then makes the intervening polygon edges equal by cosine law.",
+        "A coordinate angle tangent is cross product divided by dot product. Before equating tangents, retain the dot-product sign to distinguish an acute angle from its supplement."
+      ],
+      "extensions_zh": [
+        "若由等三角面积得相邻径长乘积固定，则径长交替取两值；再由共同夹角与余弦定理，可使中间多边形边等长。",
+        "坐标夹角正切为叉积除以点积。相等正切之前，应保留点积符号，区分锐角与其补角。"
+      ]
+    },
+    {
+      "method_id": "GE03-M03",
+      "title_en": "Heron and radius identities connect three sides to area",
+      "title_zh": "海伦与半径恒等式连接三边及面积",
+      "steps_en": [
+        "Compute $s=(a+b+c)/2$ and check all three factors $s-a,s-b,s-c$ are positive.",
+        "Use $K^2=s(s-a)(s-b)(s-c)$, $r=K/s$ and $R=abc/(4K)$.",
+        "When side lengths depend on a scale, factor out its square from area before imposing integrality.",
+        "For a triangle with altitude sums given by radicals, verify the altitude feet are inside the sides before using positive base pieces."
+      ],
+      "steps_zh": [
+        "求 $s=(a+b+c)/2$，并检验 $s-a,s-b,s-c$ 均正。",
+        "使用 $K^2=s(s-a)(s-b)(s-c),r=K/s,R=abc/(4K)$。",
+        "边长含尺度时，先从面积提出尺度平方，再施加整性。",
+        "根式给出高线底边分段时，应确认垂足在边内，才能使用正分段相加。"
+      ],
+      "example_en": "Find the area, inradius and circumradius of a triangle of sides $4,13,15$.",
+      "example_zh": "求边长四、十三、十五的三角形面积、内切圆及外接圆半径。",
+      "solution_en": [
+        "The semiperimeter is sixteen, so $K^2=16\\cdot12\\cdot3\\cdot1=576$ and $K=24$.",
+        "The inradius is $r=24/16=3/2$.",
+        "The circumradius is $R=4\\cdot13\\cdot15/(4\\cdot24)=65/8$."
+      ],
+      "solution_zh": [
+        "半周长十六，$K^2=16\\cdot12\\cdot3\\cdot1=576$，故面积二十四。",
+        "内切圆半径 $r=24/16=3/2$。",
+        "外接圆半径 $R=4\\cdot13\\cdot15/(4\\cdot24)=65/8$。"
+      ],
+      "tip_en": "Heron’s zero factor signals a degenerate triangle, not an allowed zero area.",
+      "tip_zh": "海伦零因子表示退化三角形，不是可接受的零面积解。",
+      "question_ids": [
+        "AIME-2000-II-Q12",
+        "AIME-2005-I-Q15",
+        "AIME-2006-II-Q15",
+        "AIME-2007-II-Q15",
+        "AIME-2010-II-Q12",
+        "AIME-2015-II-Q07",
+        "AIME-2017-I-Q04",
+        "AIME-2024-II-Q10",
+        "AIME-2022-II-Q15"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE05"
+      ],
+      "extensions_en": [
+        "An identity $x=\\sqrt{y^2-h^2}+\\sqrt{z^2-h^2}$ describes the two nonnegative pieces of side $x$ made by an internal altitude $h$. It implies strict triangle inequalities, but the constructed side-ratio triangle must be checked acute to make all such altitude feet internal."
+      ],
+      "extensions_zh": [
+        "$x=\\sqrt{y^2-h^2}+\\sqrt{z^2-h^2}$ 表示高 $h$ 在边 $x$ 上分出的两个非负段。它给出严格三角不等式，但若三个式子都如此解释，仍须检验所构造边比三角形为锐角，使各垂足均在边内。"
+      ]
+    },
+    {
+      "method_id": "GE03-M04",
+      "title_en": "Sine-area ratios compare cevians and cyclic chords",
+      "title_zh": "正弦面积比比较劈线与圆内弦",
+      "steps_en": [
+        "Write the two subtriangle areas with one common vertex angle or common base altitude.",
+        "Cancel shared side factors and express the remaining ratio using angle sines.",
+        "Use isogonal or cyclic-angle equality to cancel sine factors, then convert the ratio to the required side division."
+      ],
+      "steps_zh": [
+        "以共同顶角或共同底高表示两个子三角形面积。",
+        "约去共同边因子，把剩余比写为夹角正弦比。",
+        "用等角共轭或圆周角相等约去正弦，再转为目标线段分比。"
+      ],
+      "example_en": "For $D\\in BC$ in a triangle with $AB=AC$, suppose $\\sin\\angle BAD$ is twice $\\sin\\angle DAC$. Find $BD:DC$.",
+      "example_zh": "三角形中 $AB=AC,D\\in BC$，且 $\\sin\\angle BAD$ 为 $\\sin\\angle DAC$ 的两倍，求 $BD:DC$。",
+      "solution_en": [
+        "The common altitude from $A$ gives $BD/DC=[ABD]/[ACD]$.",
+        "The sine-area formulas give this ratio as $(AB/AC)\\sin\\angle BAD/\\sin\\angle DAC$.",
+        "The first factor is one and the sine ratio is two, so $BD:DC=2:1$."
+      ],
+      "solution_zh": [
+        "从 $A$ 的共同高给出 $BD/DC=[ABD]/[ACD]$。",
+        "正弦面积式使其为 $(AB/AC)\\sin\\angle BAD/\\sin\\angle DAC$。",
+        "第一因子为一，正弦比为二，所以 $BD:DC=2:1$。"
+      ],
+      "tip_en": "Supplementary angles have equal sine and can support the same sine-rule ratio.",
+      "tip_zh": "互补角的正弦相等，因此也可给出相同正弦定理比例。",
+      "question_ids": [
+        "AIME-2005-II-Q14",
+        "AIME-2018-II-Q14",
+        "AIME-2009-II-Q15",
+        "AIME-2020-II-Q15",
+        "AIME-2013-II-Q05"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE03-M05",
+      "title_en": "Half-angle right triangles locate tangent centers",
+      "title_zh": "半角直角三角形定位相切圆心",
+      "steps_en": [
+        "A circle tangent to two sides has center on their angle bisector.",
+        "Use $r=d\\sin(A/2)$ for center-to-vertex distance $d$, and tangent length $r\\cot(A/2)$.",
+        "Recover half-angle values from $\\sin^2(A/2)=(1-\\cos A)/2$ or $\\tan(A/2)=\\sin A/(1+\\cos A)$.",
+        "Check the chosen sector and positive tangent portions."
+      ],
+      "steps_zh": [
+        "与两边相切的圆心位于角平分线上。",
+        "圆心到顶点距离 $d$ 满足 $r=d\\sin(A/2)$，切线长为 $r\\cot(A/2)$。",
+        "用 $\\sin^2(A/2)=(1-\\cos A)/2$ 或 $\\tan(A/2)=\\sin A/(1+\\cos A)$ 求半角。",
+        "检查所选角域及切线分段正性。"
+      ],
+      "example_en": "A radius-two circle is tangent inside a $60^\\circ$ angle. Find its center-to-vertex distance and each vertex tangent length.",
+      "example_zh": "半径二的圆在 $60^\\circ$ 角内与两边相切，求圆心到顶点距离及每条顶点切线长。",
+      "solution_en": [
+        "The bisector makes $30^\\circ$ with either side, and the contact radius is perpendicular to the side.",
+        "Thus center distance is $2/\\sin30^\\circ=4$.",
+        "The tangent length is $2\\cot30^\\circ=2\\sqrt3$, also checked by $4^2-2^2=12$."
+      ],
+      "solution_zh": [
+        "平分线与边夹 $30^\\circ$，切点半径垂直边。",
+        "故圆心距为 $2/\\sin30^\\circ=4$。",
+        "切线长为 $2\\cot30^\\circ=2\\sqrt3$，亦由 $4^2-2^2=12$ 核实。"
+      ],
+      "tip_en": "The inward ray matters; the opposite angle-bisector ray describes a different sector.",
+      "tip_zh": "向内射线很重要，反向平分射线对应另一角域。",
+      "question_ids": [
+        "AIME-2007-I-Q09",
+        "AIME-2007-II-Q15",
+        "AIME-2008-II-Q11",
+        "AIME-2009-II-Q10",
+        "AIME-2018-I-Q13",
+        "AIME-2020-I-Q13",
+        "AIME-2022-I-Q11",
+        "AIME-2024-I-Q08",
+        "AIME-2024-II-Q10"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE03-M06",
+      "title_en": "Triangle angle sums control trigonometric branches",
+      "title_zh": "三角形角和控制三角函数分支",
+      "steps_en": [
+        "Use $A+B+C=\\pi$ to replace sums or multiple angles by one variable.",
+        "Record whether each angle must be acute, obtuse or inside a specified subtriangle.",
+        "After a sine or polynomial equation is solved, test every candidate against positive side portions and the angle interval.",
+        "Two sine-area branches can give different noncongruent triangles; decide which satisfy the required angle type."
+      ],
+      "steps_zh": [
+        "利用 $A+B+C=\\pi$，把和角或多角化为一个变量。",
+        "记录各角应为锐角、钝角，或属于哪个子三角形。",
+        "解正弦或多项式方程后，用正线段及角区间检验每个候选。",
+        "同一正弦面积可能给出两种不全等三角形，应分别检查所需角型。"
+      ],
+      "example_en": "Two sides are two and three, and their included angle has sine $1/2$. Find both third-side possibilities.",
+      "example_zh": "两边为二、三，夹角正弦为 $1/2$，求第三边的两种可能值。",
+      "solution_en": [
+        "The included angle lies in $(0,180^\\circ)$, so it is $30^\\circ$ or $150^\\circ$.",
+        "Cosine law gives $c^2=13-12(\\pm\\sqrt3/2)=13\\mp6\\sqrt3$.",
+        "Both squared values are positive and arise from valid included angles, giving $c=\\sqrt{13-6\\sqrt3}$ or $\\sqrt{13+6\\sqrt3}$."
+      ],
+      "solution_zh": [
+        "夹角在 $(0,180^\\circ)$ 内，故为 $30^\\circ$ 或 $150^\\circ$。",
+        "余弦定理给出 $c^2=13\\mp6\\sqrt3$。",
+        "两平方值均正且对应合法夹角，故第三边为 $\\sqrt{13-6\\sqrt3}$ 或 $\\sqrt{13+6\\sqrt3}$。"
+      ],
+      "tip_en": "A squared trigonometric equation loses the sign of a cosine.",
+      "tip_zh": "三角方程平方会丢失余弦符号。",
+      "question_ids": [
+        "AIME-2000-I-Q14",
+        "AIME-2010-II-Q14",
+        "AIME-2013-II-Q15",
+        "AIME-2014-II-Q12",
+        "AIME-2021-II-Q05"
+      ],
+      "prerequisites": [
+        "AL08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE03-M07",
+      "title_en": "Geometric feasibility can sharpen a formal metric bound",
+      "title_zh": "几何可行性可收紧形式度量界",
+      "steps_en": [
+        "Write strict triangle inequalities and side-segment coordinate bounds before optimizing.",
+        "Find the formal equality condition of the chosen inequality.",
+        "If it violates a segment constraint, optimize on the actual feasible endpoint and construct that boundary case.",
+        "For acute or obtuse requirements, compare the largest side square with the sum of the other two squares."
+      ],
+      "steps_zh": [
+        "优化前写出严格三角不等式及边上线段坐标限制。",
+        "求所用不等式形式上的等号条件。",
+        "若违反线段限制，应在实际可行端点优化，并构造该边界情形。",
+        "锐钝角条件可通过最长边平方与另两边平方和比较。"
+      ],
+      "example_en": "A right triangle has hypotenuse one and legs $x,y>0$, with $x\\le1/2$. Maximize $x+y$.",
+      "example_zh": "直角三角形斜边一，直角边 $x,y>0$ 且 $x\\le1/2$，求 $x+y$ 最大值。",
+      "solution_en": [
+        "The unrestricted bound is $x+y\\le\\sqrt2$, but equality requires $x=y=1/\\sqrt2$, violating $x\\le1/2$.",
+        "On $0<x\\le1/2$, write $y=\\sqrt{1-x^2}$. The derivative of the sum is $1-x/\\sqrt{1-x^2}>0$.",
+        "The maximum is at $x=1/2,y=\\sqrt3/2$, giving $(1+\\sqrt3)/2$, an allowed triangle."
+      ],
+      "solution_zh": [
+        "无约束界为 $x+y\\le\\sqrt2$，等号要求 $x=y=1/\\sqrt2$，违反限制。",
+        "在 $0<x\\le1/2$ 上写 $y=\\sqrt{1-x^2}$，和的导数 $1-x/\\sqrt{1-x^2}>0$。",
+        "故最大在 $x=1/2,y=\\sqrt3/2$，值为 $(1+\\sqrt3)/2$，确为合法三角形。"
+      ],
+      "tip_en": "A historical keyed bound can fail attainment when a stated segment is silently extended to a line.",
+      "tip_zh": "若把题目线段悄悄延长为直线，历史参考界也可能无法达到。",
+      "question_ids": [
+        "AIME-2006-II-Q02",
+        "AIME-2008-I-Q10",
+        "AIME-2016-I-Q09",
+        "AIME-2017-I-Q15",
+        "AIME-2021-II-Q05",
+        "AIME-2023-I-Q15",
+        "AIME-2023-II-Q12"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE07"
+      ],
+      "extensions_en": [
+        "For lengths $a,b,c>0$, triangle existence is $|a-b|<c<a+b$. In integer or Gaussian-integer searches this exact test can give a sharp finite bound before enumerating candidates."
+      ],
+      "extensions_zh": [
+        "正长 $a,b,c$ 成三角形当且仅当 $|a-b|<c<a+b$。整数或高斯整数搜索中，此精确条件可在枚举前给出严格有限界。"
+      ]
+    },
+    {
+      "method_id": "GE03-M08",
+      "title_en": "Equal-side chains propagate base angles",
+      "title_zh": "等边链逐次传递底角",
+      "steps_en": [
+        "Assign a variable to one apex angle and mark the base-angle equalities of each isosceles subtriangle.",
+        "Use straight-angle supplements when a point lies inside a side.",
+        "Close the chain with the original triangle angle sum and reject a candidate if a point leaves its segment."
+      ],
+      "steps_zh": [
+        "给一个顶角设变量，并标记各等腰子三角形底角相等。",
+        "点位于边内时，使用共线平角的补角关系。",
+        "用原三角形角和闭合等式，若点离开线段则排除该候选。"
+      ],
+      "example_en": "In isosceles $ABC$, $AB=AC$ and $A=30^\\circ$. An interior point $D\\in AC$ satisfies $BD=BC$. Find $\\angle ABD$.",
+      "example_zh": "等腰三角形 $AB=AC,A=30^\\circ$，边内点 $D\\in AC$ 满足 $BD=BC$，求 $\\angle ABD$。",
+      "solution_en": [
+        "The original base angles are $B=C=75^\\circ$.",
+        "In $BDC$, equal sides $BD=BC$ make the angles at $D,C$ equal to $75^\\circ$, so $\\angle DBC=30^\\circ$.",
+        "Subtract within the original angle at $B$: $\\angle ABD=75-30=45^\\circ$."
+      ],
+      "solution_zh": [
+        "原底角均为 $75^\\circ$。",
+        "$BDC$ 中 $BD=BC$，所以 $D,C$ 两角均 $75^\\circ$，得 $\\angle DBC=30^\\circ$。",
+        "在原 $B$ 角内相减，得 $\\angle ABD=45^\\circ$。"
+      ],
+      "tip_en": "The direction of a side ray decides whether angles add or subtract.",
+      "tip_zh": "边射线的方向决定角度应相加还是相减。",
+      "question_ids": [
+        "AIME-2020-I-Q01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE03-M09",
+      "title_en": "A sixty-degree rotation proves the Fermat distance bound",
+      "title_zh": "六十度旋转证明费马距离和下界",
+      "steps_en": [
+        "Erect an outward equilateral triangle $ABB\\prime$ on one side of triangle $ABC$.",
+        "Rotate $X$ with $B$ by $60^\\circ$ about $A$ to $X\\prime,B\\prime$; then $XX\\prime=AX$ and $X\\prime B\\prime=XB$.",
+        "Triangle inequality along $C,X,X\\prime,B\\prime$ gives $AX+BX+CX\\ge CB\\prime$.",
+        "When all original angles are below $120^\\circ$, the Fermat point with three $120^\\circ$ rays attains the bound; verify any simultaneous external constraint separately."
+      ],
+      "steps_zh": [
+        "在三角形 $ABC$ 的一边外作等边三角形 $ABB\\prime$。",
+        "绕 $A$ 旋转 $60^\\circ$，使 $X,B$ 映为 $X\\prime,B\\prime$，则 $XX\\prime=AX,X\\prime B\\prime=XB$。",
+        "对折线 $C,X,X\\prime,B\\prime$ 用三角不等式，得 $AX+BX+CX\\ge CB\\prime$。",
+        "原三角均小于 $120^\\circ$ 时，三射线夹角均 $120^\\circ$ 的费马点取等；其他同时限制须另行检验。"
+      ],
+      "example_en": "Find the least sum of distances from a plane point to the vertices of an equilateral triangle of side two.",
+      "example_zh": "求平面一点到边长二的等边三角形三顶点距离和的最小值。",
+      "solution_en": [
+        "An outward equilateral construction makes $CB\\prime$ an altitude across two equilateral triangles, length $2\\sqrt3$. The rotation argument bounds every distance sum by this value.",
+        "At the common centroid, each vertex distance is $2/\\sqrt3$.",
+        "The sum is $3(2/\\sqrt3)=2\\sqrt3$, so the bound is attained."
+      ],
+      "solution_zh": [
+        "外作等边构造后，$CB\\prime$ 是两个等边三角形高的和，长 $2\\sqrt3$；旋转论证给出距离和下界。",
+        "在重心处，到每顶点距离为 $2/\\sqrt3$。",
+        "总和为 $2\\sqrt3$，下界确可达到。"
+      ],
+      "tip_en": "If a vertex angle is at least $120^\\circ$, the minimum is at that vertex instead of an interior Fermat point.",
+      "tip_zh": "若某顶角至少 $120^\\circ$，最小值在该顶点而非内部费马点。",
+      "question_ids": [
+        "AIME-2025-I-Q14"
+      ],
+      "prerequisites": [
+        "GE07",
+        "AL07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE03-M10",
+      "title_en": "No-slip rolling separates center sweep from spin",
+      "title_zh": "无滑动滚动区分圆心扫角与自转",
+      "steps_en": [
+        "In an axial section, use center distance $R+r$ while one circle rolls over a fixed external circle.",
+        "The center sweep $\\theta$ has arc length $(R+r)\\theta$, equaling $R\\phi$ for spin $\\phi$.",
+        "Use the ground-contact right triangle to find the transition angles and horizontal displacement.",
+        "Subtract obstacle spin from the prescribed total spin before converting the remaining ground roll into distance."
+      ],
+      "steps_zh": [
+        "轴截面中，动圆绕固定圆从外侧滚动时，圆心距为 $R+r$。",
+        "圆心扫角 $\\theta$ 的弧长为 $(R+r)\\theta$，等于自转弧长 $R\\phi$。",
+        "由地面接触直角三角形求转换角及水平位移。",
+        "从规定总自转扣除绕障碍的自转，再将剩余地面转动化为路程。"
+      ],
+      "example_en": "A radius-three circle rolls around a fixed radius-one circle. Its center sweeps $90^\\circ$. Find its spin angle.",
+      "example_zh": "半径三的圆绕固定半径一的圆从外侧无滑动滚动，圆心扫过 $90^\\circ$，求自转角。",
+      "solution_en": [
+        "The center-path radius is four, so the arc length is $4(\\pi/2)=2\\pi$.",
+        "This equals moving-radius three times spin angle $\\phi$.",
+        "Thus $\\phi=2\\pi/3=120^\\circ$, distinct from the $90^\\circ$ center sweep."
+      ],
+      "solution_zh": [
+        "圆心轨迹半径四，弧长为 $2\\pi$。",
+        "其等于动圆半径三乘自转角 $\\phi$。",
+        "所以 $\\phi=2\\pi/3=120^\\circ$，不同于圆心扫角。"
+      ],
+      "tip_en": "Angles in the no-slip length equation must be in radians.",
+      "tip_zh": "无滑动弧长式中的角必须使用弧度。",
+      "question_ids": [
+        "AIME-2007-II-Q11"
+      ],
+      "prerequisites": [
+        "GE06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-I-Q14",
+    "AIME-2001-I-Q04",
+    "AIME-2003-I-Q10",
+    "AIME-2003-I-Q12",
+    "AIME-2003-II-Q07",
+    "AIME-2005-I-Q07",
+    "AIME-2005-II-Q14",
+    "AIME-2006-I-Q01",
+    "AIME-2006-II-Q15",
+    "AIME-2007-II-Q03",
+    "AIME-2007-II-Q11",
+    "AIME-2008-I-Q10",
+    "AIME-2008-II-Q14",
+    "AIME-2010-II-Q12",
+    "AIME-2010-II-Q14",
+    "AIME-2013-I-Q09",
+    "AIME-2013-II-Q05",
+    "AIME-2014-I-Q01",
+    "AIME-2015-II-Q04",
+    "AIME-2018-I-Q04",
+    "AIME-2018-II-Q12",
+    "AIME-2020-I-Q01",
+    "AIME-2021-II-Q05",
+    "AIME-2023-II-Q03",
+    "AIME-2025-II-Q12"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-I-Q04": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2001-I-Q05": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE08"
+      ]
+    },
+    "AIME-2002-I-Q02": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    },
+    "AIME-2003-I-Q07": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2003-II-Q11": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2004-II-Q07": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2006-I-Q01": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2006-II-Q06": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2007-II-Q03": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2007-II-Q09": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2008-I-Q05": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2008-I-Q15": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE10"
+      ]
+    },
+    "AIME-2008-II-Q05": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2012-I-Q14": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "AL03",
+        "GE07"
+      ]
+    },
+    "AIME-2012-II-Q04": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2012-II-Q05": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2014-I-Q01": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2014-II-Q03": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2014-II-Q11": {
+      "method_ids": [
+        "GE03-M01",
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2015-I-Q15": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE10"
+      ]
+    },
+    "AIME-2015-II-Q04": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2015-II-Q09": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2016-I-Q04": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2017-I-Q04": {
+      "method_ids": [
+        "GE03-M01",
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE10"
+      ]
+    },
+    "AIME-2019-I-Q03": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2019-I-Q06": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2019-II-Q15": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE04"
+      ]
+    },
+    "AIME-2021-II-Q10": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE09"
+      ]
+    },
+    "AIME-2024-II-Q15": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "CO06"
+      ]
+    },
+    "AIME-2025-I-Q06": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ]
+    },
+    "AIME-2025-II-Q14": {
+      "method_ids": [
+        "GE03-M01"
+      ],
+      "prerequisites": [
+        "AL08",
+        "GE02"
+      ]
+    },
+    "AIME-2000-I-Q14": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M06"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2003-I-Q10": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2003-I-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2003-II-Q07": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2004-II-Q11": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2004-II-Q13": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE02"
+      ]
+    },
+    "AIME-2005-I-Q07": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2006-II-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE02"
+      ]
+    },
+    "AIME-2007-I-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE01",
+        "GE02"
+      ]
+    },
+    "AIME-2008-II-Q14": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2010-I-Q15": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE05"
+      ]
+    },
+    "AIME-2010-II-Q14": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M06"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2011-II-Q10": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2012-I-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2012-I-Q13": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2012-II-Q13": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2013-I-Q09": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2013-II-Q05": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M04"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2014-II-Q12": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M06"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2014-II-Q14": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2018-I-Q04": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2018-II-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "AL01",
+        "GE02"
+      ]
+    },
+    "AIME-2019-I-Q13": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2022-I-Q11": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2022-I-Q14": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE07",
+        "NT05"
+      ]
+    },
+    "AIME-2022-II-Q15": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2023-I-Q05": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2023-II-Q03": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2023-II-Q12": {
+      "method_ids": [
+        "GE03-M02",
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2024-I-Q10": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2025-II-Q12": {
+      "method_ids": [
+        "GE03-M02"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2000-II-Q12": {
+      "method_ids": [
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE09"
+      ]
+    },
+    "AIME-2005-I-Q15": {
+      "method_ids": [
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2006-II-Q15": {
+      "method_ids": [
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2007-II-Q15": {
+      "method_ids": [
+        "GE03-M03",
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE06"
+      ]
+    },
+    "AIME-2010-II-Q12": {
+      "method_ids": [
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE02",
+        "NT05"
+      ]
+    },
+    "AIME-2015-II-Q07": {
+      "method_ids": [
+        "GE03-M03"
+      ],
+      "prerequisites": [
+        "GE01"
+      ]
+    },
+    "AIME-2024-II-Q10": {
+      "method_ids": [
+        "GE03-M03",
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE05"
+      ]
+    },
+    "AIME-2005-II-Q14": {
+      "method_ids": [
+        "GE03-M04"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2018-II-Q14": {
+      "method_ids": [
+        "GE03-M04"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2009-II-Q15": {
+      "method_ids": [
+        "GE03-M04"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE04"
+      ]
+    },
+    "AIME-2020-II-Q15": {
+      "method_ids": [
+        "GE03-M04"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2007-I-Q09": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    },
+    "AIME-2008-II-Q11": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE06",
+        "GE07"
+      ]
+    },
+    "AIME-2009-II-Q10": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE07"
+      ]
+    },
+    "AIME-2018-I-Q13": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE05"
+      ]
+    },
+    "AIME-2020-I-Q13": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE05"
+      ]
+    },
+    "AIME-2024-I-Q08": {
+      "method_ids": [
+        "GE03-M05"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE06"
+      ]
+    },
+    "AIME-2013-II-Q15": {
+      "method_ids": [
+        "GE03-M06"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2021-II-Q05": {
+      "method_ids": [
+        "GE03-M06",
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2006-II-Q02": {
+      "method_ids": [
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2008-I-Q10": {
+      "method_ids": [
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2016-I-Q09": {
+      "method_ids": [
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "AL08",
+        "GE07"
+      ]
+    },
+    "AIME-2017-I-Q15": {
+      "method_ids": [
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE07"
+      ]
+    },
+    "AIME-2023-I-Q15": {
+      "method_ids": [
+        "GE03-M07"
+      ],
+      "prerequisites": [
+        "AL03",
+        "NT01"
+      ]
+    },
+    "AIME-2020-I-Q01": {
+      "method_ids": [
+        "GE03-M08"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2025-I-Q14": {
+      "method_ids": [
+        "GE03-M09"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2007-II-Q11": {
+      "method_ids": [
+        "GE03-M10"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    }
+  },
+  "review": {
+    "author": "print_builder",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

@@ -1,0 +1,20 @@
+{
+  "canonical_inputs": {
+    "questions.json": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+    "taxonomy.json": "228c73de65f4518742d175d1643e775c96820627dac60f138cca032c24880adc",
+    "knowledge.json": "cc83dab75e0cbf7db4f5d1b4cc4b10cd315a8a8e85537a9f59d1cf6a6f14d360",
+    "knowledge_diagrams.json": "82f57aa2706bc0859e6deb14d038b051cff354d0b6ee8113371c4945b761bfaa"
+  },
+  "sections": 44,
+  "methods": 399,
+  "body_pages": 891,
+  "pdf_pages": 897,
+  "output": "output\\textbook\\AIME_2000-2026_textbook.pdf",
+  "sha256": "b790376e6d4f195678edbc9f329fc5e9c76344d595acd98f87ae654f5c33fc33",
+  "method_page_anchors": "all verified against printed method IDs",
+  "section_splits": "44 complete",
+  "math_errors": [],
+  "overflow_check": "passed measured A4 content bounds and heading continuation",
+  "visual_review": "passed all-page contact-sheet inspection plus 15 full-resolution pages; see output/qa/textbook_visual_receipt.json",
+  "source_update_verification": "Current-data textbook units exactly match saved render spec after English-only question wording changes."
+}

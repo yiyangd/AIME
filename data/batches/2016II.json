@@ -1,0 +1,749 @@
+[
+  {
+    "question_id": "AIME-2016-II-Q01",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "The remaining total is $405$, so the middle arithmetic term is $135$. Thus $B=144$ initially and $A+C=300$.",
+      "reason_zh": "剩余总数为 $405$，故等差数列中项为 $135$。所以原来 $B=144,A+C=300$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Geometric progression gives $AC=B^2=20736$. The roots of $t^2-300t+20736=0$ are $108,192$. Therefore $A=108$, and the remaining counts $103,135,167$ check the arithmetic condition.",
+        "reason_zh": "由等比条件，$AC=B^2=20736$。方程 $t^2-300t+20736=0$ 的两根为 $108,192$，故 $A=108$。剩余 $103,135,167$ 确实成等差数列。"
+      }
+    ],
+    "statement_en": "Three people initially hold increasing peanut counts $A<B<C$, in geometric progression, totaling $444$. After they eat respectively $5,9,25$ peanuts, the counts in the same order form an arithmetic progression. Find $A$.",
+    "statement_zh": "三人起初的花生数 $A<B<C$ 成等比数列，总计 $444$。他们依次吃掉 $5,9,25$ 颗后，按同一顺序的剩余数量成等差数列。求 $A$。",
+    "answer": 108,
+    "solution_en": [
+      "The remaining total is $405$, so the middle arithmetic term is $135$. Thus $B=144$ initially and $A+C=300$.",
+      "Geometric progression gives $AC=B^2=20736$. The roots of $t^2-300t+20736=0$ are $108,192$. Therefore $A=108$, and the remaining counts $103,135,167$ check the arithmetic condition."
+    ],
+    "solution_zh": [
+      "剩余总数为 $405$，故等差数列中项为 $135$。所以原来 $B=144,A+C=300$。",
+      "由等比条件，$AC=B^2=20736$。方程 $t^2-300t+20736=0$ 的两根为 $108,192$，故 $A=108$。剩余 $103,135,167$ 确实成等差数列。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/1",
+    "method_chain": [
+      "Sequences & summation",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q02",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "Let $p=\\Pr(\\text{Sunday rain}\\mid\\text{Saturday dry})$. Total probability gives $(2/5)(2p)+(3/5)p=3/10$, hence $p=3/14$.",
+      "reason_zh": "设 $p$ 为周六不下雨时周日下雨的概率。全概率公式给出 $(2/5)(2p)+(3/5)p=3/10$，得 $p=3/14$。"
+    },
+    "secondary": [],
+    "statement_en": "The probabilities of rain on Saturday and Sunday are $2/5$ and $3/10$. Sunday rain is twice as likely conditional on a rainy Saturday as conditional on a dry Saturday. If the probability of rain on at least one day is reduced $a/b$, find $a+b$.",
+    "statement_zh": "周六、周日降雨概率分别为 $2/5,3/10$。已知周六下雨时，周日下雨的条件概率是周六不下雨时的两倍。若至少一天降雨的概率为最简分数 $a/b$，求 $a+b$。",
+    "answer": 107,
+    "solution_en": [
+      "Let $p=\\Pr(\\text{Sunday rain}\\mid\\text{Saturday dry})$. Total probability gives $(2/5)(2p)+(3/5)p=3/10$, hence $p=3/14$.",
+      "The probability both days are dry is $(3/5)(11/14)=33/70$. Its complement is $37/70$, giving $a+b=107$."
+    ],
+    "solution_zh": [
+      "设 $p$ 为周六不下雨时周日下雨的概率。全概率公式给出 $(2/5)(2p)+(3/5)p=3/10$，得 $p=3/14$。",
+      "两天均无雨的概率为 $(3/5)(11/14)=33/70$，其补事件概率为 $37/70$，所以 $a+b=107$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/2",
+    "method_chain": [
+      "Conditional probability & independence"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q03",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Put $u=\\log_5x,v=\\log_5y,w=\\log_5z$, with sum $s$. Exponentiating the outer logs gives $5^s+u=35$, $5^s+v=84$, and $5^s+w=259$.",
+      "reason_zh": "令 $u=\\log_5x,v=\\log_5y,w=\\log_5z$，和为 $s$。消去外层对数，得 $5^s+u=35,5^s+v=84,5^s+w=259$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Add: $3\\cdot5^s+s=378$. The left side is strictly increasing, and $s=3$ solves it, so it is the only solution.",
+        "reason_zh": "相加得 $3\\cdot5^s+s=378$。左边严格递增，而 $s=3$ 满足，故解唯一。"
+      }
+    ],
+    "statement_en": "Real numbers $x,y,z$ satisfy $\\log_2(xyz-3+\\log_5x)=5$, $\\log_3(xyz-3+\\log_5y)=4$, and $\\log_4(xyz-3+\\log_5z)=4$. Find $|\\log_5x|+|\\log_5y|+|\\log_5z|$.",
+    "statement_zh": "实数 $x,y,z$ 满足 $\\log_2(xyz-3+\\log_5x)=5$、$\\log_3(xyz-3+\\log_5y)=4$、$\\log_4(xyz-3+\\log_5z)=4$。求 $|\\log_5x|+|\\log_5y|+|\\log_5z|$。",
+    "answer": 265,
+    "solution_en": [
+      "Put $u=\\log_5x,v=\\log_5y,w=\\log_5z$, with sum $s$. Exponentiating the outer logs gives $5^s+u=35$, $5^s+v=84$, and $5^s+w=259$.",
+      "Add: $3\\cdot5^s+s=378$. The left side is strictly increasing, and $s=3$ solves it, so it is the only solution.",
+      "Then $(u,v,w)=(-90,-41,134)$. These define positive $x,y,z$ and valid original logarithm arguments. The requested absolute sum is $90+41+134=265$."
+    ],
+    "solution_zh": [
+      "令 $u=\\log_5x,v=\\log_5y,w=\\log_5z$，和为 $s$。消去外层对数，得 $5^s+u=35,5^s+v=84,5^s+w=259$。",
+      "相加得 $3\\cdot5^s+s=378$。左边严格递增，而 $s=3$ 满足，故解唯一。",
+      "于是 $(u,v,w)=(-90,-41,134)$，对应正的 $x,y,z$ 及合法对数真数。所求绝对值和为 $265$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/3",
+    "method_chain": [
+      "Logarithms & exponentials",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q04",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO04",
+      "reason_en": "Count total green cubes in two directions: $12a=20b$, so $a:b=5:3$. Counting yellow gives $a(bc-21)=25b=15a$, hence $bc=36$; then $ac=60$.",
+      "reason_zh": "从两个方向数绿色方块，$12a=20b$，故 $a:b=5:3$。数黄色得 $a(bc-21)=25b=15a$，因此 $bc=36$，进而 $ac=60$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "Thus $c$ divides both $36,60$, so $c\\le12$. The volume is $2160/c\\ge180$, with candidate dimensions $(a,b,c)=(5,3,12)$.",
+        "reason_zh": "所以 $c$ 整除 $36,60$，即 $c\\le12$。体积为 $2160/c\\ge180$，候选尺寸为 $(5,3,12)$。"
+      },
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "For attainment, at every first- and second-coordinate pair use a length12 row containing $3$ reds, $4$ greens and $5$ yellows. Each first-direction layer has three such rows and each second-direction layer five, giving all required counts. Minimum volume $180$ is attained.",
+        "reason_zh": "构造达到下界：在每个第一、第二坐标对处，沿第三方向排 $3$ 红、$4$ 绿、$5$ 黄共12块。第一方向每层有三行，第二方向每层有五行，满足全部颜色计数。最小体积为 $180$。"
+      }
+    ],
+    "statement_en": "An integral $a\\times b\\times c$ box is assembled from unit cubes colored red, green or yellow. Each of its $a$ layers perpendicular to the first dimension contains $9$ red and $12$ green cubes. Each of its $b$ layers perpendicular to the second dimension contains $20$ green and $25$ yellow cubes. Find the least possible volume.",
+    "statement_zh": "整数边长 $a\\times b\\times c$ 的长方体由红、绿、黄单位方块组成。垂直第一方向的每个切层均有 $9$ 红、$12$ 绿；垂直第二方向的每个切层均有 $20$ 绿、$25$ 黄。求最小可能体积。",
+    "answer": 180,
+    "solution_en": [
+      "Count total green cubes in two directions: $12a=20b$, so $a:b=5:3$. Counting yellow gives $a(bc-21)=25b=15a$, hence $bc=36$; then $ac=60$.",
+      "Thus $c$ divides both $36,60$, so $c\\le12$. The volume is $2160/c\\ge180$, with candidate dimensions $(a,b,c)=(5,3,12)$.",
+      "For attainment, at every first- and second-coordinate pair use a length12 row containing $3$ reds, $4$ greens and $5$ yellows. Each first-direction layer has three such rows and each second-direction layer five, giving all required counts. Minimum volume $180$ is attained."
+    ],
+    "solution_zh": [
+      "从两个方向数绿色方块，$12a=20b$，故 $a:b=5:3$。数黄色得 $a(bc-21)=25b=15a$，因此 $bc=36$，进而 $ac=60$。",
+      "所以 $c$ 整除 $36,60$，即 $c\\le12$。体积为 $2160/c\\ge180$，候选尺寸为 $(5,3,12)$。",
+      "构造达到下界：在每个第一、第二坐标对处，沿第三方向排 $3$ 红、$4$ 绿、$5$ 黄共12块。第一方向每层有三行，第二方向每层有五行，满足全部颜色计数。最小体积为 $180$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/4",
+    "method_chain": [
+      "Inclusion-exclusion & double counting",
+      "Divisibility, GCD & LCM",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q05",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "Put $a=BC_0,b=AC_0,c=AB$. Similarity makes the successive altitudes geometric, with first term $ab/c$ and ratio $a/c<1$. Hence their sum is $ab/(c-a)=6(a+b+c)$.",
+      "reason_zh": "令 $a=BC_0,b=AC_0,c=AB$。相似关系使各段垂线长成等比数列，首项 $ab/c$、公比 $a/c<1$，故总和为 $ab/(c-a)=6(a+b+c)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Put $a=BC_0,b=AC_0,c=AB$. Similarity makes the successive altitudes geometric, with first term $ab/c$ and ratio $a/c<1$. Hence their sum is $ab/(c-a)=6(a+b+c)$.",
+        "reason_zh": "令 $a=BC_0,b=AC_0,c=AB$。相似关系使各段垂线长成等比数列，首项 $ab/c$、公比 $a/c<1$，故总和为 $ab/(c-a)=6(a+b+c)$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Squaring $6c=7a-6b$ and using $c^2=a^2+b^2$ gives $13a=84b$. Coprimality forces $a=84,b=13$, and then $c=85$. These sides satisfy the sum condition, so $p=182$.",
+        "reason_zh": "将 $6c=7a-6b$ 平方并代入 $c^2=a^2+b^2$，得 $13a=84b$。互质性迫使 $a=84,b=13,c=85$。三边满足原求和条件，故 $p=182$。"
+      }
+    ],
+    "statement_en": "Right triangle $ABC_0$ has right angle at $C_0$ and pairwise coprime positive integral sides, with perimeter $p$. Let $C_1$ be the perpendicular foot from $C_0$ to $AB$. Recursively, $C_n$ is the foot from $C_{n-1}$ to $C_{n-2}B$ for $n\\ge2$. If $\\sum_{n\\ge1}C_{n-1}C_n=6p$, find $p$.",
+    "statement_zh": "直角三角形 $ABC_0$ 在 $C_0$ 处为直角，三边为两两互质的正整数，周长为 $p$。$C_1$ 为 $C_0$ 到 $AB$ 的垂足；$n\\ge2$ 时，$C_n$ 为 $C_{n-1}$ 到 $C_{n-2}B$ 的垂足。若 $\\sum_{n\\ge1}C_{n-1}C_n=6p$，求 $p$。",
+    "answer": 182,
+    "solution_en": [
+      "Put $a=BC_0,b=AC_0,c=AB$. Similarity makes the successive altitudes geometric, with first term $ab/c$ and ratio $a/c<1$. Hence their sum is $ab/(c-a)=6(a+b+c)$.",
+      "Use $(c-a)(c+a)=b^2$ to simplify this equality to $a=6(b+c-a)$, or $7a=6(b+c)$.",
+      "Squaring $6c=7a-6b$ and using $c^2=a^2+b^2$ gives $13a=84b$. Coprimality forces $a=84,b=13$, and then $c=85$. These sides satisfy the sum condition, so $p=182$."
+    ],
+    "solution_zh": [
+      "令 $a=BC_0,b=AC_0,c=AB$。相似关系使各段垂线长成等比数列，首项 $ab/c$、公比 $a/c<1$，故总和为 $ab/(c-a)=6(a+b+c)$。",
+      "用 $(c-a)(c+a)=b^2$ 整理，得 $a=6(b+c-a)$，即 $7a=6(b+c)$。",
+      "将 $6c=7a-6b$ 平方并代入 $c^2=a^2+b^2$，得 $13a=84b$。互质性迫使 $a=84,b=13,c=85$。三边满足原求和条件，故 $p=182$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/5",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Sequences & summation",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q06",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "All substituted exponents are odd, so replacing $x$ by $-x$ makes every factor have nonnegative coefficients. Thus the coefficient $(-1)^ja_j$ of $Q(-x)$ is nonnegative, and equals $|a_j|$.",
+      "reason_zh": "所有代入幂次均为奇数，因此将 $x$ 换为 $-x$ 后，每个因子的系数均非负。所以 $Q(-x)$ 的系数 $(-1)^ja_j$ 非负，正好等于 $|a_j|$。"
+    },
+    "secondary": [],
+    "statement_en": "Let $P(x)=1-x/3+x^2/6$ and $Q(x)=P(x)P(x^3)P(x^5)P(x^7)P(x^9)=\\sum_{j=0}^{50}a_jx^j$. Express $\\sum|a_j|$ as reduced $m/n$ and find $m+n$.",
+    "statement_zh": "令 $P(x)=1-x/3+x^2/6$，$Q(x)=P(x)P(x^3)P(x^5)P(x^7)P(x^9)=\\sum_{j=0}^{50}a_jx^j$。将 $\\sum|a_j|$ 约为 $m/n$，求 $m+n$。",
+    "answer": 275,
+    "solution_en": [
+      "All substituted exponents are odd, so replacing $x$ by $-x$ makes every factor have nonnegative coefficients. Thus the coefficient $(-1)^ja_j$ of $Q(-x)$ is nonnegative, and equals $|a_j|$.",
+      "Summing the coefficients evaluates at $x=1$: $\\sum|a_j|=Q(-1)=P(-1)^5=(3/2)^5=243/32$. Therefore $m+n=275$."
+    ],
+    "solution_zh": [
+      "所有代入幂次均为奇数，因此将 $x$ 换为 $-x$ 后，每个因子的系数均非负。所以 $Q(-x)$ 的系数 $(-1)^ja_j$ 非负，正好等于 $|a_j|$。",
+      "系数和用 $x=1$ 求得：$\\sum|a_j|=Q(-1)=P(-1)^5=(3/2)^5=243/32$，因此 $m+n=275$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/6",
+    "method_chain": [
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q07",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Let side lengths be $s,t,u$, from outer to inner, and rotation angle be $\\theta$. Coordinate projections give $s=t(\\cos\\theta+\\sin\\theta)$ and $t=u(\\cos\\theta+\\sin\\theta)$. The same center follows from the equal extreme coordinates on the four supporting sides.",
+      "reason_zh": "从外到内边长为 $s,t,u$，转角为 $\\theta$。坐标投影给出 $s=t(\\cos\\theta+\\sin\\theta)$、$t=u(\\cos\\theta+\\sin\\theta)$。由四条支持边的极值坐标对称，也可知三个正方形同心。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The areas form a geometric progression. If the middle area is $T$, the inner is $T^2/2016$, and $T$ ranges continuously over $[1008,2016)$ because $(\\cos\\theta+\\sin\\theta)^2$ ranges over $(1,2]$.",
+        "reason_zh": "三个面积成等比数列。设中间面积为 $T$，则内面积为 $T^2/2016$。因 $(\\cos\\theta+\\sin\\theta)^2$ 取遍 $(1,2]$，$T$ 连续取遍 $[1008,2016)$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "For integral $T$, inner-area integrality requires $2016\\mid T^2$. Since $2016=2^5\\cdot3^2\\cdot7$, this is equivalent to $168\\mid T$. The allowed extreme multiples are $1008$ and $1848$, both attainable by rotation. Their difference is $840$.",
+        "reason_zh": "当 $T$ 为整数时，内面积为整数要求 $2016\\mid T^2$。由 $2016=2^5\\cdot3^2\\cdot7$，等价于 $168\\mid T$。区间内最小、最大倍数为 $1008,1848$，均可通过旋转达到，差为 $840$。"
+      }
+    ],
+    "statement_en": "Two concentric, side-parallel squares have areas $2016$ and a smaller positive integer. A third square has one vertex on each side of the outer square, while each vertex of the inner square lies on a side of the third. Find the difference between the largest and smallest integral areas of the third square.",
+    "statement_zh": "两个同心且对应边平行的正方形面积分别为 $2016$ 和某个较小正整数。第三个正方形的四个顶点分别在外正方形四边上，内正方形每个顶点又在第三个正方形的一边上。求第三正方形面积的最大、最小整数值之差。",
+    "answer": 840,
+    "solution_en": [
+      "Let side lengths be $s,t,u$, from outer to inner, and rotation angle be $\\theta$. Coordinate projections give $s=t(\\cos\\theta+\\sin\\theta)$ and $t=u(\\cos\\theta+\\sin\\theta)$. The same center follows from the equal extreme coordinates on the four supporting sides.",
+      "The areas form a geometric progression. If the middle area is $T$, the inner is $T^2/2016$, and $T$ ranges continuously over $[1008,2016)$ because $(\\cos\\theta+\\sin\\theta)^2$ ranges over $(1,2]$.",
+      "For integral $T$, inner-area integrality requires $2016\\mid T^2$. Since $2016=2^5\\cdot3^2\\cdot7$, this is equivalent to $168\\mid T$. The allowed extreme multiples are $1008$ and $1848$, both attainable by rotation. Their difference is $840$."
+    ],
+    "solution_zh": [
+      "从外到内边长为 $s,t,u$，转角为 $\\theta$。坐标投影给出 $s=t(\\cos\\theta+\\sin\\theta)$、$t=u(\\cos\\theta+\\sin\\theta)$。由四条支持边的极值坐标对称，也可知三个正方形同心。",
+      "三个面积成等比数列。设中间面积为 $T$，则内面积为 $T^2/2016$。因 $(\\cos\\theta+\\sin\\theta)^2$ 取遍 $(1,2]$，$T$ 连续取遍 $[1008,2016)$。",
+      "当 $T$ 为整数时，内面积为整数要求 $2016\\mid T^2$。由 $2016=2^5\\cdot3^2\\cdot7$，等价于 $168\\mid T$。区间内最小、最大倍数为 $1008,1848$，均可通过旋转达到，差为 $840$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/7",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Sequences & summation",
+      "Prime factorization & valuations"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q08",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT01",
+      "reason_en": "The product $N$ factors as $3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$. For ordered triples, each of the six exponent-one primes has three destinations; the exponent of3 splits into three nonnegative parts in $\\binom42=6$ ways. This gives $6\\cdot3^6=4374$.",
+      "reason_zh": "总乘积 $N=3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$。先数有序三元组：六个一次质因数各有三个去处；质数3的指数分到三个非负整数中，有 $\\binom42=6$ 种。共 $6\\cdot3^6=4374$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "The product $N$ factors as $3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$. For ordered triples, each of the six exponent-one primes has three destinations; the exponent of3 splits into three nonnegative parts in $\\binom42=6$ ways. This gives $6\\cdot3^6=4374$.",
+        "reason_zh": "总乘积 $N=3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$。先数有序三元组：六个一次质因数各有三个去处；质数3的指数分到三个非负整数中，有 $\\binom42=6$ 种。共 $6\\cdot3^6=4374$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "If two entries equal $v$, then $v^2\\mid N$, so $v=1$ or3. The two multisets $(1,1,N)$ and $(3,3,N/9)$ each have three orderings. An all-equal triple is impossible.",
+        "reason_zh": "若两项相等为 $v$，则 $v^2\\mid N$，故 $v=1$ 或3。多重集 $(1,1,N)$、$(3,3,N/9)$ 各有三种排列，不可能三项全相等。"
+      }
+    ],
+    "statement_en": "Count unordered sets of three distinct positive integers whose product is $11\\cdot21\\cdot31\\cdot41\\cdot51\\cdot61$.",
+    "statement_zh": "求由三个不同正整数组成、乘积为 $11\\cdot21\\cdot31\\cdot41\\cdot51\\cdot61$ 的无序集合数目。",
+    "answer": 728,
+    "solution_en": [
+      "The product $N$ factors as $3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$. For ordered triples, each of the six exponent-one primes has three destinations; the exponent of3 splits into three nonnegative parts in $\\binom42=6$ ways. This gives $6\\cdot3^6=4374$.",
+      "If two entries equal $v$, then $v^2\\mid N$, so $v=1$ or3. The two multisets $(1,1,N)$ and $(3,3,N/9)$ each have three orderings. An all-equal triple is impossible.",
+      "Remove these six ordered triples and divide by six for the distinct-entry permutations: $(4374-6)/6=728$."
+    ],
+    "solution_zh": [
+      "总乘积 $N=3^2\\cdot7\\cdot11\\cdot17\\cdot31\\cdot41\\cdot61$。先数有序三元组：六个一次质因数各有三个去处；质数3的指数分到三个非负整数中，有 $\\binom42=6$ 种。共 $6\\cdot3^6=4374$。",
+      "若两项相等为 $v$，则 $v^2\\mid N$，故 $v=1$ 或3。多重集 $(1,1,N)$、$(3,3,N/9)$ 各有三种排列，不可能三项全相等。",
+      "去掉这六个有序三元组，再除以不同三项的六种排列，得 $(4374-6)/6=728$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/8",
+    "method_chain": [
+      "Prime factorization & valuations",
+      "Compositions, partitions & generating functions",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q09",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Write $a_n=1+(n-1)d$ and $b_n=r^{n-1}$, where $d\\ge1,r\\ge2$ are integers. Since $c_1=2$, $k\\ge3$. The conditions become $(k-2)d+r^{k-2}=99$ and $kd+r^k=999$.",
+      "reason_zh": "写成 $a_n=1+(n-1)d,b_n=r^{n-1}$，其中整数 $d\\ge1,r\\ge2$。因 $c_1=2$，故 $k\\ge3$。条件化为 $(k-2)d+r^{k-2}=99$、$kd+r^k=999$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Subtracting gives $2d+r^{k-2}(r^2-1)=900$. The power term is divisible by3, hence $3\\mid d$. The first equation then forces $3\\mid r$.",
+        "reason_zh": "相减得 $2d+r^{k-2}(r^2-1)=900$。幂乘积可被3整除，所以 $3\\mid d$，第一式再迫使 $3\\mid r$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Bounds $r^{k-2}<99,r^k<999$ leave $(r,k)=(3,3),(3,4),(3,5),(3,6),(6,3),(9,3)$. Substituting into the two equations, only $(9,3)$ works, with $d=90$.",
+        "reason_zh": "由 $r^{k-2}<99,r^k<999$，候选仅有 $(r,k)=(3,3),(3,4),(3,5),(3,6),(6,3),(9,3)$。代回两式，只有 $(9,3)$ 可行，且 $d=90$。"
+      }
+    ],
+    "statement_en": "An increasing positive-integer arithmetic sequence $a_n$ and an increasing positive-integer geometric sequence $b_n$ both start at1. Put $c_n=a_n+b_n$. For some integer $k$, $c_{k-1}=100,c_{k+1}=1000$. Find $c_k$.",
+    "statement_zh": "递增正整数等差数列 $a_n$、递增正整数等比数列 $b_n$ 均从1开始，令 $c_n=a_n+b_n$。某整数 $k$ 满足 $c_{k-1}=100,c_{k+1}=1000$。求 $c_k$。",
+    "answer": 262,
+    "solution_en": [
+      "Write $a_n=1+(n-1)d$ and $b_n=r^{n-1}$, where $d\\ge1,r\\ge2$ are integers. Since $c_1=2$, $k\\ge3$. The conditions become $(k-2)d+r^{k-2}=99$ and $kd+r^k=999$.",
+      "Subtracting gives $2d+r^{k-2}(r^2-1)=900$. The power term is divisible by3, hence $3\\mid d$. The first equation then forces $3\\mid r$.",
+      "Bounds $r^{k-2}<99,r^k<999$ leave $(r,k)=(3,3),(3,4),(3,5),(3,6),(6,3),(9,3)$. Substituting into the two equations, only $(9,3)$ works, with $d=90$.",
+      "Thus $c_3=1+2\\cdot90+9^2=262$."
+    ],
+    "solution_zh": [
+      "写成 $a_n=1+(n-1)d,b_n=r^{n-1}$，其中整数 $d\\ge1,r\\ge2$。因 $c_1=2$，故 $k\\ge3$。条件化为 $(k-2)d+r^{k-2}=99$、$kd+r^k=999$。",
+      "相减得 $2d+r^{k-2}(r^2-1)=900$。幂乘积可被3整除，所以 $3\\mid d$，第一式再迫使 $3\\mid r$。",
+      "由 $r^{k-2}<99,r^k<999$，候选仅有 $(r,k)=(3,3),(3,4),(3,5),(3,6),(6,3),(9,3)$。代回两式，只有 $(9,3)$ 可行，且 $d=90$。",
+      "因此 $c_3=1+2\\cdot90+9^2=262$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/9",
+    "method_chain": [
+      "Sequences & summation",
+      "Congruences & Chinese remainders",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q10",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "The intersecting-chord relation at $Q$ gives $QC\\cdot QT=QA\\cdot QB=42$. Extend $AB$ past $B$ to $R$ with $BR=8$, so $QP\\cdot QR=3\\cdot14=42$. The converse chord-product theorem shows $C,P,T,R$ are cyclic.",
+      "reason_zh": "$Q$ 处相交弦关系给出 $QC\\cdot QT=QA\\cdot QB=42$。延长 $AB$ 过 $B$ 至 $R$，使 $BR=8$，则 $QP\\cdot QR=3\\cdot14=42$。由弦乘积逆定理，$C,P,T,R$ 共圆。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "Circle angles now give $BRT=PCT=SAT$, while the original cyclic quadrilateral gives the exterior angle $RBT=AST$. Thus triangles $RBT,AST$ are similar.",
+        "reason_zh": "圆周角关系给出 $BRT=PCT=SAT$；又由原圆的内接四边形，外角 $RBT=AST$。所以 $RBT\\sim AST$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ is cyclic. Along side $AB$, the points occur as $A,P,Q,B$ with $AP=4,PQ=3,QB=6$. Rays $CP,CQ$ reach the circumcircle again at $S,T$. Given $AS=7,BT=5$, express $ST=m/n$ in lowest terms and find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 内接于圆。边 $AB$ 上点序为 $A,P,Q,B$，$AP=4,PQ=3,QB=6$。射线 $CP,CQ$ 再次交外接圆于 $S,T$。已知 $AS=7,BT=5$，将 $ST=m/n$ 约为最简分数，求 $m+n$。",
+    "answer": 43,
+    "solution_en": [
+      "The intersecting-chord relation at $Q$ gives $QC\\cdot QT=QA\\cdot QB=42$. Extend $AB$ past $B$ to $R$ with $BR=8$, so $QP\\cdot QR=3\\cdot14=42$. The converse chord-product theorem shows $C,P,T,R$ are cyclic.",
+      "Circle angles now give $BRT=PCT=SAT$, while the original cyclic quadrilateral gives the exterior angle $RBT=AST$. Thus triangles $RBT,AST$ are similar.",
+      "The corresponding lengths satisfy $ST/BT=AS/RB=7/8$. Hence $ST=35/8$ and $m+n=43$."
+    ],
+    "solution_zh": [
+      "$Q$ 处相交弦关系给出 $QC\\cdot QT=QA\\cdot QB=42$。延长 $AB$ 过 $B$ 至 $R$，使 $BR=8$，则 $QP\\cdot QR=3\\cdot14=42$。由弦乘积逆定理，$C,P,T,R$ 共圆。",
+      "圆周角关系给出 $BRT=PCT=SAT$；又由原圆的内接四边形，外角 $RBT=AST$。所以 $RBT\\sim AST$。",
+      "对应边满足 $ST/BT=AS/RB=7/8$，故 $ST=35/8,m+n=43$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/10",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q11",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "Prime exponents $e_i$ of $a$ give divisor count $\\prod(ke_i+1)\\equiv1\\pmod k$. Conversely every $N=ke+1$ occurs using $a=2^e$, including $N=1$ via $a=1$. Thus $k$-nice means exactly $N\\equiv1\\pmod k$.",
+      "reason_zh": "若 $a$ 的质因数指数为 $e_i$，则 $a^k$ 的约数数为 $\\prod(ke_i+1)\\equiv1\\pmod k$。反过来，每个 $N=ke+1$ 都可取 $a=2^e$ 实现，包括 $a=1$ 时的 $N=1$。所以条件恰为 $N\\equiv1\\pmod k$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Prime exponents $e_i$ of $a$ give divisor count $\\prod(ke_i+1)\\equiv1\\pmod k$. Conversely every $N=ke+1$ occurs using $a=2^e$, including $N=1$ via $a=1$. Thus $k$-nice means exactly $N\\equiv1\\pmod k$.",
+        "reason_zh": "若 $a$ 的质因数指数为 $e_i$，则 $a^k$ 的约数数为 $\\prod(ke_i+1)\\equiv1\\pmod k$。反过来，每个 $N=ke+1$ 都可取 $a=2^e$ 实现，包括 $a=1$ 时的 $N=1$。所以条件恰为 $N\\equiv1\\pmod k$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "From1 through999, the counts congruent to1 modulo7 and8 are143 and125. Their intersection is1 modulo56, with18 values.",
+        "reason_zh": "1至999内，模7余1的数有143个，模8余1的有125个；交集为模56余1，有18个。"
+      }
+    ],
+    "statement_en": "Call a positive integer $N$ $k$-nice if $a^k$ has exactly $N$ positive divisors for some positive integer $a$. How many positive integers below1000 are neither7-nice nor8-nice?",
+    "statement_zh": "若存在正整数 $a$，使 $a^k$ 恰有 $N$ 个正约数，则称正整数 $N$ 为 $k$-nice。求小于1000的正整数中，既非7-nice也非8-nice的个数。",
+    "answer": 749,
+    "solution_en": [
+      "Prime exponents $e_i$ of $a$ give divisor count $\\prod(ke_i+1)\\equiv1\\pmod k$. Conversely every $N=ke+1$ occurs using $a=2^e$, including $N=1$ via $a=1$. Thus $k$-nice means exactly $N\\equiv1\\pmod k$.",
+      "From1 through999, the counts congruent to1 modulo7 and8 are143 and125. Their intersection is1 modulo56, with18 values.",
+      "Inclusion-exclusion leaves $999-(143+125-18)=749$ integers of neither kind."
+    ],
+    "solution_zh": [
+      "若 $a$ 的质因数指数为 $e_i$，则 $a^k$ 的约数数为 $\\prod(ke_i+1)\\equiv1\\pmod k$。反过来，每个 $N=ke+1$ 都可取 $a=2^e$ 实现，包括 $a=1$ 时的 $N=1$。所以条件恰为 $N\\equiv1\\pmod k$。",
+      "1至999内，模7余1的数有143个，模8余1的有125个；交集为模56余1，有18个。",
+      "容斥得所求 $999-(143+125-18)=749$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/11",
+    "method_chain": [
+      "Divisor functions & totients",
+      "Congruences & Chinese remainders",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q12",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Let $R_n$ count proper colorings of an $n$-cycle. A proper row of $n$ positions has $4\\cdot3^{n-1}$ colorings. Rows with different end colors correspond to $R_n$; those with equal ends merge to a properly colored $(n-1)$-cycle.",
+      "reason_zh": "令 $R_n$ 为 $n$ 环合法涂色数。一行 $n$ 个位置的相邻异色涂法有 $4\\cdot3^{n-1}$ 种。两端异色时对应 $R_n$；两端同色时合并两端，对应 $n-1$ 环。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "Let $R_n$ count proper colorings of an $n$-cycle. A proper row of $n$ positions has $4\\cdot3^{n-1}$ colorings. Rows with different end colors correspond to $R_n$; those with equal ends merge to a properly colored $(n-1)$-cycle.",
+        "reason_zh": "令 $R_n$ 为 $n$ 环合法涂色数。一行 $n$ 个位置的相邻异色涂法有 $4\\cdot3^{n-1}$ 种。两端异色时对应 $R_n$；两端同色时合并两端，对应 $n-1$ 环。"
+      }
+    ],
+    "statement_en": "Six labeled regions form a ring: each region shares an edge only with its two neighbors in the six-cycle. Paint them using four available colors, with neighboring regions different. Rotations are distinct because the positions on the wall are fixed. Count the colorings.",
+    "statement_zh": "六个固定位置区域围成一环，每区仅与六循环中的左右邻区共边。用四种颜色涂色，邻区颜色不得相同；墙上位置固定，旋转后的不同位置涂法不合并。求涂法数。",
+    "answer": 732,
+    "solution_en": [
+      "Let $R_n$ count proper colorings of an $n$-cycle. A proper row of $n$ positions has $4\\cdot3^{n-1}$ colorings. Rows with different end colors correspond to $R_n$; those with equal ends merge to a properly colored $(n-1)$-cycle.",
+      "Thus $R_n+R_{n-1}=4\\cdot3^{n-1}$. From $R_3=24$, obtain $R_4=84,R_5=240,R_6=732$. The six-region answer is $732$."
+    ],
+    "solution_zh": [
+      "令 $R_n$ 为 $n$ 环合法涂色数。一行 $n$ 个位置的相邻异色涂法有 $4\\cdot3^{n-1}$ 种。两端异色时对应 $R_n$；两端同色时合并两端，对应 $n-1$ 环。",
+      "故 $R_n+R_{n-1}=4\\cdot3^{n-1}$。从 $R_3=24$ 开始，依次得 $R_4=84,R_5=240,R_6=732$。所求为 $732$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/12",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q13",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS04",
+      "reason_en": "There are $6!=720$ configurations. Every score is at least2 and at most7, the latter because the six occupied values sum to42. Therefore the total score is $2\\cdot720+\\sum_{j=3}^{7}B_j$, where $B_j$ counts scores at least $j$.",
+      "reason_zh": "共 $6!=720$ 种配置。得分至少为2；六个所占值之和固定为42，所以最小值至多7。因此总得分为 $2\\cdot720+\\sum_{j=3}^{7}B_j$，$B_j$ 表示得分至少为 $j$ 的配置数。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "To have score at least $j$, row $r$ must use column $c\\ge j-r$. For the first $j-2$ rows, allowed sets are nested, giving exactly $8-j$ unused choices at each step; the remaining $8-j$ rows can be permuted freely. Hence $B_j=(8-j)^{j-2}(8-j)!$.",
+        "reason_zh": "得分至少为 $j$ 时，第 $r$ 行需选列 $c\\ge j-r$。前 $j-2$ 行的允许列集合依次包含前者，扣除已用列后每行恰有 $8-j$ 个选择；其余 $8-j$ 行任意排列。因此 $B_j=(8-j)^{j-2}(8-j)!$。"
+      }
+    ],
+    "statement_en": "Place six identical rooks on a $6\\times6$ board with one in each row and column. An occupied cell in row $r$, column $c$ has value $r+c$. The score is the minimum occupied value. If the mean score over all configurations is reduced $p/q$, find $p+q$.",
+    "statement_zh": "在 $6\\times6$ 棋盘放六个相同车，每行、每列各一个。第 $r$ 行第 $c$ 列格子的值为 $r+c$，一配置的得分为所占格子的最小值。所有配置平均得分为最简分数 $p/q$，求 $p+q$。",
+    "answer": 371,
+    "solution_en": [
+      "There are $6!=720$ configurations. Every score is at least2 and at most7, the latter because the six occupied values sum to42. Therefore the total score is $2\\cdot720+\\sum_{j=3}^{7}B_j$, where $B_j$ counts scores at least $j$.",
+      "To have score at least $j$, row $r$ must use column $c\\ge j-r$. For the first $j-2$ rows, allowed sets are nested, giving exactly $8-j$ unused choices at each step; the remaining $8-j$ rows can be permuted freely. Hence $B_j=(8-j)^{j-2}(8-j)!$.",
+      "The five tail counts are $600,384,162,32,1$. Mean score is $(1440+600+384+162+32+1)/720=2619/720=291/80$, so $p+q=371$."
+    ],
+    "solution_zh": [
+      "共 $6!=720$ 种配置。得分至少为2；六个所占值之和固定为42，所以最小值至多7。因此总得分为 $2\\cdot720+\\sum_{j=3}^{7}B_j$，$B_j$ 表示得分至少为 $j$ 的配置数。",
+      "得分至少为 $j$ 时，第 $r$ 行需选列 $c\\ge j-r$。前 $j-2$ 行的允许列集合依次包含前者，扣除已用列后每行恰有 $8-j$ 个选择；其余 $8-j$ 行任意排列。因此 $B_j=(8-j)^{j-2}(8-j)!$。",
+      "五个尾部计数为 $600,384,162,32,1$。平均分为 $(1440+600+384+162+32+1)/720=291/80$，故 $p+q=371$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/13",
+    "method_chain": [
+      "Expected values & stopping processes",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q14",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE09",
+      "reason_en": "Let $H$ be the triangle center and $M$ the midpoint of $AB$. Both $P,Q$ and sphere center $O$ lie on the perpendicular axis through $H$. Since $OP=OQ=d$, $O$ is the midpoint of $PQ$ and $PQ=2d$. Also $MH=100\\sqrt3$, $CH=200\\sqrt3$.",
+      "reason_zh": "设 $H$ 为三角形中心，$M$ 为 $AB$ 中点。$P,Q$ 及球心 $O$ 均在过 $H$ 的垂直轴上。因 $OP=OQ=d$，$O$ 为 $PQ$ 中点，$PQ=2d$。又 $MH=100\\sqrt3,CH=200\\sqrt3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE10",
+        "reason_en": "Let $H$ be the triangle center and $M$ the midpoint of $AB$. Both $P,Q$ and sphere center $O$ lie on the perpendicular axis through $H$. Since $OP=OQ=d$, $O$ is the midpoint of $PQ$ and $PQ=2d$. Also $MH=100\\sqrt3$, $CH=200\\sqrt3$.",
+        "reason_zh": "设 $H$ 为三角形中心，$M$ 为 $AB$ 中点。$P,Q$ 及球心 $O$ 均在过 $H$ 的垂直轴上。因 $OP=OQ=d$，$O$ 为 $PQ$ 中点，$PQ=2d$。又 $MH=100\\sqrt3,CH=200\\sqrt3$。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Tangent addition gives $-\\sqrt3=(\\tan u+\\tan v)/(1-4)$, hence the tangent sum is $3\\sqrt3$. Therefore $2d=PH+QH=100\\sqrt3\\cdot3\\sqrt3=900$, so $d=450$. The two positive tangents exist since their sum squared exceeds four times their product.",
+        "reason_zh": "正切和公式给出 $-\\sqrt3=(\\tan u+\\tan v)/(1-4)$，所以正切和为 $3\\sqrt3$。于是 $2d=PH+QH=100\\sqrt3\\cdot3\\sqrt3=900$，得 $d=450$。因和的平方大于积的四倍，两正切正实数确实存在。"
+      }
+    ],
+    "statement_en": "Equilateral triangle $ABC$ has side600. Points $P,Q$ lie on opposite sides of its plane, each equidistant from $A,B,C$. The half-planes $PAB,QAB$ form a $120^\\circ$ dihedral angle. A sphere centered at $O$ passes through $A,B,C,P,Q$ with radius $d$. Find $d$.",
+    "statement_zh": "等边三角形 $ABC$ 边长600。点 $P,Q$ 位于其平面两侧，分别到 $A,B,C$ 等距，半平面 $PAB,QAB$ 所成二面角为 $120^\\circ$。以 $O$ 为心的球经过 $A,B,C,P,Q$，半径为 $d$。求 $d$。",
+    "answer": 450,
+    "solution_en": [
+      "Let $H$ be the triangle center and $M$ the midpoint of $AB$. Both $P,Q$ and sphere center $O$ lie on the perpendicular axis through $H$. Since $OP=OQ=d$, $O$ is the midpoint of $PQ$ and $PQ=2d$. Also $MH=100\\sqrt3$, $CH=200\\sqrt3$.",
+      "The perpendicular section through $M,H,P,Q$ gives angles $u=PMH,v=QMH$ with $u+v=120^\\circ$. Because $PQ$ is a sphere diameter and $C$ lies on the sphere, $PCQ$ is right; its altitude gives $PH\\cdot QH=CH^2$. Thus $\\tan u\\tan v=4$.",
+      "Tangent addition gives $-\\sqrt3=(\\tan u+\\tan v)/(1-4)$, hence the tangent sum is $3\\sqrt3$. Therefore $2d=PH+QH=100\\sqrt3\\cdot3\\sqrt3=900$, so $d=450$. The two positive tangents exist since their sum squared exceeds four times their product."
+    ],
+    "solution_zh": [
+      "设 $H$ 为三角形中心，$M$ 为 $AB$ 中点。$P,Q$ 及球心 $O$ 均在过 $H$ 的垂直轴上。因 $OP=OQ=d$，$O$ 为 $PQ$ 中点，$PQ=2d$。又 $MH=100\\sqrt3,CH=200\\sqrt3$。",
+      "过 $M,H,P,Q$ 的垂直截面给出 $u=PMH,v=QMH$，满足 $u+v=120^\\circ$。因 $PQ$ 为球直径且 $C$ 在球上，$PCQ$ 为直角三角形，斜边高关系给出 $PH\\cdot QH=CH^2$。所以 $\\tan u\\tan v=4$。",
+      "正切和公式给出 $-\\sqrt3=(\\tan u+\\tan v)/(1-4)$，所以正切和为 $3\\sqrt3$。于是 $2d=PH+QH=100\\sqrt3\\cdot3\\sqrt3=900$，得 $d=450$。因和的平方大于积的四倍，两正切正实数确实存在。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/14",
+    "method_chain": [
+      "Spheres & spatial distances",
+      "Volumes & solid geometry",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2016-II-Q15",
+    "paper_id": "AIME-2016-II",
+    "exam_year": 2016,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "The square of $\\sum x_i=1$ converts the second condition into $\\sum_i x_i^2/(1-a_i)=1/215$. All denominators are positive.",
+      "reason_zh": "将 $\\sum x_i=1$ 平方并代入第二条件，化得 $\\sum_i x_i^2/(1-a_i)=1/215$，分母均为正。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The geometric sum gives $\\sum a_i=1$, so $\\sum(1-a_i)=215$. Weighted Cauchy therefore gives $1=(\\sum x_i)^2\\le[\\sum x_i^2/(1-a_i)]\\sum(1-a_i)=1$.",
+        "reason_zh": "等比求和得 $\\sum a_i=1$，所以 $\\sum(1-a_i)=215$。加权柯西不等式给出 $1=(\\sum x_i)^2\\le[\\sum x_i^2/(1-a_i)]\\sum(1-a_i)=1$。"
+      }
+    ],
+    "statement_en": "For $1\\le i\\le215$, set $a_i=2^{-i}$, and set $a_{216}=2^{-215}$. Positive reals $x_i$ satisfy $\\sum x_i=1$ and $\\sum_{i<j}x_ix_j=107/215+\\sum_i a_ix_i^2/[2(1-a_i)]$. If the largest possible $x_2$ is reduced $m/n$, find $m+n$.",
+    "statement_zh": "对 $1\\le i\\le215$，令 $a_i=2^{-i}$，并令 $a_{216}=2^{-215}$。正实数 $x_i$ 满足 $\\sum x_i=1$ 及 $\\sum_{i<j}x_ix_j=107/215+\\sum_i a_ix_i^2/[2(1-a_i)]$。若 $x_2$ 的最大值为最简分数 $m/n$，求 $m+n$。",
+    "answer": 863,
+    "solution_en": [
+      "The square of $\\sum x_i=1$ converts the second condition into $\\sum_i x_i^2/(1-a_i)=1/215$. All denominators are positive.",
+      "The geometric sum gives $\\sum a_i=1$, so $\\sum(1-a_i)=215$. Weighted Cauchy therefore gives $1=(\\sum x_i)^2\\le[\\sum x_i^2/(1-a_i)]\\sum(1-a_i)=1$.",
+      "Equality forces $x_i/(1-a_i)$ constant, giving the unique positive tuple $x_i=(1-a_i)/215$. It satisfies both original conditions. Thus $x_2=3/860$ is its only, hence maximum, value, and $m+n=863$."
+    ],
+    "solution_zh": [
+      "将 $\\sum x_i=1$ 平方并代入第二条件，化得 $\\sum_i x_i^2/(1-a_i)=1/215$，分母均为正。",
+      "等比求和得 $\\sum a_i=1$，所以 $\\sum(1-a_i)=215$。加权柯西不等式给出 $1=(\\sum x_i)^2\\le[\\sum x_i^2/(1-a_i)]\\sum(1-a_i)=1$。",
+      "只能取等号，故 $x_i/(1-a_i)$ 为常数，唯一正元组为 $x_i=(1-a_i)/215$，满足两个原条件。因此 $x_2=3/860$ 是唯一值也是最大值，所求和为 $863$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2016II/problem/15",
+    "method_chain": [
+      "Inequalities & continuous optimization",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "root",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

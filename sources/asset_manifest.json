@@ -1,0 +1,494 @@
+[
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2000I/13sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2000I/13sol.svg",
+    "sha256": "8cd655956a88acfa60b1d99bba6c86544d1b44e0cf818fc5ec1a0742a9e19950",
+    "bytes": 7140
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2000I/4.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2000I/4.svg",
+    "sha256": "7d3edd8c84ab9f85c2636ca65840271ebec93a0584f1ab7a465c896670cbd351",
+    "bytes": 2368
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2001II/6sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2001II/6sol.svg",
+    "sha256": "556b0ca579b6a96a6b5a9e3d4dcb27553bdd57c5f91a35c99ee9aedae32dd16c",
+    "bytes": 12729
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2002I/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2002I/10.svg",
+    "sha256": "b9370ea5f709e369eb645a3f51cddebcf8291d1c0ed440cebeabc49a5735d231",
+    "bytes": 17336
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2002I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2002I/15sol.svg",
+    "sha256": "0f811cda4361df51cf2728ba2c08f89d322061168b31ac6d727549394e3025d5",
+    "bytes": 21041
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2002I/2.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2002I/2.svg",
+    "sha256": "47618a41455b71d2967242fef87112915a6e43413b47478b36929568dcb7c4e9",
+    "bytes": 8195
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2002II/4.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2002II/4.svg",
+    "sha256": "60c803f399b6fa708f92fa1df003cc31b849657402fee13a9a47e76e33417000",
+    "bytes": 28642
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2003I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2003I/15sol.svg",
+    "sha256": "882af8bf9bf219c098f127ad95e1677c6473a94d08474907ddb356b42800f77b",
+    "bytes": 15576
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2004II/7.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2004II/7.svg",
+    "sha256": "71c3f46933625ce51af12a1cb5d4049e01df65d84269ac4e1d8c4a8e47d5ad84",
+    "bytes": 10223
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2005II/8sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2005II/8sol.svg",
+    "sha256": "f565f3a245789d8bab790ac90b29ed173cf19701f0a719aa7f8a1c07a729ca01",
+    "bytes": 12584
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2006I/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2006I/10.svg",
+    "sha256": "a531ea7b5ac8a1c5b03df041d32f79198bf9151b208d67813063aa2fa832c7b2",
+    "bytes": 7764
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2006I/7.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2006I/7.svg",
+    "sha256": "201320c167622a9e10ec1123742a7d72b84c556a52febb93b4027beeb79e5725",
+    "bytes": 8504
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2006I/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2006I/8.svg",
+    "sha256": "d07f57182aa12f767aaa984ea77c61ca77e7e9563f714de6b250c84d2890cfb1",
+    "bytes": 16192
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2006II/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2006II/8.svg",
+    "sha256": "ee708acb979682fa0751811292784e0341ddd517c0349406fc7c75a617a49d13",
+    "bytes": 818
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2007I/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2007I/10.svg",
+    "sha256": "125e6ce09582f1da530c79498e65db4410e7e9c57bf5e55cefc53ce5ccf3a909",
+    "bytes": 3016
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2007I/12sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2007I/12sol.svg",
+    "sha256": "41b3bc4e725bfe07d0f187e57a71ebaef088b9150cc32e9cca567aee999bc416",
+    "bytes": 9919
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2007II/13.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2007II/13.svg",
+    "sha256": "6223735d63cb620a233279db6d19729e50936693f23a219069fe82eb1126e7d5",
+    "bytes": 16670
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2007II/3.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2007II/3.svg",
+    "sha256": "193ec4f7ffe2fa04f24905c418289942fe3ebd37af1d1ac12ec7f978a122dc12",
+    "bytes": 11192
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008I/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008I/15.svg",
+    "sha256": "383f75d06cf173fcc33cf20f81575e6c7c44f936898227278d387a8a79c037ee",
+    "bytes": 11698
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008I/15sol.svg",
+    "sha256": "b0a342e2f027a825645602b5865618d894be08f2c74b6bcd196f3a486a53a52b",
+    "bytes": 16270
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008II/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008II/10.svg",
+    "sha256": "b67c500203ccf3c12effedf08ca939dc38de78ba0d096aee32fe2ce17c5ceddd",
+    "bytes": 4859
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008II/10sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008II/10sol.svg",
+    "sha256": "5e66db7c0d5154a941d9b18afa61ce2765e9e351d4f21415e8d162110128c14a",
+    "bytes": 20253
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008II/11sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008II/11sol.svg",
+    "sha256": "26efa254a8fcb4979e7b3f1cee7c9ee834c13931879ea098081dc249269b4daa",
+    "bytes": 8011
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2008II/5sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2008II/5sol.svg",
+    "sha256": "af579cc8a19666acc1049d11d8a989d79a6d27c5f69e897c66a6ed429389aaa2",
+    "bytes": 14446
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2009I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2009I/15sol.svg",
+    "sha256": "c9b4bd5898edc03f731a951016a1549c8a17f02c70ddfedf73b4a020dfb876f5",
+    "bytes": 9733
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2009I/5sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2009I/5sol.svg",
+    "sha256": "5aaa5249e55b8d3a0f2671361aa27cc9bd06972948a7267df6f02d71590dfc09",
+    "bytes": 10995
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2009II/5.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2009II/5.svg",
+    "sha256": "7f4f4987134818e8f9be5136ee1eba61615d472cfba8acc720a9135987fa493c",
+    "bytes": 9671
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2010I/13sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2010I/13sol.svg",
+    "sha256": "4da76364fef7c5e94462eaf90296b1e91da6771b1ee2f99bbae5af75c9e919e5",
+    "bytes": 15754
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2010I/8sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2010I/8sol.svg",
+    "sha256": "7ad32ed07b6752f2854c8199d9cee688a4beb4a69bcd2c72904c680788e325c7",
+    "bytes": 18931
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2010II/14sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2010II/14sol.svg",
+    "sha256": "2b4ca98a9f9bb3ff609b3b21204cf8a846b3f814bd494dfff730b18bca1057f0",
+    "bytes": 10414
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2010II/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2010II/15sol.svg",
+    "sha256": "ca1e0aeb49947c17ee796910757b74e66884be30263b5f9d2a6cb9b818b29bc2",
+    "bytes": 15772
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2011I/14sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2011I/14sol.svg",
+    "sha256": "67bfd42b41df0e3c8552c8d20b2f998e413bc9956256f44fa464476116633603",
+    "bytes": 17981
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2011I/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2011I/8.svg",
+    "sha256": "1f30e83f68e8384e079120f572a88be72fbb608e205de3e700f181c7f3e1c67b",
+    "bytes": 18113
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2012I/7.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2012I/7.svg",
+    "sha256": "4aee91cfdb98167d4d69c6b85446e702380ca5c74bab414d45ed9f2dd2531c71",
+    "bytes": 13576
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2012I/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2012I/8.svg",
+    "sha256": "f4ab6f026e8c78e8d7abb01c93f0ce2cf229a9212084db55c95af2d2954ce5ca",
+    "bytes": 16720
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2012I/8sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2012I/8sol.svg",
+    "sha256": "ad4233ef448f9bc385333c16d1b3dcf77bd9ba9289ae5b51aa1283f6d15e43df",
+    "bytes": 22115
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2012II/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2012II/15sol.svg",
+    "sha256": "75a55967c1f629b69e0e675441fa27644645c12559d6da0a44511ddfa430b3fc",
+    "bytes": 11539
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2012II/5.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2012II/5.svg",
+    "sha256": "d2d7b2e6547299e60776f96ebe5cac820344e2b4d031f3a0b3b1f9556ccf681f",
+    "bytes": 1799
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2013I/4.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2013I/4.svg",
+    "sha256": "724927bf4bd137e840a7f15070fc11cb87a1e4db59daa62485f30bb40f7d749b",
+    "bytes": 3567
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2013I/9.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2013I/9.svg",
+    "sha256": "ad487f2d6dc258b1944350d9fc1ecb78e9e670ee706b151b29b3654f7e7c2aad",
+    "bytes": 5014
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2014I/1.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2014I/1.svg",
+    "sha256": "d134a1f797a6650ba9331aca0e5e8c878eca38f96f3c4e1e3e9de4df4f2ac3c1",
+    "bytes": 6053
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2014I/13.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2014I/13.svg",
+    "sha256": "1fca1fc9b76074d9915583bf807f97d9031c35b36fd7418648dfbd1a45a1e475",
+    "bytes": 28981
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2014II/3.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2014II/3.svg",
+    "sha256": "2684a67332a1f5d5c5ec4864039b3cde66efc07f7b076ff669ca3e681a963f2f",
+    "bytes": 4215
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2015I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2015I/15sol.svg",
+    "sha256": "e25c54b2bb1107466c48c648579a5c64443f5fb46c2bb518c6bd88644b25f3cc",
+    "bytes": 10979
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2015I/6.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2015I/6.svg",
+    "sha256": "931f6e35f3dc97be11348ad415fa6861b8d74d7604b3e805fd077ce298dcdbde",
+    "bytes": 14581
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2015I/7.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2015I/7.svg",
+    "sha256": "5719571b3e4209417de2caa0a13bd8e59fdeba764bd0b2d9b4984640db1a026c",
+    "bytes": 20852
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2015II/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2015II/15.svg",
+    "sha256": "04f4a99ff09e838f5b090b8998798ceba1e7268ef7ba43eafdd31fb07d600c43",
+    "bytes": 10803
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2015II/9.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2015II/9.svg",
+    "sha256": "817e83eb0812e2d99d2dc8b01799d802d5f4f57127f5953b1ab6cf57c731a452",
+    "bytes": 5740
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2016I/15sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2016I/15sol.svg",
+    "sha256": "1400d08bc37a316d6fa69743e8d2ed542f7d7a28d422ebc032b2f4dcf66a339a",
+    "bytes": 18950
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2016I/3.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2016I/3.svg",
+    "sha256": "1beac212b42dd39cba87660893f113fa12aa1658d52dc4f21e04e1ba1c06c807",
+    "bytes": 9173
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2016II/10sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2016II/10sol.svg",
+    "sha256": "55a09dfaa0191b5852b90f52ab16449515290c5b21ac1422857b784190906b04",
+    "bytes": 14419
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2016II/12.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2016II/12.svg",
+    "sha256": "c8b00a09fcb0052975033fdbba8ff6c2e99cb6f3ef89af9baf144ba617d224c9",
+    "bytes": 2386
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2017I/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2017I/15.svg",
+    "sha256": "993f737eaa2e8dad6e8c9ba7307579b0dcef1c3772fe6468cdc95100b8f6ead8",
+    "bytes": 988
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2017II/12.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2017II/12.svg",
+    "sha256": "f8e59bc8e4924086cfb84c766a0f2458e55b5a71ec4210a405dd59313cb561c1",
+    "bytes": 6707
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2018I/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2018I/10.svg",
+    "sha256": "330a67ffe7900239093215ae15a13e8362a4ad0dbe96865bd707ee151c94c0e1",
+    "bytes": 17079
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2018II/14sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2018II/14sol.svg",
+    "sha256": "c1ad13e15d23ec15709414c841ccf9ba137d53854b5b124863e1a70fd2b5a3a4",
+    "bytes": 18563
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2018II/4sol.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2018II/4sol.svg",
+    "sha256": "3e4c7c89b36ddb127c377c26f0ca5860e2b16253538fffa9e7ab78d6d9f1b303",
+    "bytes": 17795
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2018II/9.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2018II/9.svg",
+    "sha256": "722a7ee09d0bef0c8905ef917cd23ef0a4346b3e4bcecf668f3315f38160395e",
+    "bytes": 17589
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2021I/2.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2021I/2.svg",
+    "sha256": "8e9e6ba424713161ab1111ed9ddf1b40d5341afda62a4f316c487c90158030f4",
+    "bytes": 9651
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2021II/2.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2021II/2.svg",
+    "sha256": "adfce46356791cdd2e589244bff19945941abb12cfd64357cb5fca6585d578e2",
+    "bytes": 12783
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2022I/11.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2022I/11.svg",
+    "sha256": "351cf5b728c3922a955fdf6eafa589c5f773760c22053973ba793f38f40a7795",
+    "bytes": 8966
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2022II/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2022II/15.svg",
+    "sha256": "e574c707ba8a7e63606b9b31b7bc7d8e298352419336f90b12ef6a447670fb2b",
+    "bytes": 15781
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2022II/9.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2022II/9.svg",
+    "sha256": "355ef18b405cc1bd1bc5220b434c4bcd8fdec39342c9728e9e6acdc4653245fd",
+    "bytes": 18651
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2023I/13.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2023I/13.svg",
+    "sha256": "89fc8cb5442e766c5fa5b368cfbf8115855699ef69e91aa5d8ba0e914ac7ab1b",
+    "bytes": 2068
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2023I/14.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2023I/14.svg",
+    "sha256": "05ddd683edef88276622654d15d6f765e76e4509193b13c88df9271647771925",
+    "bytes": 12374
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2023II/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2023II/10.svg",
+    "sha256": "fe4d26f953da98e46e3513804fc4e9ca24d0fb456331e69c13edff2db2f2e508",
+    "bytes": 12108
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2023II/14.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2023II/14.svg",
+    "sha256": "e67c092da3a72ca897c6d5cebc549fa5662e14c416065aeb0d871971a84d83b6",
+    "bytes": 10463
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2023II/6.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2023II/6.svg",
+    "sha256": "182ddfbc8d1f46407079784e994296b8ca82738c9e21c9b63d9f9ba1b77c0785",
+    "bytes": 1058
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024I/5.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024I/5.svg",
+    "sha256": "6d31d10344395feb98d3935d40faa5fd64b8c69133e3858a05f649ed1ea64841",
+    "bytes": 13305
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024I/6.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024I/6.svg",
+    "sha256": "f7763eba521614a0e7dedc3f1b6decc3581d8b78d55e687dfb1043cf535ab5d0",
+    "bytes": 8949
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024I/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024I/8.svg",
+    "sha256": "01d6a98e5b48c338816dfedb76203e3d86cbfe6ec1fdd19716da05444b4ad9e4",
+    "bytes": 7473
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024II/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024II/15.svg",
+    "sha256": "4f438626514d402a8452d4555ec51bd2840912f58cd2bcfa1e385720314434d4",
+    "bytes": 5709
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024II/3.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024II/3.svg",
+    "sha256": "3afb4cabfd2f9406f8da9bf5b25154f6cad5dcfedba9ba39e147340f01ff905a",
+    "bytes": 5559
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2024II/8.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2024II/8.svg",
+    "sha256": "02554ccd18a1ba93e905dff609c349e66b93150f80c89130264de225dfb56f78",
+    "bytes": 2661
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025I/10.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025I/10.svg",
+    "sha256": "784c36ac3f55d5a82373fff13c947413f1af696b4c3182b2d1acc0e6dae65d8f",
+    "bytes": 12797
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025I/11.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025I/11.svg",
+    "sha256": "e6f86500f40150d257e567c9bf7f4e740d5f6c9abbe556aa2a27df4eedb49be2",
+    "bytes": 9462
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025I/2.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025I/2.svg",
+    "sha256": "251197460d9fb0450aa8bc36d4eba3e236bd36e210f0e9db3334215adc86fae2",
+    "bytes": 16716
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025II/3.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025II/3.svg",
+    "sha256": "e15ecdc9cf6f0dd17fd660aeccbb92d9b9a220daed5bb25d51a079815f2904a7",
+    "bytes": 3181
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025II/5.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025II/5.svg",
+    "sha256": "a2739a104d5b4f57347900ebb2838e261e0a714d7766dd8f8752e41928d65bcc",
+    "bytes": 15619
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2025II/6.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2025II/6.svg",
+    "sha256": "9581be8a41b2f1e8b8d4962577cd9d1dc6c12497eeb778a83fd7b09a4de062f0",
+    "bytes": 18476
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2026I/15.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2026I/15.svg",
+    "sha256": "bf2dbe84370adaf6927701456db4383477baac64e799829077307e93a435e50c",
+    "bytes": 4860
+  },
+  {
+    "url": "https://live.poshenloh.com/images/past-contests/aime/2026II/2.svg",
+    "local_path": "sources/assets/images/past-contests/aime/2026II/2.svg",
+    "sha256": "33f8e5a7f66e61064fc3a1f39484dc981afcc70d2c63bf8fbcdad4bc670e3e97",
+    "bytes": 12525
+  }
+]

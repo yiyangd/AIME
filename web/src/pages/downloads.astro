@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Bi from '../components/Bi.astro';
+import PrintLinks from '../components/PrintLinks.astro';
+import {url,sections,knowledgeUrl} from '../lib/content';
+import rawDownloads from '../data/downloads.json';
+const downloads=rawDownloads as {name:string;href:string;family:string;format:string;bytes:number;section?:boolean}[];
+const families=[{id:'workbook',en:'Practice workbook',zh:'专题练习册'},{id:'textbook',en:'Method notes',zh:'知识教材'},{id:'solutions',en:'Solutions',zh:'中英文解析'},{id:'matrix',en:'Topic matrix',zh:'题型矩阵'}];
+---
+<Layout title="Downloads / 资料下载" reading><header class="page-heading"><p class="eyebrow"><Bi en="YOUR STUDY LIBRARY" zh="学习资料库"/></p><h1><Bi en="Downloads" zh="配套资料下载"/></h1><p class="page-meta"><Bi en="Print, annotate and study offline." zh="可打印、批注并离线学习。"/></p></header>{families.map(f=><section class="note-card"><h2><Bi en={f.en} zh={f.zh}/></h2><div class="download-list">{downloads.filter(d=>d.family===f.id&&!d.section).map(d=><a class="download-link" href={url(d.href)} download><span>{d.name}<small>{d.format} · {(d.bytes/1048576).toFixed(1)} MB</small></span><span aria-hidden="true">↓</span></a>)}</div></section>)}{sections.some(s=>Object.keys(s.print||{}).length>0)&&<section class="note-card"><h2><Bi en="Download one section" zh="按节下载"/></h2>{sections.filter(s=>Object.keys(s.print||{}).length>0).map(s=><details class="section-downloads"><summary>{s.id}. <Bi en={s.titleEn} zh={s.titleZh}/></summary><PrintLinks resources={s.print}/><a href={knowledgeUrl(s)}><Bi en="Read online" zh="在线阅读"/> →</a></details>)}</section>}</Layout>

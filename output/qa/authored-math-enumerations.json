@@ -1,0 +1,142 @@
+[
+  {
+    "question_id": "AIME-2020-I-Q05",
+    "computed": "52",
+    "expected": "52",
+    "method": "Enumerate all 720 permutations and six deletions",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2020-I-Q11",
+    "computed": "510",
+    "expected": "510",
+    "method": "Enumerate all 9261 coefficient triples using necessary and sufficient root cases",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2020-II-Q09",
+    "computed": "90",
+    "expected": "90",
+    "method": "Direct permutation forbidden-adjacency check",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2020-II-Q10",
+    "computed": "239",
+    "expected": "239",
+    "method": "Direct remainder check through the proved divisor bound",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2020-II-Q12",
+    "computed": "248",
+    "expected": "248",
+    "method": "Enumerate actual odd-grid and slope constraints",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-I-Q03",
+    "computed": "50",
+    "expected": "50",
+    "method": "Direct distinct difference set",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-I-Q04",
+    "computed": "331",
+    "expected": "331",
+    "method": "Direct positive increasing triples",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-I-Q05",
+    "computed": "31",
+    "expected": "31",
+    "method": "Exhaustive middle-term scan beyond all divisor candidates",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-I-Q07",
+    "computed": "63",
+    "expected": "63",
+    "method": "Direct gcd feasibility count",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-I-Q10",
+    "computed": "[1, 2, 8, 18, 30]",
+    "expected": "[1, 2, 8, 18, 30]",
+    "method": "Exact reduced-fraction recurrence",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q03",
+    "computed": "80",
+    "expected": "80",
+    "method": "Enumerate all 120 cyclic product sums",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q06",
+    "computed": "454",
+    "expected": "454",
+    "method": "Enumerate all 1024 subset pairs",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q08",
+    "computed": "17/32",
+    "expected": "17/32",
+    "method": "Enumerate all nonbacktracking cube paths as vertex-edge states",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q09",
+    "computed": "295",
+    "expected": "295",
+    "method": "Direct 900 gcd calculations",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q11",
+    "computed": "258",
+    "expected": "258",
+    "method": "Enumerate publicly possible sets and eliminate unique private numbers",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q13",
+    "computed": "797",
+    "expected": "797",
+    "method": "Direct modular-power scan of all smaller exponents",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2021-II-Q15",
+    "computed": "258",
+    "expected": "258",
+    "method": "Direct explicit recurrence endpoint scan",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2000-I-Q15",
+    "computed": "927",
+    "expected": "927",
+    "method": "Independent deque simulation of original positions",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2000-II-Q02",
+    "computed": "98",
+    "expected": "98",
+    "method": "Direct factor pairs of x-y and x+y with parity",
+    "passed": true
+  },
+  {
+    "question_id": "AIME-2000-II-Q05",
+    "computed": "376320",
+    "expected": "376320",
+    "method": "Exact choose-order-distribute product",
+    "passed": true
+  }
+]

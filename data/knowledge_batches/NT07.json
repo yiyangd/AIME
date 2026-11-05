@@ -1,0 +1,290 @@
+{
+  "subtype_id": "NT07",
+  "introduction_en": "A fraction problem is usually controlled by reduction, not by decimal approximation. Keep denominators exact, identify the cancellation gcd, and separate distinct values from different representations of the same value.",
+  "introduction_zh": "分数题通常由约分控制，而非小数近似控制。保留精确分母，确定约分公因数，并区分不同数值与同一数值的不同表示。",
+  "prerequisites": [
+    "NT01",
+    "NT02"
+  ],
+  "methods": [
+    {
+      "method_id": "NT07-M01",
+      "title_en": "Convert a repeating block to an exact fraction",
+      "title_zh": "将循环节转为精确分数",
+      "steps_en": [
+        "If a length-$k$ block represents integer $A$ in base $b$, then $0.\\overline{A}_b=A/(b^k-1)$.",
+        "Leading zeroes in the block are legal; a shorter actual period may still be represented by the full block.",
+        "For sums over digit permutations, count how often each digit occupies each position before reducing fractions."
+      ],
+      "steps_zh": [
+        "若底数 $b$ 下长度 $k$ 的块表示整数 $A$，则 $0.\\overline{A}_b=A/(b^k-1)$。",
+        "循环块开头允许零，实际周期较短者仍可用完整循环块表示。",
+        "对数位排列求和时，先统计每个数字在每个位置的出现次数，再约分。"
+      ],
+      "example_en": "Find the sum of $0.\\overline{12}$, $0.\\overline{21}$ and $0.\\overline{03}$.",
+      "example_zh": "求 $0.\\overline{12},0.\\overline{21},0.\\overline{03}$ 之和。",
+      "solution_en": [
+        "The common denominator for a two-digit block is $99$.",
+        "The numerators are $12,21,3$, including the leading-zero block $03$.",
+        "The sum is $36/99=4/11$."
+      ],
+      "solution_zh": [
+        "两位循环块的共同分母为 $99$。",
+        "分子为 $12,21,3$，其中包括开头为零的循环块 $03$。",
+        "和为 $36/99=4/11$。"
+      ],
+      "tip_en": "The block length is fixed even when its integer value has fewer digits.",
+      "tip_zh": "即使循环块的整数值位数较少，循环块长度仍固定。",
+      "question_ids": [
+        "AIME-2006-I-Q06",
+        "AIME-2014-II-Q04"
+      ],
+      "prerequisites": [
+        "NT06",
+        "CO01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "NT07-M02",
+      "title_en": "Control reduction with a gcd and denominator prime structure",
+      "title_zh": "用最大公因数与分母质因数结构控制约分",
+      "steps_en": [
+        "Write $r=a/b$ in lowest terms and compute explicitly the gcd introduced by a multiplier or common denominator.",
+        "After multiplying by $c$, the cancellation is $\\gcd(c,b)$ because $\\gcd(a,b)=1$.",
+        "For an integrality condition, every prime-power in the reduced denominator must be supplied by the numerator; use valuation bounds to prove the first possible index.",
+        "With a fixed numerator-plus-denominator sum, replace their gcd by the gcd with that fixed sum."
+      ],
+      "steps_zh": [
+        "将 $r=a/b$ 写成既约形式，并明确计算乘数或公分母引入的最大公因数。",
+        "乘以 $c$ 后，约分公因数为 $\\gcd(c,b)$，因为 $\\gcd(a,b)=1$。",
+        "整数条件要求分子提供既约分母的每个质数幂，用赋值界证明最早可能下标。",
+        "若分子分母之和固定，可将其公因数改写为与固定和的公因数。"
+      ],
+      "example_en": "A reduced fraction $a/b$ becomes a fraction with denominator $b/6$ after multiplication by $18$. Characterize $b$.",
+      "example_zh": "既约分数 $a/b$ 乘以 $18$ 后，最简分母为 $b/6$。刻画 $b$。",
+      "solution_en": [
+        "The new denominator is $b/\\gcd(18,b)$, so the condition is $\\gcd(18,b)=6$.",
+        "Since $18=2\\cdot3^2$, this requires $v_2(b)\\ge1$ and $v_3(b)=1$; other primes are unrestricted.",
+        "Equivalently $b=6t$ with $3\\nmid t$. Any $a$ coprime to such a $b$ realizes the stated cancellation."
+      ],
+      "solution_zh": [
+        "新分母为 $b/\\gcd(18,b)$，所以条件为 $\\gcd(18,b)=6$。",
+        "因 $18=2\\cdot3^2$，须 $v_2(b)\\ge1,v_3(b)=1$，其他质数不受限制。",
+        "等价于 $b=6t$ 且 $3\\nmid t$；任取与该 $b$ 互质的 $a$ 均实现所述约分。"
+      ],
+      "tip_en": "Compute the cancellation gcd before comparing reduced numerators and denominators.",
+      "tip_zh": "比较最简分子分母前，先算约分公因数。",
+      "question_ids": [
+        "AIME-2006-II-Q14",
+        "AIME-2014-I-Q03",
+        "AIME-2023-II-Q05"
+      ],
+      "prerequisites": [
+        "NT01",
+        "NT02",
+        "NT08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "NT07-M03",
+      "title_en": "Characterize the possible reduced numerators using divisor denominators",
+      "title_zh": "用约数分母刻画可能的最简分子",
+      "steps_en": [
+        "For fractions $k/N$, every reduced denominator is a divisor $D$ of $N$.",
+        "A positive numerator $m$ occurs exactly when some such $D$ satisfies $m\\le D$ and $\\gcd(m,D)=1$.",
+        "Partition $m$ by which primes of $N$ divide it. In each class choose the largest divisor of $N$ avoiding those primes, then count under that bound."
+      ],
+      "steps_zh": [
+        "对分数 $k/N$，每个最简分母都是 $N$ 的约数 $D$。",
+        "正分子 $m$ 出现，当且仅当某个这样的 $D$ 满足 $m\\le D,\\gcd(m,D)=1$。",
+        "按 $N$ 的哪些质数整除 $m$ 分类。每类选避开这些质数的最大约数作分母，再在该上界下计数。"
+      ],
+      "example_en": "Among $k/12$ for $1\\le k\\le12$, which positive reduced numerators occur?",
+      "example_zh": "在 $1\\le k\\le12$ 的 $k/12$ 中，会出现哪些正的最简分子？",
+      "solution_en": [
+        "If $m$ is coprime to $6$, choose denominator $12$; the allowed numerators are $1,5,7,11$.",
+        "If $2\\mid m$ but $3\\nmid m$, the largest coprime divisor denominator is $3$, giving only $m=2$.",
+        "If $3\\mid m$ but $2\\nmid m$, denominator $4$ permits only $m=3$. A numerator divisible by both primes is too large for denominator one. Thus the set is $\\{1,2,3,5,7,11\\}$."
+      ],
+      "solution_zh": [
+        "若 $m$ 与 $6$ 互质，可取分母 $12$，得到 $1,5,7,11$。",
+        "若 $2\\mid m$ 而 $3\\nmid m$，最大互质约数分母为 $3$，只得到 $m=2$。",
+        "若 $3\\mid m$ 而 $2\\nmid m$，分母 $4$ 只允许 $m=3$。同时被两质数整除的分子对分母一而言太大。故集合为 $\\{1,2,3,5,7,11\\}$。"
+      ],
+      "tip_en": "Count distinct reduced numerators, not unreduced blocks or fraction representations.",
+      "tip_zh": "应数不同最简分子，而非未约分循环块或分数表示。",
+      "question_ids": [
+        "AIME-2022-I-Q13"
+      ],
+      "prerequisites": [
+        "NT08",
+        "CO04"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "NT07-M04",
+      "title_en": "Use a decimal interval to bound a reduced denominator",
+      "title_zh": "用小数区间限制最简分母",
+      "steps_en": [
+        "Turn a fixed length-$k$ prefix $A$ into $[A/10^k,(A+1)/10^k)$.",
+        "If the prefix begins later, shift the decimal and take the fractional part; its reduced denominator divides the original denominator.",
+        "Compare with a nearby simple fraction and exploit a nonzero integer cross-product difference to get a lower bound."
+      ],
+      "steps_zh": [
+        "将固定长度 $k$ 的前缀 $A$ 转为 $[A/10^k,(A+1)/10^k)$。",
+        "若前缀在较后位置开始，移动小数点并取小数部分；其最简分母整除原分母。",
+        "与附近简单分数比较，并利用非零整数交叉乘积差得到下界。"
+      ],
+      "example_en": "Prove no reduced fraction with denominator at most $10$ lies in $[0.501,0.510)$.",
+      "example_zh": "证明分母不超过 $10$ 的既约分数不可能位于 $[0.501,0.510)$。",
+      "solution_en": [
+        "Such a fraction $m/n$ is strictly above $1/2$, so $2m-n\\ge1$.",
+        "Its distance above $1/2$ is at least $1/(2n)\\ge1/20=0.05$.",
+        "But the stated interval requires that distance be below $0.010$. This contradiction excludes every such denominator."
+      ],
+      "solution_zh": [
+        "这样的分数 $m/n$ 严格大于 $1/2$，所以 $2m-n\\ge1$。",
+        "它与 $1/2$ 的距离至少为 $1/(2n)\\ge1/20=0.05$。",
+        "而给定区间要求该距离小于 $0.010$，矛盾，故排除所有这些分母。"
+      ],
+      "tip_en": "The strict upper endpoint is essential when the next decimal prefix begins there.",
+      "tip_zh": "右端点正是下一小数前缀开始处，严格性不可忽略。",
+      "question_ids": [
+        "AIME-2003-I-Q14"
+      ],
+      "prerequisites": [
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "NT07-M05",
+      "title_en": "Locate the unique least valuation in a rational sum",
+      "title_zh": "定位有理和中唯一最低赋值项",
+      "steps_en": [
+        "Reduce each summand and compare its exponent of a chosen prime in the denominator.",
+        "Clear the largest denominator power. If exactly one resulting numerator is a unit modulo the prime, the total cannot cancel that prime.",
+        "Compute the exact surviving denominator exponent; use a factorial valuation formula when needed."
+      ],
+      "steps_zh": [
+        "约分每项，并比较所选质数在分母中的指数。",
+        "清除最大分母幂。若所得分子中恰有一项模该质数为单位，则总和不能约去该质数。",
+        "算出保留的精确分母指数，必要时使用阶乘赋值公式。"
+      ],
+      "example_en": "Find the power of $2$ in the reduced denominator of $1/2+3/8+5/32$.",
+      "example_zh": "求 $1/2+3/8+5/32$ 的最简分母中 $2$ 的指数。",
+      "solution_en": [
+        "The common denominator is $32$, giving numerator $16+12+5$.",
+        "Only the last contribution is odd, so the total numerator $33$ is odd.",
+        "No two-factor cancellation occurs: the reduced denominator remains $32=2^5$."
+      ],
+      "solution_zh": [
+        "共同分母为 $32$，分子为 $16+12+5$。",
+        "只有最后一项贡献为奇数，故总分子 $33$ 为奇数。",
+        "不能约去任何因子二，所以最简分母仍为 $32=2^5$。"
+      ],
+      "tip_en": "If two terms share the lowest valuation, cancellation may occur and needs another analysis.",
+      "tip_zh": "若两项共享最低赋值，则可能相消，须另作分析。",
+      "question_ids": [
+        "AIME-2009-II-Q07"
+      ],
+      "prerequisites": [
+        "NT01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2014-II-Q04",
+    "AIME-2023-II-Q05",
+    "AIME-2006-I-Q06",
+    "AIME-2003-I-Q14",
+    "AIME-2022-I-Q13"
+  ],
+  "coverage_by_question": {
+    "AIME-2009-II-Q07": {
+      "method_ids": [
+        "NT07-M05"
+      ],
+      "prerequisites": [
+        "NT01"
+      ]
+    },
+    "AIME-2006-II-Q14": {
+      "method_ids": [
+        "NT07-M02"
+      ],
+      "prerequisites": [
+        "NT01",
+        "NT06"
+      ]
+    },
+    "AIME-2014-II-Q04": {
+      "method_ids": [
+        "NT07-M01"
+      ],
+      "prerequisites": [
+        "NT03",
+        "NT06"
+      ]
+    },
+    "AIME-2023-II-Q05": {
+      "method_ids": [
+        "NT07-M02"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2006-I-Q06": {
+      "method_ids": [
+        "NT07-M01"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2003-I-Q14": {
+      "method_ids": [
+        "NT07-M04"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2022-I-Q13": {
+      "method_ids": [
+        "NT07-M03"
+      ],
+      "prerequisites": [
+        "CO04",
+        "NT08"
+      ]
+    },
+    "AIME-2014-I-Q03": {
+      "method_ids": [
+        "NT07-M02"
+      ],
+      "prerequisites": [
+        "NT08"
+      ]
+    }
+  },
+  "review": {
+    "author": "source_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Mapped against every currently integrated primary and secondary route. General steps and worked examples are separate. Original question conditions and full solutions remain in the companion question bank."
+  },
+  "unresolved_issues": []
+}

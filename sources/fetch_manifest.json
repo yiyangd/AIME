@@ -1,0 +1,1266 @@
+[
+  {
+    "year": 2000,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2000I",
+    "path": "sources/raw/2000I.en.json",
+    "sha256": "4ea7de12611a0af80aea9add6d5ed07c081d31456a40a2009a2de06c6b2e6050",
+    "structured_json_sha256": "ef58765f274d53f4085beb096cc7fd17921b550f0c19d7394609600c9370c09a",
+    "retrieved_at": "2026-11-05T09:43:44.114877+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 972654
+  },
+  {
+    "year": 2000,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2000II",
+    "path": "sources/raw/2000II.en.json",
+    "sha256": "cc367d6e25a81353178f61b2b4945164717fcdac588588533e337f0dd9f52b44",
+    "structured_json_sha256": "f69f6f3daa161d0ff74e6a102e504d2bceb14dacdc3b4898c71bcb047b584d32",
+    "retrieved_at": "2026-11-05T09:43:44.124505+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 942148
+  },
+  {
+    "year": 2001,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2001I",
+    "path": "sources/raw/2001I.en.json",
+    "sha256": "66e164850caf6af50abfd71827617d421a6a800ccebb45fb214d229b41e83fc8",
+    "structured_json_sha256": "e8d5ba17cfc2e0a6694fe61d0aa068aecdd475d9865691e9b9deb5c20d950934",
+    "retrieved_at": "2026-11-05T09:43:43.979444+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 971384
+  },
+  {
+    "year": 2001,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2001II",
+    "path": "sources/raw/2001II.en.json",
+    "sha256": "0fdb9a453fea53d3ccdd5b94e11352d31bcd34a78fa20501fb55b152c6e16343",
+    "structured_json_sha256": "30fb647e0bbb7a1c00286d8547bcb6a34ddf11d02d39f0e447fe0896ec93096e",
+    "retrieved_at": "2026-11-05T09:43:44.289421+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 993949
+  },
+  {
+    "year": 2002,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2002I",
+    "path": "sources/raw/2002I.en.json",
+    "sha256": "9a49f3c3cbca24081d6159413d406624ddd958b54cd479a0dda817d7b8d44d29",
+    "structured_json_sha256": "409c0d37555d5a15be4f145766fa6c10a83178a8864d3b0548e8eb1a13372c2c",
+    "retrieved_at": "2026-11-05T09:43:44.453512+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1019945
+  },
+  {
+    "year": 2002,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2002II",
+    "path": "sources/raw/2002II.en.json",
+    "sha256": "7440cea78cab7837bf456715883ef35c1f4be498472ac1feee3568eb8e63c128",
+    "structured_json_sha256": "1ac9ccb1c6b0a46a004aa9b4858c8fdeea5719c4c82d46859ebae2543b5a60f9",
+    "retrieved_at": "2026-11-05T09:43:44.532366+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 973715
+  },
+  {
+    "year": 2003,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2003I",
+    "path": "sources/raw/2003I.en.json",
+    "sha256": "dc23998dab7b1d6b1b1041c7dfde1df500c71fc72f1d3bcc9cbee61acb4b2c56",
+    "structured_json_sha256": "c8d87c4f8c94651dedc75596de545822a39f3ad3b27a0b45c3f3baf2f729b30a",
+    "retrieved_at": "2026-11-05T09:43:44.578804+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 899815
+  },
+  {
+    "year": 2003,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2003II",
+    "path": "sources/raw/2003II.en.json",
+    "sha256": "6dfc03c29a4c3cd3b7d1489e3884f02f7911cd259eea212f869c2da21455bf66",
+    "structured_json_sha256": "45a7b8e93508efb40fd4f200be88403749669936df846b41bbf56bd299f1e392",
+    "retrieved_at": "2026-11-05T09:43:44.779269+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1013274
+  },
+  {
+    "year": 2004,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2004I",
+    "path": "sources/raw/2004I.en.json",
+    "sha256": "d7c340e88d3e2bb84fdc1c9731d6e18cfa9f99e0086f690905138a2178fcc57e",
+    "structured_json_sha256": "7cf866d85381692aaeeed620b691432481db4352448a903816cbc4245480e79b",
+    "retrieved_at": "2026-11-05T09:43:44.857680+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 997125
+  },
+  {
+    "year": 2004,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2004II",
+    "path": "sources/raw/2004II.en.json",
+    "sha256": "c0c52e94f93fb4c007de6af1d116905387655cce537db9d936cd4dee8cccc9f0",
+    "structured_json_sha256": "18c3a6831532edc0e3cd607d3f8da89cfa78ea94100ac8889e63fad4a887d7ae",
+    "retrieved_at": "2026-11-05T09:43:45.111045+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 980541
+  },
+  {
+    "year": 2005,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2005I",
+    "path": "sources/raw/2005I.en.json",
+    "sha256": "c73c71ef848510e6b4223a1c1a59ab6a00f970e81f3f4c5d72ae3b2d4352cb69",
+    "structured_json_sha256": "30cd2db4db5f69e35311eec06aef5e14509cd9338dd30c7a60b6108b6a503a3f",
+    "retrieved_at": "2026-11-05T09:43:44.984759+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 879796
+  },
+  {
+    "year": 2005,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2005II",
+    "path": "sources/raw/2005II.en.json",
+    "sha256": "f93a2cd3c7de919f249c44b0adad444ca5c01597b3c96e47f205bd3ae44945c5",
+    "structured_json_sha256": "cd8a19be6e22b9a76cb50bdd195901b0843a9d27742f3c59dc5dea611e809f38",
+    "retrieved_at": "2026-11-05T09:43:45.108482+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 943163
+  },
+  {
+    "year": 2006,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2006I",
+    "path": "sources/raw/2006I.en.json",
+    "sha256": "e6d370899f87b7c741c94beaa305407ae7fff4d1540d59e508f3c070eb4c5481",
+    "structured_json_sha256": "7600cb270d3105c222ef42ed34aaa9bdfc923cb06fa8c11df209bb4dbb943666",
+    "retrieved_at": "2026-11-05T09:43:45.342730+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 904648
+  },
+  {
+    "year": 2006,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2006II",
+    "path": "sources/raw/2006II.en.json",
+    "sha256": "cde187c593c9441e8d5047035a60a5f697f7340c6e04a4a1673f8346a1e90bd6",
+    "structured_json_sha256": "837c547f0d0b04b2789a97930644fab337383947d8c9f568a8afb30c171a5289",
+    "retrieved_at": "2026-11-05T09:43:45.397943+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 980561
+  },
+  {
+    "year": 2007,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2007I",
+    "path": "sources/raw/2007I.en.json",
+    "sha256": "d9544fd20f8879026ccb3dfdf493ae4a9a2fc3c0e9dd1cf1e8c59f3d7ec5513f",
+    "structured_json_sha256": "8ba5be601be18be72e385f6f16da03d06e731f25290b03fa6b324142556b0869",
+    "retrieved_at": "2026-11-05T09:43:45.709326+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1084526
+  },
+  {
+    "year": 2007,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2007II",
+    "path": "sources/raw/2007II.en.json",
+    "sha256": "b78c3ca21fc006424dd4911d640023ef2cf3ec01cad13f9b874138093ad0f388",
+    "structured_json_sha256": "349fa1b23c3d60a5707d24009177f2c18c0515de3ee95d72d98c302863cc76ea",
+    "retrieved_at": "2026-11-05T09:43:45.560986+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 930770
+  },
+  {
+    "year": 2008,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2008I",
+    "path": "sources/raw/2008I.en.json",
+    "sha256": "4a062e3673423f638a599f20b60b74c40f4c5523b8fa24abe09d3d5b32d5fc14",
+    "structured_json_sha256": "7a09dcbbc2aaacd33a3a93460de16e84cc847b19cc5b2afcde0040547c6bf643",
+    "retrieved_at": "2026-11-05T09:43:45.718444+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1061417
+  },
+  {
+    "year": 2008,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2008II",
+    "path": "sources/raw/2008II.en.json",
+    "sha256": "ccd6e0e514bc112e75dbe11d23e8a77d3743315e9a3c803cb3aa7da33c62fe42",
+    "structured_json_sha256": "e9e52b9607a17c491726a12549ac080391cb02252f62ad87e5b1cef6653a1dd9",
+    "retrieved_at": "2026-11-05T09:43:45.835014+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1065695
+  },
+  {
+    "year": 2009,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2009I",
+    "path": "sources/raw/2009I.en.json",
+    "sha256": "223b1e1d27147a9e49099aaecfc12137cf16f696d656e03355a3db5df0f33070",
+    "structured_json_sha256": "9b09cc6354dd7e899bb4db46b409efe514c2e6d0c05822d719745dca91769bd3",
+    "retrieved_at": "2026-11-05T09:43:45.957109+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 930176
+  },
+  {
+    "year": 2009,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2009II",
+    "path": "sources/raw/2009II.en.json",
+    "sha256": "2dd5ec570b51a5ac816634f2962d2b0760cb179aa561d50dee5a369dd83a7fca",
+    "structured_json_sha256": "5e5ea6ef0a98b3d70fbf7faedc038ecfe1824059b87d1bf77d42bb4fcc2fe42b",
+    "retrieved_at": "2026-11-05T09:43:46.221234+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1037779
+  },
+  {
+    "year": 2010,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2010I",
+    "path": "sources/raw/2010I.en.json",
+    "sha256": "dbe7fcd086b3e44f58aae32113b651e5bb54255faa326c6762090c59fa38e5cb",
+    "structured_json_sha256": "dab88a34a59252cc362a684572b0d519d113c30bc7a75e570fa3a21244653b12",
+    "retrieved_at": "2026-11-05T09:43:46.263021+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1013136
+  },
+  {
+    "year": 2010,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2010II",
+    "path": "sources/raw/2010II.en.json",
+    "sha256": "14e3658eb83b677ea6bca015b722511d2afac5f9ec365aa19c03c9b9d3677b94",
+    "structured_json_sha256": "0f5851fb727656169a5d8ca241ac022ca59565307a1136fa90c7513758134864",
+    "retrieved_at": "2026-11-05T09:43:46.211664+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 995882
+  },
+  {
+    "year": 2011,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2011I",
+    "path": "sources/raw/2011I.en.json",
+    "sha256": "8d1521103641f70648db8a2f30af91eeb3aff6779c30f0ac27e2ef456fe6acb5",
+    "structured_json_sha256": "cd6f7bef102542033ea1edf5578557926d5bf7a83afa7fce92cdeb34e20e924f",
+    "retrieved_at": "2026-11-05T09:43:46.357362+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1085147
+  },
+  {
+    "year": 2011,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2011II",
+    "path": "sources/raw/2011II.en.json",
+    "sha256": "63ee75cde819b837ddb75de0fb1b44f8a142de3b881b3b4128de9617721c6d61",
+    "structured_json_sha256": "768d28ba1fb1102a19ef8a19d9787124678dbbf935ced44bfedafc0c0840f6b5",
+    "retrieved_at": "2026-11-05T09:43:46.600965+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1093343
+  },
+  {
+    "year": 2012,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2012I",
+    "path": "sources/raw/2012I.en.json",
+    "sha256": "49073fd22f16c81ff61e188e79116b7b45ff2aba77083d1228836b24f742fd7d",
+    "structured_json_sha256": "940c675463be3f0c6de7800aeddd83589661a69454712cc951624cfc997da5a6",
+    "retrieved_at": "2026-11-05T09:43:46.591887+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 919324
+  },
+  {
+    "year": 2012,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2012II",
+    "path": "sources/raw/2012II.en.json",
+    "sha256": "b45a5a794b6c7bf678a73fed6c1713b940330effee32a0136303612753148647",
+    "structured_json_sha256": "7e9b72197d96375538f902c708131ab1911853cd590e86ef7c277c8647c369de",
+    "retrieved_at": "2026-11-05T09:43:46.700042+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 964965
+  },
+  {
+    "year": 2013,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2013I",
+    "path": "sources/raw/2013I.en.json",
+    "sha256": "0da23bee44d7e9f2fd1c70420346786e689baa6a34e86a0ef4c4660cd0fe3c0b",
+    "structured_json_sha256": "f9e90e055756363bc47ada4376816a8379bfa114253d707fb9e7e223cb3e3daf",
+    "retrieved_at": "2026-11-05T09:43:46.742549+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1085137
+  },
+  {
+    "year": 2013,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2013II",
+    "path": "sources/raw/2013II.en.json",
+    "sha256": "825c8b4e8d5d762c063a22979081273587473828bcf81a62f413aef780ad0360",
+    "structured_json_sha256": "8f25e90bdf98a99b1c425b3d1178dad885d4bcfbd8bfb8c9d294784fffe2f48d",
+    "retrieved_at": "2026-11-05T09:43:47.195396+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1059469
+  },
+  {
+    "year": 2014,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2014I",
+    "path": "sources/raw/2014I.en.json",
+    "sha256": "b8a1705321124f99a6ad41fef0be73b00296abd1f34b72d17427712fedb74a36",
+    "structured_json_sha256": "2c7d5242499c164e99de726ae0a7478e8286ee480e62250fd84e825c782e0c88",
+    "retrieved_at": "2026-11-05T09:43:47.083076+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1020428
+  },
+  {
+    "year": 2014,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2014II",
+    "path": "sources/raw/2014II.en.json",
+    "sha256": "93c93743bd530ee0fd9ef2382c7c2917cc7f5d8aa2df67ac256ea48f39cb2786",
+    "structured_json_sha256": "9ffa56b08320b7129702428cd812a8630cc9d363485690aee33b9d28a82af000",
+    "retrieved_at": "2026-11-05T09:43:47.162263+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1045023
+  },
+  {
+    "year": 2015,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2015I",
+    "path": "sources/raw/2015I.en.json",
+    "sha256": "19ea3e4113cd4060e5b21084a04dd9d677a1bcd2883d175fa66d7b6eb61cbbf5",
+    "structured_json_sha256": "1b889bc9cee799970929d7aad5cf49de495b5fa0f0210274c984bc65c0c15fd3",
+    "retrieved_at": "2026-11-05T09:43:47.283853+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1030864
+  },
+  {
+    "year": 2015,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2015II",
+    "path": "sources/raw/2015II.en.json",
+    "sha256": "c9ab58281aa5034bccb54066aa26044c742fc543f963e2251020c780bf9d860e",
+    "structured_json_sha256": "d73a68e3469cca6d506452caa703860230fabd0efe58e125ce0ac732e5d3c4e4",
+    "retrieved_at": "2026-11-05T09:43:47.455213+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 913977
+  },
+  {
+    "year": 2016,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2016I",
+    "path": "sources/raw/2016I.en.json",
+    "sha256": "bacaf29b66cad1a0e2c958eb105a2b17001a085b11bd058546cab132797aba95",
+    "structured_json_sha256": "76ae67e4736dab739a893cbf028d4772e186f59100293a9dd2651edfa20138ac",
+    "retrieved_at": "2026-11-05T09:43:47.619808+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1015429
+  },
+  {
+    "year": 2016,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2016II",
+    "path": "sources/raw/2016II.en.json",
+    "sha256": "7b71ac563ce3d7469ae52f021482a77dc24bba8476220e0914bf0c1ba968bc82",
+    "structured_json_sha256": "bf77e28064494543cc0c52af679abdfdc5053ef7a12fcb77b980c81ff2ea9d81",
+    "retrieved_at": "2026-11-05T09:43:47.585647+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1096831
+  },
+  {
+    "year": 2017,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2017I",
+    "path": "sources/raw/2017I.en.json",
+    "sha256": "4ea4bce7dc2b338f0aded13a5e6fb1333a3ea613483c366cfd1e358989dc8950",
+    "structured_json_sha256": "3a728a3e25bf925c05c5a9a1d531cc30430aba0aa6f9e4c1aec0f14797d9de01",
+    "retrieved_at": "2026-11-05T09:43:47.824913+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 976263
+  },
+  {
+    "year": 2017,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2017II",
+    "path": "sources/raw/2017II.en.json",
+    "sha256": "5f80c1d7689a05699315a82d4a71d5d4e51b9fbf13cb9bcb6d60bcf7406977a6",
+    "structured_json_sha256": "c1427cf79816f6e3422c34a67588c0e50557d4f8e442268f5f433e49a85d64a0",
+    "retrieved_at": "2026-11-05T09:43:47.828044+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 995584
+  },
+  {
+    "year": 2018,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2018I",
+    "path": "sources/raw/2018I.en.json",
+    "sha256": "99411675a3989e1d7ea29b39298f6a4c936e1ec26c29d27f7d46a7c0421cdef5",
+    "structured_json_sha256": "c3aff344d944a986ff68baffdfc6bc0d4f38b8621d14edbca664134262883811",
+    "retrieved_at": "2026-11-05T09:43:48.080228+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1004775
+  },
+  {
+    "year": 2018,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2018II",
+    "path": "sources/raw/2018II.en.json",
+    "sha256": "90910a27033b938fb3c8f90b8fe710eb91a8a7cbec2a48d0563f0f6207535b07",
+    "structured_json_sha256": "ed86f95429a8bcabb28830148ff3abc89068a7cd463fb0abf2b4da65e2ff01ae",
+    "retrieved_at": "2026-11-05T09:43:48.161544+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1064756
+  },
+  {
+    "year": 2019,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2019I",
+    "path": "sources/raw/2019I.en.json",
+    "sha256": "ae407a14a5ab2da867d3aae0acaf2b1fccede128e774ffa489982e73d870059f",
+    "structured_json_sha256": "e9f1924644e8762f5da51a3ba89fc35a5f17c6fbe9c7dcbf0301d5383eaf45e5",
+    "retrieved_at": "2026-11-05T09:43:48.170817+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1164587
+  },
+  {
+    "year": 2019,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2019II",
+    "path": "sources/raw/2019II.en.json",
+    "sha256": "316704cf193ca464b4fc6ac5037354ae2ae5a135a08b3b3b9175ac75c84b0097",
+    "structured_json_sha256": "13e51a07107162f464349421e80c5d83ec67105c8e0ca71adf9cb035389885be",
+    "retrieved_at": "2026-11-05T09:43:48.264703+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1246016
+  },
+  {
+    "year": 2020,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2020I",
+    "path": "sources/raw/2020I.en.json",
+    "sha256": "0b7661b8791c2332236676f1c569a35166fdcaca3c92cc7e6707761ebcb6565b",
+    "retrieved_at": "2026-11-05T09:36:16.009874+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1124586
+  },
+  {
+    "year": 2020,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2020I",
+    "path": "sources/raw/2020I.zh.json",
+    "sha256": "67f7df271488935b2b315df6c3253a9da5b15ffa012f7ad07a2ae7e0f0068171",
+    "retrieved_at": "2026-11-05T09:36:16.261675+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2046837
+  },
+  {
+    "year": 2020,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2020II",
+    "path": "sources/raw/2020II.en.json",
+    "sha256": "c867190e6b9b84289f7adf47e6d5b8080ec6315d5ddb400b459916f401d406b8",
+    "retrieved_at": "2026-11-05T09:36:16.174543+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1188740
+  },
+  {
+    "year": 2020,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2020II",
+    "path": "sources/raw/2020II.zh.json",
+    "sha256": "d1d2cfb04edd2906cd9563e9a2bacdc2aff317c081cdccf4d7e431dc3e440022",
+    "retrieved_at": "2026-11-05T09:36:16.128824+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2175556
+  },
+  {
+    "year": 2021,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2021I",
+    "path": "sources/raw/2021I.en.json",
+    "sha256": "f55638830f095f8bb0e0d8827a2bf9890229efc5484b214e8208cb3590b6ed53",
+    "retrieved_at": "2026-11-05T09:36:16.406302+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1195596
+  },
+  {
+    "year": 2021,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2021I",
+    "path": "sources/raw/2021I.zh.json",
+    "sha256": "038c449a7c5430e29a3bddca5101337a2d416e1fb5c61d66b4094ffcade86668",
+    "retrieved_at": "2026-11-05T09:36:16.887220+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2188348
+  },
+  {
+    "year": 2021,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2021II",
+    "path": "sources/raw/2021II.en.json",
+    "sha256": "a6c1e9c6eeb1c7e49f2160c3c1cc5415bb697d6a1040c34ae694661120676288",
+    "retrieved_at": "2026-11-05T09:36:16.592847+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1101055
+  },
+  {
+    "year": 2021,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2021II",
+    "path": "sources/raw/2021II.zh.json",
+    "sha256": "4454b6f486796421c29aa359669b92f4e8367cdd7d38e29675fc6f7ace4a7866",
+    "retrieved_at": "2026-11-05T09:36:16.646693+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2001657
+  },
+  {
+    "year": 2022,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2022I",
+    "path": "sources/raw/2022I.en.json",
+    "sha256": "e93ec9fd565f4fbaf8f140bd31bcf8d7ad3d6207dcd3f45b72f7a1ab621cfe44",
+    "retrieved_at": "2026-11-05T09:36:16.836734+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1164366
+  },
+  {
+    "year": 2022,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2022I",
+    "path": "sources/raw/2022I.zh.json",
+    "sha256": "b10502b1bf54306feebda9dcb4edb39a608cbc0e06b0252d363b8df1c21a48dd",
+    "retrieved_at": "2026-11-05T09:36:17.126049+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2122199
+  },
+  {
+    "year": 2022,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2022II",
+    "path": "sources/raw/2022II.en.json",
+    "sha256": "bbf7f4fab53fddff68fb37d031af61455b353bad459a70aa4140ac9d16c8bfe1",
+    "retrieved_at": "2026-11-05T09:36:17.182676+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1191222
+  },
+  {
+    "year": 2022,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2022II",
+    "path": "sources/raw/2022II.zh.json",
+    "sha256": "2e5429d6fcef526b2ac9944223395202885f6faed3cf44067b575cf5ef515187",
+    "retrieved_at": "2026-11-05T09:36:17.501396+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2181167
+  },
+  {
+    "year": 2023,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2023I",
+    "path": "sources/raw/2023I.en.json",
+    "sha256": "eb841eb3968e9cb6e4425e62e0dcf1a0701ae20a63d2ef761f7d469958368edb",
+    "retrieved_at": "2026-11-05T09:36:17.531486+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1109738
+  },
+  {
+    "year": 2023,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2023I",
+    "path": "sources/raw/2023I.zh.json",
+    "sha256": "189ddeac0ebddac855e18b5487b79bf0d1634d90d8e385d6b4896ec225ad2c6d",
+    "retrieved_at": "2026-11-05T09:36:17.658986+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2020805
+  },
+  {
+    "year": 2023,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2023II",
+    "path": "sources/raw/2023II.en.json",
+    "sha256": "7b996ff88284b9253bfb32b78af1c73d6ee330466deb7e63717a04e1d2e60986",
+    "retrieved_at": "2026-11-05T09:36:17.690398+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1067463
+  },
+  {
+    "year": 2023,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2023II",
+    "path": "sources/raw/2023II.zh.json",
+    "sha256": "e62fd39a3f20156670c86ed639f9e21f34689370808ab27c904028d39966e851",
+    "retrieved_at": "2026-11-05T09:36:18.055855+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1936350
+  },
+  {
+    "year": 2024,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2024I",
+    "path": "sources/raw/2024I.en.json",
+    "sha256": "a796a21587c2204849e7f5f1c0f777b9fca33a2e7edc6859494ff30f152b69ea",
+    "retrieved_at": "2026-11-05T09:36:17.891823+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1024485
+  },
+  {
+    "year": 2024,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2024I",
+    "path": "sources/raw/2024I.zh.json",
+    "sha256": "6e28886b4b894c3044826acc98502e0f754124c2845b2c54d6bb4d37e66b3965",
+    "retrieved_at": "2026-11-05T09:36:18.153150+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1856796
+  },
+  {
+    "year": 2024,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2024II",
+    "path": "sources/raw/2024II.en.json",
+    "sha256": "13b5a4af149381a966cc6cadd458539161259b16dec8d0c9c0b363f616062ffd",
+    "retrieved_at": "2026-11-05T09:36:17.996331+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1007144
+  },
+  {
+    "year": 2024,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2024II",
+    "path": "sources/raw/2024II.zh.json",
+    "sha256": "17278a057d83dc7eda911c2c7372ca193230d495e6ab45808fbdcd0c05088aae",
+    "retrieved_at": "2026-11-05T09:36:18.830688+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1819339
+  },
+  {
+    "year": 2025,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2025I",
+    "path": "sources/raw/2025I.en.json",
+    "sha256": "58d5a05a892bfe283be00a531b408aed7bd9baf96cdb0b7594977872bd91f92d",
+    "retrieved_at": "2026-11-05T09:36:18.479319+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1079012
+  },
+  {
+    "year": 2025,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2025I",
+    "path": "sources/raw/2025I.zh.json",
+    "sha256": "bc3f8a80e081da1703207006b7c0342cbfbd16298d9d018b5b52cce81aa22b1e",
+    "retrieved_at": "2026-11-05T09:36:18.796032+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1951379
+  },
+  {
+    "year": 2025,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2025II",
+    "path": "sources/raw/2025II.en.json",
+    "sha256": "efc65b8a9ab97b73b5c9b88a6c6f71205db9cd1ce591bd3e94a78aa307df2944",
+    "retrieved_at": "2026-11-05T09:36:18.564629+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1196040
+  },
+  {
+    "year": 2025,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2025II",
+    "path": "sources/raw/2025II.zh.json",
+    "sha256": "8a256c9abe06dba2b910c7fdc81d19d3b4de9cbd8e0564968b879c586733fd39",
+    "retrieved_at": "2026-11-05T09:36:18.976484+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2188172
+  },
+  {
+    "year": 2026,
+    "form": "I",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2026I",
+    "path": "sources/raw/2026I.en.json",
+    "sha256": "96d0f6096da92d9cd6edbc708193077d81d6c9dc31ea79580af78cbc9209867c",
+    "retrieved_at": "2026-11-05T09:36:18.746143+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1175594
+  },
+  {
+    "year": 2026,
+    "form": "I",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2026I",
+    "path": "sources/raw/2026I.zh.json",
+    "sha256": "e9c1c0d648669cc98ce8fae6ed3a50a7b7f7ee698e15c8075f63e0f5a6352941",
+    "retrieved_at": "2026-11-05T09:36:19.254680+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2144963
+  },
+  {
+    "year": 2026,
+    "form": "II",
+    "locale": "en",
+    "url": "https://live.poshenloh.com/past-contests/aime/2026II",
+    "path": "sources/raw/2026II.en.json",
+    "sha256": "e331a418b02eeaa54b4bc854135abdeae7cabcc8980a30bbd35d1a53c51315c0",
+    "retrieved_at": "2026-11-05T09:36:19.194049+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 1169740
+  },
+  {
+    "year": 2026,
+    "form": "II",
+    "locale": "zh",
+    "url": "https://live.poshenloh.com/zh/past-contests/aime/2026II",
+    "path": "sources/raw/2026II.zh.json",
+    "sha256": "356cf44b8b8a11b6f35a9d99f043033ba990c0b60627ee1de9eda93a70e05521",
+    "retrieved_at": "2026-11-05T09:36:19.480101+00:00",
+    "props_keys": [
+      "_nextI18Next",
+      "contest",
+      "year",
+      "locale",
+      "baseQuestions",
+      "translatedLocales"
+    ],
+    "byte_length": 2130319
+  }
+]

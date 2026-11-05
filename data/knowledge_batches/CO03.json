@@ -1,0 +1,550 @@
+{
+  "subtype_id": "CO03",
+  "introduction_en": "Replace an arrangement by its ordered part sizes, multiplicities, or gaps. Before applying stars and bars, decide which parts are labeled, whether zero is allowed, and whether upper bounds are active. Generating functions record these same choices algebraically.",
+  "introduction_zh": "将排列转成有序部件大小、重数或间隔。使用隔板法前，须判断部件是否有标识、能否为零以及上界是否起作用。生成函数是同一选择过程的代数记录。",
+  "prerequisites": [
+    "CO01",
+    "CO02"
+  ],
+  "methods": [
+    {
+      "method_id": "CO03-M01",
+      "title_en": "Normalize lower bounds and use stars and bars",
+      "title_zh": "平移下界并使用隔板法",
+      "steps_en": [
+        "Introduce one variable for each labeled part and translate any lower bounds to zero.",
+        "For $r$ nonnegative parts totaling $N$, use $\\binom{N+r-1}{r-1}$; for positive parts, subtract one first.",
+        "For a multiset, interpret parts as multiplicities; for prime factors, distribute each prime exponent independently."
+      ],
+      "steps_zh": [
+        "为每个有标识部件设变量，将下界平移为零。",
+        "把 $N$ 分成 $r$ 个非负部分有 $\\binom{N+r-1}{r-1}$ 种；正部分先各减一。",
+        "多重集用重数作为部分，素因子分配则对每种指数独立拆分。"
+      ],
+      "example_en": "Four identical tokens go into five labeled boxes, with exactly two boxes nonempty. Count the distributions.",
+      "example_zh": "四枚相同棋子放入五个有标识盒子，恰有两个非空，求分配数。",
+      "solution_en": [
+        "Choose the two nonempty boxes in $\\binom52=10$ ways.",
+        "If their positive counts are $u,v$, then $u+v=4$ has $\\binom31=3$ solutions.",
+        "The choice of boxes and counts uniquely gives the distribution, so the answer is $30$."
+      ],
+      "solution_zh": [
+        "选两个非空盒子有 $\\binom52=10$ 种。",
+        "两个正重数满足 $u+v=4$，有 $\\binom31=3$ 组。",
+        "盒子与重数唯一决定分配，所以共有三十种。"
+      ],
+      "tip_en": "A sorted list with repetitions corresponds to multiplicities, not to an arbitrary ordering of the parts.",
+      "tip_zh": "可重复的有序非降列表对应重数，不能再任意排列部分。",
+      "question_ids": [
+        "AIME-2000-II-Q05",
+        "AIME-2001-I-Q06",
+        "AIME-2004-II-Q08",
+        "AIME-2006-II-Q08",
+        "AIME-2007-II-Q02",
+        "AIME-2011-II-Q06",
+        "AIME-2013-II-Q12",
+        "AIME-2020-I-Q09",
+        "AIME-2024-II-Q03",
+        "AIME-2026-I-Q02"
+      ],
+      "prerequisites": [
+        "CO02",
+        "NT01"
+      ],
+      "extensions_en": [
+        "The number of nondecreasing $k$-tuples drawn from $r$ values is $\\binom{r+k-1}{k}$, because their multiplicities are nonnegative and total $k$. The number of all positive compositions of $N$ with an arbitrary number of parts is $2^{N-1}$, choosing cuts among its $N-1$ internal gaps."
+      ],
+      "extensions_zh": [
+        "从 $r$ 种值中选非降 $k$ 元组共有 $\\binom{r+k-1}{k}$ 种，因为重数非负且和为 $k$。将 $N$ 分成任意数量正部分的所有有序分拆共有 $2^{N-1}$ 种，等价于选择内部 $N-1$ 个间隔是否切开。"
+      ]
+    },
+    {
+      "method_id": "CO03-M02",
+      "title_en": "Enforce upper bounds by coefficients or clipped intervals",
+      "title_zh": "用系数或截断区间处理上界",
+      "steps_en": [
+        "Encode a variable taking values in $A$ by $\\sum_{a\\in A}x^a$; multiply for independent labeled variables.",
+        "Extract the target coefficient, or fix some variables and intersect the remaining integer interval with every bound.",
+        "If upper-bound violations are easier to count, shift a violating variable down by its first forbidden value and apply inclusion-exclusion.",
+        "When congruences force residues, substitute those residues first; the remaining equation may become ordinary stars and bars."
+      ],
+      "steps_zh": [
+        "变量可取集合 $A$ 时，用 $\\sum_{a\\in A}x^a$ 编码；独立有标识变量对应相乘。",
+        "提取目标系数，或固定部分变量并把其余整数区间与所有边界相交。",
+        "若越界容易计数，将越界变量减去首次禁止值，再容斥。",
+        "若同余迫使变量落在指定剩余类，先代入剩余类，余下方程常可化为隔板法。"
+      ],
+      "example_en": "How many triples $0\\le x,y,z\\le3$ satisfy $x+y+z=7$?",
+      "example_zh": "满足 $0\\le x,y,z\\le3$ 且 $x+y+z=7$ 的整数三元组有多少个？",
+      "solution_en": [
+        "The coefficient is $[t^7](1+t+t^2+t^3)^3$. Without the upper bounds there are $\\binom92=36$ triples.",
+        "For $x\\ge4$, shifting $x$ down by four gives $\\binom52=10$ triples, and likewise for the other two variables.",
+        "Two violations would sum to at least eight and cannot occur. Therefore the answer is $36-3\\cdot10=6$."
+      ],
+      "solution_zh": [
+        "所求为 $[t^7](1+t+t^2+t^3)^3$。不加上界有 $\\binom92=36$ 组。",
+        "若 $x\\ge4$，将它减四后有 $\\binom52=10$ 组，其余两变量同理。",
+        "两变量同时越界至少和为八，不可能，所以共有 $36-3\\cdot10=6$ 组。"
+      ],
+      "tip_en": "A coefficient of a reciprocal product counts solutions only while numerator terms above the target degree are irrelevant.",
+      "tip_zh": "倒数乘积的系数可以计解，但须确认分子的其他项次数均高于目标次数。",
+      "question_ids": [
+        "AIME-2003-I-Q09",
+        "AIME-2009-I-Q09",
+        "AIME-2013-I-Q15",
+        "AIME-2018-I-Q01",
+        "AIME-2020-I-Q11",
+        "AIME-2022-II-Q13"
+      ],
+      "prerequisites": [
+        "CO02",
+        "CO04",
+        "NT03"
+      ],
+      "extensions_en": [
+        "For $L\\le ax+by\\le U$ and fixed $x$, the allowed $y$ lie between $\\lceil(L-ax)/b\\rceil$ and $\\lfloor(U-ax)/b\\rfloor$, further clipped by its own bounds. Use zero if the lower endpoint exceeds the upper. For products of geometric series, a coefficient of $\\prod_i(1-x^{w_i})^{-1}$ counts nonnegative solutions of $\\sum_iw_iu_i=N$."
+      ],
+      "extensions_zh": [
+        "对固定 $x$，若 $L\\le ax+by\\le U$，则 $y$ 的上下界分别为 $\\lceil(L-ax)/b\\rceil$ 与 $\\lfloor(U-ax)/b\\rfloor$，还须与自身范围取交；下界大于上界时贡献零。几何级数乘积 $\\prod_i(1-x^{w_i})^{-1}$ 的 $x^N$ 系数计算非负方程 $\\sum_iw_iu_i=N$ 的解数。"
+      ]
+    },
+    {
+      "method_id": "CO03-M03",
+      "title_en": "Describe rows and paths by runs and gaps",
+      "title_zh": "用连续段与间隔描述行和路径",
+      "steps_en": [
+        "Replace each maximal block by its positive length and record its type.",
+        "Separate choices of block order, block lengths, and the gaps that receive them.",
+        "Treat the two ends and a circular closing gap explicitly; insert distinct labels only after the type pattern is counted."
+      ],
+      "steps_zh": [
+        "把每个极大同类段替换为其正长度并记录类型。",
+        "分开计算段顺序、段长度与放置这些段的间隔。",
+        "明确处理两端与圆形闭合间隔；先计类型模式，再放不同标签。"
+      ],
+      "example_en": "Count binary words of length nine with four ones, where the ones form exactly two runs, of lengths one and three.",
+      "example_zh": "长度九的二进制串有四个一，且它们恰形成长度一与三的两个连续段，求串数。",
+      "solution_en": [
+        "The five zeros create six gaps, including the ends. The two one-runs must occupy different gaps.",
+        "Choose their gaps in $\\binom62$ ways, then assign which gap gets the length-three run in two ways.",
+        "The count is $2\\binom62=30$; the separating zero is already built into choosing different gaps."
+      ],
+      "solution_zh": [
+        "五个零产生含两端在内的六个间隔，两个一段须放在不同间隔。",
+        "选间隔有 $\\binom62$ 种，再用两种方式指定哪个间隔放长度三的段。",
+        "共有 $2\\binom62=30$ 种，不同间隔已自动保证两段间有零。"
+      ],
+      "tip_en": "The number of turns in a path is one less than its number of nonempty directional runs.",
+      "tip_zh": "路径转弯次数比非空方向段数少一。",
+      "question_ids": [
+        "AIME-2008-II-Q12",
+        "AIME-2009-I-Q10",
+        "AIME-2011-II-Q07",
+        "AIME-2015-II-Q12",
+        "AIME-2019-II-Q05",
+        "AIME-2024-I-Q06",
+        "AIME-2025-II-Q10"
+      ],
+      "prerequisites": [
+        "CO01",
+        "CO02"
+      ],
+      "extensions_en": [
+        "For $j$ occupied runs using $s$ cells and all run lengths one or two, the number of doubletons is $s-j$ and their ordered positions can be chosen in $\\binom{j}{s-j}$ ways. If $e$ empty cells supply the separators, placing runs in $e+1$ distinct gaps contributes $\\binom{e+1}{j}$.",
+        "Run lengths in $\\{1,\\ldots,h\\}$ have generating function $x+\\cdots+x^h$. With the initial symbol fixed, binary words with bounded runs correspond to positive compositions with those allowed part sizes."
+      ],
+      "extensions_zh": [
+        "若 $j$ 个占用段共含 $s$ 格，且段长仅一或二，则二元段有 $s-j$ 个，其顺序位置有 $\\binom{j}{s-j}$ 种。若 $e$ 个空格提供分隔，将各段放入 $e+1$ 个不同间隔另有 $\\binom{e+1}{j}$ 种。",
+        "段长限于 $\\{1,\\ldots,h\\}$ 时，单段生成函数为 $x+\\cdots+x^h$。固定首字母后，段长有限的二元串与允许这些部分大小的正有序分拆双射。"
+      ]
+    },
+    {
+      "method_id": "CO03-M04",
+      "title_en": "Separate part-size patterns from label assignments",
+      "title_zh": "分离部分大小模式与标签分配",
+      "steps_en": [
+        "List all feasible multiplicity or component-size patterns using the total constraints.",
+        "For labeled groups of sizes $n_i$, assign distinct objects in $N!/\\prod_i n_i!$ ways.",
+        "If some groups are interchangeable, divide by factorials of repeated group multiplicities; never divide for groups already distinguished by size or label."
+      ],
+      "steps_zh": [
+        "按总量限制列全可行重数或部件大小模式。",
+        "向大小为 $n_i$ 的有标识组分配不同物体，有 $N!/\\prod_i n_i!$ 种。",
+        "若某些组可互换，按重复大小组的重数阶乘归并；已由大小或标签区分的组不能再相除。"
+      ],
+      "example_en": "Split six distinct samples into unlabeled groups of sizes one, two, and three. Compare with splitting them into three unlabeled pairs.",
+      "example_zh": "将六个不同样本分成无标识的一元、二元、三元组；再与分成三个无标识二元组比较，各有多少种？",
+      "solution_en": [
+        "The sizes one, two, and three distinguish the groups, so the first count is $6!/(1!2!3!)=60$.",
+        "For three pairs, first label the pairs: $6!/(2!)^3=90$.",
+        "Every unlabeled partition has $3!$ labelings of its equal-sized pairs, so the second answer is $90/6=15$."
+      ],
+      "solution_zh": [
+        "一、二、三的大小已区分各组，第一种为 $6!/(1!2!3!)=60$。",
+        "三个二元组先加标签，计数为 $6!/(2!)^3=90$。",
+        "每个无标识分拆有 $3!$ 种等大小组标签，所以第二种为 $90/6=15$。"
+      ],
+      "tip_en": "A multinomial count is a weight attached to a size pattern, not the number of size patterns.",
+      "tip_zh": "多项式系数是每种大小模式的权重，不是大小模式数。",
+      "question_ids": [
+        "AIME-2012-II-Q14",
+        "AIME-2016-II-Q08",
+        "AIME-2018-II-Q08",
+        "AIME-2021-I-Q04",
+        "AIME-2025-I-Q03"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    {
+      "method_id": "CO03-M05",
+      "title_en": "Use exchangeable gap coordinates for order statistics",
+      "title_zh": "用可交换间隔求次序统计量",
+      "steps_en": [
+        "Write a chosen subset increasingly and record all unchosen gaps, including both ends.",
+        "Show this is a bijection to weak compositions of the fixed unchosen total.",
+        "Use coordinate exchangeability to average the gaps, then express the requested statistic in them."
+      ],
+      "steps_zh": [
+        "把选中子集递增排列，记录未选元素的所有间隔，包括两端。",
+        "证明其与固定未选总数的弱有序分拆双射。",
+        "利用间隔坐标可交换性求均值，再用间隔表示目标统计量。"
+      ],
+      "example_en": "Choose three integers uniformly from $1,\\ldots,9$. What is the expected difference between the largest and smallest?",
+      "example_zh": "从一至九中均匀选三个整数，最大数与最小数之差的期望是多少？",
+      "solution_en": [
+        "The six unchosen integers occupy four gap coordinates, each with the same expected value $6/4=3/2$.",
+        "The range is two chosen-to-chosen increments plus the two internal gaps: $2+g_1+g_2$.",
+        "Its expected value is $2+2(3/2)=5$. The two exterior gaps do not enter the range."
+      ],
+      "solution_zh": [
+        "六个未选整数分布在四个间隔坐标，均值均为 $6/4=3/2$。",
+        "最大最小之差为两个已选相邻步长加两个内部间隔，即 $2+g_1+g_2$。",
+        "期望为 $2+2(3/2)=5$，两端外部间隔不计入极差。"
+      ],
+      "tip_en": "Exchangeability follows from the uniform bijection to all gap vectors; do not assume unrelated gaps are independent.",
+      "tip_zh": "可交换性来自均匀双射到全部间隔向量，不能假设这些间隔相互独立。",
+      "question_ids": [
+        "AIME-2015-I-Q12"
+      ],
+      "prerequisites": [
+        "PS04",
+        "CO02"
+      ]
+    },
+    {
+      "method_id": "CO03-M06",
+      "title_en": "Translate function bounds into all interval sums",
+      "title_zh": "把函数约束转成所有区间步长和",
+      "steps_en": [
+        "Use consecutive increments $d_i=f(i)-f(i-1)$ as variables.",
+        "Convert every pairwise distance condition into a bound on each consecutive sum of increments.",
+        "Use the total sum to bound exceptional negative increments, then prove any proposed local rule suffices for every longer interval before counting its orders."
+      ],
+      "steps_zh": [
+        "以相邻增量 $d_i=f(i)-f(i-1)$ 为变量。",
+        "把每对输入的距离条件转为每段连续增量和的界。",
+        "利用总和限制例外负增量，再证明所设局部规则对全部较长区间也充分，之后才排列计数。"
+      ],
+      "example_en": "Start at zero with increments $(3,-1,3)$, giving values $(0,3,2,5)$. Verify $|i-j|\\le|f(i)-f(j)|\\le3|i-j|$ for all indices, and explain why replacing the middle step by $-2$ fails.",
+      "example_zh": "从零出发取增量 $(3,-1,3)$，得到 $(0,3,2,5)$。检验所有下标满足 $|i-j|\\le|f(i)-f(j)|\\le3|i-j|$，并解释中间步改为负二为何失败。",
+      "solution_en": [
+        "Every single increment has absolute value between one and three. The two length-two interval sums are both two, and the length-three sum is five.",
+        "These absolute sums lie respectively in $[2,6]$ and $[3,9]$, proving every pairwise inequality.",
+        "After replacing $-1$ by $-2$, an adjacent two-step sum becomes one, below its required lower bound two. Bounds on individual steps alone are insufficient."
+      ],
+      "solution_zh": [
+        "单步绝对值均在一与三之间；两段长度二的和均为二，长度三的和为五。",
+        "这些绝对和分别位于 $[2,6]$ 与 $[3,9]$，所以全部成对不等式成立。",
+        "若中间改为负二，某两步和为一，低于应有下界二；仅检验单步界不充分。"
+      ],
+      "tip_en": "Local restrictions may suggest a count, but their sufficiency for nonadjacent input pairs must be proved.",
+      "tip_zh": "局部限制可提示计数，但必须证明其对非相邻输入对也充分。",
+      "question_ids": [
+        "AIME-2018-II-Q15"
+      ],
+      "prerequisites": [
+        "LO01",
+        "CO01"
+      ],
+      "extensions_en": [
+        "If all other increments lie in $\\{1,2,3\\}$ and the only negative increment is $-1$, each existing neighbor must be three for the length-two lower bound. These conditions suffice: an interval containing $-1$ alone has absolute sum one; an interval extending to one side begins with sum two over two steps, and every added positive step preserves sum at least length. Intervals extending both ways have an even larger initial margin. The upper bound follows by the triangle inequality."
+      ],
+      "extensions_zh": [
+        "若其他增量均属于 $\\{1,2,3\\}$ 且唯一负增量为负一，长度二下界要求其每个现有邻居均为三。这也充分：仅含负一步的区间绝对和为一；向一侧延伸的区间从两步和为二开始，每加一步正增量都保持总和至少为长度；向两侧延伸有更大初始余量。上界由三角不等式得到。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-II-Q05",
+    "AIME-2003-I-Q09",
+    "AIME-2008-II-Q12",
+    "AIME-2009-I-Q09",
+    "AIME-2009-I-Q10",
+    "AIME-2011-II-Q07",
+    "AIME-2018-II-Q15",
+    "AIME-2021-I-Q04",
+    "AIME-2022-II-Q13",
+    "AIME-2025-II-Q10"
+  ],
+  "coverage_by_question": {
+    "AIME-2000-II-Q05": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2001-I-Q06": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "PS01"
+      ]
+    },
+    "AIME-2004-II-Q08": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "NT08"
+      ]
+    },
+    "AIME-2006-II-Q08": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "CO07"
+      ]
+    },
+    "AIME-2007-II-Q02": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2011-II-Q06": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "CO07"
+      ]
+    },
+    "AIME-2013-II-Q12": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "AL02",
+        "AL03"
+      ]
+    },
+    "AIME-2020-I-Q09": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "NT01",
+        "PS01"
+      ]
+    },
+    "AIME-2024-II-Q03": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2026-I-Q02": {
+      "method_ids": [
+        "CO03-M01"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2003-I-Q09": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2009-I-Q09": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2013-I-Q15": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2018-I-Q01": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2020-I-Q11": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2022-II-Q13": {
+      "method_ids": [
+        "CO03-M02"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2008-II-Q12": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO02",
+        "CO04"
+      ]
+    },
+    "AIME-2009-I-Q10": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2011-II-Q07": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO01",
+        "LO02"
+      ]
+    },
+    "AIME-2015-II-Q12": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2019-II-Q05": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2024-I-Q06": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2025-II-Q10": {
+      "method_ids": [
+        "CO03-M03"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2012-II-Q14": {
+      "method_ids": [
+        "CO03-M04"
+      ],
+      "prerequisites": [
+        "CO01",
+        "CO06"
+      ]
+    },
+    "AIME-2016-II-Q08": {
+      "method_ids": [
+        "CO03-M04"
+      ],
+      "prerequisites": [
+        "CO01",
+        "NT01"
+      ]
+    },
+    "AIME-2018-II-Q08": {
+      "method_ids": [
+        "CO03-M04"
+      ],
+      "prerequisites": [
+        "CO01",
+        "CO05"
+      ]
+    },
+    "AIME-2021-I-Q04": {
+      "method_ids": [
+        "CO03-M04"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2025-I-Q03": {
+      "method_ids": [
+        "CO03-M04"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2015-I-Q12": {
+      "method_ids": [
+        "CO03-M05"
+      ],
+      "prerequisites": [
+        "PS04"
+      ]
+    },
+    "AIME-2018-II-Q15": {
+      "method_ids": [
+        "CO03-M06"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    }
+  },
+  "review": {
+    "author": "template_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Every current primary and necessary secondary route was read in full. Original teaching examples and general procedures are separate from source problems. Independent review remains required."
+  },
+  "unresolved_issues": []
+}

@@ -1,0 +1,724 @@
+[
+  {
+    "question_id": "AIME-2011-II-Q01",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Normalize the actual purchase to one and let consumption be $r$. Then $1/2-2r=(2/9)(1-r)$.",
+      "reason_zh": "将购买量归一，设喝掉比例为 $r$，则 $1/2-2r=(2/9)(1-r)$。"
+    },
+    "secondary": [],
+    "statement_en": "A drinker consumes the fraction $m/n$ of a purchase. Had the purchase been half as large and consumption twice as large, the leftover would have been $2/9$ of the actual leftover. Find $m+n$ for the reduced fraction.",
+    "statement_zh": "某人喝掉所购饮料的最简分数 $m/n$。若购买量减半、喝掉量加倍，剩余量只有实际剩余的 $2/9$。求 $m+n$。",
+    "answer": 37,
+    "solution_en": [
+      "Normalize the actual purchase to one and let consumption be $r$. Then $1/2-2r=(2/9)(1-r)$.",
+      "Multiplication by eighteen gives $9-36r=4-4r$, so $r=5/32$. It lies below $1/4$, making the hypothetical leftover nonnegative. The answer is $37$."
+    ],
+    "solution_zh": [
+      "将购买量归一，设喝掉比例为 $r$，则 $1/2-2r=(2/9)(1-r)$。",
+      "乘十八得 $9-36r=4-4r$，所以 $r=5/32<1/4$，假设情形的剩余量非负。答案 $37$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q02",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Take $B=(0,0),C=(s,0),A=(0,s),D=(s,s)$ and $E=(a,s),F=(b,0)$. Equal $BE,FD$ gives $a=s-b$.",
+      "reason_zh": "取 $B=(0,0),C=(s,0),A=(0,s),D=(s,s),E=(a,s),F=(b,0)$。由 $BE=FD$，得 $a=s-b$。"
+    },
+    "secondary": [],
+    "statement_en": "In square $ABCD$, nonvertex points $E$ on $AD$ and $F$ on $BC$ satisfy $BE=EF=FD=30$. Find the square area.",
+    "statement_zh": "正方形 $ABCD$ 的边 $AD,BC$ 上分别有非顶点 $E,F$，满足 $BE=EF=FD=30$。求正方形面积。",
+    "answer": 810,
+    "solution_en": [
+      "Take $B=(0,0),C=(s,0),A=(0,s),D=(s,s)$ and $E=(a,s),F=(b,0)$. Equal $BE,FD$ gives $a=s-b$.",
+      "Then $EF=BE$ yields $(2a-s)^2=a^2$, so $a=s/3$ or $a=s$. The latter identifies $E=D,F=B$, excluded by the separately named nonvertex points.",
+      "Therefore $900=s^2+(s/3)^2=10s^2/9$, and the area is $810$."
+    ],
+    "solution_zh": [
+      "取 $B=(0,0),C=(s,0),A=(0,s),D=(s,s),E=(a,s),F=(b,0)$。由 $BE=FD$，得 $a=s-b$。",
+      "再由 $EF=BE$，有 $(2a-s)^2=a^2$，所以 $a=s/3$ 或 $s$。后者将 $E,F$ 分别与 $D,B$ 重合，不符合非顶点约定。",
+      "故 $900=s^2+s^2/9$，面积为 $810$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/2",
+    "method_chain": [
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Source wording has the usual separately named-point convention. If endpoints E=D,F=B were permitted, there would be a degenerate alternative area450; this edition states the intended nonvertex condition explicitly.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q03",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "With first angle $a$ and positive integer step $d$, the angle sum gives $18a+153d=2880$, or $2a+17d=320$.",
+      "reason_zh": "设首角为 $a$、正整数公差为 $d$，内角和给出 $18a+153d=2880$，即 $2a+17d=320$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "With first angle $a$ and positive integer step $d$, the angle sum gives $18a+153d=2880$, or $2a+17d=320$.",
+        "reason_zh": "设首角为 $a$、正整数公差为 $d$，内角和给出 $18a+153d=2880$，即 $2a+17d=320$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Parity forces even $d\\ge2$. Convexity requires $a+17d=(320+17d)/2<180$, so $17d<40$.",
+        "reason_zh": "由奇偶性 $d$ 必为正偶数。凸性要求最大角 $(320+17d)/2<180$，所以 $17d<40$。"
+      }
+    ],
+    "statement_en": "The interior angles of a convex eighteen-gon are distinct increasing integers in arithmetic progression, measured in degrees. Find the least angle.",
+    "statement_zh": "凸十八边形的内角度数为严格递增的整数等差数列。求最小内角。",
+    "answer": 143,
+    "solution_en": [
+      "With first angle $a$ and positive integer step $d$, the angle sum gives $18a+153d=2880$, or $2a+17d=320$.",
+      "Parity forces even $d\\ge2$. Convexity requires $a+17d=(320+17d)/2<180$, so $17d<40$.",
+      "Therefore $d=2$ and $a=143$."
+    ],
+    "solution_zh": [
+      "设首角为 $a$、正整数公差为 $d$，内角和给出 $18a+153d=2880$，即 $2a+17d=320$。",
+      "由奇偶性 $d$ 必为正偶数。凸性要求最大角 $(320+17d)/2<180$，所以 $17d<40$。",
+      "只能 $d=2$，最小角为 $143$ 度。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/3",
+    "method_chain": [
+      "Sequences & summation",
+      "Angles, similarity & parallel lines",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q04",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "Angle-bisector division gives $BD/DC=20/11$. Balance masses $11,20$ at $B,C$, giving mass $31$ at $D$.",
+      "reason_zh": "角平分线定理给出 $BD/DC=20/11$，在 $B,C$ 放质量 $11,20$，平衡点 $D$ 的质量为三十一。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Assign mass $31$ to $A$, so the $A,D$ balance point is $M$. Grouping $A,C$ first shows their balance point $P$ lies on $BM$.",
+        "reason_zh": "在 $A$ 也放三十一，使 $A,D$ 的平衡点为中点 $M$。先合并 $A,C$，其平衡点即直线 $BM$ 与 $AC$ 的交点 $P$。"
+      }
+    ],
+    "statement_en": "In triangle $ABC$, $AB/AC=20/11$. The $A$-bisector meets $BC$ at $D$, and $M$ is the midpoint of $AD$. Line $BM$ meets $AC$ at $P$. Reduce $CP/PA=m/n$ and find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB/AC=20/11$，$A$ 的角平分线交 $BC$ 于 $D$，$M$ 为 $AD$ 中点。直线 $BM$ 交 $AC$ 于 $P$。将 $CP/PA$ 约为 $m/n$，求 $m+n$。",
+    "answer": 51,
+    "solution_en": [
+      "Angle-bisector division gives $BD/DC=20/11$. Balance masses $11,20$ at $B,C$, giving mass $31$ at $D$.",
+      "Assign mass $31$ to $A$, so the $A,D$ balance point is $M$. Grouping $A,C$ first shows their balance point $P$ lies on $BM$.",
+      "The lever ratio is $CP/PA=31/20$, giving $51$."
+    ],
+    "solution_zh": [
+      "角平分线定理给出 $BD/DC=20/11$，在 $B,C$ 放质量 $11,20$，平衡点 $D$ 的质量为三十一。",
+      "在 $A$ 也放三十一，使 $A,D$ 的平衡点为中点 $M$。先合并 $A,C$，其平衡点即直线 $BM$ 与 $AC$ 的交点 $P$。",
+      "杠杆关系给出 $CP/PA=31/20$，答案 $51$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/4",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q05",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Group terms into blocks of $2011$. Their sums form a geometric sequence, and its first two terms are $200,180$.",
+      "reason_zh": "将每 $2011$ 项分为一组，各组和仍成等比数列，前两组和为 $200,180$。"
+    },
+    "secondary": [],
+    "statement_en": "A geometric series has sums $S_{2011}=200$ and $S_{4022}=380$. Find $S_{6033}$.",
+    "statement_zh": "某等比数列前 $2011$ 项和为 $200$，前 $4022$ 项和为 $380$，求前 $6033$ 项和。",
+    "answer": 542,
+    "solution_en": [
+      "Group terms into blocks of $2011$. Their sums form a geometric sequence, and its first two terms are $200,180$.",
+      "The block ratio is $9/10$, so the third block sums to $162$. The requested total is $200+180+162=542$."
+    ],
+    "solution_zh": [
+      "将每 $2011$ 项分为一组，各组和仍成等比数列，前两组和为 $200,180$。",
+      "组公比为 $9/10$，第三组和为 $162$，总和为 $542$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/5",
+    "method_chain": [
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q06",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO07",
+      "reason_en": "Reflect the set of four integers by $x\\mapsto11-x$. This exchanges the cases $d-c>b-a$ and $d-c<b-a$, so the answer is half of $\\binom{10}4$ minus the equality cases.",
+      "reason_zh": "反射 $x\\mapsto11-x$ 交换 $d-c>b-a$ 与反向不等式，所以所求为总数减等号情况后的一半。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "Equality has outer gaps $k=b-a=d-c$ and middle gap $j=c-b$. For $k=1,2,3,4$, the positive pair $(a,j)$ obeys $a+j\\le10-2k$, giving counts $\\binom82,\\binom62,\\binom42,\\binom22$, summing to fifty.",
+        "reason_zh": "等号时外侧差同为 $k$，中间差为 $j$。$k=1,2,3,4$ 时，正整数对 $(a,j)$ 满足 $a+j\\le10-2k$，个数分别为 $\\binom82,\\binom62,\\binom42,\\binom22$，合计五十。"
+      }
+    ],
+    "statement_en": "How many integer quadruples $1\\le a<b<c<d\\le10$ satisfy $a+d>b+c$?",
+    "statement_zh": "求满足 $1\\le a<b<c<d\\le10$ 且 $a+d>b+c$ 的整数四元组数。",
+    "answer": 80,
+    "solution_en": [
+      "Reflect the set of four integers by $x\\mapsto11-x$. This exchanges the cases $d-c>b-a$ and $d-c<b-a$, so the answer is half of $\\binom{10}4$ minus the equality cases.",
+      "Equality has outer gaps $k=b-a=d-c$ and middle gap $j=c-b$. For $k=1,2,3,4$, the positive pair $(a,j)$ obeys $a+j\\le10-2k$, giving counts $\\binom82,\\binom62,\\binom42,\\binom22$, summing to fifty.",
+      "Therefore the answer is $(210-50)/2=80$."
+    ],
+    "solution_zh": [
+      "反射 $x\\mapsto11-x$ 交换 $d-c>b-a$ 与反向不等式，所以所求为总数减等号情况后的一半。",
+      "等号时外侧差同为 $k$，中间差为 $j$。$k=1,2,3,4$ 时，正整数对 $(a,j)$ 满足 $a+j\\le10-2k$，个数分别为 $\\binom82,\\binom62,\\binom42,\\binom22$，合计五十。",
+      "故答案 $(210-50)/2=80$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/6",
+    "method_chain": [
+      "Bijections & structural counting",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q07",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "The five greens make at most five green runs and therefore at most six red runs. Thus there are at most ten color changes. With $m$ reds there are $m+4$ adjacent pairs, so equality forces $m+4\\le20$ and $m\\le16$.",
+      "reason_zh": "五颗绿珠至多形成五个绿段，故红段至多六个，异色相邻对至多十个。若有 $m$ 颗红珠，总相邻对为 $m+4$，两类相等迫使 $m+4\\le20$，即 $m\\le16$。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The five greens make at most five green runs and therefore at most six red runs. Thus there are at most ten color changes. With $m$ reds there are $m+4$ adjacent pairs, so equality forces $m+4\\le20$ and $m\\le16$.",
+        "reason_zh": "五颗绿珠至多形成五个绿段，故红段至多六个，异色相邻对至多十个。若有 $m$ 颗红珠，总相邻对为 $m+4$，两类相等迫使 $m+4\\le20$，即 $m\\le16$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "At $m=16$, all eleven runs must be present: six nonempty red runs separated by the five singleton greens. Any positive composition of sixteen into six parts attains the condition.",
+        "reason_zh": "$m=16$ 时必须恰有十一段，即六个非空红段，中间由五颗单绿珠分隔。将十六拆成六个正数的每种组成均可达到。"
+      }
+    ],
+    "statement_en": "Arrange five identical green marbles and some identical red marbles in a row, with equally many same-color and different-color adjacent pairs. Maximize the red count $m$, and let $N$ count the valid rows at that maximum. Find $N\\bmod1000$.",
+    "statement_zh": "将五颗相同绿珠与若干相同红珠排成一行，要求同色相邻对数与异色相邻对数相等。令最大红珠数为 $m$，达到此最大值的排列数为 $N$，求 $N$ 模 $1000$。",
+    "answer": 3,
+    "solution_en": [
+      "The five greens make at most five green runs and therefore at most six red runs. Thus there are at most ten color changes. With $m$ reds there are $m+4$ adjacent pairs, so equality forces $m+4\\le20$ and $m\\le16$.",
+      "At $m=16$, all eleven runs must be present: six nonempty red runs separated by the five singleton greens. Any positive composition of sixteen into six parts attains the condition.",
+      "Stars and bars gives $N=\\binom{15}5=3003$, with remainder $3$."
+    ],
+    "solution_zh": [
+      "五颗绿珠至多形成五个绿段，故红段至多六个，异色相邻对至多十个。若有 $m$ 颗红珠，总相邻对为 $m+4$，两类相等迫使 $m+4\\le20$，即 $m\\le16$。",
+      "$m=16$ 时必须恰有十一段，即六个非空红段，中间由五颗单绿珠分隔。将十六拆成六个正数的每种组成均可达到。",
+      "隔板法得 $N=\\binom{15}5=3003$，余数为三。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/7",
+    "method_chain": [
+      "Compositions, partitions & generating functions",
+      "Discrete extrema & constructions",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q08",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The roots have radius eight and arguments $j\\pi/6$. Each independent choice contributes $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$ to the best real part.",
+      "reason_zh": "各根模为八，辐角为 $j\\pi/6$。每项最优贡献为 $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$，各项可独立优化。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The roots have radius eight and arguments $j\\pi/6$. Each independent choice contributes $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$ to the best real part.",
+        "reason_zh": "各根模为八，辐角为 $j\\pi/6$。每项最优贡献为 $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$，各项可独立优化。"
+      }
+    ],
+    "statement_en": "Let $z_1,\\ldots,z_{12}$ be all roots of $z^{12}=2^{36}$. Independently choose $w_j=z_j$ or $iz_j$. The largest real part of $\\sum w_j$ is $m+\\sqrt n$. Find $m+n$.",
+    "statement_zh": "令 $z_1,\\ldots,z_{12}$ 为 $z^{12}=2^{36}$ 的全部根。每项独立选择 $w_j=z_j$ 或 $iz_j$。若 $\\sum w_j$ 实部的最大值为 $m+\\sqrt n$，求 $m+n$。",
+    "answer": 784,
+    "solution_en": [
+      "The roots have radius eight and arguments $j\\pi/6$. Each independent choice contributes $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$ to the best real part.",
+      "For $j=5,\\ldots,10$, choose the negative sine; for $j=1,2,3,4,11,12$, choose the cosine. Each six-term sum of the normalized selected values is $1+\\sqrt3$.",
+      "The maximum is $16+16\\sqrt3=16+\\sqrt{768}$, so $m+n=784$."
+    ],
+    "solution_zh": [
+      "各根模为八，辐角为 $j\\pi/6$。每项最优贡献为 $8\\max(\\cos(j\\pi/6),-\\sin(j\\pi/6))$，各项可独立优化。",
+      "$j=5$ 至 $10$ 选择负正弦，其余 $1,2,3,4,11,12$ 选择余弦。两组归一化六项和均为 $1+\\sqrt3$。",
+      "最大值为 $16+16\\sqrt3=16+\\sqrt{768}$，答案 $784$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/8",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q09",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "Call the given two-term sum $r$ and the target sum $s$. Expansion gives $r+s=(x_1+x_4)(x_2+x_5)(x_3+x_6)$.",
+      "reason_zh": "将已知两项和记为 $r$，目标和记为 $s$。展开得 $r+s=(x_1+x_4)(x_2+x_5)(x_3+x_6)$。"
+    },
+    "secondary": [],
+    "statement_en": "Nonnegative $x_1,\\ldots,x_6$ sum to one and satisfy $x_1x_3x_5+x_2x_4x_6\\ge1/540$. Let $p/q$ be the greatest possible cyclic sum $\\sum_{i=1}^6x_ix_{i+1}x_{i+2}$, with indices modulo six. Find $p+q$ in lowest terms.",
+    "statement_zh": "非负数 $x_1,\\ldots,x_6$ 的和为一，且 $x_1x_3x_5+x_2x_4x_6\\ge1/540$。设循环三项积和 $\\sum_{i=1}^6x_ix_{i+1}x_{i+2}$ 的最大值为最简分数 $p/q$，下标模六，求 $p+q$。",
+    "answer": 559,
+    "solution_en": [
+      "Call the given two-term sum $r$ and the target sum $s$. Expansion gives $r+s=(x_1+x_4)(x_2+x_5)(x_3+x_6)$.",
+      "These three nonnegative factors sum to one. AM-GM gives $s\\le1/27-r\\le19/540$.",
+      "The bound is attained by $(x_1,\\ldots,x_6)=(1/3,19/60,1/3,0,1/60,0)$. All opposite-pair sums are $1/3$ and $r=(1/3)^2(1/60)=1/540$.",
+      "Thus the maximum is $19/540$, giving $559$."
+    ],
+    "solution_zh": [
+      "将已知两项和记为 $r$，目标和记为 $s$。展开得 $r+s=(x_1+x_4)(x_2+x_5)(x_3+x_6)$。",
+      "这三个非负因子的和为一，由均值不等式，$s\\le1/27-r\\le19/540$。",
+      "取 $(1/3,19/60,1/3,0,1/60,0)$，三个对边项和均为三分之一，且 $r=1/540$，所以等号可达到。",
+      "最大值为 $19/540$，答案 $559$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/9",
+    "method_chain": [
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q10",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Let the chord midpoints be $M,N$. Right triangles give $OM=20,ON=24$, while $MN=12$. The angles $OMP,ONP$ are right, placing all four points on the circle with diameter $OP$.",
+      "reason_zh": "设弦中点为 $M,N$。直角关系给出 $OM=20,ON=24$，且 $MN=12$。$OMP,ONP$ 为直角，因此四点在以 $OP$ 为直径的圆上。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "In triangle $OMN$, the cosine of the included angle is $(400+576-144)/960=13/15$, hence its sine is $2\\sqrt{14}/15$.",
+        "reason_zh": "在三角形 $OMN$ 中，夹角余弦为 $13/15$，正弦为 $2\\sqrt{14}/15$。"
+      }
+    ],
+    "statement_en": "A radius-$25$ circle has intersecting chords of lengths $30,14$ with midpoints $12$ apart. Their intersection is $P$, and the center is $O$. Express $OP^2=m/n$ in lowest terms and find $(m+n)\\bmod1000$.",
+    "statement_zh": "半径二十五的圆中，两条长为三十、十四的弦交于 $P$，两弦中点相距十二。圆心为 $O$。若 $OP^2=m/n$ 已最简，求 $m+n$ 模 $1000$。",
+    "answer": 57,
+    "solution_en": [
+      "Let the chord midpoints be $M,N$. Right triangles give $OM=20,ON=24$, while $MN=12$. The angles $OMP,ONP$ are right, placing all four points on the circle with diameter $OP$.",
+      "In triangle $OMN$, the cosine of the included angle is $(400+576-144)/960=13/15$, hence its sine is $2\\sqrt{14}/15$.",
+      "The extended sine rule in the new circle gives $OP=MN/\\sin\\angle MON=90/\\sqrt{14}$, so $OP^2=4050/7$.",
+      "The numerator-denominator sum is $4057$, leaving remainder $57$."
+    ],
+    "solution_zh": [
+      "设弦中点为 $M,N$。直角关系给出 $OM=20,ON=24$，且 $MN=12$。$OMP,ONP$ 为直角，因此四点在以 $OP$ 为直径的圆上。",
+      "在三角形 $OMN$ 中，夹角余弦为 $13/15$，正弦为 $2\\sqrt{14}/15$。",
+      "对新圆用正弦定理，$OP=12/(2\\sqrt{14}/15)=90/\\sqrt{14}$，平方为 $4050/7$。",
+      "和为 $4057$，所求余数为 $57$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/10",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q11",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Expand the determinant along its first row, then the first column of the off-diagonal minor. This gives $D_n=10D_{n-1}-9D_{n-2}$, using $D_0=1,D_1=10$.",
+      "reason_zh": "沿第一行展开行列式，再展开非对角余子式的第一列，得 $D_n=10D_{n-1}-9D_{n-2}$，取 $D_0=1,D_1=10$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "The recurrence has characteristic roots $9,1$. Its initial values give $D_n=(9^{n+1}-1)/8$, also verifiable directly by induction.",
+        "reason_zh": "特征根为九与一，初值得 $D_n=(9^{n+1}-1)/8$，亦可直接归纳验证。"
+      }
+    ],
+    "statement_en": "Let $D_n$ be the determinant of the $n\\times n$ tridiagonal matrix with diagonal entries $10$, entries immediately above and below the diagonal $3$, and all others zero. Reduce $\\sum_{n=1}^{\\infty}(8D_n+1)^{-1}=p/q$ and find $p+q$.",
+    "statement_zh": "令 $D_n$ 为 $n$ 阶三对角矩阵的行列式：主对角线均为十，上下紧邻对角线均为三，其余为零。将 $\\sum_{n=1}^{\\infty}1/(8D_n+1)$ 约为 $p/q$，求 $p+q$。",
+    "answer": 73,
+    "solution_en": [
+      "Expand the determinant along its first row, then the first column of the off-diagonal minor. This gives $D_n=10D_{n-1}-9D_{n-2}$, using $D_0=1,D_1=10$.",
+      "The recurrence has characteristic roots $9,1$. Its initial values give $D_n=(9^{n+1}-1)/8$, also verifiable directly by induction.",
+      "Therefore the sum is $\\sum_{n=1}^\\infty9^{-(n+1)}=(1/81)/(1-1/9)=1/72$. It converges geometrically, and $p+q=73$."
+    ],
+    "solution_zh": [
+      "沿第一行展开行列式，再展开非对角余子式的第一列，得 $D_n=10D_{n-1}-9D_{n-2}$，取 $D_0=1,D_1=10$。",
+      "特征根为九与一，初值得 $D_n=(9^{n+1}-1)/8$，亦可直接归纳验证。",
+      "所以所求为收敛等比级数 $\\sum_{n=1}^{\\infty}9^{-(n+1)}=1/72$，答案 $73$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/11",
+    "method_chain": [
+      "Sequences & summation",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Knowledge coverage must include cofactor expansion as the recurrence-construction prerequisite in AL05.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q12",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Country patterns are equally likely, numbering $9!/(3!)^3=1680$. Failure occurs exactly when a country occupies three consecutive seats, since its middle delegate then has two compatriot neighbors.",
+      "reason_zh": "国籍模式等可能，共 $9!/(3!)^3=1680$ 种。失败恰指某国三人连续，其中央代表两侧均为同胞。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "For one specified country, there are $9\\binom63=180$ such patterns. For two specified countries, place the first block in nine ways and the second in one of four triples along the remaining six-seat arc: $36$ patterns. For all three, there are three cyclic partitions into triples and $3!$ country assignments, or $18$.",
+        "reason_zh": "指定一国连续有 $9\\binom63=180$ 种；指定两国连续，第一组三连座九种，剩余六座弧中第二组三连座四种，共三十六种；三国都连续则有三种三段划分及 $3!$ 国籍分配，共十八种。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Country patterns are equally likely, numbering $9!/(3!)^3=1680$. Failure occurs exactly when a country occupies three consecutive seats, since its middle delegate then has two compatriot neighbors.",
+        "reason_zh": "国籍模式等可能，共 $9!/(3!)^3=1680$ 种。失败恰指某国三人连续，其中央代表两侧均为同胞。"
+      }
+    ],
+    "statement_en": "Nine delegates, three from each of three countries, sit uniformly at random in nine labeled chairs around a circle. The probability that everyone has at least one neighbor from another country is reduced $m/n$. Find $m+n$.",
+    "statement_zh": "三国各三名代表随机等可能地坐在环形九个固定座位上。每人至少有一名邻座来自其他国家的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 97,
+    "solution_en": [
+      "Country patterns are equally likely, numbering $9!/(3!)^3=1680$. Failure occurs exactly when a country occupies three consecutive seats, since its middle delegate then has two compatriot neighbors.",
+      "For one specified country, there are $9\\binom63=180$ such patterns. For two specified countries, place the first block in nine ways and the second in one of four triples along the remaining six-seat arc: $36$ patterns. For all three, there are three cyclic partitions into triples and $3!$ country assignments, or $18$.",
+      "Inclusion-exclusion gives $3(180)-3(36)+18=450$ failures, hence probability $(1680-450)/1680=41/56$.",
+      "The answer is $97$."
+    ],
+    "solution_zh": [
+      "国籍模式等可能，共 $9!/(3!)^3=1680$ 种。失败恰指某国三人连续，其中央代表两侧均为同胞。",
+      "指定一国连续有 $9\\binom63=180$ 种；指定两国连续，第一组三连座九种，剩余六座弧中第二组三连座四种，共三十六种；三国都连续则有三种三段划分及 $3!$ 国籍分配，共十八种。",
+      "容斥给出失败数 $540-108+18=450$，成功概率为 $41/56$。",
+      "答案为 $97$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/12",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Inclusion-exclusion & double counting",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q13",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Set $A=(0,0),B=(12,0),C=(12,12),D=(0,12)$ and $P=(p,p)$, with $6<p<12$. Perpendicular-bisector equations give $O_1=(6,p-6),O_2=(6,p+6)$.",
+      "reason_zh": "取四顶点为 $(0,0),(12,0),(12,12),(0,12)$，$P=(p,p)$，且 $6<p<12$。由垂直平分线得 $O_1=(6,p-6),O_2=(6,p+6)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Set $A=(0,0),B=(12,0),C=(12,12),D=(0,12)$ and $P=(p,p)$, with $6<p<12$. Perpendicular-bisector equations give $O_1=(6,p-6),O_2=(6,p+6)$.",
+        "reason_zh": "取四顶点为 $(0,0),(12,0),(12,12),(0,12)$，$P=(p,p)$，且 $6<p<12$。由垂直平分线得 $O_1=(6,p-6),O_2=(6,p+6)$。"
+      }
+    ],
+    "statement_en": "In a side-$12$ square $ABCD$, point $P$ is on $AC$ with $AP>CP$. The circumcenters $O_1,O_2$ of $ABP,CDP$ satisfy $\\angle O_1PO_2=120^\\circ$. If $AP=\\sqrt a+\\sqrt b$, find $a+b$.",
+    "statement_zh": "边长十二的正方形 $ABCD$ 中，$P$ 在对角线 $AC$ 上且 $AP>CP$。$ABP,CDP$ 的外心分别为 $O_1,O_2$，满足 $\\angle O_1PO_2=120^\\circ$。若 $AP=\\sqrt a+\\sqrt b$，求 $a+b$。",
+    "answer": 96,
+    "solution_en": [
+      "Set $A=(0,0),B=(12,0),C=(12,12),D=(0,12)$ and $P=(p,p)$, with $6<p<12$. Perpendicular-bisector equations give $O_1=(6,p-6),O_2=(6,p+6)$.",
+      "The vectors from $P$ are $(6-p,-6),(6-p,6)$. The cosine condition is $[(p-6)^2-36]/[(p-6)^2+36]=-1/2$, giving $(p-6)^2=12$.",
+      "The stated inequality chooses $p=6+2\\sqrt3$. Hence $AP=p\\sqrt2=\\sqrt{72}+\\sqrt{24}$, and $a+b=96$."
+    ],
+    "solution_zh": [
+      "取四顶点为 $(0,0),(12,0),(12,12),(0,12)$，$P=(p,p)$，且 $6<p<12$。由垂直平分线得 $O_1=(6,p-6),O_2=(6,p+6)$。",
+      "从 $P$ 出发的两向量为 $(6-p,-6),(6-p,6)$，余弦条件化为 $[(p-6)^2-36]/[(p-6)^2+36]=-1/2$，得 $(p-6)^2=12$。",
+      "由 $p>6$ 取 $p=6+2\\sqrt3$，因此 $AP=\\sqrt{72}+\\sqrt{24}$，答案 $96$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/13",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Angle bisectors & triangle centers"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q14",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "For each modulus $m$, all positions of one residue class receive values from a single residue class. Every position class and every value class has $30/m$ members.",
+      "reason_zh": "对每个模数 $m$，下标同余类上的值属于单一同余类，各下标类及值类均有 $30/m$ 个成员。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Conversely, any three residue permutations uniquely specify every value by the Chinese remainder theorem modulo $30$, and map distinct position triples to distinct value triples.",
+        "reason_zh": "反过来，任取三种余数排列，中国剩余定理模三十唯一确定每个位置上的值，且不同位置给出不同值。"
+      }
+    ],
+    "statement_en": "Count permutations $(a_1,\\ldots,a_{30})$ of $1,\\ldots,30$ for which $a_{n+m}\\equiv a_n\\pmod m$ whenever both indices are in range, for each $m=2,3,5$. Report the count modulo $1000$.",
+    "statement_zh": "排列 $(a_1,\\ldots,a_{30})$ 使用一至三十各一次。对 $m=2,3,5$ 及所有有效下标，要求 $a_{n+m}\\equiv a_n\\pmod m$。求排列数模 $1000$。",
+    "answer": 440,
+    "solution_en": [
+      "For each modulus $m$, all positions of one residue class receive values from a single residue class. Every position class and every value class has $30/m$ members.",
+      "Two position classes cannot map to the same value class, as that would require twice as many distinct values as available. Thus the induced residue map is a permutation $\\sigma_m$.",
+      "Conversely, any three residue permutations uniquely specify every value by the Chinese remainder theorem modulo $30$, and map distinct position triples to distinct value triples.",
+      "The count is $2!3!5!=1440$, leaving remainder $440$."
+    ],
+    "solution_zh": [
+      "对每个模数 $m$，下标同余类上的值属于单一同余类，各下标类及值类均有 $30/m$ 个成员。",
+      "两个下标类不能映到同一值类，否则所需不同数字数目超过可用数。因此诱导的余数映射必须为排列。",
+      "反过来，任取三种余数排列，中国剩余定理模三十唯一确定每个位置上的值，且不同位置给出不同值。",
+      "故总数 $2!3!5!=1440$，余数 $440$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/14",
+    "method_chain": [
+      "Congruences & Chinese remainders",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2011-II-Q15",
+    "paper_id": "AIME-2011-II",
+    "exam_year": 2011,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "On a unit interval $[n,n+1)$, the right side must be an integer. For $n=5,\\ldots,14$, the values $P(n)$ are $1,9,19,31,45,61,79,99,121,145$; only $n=5,6,13$ work, with roots $1,3,11$.",
+      "reason_zh": "在单位区间 $[n,n+1)$，右式必须为整数。$n=5$ 至 $14$ 的 $P(n)$ 值依次为 $1,9,19,31,45,61,79,99,121,145$，仅 $n=5,6,13$ 为平方，平方根为 $1,3,11$。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS03",
+        "reason_en": "The three interval lengths are $(\\sqrt{61}-7)/2,(\\sqrt{109}-9)/2,(\\sqrt{621}-23)/2$. Divide their sum by ten to obtain $(\\sqrt{61}+\\sqrt{109}+\\sqrt{621}-39)/20$.",
+        "reason_zh": "三段长度分别为 $(\\sqrt{61}-7)/2,(\\sqrt{109}-9)/2,(\\sqrt{621}-23)/2$；相加后除以十，得概率 $(\\sqrt{61}+\\sqrt{109}+\\sqrt{621}-39)/20$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "On a unit interval $[n,n+1)$, the right side must be an integer. For $n=5,\\ldots,14$, the values $P(n)$ are $1,9,19,31,45,61,79,99,121,145$; only $n=5,6,13$ work, with roots $1,3,11$.",
+        "reason_zh": "在单位区间 $[n,n+1)$，右式必须为整数。$n=5$ 至 $14$ 的 $P(n)$ 值依次为 $1,9,19,31,45,61,79,99,121,145$，仅 $n=5,6,13$ 为平方，平方根为 $1,3,11$。"
+      }
+    ],
+    "statement_en": "Let $P(x)=x^2-3x-9$ and choose $x$ uniformly in $[5,15]$. The probability that $\\lfloor\\sqrt{P(x)}\\rfloor=\\sqrt{P(\\lfloor x\\rfloor)}$ is $(\\sqrt a+\\sqrt b+\\sqrt c-d)/e$ for positive integers. Find $a+b+c+d+e$.",
+    "statement_zh": "令 $P(x)=x^2-3x-9$，在 $[5,15]$ 内均匀选 $x$。若 $\\lfloor\\sqrt{P(x)}\\rfloor=\\sqrt{P(\\lfloor x\\rfloor)}$ 的概率为 $(\\sqrt a+\\sqrt b+\\sqrt c-d)/e$，求五个正整数之和。",
+    "answer": 850,
+    "solution_en": [
+      "On a unit interval $[n,n+1)$, the right side must be an integer. For $n=5,\\ldots,14$, the values $P(n)$ are $1,9,19,31,45,61,79,99,121,145$; only $n=5,6,13$ work, with roots $1,3,11$.",
+      "The polynomial increases throughout the sample interval. For each working $n$ with $P(n)=j^2$, success persists from $n$ until the root of $P(x)=(j+1)^2$, namely $[3+\\sqrt{45+4(j+1)^2}]/2$. These cutoffs all lie before $n+1$.",
+      "The three interval lengths are $(\\sqrt{61}-7)/2,(\\sqrt{109}-9)/2,(\\sqrt{621}-23)/2$. Divide their sum by ten to obtain $(\\sqrt{61}+\\sqrt{109}+\\sqrt{621}-39)/20$.",
+      "The endpoint $15$ has probability zero. The required sum is $61+109+621+39+20=850$."
+    ],
+    "solution_zh": [
+      "在单位区间 $[n,n+1)$，右式必须为整数。$n=5$ 至 $14$ 的 $P(n)$ 值依次为 $1,9,19,31,45,61,79,99,121,145$，仅 $n=5,6,13$ 为平方，平方根为 $1,3,11$。",
+      "$P$ 在整个抽样区间递增。若 $P(n)=j^2$，成功区间从 $n$ 延伸到 $P(x)=(j+1)^2$ 的根 $[3+\\sqrt{45+4(j+1)^2}]/2$，且三处根均在本单位区间内。",
+      "三段长度分别为 $(\\sqrt{61}-7)/2,(\\sqrt{109}-9)/2,(\\sqrt{621}-23)/2$；相加后除以十，得概率 $(\\sqrt{61}+\\sqrt{109}+\\sqrt{621}-39)/20$。",
+      "端点十五的概率为零，故答案为 $850$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2011II/problem/15",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Geometric probability",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

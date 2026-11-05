@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-05",
+  "preview_url": "http://127.0.0.1:4323/AIME/",
+  "browser": "Edge",
+  "content_snapshot": "810 questions, 44 subtype sections, 399 independently reviewed textbook methods,188 downloads,10 original method diagrams; final question2eb9bf48 and knowledgecc83dab7 snapshots",
+  "checks": [
+    "Desktop home matches the latest AMC8 Astro framework, icon cards, navigation and spacing",
+    "EN / 中文 / 双语 toggles persist across navigation and update search results",
+    "390px mobile home and CO06 textbook page have no horizontal page overflow or KaTeX errors",
+    "320px reading-page header repaired and verified with brand/actions bounding rectangles separated",
+    "Mobile contents drawer opens and closes",
+    "Question answers are collapsed initially and toggle by click and keyboard",
+    "Original 2000-I-Q04 SVG opens in an accessible enlargement dialog",
+    "Exact search AIME-2016-I-Q09 returns one result and opens its question anchor",
+    "2016-I-Q09 displays the verified exact result and approximate728.365 prominently, with historical key744 separately labeled and a bilingual editorial note",
+    "Long formula on the 320px answer card scrolls within its own math region without widening the page",
+    "Temporary browser viewport override reset",
+    "Full 44-section site builds98 routes;101 HTML files including offline matrices pass5017 internal anchor checks",
+    "35444 LaTeX formulas parse without a KaTeX error, including2022-I-Q14's explicit vector LaTeX",
+    "All2430 question-to-PDF anchors verified by actual printed IDs across the828-page workbook,830-page English solutions and828-page Chinese solutions",
+    "All132 workbook/solution section PDFs match their manifest page counts and imported download URLs",
+    "All399 textbook physical-page anchors contain the actual printed method IDs; all44 textbook section PDFs match their manifest page counts",
+    "All10 original method diagrams import only after exact worked-example and SVG hash verification",
+    "GE10-M01 method diagram enlarges in the modal at390px with correct Chinese alt text, no page overflow and no KaTeX errors; screenshot saved at output/qa/web/mobile-method-diagram.jpg",
+    "Textbook page437 visibly links to physical PDF page443, preserving the six front pages",
+    "All final print,Matrix and XLSX deliverables were reimported after printbuilder's final-source-receipt signal"
+  ],
+  "pending": ["Run the final publication snapshot wrapper after root refreshes progress and visual receipt metadata", "Switch Pages source to GitHub Actions after the final connector commit, then verify the live deployed site"],
+  "screenshots": "Desktop home, mobile CO06 methods and320px corrected-result/header visually inspected. Persisted method-diagram screenshot:output/qa/web/mobile-method-diagram.jpg."
+}

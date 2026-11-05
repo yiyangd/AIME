@@ -1,0 +1,174 @@
+{
+  "checks": [
+    {
+      "question_id": "AIME-2017-I-Q01",
+      "actual": 390,
+      "expected": 390,
+      "method": "Exact rational determinants on an equivalent 15-point triangle boundary",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q03",
+      "actual": 69,
+      "expected": 69,
+      "method": "Direct sum of every triangular-number last digit",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q05",
+      "actual": [
+        [
+          3,
+          2,
+          1,
+          4
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          2,
+          1,
+          4
+        ]
+      ],
+      "method": "Exhaust every nonzero base-eight digit quadruple with rational arithmetic",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q07",
+      "actual": 564,
+      "expected": 564,
+      "method": "Direct binomial-coefficient sum",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q09",
+      "actual": 45,
+      "expected": 45,
+      "method": "Iterate the concatenation recurrence modulo 99",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q11",
+      "actual": 207360,
+      "expected": 207360,
+      "method": "Enumerate all 9! ordered grids and compute both levels of medians",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q12",
+      "actual": 252,
+      "expected": 252,
+      "method": "Test all 1024 subsets including repeated factor choices",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-I-Q14",
+      "actual": 896,
+      "expected": 896,
+      "method": "Exact modular exponentiation after the analytic exponent reduction",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q01",
+      "actual": 196,
+      "expected": 196,
+      "method": "Test every subset against the two forbidden containments",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q04",
+      "actual": 222,
+      "expected": 222,
+      "method": "Convert each integer by repeated division by three",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q06",
+      "actual": 195,
+      "expected": 195,
+      "method": "Direct square test through 999, supplemented by the complete factor-pair proof",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q08",
+      "actual": 134,
+      "expected": 134,
+      "method": "Sum each rational truncated exponential without modular simplification",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q11",
+      "actual": 544,
+      "expected": 544,
+      "method": "Enumerate every tournament and perform directed reachability from every vertex",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": [
+        36,
+        52,
+        157
+      ],
+      "expected": [
+        36,
+        52,
+        157
+      ],
+      "method": "Scan the exact closed counting formula across every congruence class",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 588,
+      "expected": 588,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=36",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 666,
+      "expected": 666,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=37",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 1300,
+      "expected": 1300,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=52",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 1378,
+      "expected": 1378,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=53",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 12246,
+      "expected": 12246,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=157",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q13",
+      "actual": 12324,
+      "expected": 12324,
+      "method": "Enumerate all vertex triples and compare cyclic chord-length indices for n=158",
+      "passed": true
+    },
+    {
+      "question_id": "AIME-2017-II-Q14",
+      "actual": 168,
+      "expected": 168,
+      "method": "Enumerate all primitive allowed directions and canonical first grid points",
+      "passed": true
+    }
+  ],
+  "passed": 21
+}

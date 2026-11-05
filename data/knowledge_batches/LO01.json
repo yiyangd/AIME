@@ -1,0 +1,358 @@
+{
+  "subtype_id": "LO01",
+  "introduction_en": "An invariant proves a necessary restriction; a construction or a legal strategy proves sufficiency. When a state changes by folding, cancellation, or a custom operation, record the information that survives that change.",
+  "introduction_zh": "不变量证明必要限制，构造或合法策略证明充分性。面对折叠、约分或自定义运算，应记录在变化中仍有效的信息。",
+  "prerequisites": [
+    "NT03"
+  ],
+  "methods": [
+    {
+      "method_id": "LO01-M01",
+      "title_en": "Prove losing residues by induction on legal moves",
+      "title_zh": "按合法移动归纳证明必败余数",
+      "steps_en": [
+        "Define a losing position as one whose every legal move is winning; a winning position needs one legal move to a losing state.",
+        "Guess a residue pattern only after computing enough small positions.",
+        "Prove both directions of the residue rule, checking that the proposed move is available at small pile sizes.",
+        "Count or apply the resulting strategy, with zero treated as a losing terminal state under normal play."
+      ],
+      "steps_zh": [
+        "必败状态的所有合法后继都必胜；必胜状态只需存在一个合法必败后继。",
+        "先算足够多的小状态，再猜测余数模式。",
+        "证明余数规则的两个方向，并检查小堆中所提移动是否合法。",
+        "由规则计数或执行策略；正常取尽获胜规则下，零为必败终态。"
+      ],
+      "example_en": "Players alternately remove $1,3,$ or $4$ tokens, with the last removal winning. Classify the losing pile sizes.",
+      "example_zh": "两人轮流取走一、三或四枚棋子，取尽者胜，分类所有必败堆大小。",
+      "solution_en": [
+        "Direct computation for $0$ through $6$ gives losing sizes $0,2$ and all other sizes winning.",
+        "From residues $0,2\\pmod7$, subtracting a legal $1,3,4$ always leads to residues $1,3,4,5,6$, which are outside the proposed losing class.",
+        "From residues $1,3,4,5,6$, respectively subtract $1,1,4,3,4$ to reach residue $0$ or $2$. These moves are legal at the least positive representatives. Induction proves exactly $n\\equiv0,2\\pmod7$ are losing."
+      ],
+      "solution_zh": [
+        "直接计算零至六，必败大小为零、二，其余必胜。",
+        "从模七余零或二的状态，合法减去一、三、四后，都到余一、三、四、五、六，不在拟定必败类中。",
+        "从余一、三、四、五、六分别减一、一、四、三、四，会到余零或二，且在最小正代表处也合法。归纳得必败状态恰为 $n\\equiv0,2\\pmod7$。"
+      ],
+      "tip_en": "A repeating numerical table suggests a strategy; only the two legal-move implications prove it.",
+      "tip_zh": "数值表重复只提示策略，必须证明合法移动的两个方向才算完成。",
+      "question_ids": [
+        "AIME-2024-I-Q03"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO01-M02",
+      "title_en": "Propagate forced colors, then construct below the threshold",
+      "title_zh": "传播被迫颜色并在门槛以下构造",
+      "steps_en": [
+        "Assume a forbidden monochromatic relation is absent and fix one initial color by symmetry.",
+        "Propagate forced opposite colors through the relation.",
+        "Find an element whose two possible colors both cause a contradiction.",
+        "For a sharp threshold, provide an explicit coloring below it and check every same-color relation."
+      ],
+      "steps_zh": [
+        "假设不存在禁止的同色关系，并利用颜色对称固定起始颜色。",
+        "沿关系传播被迫的相反颜色。",
+        "找出一个无论染哪色都矛盾的元素。",
+        "若要求精确门槛，必须给出门槛以下的明确染色并核对全部同色关系。"
+      ],
+      "example_en": "Find the least $m$ such that every two-coloring of $\\{1,\\ldots,m\\}$ has same-colored $a,b,c$ with $a+b=c$, allowing $a=b$.",
+      "example_zh": "求最小 $m$，使 $\\{1,\\ldots,m\\}$ 的任意两色染色都存在同色 $a,b,c$ 满足 $a+b=c$，允许 $a=b$。",
+      "solution_en": [
+        "At $m=5$, color one red. Avoiding $1+1=2$ forces two blue; avoiding $2+2=4$ forces four red; avoiding $1+4=5$ forces five blue.",
+        "If three is red, $1+3=4$ is monochromatic; if blue, $2+3=5$ is monochromatic. Hence five always forces the relation.",
+        "For $m=4$, color $\\{1,4\\}$ red and $\\{2,3\\}$ blue. A direct check of sums within each color finds none in that same color. Restricting this coloring covers all smaller $m$, so the least is five."
+      ],
+      "solution_zh": [
+        "当 $m=5$，不妨一为红。由 $1+1=2$，二须蓝；由 $2+2=4$，四须红；由 $1+4=5$，五须蓝。",
+        "若三红，$1+3=4$ 同色；若三蓝，$2+3=5$ 同色，因此五必然产生目标关系。",
+        "当 $m=4$，把一、四染红，二、三染蓝，逐一检查同色和均不落在本色中；更小范围可限制该染色。因此最小值为五。"
+      ],
+      "tip_en": "A contradiction proves an upper bound; an explicit avoiding coloring proves the matching lower bound.",
+      "tip_zh": "矛盾只证明上界，明确的避免染色才能证明相应下界。",
+      "question_ids": [
+        "AIME-2010-I-Q12"
+      ],
+      "prerequisites": [
+        "LO02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO01-M03",
+      "title_en": "Pair a modular invariant with a forward reachability certificate",
+      "title_zh": "将同余不变量与正向可达构造配对",
+      "steps_en": [
+        "Find linear combinations of coordinates preserved modulo small integers by every allowed move.",
+        "Treat these as necessary conditions only.",
+        "Build nonnegative combinations of legal moves that generate every point satisfying the conditions; integer combinations with negative move counts are insufficient.",
+        "When counting, transform the region and retain any parity compatibility between new coordinates."
+      ],
+      "steps_zh": [
+        "寻找每种合法移动都保持的坐标线性组合及小模数。",
+        "先把它们视为必要条件。",
+        "以合法移动的非负次数组合构造全部满足条件的点；允许负次数的整数线性组合还不够。",
+        "计数时转换区域，并保留新坐标间的奇偶兼容条件。"
+      ],
+      "example_en": "From the origin, allowed moves are $(2,0),(0,2),(-1,-1)$. Characterize all reachable integer points.",
+      "example_zh": "从原点出发，可走 $(2,0),(0,2),(-1,-1)$，刻画全部可达整数点。",
+      "solution_en": [
+        "Each move preserves evenness of $x-y$, so reachable coordinates must have the same parity.",
+        "For any such target $(x,y)$, choose an integer $c\\ge\\max(0,-x,-y)$ with the common parity of $x,y$. Then $a=(x+c)/2,b=(y+c)/2$ are nonnegative integers.",
+        "The legal sequence using the moves $a,b,c$ times reaches $(2a-c,2b-c)=(x,y)$. Thus equal coordinate parity is both necessary and sufficient."
+      ],
+      "solution_zh": [
+        "每步均保持 $x-y$ 为偶数，所以可达点两坐标须同奇偶。",
+        "对任一这样的目标，选与两坐标同奇偶且 $c\\ge\\max(0,-x,-y)$ 的整数，令 $a=(x+c)/2,b=(y+c)/2$，均为非负整数。",
+        "三种移动分别走 $a,b,c$ 次，就到达 $(2a-c,2b-c)=(x,y)$，故同奇偶既必要又充分。"
+      ],
+      "tip_en": "A lattice generated algebraically by moves can be larger than the forward-reachable semigroup; prove the nonnegative construction.",
+      "tip_zh": "移动所生成的整数格可能大于正向可达半群，必须证明非负次数构造。",
+      "question_ids": [
+        "AIME-2012-I-Q11"
+      ],
+      "prerequisites": [
+        "NT03",
+        "CO06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO01-M04",
+      "title_en": "Search for a conserved algebraic expression before iterating",
+      "title_zh": "迭代前先寻找守恒代数式",
+      "steps_en": [
+        "Write the transformation on a complete tuple and compare the same expression before and after it.",
+        "Clear denominators or factor the difference to prove exact invariance.",
+        "Use the invariant to reduce a nonlinear recurrence to a linear relation or a fixed algebraic curve.",
+        "Restore positivity and monotonic bounds before extracting floors or extrema."
+      ],
+      "steps_zh": [
+        "把变换写在完整元组上，比较变换前后的同一个表达式。",
+        "清分母或将差因式分解，证明精确不变。",
+        "利用不变量把非线性递推化为线性关系或固定代数曲线。",
+        "求整数部分或最值前，恢复正性及单调界。"
+      ],
+      "example_en": "Show that replacing $c$ by $3ab-c$ preserves $a^2+b^2+c^2-3abc$. Apply it to $(1,1,1)$.",
+      "example_zh": "证明将 $c$ 换成 $3ab-c$ 保持 $a^2+b^2+c^2-3abc$ 不变，并应用于 $(1,1,1)$。",
+      "solution_en": [
+        "Write $c^{\\prime}=3ab-c$. Then $(c^{\\prime})^2-3abc^{\\prime}=9a^2b^2-6abc+c^2-9a^2b^2+3abc=c^2-3abc$.",
+        "The other terms $a^2+b^2$ are unchanged, proving the invariant.",
+        "The initial value is zero. The replacement gives $(1,1,2)$, and $1+1+4-6=0$ verifies the same algebraic curve."
+      ],
+      "solution_zh": [
+        "令 $c^{\\prime}=3ab-c$，展开得 $(c^{\\prime})^2-3abc^{\\prime}=c^2-3abc$。",
+        "其余两项 $a^2+b^2$ 不变，所以表达式守恒。",
+        "起始值为零，变换得到 $(1,1,2)$，且 $1+1+4-6=0$，仍位于同一代数曲面。"
+      ],
+      "tip_en": "An invariant is useful only after its domain and any needed inequality bounds are checked.",
+      "tip_zh": "只有核对定义域及所需不等式界后，不变量才足以支持结论。",
+      "question_ids": [
+        "AIME-2007-I-Q14"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [
+        "If $ac=b^2+C$ and $bd=c^2+C$, then $c(a+c)=b(b+d)$, hence $(a+c)/b=(b+d)/c$ for nonzero $b,c$. Thus the adjacent ratio $K=(a_{n-1}+a_{n+1})/a_n$ is constant and the recurrence becomes $a_{n+1}=Ka_n-a_{n-1}$. The original identity also gives $a_{n+1}^2+a_n^2=Ka_na_{n+1}-C$."
+      ],
+      "extensions_zh": [
+        "若 $ac=b^2+C,bd=c^2+C$，则 $c(a+c)=b(b+d)$，非零 $b,c$ 下有 $(a+c)/b=(b+d)/c$。因此相邻比值 $K=(a_{n-1}+a_{n+1})/a_n$ 为常数，递推化为 $a_{n+1}=Ka_n-a_{n-1}$；原式还给出 $a_{n+1}^2+a_n^2=Ka_na_{n+1}-C$。"
+      ]
+    },
+    {
+      "method_id": "LO01-M05",
+      "title_en": "Track an invariant through reduction of rational pairs",
+      "title_zh": "在分数约分中跟踪不变量",
+      "steps_en": [
+        "Use the reduced numerator and denominator as the state, because the next rule depends on them.",
+        "Find a linear determinant invariant before reduction; after dividing by a gcd, that invariant divides by the same factor.",
+        "For the shift $(m,n)\\mapsto(m+r,n+r+1)$, put $d=n-m,I=(r+1)m-rn$. The cancellation factor is $\\gcd(d+1,I)$.",
+        "Use the new difference and invariant together to prove whether a target shape can recur."
+      ],
+      "steps_zh": [
+        "将既约分子分母作为状态，因为下一步规则依赖它们。",
+        "先找约分前的线性行列式不变量；除以最大公因数后，它也除以同一因子。",
+        "若平移为 $(m,n)\\mapsto(m+r,n+r+1)$，令 $d=n-m,I=(r+1)m-rn$，约分因子为 $\\gcd(d+1,I)$。",
+        "同时跟踪新差值与不变量，以证明某个目标形式能否再次出现。"
+      ],
+      "example_en": "Start with $5/7$. Repeatedly add two to its reduced numerator and three to its reduced denominator, then reduce. Can a term equal $t/(t+1)$ for a positive integer $t$?",
+      "example_zh": "从 $5/7$ 出发，反复给既约分子加二、分母加三，再约分，能否出现正整数 $t$ 的 $t/(t+1)$？",
+      "solution_en": [
+        "Here $I=3m-2n$ starts at $15-14=1$ and is unchanged before reduction.",
+        "The cancellation factor is $\\gcd(d+1,1)=1$, so no reduction ever occurs and $d$ increases by one each time.",
+        "Initially $d=2$, hence always $d\\ge2$. A reduced fraction $t/(t+1)$ has difference one, so it can never occur."
+      ],
+      "solution_zh": [
+        "此处 $I=3m-2n$ 初值为一，未约分前保持不变。",
+        "约分因子为 $\\gcd(d+1,1)=1$，所以永不约分，差 $d$ 每步增加一。",
+        "初始差为二，始终至少二，而 $t/(t+1)$ 已既约且差为一，因此不可能出现。"
+      ],
+      "tip_en": "An unreduced update and a reduced update are different dynamical systems.",
+      "tip_zh": "未约分与约分后的递推是不同的动力系统。",
+      "question_ids": [
+        "AIME-2021-I-Q10"
+      ],
+      "prerequisites": [
+        "NT02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO01-M06",
+      "title_en": "Track both position and layer orientation in repeated folds",
+      "title_zh": "反复折叠时同时跟踪位置与层次反向",
+      "steps_en": [
+        "Record current strip length $L$, stack thickness $H$, horizontal unit position $p$, and bottom-up layer $b$.",
+        "A square in the retained half keeps its state. A right-half square folded onto the left changes to $p^{\\prime}=L+1-p,b^{\\prime}=2H+1-b$.",
+        "After the fold, halve $L$ and double $H$, then repeat.",
+        "For an entire stack, append the reversed moving-layer list above the retained-layer list."
+      ],
+      "steps_zh": [
+        "记录当前条长 $L$、厚度 $H$、水平位置 $p$ 及自下而上层号 $b$。",
+        "保留半区的方格状态不变；右半向左盖上时，$p^{\\prime}=L+1-p,b^{\\prime}=2H+1-b$。",
+        "每次折后 $L$ 减半、$H$ 加倍，再重复。",
+        "若跟踪整叠顺序，应把移动侧层表反向后接在保留侧层表之上。"
+      ],
+      "example_en": "An eight-square strip is labeled $1$ through $8$. Fold the right half over the left three times. Give the final stack from bottom to top.",
+      "example_zh": "八格纸条从左到右标一至八，连续三次将右半盖到左半，求最终自下而上层序。",
+      "solution_en": [
+        "After the first fold, the four vertical stacks from left to right are $[1,8],[2,7],[3,6],[4,5]$.",
+        "After the next fold, they are $[1,8,5,4]$ and $[2,7,6,3]$, reversing each moved stack.",
+        "The final fold gives $[1,8,5,4,3,6,7,2]$. Reversing horizontal order alone would miss the reversed layer orientation."
+      ],
+      "solution_zh": [
+        "第一折后，从左到右四叠为 $[1,8],[2,7],[3,6],[4,5]$。",
+        "第二折时反向移动层表，得到 $[1,8,5,4]$ 及 $[2,7,6,3]$。",
+        "最后得到 $[1,8,5,4,3,6,7,2]$。只反转水平位置而不反转层次会出错。"
+      ],
+      "tip_en": "Use bottom-up or top-down layers consistently; changing conventions mid-process reverses the answer.",
+      "tip_zh": "必须始终统一用自下而上或自上而下层号，途中换约定会反转答案。",
+      "question_ids": [
+        "AIME-2004-II-Q15"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO01-M07",
+      "title_en": "Use ordinary prefix parity to control a custom operation",
+      "title_zh": "用普通前缀奇偶控制自定义运算",
+      "steps_en": [
+        "Compare the operation modulo two; addition and subtraction have the same parity effect.",
+        "Prove that the running-value parity equals the ordinary prefix-sum parity.",
+        "Mark exactly which terms are subtracted; the final value equals the ordinary sum minus twice their total.",
+        "For counting, keep both total size and running value as states and extend by every allowed positive part."
+      ],
+      "steps_zh": [
+        "先模二比较运算，加与减对奇偶的影响相同。",
+        "证明当前运算值与普通前缀和同奇偶。",
+        "标出恰被减去的项，最终值等于普通总和减去这些项总和的两倍。",
+        "计数时同时保存总量及当前值，并用每个允许正部件作扩展。"
+      ],
+      "example_en": "Define $a\\circ b=a-b$ if $a$ is odd and $b$ even, and $a+b$ otherwise. Evaluate the left-associated composition $2\\circ1\\circ4\\circ3$ using prefix parity.",
+      "example_zh": "定义 $a\\circ b$：若 $a$ 奇且 $b$ 偶则取 $a-b$，否则取 $a+b$。用前缀奇偶求左结合的 $2\\circ1\\circ4\\circ3$。",
+      "solution_en": [
+        "The ordinary prefixes before the later terms are $2,3,7$, with parities even, odd, odd.",
+        "Only the even term four following the odd prefix three is subtracted. The other terms are added.",
+        "Thus the result is $(2+1+4+3)-2\\cdot4=2$. Direct left evaluation $2\\circ1=3,3\\circ4=-1,-1\\circ3=2$ confirms it."
+      ],
+      "solution_zh": [
+        "后三项之前的普通前缀分别为二、三、七，奇偶为偶、奇、奇。",
+        "只有跟在奇前缀三后的偶数四被减去，其余均相加。",
+        "所以结果为 $10-2\\cdot4=2$；直接左结合计算依次为三、负一、二，吻合。"
+      ],
+      "tip_en": "The operation is left-associated and generally not associative; parentheses are part of the state rule.",
+      "tip_zh": "运算按左结合进行，一般不满足结合律，括号顺序属于状态规则的一部分。",
+      "question_ids": [
+        "AIME-2026-II-Q14"
+      ],
+      "prerequisites": [
+        "CO05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2010-I-Q12",
+    "AIME-2012-I-Q11",
+    "AIME-2024-I-Q03"
+  ],
+  "coverage_by_question": {
+    "AIME-2024-I-Q03": {
+      "method_ids": [
+        "LO01-M01"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2010-I-Q12": {
+      "method_ids": [
+        "LO01-M02"
+      ],
+      "prerequisites": [
+        "LO02"
+      ]
+    },
+    "AIME-2012-I-Q11": {
+      "method_ids": [
+        "LO01-M03"
+      ],
+      "prerequisites": [
+        "CO06",
+        "NT03"
+      ]
+    },
+    "AIME-2007-I-Q14": {
+      "method_ids": [
+        "LO01-M04"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2021-I-Q10": {
+      "method_ids": [
+        "LO01-M05"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2004-II-Q15": {
+      "method_ids": [
+        "LO01-M06"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2026-II-Q14": {
+      "method_ids": [
+        "LO01-M07"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

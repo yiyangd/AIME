@@ -1,0 +1,49 @@
+{
+  "canonical_inputs": {
+    "questions.json": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+    "taxonomy.json": "228c73de65f4518742d175d1643e775c96820627dac60f138cca032c24880adc"
+  },
+  "question_count": 810,
+  "books": [
+    {
+      "kind": "workbook",
+      "output": "output\\workbook\\AIME_2000-2026_workbook.pdf",
+      "sha256": "ffa0140d21d184d610c1b2d7884ac3a806174618588966f940297f270cce85c8",
+      "body_pages": 810,
+      "pdf_pages": 828,
+      "sections": 44,
+      "overflow_check": "passed measured A4 content bounds and heading continuation",
+      "visual_review": "passed",
+      "visual_review_report": "audit/workbook-visual-qa-template.json"
+    },
+    {
+      "kind": "solutions_en",
+      "output": "output\\solutions\\AIME_2000-2026_solutions_en.pdf",
+      "sha256": "e665c9bb44d4cd05faa39a0c0ce028e2869253562ef5d636e9bc3e47012bcb53",
+      "body_pages": 812,
+      "pdf_pages": 830,
+      "sections": 44,
+      "overflow_check": "passed measured A4 content bounds and heading continuation",
+      "visual_review": "passed",
+      "visual_review_report": "output/qa/solutions-en-visual-review.json"
+    },
+    {
+      "kind": "solutions_zh",
+      "output": "output\\solutions\\AIME_2000-2026_solutions_zh.pdf",
+      "sha256": "d4283f2ba6bee581ce8f7bfc6e2802407cfed1594c7801ed66d7b741549e945c",
+      "body_pages": 810,
+      "pdf_pages": 828,
+      "sections": 44,
+      "overflow_check": "passed measured A4 content bounds and heading continuation",
+      "visual_review": "passed",
+      "visual_review_report": "audit/final-root-visual-qa.json"
+    }
+  ],
+  "visual_review": "passed: whole-book contact-sheet reviews plus named full-resolution pages; see linked reports",
+  "source_update_verification": "Current canonical data regenerates exactly the saved units of all four printed books; PDFs are unchanged unless separately rebuilt.",
+  "visual_review_reports": {
+    "workbook": "audit/workbook-visual-qa-template.json",
+    "solutions_en": "output/qa/solutions-en-visual-review.json",
+    "solutions_zh": "audit/final-root-visual-qa.json"
+  }
+}

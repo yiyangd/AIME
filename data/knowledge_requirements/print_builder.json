@@ -1,0 +1,2854 @@
+[
+  {
+    "subtype_id": "AL01",
+    "methods": [
+      {
+        "name_en": "Match independent radical coefficients in a squared sum",
+        "name_zh": "平方和中独立根式系数比较",
+        "question_ids": [
+          "AIME-2006-I-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Test all midpoint identities with delayed-start motion domains",
+        "name_zh": "逐一检验带延迟出发定义域的中点等式",
+        "question_ids": [
+          "AIME-2007-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Worker-hour conservation with fixed per-item labor",
+        "name_zh": "固定单件工时下的总工时守恒",
+        "question_ids": [
+          "AIME-2007-II-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "An unchanged subgroup count determines a changed total",
+        "name_zh": "不变子群人数确定变化总人数",
+        "question_ids": [
+          "AIME-2008-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count completed rest stops before a common arrival",
+        "name_zh": "共同到达前精确计数已完成休息次数",
+        "question_ids": [
+          "AIME-2008-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Equal leftovers isolate the two mixture contributions",
+        "name_zh": "相等余量分离两种混合物用量",
+        "question_ids": [
+          "AIME-2009-II-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Eliminate fixed delay from reciprocal travel-time equations",
+        "name_zh": "从倒数路程时间方程消去固定停留",
+        "question_ids": [
+          "AIME-2024-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Three equal route distances eliminate delayed travel times",
+        "name_zh": "三组等路程消去延迟行程时间",
+        "question_ids": [
+          "AIME-2026-I-Q01"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL02",
+    "methods": [
+      {
+        "name_en": "Repeated difference-of-squares product cancellation",
+        "name_zh": "连续平方差乘积消去",
+        "question_ids": [
+          "AIME-2005-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Cubic divisibility forces a common quadratic root",
+        "name_zh": "三次多项式整除迫使二次因式有公共根",
+        "question_ids": [
+          "AIME-2007-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reduce a polynomial vanishing space to two independent basis conditions",
+        "name_zh": "将多项式零点空间化为两个独立基条件",
+        "question_ids": [
+          "AIME-2008-I-Q13"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "A zero root sum turns pair cubes into the root-product identity",
+        "name_zh": "零根和将两根和立方转为根积恒等式",
+        "question_ids": [
+          "AIME-2008-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Symmetric power sums in two complementary squared trig variables",
+        "name_zh": "互补三角平方变量的对称幂和",
+        "question_ids": [
+          "AIME-2019-I-Q08"
+        ],
+        "prerequisites": [
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "Multiplicity-aware Vieta coefficients separate same-root and cross-root pairs",
+        "name_zh": "计入重数的韦达系数分离同根对与异根对",
+        "question_ids": [
+          "AIME-2019-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A shifted symmetric cubic factors into a union of coordinate conditions",
+        "name_zh": "平移对称三次式分解为坐标条件之并",
+        "question_ids": [
+          "AIME-2024-II-Q11"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL03",
+    "methods": [
+      {
+        "name_en": "Shifted fourth power and conjugate-root product",
+        "name_zh": "平移四次幂与共轭根乘积",
+        "question_ids": [
+          "AIME-2005-I-Q06"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Complex exponential identity reduces to a unit-power residue",
+        "name_zh": "复指数恒等式化为单位幂余数",
+        "question_ids": [
+          "AIME-2005-II-Q09"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Compare imaginary parts of two complex powers",
+        "name_zh": "比较两个复数幂的虚部",
+        "question_ids": [
+          "AIME-2007-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "An affine complex rotation closes after one root-of-unity cycle",
+        "name_zh": "仿射复数旋转在单位根一周期后闭合",
+        "question_ids": [
+          "AIME-2008-II-Q09"
+        ],
+        "prerequisites": [
+          "AL09"
+        ]
+      },
+      {
+        "name_en": "Complex inversion maps exterior half-planes to a disk union",
+        "name_zh": "复数倒数将外部半平面映为圆盘并集",
+        "question_ids": [
+          "AIME-2008-II-Q13"
+        ],
+        "prerequisites": [
+          "GE02",
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Clear a complex quotient and compare real and imaginary components",
+        "name_zh": "去复分式分母并比较实部虚部",
+        "question_ids": [
+          "AIME-2009-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Pair semicircle chords into a seventh-root product",
+        "name_zh": "将半圆弦配对化为七次单位根乘积",
+        "question_ids": [
+          "AIME-2009-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A nonzero complex displacement ratio encodes perpendicularity",
+        "name_zh": "非零复位移比编码垂直",
+        "question_ids": [
+          "AIME-2019-I-Q12"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Root-of-unity components and coefficient-bound saturation",
+        "name_zh": "单位根实虚部分量与系数上界饱和",
+        "question_ids": [
+          "AIME-2019-II-Q08"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Polar complex substitution and an attained linear norm bound",
+        "name_zh": "复数极坐标换元与可达线性范数界",
+        "question_ids": [
+          "AIME-2024-I-Q07"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Factor through conjugates and evaluate a root-of-unity resultant",
+        "name_zh": "共轭分解并求单位根消元乘积",
+        "question_ids": [
+          "AIME-2024-II-Q13"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Compose rotations about moving complex centers",
+        "name_zh": "复坐标复合绕移动圆心的旋转",
+        "question_ids": [
+          "AIME-2026-I-Q05"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Seven square-root sign sums force a zero Heron-type factor",
+        "name_zh": "七个平方根符号和迫使海伦型因子为零",
+        "question_ids": [
+          "AIME-2026-II-Q11"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL04",
+    "methods": [
+      {
+        "name_en": "Exponential substitution and Vieta product-to-log sum",
+        "name_zh": "指数换元及韦达积转对数和",
+        "question_ids": [
+          "AIME-2005-I-Q08"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Reciprocal logarithm substitution and bounded integer powers",
+        "name_zh": "互反对数换元与有界整数幂",
+        "question_ids": [
+          "AIME-2005-II-Q05"
+        ],
+        "prerequisites": [
+          "NT05"
+        ]
+      },
+      {
+        "name_en": "Exponentiate strict logarithmic triangle inequalities",
+        "name_zh": "将严格对数三角不等式指数化",
+        "question_ids": [
+          "AIME-2006-II-Q02"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Raise an exponential identity by the same logarithmic exponent",
+        "name_zh": "以相同对数指数再次乘方",
+        "question_ids": [
+          "AIME-2009-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A logarithm-of-log substitution removes the unknown base",
+        "name_zh": "对数的对数换元消去未知底",
+        "question_ids": [
+          "AIME-2019-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Multiply reciprocal logarithmic equations to isolate a product",
+        "name_zh": "相乘互反对数方程以分离乘积",
+        "question_ids": [
+          "AIME-2024-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Log variables linearize multiplicative quotient constraints",
+        "name_zh": "对数变量线性化乘法商约束",
+        "question_ids": [
+          "AIME-2024-II-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Three factored logarithmic products telescope separately",
+        "name_zh": "三个分解后的对数乘积分别望远镜消去",
+        "question_ids": [
+          "AIME-2025-II-Q04"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "A log-quadratic root sum gives a prime-power product and divisor count",
+        "name_zh": "对数二次根和给出素数幂根积及约数数",
+        "question_ids": [
+          "AIME-2026-I-Q06"
+        ],
+        "prerequisites": [
+          "AL02",
+          "NT08"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL05",
+    "methods": [
+      {
+        "name_en": "Compare geometric sums before and after squaring terms",
+        "name_zh": "比较原项与平方项的等比级数和",
+        "question_ids": [
+          "AIME-2005-II-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Linearize a nonlinear recurrence with adjacent products",
+        "name_zh": "用相邻乘积线性化非线性递推",
+        "question_ids": [
+          "AIME-2005-II-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Square an absolute recurrence, telescope, and construct its terminal state",
+        "name_zh": "平方绝对值递推、望远镜求和并构造终态",
+        "question_ids": [
+          "AIME-2006-I-Q15"
+        ],
+        "prerequisites": [
+          "LO02",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "A tribonacci partial sum telescopes to two boundary terms",
+        "name_zh": "三阶递推部分和消成两个边界项",
+        "question_ids": [
+          "AIME-2006-II-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A nonlinear recurrence has a constant adjacent linear ratio",
+        "name_zh": "非线性递推具有恒定相邻线性比",
+        "question_ids": [
+          "AIME-2007-I-Q14"
+        ],
+        "prerequisites": [
+          "LO01"
+        ]
+      },
+      {
+        "name_en": "Bound a geometric sum between consecutive integer-power scales",
+        "name_zh": "将等比和夹在相邻整数幂尺度之间",
+        "question_ids": [
+          "AIME-2007-II-Q12"
+        ],
+        "prerequisites": [
+          "AL04"
+        ]
+      },
+      {
+        "name_en": "Arithmetic rows propagate under adjacent addition",
+        "name_zh": "等差行在相邻相加下的传播",
+        "question_ids": [
+          "AIME-2008-I-Q06"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Pair alternating square blocks into an arithmetic sum",
+        "name_zh": "将正负平方分块化为等差和",
+        "question_ids": [
+          "AIME-2008-II-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Adjacent ratios linearize a nonlinear recurrence into factorials",
+        "name_zh": "相邻比将非线性递推化为阶乘",
+        "question_ids": [
+          "AIME-2008-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Telescope exponential increments and test integer-power residues",
+        "name_zh": "指数增量连乘消去并检验整数幂剩余类",
+        "question_ids": [
+          "AIME-2009-I-Q07"
+        ],
+        "prerequisites": [
+          "AL04",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Distinct power differences via valuations and coefficient summation",
+        "name_zh": "用赋值证明幂差互异并按系数求和",
+        "question_ids": [
+          "AIME-2009-I-Q08"
+        ],
+        "prerequisites": [
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "Arithmetic sequence membership is a common-difference divisor condition",
+        "name_zh": "等差数列包含项转为公差公约数条件",
+        "question_ids": [
+          "AIME-2026-II-Q01"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL06",
+    "methods": [
+      {
+        "name_en": "A rounding round trip has a finite residue-class success pattern",
+        "name_zh": "往返舍入产生有限剩余类成功模式",
+        "question_ids": [
+          "AIME-2007-I-Q05"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Ceiling-minus-floor isolates integral logarithms",
+        "name_zh": "上取整减下取整筛出整数对数",
+        "question_ids": [
+          "AIME-2007-I-Q07"
+        ],
+        "prerequisites": [
+          "AL04",
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Nearest-root rounding blocks and a square-sum formula",
+        "name_zh": "平方根舍入区间与平方和公式",
+        "question_ids": [
+          "AIME-2007-I-Q11"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "A cube-root floor interval counts an arithmetic progression",
+        "name_zh": "立方根取整区间计数等差数列",
+        "question_ids": [
+          "AIME-2007-II-Q07"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Square gaps determine occupancy of fixed-width floor blocks",
+        "name_zh": "平方间距确定固定宽度取整块的占用",
+        "question_ids": [
+          "AIME-2008-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Ceiling-constrained traffic flow and finite-interval endpoint conventions",
+        "name_zh": "上取整限速流率与有限区间端点约定",
+        "question_ids": [
+          "AIME-2008-I-Q12"
+        ],
+        "prerequisites": [
+          "LO02"
+        ]
+      },
+      {
+        "name_en": "Partition a floor-power function into disjoint image intervals",
+        "name_zh": "将取整幂函数分成互不相交的像区间",
+        "question_ids": [
+          "AIME-2009-I-Q06"
+        ],
+        "prerequisites": [
+          "AL04"
+        ]
+      },
+      {
+        "name_en": "Strict logarithmic bounds become an exact floor-count equation",
+        "name_zh": "严格对数区间化为精确取整计数方程",
+        "question_ids": [
+          "AIME-2009-II-Q11"
+        ],
+        "prerequisites": [
+          "NT05",
+          "AL04"
+        ]
+      },
+      {
+        "name_en": "Full monotone branch pairs with derivative-product and corner-convexity uniqueness",
+        "name_zh": "满幅单调分支配对及导数乘积与角点凸性唯一性",
+        "question_ids": [
+          "AIME-2024-I-Q12"
+        ],
+        "prerequisites": [
+          "AL08",
+          "CO06",
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Piecewise quadratics contribute Vieta sums after endpoint filtering",
+        "name_zh": "分段二次方程筛端点后贡献韦达根和",
+        "question_ids": [
+          "AIME-2025-I-Q11"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL07",
+    "methods": [
+      {
+        "name_en": "Minimize the largest orthogonal width of a semicircle",
+        "name_zh": "最小化半圆的最大正交投影宽度",
+        "question_ids": [
+          "AIME-2005-I-Q11"
+        ],
+        "prerequisites": [
+          "GE07",
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "A unit-normal tangent parameter gives an attainable quadratic maximum",
+        "name_zh": "单位法向切线参数给出可达二次最大值",
+        "question_ids": [
+          "AIME-2008-I-Q14"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "A fixed dimension sum gives an attainable volume bound",
+        "name_zh": "固定边长和给出可达体积界",
+        "question_ids": [
+          "AIME-2008-II-Q03"
+        ],
+        "prerequisites": [
+          "GE10"
+        ]
+      },
+      {
+        "name_en": "Cyclic chord ratios turn separation into an AM–GM reciprocal bound",
+        "name_zh": "圆内弦比将截距差化为均值不等式倒数界",
+        "question_ids": [
+          "AIME-2009-II-Q15"
+        ],
+        "prerequisites": [
+          "GE04",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Compact box constraints and a repeated-root boundary maximize the diagonal",
+        "name_zh": "紧致长方体约束与重根边界最大化体对角线",
+        "question_ids": [
+          "AIME-2024-I-Q15"
+        ],
+        "prerequisites": [
+          "AL02",
+          "GE09"
+        ]
+      },
+      {
+        "name_en": "A Fermat rotation bound and two diameter circles attain simultaneous minima",
+        "name_zh": "费马旋转下界与两个直径圆同时实现最小值",
+        "question_ids": [
+          "AIME-2025-I-Q14"
+        ],
+        "prerequisites": [
+          "GE03",
+          "GE04",
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Two equal global minima force a squared quadratic coefficient identity",
+        "name_zh": "两个等全局最小值迫使二次式平方系数恒等式",
+        "question_ids": [
+          "AIME-2025-II-Q15"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL08",
+    "methods": [
+      {
+        "name_en": "Sum-to-product and cubic factorization enumerate angle roots",
+        "name_zh": "和差化积与立方因式分解枚举角根",
+        "question_ids": [
+          "AIME-2006-I-Q12"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Tangent addition with acute-angle branch control",
+        "name_zh": "带锐角分支检验的正切和角",
+        "question_ids": [
+          "AIME-2008-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Product-to-sum telescoping followed by consecutive-integer divisibility",
+        "name_zh": "积化和差望远镜求和再用相邻整数整除",
+        "question_ids": [
+          "AIME-2008-II-Q08"
+        ],
+        "prerequisites": [
+          "AL05",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Count sine level roots and separate turning-point tangencies",
+        "name_zh": "计数正弦水平根并分离折返点相切",
+        "question_ids": [
+          "AIME-2025-II-Q09"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL09",
+    "methods": [
+      {
+        "name_en": "Finite polynomial root orbits and modulus-growth exclusion",
+        "name_zh": "有限多项式根轨道与模增长排除",
+        "question_ids": [
+          "AIME-2007-II-Q14"
+        ],
+        "prerequisites": [
+          "AL03",
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Infinite integer descent forces period two before divisor optimization",
+        "name_zh": "无限整数下降迫使二周期后优化因子对",
+        "question_ids": [
+          "AIME-2009-I-Q13"
+        ],
+        "prerequisites": [
+          "NT05"
+        ]
+      },
+      {
+        "name_en": "Normalize a radical recurrence into a folded sine map",
+        "name_zh": "将根式递推归一化为折叠正弦映射",
+        "question_ids": [
+          "AIME-2009-II-Q14"
+        ],
+        "prerequisites": [
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "Uniqueness of an infinite sign itinerary forces an eightfold fixed residue",
+        "name_zh": "无限符号轨道唯一性迫使八倍固定剩余类",
+        "question_ids": [
+          "AIME-2019-II-Q10"
+        ],
+        "prerequisites": [
+          "AL08",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Rational conjugacy exposes a squaring denominator and CRT residue",
+        "name_zh": "有理共轭揭示平方分母并用中国剩余合并",
+        "question_ids": [
+          "AIME-2025-II-Q13"
+        ],
+        "prerequisites": [
+          "NT03",
+          "NT04"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO01",
+    "methods": [
+      {
+        "name_en": "Forbidden orientation transition and independent color positions",
+        "name_zh": "禁止方向转移与独立颜色位置",
+        "question_ids": [
+          "AIME-2005-I-Q05"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Fix the valley minimum and choose the decreasing side",
+        "name_zh": "固定谷底最小值并选择递减一侧",
+        "question_ids": [
+          "AIME-2006-II-Q04"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Split multiset strings by the repeated-symbol multiplicity",
+        "name_zh": "按重复字符使用次数拆分多重集合排列",
+        "question_ids": [
+          "AIME-2007-II-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Sequential substitutions have constant outgoing and decreasing incoming choices",
+        "name_zh": "顺序换人具有恒定离场与递减进场选择",
+        "question_ids": [
+          "AIME-2019-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Advisor collisions split occupied seats into independently weighted blocks",
+        "name_zh": "顾问碰撞限制将已占座拆成独立加权块",
+        "question_ids": [
+          "AIME-2019-II-Q05"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Enumerate strict flavor-count partitions before multinomial assignment",
+        "name_zh": "先枚举严格口味人数分拆再作多项分配",
+        "question_ids": [
+          "AIME-2025-I-Q03"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Disjoint row sets force a Sudoku band and weighted subset sum",
+        "name_zh": "互斥行集合确定数独带并作加权子集求和",
+        "question_ids": [
+          "AIME-2025-I-Q10"
+        ],
+        "prerequisites": [
+          "CO02",
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "A permutation power condition excludes forbidden cycle lengths",
+        "name_zh": "排列幂恒等条件排除禁用循环长度",
+        "question_ids": [
+          "AIME-2026-I-Q07"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO02",
+    "methods": [
+      {
+        "name_en": "Binomial-ratio cancellation and monotone consecutive product",
+        "name_zh": "组合数比约分与连续积单调性",
+        "question_ids": [
+          "AIME-2005-II-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Condition on column overlap to force remaining row capacities",
+        "name_zh": "按列交叠分类并确定剩余行容量",
+        "question_ids": [
+          "AIME-2007-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Pascal propagation followed by a residue-weight filter",
+        "name_zh": "帕斯卡传播后作剩余权重筛选",
+        "question_ids": [
+          "AIME-2007-II-Q13"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Compress selected indices to remove mandatory gaps",
+        "name_zh": "压缩所选指标以去除强制间隔",
+        "question_ids": [
+          "AIME-2009-II-Q06"
+        ],
+        "prerequisites": [
+          "CO07"
+        ]
+      },
+      {
+        "name_en": "Count by set maximum then decode a binary expansion",
+        "name_zh": "按集合最大元计数后解码二进制",
+        "question_ids": [
+          "AIME-2024-II-Q06"
+        ],
+        "prerequisites": [
+          "NT06"
+        ]
+      },
+      {
+        "name_en": "Prime-characteristic polynomial folding filters binomial residue sums",
+        "name_zh": "素特征多项式折叠筛选二项剩余和",
+        "question_ids": [
+          "AIME-2026-I-Q13"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO03",
+    "methods": [
+      {
+        "name_en": "Distribute flags into blue gaps and sum by Vandermonde",
+        "name_zh": "将绿旗分配到蓝旗间隙并作范德蒙德求和",
+        "question_ids": [
+          "AIME-2008-II-Q12"
+        ],
+        "prerequisites": [
+          "CO02",
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Arrange a digit multiset then cut into bounded nonempty prices",
+        "name_zh": "先排列数字多重集合再切成有界非空价格",
+        "question_ids": [
+          "AIME-2009-I-Q09"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "A cyclic group-run order reduces to independent positive compositions",
+        "name_zh": "循环组段顺序化为独立正整数拆分",
+        "question_ids": [
+          "AIME-2009-I-Q10"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "Short occupied runs are placed into empty-chair gaps",
+        "name_zh": "将短占座段放入空椅间隙",
+        "question_ids": [
+          "AIME-2025-II-Q10"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO04",
+    "methods": [
+      {
+        "name_en": "Overlap double counting and rotation-cycle complement colorings",
+        "name_zh": "重叠双计数与旋转循环补色染色",
+        "question_ids": [
+          "AIME-2024-I-Q11"
+        ],
+        "prerequisites": [
+          "PS01",
+          "CO06"
+        ]
+      },
+      {
+        "name_en": "Ownership incidence double counting with a universal baseline",
+        "name_zh": "以人人共有物品为基准的拥有次数双计数",
+        "question_ids": [
+          "AIME-2024-II-Q01"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO05",
+    "methods": [
+      {
+        "name_en": "Last-step-state dynamic programming with forbidden turns",
+        "name_zh": "末步状态递推与禁止转角",
+        "question_ids": [
+          "AIME-2005-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Insert the new maximum in three legal stack positions",
+        "name_zh": "将新最大值插入三个合法堆叠位置",
+        "question_ids": [
+          "AIME-2006-I-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Classify monotone jump paths by visited landmarks",
+        "name_zh": "按所经里程碑分类单调跳跃路径",
+        "question_ids": [
+          "AIME-2007-I-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Uniform predecessor degree in a digit-transition graph",
+        "name_zh": "数字转移图中的恒定前驱度",
+        "question_ids": [
+          "AIME-2007-II-Q06"
+        ],
+        "prerequisites": [
+          "NT06"
+        ]
+      },
+      {
+        "name_en": "Strip initial runs to build a two-state word recurrence",
+        "name_zh": "剥离起始段建立双状态字符串递推",
+        "question_ids": [
+          "AIME-2008-I-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Divide by the first term to recur on smaller divisor sums",
+        "name_zh": "除以首项将递推降到更小约数和",
+        "question_ids": [
+          "AIME-2019-II-Q12"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Turn counts become positive compositions of directional run lengths",
+        "name_zh": "转弯次数转化为各方向段长正整数拆分",
+        "question_ids": [
+          "AIME-2024-I-Q06"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "First-uncovered-cell exact cover counts unordered rectangular-loop partitions",
+        "name_zh": "首个未覆盖格精确覆盖计数无序矩形环划分",
+        "question_ids": [
+          "AIME-2026-I-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Prefix parity selects signs in a composition extension recurrence",
+        "name_zh": "前缀奇偶在整数拆分扩展递推中选择符号",
+        "question_ids": [
+          "AIME-2026-II-Q14"
+        ],
+        "prerequisites": [
+          "LO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO06",
+    "methods": [
+      {
+        "name_en": "Lattice-crossed cells and half-turn pairing",
+        "name_zh": "格点穿越单元数与半周旋转配对",
+        "question_ids": [
+          "AIME-2007-II-Q05"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Distinct distance levels bound a growing path and force its reverse construction",
+        "name_zh": "不同距离层限制增长路径并迫使反向构造",
+        "question_ids": [
+          "AIME-2008-II-Q10"
+        ],
+        "prerequisites": [
+          "LO02"
+        ]
+      },
+      {
+        "name_en": "Perpendicular chord classes and offset-fit inequalities count rectangles",
+        "name_zh": "垂直弦方向类与偏移容纳不等式计数矩形",
+        "question_ids": [
+          "AIME-2024-II-Q15"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Condition on central edge colors to multiply independent boundary completions",
+        "name_zh": "按中央边染色分类并乘独立边界补全数",
+        "question_ids": [
+          "AIME-2025-II-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Equal-chord matchings decompose into GCD-sized cycles",
+        "name_zh": "等弦配对分解为最大公因数控制的循环",
+        "question_ids": [
+          "AIME-2025-II-Q11"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Fano-line zero strata and K4 edge parity count a cubic residue constraint",
+        "name_zh": "法诺线零位置分层与完全图边奇偶计数三次剩余约束",
+        "question_ids": [
+          "AIME-2026-II-Q15"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO07",
+    "methods": [
+      {
+        "name_en": "Top-index shuffle permutation and fixed points in both halves",
+        "name_zh": "自顶编号洗牌置换与两半堆不动点",
+        "question_ids": [
+          "AIME-2005-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A triangular symmetry quotient is a corner-color multiset",
+        "name_zh": "三角形对称商对应角部颜色多重集合",
+        "question_ids": [
+          "AIME-2006-II-Q08"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Maximal monochrome placements are equivalent row–column colorings",
+        "name_zh": "极大单色布局等价于行列染色",
+        "question_ids": [
+          "AIME-2024-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Encode each strip crossing and force every vertical move",
+        "name_zh": "编码每个条带横穿并迫使所有竖直步",
+        "question_ids": [
+          "AIME-2026-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Neighbor-set chains give multiplicative counts and prime-factor cost minimization",
+        "name_zh": "相邻集合链给出乘法计数及素因子代价最小化",
+        "question_ids": [
+          "AIME-2026-II-Q13"
+        ],
+        "prerequisites": [
+          "NT01",
+          "LO02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE01",
+    "methods": [
+      {
+        "name_en": "Cyclic-angle similarity transfers a triangle area",
+        "name_zh": "圆周角相似转移三角形面积",
+        "question_ids": [
+          "AIME-2006-II-Q12"
+        ],
+        "prerequisites": [
+          "GE03",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "A fixed internal angle forces cross-corner similarity and area equations",
+        "name_zh": "固定内角迫使跨角相似与面积方程",
+        "question_ids": [
+          "AIME-2007-I-Q15"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Homothetic right triangles share a hypotenuse-median line",
+        "name_zh": "位似直角三角形共享斜边中线",
+        "question_ids": [
+          "AIME-2008-II-Q05"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Reflect a median point to create a parallel side and bisector similarity",
+        "name_zh": "反射中点构造平行边与角平分线相似",
+        "question_ids": [
+          "AIME-2009-I-Q05"
+        ],
+        "prerequisites": [
+          "GE05"
+        ]
+      },
+      {
+        "name_en": "Right-triangle projection and similarity conserve a segment product",
+        "name_zh": "直角三角形投影与相似保持线段乘积",
+        "question_ids": [
+          "AIME-2019-I-Q06"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Parallel barycentric level lines determine a signed similarity ratio",
+        "name_zh": "平行重心坐标水平线确定有向相似比",
+        "question_ids": [
+          "AIME-2019-II-Q07"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Similar corner cuts give the reciprocal-side sum law",
+        "name_zh": "相似角部切块给出边长倒数和公式",
+        "question_ids": [
+          "AIME-2024-II-Q05"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE02",
+    "methods": [
+      {
+        "name_en": "Squared-distance strip areas form an arithmetic progression",
+        "name_zh": "距离平方之差给出条带面积等差数列",
+        "question_ids": [
+          "AIME-2006-I-Q07"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Rhombus angle compatibility and an open attainable area interval",
+        "name_zh": "菱形角相容条件与可达开面积区间",
+        "question_ids": [
+          "AIME-2006-I-Q08"
+        ],
+        "prerequisites": [
+          "AL08",
+          "LO02"
+        ]
+      },
+      {
+        "name_en": "Cut an equiangular equilateral hexagon into a rectangle and right triangles",
+        "name_zh": "将等边等角条件六边形分成矩形和直角三角形",
+        "question_ids": [
+          "AIME-2006-II-Q01"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Rotate a triangle and subtract a similar overlap corner",
+        "name_zh": "旋转三角形并扣除相似的重叠角块",
+        "question_ids": [
+          "AIME-2007-I-Q12"
+        ],
+        "prerequisites": [
+          "GE01",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "A square overlap is a triangle minus a similar cap",
+        "name_zh": "正方形重叠面积等于三角形减相似顶帽",
+        "question_ids": [
+          "AIME-2008-I-Q02"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Determinant area integrality filters index parity before pair selection",
+        "name_zh": "行列式面积整性先筛选指标奇偶再选点对",
+        "question_ids": [
+          "AIME-2009-I-Q11"
+        ],
+        "prerequisites": [
+          "CO02",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Subtract three equal-leg corner triangles from a right triangle",
+        "name_zh": "从直角三角形扣除三个等边腿角区",
+        "question_ids": [
+          "AIME-2019-I-Q03"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Affine reflection coordinates conserve a polygon shoelace area",
+        "name_zh": "仿射点反射坐标保持多边形鞋带面积",
+        "question_ids": [
+          "AIME-2025-I-Q02"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Reject the reversed interior-angle order before a trig area decomposition",
+        "name_zh": "先排除内角次序颠倒再作三角面积分解",
+        "question_ids": [
+          "AIME-2025-II-Q14"
+        ],
+        "prerequisites": [
+          "GE03",
+          "AL08"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE03",
+    "methods": [
+      {
+        "name_en": "Equilateral extension and cosine-law side equation",
+        "name_zh": "等边延长构型与余弦定理边长方程",
+        "question_ids": [
+          "AIME-2005-I-Q07"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Isogonal cevian sine-area product relation",
+        "name_zh": "等角共轭劈线的正弦面积乘积关系",
+        "question_ids": [
+          "AIME-2005-II-Q14"
+        ],
+        "prerequisites": [
+          "GE05"
+        ]
+      },
+      {
+        "name_en": "Successive right-triangle hypotenuses determine a perimeter",
+        "name_zh": "连续直角三角形的斜边确定周长",
+        "question_ids": [
+          "AIME-2006-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Interpret three radical sums as altitude-foot decompositions",
+        "name_zh": "将三个根式和解释为高线垂足分段",
+        "question_ids": [
+          "AIME-2006-II-Q15"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Extend complementary right triangles to a common right vertex",
+        "name_zh": "延长互余直角三角形至公共直角顶点",
+        "question_ids": [
+          "AIME-2007-II-Q03"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Separate ground rolling from circular obstacle rolling",
+        "name_zh": "分开地面滚动与圆障碍滚动",
+        "question_ids": [
+          "AIME-2007-II-Q11"
+        ],
+        "prerequisites": [
+          "GE06"
+        ]
+      },
+      {
+        "name_en": "Opposing triangle bounds force simultaneous equality",
+        "name_zh": "相反的三角形界迫使同时取等",
+        "question_ids": [
+          "AIME-2008-I-Q10"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Recognize equal distances as an equilateral triangle and optimize its angle",
+        "name_zh": "识别等距为等边三角形并优化角参数",
+        "question_ids": [
+          "AIME-2008-II-Q14"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Fixed triangle areas force alternating radii and equal polygon edges",
+        "name_zh": "固定三角面积迫使径向长度交替及多边形边等长",
+        "question_ids": [
+          "AIME-2025-II-Q12"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE04",
+    "methods": [
+      {
+        "name_en": "Equal endpoint powers and tangent lengths force a side",
+        "name_zh": "端点圆幂与切线长相等确定一边",
+        "question_ids": [
+          "AIME-2005-I-Q15"
+        ],
+        "prerequisites": [
+          "GE05",
+          "GE03",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Incenter cyclic angles fix an arc and continuity supplies its midpoint",
+        "name_zh": "内心圆周角固定圆弧并用连续性达到弧中点",
+        "question_ids": [
+          "AIME-2009-I-Q15"
+        ],
+        "prerequisites": [
+          "GE05",
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Cyclic-angle branches and radical-axis powers with explicit order filtering",
+        "name_zh": "圆周角分支与根轴点幂并显式筛选点序",
+        "question_ids": [
+          "AIME-2019-I-Q13"
+        ],
+        "prerequisites": [
+          "GE03",
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "A common radical axis makes the second intersection a chord midpoint",
+        "name_zh": "公共根轴使第二交点成为弦中点",
+        "question_ids": [
+          "AIME-2019-I-Q15"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Altitude-foot similarity and two powers eliminate side lengths",
+        "name_zh": "垂足相似与两点幂消去边长",
+        "question_ids": [
+          "AIME-2019-II-Q15"
+        ],
+        "prerequisites": [
+          "GE01",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Tangent-chord angles and secant power determine an inner chord",
+        "name_zh": "切线弦角与割线点幂确定内部弦",
+        "question_ids": [
+          "AIME-2024-I-Q10"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Tangential-quadrilateral side sums and trapezoid leg projections",
+        "name_zh": "外切四边形对边和与梯形腰投影",
+        "question_ids": [
+          "AIME-2025-I-Q06"
+        ],
+        "prerequisites": [
+          "GE02",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Nine-point altitude feet and two cyclic arc-angle conversions",
+        "name_zh": "九点圆垂足与两次圆周角弧度转换",
+        "question_ids": [
+          "AIME-2025-II-Q05"
+        ],
+        "prerequisites": [
+          "GE05",
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Bisector integer scaling and tangent power constrain interior secant lengths",
+        "name_zh": "角平分线整数缩放与切线点幂约束内部割线长",
+        "question_ids": [
+          "AIME-2026-II-Q10"
+        ],
+        "prerequisites": [
+          "GE05",
+          "NT01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE05",
+    "methods": [
+      {
+        "name_en": "Semiperimeter tangent lengths locate two incircle contact points",
+        "name_zh": "半周长切线长定位两个内切圆切点",
+        "question_ids": [
+          "AIME-2007-II-Q09"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Tangent-length semiperimeters and two area formulas eliminate the inradius",
+        "name_zh": "切线半周长与两种面积公式消去内切圆半径",
+        "question_ids": [
+          "AIME-2009-I-Q12"
+        ],
+        "prerequisites": [
+          "GE04",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Euler center distance and half-angle inradius identities determine a side product",
+        "name_zh": "欧拉圆心距与半角内切圆恒等式确定边积",
+        "question_ids": [
+          "AIME-2024-II-Q10"
+        ],
+        "prerequisites": [
+          "GE03",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "An incenter chord ratio turns perimeter integrality into a factored cubic",
+        "name_zh": "内心弦比将周长整性化为可分解三次式",
+        "question_ids": [
+          "AIME-2026-II-Q08"
+        ],
+        "prerequisites": [
+          "AL02",
+          "NT05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE06",
+    "methods": [
+      {
+        "name_en": "Equal-circle ring centers and disk-area subtraction",
+        "name_zh": "等圆环圆心关系与圆盘面积相减",
+        "question_ids": [
+          "AIME-2005-I-Q01"
+        ],
+        "prerequisites": [
+          "GE01",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Affine signed distance along a center line and chord length",
+        "name_zh": "圆心线上的仿射有向距离与弦长",
+        "question_ids": [
+          "AIME-2005-II-Q08"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Internal homothety centers and tangent slopes",
+        "name_zh": "内位似中心与公切线斜率",
+        "question_ids": [
+          "AIME-2006-II-Q09"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Equal tangent-circle radii and endpoint half-angle distances",
+        "name_zh": "等切圆半径与端点半角切线距离",
+        "question_ids": [
+          "AIME-2007-I-Q09"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Offset corner centers form an incenter homothety",
+        "name_zh": "内移角圆心组成以内心为中心的位似",
+        "question_ids": [
+          "AIME-2007-II-Q15"
+        ],
+        "prerequisites": [
+          "GE05",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Angle-bisector circle centers and a tangency quadratic with fit checks",
+        "name_zh": "角平分线圆心与带容纳检验的外切二次方程",
+        "question_ids": [
+          "AIME-2008-II-Q11"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Equal-radius symmetry locates a tangent-circle center on an axis",
+        "name_zh": "等半径对称性将相切圆心限制在轴上",
+        "question_ids": [
+          "AIME-2009-II-Q05"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Excenter distances determine a rational isosceles side ratio",
+        "name_zh": "旁心距离确定有理等腰边长比",
+        "question_ids": [
+          "AIME-2019-I-Q11"
+        ],
+        "prerequisites": [
+          "GE05",
+          "NT05"
+        ]
+      },
+      {
+        "name_en": "Equal-circle chains share a base-offset coefficient with the incircle",
+        "name_zh": "等圆链与内切圆共享底边偏移系数",
+        "question_ids": [
+          "AIME-2024-I-Q08"
+        ],
+        "prerequisites": [
+          "GE05",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "A tangent-circle coordinate frame cancels equal triangle-area cross terms",
+        "name_zh": "相切圆坐标系消去等三角面积交叉项",
+        "question_ids": [
+          "AIME-2025-II-Q06"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE07",
+    "methods": [
+      {
+        "name_en": "Median-line equation and signed determinant area",
+        "name_zh": "中线方程与有向行列式面积",
+        "question_ids": [
+          "AIME-2005-I-Q10"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Equal supporting-strip widths with feasibility rejection",
+        "name_zh": "相等支撑带宽与构型可行性排除",
+        "question_ids": [
+          "AIME-2005-I-Q14"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Tangent of a vector angle with a difference constraint",
+        "name_zh": "向量夹角正切与定差约束",
+        "question_ids": [
+          "AIME-2005-II-Q12"
+        ],
+        "prerequisites": [
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "Pair centrally symmetric disks around a prescribed bisector",
+        "name_zh": "围绕给定方向的平分线配对中心对称圆盘",
+        "question_ids": [
+          "AIME-2006-I-Q10"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Rigid-tripod coordinates and point-to-plane distance",
+        "name_zh": "刚性三脚架坐标与点到平面距离",
+        "question_ids": [
+          "AIME-2006-I-Q14"
+        ],
+        "prerequisites": [
+          "GE09"
+        ]
+      },
+      {
+        "name_en": "Equilateral side equality determines an inscribed square intercept",
+        "name_zh": "等边长条件确定内嵌正方形截距",
+        "question_ids": [
+          "AIME-2006-II-Q06"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Affine intercept coordinates intersect a parallelogram diagonal",
+        "name_zh": "仿射截距坐标与平行四边形对角线求交",
+        "question_ids": [
+          "AIME-2009-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Perpendicular diagonally directed vectors give a height equation",
+        "name_zh": "斜向量垂直给出高度方程",
+        "question_ids": [
+          "AIME-2009-II-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Angle-bisector slope and reflected ray intersection",
+        "name_zh": "角平分线斜率与反射射线求交",
+        "question_ids": [
+          "AIME-2009-II-Q10"
+        ],
+        "prerequisites": [
+          "GE05",
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Reflect congruent triangles and intersect the limiting overlap edges",
+        "name_zh": "反射全等三角形并求限制重叠边的交点",
+        "question_ids": [
+          "AIME-2019-II-Q01"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Tangency fixes circle equations before radical-axis length extraction",
+        "name_zh": "相切确定圆方程后从根轴提取长度",
+        "question_ids": [
+          "AIME-2019-II-Q11"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Signed sector-area deficits are linear normal projections",
+        "name_zh": "有向扇形面积差是法向线性投影",
+        "question_ids": [
+          "AIME-2019-II-Q13"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Perpendicular-bisector circle centers link opposing rectangles",
+        "name_zh": "垂直平分线圆心联系相对矩形",
+        "question_ids": [
+          "AIME-2024-I-Q05"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Complex distance loci become circle–bisector tangency",
+        "name_zh": "复距离轨迹化为圆与垂直平分线相切",
+        "question_ids": [
+          "AIME-2025-I-Q08"
+        ],
+        "prerequisites": [
+          "AL03"
+        ]
+      },
+      {
+        "name_en": "Factor spatial inequalities into sign regions and project a bounded triangle",
+        "name_zh": "将空间不等式分解为符号区域并求有界三角形",
+        "question_ids": [
+          "AIME-2025-I-Q12"
+        ],
+        "prerequisites": [
+          "AL06",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Collinear distance reconstruction and two-circle height subtraction",
+        "name_zh": "共线距离重建与两圆方程相减求高",
+        "question_ids": [
+          "AIME-2025-II-Q01"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "An oriented rotation branch and polygon determinant area",
+        "name_zh": "定向旋转分支与多边形行列式面积",
+        "question_ids": [
+          "AIME-2026-I-Q10"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Vector closure relates neighboring side products to squared perimeter",
+        "name_zh": "向量闭合联系邻边积与周长平方",
+        "question_ids": [
+          "AIME-2026-I-Q14"
+        ],
+        "prerequisites": [
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "Nonconvex angle directions give an affine area congruence",
+        "name_zh": "非凸角方向给出仿射面积同余",
+        "question_ids": [
+          "AIME-2026-II-Q03"
+        ],
+        "prerequisites": [
+          "NT03",
+          "GE02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE08",
+    "methods": [
+      {
+        "name_en": "Tangent-circle center ellipse and line-discriminant tangency",
+        "name_zh": "相切圆圆心椭圆与直线判别式相切",
+        "question_ids": [
+          "AIME-2005-II-Q15"
+        ],
+        "prerequisites": [
+          "GE06",
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Perpendicular conic diagonals impose an open slope interval",
+        "name_zh": "垂直圆锥曲线对角线施加开斜率区间",
+        "question_ids": [
+          "AIME-2024-I-Q09"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "A unit-intercept segment envelope is a strict-convexity tangency",
+        "name_zh": "单位截距线段包络对应严格凸性相切",
+        "question_ids": [
+          "AIME-2024-II-Q12"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      },
+      {
+        "name_en": "Intersect a rotated symmetric parabola through its reflection axis",
+        "name_zh": "利用反射对称轴求旋转抛物线交点",
+        "question_ids": [
+          "AIME-2025-I-Q09"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Normal tangency is a stationary point of squared conic distance",
+        "name_zh": "法线相切对应圆锥曲线距离平方驻点",
+        "question_ids": [
+          "AIME-2026-II-Q06"
+        ],
+        "prerequisites": [
+          "AL07"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE09",
+    "methods": [
+      {
+        "name_en": "Axial torus sections and homothetic sphere-contact radii",
+        "name_zh": "圆环面轴截面与位似球切触半径",
+        "question_ids": [
+          "AIME-2024-II-Q08"
+        ],
+        "prerequisites": [
+          "GE06"
+        ]
+      },
+      {
+        "name_en": "Sphere containment projects to an allowed contact disk",
+        "name_zh": "球的容纳约束投影为允许接触圆盘",
+        "question_ids": [
+          "AIME-2026-I-Q03"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Common tangent planes make contact radii affine",
+        "name_zh": "公共切平面使接触球半径成为仿射函数",
+        "question_ids": [
+          "AIME-2026-I-Q12"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Symmetric tetrahedron centers reduce to two axial distance equations",
+        "name_zh": "对称四面体圆心化为两个轴向距离方程",
+        "question_ids": [
+          "AIME-2026-II-Q12"
+        ],
+        "prerequisites": [
+          "GE10",
+          "GE07"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE10",
+    "methods": [
+      {
+        "name_en": "Coordinate dual-polyhedron centers and pyramid volumes",
+        "name_zh": "对偶多面体中心坐标与棱锥体积",
+        "question_ids": [
+          "AIME-2005-II-Q10"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "A spatial section plane and projected polygon area",
+        "name_zh": "空间截平面与投影多边形面积",
+        "question_ids": [
+          "AIME-2007-I-Q13"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Unroll a cone through slant-height and base-circumference lengths",
+        "name_zh": "用母线圆周与底圆周长展开圆锥滚动",
+        "question_ids": [
+          "AIME-2008-I-Q05"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Glue symmetric tray panels and separate vertical from horizontal displacement",
+        "name_zh": "粘合对称托盘侧板并分解竖直与水平位移",
+        "question_ids": [
+          "AIME-2008-I-Q15"
+        ],
+        "prerequisites": [
+          "GE03",
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Alternate-box tetrahedron volume and equal-face pyramid decomposition",
+        "name_zh": "长方体相间顶点四面体体积与等面棱锥分解",
+        "question_ids": [
+          "AIME-2024-I-Q14"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "LO01",
+    "methods": [
+      {
+        "name_en": "Prove losing residues by legal-move induction",
+        "name_zh": "用合法操作归纳证明必败剩余类",
+        "question_ids": [
+          "AIME-2024-I-Q03"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "LO02",
+    "methods": [
+      {
+        "name_en": "Legal successor swaps fill an interval of subset sums",
+        "name_zh": "合法后继交换填满子集和区间",
+        "question_ids": [
+          "AIME-2006-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Optimize a concave product on an admissible residue class",
+        "name_zh": "在合法剩余类上优化凹二次乘积",
+        "question_ids": [
+          "AIME-2007-II-Q08"
+        ],
+        "prerequisites": [
+          "AL07",
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Compare used-element and distinct-sum bounds then interlace parities",
+        "name_zh": "比较所用元素与互异对和总界后交错奇偶构造",
+        "question_ids": [
+          "AIME-2009-II-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Coin exchanges restrict every optimum to two quarter counts",
+        "name_zh": "硬币交换将所有最优解限制为两种二十五分枚数",
+        "question_ids": [
+          "AIME-2025-II-Q08"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Degree-weighted rearrangement and a checkerboard attainment",
+        "name_zh": "度数加权重排与棋盘染色取等",
+        "question_ids": [
+          "AIME-2026-I-Q11"
+        ],
+        "prerequisites": [
+          "AL07",
+          "CO06"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT01",
+    "methods": [
+      {
+        "name_en": "Weighted factorial-product prime valuations",
+        "name_zh": "阶乘乘积的加权素因子指数",
+        "question_ids": [
+          "AIME-2006-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Convert a logarithmic geometric sum to prime-exponent counting",
+        "name_zh": "将等比数列对数和化为素数指数计数",
+        "question_ids": [
+          "AIME-2006-I-Q09"
+        ],
+        "prerequisites": [
+          "AL04",
+          "NT05"
+        ]
+      },
+      {
+        "name_en": "Count equal valuation layers and impose square parity",
+        "name_zh": "计数相同估值层并施加平方奇偶条件",
+        "question_ids": [
+          "AIME-2006-I-Q13"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Count odd multiples in successive prime-power layers",
+        "name_zh": "逐层统计素数幂的奇倍数",
+        "question_ids": [
+          "AIME-2006-II-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Uniform padded-digit frequencies and reduced-denominator valuations",
+        "name_zh": "补零数字均匀频数与最简分母赋值",
+        "question_ids": [
+          "AIME-2006-II-Q14"
+        ],
+        "prerequisites": [
+          "NT07",
+          "NT06"
+        ]
+      },
+      {
+        "name_en": "Square-divisibility exponents constrain the square root",
+        "name_zh": "平方整除的指数条件约束平方根",
+        "question_ids": [
+          "AIME-2007-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A unique largest two-power denominator prevents final cancellation",
+        "name_zh": "唯一最大二幂分母阻止最终约分",
+        "question_ids": [
+          "AIME-2009-II-Q07"
+        ],
+        "prerequisites": [
+          "NT07"
+        ]
+      },
+      {
+        "name_en": "Logarithmic GCD–LCM constraints split into min/max prime exponents",
+        "name_zh": "对数最大公因数最小公倍数约束分解为素指数最小最大值",
+        "question_ids": [
+          "AIME-2019-I-Q07"
+        ],
+        "prerequisites": [
+          "NT02",
+          "AL04"
+        ]
+      },
+      {
+        "name_en": "Parity vectors classify square products by the number of fives",
+        "name_zh": "按五的出现次数分类平方积指数奇偶向量",
+        "question_ids": [
+          "AIME-2019-II-Q04"
+        ],
+        "prerequisites": [
+          "PS01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT02",
+    "methods": [
+      {
+        "name_en": "Factor a common divisor and count positive compositions",
+        "name_zh": "提出公因子并计数正整数拆分",
+        "question_ids": [
+          "AIME-2007-II-Q02"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "A prime overlap product forces shared factors to one",
+        "name_zh": "素数重叠乘积迫使公共因子为一",
+        "question_ids": [
+          "AIME-2019-II-Q03"
+        ],
+        "prerequisites": [
+          "NT08"
+        ]
+      },
+      {
+        "name_en": "Polynomial remainders reduce variable divisibility to fixed divisors",
+        "name_zh": "多项式余数将变量整除化为固定约数",
+        "question_ids": [
+          "AIME-2025-II-Q02"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Full prime-exponent subset coverage by inclusion–exclusion",
+        "name_zh": "用容斥计数覆盖完整素因子指数的子集",
+        "question_ids": [
+          "AIME-2025-II-Q07"
+        ],
+        "prerequisites": [
+          "CO04",
+          "PS01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT03",
+    "methods": [
+      {
+        "name_en": "Relative angular motion modulo a half turn",
+        "name_zh": "相对角运动模半周",
+        "question_ids": [
+          "AIME-2007-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Least representable residue amounts determine the largest postage gap",
+        "name_zh": "各剩余类最小可凑额确定最大邮资缺额",
+        "question_ids": [
+          "AIME-2019-II-Q14"
+        ],
+        "prerequisites": [
+          "LO02"
+        ]
+      },
+      {
+        "name_en": "A replacement invariant solves all digit congruences together",
+        "name_zh": "替换不变量同时解出各位数字同余",
+        "question_ids": [
+          "AIME-2024-II-Q07"
+        ],
+        "prerequisites": [
+          "NT06"
+        ]
+      },
+      {
+        "name_en": "Alternating digit sums and complement-paired even incidences",
+        "name_zh": "交错数位和与互补子集偶数关联数",
+        "question_ids": [
+          "AIME-2025-I-Q05"
+        ],
+        "prerequisites": [
+          "CO01",
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Divisor exponent parity selects residue classes",
+        "name_zh": "约数指数奇偶筛选剩余类",
+        "question_ids": [
+          "AIME-2026-I-Q08"
+        ],
+        "prerequisites": [
+          "NT08"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT04",
+    "methods": [
+      {
+        "name_en": "Multiplicative order restricts prime divisors to a sparse progression",
+        "name_zh": "乘法阶将素因子限制到稀疏等差数列",
+        "question_ids": [
+          "AIME-2019-I-Q14"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Prime order restricts candidates before linear modular lifting",
+        "name_zh": "先用素数乘法阶筛选再作线性模提升",
+        "question_ids": [
+          "AIME-2024-I-Q13"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Cube-class lifting and valuation strata count a modular sum",
+        "name_zh": "立方剩余类提升与赋值分层计数模和",
+        "question_ids": [
+          "AIME-2025-I-Q15"
+        ],
+        "prerequisites": [
+          "NT01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT05",
+    "methods": [
+      {
+        "name_en": "Difference-of-squares factor-pair enumeration",
+        "name_zh": "平方差分解与因子对枚举",
+        "question_ids": [
+          "AIME-2005-I-Q04"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Integer-polynomial remainder theorem and signed divisor pairs",
+        "name_zh": "整系数多项式余式定理与有符号因子对",
+        "question_ids": [
+          "AIME-2005-II-Q13"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Eliminate a rate and filter bounded positive integer cases",
+        "name_zh": "消去一速度并筛选有界正整数情形",
+        "question_ids": [
+          "AIME-2008-I-Q03"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Complete a square and enforce factor-pair parity",
+        "name_zh": "配方并施加因子对同奇偶条件",
+        "question_ids": [
+          "AIME-2008-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "A consecutive-cube square forces coprime square factors",
+        "name_zh": "连续立方差为平方迫使互素平方因子",
+        "question_ids": [
+          "AIME-2008-II-Q15"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Finite-support moment constraints reduce to two nonnegative integer vectors",
+        "name_zh": "有限取值矩约束化为两个非负整数计数向量",
+        "question_ids": [
+          "AIME-2009-I-Q14"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Arithmetic-score sums and divisor feasibility bound participation",
+        "name_zh": "等差成绩和与约数可行性限制人数",
+        "question_ids": [
+          "AIME-2009-II-Q04"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Translate positive solutions then count the coordinate-plane boundary",
+        "name_zh": "平移正整数解后计数坐标面边界",
+        "question_ids": [
+          "AIME-2009-II-Q09"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Factor a homogeneous quadratic into two bounded lattice lines",
+        "name_zh": "齐次二次式分成两条有界格点直线",
+        "question_ids": [
+          "AIME-2025-I-Q04"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Shift a symmetric product into unequal composite factor pairs",
+        "name_zh": "平移对称乘积为不等合数因子对",
+        "question_ids": [
+          "AIME-2026-I-Q04"
+        ],
+        "prerequisites": [
+          "NT01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT06",
+    "methods": [
+      {
+        "name_en": "Leading-digit deletion becomes a divisibility equation",
+        "name_zh": "删除首位转化为整除方程",
+        "question_ids": [
+          "AIME-2006-I-Q03"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Partition forbidden zero digits into disjoint complement cases",
+        "name_zh": "将禁零数位分成互不相交的补数情形",
+        "question_ids": [
+          "AIME-2006-II-Q07"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Carry ordinary ternary into unique balanced ternary",
+        "name_zh": "将普通三进制进位为唯一平衡三进制",
+        "question_ids": [
+          "AIME-2008-II-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Extreme digit progressions through an integral middle-square condition",
+        "name_zh": "通过中位平方整除条件确定极端数位等比数",
+        "question_ids": [
+          "AIME-2009-I-Q01"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Geometric repunit summation followed by a localized decimal borrow",
+        "name_zh": "等比全一数求和后处理局部十进制借位",
+        "question_ids": [
+          "AIME-2019-I-Q01"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "A no-carry digit complement reduces a grid to stars and bars",
+        "name_zh": "无进位数位互补将方格化为隔板问题",
+        "question_ids": [
+          "AIME-2024-II-Q03"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Two-digit square-root sums encode idempotent residue classes",
+        "name_zh": "两位数字平方根和编码幂等剩余类",
+        "question_ids": [
+          "AIME-2024-II-Q14"
+        ],
+        "prerequisites": [
+          "NT03",
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "Place-value divisibility reduces to a bounded constant divisor",
+        "name_zh": "数位整除化为有界常数约数",
+        "question_ids": [
+          "AIME-2025-I-Q01"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "A palindrome half is an unrestricted small positive composition",
+        "name_zh": "回文半串对应小和的正整数拆分",
+        "question_ids": [
+          "AIME-2026-I-Q02"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "A smaller numeral base strictly reduces every multidigit value",
+        "name_zh": "较小进制严格降低所有多位数值",
+        "question_ids": [
+          "AIME-2026-II-Q04"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT07",
+    "methods": [
+      {
+        "name_en": "Place-value symmetry in repeating-decimal enumeration",
+        "name_zh": "循环小数枚举中的数位对称",
+        "question_ids": [
+          "AIME-2006-I-Q06"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT08",
+    "methods": [
+      {
+        "name_en": "Arithmetic-term divisibility and divisor-count formula",
+        "name_zh": "等差项整除条件及约数公式",
+        "question_ids": [
+          "AIME-2005-I-Q02"
+        ],
+        "prerequisites": [
+          "AL05",
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "Classify four-divisor integers and count prime pairs",
+        "name_zh": "四约数整数结构及素数对计数",
+        "question_ids": [
+          "AIME-2005-I-Q03"
+        ],
+        "prerequisites": [
+          "NT01",
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Divisor parity toggles at squares and block summation",
+        "name_zh": "平方处约数奇偶翻转及分块求和",
+        "question_ids": [
+          "AIME-2005-I-Q12"
+        ],
+        "prerequisites": [
+          "NT01",
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Divisor-set intersections are divisor sets of GCDs",
+        "name_zh": "约数集合的交集对应最大公约数",
+        "question_ids": [
+          "AIME-2005-II-Q04"
+        ],
+        "prerequisites": [
+          "CO04",
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Odd-sum lengths correspond to same-parity factor pairs",
+        "name_zh": "连续奇数和的长度对应同奇偶因子对",
+        "question_ids": [
+          "AIME-2006-II-Q13"
+        ],
+        "prerequisites": [
+          "NT05"
+        ]
+      },
+      {
+        "name_en": "Odd divisor-count sums force prime-square or prime-fourth-power neighbors",
+        "name_zh": "奇数约数和迫使素数平方或四次幂邻居",
+        "question_ids": [
+          "AIME-2019-I-Q09"
+        ],
+        "prerequisites": [
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "Factor the divisor count while enforcing mandatory prime powers",
+        "name_zh": "分解约数数并施加强制素数幂",
+        "question_ids": [
+          "AIME-2019-II-Q09"
+        ],
+        "prerequisites": [
+          "NT01"
+        ]
+      },
+      {
+        "name_en": "A Lambert series has divisor-count coefficients and a controlled carry tail",
+        "name_zh": "朗伯级数具有约数系数并控制进位尾项",
+        "question_ids": [
+          "AIME-2026-II-Q09"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS01",
+    "methods": [
+      {
+        "name_en": "Count inward unpainted face-pairs by cube position",
+        "name_zh": "按立方体位置计数朝内未染面组合",
+        "question_ids": [
+          "AIME-2005-I-Q09"
+        ],
+        "prerequisites": [
+          "GE10",
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Sequential conditional bag filling without replacement",
+        "name_zh": "无放回逐袋条件分配",
+        "question_ids": [
+          "AIME-2005-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Subset containment union and empty-set overlap correction",
+        "name_zh": "子集包含事件的并与空集重复修正",
+        "question_ids": [
+          "AIME-2007-II-Q10"
+        ],
+        "prerequisites": [
+          "CO04",
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Count an ordered triangular difference region",
+        "name_zh": "计数有序差值的三角区域",
+        "question_ids": [
+          "AIME-2019-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count weighted multinomial paths before a final diagonal hit",
+        "name_zh": "计数最后对角命中前的加权多项路径",
+        "question_ids": [
+          "AIME-2019-I-Q05"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "The largest pair-minimum partitions a random matching event",
+        "name_zh": "最大数对较小元划分随机配对事件",
+        "question_ids": [
+          "AIME-2025-I-Q07"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "Cancel neighboring hypergeometric counts and enforce color bounds",
+        "name_zh": "约去相邻超几何计数并施加颜色下界",
+        "question_ids": [
+          "AIME-2026-II-Q05"
+        ],
+        "prerequisites": [
+          "NT05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS02",
+    "methods": [
+      {
+        "name_en": "Opposite-face bias parameters cancel the linear terms",
+        "name_zh": "对面偏差参数抵消一次项",
+        "question_ids": [
+          "AIME-2006-II-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Normalize a hypergeometric match count inside the prize event",
+        "name_zh": "在获奖事件内归一化超几何匹配计数",
+        "question_ids": [
+          "AIME-2024-I-Q04"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Visible sticker constraints restrict the unique repeated index pair",
+        "name_zh": "可见贴纸约束限制唯一重复掷次对",
+        "question_ids": [
+          "AIME-2026-I-Q09"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS04",
+    "methods": [
+      {
+        "name_en": "Last-step equations compute a monotone hitting probability",
+        "name_zh": "末步方程计算单调命中概率",
+        "question_ids": [
+          "AIME-2019-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Region increments and interleaving endpoint probabilities give an expectation",
+        "name_zh": "区域增量与端点交错概率给出期望",
+        "question_ids": [
+          "AIME-2025-I-Q13"
+        ],
+        "prerequisites": [
+          "PS03",
+          "CO06"
+        ]
+      },
+      {
+        "name_en": "Stop at the first third-category event and sum binary completion tails",
+        "name_zh": "停于第三类首次事件并求二元完成尾和",
+        "question_ids": [
+          "AIME-2026-II-Q07"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS05",
+    "methods": [
+      {
+        "name_en": "Compare two binomial scores using exchange symmetry and Vandermonde",
+        "name_zh": "用交换对称和范德蒙德恒等式比较二项得分",
+        "question_ids": [
+          "AIME-2006-II-Q10"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Multinomial height counts under two linear constraints",
+        "name_zh": "双线性约束下的多项分布高度计数",
+        "question_ids": [
+          "AIME-2008-I-Q09"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "Cancel equal binomial coefficients to identify coin odds",
+        "name_zh": "约去相同二项式系数确定硬币赔率",
+        "question_ids": [
+          "AIME-2009-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Compare two geometric stopping counts with an offset sum",
+        "name_zh": "用移位级数比较两个几何停止次数",
+        "question_ids": [
+          "AIME-2009-II-Q08"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS06",
+    "methods": [
+      {
+        "name_en": "Median absence and unique mode constrain list length and multiplicities",
+        "name_zh": "中位数缺席与唯一众数限制项数及重数",
+        "question_ids": [
+          "AIME-2024-II-Q02"
+        ],
+        "prerequisites": [
+          "LO03"
+        ]
+      }
+    ]
+  }
+]

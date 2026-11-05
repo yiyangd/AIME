@@ -1,0 +1,697 @@
+{
+  "subtype_id": "AL06",
+  "introduction_en": "Floors, ceilings, fractional parts, and absolute values replace one formula by several exact pieces. Write the domain and range of each piece with its open or closed endpoints, then count images or preimages. Separate integer-count arguments from area arguments, where endpoints have zero measure.",
+  "introduction_zh": "取整、上取整、小数部分与绝对值会把一个公式拆成若干精确分段。须写清每段定义域、值域及开闭端点，再计像或原像。整数计数与面积论证应区别处理，后者端点测度为零。",
+  "prerequisites": [
+    "AL01",
+    "AL05"
+  ],
+  "methods": [
+    {
+      "method_id": "AL06-M01",
+      "title_en": "Invert a floor into an exact half-open interval",
+      "title_zh": "将取整反解为精确半开区间",
+      "steps_en": [
+        "Replace $\\lfloor u\\rfloor=k$ by $k\\le u<k+1$, preserving both endpoint signs.",
+        "Invert a monotone expression only after fixing its sign and domain.",
+        "Count integers using floor and ceiling bounds, or count branches whose ranges contain the target.",
+        "Prove the converse: every counted value or input really lies in its claimed interval."
+      ],
+      "steps_zh": [
+        "把 $\\lfloor u\\rfloor=k$ 换成 $k\\le u<k+1$，保留两端开闭。",
+        "固定符号与定义域后才反解单调表达式。",
+        "用上下取整计算整数，或计算值域包含目标的分支。",
+        "证明逆向成立：每个计入的值或输入确实落在对应区间。"
+      ],
+      "example_en": "Find all integers $x$ with $\\lfloor(2x+1)/5\\rfloor=-2$.",
+      "example_zh": "求满足 $\\lfloor(2x+1)/5\\rfloor=-2$ 的全部整数 $x$。",
+      "solution_en": [
+        "The floor condition is $-2\\le(2x+1)/5<-1$.",
+        "It becomes $-11\\le2x<-6$, or $-11/2\\le x<-3$.",
+        "The integer solutions are $-5,-4$. In particular, the upper endpoint $-3$ is excluded."
+      ],
+      "solution_zh": [
+        "取整条件为 $-2\\le(2x+1)/5<-1$。",
+        "整理成 $-11\\le2x<-6$，即 $-11/2\\le x<-3$。",
+        "整数解为负五、负四，特别是上端点负三不包含。"
+      ],
+      "tip_en": "Floor means rounding downward, including for negative inputs.",
+      "tip_zh": "下取整始终向下，负数也一样。",
+      "question_ids": [
+        "AIME-2002-II-Q08",
+        "AIME-2007-II-Q07",
+        "AIME-2009-I-Q06",
+        "AIME-2009-II-Q11",
+        "AIME-2012-II-Q10",
+        "AIME-2015-II-Q13",
+        "AIME-2020-II-Q14",
+        "AIME-2022-II-Q08"
+      ],
+      "prerequisites": [
+        "AL04",
+        "CO02"
+      ],
+      "extensions_en": [
+        "For positive $k$, $\\lfloor A/n\\rfloor=k$ means $A/(k+1)<n\\le A/k$. A half-open interval of length at least one always contains an integer. For $x\\lfloor x\\rfloor$ with $a=\\lfloor x\\rfloor\\ge1$, the exact range is $[a^2,a^2+a)$ and each integer in it has inverse $x=N/a$.",
+        "For $f(x)=x\\{x\\}$ on $[j,j+1)$, writing $x=j+t$ gives $f=(j+t)t$, strictly increasing onto $[0,j+1)$. Iterated preimages can therefore be counted by weakly ordered branch indices. Integer endpoints map to zero and must be checked separately."
+      ],
+      "extensions_zh": [
+        "正 $k$ 时，$\\lfloor A/n\\rfloor=k$ 等价于 $A/(k+1)<n\\le A/k$。长度至少一的半开区间必含整数。对 $x\\lfloor x\\rfloor$，若 $a=\\lfloor x\\rfloor\\ge1$，精确值域为 $[a^2,a^2+a)$，其中每个整数 $N$ 的逆像为 $x=N/a$。",
+        "在 $[j,j+1)$ 上，令 $x=j+t$，则 $x\\{x\\}=(j+t)t$ 严格递增且值域为 $[0,j+1)$，因此迭代原像可由弱递增分支下标计数。整数端点映到零，须另行检验。"
+      ]
+    },
+    {
+      "method_id": "AL06-M02",
+      "title_en": "Group rounding by thresholds and periodic residue classes",
+      "title_zh": "按阈值与周期剩余类归组四舍五入",
+      "steps_en": [
+        "Write the exact interval producing each rounded value, including any tie convention.",
+        "If changing the input by a fixed period changes intermediate rounded values by integers, prove a residue-class success pattern.",
+        "For root rounding or square-free blocks, compare consecutive square gaps with the block width.",
+        "Count complete blocks and the truncated final block separately."
+      ],
+      "steps_zh": [
+        "写出产生每个取整值的精确区间，并说明等距时的规则。",
+        "若输入加固定周期使中间取整值增加整数，先证明成功模式按剩余类周期重复。",
+        "平方根取整或无平方数区块可比较相邻平方差与区块宽度。",
+        "分开计算完整区块与最后截断块。"
+      ],
+      "example_en": "For integer $n$, let $R(n)$ be the nearest integer to $n/3$, and then round $3R(n)$ to an integer. Among $0\\le n\\le20$, which inputs return unchanged?",
+      "example_zh": "对整数 $n$，将 $n/3$ 四舍五入为整数 $R(n)$，再取整数 $3R(n)$。零至二十中哪些输入能回到原数？",
+      "solution_en": [
+        "Write $n=3q+r$, with $r=0,1,2$. The rounded values are $q,q,q+1$ respectively, with no ties.",
+        "The returned integers are $3q,3q,3q+3$, so equality holds exactly when $r=0$.",
+        "The successful inputs are $0,3,6,9,12,15,18$, seven in total. The residue calculation proves the pattern globally."
+      ],
+      "solution_zh": [
+        "写 $n=3q+r$，$r=0,1,2$ 时取整分别为 $q,q,q+1$，无等距情形。",
+        "返回整数分别为 $3q,3q,3q+3$，仅余数零时等于原数。",
+        "成功输入为零、三、六、九、十二、十五、十八，共七个；剩余类计算证明了整体周期。"
+      ],
+      "tip_en": "A periodic rounding rule still needs an endpoint count in a finite input interval.",
+      "tip_zh": "周期取整规则在有限输入范围内仍须处理端点截段。",
+      "question_ids": [
+        "AIME-2007-I-Q05",
+        "AIME-2007-I-Q11",
+        "AIME-2008-I-Q07",
+        "AIME-2013-II-Q06",
+        "AIME-2022-II-Q08"
+      ],
+      "prerequisites": [
+        "NT03"
+      ],
+      "extensions_en": [
+        "The nearest integer to $\\sqrt n$ is $k$ precisely when $(k-1/2)^2<n<(k+1/2)^2$; for integral $n$ this becomes $k^2-k+1\\le n\\le k^2+k$, with $2k$ inputs. No square-root tie occurs because the squared half-integer endpoints are not integers.",
+        "A tuple of nondecreasing integer floors stays constant on a consecutive block. To be uniquely identified by it, an integer must have a tuple jump immediately before and after it. This converts singleton floor blocks into divisibility of two consecutive integers."
+      ],
+      "extensions_zh": [
+        "$\\sqrt n$ 最近整数为 $k$ 恰要求 $(k-1/2)^2<n<(k+1/2)^2$；对整数 $n$ 化为 $k^2-k+1\\le n\\le k^2+k$，共有 $2k$ 个输入。半整数端点的平方非整数，因此无取舍平局。",
+        "若干非降整数取整组成的向量在连续整数区块上恒定。要由该向量唯一确定某整数，它前后必须都发生向量跳跃，可转为相邻整数的整除条件。"
+      ]
+    },
+    {
+      "method_id": "AL06-M03",
+      "title_en": "Read logarithmic floors as geometric bands or indicators",
+      "title_zh": "把对数取整读成等比区间或指示量",
+      "steps_en": [
+        "Translate logarithm thresholds into powers of the base.",
+        "A floor residue condition selects disjoint bands; sum their lengths with a geometric series.",
+        "Use $\\lceil u\\rceil-\\lfloor u\\rfloor$ as zero at integers and one elsewhere.",
+        "For a monotone floor sum, certify an extremum by evaluating the last legal input and the next one."
+      ],
+      "steps_zh": [
+        "将对数阈值转成底数的幂。",
+        "取整剩余类条件选择不交区间带，用几何级数求其长度。",
+        "把 $\\lceil u\\rceil-\\lfloor u\\rfloor$ 视为整数处零、其他处一的指示量。",
+        "单调取整和的最值可由最后合法输入与紧接的下一个输入核验。"
+      ],
+      "example_en": "For uniformly chosen $x\\in(0,1]$, find the probability that $\\lfloor\\log_3(1/x)\\rfloor\\equiv1\\pmod3$.",
+      "example_zh": "在 $(0,1]$ 均匀选 $x$，求 $\\lfloor\\log_3(1/x)\\rfloor$ 模三余一的概率。",
+      "solution_en": [
+        "The permitted floors are $3j+1$, giving $3^{-3j-2}<x\\le3^{-3j-1}$ for $j\\ge0$.",
+        "Each interval length is $(1/3-1/9)3^{-3j}=(2/9)27^{-j}$.",
+        "The total length, hence probability, is $(2/9)/(1-1/27)=3/13$."
+      ],
+      "solution_zh": [
+        "允许的取整值为 $3j+1$，对应 $3^{-3j-2}<x\\le3^{-3j-1}$。",
+        "每段长度为 $(2/9)27^{-j}$。",
+        "总长度即概率，为 $(2/9)/(1-1/27)=3/13$。"
+      ],
+      "tip_en": "For an integer argument, an integral logarithm may force a special power family; prove which powers are themselves integers.",
+      "tip_zh": "整数自变量的对数为整数时可能只剩特殊幂族，须证明哪些幂本身为整数。",
+      "question_ids": [
+        "AIME-2004-I-Q12",
+        "AIME-2007-I-Q07",
+        "AIME-2010-I-Q14"
+      ],
+      "prerequisites": [
+        "AL04",
+        "AL05"
+      ]
+    },
+    {
+      "method_id": "AL06-M04",
+      "title_en": "Separate a floor sum into its smooth sum and exact residues",
+      "title_zh": "将取整和拆成未取整和与精确余数",
+      "steps_en": [
+        "Use $\\lfloor a/m\\rfloor=(a-r)/m$ with the least residue $0\\le r<m$.",
+        "First bound the total floor error to isolate any unknown integer parameter.",
+        "Then compute the exact residue correction by full periods and a final partial period.",
+        "For piecewise-linear area sums, track the fractional part of each unit-strip contribution in the same way."
+      ],
+      "steps_zh": [
+        "用 $\\lfloor a/m\\rfloor=(a-r)/m$，其中最小非负余数为 $r$。",
+        "先估计取整误差总量，隔离可能的未知整数参数。",
+        "再按完整周期与尾部截段计算精确余数修正。",
+        "分段线性面积和也可同样追踪每个单位条带贡献的小数部分。"
+      ],
+      "example_en": "Compute $\\sum_{n=1}^{10}\\lfloor(3n+2)/4\\rfloor$.",
+      "example_zh": "计算 $\\sum_{n=1}^{10}\\lfloor(3n+2)/4\\rfloor$。",
+      "solution_en": [
+        "The unfloored sum is $(3\\cdot55+20)/4=185/4$.",
+        "The residues of $3n+2$ modulo four repeat as $1,0,3,2$. Two full blocks contribute twelve, and the last two terms add one.",
+        "Subtract the residue total divided by four: $(185-13)/4=43$."
+      ],
+      "solution_zh": [
+        "未取整和为 $(3\\cdot55+20)/4=185/4$。",
+        "$3n+2$ 模四的余数循环为一、零、三、二，两整块贡献十二，最后两项再加一。",
+        "扣除余数总量除四，得到 $(185-13)/4=43$。"
+      ],
+      "tip_en": "A uniform error bound can prove uniqueness of a parameter before a large sum is evaluated exactly.",
+      "tip_zh": "统一误差界可以先证明参数唯一，再求大和的精确值。",
+      "question_ids": [
+        "AIME-2015-I-Q14",
+        "AIME-2023-I-Q10"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ],
+      "extensions_en": [
+        "If $N$ floors each subtract a fractional part in $[0,1)$, their total error lies in $(-N,0]$. If changing a parameter by one changes the smooth sum by more than the permitted window plus this error width, only one parameter can work. For areas under $x\\lfloor\\sqrt x\\rfloor$, each integer strip contributes $k(2j+1)/2$; its half-integer parity depends only on whether $k$ is odd."
+      ],
+      "extensions_zh": [
+        "$N$ 个下取整各减去 $[0,1)$ 内的小数部分，误差总量在 $(-N,0]$。若参数改变一使未取整和的变化超过允许窗口加误差宽度，就至多一个参数可行。对 $x\\lfloor\\sqrt x\\rfloor$ 下的面积，每个整数条带贡献 $k(2j+1)/2$，其半整数奇偶仅取决于 $k$ 是否为奇数。"
+      ]
+    },
+    {
+      "method_id": "AL06-M05",
+      "title_en": "Resolve signs and count absolute-value levels",
+      "title_zh": "拆分符号并计算绝对值水平线根数",
+      "steps_en": [
+        "List all breakpoints where an absolute-value input changes sign.",
+        "Replace the expression by its exact formula on each interval, retaining its interval restrictions.",
+        "Construct a level-count table at regular levels, turning levels, zero, and any flat interval.",
+        "For nested absolute values, translate the outer equation into distinct inner levels and sum their valid root counts."
+      ],
+      "steps_zh": [
+        "列出绝对值内部变号的全部分界点。",
+        "在各区间用精确公式代替，并保留该区间限制。",
+        "对普通高度、转折高度、零高度及平坦段建立根数表。",
+        "嵌套绝对值方程先转成不同内部高度，再相加其有效根数。"
+      ],
+      "example_en": "Solve $|x-1|+|x+2|=5$, and explain what happens if the right side is three.",
+      "example_zh": "解 $|x-1|+|x+2|=5$，并说明右端改为三时有何变化。",
+      "solution_en": [
+        "The breakpoints are $-2,1$. The expression is $-2x-1$ to the left, three in the middle, and $2x+1$ to the right.",
+        "At level five the left and right roots are $-3,2$, both in their legal intervals; the middle gives none.",
+        "At level three every $x\\in[-2,1]$ works, so the solution set is an interval rather than a finite root count."
+      ],
+      "solution_zh": [
+        "分界为负二、一，表达式左段为 $-2x-1$，中间恒三，右段为 $2x+1$。",
+        "高度五时左右根为负三、二，均在合法段内，中段无解。",
+        "高度三时整个 $[-2,1]$ 都是解，不能按有限根数处理。"
+      ],
+      "tip_en": "Squaring or dropping interval restrictions can turn an illegal branch root into a false solution.",
+      "tip_zh": "平方或丢掉区间限制，会把无效分支根变成伪解。",
+      "question_ids": [
+        "AIME-2001-II-Q08",
+        "AIME-2010-I-Q11",
+        "AIME-2020-II-Q08",
+        "AIME-2021-I-Q08",
+        "AIME-2022-II-Q06",
+        "AIME-2025-I-Q12"
+      ],
+      "prerequisites": [
+        "AL01",
+        "GE07"
+      ],
+      "extensions_en": [
+        "An absolute-value preimage $|x-a|=z$ exists only for $z\\ge0$: it gives $a\\pm z$, with the two values coinciding at zero. In a two-variable factor-sign region, consider all sign combinations and impose the original plane or ordering constraints before declaring a region bounded.",
+        "For an ordered zero-sum tuple with a fixed sum of absolute values, split into total positive and negative mass. An ordered coordinate of rank $k$ cannot carry more than the corresponding mass divided by the number of coordinates forced to share its sign and magnitude bound. The equality tuple must be checked separately."
+      ],
+      "extensions_zh": [
+        "绝对值原像 $|x-a|=z$ 只在 $z\\ge0$ 时存在，产生 $a\\pm z$，零时两值重合。两个变量的乘积符号区域须检查全部符号组合，并施加原平面或次序条件后，才能判断区域有界。",
+        "总和为零且绝对值和固定的有序元组，可拆成正质量与负质量。某排名坐标的大小不超过相应质量除以被迫具有同号同量级界的项数；等号元组仍须独立检验。"
+      ]
+    },
+    {
+      "method_id": "AL06-M06",
+      "title_en": "Treat floor graphs as cells and strip areas",
+      "title_zh": "把取整图形视为单元格与条带面积",
+      "steps_en": [
+        "Fix every floor value and translate it into a half-open cell or strip.",
+        "Within that piece, solve the remaining smooth condition and intersect its range with the cell.",
+        "For area or probability, sum disjoint piece measures; isolated boundary points have zero measure.",
+        "For a closed enclosing object, pass to the closure and prove its extremal boundary points are included in the required bound."
+      ],
+      "steps_zh": [
+        "固定各个取整值，转成半开单元格或条带。",
+        "在分段内解余下光滑条件，并与该格取交。",
+        "面积概率按不交分段求和，孤立边界点测度为零。",
+        "闭包围对象须包含原集合闭包，并证明极端边界点给出必要界。"
+      ],
+      "example_en": "Inside $[0,2)^2$, let $R$ satisfy $\\lfloor x\\rfloor+\\lfloor y\\rfloor=1$. Find its area and the radius of its smallest closed enclosing disk.",
+      "example_zh": "在 $[0,2)^2$ 中令 $R$ 满足 $\\lfloor x\\rfloor+\\lfloor y\\rfloor=1$，求面积与最小闭包围圆盘半径。",
+      "solution_en": [
+        "The two cells have floor pairs $(0,1),(1,0)$, each of area one, so the area is two.",
+        "Any closed enclosing disk contains their closures, including opposite points $(0,2)$ and $(2,0)$, whose distance is $2\\sqrt2$. Thus its radius is at least $\\sqrt2$.",
+        "The disk centered at $(1,1)$ of radius $\\sqrt2$ contains both closed squares, attaining the lower bound."
+      ],
+      "solution_zh": [
+        "取整对为 $(0,1),(1,0)$ 的两个单元格各面积一，总面积二。",
+        "闭包围圆盘须含两格闭包，包括距离 $2\\sqrt2$ 的对点 $(0,2),(2,0)$，故半径至少 $\\sqrt2$。",
+        "以 $(1,1)$ 为心、半径 $\\sqrt2$ 的圆盘包含两闭正方形，达到下界。"
+      ],
+      "tip_en": "A boundary excluded from a half-open set can still force the radius of every closed containing disk.",
+      "tip_zh": "半开集排除的边界仍可能限制所有包含它的闭圆盘半径。",
+      "question_ids": [
+        "AIME-2010-I-Q08",
+        "AIME-2011-II-Q15",
+        "AIME-2015-I-Q14"
+      ],
+      "prerequisites": [
+        "GE07",
+        "PS03",
+        "NT05"
+      ]
+    },
+    {
+      "method_id": "AL06-M07",
+      "title_en": "Filter periodic-piece roots before applying Vieta",
+      "title_zh": "先筛周期分段根再使用韦达",
+      "steps_en": [
+        "Bound the possible function values, then use the other equation to bound the number of relevant periods.",
+        "Write one polynomial equation for each rising or falling piece.",
+        "Keep only roots satisfying that piece domain; count shared endpoints once.",
+        "Apply Vieta only to a complete retained root pair, and add any single surviving endpoint root separately."
+      ],
+      "steps_zh": [
+        "先限制函数值，再用另一方程限制相关周期数量。",
+        "对每个上升或下降分段写一个多项式方程。",
+        "仅保留符合该分段定义域的根，共用端点只计一次。",
+        "只有完整保留的一对根才能直接用韦达求和，单个幸存根须另外相加。"
+      ],
+      "example_en": "Let a period-two triangular wave equal $x$ on $[0,1]$ and $2-x$ on $[1,2]$. Find its intersections with $y=x/3$ for $x\\ge0$.",
+      "example_zh": "周期二的三角波在 $[0,1]$ 为 $x$、在 $[1,2]$ 为 $2-x$，求其与 $y=x/3$ 在非负横轴上的交点。",
+      "solution_en": [
+        "The wave lies in $[0,1]$, so $0\\le x\\le3$. Only pieces $[0,1],[1,2],[2,3]$ matter.",
+        "The piece equations are $x=x/3$, $2-x=x/3$, and $x-2=x/3$, giving $x=0,3/2,3$ respectively.",
+        "All lie in their pieces, so the intersections are $(0,0),(3/2,1/2),(3,1)$. The endpoint at three is counted once."
+      ],
+      "solution_zh": [
+        "波值在零与一之间，所以横坐标只须考虑零至三，共三段。",
+        "三段方程为 $x=x/3$、$2-x=x/3$、$x-2=x/3$，分别得到 $x=0,3/2,3$。",
+        "都位于各自合法段，所以交点为 $(0,0),(3/2,1/2),(3,1)$，端点三只计一次。"
+      ],
+      "tip_en": "A polynomial may have two roots while its original piece retains only one.",
+      "tip_zh": "多项式可能有两根，但原分段可能只保留一根。",
+      "question_ids": [
+        "AIME-2001-II-Q08",
+        "AIME-2025-I-Q11"
+      ],
+      "prerequisites": [
+        "AL02",
+        "AL09"
+      ]
+    },
+    {
+      "method_id": "AL06-M08",
+      "title_en": "Count events in a finite window under stepwise constraints",
+      "title_zh": "在阶梯限制下计算有限窗口事件数",
+      "steps_en": [
+        "Replace a ceiling-dependent rule by intervals where its integer value is fixed.",
+        "Optimize the rate or capacity within each interval, preserving whether the endpoint is included.",
+        "Distinguish a limiting rate from an attainable integer count in a finite closed observation window.",
+        "For minimal counts, show both a construction and why one fewer item fails the original coverage conditions."
+      ],
+      "steps_zh": [
+        "将依赖上取整的规则分成整数值固定的区间。",
+        "在每区间内优化速率或容量，并保留端点是否包含。",
+        "区分极限速率与有限闭观察窗口中可达到的整数事件数。",
+        "最少数量须同时给构造与少一个物体不能满足原覆盖条件的证明。"
+      ],
+      "example_en": "Events are exactly fourteen minutes apart. Their phase is free. What is the greatest number occurring in a closed sixty-minute window?",
+      "example_zh": "事件间隔恰为十四分钟，初相位可自由选择，六十分钟闭窗口中最多发生多少次？",
+      "solution_en": [
+        "If $q$ events occur, the first-to-last span is $(q-1)14$, which must be at most sixty.",
+        "Thus $q\\le\\lfloor60/14\\rfloor+1=5$.",
+        "Events at minutes $0,14,28,42,56$ attain five. The floor of the hourly steady rate is four, a different quantity."
+      ],
+      "solution_zh": [
+        "若发生 $q$ 次，首末跨度为 $(q-1)14$，必须不超过六十。",
+        "所以 $q\\le\\lfloor60/14\\rfloor+1=5$。",
+        "在零、十四、二十八、四十二、五十六分钟发生可达到五次；稳态每小时速率的整数部分为四，是另一数量。"
+      ],
+      "tip_en": "A supremum of rates may still yield an attained integer window count; state the endpoint convention.",
+      "tip_zh": "速率上确界即使不达到，整数窗口计数仍可能达到，须说明端点约定。",
+      "question_ids": [
+        "AIME-2008-I-Q12",
+        "AIME-2022-II-Q14"
+      ],
+      "prerequisites": [
+        "LO02"
+      ],
+      "extensions_en": [
+        "For ordered positive stamp denominations, suppose all values through $S$ are obtainable. Adding a stamp of value $v$ extends coverage without a gap exactly when $v\\le S+1$. Repeating this criterion gives the necessary low-denomination counts before a high denomination can be used. A final ceiling may give a construction count, but minimality requires showing a collection with one fewer stamp cannot reach the target total."
+      ],
+      "extensions_zh": [
+        "正邮票面值按序处理，若已有组合能覆盖零至 $S$，加入面值 $v$ 的一枚邮票能无缺口延伸，当且仅当 $v\\le S+1$。反复使用即得到启用较高面值前必须具备的低面值数量。最后的上取整可给构造数量，但最小性还须证明少一枚的总面值无法达到目标。"
+      ]
+    },
+    {
+      "method_id": "AL06-M09",
+      "title_en": "Certify intersections of full folded branches",
+      "title_zh": "证明完整折叠分支交点计数有效",
+      "steps_en": [
+        "Split every absolute and trigonometric fold at all extrema, zeros, and break levels; list each monotone full-range branch.",
+        "Use the coupled equations to confine every solution and check all branch endpoints separately.",
+        "Prove one crossing per branch pair: endpoint signs give existence, while orientation or a derivative-product bound gives uniqueness.",
+        "If a boundary corner replaces a sign change, analyze it locally and certify whether an additional interior root exists."
+      ],
+      "steps_zh": [
+        "在所有极值、零点与折叠高度处分开绝对值和三角分段，列全单调满值域分支。",
+        "利用联立方程限制全部解，并单独检验所有分支端点。",
+        "证明每对分支恰有一次穿越：端点符号给存在性，方向或导数乘积界给唯一性。",
+        "若边界角点替代变号，须局部分析是否还有内部根。"
+      ],
+      "example_en": "On $[0,1]^2$, solve $y=x^3$ and $x=2y$. Explain why two increasing functions need not have just one intersection.",
+      "example_zh": "在单位正方形中解 $y=x^3,x=2y$，并解释两个递增函数为何不一定只有一个交点。",
+      "solution_en": [
+        "Substitute to get $x=2x^3$, or $x(1-2x^2)=0$.",
+        "The two admissible solutions are $(0,0)$ and $(1/\\sqrt2,1/(2\\sqrt2))$. The negative root lies outside the square.",
+        "Both graphs are increasing, yet a boundary root and an interior root coexist. At the interior root the derivative product is $(3x^2)\\cdot2=3>1$, giving a transverse crossing."
+      ],
+      "solution_zh": [
+        "代入得到 $x=2x^3$，即 $x(1-2x^2)=0$。",
+        "单位方形内解为 $(0,0)$ 与 $(1/\\sqrt2,1/(2\\sqrt2))$，负根在方形外。",
+        "两图都递增，仍可有边界根与内部根。内部根的导数乘积为 $(3x^2)\\cdot2=3>1$，故为横截穿越。"
+      ],
+      "tip_en": "Counting branch pairs without a uniqueness argument can give an unjustified answer.",
+      "tip_zh": "没有唯一性证明的分支对相乘，不能保证答案成立。",
+      "question_ids": [
+        "AIME-2024-I-Q12"
+      ],
+      "prerequisites": [
+        "AL08",
+        "AL07",
+        "CO06"
+      ],
+      "extensions_en": [
+        "Crossing lemma: for equally oriented inverse graphs, put $H(y)=G(y)-F^{-1}(y)$. At a root, $H\\prime=(F\\prime G\\prime-1)/F\\prime$. If the derivative product exceeds one at every interior root, the sign of $H\\prime$ is fixed on that branch pair. Two roots with that same nonzero crossing direction are impossible. Oppositely oriented graphs are unique directly by monotonicity.",
+        "For the coupled trigonometric-fold problem, the derivative magnitude is $D=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|$. If $|\\cos2\\pi x|\\le1/20$, the equations imply $y\\ge.99$ and $x\\ge1-18\\pi^2(.01)^2>.982$, contradicting that cosine bound. If $D\\le1$, one factor is at most $1/20$, so the sine factor must be small. The equations then force $a=1-x\\le.01$, $b=1-y<.01$ and exactly $b=4\\sin2\\pi a$, $a=4(1-\\cos3\\pi b)$.",
+        "Let $K(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$. On $[0,.01]$, $K\\prime\\prime=36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]>0$. Since $K(0)=K(b_*)=0$ for an interior root, strict convexity gives $K\\prime(b_*)>0$, equivalent to $D>1$, a contradiction. Thus the crossing lemma applies. Near zero $K\\prime(0)<0$, while $K(.01)>0$, so the corner branch also has an interior root. This supplies the needed uniqueness and corner certificate for counting the full branch pairs."
+      ],
+      "extensions_zh": [
+        "穿越引理：同向逆图令 $H(y)=G(y)-F^{-1}(y)$，零点处 $H\\prime=(F\\prime G\\prime-1)/F\\prime$。若每个内部零点导数乘积均大于一，则同一分支对上 $H\\prime$ 在零点具有固定非零符号，不能有两个同向穿越根。反向图则直接由单调性唯一。",
+        "联立三角折叠题的导数绝对乘积为 $D=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|$。若余弦因子至多二十分之一，方程迫使 $y\\ge.99$ 与 $x\\ge1-18\\pi^2(.01)^2>.982$，与该余弦界矛盾。若 $D\\le1$，至少一因子不超过二十分之一，所以只能正弦因子小。方程进而迫使 $a=1-x\\le.01,b=1-y<.01$，并精确满足 $b=4\\sin2\\pi a,a=4(1-\\cos3\\pi b)$。",
+        "令 $K(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$。在 $[0,.01]$ 上，其二阶导数 $36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]$ 为正。内部根使 $K(0)=K(b_*)=0$，严格凸性给出 $K\\prime(b_*)>0$，恰等价于 $D>1$，产生矛盾。因此穿越引理适用。零附近 $K\\prime(0)<0$ 而 $K(.01)>0$，故角点分支另有内部根。这补全按满分支对计数所需的唯一性与角点证书。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2002-II-Q08",
+    "AIME-2004-I-Q12",
+    "AIME-2007-I-Q05",
+    "AIME-2007-I-Q07",
+    "AIME-2007-I-Q11",
+    "AIME-2007-II-Q07",
+    "AIME-2008-I-Q07",
+    "AIME-2008-I-Q12",
+    "AIME-2009-I-Q06",
+    "AIME-2009-II-Q11",
+    "AIME-2010-I-Q08",
+    "AIME-2010-I-Q14",
+    "AIME-2011-II-Q15",
+    "AIME-2012-II-Q10",
+    "AIME-2015-I-Q14",
+    "AIME-2020-II-Q14",
+    "AIME-2021-I-Q08",
+    "AIME-2023-I-Q10",
+    "AIME-2024-I-Q12",
+    "AIME-2025-I-Q11"
+  ],
+  "coverage_by_question": {
+    "AIME-2002-II-Q08": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2007-II-Q07": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2009-I-Q06": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2009-II-Q11": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "AL04",
+        "NT05"
+      ]
+    },
+    "AIME-2012-II-Q10": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2015-II-Q13": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL08"
+      ]
+    },
+    "AIME-2020-II-Q14": {
+      "method_ids": [
+        "AL06-M01"
+      ],
+      "prerequisites": [
+        "AL09",
+        "CO02"
+      ]
+    },
+    "AIME-2022-II-Q08": {
+      "method_ids": [
+        "AL06-M01",
+        "AL06-M02"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2007-I-Q05": {
+      "method_ids": [
+        "AL06-M02"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2007-I-Q11": {
+      "method_ids": [
+        "AL06-M02"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2008-I-Q07": {
+      "method_ids": [
+        "AL06-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2013-II-Q06": {
+      "method_ids": [
+        "AL06-M02"
+      ],
+      "prerequisites": [
+        "LO02",
+        "NT05"
+      ]
+    },
+    "AIME-2004-I-Q12": {
+      "method_ids": [
+        "AL06-M03"
+      ],
+      "prerequisites": [
+        "AL04",
+        "AL05"
+      ]
+    },
+    "AIME-2007-I-Q07": {
+      "method_ids": [
+        "AL06-M03"
+      ],
+      "prerequisites": [
+        "AL04",
+        "AL05"
+      ]
+    },
+    "AIME-2010-I-Q14": {
+      "method_ids": [
+        "AL06-M03"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2015-I-Q14": {
+      "method_ids": [
+        "AL06-M04",
+        "AL06-M06"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2023-I-Q10": {
+      "method_ids": [
+        "AL06-M04"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2001-II-Q08": {
+      "method_ids": [
+        "AL06-M05",
+        "AL06-M07"
+      ],
+      "prerequisites": [
+        "AL09"
+      ]
+    },
+    "AIME-2010-I-Q11": {
+      "method_ids": [
+        "AL06-M05"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE10"
+      ]
+    },
+    "AIME-2020-II-Q08": {
+      "method_ids": [
+        "AL06-M05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL09"
+      ]
+    },
+    "AIME-2021-I-Q08": {
+      "method_ids": [
+        "AL06-M05"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2022-II-Q06": {
+      "method_ids": [
+        "AL06-M05"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2025-I-Q12": {
+      "method_ids": [
+        "AL06-M05"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2010-I-Q08": {
+      "method_ids": [
+        "AL06-M06"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2011-II-Q15": {
+      "method_ids": [
+        "AL06-M06"
+      ],
+      "prerequisites": [
+        "NT05",
+        "PS03"
+      ]
+    },
+    "AIME-2025-I-Q11": {
+      "method_ids": [
+        "AL06-M07"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2008-I-Q12": {
+      "method_ids": [
+        "AL06-M08"
+      ],
+      "prerequisites": [
+        "LO02"
+      ]
+    },
+    "AIME-2022-II-Q14": {
+      "method_ids": [
+        "AL06-M08"
+      ],
+      "prerequisites": [
+        "LO02"
+      ]
+    },
+    "AIME-2024-I-Q12": {
+      "method_ids": [
+        "AL06-M09"
+      ],
+      "prerequisites": [
+        "AL07",
+        "AL08",
+        "CO06"
+      ]
+    }
+  },
+  "review": {
+    "author": "template_audit",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false,
+    "notes": "Every current primary and necessary secondary route was read in full. Original teaching examples and general procedures are separate from source problems. Independent review remains required."
+  },
+  "unresolved_issues": []
+}

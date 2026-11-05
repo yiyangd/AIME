@@ -1,0 +1,239 @@
+{
+  "subtype_id": "LO03",
+  "introduction_en": "A logical case split must preserve every condition and exhaust every possible model. Separate ordinary feasibility, ambiguity after partial information, and public knowledge: they remove possibilities in different ways.",
+  "introduction_zh": "逻辑分类必须保留所有条件，并覆盖全部可能模型。普通可行性、部分信息造成的歧义及公开知识更新，会以不同方式排除可能性，应分别处理。",
+  "prerequisites": [
+    "CO02"
+  ],
+  "methods": [
+    {
+      "method_id": "LO03-M01",
+      "title_en": "Propagate the tightest local constraint before branching",
+      "title_zh": "先传播最紧的局部限制再分类",
+      "steps_en": [
+        "Choose the smallest uncovered position, a forced repeated value, or a variable involved in many restrictions.",
+        "For each possible branch, immediately propagate all forced inclusions and exclusions.",
+        "Count only after proving that every remaining constraint has been satisfied or explicitly retained.",
+        "Use size bounds to close the search: $k$ distinct positive integers sum to at least $k(k+1)/2$."
+      ],
+      "steps_zh": [
+        "选择最小未覆盖位置、被迫重复的值，或参与限制最多的变量。",
+        "每个分支一旦确定，立刻传播所有必选和禁选条件。",
+        "只有证明其余限制均已满足或仍被明确保留后，才能计数。",
+        "用数量界封闭搜索：$k$ 个不同正整数之和至少为 $k(k+1)/2$。"
+      ],
+      "example_en": "A set of chosen tasks is selected from $A,B,C,D,E$. Choosing $A$ forbids $B,C$, and choosing $D$ requires $C$. How many task sets are possible?",
+      "example_zh": "从任务 $A,B,C,D,E$ 中选择子集。选择 $A$ 就不能选 $B,C$，选择 $D$ 则必须选 $C$。共有多少种可行任务集？",
+      "solution_en": [
+        "If $A$ is chosen, $B,C$ are excluded, hence $D$ is excluded too. Only $E$ is free, giving two sets.",
+        "If $A$ is absent, $B,E$ are free. The allowed $(C,D)$ states are $(0,0),(1,0),(1,1)$, giving $2\\cdot2\\cdot3=12$ sets.",
+        "The two branches are disjoint and exhaustive, so the total is $14$. The implication was enforced before the independent choices were multiplied."
+      ],
+      "solution_zh": [
+        "若选 $A$，则 $B,C$ 不选，由此 $D$ 也不能选，只剩 $E$ 自由，共两种。",
+        "若不选 $A$，则 $B,E$ 自由，$(C,D)$ 只能取 $(0,0),(1,0),(1,1)$，共 $2\\cdot2\\cdot3=12$ 种。",
+        "两类不相交且覆盖全部可能，共 $14$ 种。先执行蕴含条件，才可把独立选择相乘。"
+      ],
+      "tip_en": "A short list is exhaustive only after an explicit bound or forced first case has been proved.",
+      "tip_zh": "只有先证明界或被迫的首个分类，短候选表才称得上穷尽。",
+      "question_ids": [
+        "AIME-2002-I-Q09",
+        "AIME-2017-I-Q12",
+        "AIME-2024-II-Q02"
+      ],
+      "prerequisites": [
+        "NT03",
+        "CO02",
+        "PS06"
+      ],
+      "extensions_en": [
+        "For a progression $r,r+d,r+2d,\\ldots$ to cover an uncovered index $q$, its step must divide $q-r$ and $q\\ge r$. To forbid overlap of two progressions, use their congruence compatibility modulo the gcd of their steps.",
+        "For an absent integer median, the list is even and its two middle entries are distinct with the same parity. A unique mode has strictly greater multiplicity than every other value; these constraints combine with the distinct-positive sum bound."
+      ],
+      "extensions_zh": [
+        "若数列 $r,r+d,r+2d,\\ldots$ 要覆盖未覆盖位置 $q$，必须有 $d\\mid(q-r)$ 且 $q\\ge r$。判断两等差数列是否重叠，可检查它们的同余条件在公差最大公因数下是否相容。",
+        "若中位数为未出现的整数，则列表长为偶数，中间两项不同且同奇偶；唯一众数的频数严格超过每个其他值。这些限制应与不同正数的最小和界合用。"
+      ]
+    },
+    {
+      "method_id": "LO03-M02",
+      "title_en": "Group complete models by the information that is known",
+      "title_zh": "按已知信息把完整模型分组",
+      "steps_en": [
+        "Enumerate the complete feasible models under a proved finite bound.",
+        "Compute the reported summary for each model, and group models having the same summary.",
+        "Translate “still two possibilities” into a group-size condition, then compute the requested quantity from the surviving group.",
+        "Distinguish distinct models from sign, order, or labeling copies that describe the same model."
+      ],
+      "steps_zh": [
+        "在已证明的有限范围内，列出完整可行模型。",
+        "计算每个模型的已知摘要，按摘要相同分组。",
+        "将“仍有两种可能”转为组大小条件，再由保留组求目标量。",
+        "区分真正不同的模型与符号、顺序或标号变化造成的重复。"
+      ],
+      "example_en": "Three distinct members of $\\{1,2,3,4,5,6\\}$ are chosen. Only their product is announced. Which products leave exactly two possible chosen triples?",
+      "example_zh": "从 $\\{1,2,3,4,5,6\\}$ 中选三个不同数，只公布乘积。哪些乘积仍对应恰好两种所选三元集？",
+      "solution_en": [
+        "There are $\\binom63=20$ complete models. Compare products for these unordered triples rather than their six orderings.",
+        "The repeated-product groups are $12:\\{1,2,6\\},\\{1,3,4\\}$; $24:\\{1,4,6\\},\\{2,3,4\\}$; $30:\\{1,5,6\\},\\{2,3,5\\}$; and $60:\\{2,5,6\\},\\{3,4,5\\}$.",
+        "The other twelve products are $6,8,10,15,18,20,36,40,48,72,90,120$, each occurring once. Thus exactly $12,24,30,60$ have the required ambiguity."
+      ],
+      "solution_zh": [
+        "共有 $\\binom63=20$ 个完整模型，应对无序三元集的乘积分组，而非重复计其六种顺序。",
+        "重复组为 $12:\\{1,2,6\\},\\{1,3,4\\}$；$24:\\{1,4,6\\},\\{2,3,4\\}$；$30:\\{1,5,6\\},\\{2,3,5\\}$；$60:\\{2,5,6\\},\\{3,4,5\\}$。",
+        "其余十二个乘积为 $6,8,10,15,18,20,36,40,48,72,90,120$，各出现一次。因此所求恰为 $12,24,30,60$。"
+      ],
+      "tip_en": "An ambiguity condition refers to the entire feasible class, not merely two examples you happened to find.",
+      "tip_zh": "歧义条件针对完整可行类，不能只找到两个例子就断言恰有两个。",
+      "question_ids": [
+        "AIME-2015-II-Q06"
+      ],
+      "prerequisites": [
+        "AL02",
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO03-M03",
+      "title_en": "Pair complementary sums of four unknown numbers",
+      "title_zh": "将四个未知数的两两和配成互补对",
+      "steps_en": [
+        "For four numbers with total $T$, partition the six pair sums into three complementary pairs each totaling $T$.",
+        "Use the sum of all six entries, $3T$, and any known largest or smallest sums to restrict the pairing.",
+        "For each surviving pairing, solve three linear pair equations to recover the four numbers.",
+        "Check distinctness and reproduce all six pair sums to prove attainment."
+      ],
+      "steps_zh": [
+        "四个数总和为 $T$ 时，六个两两和可配成三对，每对之和均为 $T$。",
+        "利用六和总和 $3T$，以及已知最大、最小和来限制配对。",
+        "对每种保留配对，解三个线性两两和方程，恢复四个数。",
+        "检查数互异并重算全部六和，证明该配对可实现。"
+      ],
+      "example_en": "Four distinct real numbers have pair sums $4,7,8,9,10,13$. Find all possible sorted quadruples.",
+      "example_zh": "四个不同实数的六个两两和为 $4,7,8,9,10,13$。求所有从小到大的四元组。",
+      "solution_en": [
+        "The total of the four numbers is $T=(4+7+8+9+10+13)/3=17$. Complementary pairs are $(4,13),(7,10),(8,9)$.",
+        "For $a<b<c<d$, the smallest sums are $a+b=4,a+c=7$, and $c+d=13$. The remaining ambiguity is $a+d=8,b+c=9$ or the reverse.",
+        "The first gives $(a,b,c,d)=(1,3,6,7)$; the second gives $(3/2,5/2,11/2,15/2)$. Both are distinct sorted quadruples and reproduce exactly the six given sums, so the list is complete."
+      ],
+      "solution_zh": [
+        "四数和为 $T=(4+7+8+9+10+13)/3=17$，互补对为 $(4,13),(7,10),(8,9)$。",
+        "若 $a<b<c<d$，则最小两和为 $a+b=4,a+c=7$，最大和为 $c+d=13$。余下仅两种：$a+d=8,b+c=9$，或交换八与九。",
+        "第一种给出 $(1,3,6,7)$，第二种给出 $(3/2,5/2,11/2,15/2)$。两组均严格递增，且重算得到全部六和，因此已穷尽。"
+      ],
+      "tip_en": "Equal complementary totals are necessary; explicit reconstruction proves sufficiency.",
+      "tip_zh": "互补对总和相等只是必要条件，恢复具体数值才能证明充分。",
+      "question_ids": [
+        "AIME-2017-II-Q05"
+      ],
+      "prerequisites": [
+        "AL01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO03-M04",
+      "title_en": "Update possible worlds after a public statement of ignorance",
+      "title_zh": "公开“不知道”后更新可能世界",
+      "steps_en": [
+        "List all worlds allowed by the initial public information.",
+        "For each possible private observation, count how many initial worlds contain it; a unique world would make its observer know.",
+        "A simultaneous public statement that everyone is ignorant removes each world containing any initially unique observation.",
+        "Recompute observation classes among the surviving worlds and check the later statement, using the correct simultaneous round."
+      ],
+      "steps_zh": [
+        "先列出初始公开信息允许的全部可能世界。",
+        "对每种私人观察，数它属于多少个初始世界；若只属于一个，观察者就能确定。",
+        "若所有人同时公开表示不知道，就排除含有任何初始唯一观察的世界。",
+        "在保留世界中重新分组私人观察，检查下一轮陈述，且必须遵守同时发言的轮次。"
+      ],
+      "example_en": "A teacher chooses one pair from $\\{a,b\\},\\{b,c\\},\\{c,d\\}$ and gives its two distinct symbols privately to two perfectly logical pupils. Both simultaneously say they cannot identify the pair. Which pair was chosen, and can both identify it afterward?",
+      "example_zh": "老师从 $\\{a,b\\},\\{b,c\\},\\{c,d\\}$ 中选择一对，把两个不同符号分别私下给两位完全理性的学生。两人同时表示不能确定所选对。选的是哪一对？听完之后两人能否确定？",
+      "solution_en": [
+        "Initially $a$ occurs only in $\\{a,b\\}$ and $d$ only in $\\{c,d\\}$, so either symbol would allow its pupil to know immediately.",
+        "Unanimous initial ignorance therefore excludes both pairs containing $a$ or $d$, leaving only $\\{b,c\\}$.",
+        "After the public update, either private symbol $b$ or $c$ belongs to that sole surviving world. Both pupils can now identify the pair."
+      ],
+      "solution_zh": [
+        "初始时，$a$ 仅属于 $\\{a,b\\}$，$d$ 仅属于 $\\{c,d\\}$，拿到它们的人会立即知道。",
+        "两人都表示初始不知道，就排除了含 $a$ 或 $d$ 的两对，只剩 $\\{b,c\\}$。",
+        "公开更新后，无论私人符号为 $b$ 还是 $c$，都只对应这个保留世界，所以两人此时都能确定。"
+      ],
+      "tip_en": "Analyze all initial replies against the same initial world set; processing simultaneous replies sequentially changes the puzzle.",
+      "tip_zh": "同一轮初始回答必须都针对同一个初始世界集；把同时回答逐个更新会改变题意。",
+      "question_ids": [
+        "AIME-2021-II-Q11"
+      ],
+      "prerequisites": [
+        "NT02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2021-II-Q11"
+  ],
+  "coverage_by_question": {
+    "AIME-2002-I-Q09": {
+      "method_ids": [
+        "LO03-M01"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2017-I-Q12": {
+      "method_ids": [
+        "LO03-M01"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2024-II-Q02": {
+      "method_ids": [
+        "LO03-M01"
+      ],
+      "prerequisites": [
+        "PS06"
+      ]
+    },
+    "AIME-2015-II-Q06": {
+      "method_ids": [
+        "LO03-M02"
+      ],
+      "prerequisites": [
+        "AL02",
+        "NT05"
+      ]
+    },
+    "AIME-2017-II-Q05": {
+      "method_ids": [
+        "LO03-M03"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2021-II-Q11": {
+      "method_ids": [
+        "LO03-M04"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

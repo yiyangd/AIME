@@ -1,0 +1,762 @@
+[
+  {
+    "question_id": "AIME-2018-I-Q01",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "Write the factors $(x+r)(x+s)$ with $0\\le r\\le s$. Since their sum is positive and product nonnegative, this covers every integer-root possibility. The condition is $r+s=a$, with $b=rs$ uniquely determined.",
+      "reason_zh": "将因式写为 $(x+r)(x+s)$，$0\\le r\\le s$。由和正、积非负可知覆盖全部整数根情况，条件为 $r+s=a$，$b=rs$ 唯一确定。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "Write the factors $(x+r)(x+s)$ with $0\\le r\\le s$. Since their sum is positive and product nonnegative, this covers every integer-root possibility. The condition is $r+s=a$, with $b=rs$ uniquely determined.",
+        "reason_zh": "将因式写为 $(x+r)(x+s)$，$0\\le r\\le s$。由和正、积非负可知覆盖全部整数根情况，条件为 $r+s=a$，$b=rs$ 唯一确定。"
+      }
+    ],
+    "statement_en": "Count integer pairs $(a,b)$ with $1\\le a\\le100,b\\ge0$ for which $x^2+ax+b$ factors into integer linear factors, allowing repeated factors. Report the count modulo $1000$.",
+    "statement_zh": "求整数对 $(a,b)$ 数，满足 $1\\le a\\le100,b\\ge0$，且 $x^2+ax+b$ 可分解为整系数一次因子，允许重因子，取总数模 $1000$。",
+    "answer": 600,
+    "solution_en": [
+      "Write the factors $(x+r)(x+s)$ with $0\\le r\\le s$. Since their sum is positive and product nonnegative, this covers every integer-root possibility. The condition is $r+s=a$, with $b=rs$ uniquely determined.",
+      "For each $a$, there are $\\lfloor a/2\\rfloor+1$ choices. Pair $a=2k-1,2k$ for $k=1,\\ldots,50$; their contribution is $k+(k+1)$.",
+      "The total is $2(50\\cdot51/2)+50=2600$, leaving $600$."
+    ],
+    "solution_zh": [
+      "将因式写为 $(x+r)(x+s)$，$0\\le r\\le s$。由和正、积非负可知覆盖全部整数根情况，条件为 $r+s=a$，$b=rs$ 唯一确定。",
+      "每个 $a$ 有 $\\lfloor a/2\\rfloor+1$ 种。将 $a=2k-1,2k$ 配对，贡献为 $k+(k+1)$。",
+      "总数为二千六百，余数六百。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/1",
+    "method_chain": [
+      "Polynomials & Vieta relations",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q02",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "Place values give $196a+14b+c=225a+15c+b=222a+37c$. The shared base-six digits satisfy $1\\le a\\le5,0\\le c\\le5$.",
+      "reason_zh": "位权展开得 $196a+14b+c=225a+15c+b=222a+37c$，且 $1\\le a\\le5,0\\le c\\le5$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Equating the last two forms gives $b=22c-3a$. The first two give $13b=29a+14c$. Combining yields $a=4c$.",
+        "reason_zh": "后两式给出 $b=22c-3a$，前两式给出 $13b=29a+14c$，联立得 $a=4c$。"
+      }
+    ],
+    "statement_en": "An integer has representations $\\overline{abc}_{14}=\\overline{acb}_{15}=\\overline{acac}_6$, with $a>0$. Find the integer in decimal.",
+    "statement_zh": "某整数满足 $\\overline{abc}_{14}=\\overline{acb}_{15}=\\overline{acac}_6$，且 $a>0$，求其十进制值。",
+    "answer": 925,
+    "solution_en": [
+      "Place values give $196a+14b+c=225a+15c+b=222a+37c$. The shared base-six digits satisfy $1\\le a\\le5,0\\le c\\le5$.",
+      "Equating the last two forms gives $b=22c-3a$. The first two give $13b=29a+14c$. Combining yields $a=4c$.",
+      "The only permitted digits are $c=1,a=4,b=10$, and the value is $222(4)+37=925$."
+    ],
+    "solution_zh": [
+      "位权展开得 $196a+14b+c=225a+15c+b=222a+37c$，且 $1\\le a\\le5,0\\le c\\le5$。",
+      "后两式给出 $b=22c-3a$，前两式给出 $13b=29a+14c$，联立得 $a=4c$。",
+      "数字范围迫使 $c=1,a=4,b=10$，十进制值九百二十五。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/2",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q03",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Treat individual cards as distinct, giving $10\\cdot9\\cdot8\\cdot7\\cdot6=30240$ equally likely layouts. For a fixed color word with $r$ reds, the number of fillings is $(5!/(5-r)!)(5!/r!)$.",
+      "reason_zh": "将单张牌区分，共有 $30240$ 个等可能布局。固定含 $r$ 红的颜色词时，实际牌填法为 $(5!/(5-r)!)(5!/r!)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "The monochromatic words give $120$ each. For $r=1,2,3,4$, two block orders qualify, with respective fillings $600,1200,1200,600$.",
+        "reason_zh": "两种纯色词各贡献一百二十；$r=1,2,3,4$ 时，各有两种块顺序，单词填法依次为六百、一千二百、一千二百、六百。"
+      }
+    ],
+    "statement_en": "Shuffle five red and five green cards, then expose the first five in order. Happiness means all exposed reds form one block and all exposed greens form one block, allowing one color to be absent. Reduce this probability $m/n$ and find $m+n$.",
+    "statement_zh": "将五红五绿牌洗匀，依次翻出前五张。若翻出的红牌各自连续、绿牌也各自连续（允许某色缺席），称为成功。将概率约为 $m/n$，求 $m+n$。",
+    "answer": 157,
+    "solution_en": [
+      "Treat individual cards as distinct, giving $10\\cdot9\\cdot8\\cdot7\\cdot6=30240$ equally likely layouts. For a fixed color word with $r$ reds, the number of fillings is $(5!/(5-r)!)(5!/r!)$.",
+      "The monochromatic words give $120$ each. For $r=1,2,3,4$, two block orders qualify, with respective fillings $600,1200,1200,600$.",
+      "Favorable layouts total $240+2(3600)=7440$, so probability $31/126$ and answer $157$."
+    ],
+    "solution_zh": [
+      "将单张牌区分，共有 $30240$ 个等可能布局。固定含 $r$ 红的颜色词时，实际牌填法为 $(5!/(5-r)!)(5!/r!)$。",
+      "两种纯色词各贡献一百二十；$r=1,2,3,4$ 时，各有两种块顺序，单词填法依次为六百、一千二百、一千二百、六百。",
+      "有利布局七千四百四十，概率为 $31/126$，答案一百五十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/3",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q04",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "The original cosine rule gives $\\cos A=7/25$. Put the common length $x$, making $AE=10-x>0$.",
+      "reason_zh": "原三角形余弦定理得 $\\cos A=7/25$。设公共长度为 $x$，则 $AE=10-x>0$。"
+    },
+    "secondary": [],
+    "statement_en": "In triangle $ABC$, $AB=AC=10,BC=12$. Interior side points $D\\in AB,E\\in AC$ satisfy $AD=DE=EC$. Reduce $AD=p/q$ and find $p+q$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=AC=10,BC=12$，边内部点 $D\\in AB,E\\in AC$ 满足 $AD=DE=EC$。将 $AD$ 约为 $p/q$，求 $p+q$。",
+    "answer": 289,
+    "solution_en": [
+      "The original cosine rule gives $\\cos A=7/25$. Put the common length $x$, making $AE=10-x>0$.",
+      "The cosine rule in $ADE$ gives $x^2=x^2+(10-x)^2-(14/25)x(10-x)$. Cancel and divide by $10-x$, obtaining $10-x=14x/25$.",
+      "Thus $x=250/39$, in the required interval, giving $289$."
+    ],
+    "solution_zh": [
+      "原三角形余弦定理得 $\\cos A=7/25$。设公共长度为 $x$，则 $AE=10-x>0$。",
+      "在 $ADE$ 使用余弦定理并消去同项，除以正数 $10-x$，得到 $10-x=14x/25$。",
+      "解得 $x=250/39$，确在边内部，答案二百八十九。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/4",
+    "method_chain": [
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q05",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "The first equation with its positive argument is equivalent to $(2x+y)^2=x^2+xy+7y^2$, factoring as $(x-y)(x+2y)=0$. Neither branch allows $y=0$.",
+      "reason_zh": "第一式在真数为正时等价于 $(2x+y)^2=x^2+xy+7y^2$，因式分解得 $(x-y)(x+2y)=0$，两支均不能 $y=0$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "The first equation with its positive argument is equivalent to $(2x+y)^2=x^2+xy+7y^2$, factoring as $(x-y)(x+2y)=0$. Neither branch allows $y=0$.",
+        "reason_zh": "第一式在真数为正时等价于 $(2x+y)^2=x^2+xy+7y^2$，因式分解得 $(x-y)(x+2y)=0$，两支均不能 $y=0$。"
+      }
+    ],
+    "statement_en": "For pairs $(x,y)$ satisfying $\\log_2(2x+y)=\\log_4(x^2+xy+7y^2)$, consider every real $K$ making $\\log_3(3x+y)=\\log_9(3x^2+4xy+Ky^2)$ valid for that pair. Find the product of the distinct possible $K$.",
+    "statement_zh": "实数对满足 $\\log_2(2x+y)=\\log_4(x^2+xy+7y^2)$。考虑使该数对还满足有意义的 $\\log_3(3x+y)=\\log_9(3x^2+4xy+Ky^2)$ 的实数 $K$，求所有不同可能 $K$ 的乘积。",
+    "answer": 189,
+    "solution_en": [
+      "The first equation with its positive argument is equivalent to $(2x+y)^2=x^2+xy+7y^2$, factoring as $(x-y)(x+2y)=0$. Neither branch allows $y=0$.",
+      "The second equation similarly gives $K=6(x/y)^2+2(x/y)+1$. The branches $x/y=1,-2$ yield $K=9,21$.",
+      "Both occur with all log domains valid: choose $y>0$ in the first branch, $y<0$ in the second. Their product is $189$."
+    ],
+    "solution_zh": [
+      "第一式在真数为正时等价于 $(2x+y)^2=x^2+xy+7y^2$，因式分解得 $(x-y)(x+2y)=0$，两支均不能 $y=0$。",
+      "第二式同理给出 $K=6(x/y)^2+2(x/y)+1$，代入一、负二两比值，得到九与二十一。",
+      "第一支取 $y>0$、第二支取 $y<0$，各对数条件均满足，两值都可达到，乘积一百八十九。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/5",
+    "method_chain": [
+      "Logarithms & exponentials",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q06",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Write $z=e^{i\\theta}$ with $0\\le\\theta<2\\pi$. The condition is $\\sin720\\theta=\\sin120\\theta$, so either $600\\theta\\equiv0\\pmod{2\\pi}$ or $840\\theta\\equiv\\pi\\pmod{2\\pi}$.",
+      "reason_zh": "令 $z=e^{i\\theta}$，角取一周内，条件为 $\\sin720\\theta=\\sin120\\theta$，分成 $600\\theta\\equiv0$ 或 $840\\theta\\equiv\\pi$ 两类模 $2\\pi$ 关系。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Write $z=e^{i\\theta}$ with $0\\le\\theta<2\\pi$. The condition is $\\sin720\\theta=\\sin120\\theta$, so either $600\\theta\\equiv0\\pmod{2\\pi}$ or $840\\theta\\equiv\\pi\\pmod{2\\pi}$.",
+        "reason_zh": "令 $z=e^{i\\theta}$，角取一周内，条件为 $\\sin720\\theta=\\sin120\\theta$，分成 $600\\theta\\equiv0$ 或 $840\\theta\\equiv\\pi$ 两类模 $2\\pi$ 关系。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "The respective families contain $600,840$ angles. An overlap would require $\\pi k/300=(2j+1)\\pi/840$, or $14k=5(2j+1)$, contradicting parity.",
+        "reason_zh": "两类分别六百、八百四十个。若重叠，则 $14k=5(2j+1)$，奇偶矛盾。"
+      }
+    ],
+    "statement_en": "Count unit complex numbers $z$ for which $z^{720}-z^{120}$ is real. Find the count modulo $1000$.",
+    "statement_zh": "求单位复数 $z$ 的个数，使 $z^{720}-z^{120}$ 为实数，取个数模 $1000$。",
+    "answer": 440,
+    "solution_en": [
+      "Write $z=e^{i\\theta}$ with $0\\le\\theta<2\\pi$. The condition is $\\sin720\\theta=\\sin120\\theta$, so either $600\\theta\\equiv0\\pmod{2\\pi}$ or $840\\theta\\equiv\\pi\\pmod{2\\pi}$.",
+      "The respective families contain $600,840$ angles. An overlap would require $\\pi k/300=(2j+1)\\pi/840$, or $14k=5(2j+1)$, contradicting parity.",
+      "The count is $1440$, leaving $440$."
+    ],
+    "solution_zh": [
+      "令 $z=e^{i\\theta}$，角取一周内，条件为 $\\sin720\\theta=\\sin120\\theta$，分成 $600\\theta\\equiv0$ 或 $840\\theta\\equiv\\pi$ 两类模 $2\\pi$ 关系。",
+      "两类分别六百、八百四十个。若重叠，则 $14k=5(2j+1)$，奇偶矛盾。",
+      "故共有一千四百四十个，余数四百四十。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/6",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Trigonometric algebra & equations",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q07",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO06",
+      "reason_en": "Each single base contributes six triangles with sides $1,1,\\sqrt3$ and two equilateral triangles, or eight. Both bases give sixteen.",
+      "reason_zh": "单个底面贡献六个边为 $1,1,\\sqrt3$ 的三角形及两个等边三角形，共八个，两底面合计十六个。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE09",
+        "reason_en": "For a mixed triangle choose which base contains the pair, in two ways. A cross-base distance is at least two, while base-pair lengths are $1,\\sqrt3,2$. Adjacent base pairs cannot be isosceles: no opposite-base vertex is horizontally equidistant from their endpoints.",
+        "reason_zh": "混合三角形先选哪层含两个顶点，有两种。跨层边至少二，底面两点距离为一、根号三、二。相邻点对的垂直平分线上无另一层顶点，且跨层边不可能等于一，故不贡献。"
+      }
+    ],
+    "statement_en": "A right prism has unit-side regular hexagonal bases and height two. Count isosceles triangles determined by three of its twelve vertices, including equilateral triangles.",
+    "statement_zh": "直六棱柱底面为单位边长正六边形，高为二。求十二顶点任取三点构成的等腰三角形数，包括等边三角形。",
+    "answer": 52,
+    "solution_en": [
+      "Each single base contributes six triangles with sides $1,1,\\sqrt3$ and two equilateral triangles, or eight. Both bases give sixteen.",
+      "For a mixed triangle choose which base contains the pair, in two ways. A cross-base distance is at least two, while base-pair lengths are $1,\\sqrt3,2$. Adjacent base pairs cannot be isosceles: no opposite-base vertex is horizontally equidistant from their endpoints.",
+      "For the six base pairs of length $\\sqrt3$, two opposite-base vertices lie over their perpendicular bisector, giving twelve. For the three diameters of length two, a top vertex directly over either endpoint makes one cross-base side equal two, giving six; there are no equidistant top vertices for these diameters.",
+      "Total $16+2(12+6)=52$."
+    ],
+    "solution_zh": [
+      "单个底面贡献六个边为 $1,1,\\sqrt3$ 的三角形及两个等边三角形，共八个，两底面合计十六个。",
+      "混合三角形先选哪层含两个顶点，有两种。跨层边至少二，底面两点距离为一、根号三、二。相邻点对的垂直平分线上无另一层顶点，且跨层边不可能等于一，故不贡献。",
+      "六组根号三点对各有两个另一层等距顶点，共十二个；三组直径点对各可取正对任一端点的顶点，使一条跨层边也为二，共六个，且无其他等距顶点。",
+      "总数为 $16+2(12+6)=52$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/7",
+    "method_chain": [
+      "Graphs & geometric counting",
+      "Spheres & spatial distances"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q08",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Turn successive edge directions by sixty degrees. Closing the vector chain gives $EF=2,FA=16$. Coordinates may be $A=(0,0),B=(6,0),C=(10,4\\sqrt3),D=(5,9\\sqrt3),E=(-7,9\\sqrt3),F=(-8,8\\sqrt3)$.",
+      "reason_zh": "相邻边方向转六十度，闭合向量条件得 $EF=2,FA=16$。可取顶点坐标为 $(0,0),(6,0),(10,4\\sqrt3),(5,9\\sqrt3),(-7,9\\sqrt3),(-8,8\\sqrt3)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The opposite-side strip widths are $9\\sqrt3,11\\sqrt3,7\\sqrt3$. Thus any disk has diameter at most the narrowest width $7\\sqrt3$.",
+        "reason_zh": "三组对边间距为 $9\\sqrt3,11\\sqrt3,7\\sqrt3$，圆盘直径至多为最窄带宽 $7\\sqrt3$。"
+      }
+    ],
+    "statement_en": "An equiangular convex hexagon $ABCDEF$ has $AB=6,BC=8,CD=10,DE=12$. If $d$ is the largest diameter of a disk contained in it, find $d^2$.",
+    "statement_zh": "凸等角六边形 $ABCDEF$ 满足 $AB=6,BC=8,CD=10,DE=12$。设可完全放入其中的圆盘最大直径为 $d$，求 $d^2$。",
+    "answer": 147,
+    "solution_en": [
+      "Turn successive edge directions by sixty degrees. Closing the vector chain gives $EF=2,FA=16$. Coordinates may be $A=(0,0),B=(6,0),C=(10,4\\sqrt3),D=(5,9\\sqrt3),E=(-7,9\\sqrt3),F=(-8,8\\sqrt3)$.",
+      "The opposite-side strip widths are $9\\sqrt3,11\\sqrt3,7\\sqrt3$. Thus any disk has diameter at most the narrowest width $7\\sqrt3$.",
+      "To attain it, take center $(3/2,11\\sqrt3/2)$ and radius $7\\sqrt3/2$. Its distances to $CD,FA,DE$ equal the radius; those to $AB,BC,EF$ are $11\\sqrt3/2,5\\sqrt3,6\\sqrt3$, all larger. It lies in all six inward half-planes, hence the disk fits.",
+      "Therefore $d^2=147$."
+    ],
+    "solution_zh": [
+      "相邻边方向转六十度，闭合向量条件得 $EF=2,FA=16$。可取顶点坐标为 $(0,0),(6,0),(10,4\\sqrt3),(5,9\\sqrt3),(-7,9\\sqrt3),(-8,8\\sqrt3)$。",
+      "三组对边间距为 $9\\sqrt3,11\\sqrt3,7\\sqrt3$，圆盘直径至多为最窄带宽 $7\\sqrt3$。",
+      "取圆心 $(3/2,11\\sqrt3/2)$，半径 $7\\sqrt3/2$。到 $CD,FA,DE$ 距离等于半径，到另三边距离分别为 $11\\sqrt3/2,5\\sqrt3,6\\sqrt3$，均更大。圆位于六个内侧半平面，故确能放入。",
+      "所以 $d^2=147$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/8",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q09",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO04",
+      "reason_en": "There are seven sixteen-pairs and eight twenty-four-pairs. Ten pair combinations share a center $a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$, leaving $56-10=46$ disjoint combinations. A disjoint combination determines its four-set uniquely, and no four-set has two such decompositions.",
+      "reason_zh": "和十六的不同元素对有七个，和二十四的有八个。其中共用中心 $a$ 的组合有十个，$a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$，所以不相交组合为四十六个，每个唯一确定四元集，且不存在第二种不相交分解。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "There are seven sixteen-pairs and eight twenty-four-pairs. Ten pair combinations share a center $a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$, leaving $56-10=46$ disjoint combinations. A disjoint combination determines its four-set uniquely, and no four-set has two such decompositions.",
+        "reason_zh": "和十六的不同元素对有七个，和二十四的有八个。其中共用中心 $a$ 的组合有十个，$a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$，所以不相交组合为四十六个，每个唯一确定四元集，且不存在第二种不相交分解。"
+      }
+    ],
+    "statement_en": "Count four-element subsets of $\\{1,\\ldots,20\\}$ containing a distinct-element pair summing to sixteen and a distinct-element pair summing to twenty-four. The two pairs may overlap.",
+    "statement_zh": "求一至二十的四元子集数，使其中有两个不同元素之和为十六，也有两个不同元素之和为二十四；两对可有公共元素。",
+    "answer": 210,
+    "solution_en": [
+      "There are seven sixteen-pairs and eight twenty-four-pairs. Ten pair combinations share a center $a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$, leaving $56-10=46$ disjoint combinations. A disjoint combination determines its four-set uniquely, and no four-set has two such decompositions.",
+      "For overlapping pairs, the forced triple is $\\{a,16-a,24-a\\}$, with ten centers, and seventeen choices for the fourth element: $170$ incidences. Exactly six sets have two centers: $\\{1,7,9,15\\},\\{2,6,10,14\\},\\{3,5,11,13\\},\\{5,11,13,19\\},\\{6,10,14,18\\},\\{7,9,15,17\\}$. There is no three-center set, as testing the possible length-three paths of these two fixed-sum pair relations shows.",
+      "Thus overlapping-pair sets number $170-6=164$. They cannot also contain disjoint pairs: disjoint pairs force total sum forty, whereas a shared-center triple would then force its fourth element to repeat its center.",
+      "The total is $46+164=210$."
+    ],
+    "solution_zh": [
+      "和十六的不同元素对有七个，和二十四的有八个。其中共用中心 $a$ 的组合有十个，$a\\in\\{4,\\ldots,15\\}\\setminus\\{8,12\\}$，所以不相交组合为四十六个，每个唯一确定四元集，且不存在第二种不相交分解。",
+      "相交时三元素为 $\\{a,16-a,24-a\\}$，十个中心各有十七种第四元素，共一百七十个关联。恰有六个集合有双中心：$\\{1,7,9,15\\},\\{2,6,10,14\\},\\{3,5,11,13\\},\\{5,11,13,19\\},\\{6,10,14,18\\},\\{7,9,15,17\\}$。检查两个固定和关系形成的三边路径可知无三中心。",
+      "故相交类有一百六十四个。它不与不相交类重复：后者四数和为四十，若又含共中心三元组，则第四元素必须等于中心，矛盾。",
+      "总数二百一十。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/9",
+    "method_chain": [
+      "Inclusion-exclusion & double counting",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q10",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO07",
+      "reason_en": "Code counterclockwise or inward as $X$, clockwise or outward as $Y$. From any state there is exactly one move of each type, so binary words describe paths bijectively. A step ends on the inner ring exactly when its code is $X$.",
+      "reason_zh": "将逆时针或向内记为 $X$，顺时针或向外记为 $Y$。每状态各恰有一种两类步，故二进制字与路径双射；末步为 $X$ 当且仅当终点在内环。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "If the final code is $X$, spoke moves balance inward and outward, so the net angular displacement equals $\\#X-\\#Y$ modulo five. A return therefore requires $2\\#X-15\\equiv0\\pmod5$, with $\\#X=5,10,15$.",
+        "reason_zh": "若末步为 $X$，辐条进出次数相等，所以净角位移模五为 $\\#X-\\#Y$。返回要求 $2\\#X-15\\equiv0\\pmod5$，故 $X$ 数为五、十、十五。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Fixing the last $X$, the count is $\\binom{14}4+\\binom{14}9+\\binom{14}{14}=1001+2002+1=3004$, giving remainder $4$.",
+        "reason_zh": "固定末步，计数为 $\\binom{14}4+\\binom{14}9+1=3004$，余数四。"
+      }
+    ],
+    "statement_en": "Two concentric pentagonal rings have corresponding vertices joined by spokes. From an inner vertex a bug may step one vertex counterclockwise on that ring or outward on its spoke; from an outer vertex it may step clockwise or inward. Starting at a fixed inner vertex $A$, count fifteen-step returns to $A$, modulo $1000$.",
+    "statement_zh": "两个同心五顶点环由对应辐条相连。虫在内环可逆时针沿环一步或沿辐条向外，在外环可顺时针沿环一步或向内。由固定内顶点 $A$ 出发，求十五步返回 $A$ 的路径数模 $1000$。",
+    "answer": 4,
+    "solution_en": [
+      "Code counterclockwise or inward as $X$, clockwise or outward as $Y$. From any state there is exactly one move of each type, so binary words describe paths bijectively. A step ends on the inner ring exactly when its code is $X$.",
+      "If the final code is $X$, spoke moves balance inward and outward, so the net angular displacement equals $\\#X-\\#Y$ modulo five. A return therefore requires $2\\#X-15\\equiv0\\pmod5$, with $\\#X=5,10,15$.",
+      "Fixing the last $X$, the count is $\\binom{14}4+\\binom{14}9+\\binom{14}{14}=1001+2002+1=3004$, giving remainder $4$."
+    ],
+    "solution_zh": [
+      "将逆时针或向内记为 $X$，顺时针或向外记为 $Y$。每状态各恰有一种两类步，故二进制字与路径双射；末步为 $X$ 当且仅当终点在内环。",
+      "若末步为 $X$，辐条进出次数相等，所以净角位移模五为 $\\#X-\\#Y$。返回要求 $2\\#X-15\\equiv0\\pmod5$，故 $X$ 数为五、十、十五。",
+      "固定末步，计数为 $\\binom{14}4+\\binom{14}9+1=3004$，余数四。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/10",
+    "method_chain": [
+      "Bijections & structural counting",
+      "Congruences & Chinese remainders",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q11",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "The condition is $3^n\\equiv1\\pmod{143^2}$, equivalent to congruence one modulo $121$ and $169$.",
+      "reason_zh": "条件为 $3^n\\equiv1\\pmod{143^2}$，等价于模一百二十一、一百六十九均为一。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "The condition is $3^n\\equiv1\\pmod{143^2}$, equivalent to congruence one modulo $121$ and $169$.",
+        "reason_zh": "条件为 $3^n\\equiv1\\pmod{143^2}$，等价于模一百二十一、一百六十九均为一。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL10",
+        "reason_en": "Modulo $121$, $3^5=243\\equiv1$ and $3\\not\\equiv1$, so the order is five. Modulo thirteen, the order is three; for $n=3k$, binomial expansion gives $3^{3k}=(1+26)^k\\equiv1+26k\\pmod{169}$, since $26^2$ is divisible by $169$.",
+        "reason_zh": "模一百二十一的阶为五，因为 $3^5\\equiv1$ 且三不为一。模十三的阶为三，故写 $n=3k$；二项式展开给出 $(1+26)^k\\equiv1+26k\\pmod{169}$。"
+      }
+    ],
+    "statement_en": "Find the least positive $n$ for which the last two base-$143$ digits of $3^n$ are $01$.",
+    "statement_zh": "求最小正整数 $n$，使 $3^n$ 的一百四十三进制末两位为 $01$。",
+    "answer": 195,
+    "solution_en": [
+      "The condition is $3^n\\equiv1\\pmod{143^2}$, equivalent to congruence one modulo $121$ and $169$.",
+      "Modulo $121$, $3^5=243\\equiv1$ and $3\\not\\equiv1$, so the order is five. Modulo thirteen, the order is three; for $n=3k$, binomial expansion gives $3^{3k}=(1+26)^k\\equiv1+26k\\pmod{169}$, since $26^2$ is divisible by $169$.",
+      "This is one exactly when $13\\mid k$, so the order modulo $169$ is thirty-nine. The least simultaneous exponent is $\\operatorname{lcm}(5,39)=195$."
+    ],
+    "solution_zh": [
+      "条件为 $3^n\\equiv1\\pmod{143^2}$，等价于模一百二十一、一百六十九均为一。",
+      "模一百二十一的阶为五，因为 $3^5\\equiv1$ 且三不为一。模十三的阶为三，故写 $n=3k$；二项式展开给出 $(1+26)^k\\equiv1+26k\\pmod{169}$。",
+      "这恰在十三整除 $k$ 时为一，故第二个阶为三十九。最小共同指数为一百九十五。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/11",
+    "method_chain": [
+      "Orders, modular powers & cycles",
+      "Congruences & Chinese remainders",
+      "Binomial expansions & controlled approximation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q12",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "Six elements have each residue modulo three. Multiples of three may be chosen freely and cancel from the probability. Let $a,b$ be counts chosen from residues one and two; the condition is $a\\equiv b\\pmod3$.",
+      "reason_zh": "每种模三余数各有六个元素，三的倍数可自由选，不影响概率。设余一、余二类各选 $a,b$ 个，则条件为 $a\\equiv b\\pmod3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "The cases $a-b=0,\\pm3,\\pm6$ contribute $\\binom{12}6=924$, $2\\binom{12}9=440$, and two choices respectively, by Vandermonde convolution.",
+        "reason_zh": "按 $a-b=0,\\pm3,\\pm6$ 分组，用范德蒙德卷积得到九百二十四、四百四十、二种选择。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Six elements have each residue modulo three. Multiples of three may be chosen freely and cancel from the probability. Let $a,b$ be counts chosen from residues one and two; the condition is $a\\equiv b\\pmod3$.",
+        "reason_zh": "每种模三余数各有六个元素，三的倍数可自由选，不影响概率。设余一、余二类各选 $a,b$ 个，则条件为 $a\\equiv b\\pmod3$。"
+      }
+    ],
+    "statement_en": "Choose a subset uniformly from $\\{1,\\ldots,18\\}$. If the probability its element sum is divisible by three is reduced $m/n$, find $m$. The empty sum is zero.",
+    "statement_zh": "从一至十八的所有子集中等可能选一个，空集和为零。若元素和可被三整除的概率为最简分数 $m/n$，求 $m$。",
+    "answer": 683,
+    "solution_en": [
+      "Six elements have each residue modulo three. Multiples of three may be chosen freely and cancel from the probability. Let $a,b$ be counts chosen from residues one and two; the condition is $a\\equiv b\\pmod3$.",
+      "The cases $a-b=0,\\pm3,\\pm6$ contribute $\\binom{12}6=924$, $2\\binom{12}9=440$, and two choices respectively, by Vandermonde convolution.",
+      "The probability is $1366/2^{12}=683/2048$, so $m=683$."
+    ],
+    "solution_zh": [
+      "每种模三余数各有六个元素，三的倍数可自由选，不影响概率。设余一、余二类各选 $a,b$ 个，则条件为 $a\\equiv b\\pmod3$。",
+      "按 $a-b=0,\\pm3,\\pm6$ 分组，用范德蒙德卷积得到九百二十四、四百四十、二种选择。",
+      "概率为 $1366/4096=683/2048$，所求分子为六百八十三。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/12",
+    "method_chain": [
+      "Finite probability & combinatorial sampling",
+      "Subsets & binomial identities",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q13",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE05",
+      "reason_en": "The angle $I_1AI_2$ is constant at $A/2$. Put $\\alpha=\\angle AXB$. Incenter angles and the sine rule give $AI_1=30\\sin(B/2)/\\cos(\\alpha/2)$ and $AI_2=34\\sin(C/2)/\\sin(\\alpha/2)$.",
+      "reason_zh": "$\\angle I_1AI_2$ 恒为 $A/2$。令 $\\alpha=\\angle AXB$，由内心角及正弦定理，$AI_1=30\\sin(B/2)/\\cos(\\alpha/2),AI_2=34\\sin(C/2)/\\sin(\\alpha/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Thus area equals $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)/\\sin\\alpha$. It is bounded below by its constant numerator. The altitude foot from $A$ lies inside $BC$ because its distance from $B$ is $(30^2+32^2-34^2)/64=12$, so $\\alpha=90^\\circ$ attains that bound.",
+        "reason_zh": "面积等于固定分子 $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)$ 除以 $\\sin\\alpha$，所以分子即下界。$A$ 高足距 $B$ 为十二，位于底边内部，取此 $X$ 使 $\\alpha=90^\\circ$，达到下界。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Thus area equals $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)/\\sin\\alpha$. It is bounded below by its constant numerator. The altitude foot from $A$ lies inside $BC$ because its distance from $B$ is $(30^2+32^2-34^2)/64=12$, so $\\alpha=90^\\circ$ attains that bound.",
+        "reason_zh": "面积等于固定分子 $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)$ 除以 $\\sin\\alpha$，所以分子即下界。$A$ 高足距 $B$ 为十二，位于底边内部，取此 $X$ 使 $\\alpha=90^\\circ$，达到下界。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=30,BC=32,AC=34$. For $X$ strictly inside $BC$, let $I_1,I_2$ be the incenters of $ABX,ACX$. Find the least area of triangle $AI_1I_2$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=30,BC=32,AC=34$。$X$ 在 $BC$ 内部，$I_1,I_2$ 分别为 $ABX,ACX$ 的内心。求三角形 $AI_1I_2$ 的最小面积。",
+    "answer": 126,
+    "solution_en": [
+      "The angle $I_1AI_2$ is constant at $A/2$. Put $\\alpha=\\angle AXB$. Incenter angles and the sine rule give $AI_1=30\\sin(B/2)/\\cos(\\alpha/2)$ and $AI_2=34\\sin(C/2)/\\sin(\\alpha/2)$.",
+      "Thus area equals $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)/\\sin\\alpha$. It is bounded below by its constant numerator. The altitude foot from $A$ lies inside $BC$ because its distance from $B$ is $(30^2+32^2-34^2)/64=12$, so $\\alpha=90^\\circ$ attains that bound.",
+      "For $a=32,b=34,c=30,s=48$, the half-angle product is $(s-a)(s-b)(s-c)/(abc)$. The minimum is therefore $16\\cdot14\\cdot18/32=126$."
+    ],
+    "solution_zh": [
+      "$\\angle I_1AI_2$ 恒为 $A/2$。令 $\\alpha=\\angle AXB$，由内心角及正弦定理，$AI_1=30\\sin(B/2)/\\cos(\\alpha/2),AI_2=34\\sin(C/2)/\\sin(\\alpha/2)$。",
+      "面积等于固定分子 $30\\cdot34\\sin(A/2)\\sin(B/2)\\sin(C/2)$ 除以 $\\sin\\alpha$，所以分子即下界。$A$ 高足距 $B$ 为十二，位于底边内部，取此 $X$ 使 $\\alpha=90^\\circ$，达到下界。",
+      "半周长四十八，半角正弦积为 $(s-a)(s-b)(s-c)/(abc)$，因此最小面积 $16\\cdot14\\cdot18/32=126$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/13",
+    "method_chain": [
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q14",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Group nonabsorbing vertices into $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$. Let $(a_n,b_n,c_n)$ count still-active paths in these classes after $n$ steps.",
+      "reason_zh": "将非终点分组为 $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$，用 $(a_n,b_n,c_n)$ 记录第 $n$ 步尚未终止的各组路径数。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "Group nonabsorbing vertices into $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$. Let $(a_n,b_n,c_n)$ count still-active paths in these classes after $n$ steps.",
+        "reason_zh": "将非终点分组为 $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$，用 $(a_n,b_n,c_n)$ 记录第 $n$ 步尚未终止的各组路径数。"
+      }
+    ],
+    "statement_en": "A frog starts at $S$ on the cycle with consecutive vertices $S,P_1,P_2,P_3,E,P_4,P_5$. At each non-$E$ vertex it chooses either adjacent vertex; reaching $E$ ends the path. Count distinct paths reaching $E$ within twelve jumps.",
+    "statement_zh": "七边循环顶点依次为 $S,P_1,P_2,P_3,E,P_4,P_5$。青蛙从 $S$ 出发，每次在非 $E$ 点可跳至任一邻点，一到 $E$ 即停止。求不超过十二步到达 $E$ 的不同路径数。",
+    "answer": 351,
+    "solution_en": [
+      "Group nonabsorbing vertices into $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$. Let $(a_n,b_n,c_n)$ count still-active paths in these classes after $n$ steps.",
+      "The transitions give $(a_{n+1},b_{n+1},c_{n+1})=(a_n+b_n,a_n+c_n,b_n)$, initially $(1,0,0)$. Exactly $c_n$ paths first reach $E$ next.",
+      "For $n=0,\\ldots,11$, the $c_n$ values are $0,0,1,1,3,4,9,14,28,47,89,155$. Their sum is $351$."
+    ],
+    "solution_zh": [
+      "将非终点分组为 $A=\\{S,P_1\\},B=\\{P_2,P_5\\},C=\\{P_3,P_4\\}$，用 $(a_n,b_n,c_n)$ 记录第 $n$ 步尚未终止的各组路径数。",
+      "转移为 $(a_{n+1},b_{n+1},c_{n+1})=(a_n+b_n,a_n+c_n,b_n)$，初值 $(1,0,0)$，下一步恰有 $c_n$ 条首次到 $E$。",
+      "$n=0$ 至十一的 $c_n$ 为 $0,0,1,1,3,4,9,14,28,47,89,155$，相加得三百五十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/14",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-I-Q15",
+    "paper_id": "AIME-2018-I",
+    "exam_year": 2018,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Write one cyclic order of side arcs as $\\alpha,\\beta,\\gamma,\\delta$, totaling $2\\pi$. The other two orders exchange the three possible opposite-side pairings. By the intersecting-chord angle theorem, their diagonal-angle sines are the sines of half the corresponding opposite-arc sums.",
+      "reason_zh": "将一种顺序的四条边弧记为 $\\alpha,\\beta,\\gamma,\\delta$，总和为 $2\\pi$。另外两种顺序交换三种对边配对。由相交弦夹角定理，其对角线夹角正弦为对应对边弧和一半的正弦。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The diagonals in any one quadrilateral have lengths twice the diagonal-angle sines of the other two orders, using the unit-circle chord formula. Consequently the common area is $\\tfrac12d_1d_2\\sin\\phi=2\\sin\\phi_A\\sin\\phi_B\\sin\\phi_C$. This formula is unchanged if an angle is replaced by its supplement.",
+        "reason_zh": "任一种四边形的两条对角线，长度恰为另外两种夹角正弦的两倍。因此面积恒为 $2\\sin\\phi_A\\sin\\phi_B\\sin\\phi_C$；取补角不改变正弦。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Write one cyclic order of side arcs as $\\alpha,\\beta,\\gamma,\\delta$, totaling $2\\pi$. The other two orders exchange the three possible opposite-side pairings. By the intersecting-chord angle theorem, their diagonal-angle sines are the sines of half the corresponding opposite-arc sums.",
+        "reason_zh": "将一种顺序的四条边弧记为 $\\alpha,\\beta,\\gamma,\\delta$，总和为 $2\\pi$。另外两种顺序交换三种对边配对。由相交弦夹角定理，其对角线夹角正弦为对应对边弧和一半的正弦。"
+      }
+    ],
+    "statement_en": "Four distinct stick lengths form three noncongruent convex cyclic quadrilaterals, all with circumradius one and common area $K$. Their acute diagonal angles have sines $2/3,3/5,6/7$. Reduce $K=m/n$ and find $m+n$.",
+    "statement_zh": "四根不同长度的杆可构成三个不全等凸圆内接四边形，外接圆半径均为一，公共面积为 $K$。三个对角线锐夹角的正弦分别为 $2/3,3/5,6/7$。将 $K$ 约为 $m/n$，求 $m+n$。",
+    "answer": 59,
+    "solution_en": [
+      "Write one cyclic order of side arcs as $\\alpha,\\beta,\\gamma,\\delta$, totaling $2\\pi$. The other two orders exchange the three possible opposite-side pairings. By the intersecting-chord angle theorem, their diagonal-angle sines are the sines of half the corresponding opposite-arc sums.",
+      "The diagonals in any one quadrilateral have lengths twice the diagonal-angle sines of the other two orders, using the unit-circle chord formula. Consequently the common area is $\\tfrac12d_1d_2\\sin\\phi=2\\sin\\phi_A\\sin\\phi_B\\sin\\phi_C$. This formula is unchanged if an angle is replaced by its supplement.",
+      "Substitute to obtain $K=2(2/3)(3/5)(6/7)=24/35$, hence $m+n=59$."
+    ],
+    "solution_zh": [
+      "将一种顺序的四条边弧记为 $\\alpha,\\beta,\\gamma,\\delta$，总和为 $2\\pi$。另外两种顺序交换三种对边配对。由相交弦夹角定理，其对角线夹角正弦为对应对边弧和一半的正弦。",
+      "任一种四边形的两条对角线，长度恰为另外两种夹角正弦的两倍。因此面积恒为 $2\\sin\\phi_A\\sin\\phi_B\\sin\\phi_C$；取补角不改变正弦。",
+      "代入得 $K=24/35$，答案五十九。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018I/problem/15",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Areas & area ratios",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

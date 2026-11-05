@@ -1,0 +1,2054 @@
+[
+  {
+    "subtype_id": "AL01",
+    "methods": [
+      {
+        "name_en": "Replace symmetric monomials by sum and product variables",
+        "name_zh": "以和与积变量代换对称单项式",
+        "question_ids": [
+          "AIME-2015-II-Q14"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Eliminate by an equation ratio before recovering the requested invariant",
+        "name_zh": "先用方程比消元再恢复目标不变量",
+        "question_ids": [
+          "AIME-2015-II-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Subtract squared water-relative speed equations",
+        "name_zh": "相减静水速度平方方程",
+        "question_ids": [
+          "AIME-2022-I-Q05"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Recover both geometric angle branches from a quadratic probability",
+        "name_zh": "由二次概率方程恢复两个几何角分支",
+        "question_ids": [
+          "AIME-2017-I-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Pair four-number pair sums into three equal complementary totals",
+        "name_zh": "将四数两两和配成三对相同互补总和",
+        "question_ids": [
+          "AIME-2017-II-Q05"
+        ],
+        "prerequisites": [
+          "LO03"
+        ]
+      },
+      {
+        "name_en": "Construct a distinct-number realization of the extremal pair-sum assignment",
+        "name_zh": "构造极端配对和分配的不同实数实现",
+        "question_ids": [
+          "AIME-2017-II-Q05"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL02",
+    "methods": [
+      {
+        "name_en": "Partition level-set inputs into cubic root triples",
+        "name_zh": "将水平值输入分成三次式根组三元组",
+        "question_ids": [
+          "AIME-2015-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Match root sums and pairwise products",
+        "name_zh": "匹配根和与两两乘积和",
+        "question_ids": [
+          "AIME-2015-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Extract a fixed root-square sum from Vieta coefficients",
+        "name_zh": "由韦达系数抽取固定根平方和",
+        "question_ids": [
+          "AIME-2015-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Cancel opposite leading terms before interpolation",
+        "name_zh": "插值前先消去相反首项",
+        "question_ids": [
+          "AIME-2022-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Extract forced roots from a shifted polynomial identity",
+        "name_zh": "由平移多项式恒等式抽取必需根",
+        "question_ids": [
+          "AIME-2016-I-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Make all coefficient signs nonnegative by evaluating the variable at its negative",
+        "name_zh": "以变量变号使所有系数非负",
+        "question_ids": [
+          "AIME-2016-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Evaluate the coefficient absolute sum at minus one",
+        "name_zh": "在负一处求系数绝对值和",
+        "question_ids": [
+          "AIME-2016-II-Q06"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL03",
+    "methods": [
+      {
+        "name_en": "Convert unit complex powers into an angle congruence",
+        "name_zh": "将单位复数幂化为辐角同余",
+        "question_ids": [
+          "AIME-2022-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Separate real-radical and imaginary-radical cancellation branches",
+        "name_zh": "分离实根式与虚根式抵消两支",
+        "question_ids": [
+          "AIME-2016-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recognize a real cross-ratio as a generalized-circle locus",
+        "name_zh": "将实交比识别为广义圆轨迹",
+        "question_ids": [
+          "AIME-2017-I-Q10"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Sum rotating internal-tangency center displacements",
+        "name_zh": "累加旋转内切的圆心位移",
+        "question_ids": [
+          "AIME-2017-II-Q12"
+        ],
+        "prerequisites": [
+          "AL05",
+          "GE06"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL04",
+    "methods": [
+      {
+        "name_en": "Subtract equal-exponent logarithm equations to eliminate the input",
+        "name_zh": "相减共同指数的对数方程消去自变量",
+        "question_ids": [
+          "AIME-2022-II-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Sum logarithmic variables to a monotone scalar equation",
+        "name_zh": "将对数变量求和为单调标量方程",
+        "question_ids": [
+          "AIME-2016-II-Q03"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Reduce a nested logarithm equation to opposite monotone functions",
+        "name_zh": "将嵌套对数方程化为一增一减函数",
+        "question_ids": [
+          "AIME-2017-I-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Enforce logarithm domains before counting quadratic roots",
+        "name_zh": "统计二次方程根之前施加对数定义域",
+        "question_ids": [
+          "AIME-2017-II-Q07"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL05",
+    "methods": [
+      {
+        "name_en": "Pair adjacent product sums",
+        "name_zh": "相邻乘积和配对",
+        "question_ids": [
+          "AIME-2015-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Find absorbing-zero triggers in a multiplicative recurrence",
+        "name_zh": "寻找乘法递推中的零吸收触发",
+        "question_ids": [
+          "AIME-2015-I-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Prove permanent growth with adjacent gaps at least two",
+        "name_zh": "用相邻差至少二证明永久增长",
+        "question_ids": [
+          "AIME-2015-I-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Telescope a binomial row with the hockey-stick identity",
+        "name_zh": "以曲棍球杆恒等式求二项式行和",
+        "question_ids": [
+          "AIME-2022-II-Q10"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Relate sums and products of opposite-ratio geometric series",
+        "name_zh": "联系相反公比等比级数的和与积",
+        "question_ids": [
+          "AIME-2016-I-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Subtract parallel arithmetic-sum equations to fix the day count",
+        "name_zh": "相减平行等差求和方程确定天数",
+        "question_ids": [
+          "AIME-2016-I-Q05"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Parametrize an alternating geometric-arithmetic recurrence by linear factors",
+        "name_zh": "用线性因子参数化交替等比等差递推",
+        "question_ids": [
+          "AIME-2016-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reduce a constant second difference to an arithmetic first difference",
+        "name_zh": "将常二阶差分化为等差一阶差分",
+        "question_ids": [
+          "AIME-2016-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use the middle arithmetic term after unequal removals",
+        "name_zh": "不等量扣除后利用等差中项",
+        "question_ids": [
+          "AIME-2016-II-Q01"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Combine arithmetic-linear and geometric-exponential terms at separated indices",
+        "name_zh": "在间隔下标组合等差线性项与等比指数项",
+        "question_ids": [
+          "AIME-2016-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Sum a finite geometric weight list exactly",
+        "name_zh": "精确求有限等比权重和",
+        "question_ids": [
+          "AIME-2016-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Prove the nested-disk limit is the unique common interior point",
+        "name_zh": "证明嵌套圆盘极限为唯一公共内部点",
+        "question_ids": [
+          "AIME-2017-II-Q12"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL06",
+    "methods": [
+      {
+        "name_en": "Sum unit trapezoids under a square-root floor graph",
+        "name_zh": "对平方根取整图下单位梯形求和",
+        "question_ids": [
+          "AIME-2015-I-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Order one integer from each irrational moving interval",
+        "name_zh": "排列每个无理移动区间中的唯一整数",
+        "question_ids": [
+          "AIME-2015-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Characterize singleton floor blocks by consecutive jumps",
+        "name_zh": "用连续跳变刻画唯一取整区块",
+        "question_ids": [
+          "AIME-2022-II-Q08"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL07",
+    "methods": [
+      {
+        "name_en": "Bound sorted coordinates by total positive and negative mass",
+        "name_zh": "用正负总质量约束排序坐标",
+        "question_ids": [
+          "AIME-2022-II-Q06"
+        ],
+        "prerequisites": [
+          "AL06"
+        ]
+      },
+      {
+        "name_en": "Construct the three-level equality tuple",
+        "name_zh": "构造三层常数的等号序列",
+        "question_ids": [
+          "AIME-2022-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Choose a crossed-focus pairing with simultaneous triangle-inequality equality",
+        "name_zh": "选择交叉焦点配对使三角不等式同时取等",
+        "question_ids": [
+          "AIME-2022-II-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Impose segment containment before claiming a trigonometric equality case",
+        "name_zh": "声称三角最值等号前先施加线段包含条件",
+        "question_ids": [
+          "AIME-2016-I-Q09"
+        ],
+        "prerequisites": [
+          "AL08"
+        ]
+      },
+      {
+        "name_en": "Rewrite a pair-product constraint as equality in weighted Cauchy",
+        "name_zh": "将两两乘积约束改写为加权柯西等号",
+        "question_ids": [
+          "AIME-2016-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Maximize a sine-cosine linear form and verify every segment constraint",
+        "name_zh": "最大化正余弦线性式并检验全部线段约束",
+        "question_ids": [
+          "AIME-2017-I-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Sum supporting-vector norm bounds when equal-radius vertex vectors cancel",
+        "name_zh": "等半径顶点向量和为零时累加范数支持下界",
+        "question_ids": [
+          "AIME-2017-II-Q15"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL08",
+    "methods": [
+      {
+        "name_en": "Cancel sine products using complementary angles and doubling",
+        "name_zh": "用余角与倍角消去正弦乘积",
+        "question_ids": [
+          "AIME-2015-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Telescope a sine sum into a cosine endpoint difference",
+        "name_zh": "将正弦和望远镜化为余弦端点差",
+        "question_ids": [
+          "AIME-2015-II-Q13"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Use bounded sine-square substitution to linearize radicals",
+        "name_zh": "用有界正弦平方代换线性化根式",
+        "question_ids": [
+          "AIME-2022-I-Q15"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Enumerate complementary pair-angle branches",
+        "name_zh": "枚举互补两角和分支",
+        "question_ids": [
+          "AIME-2022-I-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recover two positive tangent heights from their sum and product",
+        "name_zh": "由和积恢复两个正切高度",
+        "question_ids": [
+          "AIME-2016-II-Q14"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "AL09",
+    "methods": [
+      {
+        "name_en": "Prove a periodic polynomial is constant by finite differences",
+        "name_zh": "用有限差分证明周期多项式恒定",
+        "question_ids": [
+          "AIME-2016-I-Q11"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO01",
+    "methods": [
+      {
+        "name_en": "Count simple paths on a cycle from a fixed start",
+        "name_zh": "从固定起点统计循环上的简单路径",
+        "question_ids": [
+          "AIME-2016-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Permute each fixed digit column independently",
+        "name_zh": "独立排列每个固定数字列",
+        "question_ids": [
+          "AIME-2016-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Remove repeated-factor triples before dividing by six",
+        "name_zh": "除六前剔除重复因子三元组",
+        "question_ids": [
+          "AIME-2016-II-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count permutations with nested allowed-column sets",
+        "name_zh": "统计嵌套允许列集合下的排列",
+        "question_ids": [
+          "AIME-2016-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Separate symbol-pattern arrangements from within-class digit permutations",
+        "name_zh": "分离类别符号布局与类内数字排列",
+        "question_ids": [
+          "AIME-2017-I-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count a unique removable intersection card versus its absent case",
+        "name_zh": "分类统计唯一可删交叉牌存在或缺失",
+        "question_ids": [
+          "AIME-2017-II-Q09"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO02",
+    "methods": [
+      {
+        "name_en": "Collapse squared binomial sums by Vandermonde",
+        "name_zh": "用范德蒙德合并组合数平方和",
+        "question_ids": [
+          "AIME-2022-I-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Rewrite a nested binomial coefficient as a shifted one",
+        "name_zh": "将嵌套组合数重写为移位组合数",
+        "question_ids": [
+          "AIME-2022-II-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Subtract collinear triples from all boundary-point triples",
+        "name_zh": "从全部边界点三元组中减去共线三元组",
+        "question_ids": [
+          "AIME-2017-I-Q01"
+        ],
+        "prerequisites": [
+          "CO06"
+        ]
+      },
+      {
+        "name_en": "Complete a triple binomial sum to a fixed-size selection",
+        "name_zh": "将三重二项式和补齐为固定大小选取",
+        "question_ids": [
+          "AIME-2017-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Condition product-free subsets on their least element",
+        "name_zh": "按最小元素分类乘积无关子集",
+        "question_ids": [
+          "AIME-2017-I-Q12"
+        ],
+        "prerequisites": [
+          "LO03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO03",
+    "methods": [
+      {
+        "name_en": "Encode binary runs as parts of size one to three",
+        "name_zh": "将二元连续段编码为一至三的拆分",
+        "question_ids": [
+          "AIME-2015-II-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Read a low coefficient from geometric-series exponents",
+        "name_zh": "由等比级数指数读取低次系数",
+        "question_ids": [
+          "AIME-2022-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count the remaining weak composition by stars and bars",
+        "name_zh": "用隔板法统计剩余弱拆分",
+        "question_ids": [
+          "AIME-2022-II-Q13"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO04",
+    "methods": [
+      {
+        "name_en": "Count overlapping trigger sets by their complement",
+        "name_zh": "通过补集统计重叠触发集合",
+        "question_ids": [
+          "AIME-2015-I-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Classify forbidden arithmetic progressions by variable usage",
+        "name_zh": "按变量使用数分类禁等差列",
+        "question_ids": [
+          "AIME-2022-I-Q06"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Correct the overlap of one-variable forbidden cases",
+        "name_zh": "修正单变量禁例交叠",
+        "question_ids": [
+          "AIME-2022-I-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Replace intersection-size sums with marked-element incidences",
+        "name_zh": "用带标记元素的关联计数替代交集大小和",
+        "question_ids": [
+          "AIME-2022-I-Q12"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Double-count colored layers in perpendicular directions",
+        "name_zh": "从垂直方向双计数彩色切层",
+        "question_ids": [
+          "AIME-2016-II-Q04"
+        ],
+        "prerequisites": [
+          "NT02"
+        ]
+      },
+      {
+        "name_en": "Count the union of two divisor-count residue classes",
+        "name_zh": "统计两个约数计数剩余类的并",
+        "question_ids": [
+          "AIME-2016-II-Q11"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Count two forbidden power-set containments by inclusion-exclusion",
+        "name_zh": "用容斥统计两类被禁止的子集包含",
+        "question_ids": [
+          "AIME-2017-II-Q01"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Correct the overlap of global-source and global-sink orientations",
+        "name_zh": "修正全局源点与全局汇点定向的交集",
+        "question_ids": [
+          "AIME-2017-II-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count normalized diagonal lines by requiring both endpoint coordinate levels",
+        "name_zh": "要求两端坐标层均出现以统计规范对角格线",
+        "question_ids": [
+          "AIME-2017-II-Q14"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO05",
+    "methods": [
+      {
+        "name_en": "Insert the maximum at exactly three admissible slots",
+        "name_zh": "在恰三个允许位置插入最大元",
+        "question_ids": [
+          "AIME-2015-II-Q10"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      },
+      {
+        "name_en": "Prove deletion reverses the insertion without creating a forbidden descent",
+        "name_zh": "证明删除能逆转插入且不产生禁降",
+        "question_ids": [
+          "AIME-2015-II-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use a tribonacci composition recurrence",
+        "name_zh": "使用三阶拆分递推",
+        "question_ids": [
+          "AIME-2015-II-Q12"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Compare path colorings with cycle colorings by merging equal endpoints",
+        "name_zh": "合并同色两端以比较路径与循环涂色",
+        "question_ids": [
+          "AIME-2016-II-Q12"
+        ],
+        "prerequisites": [
+          "CO06"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "CO06",
+    "methods": [
+      {
+        "name_en": "Count horizontal and vertical cell-neighbor edges",
+        "name_zh": "统计方格水平及竖直邻边",
+        "question_ids": [
+          "AIME-2015-II-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Encode circle triangles by two prime label gaps",
+        "name_zh": "用两段质数标号差编码圆上三角形",
+        "question_ids": [
+          "AIME-2022-II-Q05"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Count generic bipartite segment crossings",
+        "name_zh": "统计一般位置二部线段交点",
+        "question_ids": [
+          "AIME-2022-II-Q09"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Apply Euler after splitting edges at crossings",
+        "name_zh": "交点分割边后用欧拉公式",
+        "question_ids": [
+          "AIME-2022-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Decompose a monotone polyhedron path by its horizontal layers",
+        "name_zh": "按水平层分解单调多面体路径",
+        "question_ids": [
+          "AIME-2016-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reduce nonstrong five-vertex tournaments to a source or a sink",
+        "name_zh": "将五顶点非强连通竞赛图归结为源点或汇点",
+        "question_ids": [
+          "AIME-2017-II-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count symmetric apex pairs and subtract equilateral overcount",
+        "name_zh": "统计顶点对称点对并减去等边重复计数",
+        "question_ids": [
+          "AIME-2017-II-Q13"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Split a polygon-count difference into six residue classes",
+        "name_zh": "将多边形计数差分为六个剩余类",
+        "question_ids": [
+          "AIME-2017-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Classify primitive grid-line directions by the required point span",
+        "name_zh": "按所需点跨距分类本原格线方向",
+        "question_ids": [
+          "AIME-2017-II-Q14"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE01",
+    "methods": [
+      {
+        "name_en": "Check opposite-side ray order before adding angles",
+        "name_zh": "相加前核对两射线位于基准线两侧",
+        "question_ids": [
+          "AIME-2015-I-Q06"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Express inscribed-rectangle height as a linear function of width",
+        "name_zh": "将内接矩形高表示为宽的一次式",
+        "question_ids": [
+          "AIME-2015-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use two inscribed-angle similar triangles for a secant product",
+        "name_zh": "由圆周角构造相似三角形求割线乘积",
+        "question_ids": [
+          "AIME-2016-I-Q06"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Prove a crossed similarity and track its full ray order",
+        "name_zh": "证明交叉相似并追踪完整射线次序",
+        "question_ids": [
+          "AIME-2016-I-Q15"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Find the constant similarity ratio of iterated right-triangle altitudes",
+        "name_zh": "求迭代直角三角形高的固定相似比",
+        "question_ids": [
+          "AIME-2016-II-Q05"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Transfer chord angles to a length-ratio similarity",
+        "name_zh": "将弦角转化为长度比相似",
+        "question_ids": [
+          "AIME-2016-II-Q10"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE02",
+    "methods": [
+      {
+        "name_en": "Take a two-vector determinant area",
+        "name_zh": "双向量行列式面积",
+        "question_ids": [
+          "AIME-2015-I-Q04"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Rescale nested-square areas from a normalized model",
+        "name_zh": "由归一模型缩放嵌套正方形面积",
+        "question_ids": [
+          "AIME-2015-I-Q07"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Subtract two circular caps and apply the section tilt factor",
+        "name_zh": "减去两弓形并乘截面倾斜倍数",
+        "question_ids": [
+          "AIME-2015-I-Q15"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE03",
+    "methods": [
+      {
+        "name_en": "Recognize a logarithm-scaled 3–4–5 triangle",
+        "name_zh": "识别对数缩放的三四五三角形",
+        "question_ids": [
+          "AIME-2015-II-Q04"
+        ],
+        "prerequisites": [
+          "AL04"
+        ]
+      },
+      {
+        "name_en": "Find the base altitude from Heron area",
+        "name_zh": "由海伦面积求底边高",
+        "question_ids": [
+          "AIME-2015-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recover a triangle angle from two cleaver directions",
+        "name_zh": "由两周长平分线方向恢复三角形角",
+        "question_ids": [
+          "AIME-2022-I-Q14"
+        ],
+        "prerequisites": [
+          "GE05"
+        ]
+      },
+      {
+        "name_en": "Derive and compare their common circumradius formulas",
+        "name_zh": "推导并比较两个四边形的共同外接圆半径",
+        "question_ids": [
+          "AIME-2022-II-Q15"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE04",
+    "methods": [
+      {
+        "name_en": "Relate two minor-arc partitions through an inscribed angle",
+        "name_zh": "通过圆周角联系两个小弧分段",
+        "question_ids": [
+          "AIME-2015-I-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recover endpoint tangent lengths from a diagonal secant",
+        "name_zh": "由对角割线求端点切线长",
+        "question_ids": [
+          "AIME-2022-I-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Split a cyclic hexagon into two cyclic quadrilaterals",
+        "name_zh": "将圆内接六边形分为两个内接四边形",
+        "question_ids": [
+          "AIME-2022-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use Brahmagupta after eliminating the radius product",
+        "name_zh": "消去半径乘积后用婆罗摩笈多面积",
+        "question_ids": [
+          "AIME-2022-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use directed radical-axis angles to prove a tangent parallelogram",
+        "name_zh": "用有向根轴角证明切线平行四边形",
+        "question_ids": [
+          "AIME-2016-I-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Convert tangent power into a difference of squared secant lengths",
+        "name_zh": "将切线幂化为割线长度平方差",
+        "question_ids": [
+          "AIME-2016-I-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Construct an auxiliary cyclic quadrilateral from equal secant products",
+        "name_zh": "由相等割线乘积构造辅助共圆四点",
+        "question_ids": [
+          "AIME-2016-II-Q10"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE05",
+    "methods": [
+      {
+        "name_en": "Relate incenter distance to half-angle cosine",
+        "name_zh": "用半角余弦联系内心距离",
+        "question_ids": [
+          "AIME-2015-I-Q11"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Turn adjacent trapezoid bisectors into an isosceles median",
+        "name_zh": "将梯形相邻角平分线化为等腰中线",
+        "question_ids": [
+          "AIME-2022-I-Q03"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Relate angle tangency to radius and half-angle tangent",
+        "name_zh": "联系角内相切半径与半角正切",
+        "question_ids": [
+          "AIME-2022-I-Q11"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Prove the midpoint-cleaver direction with unit vectors and equal boundary paths",
+        "name_zh": "用单位向量及等长边界路径证明中点周长平分线方向",
+        "question_ids": [
+          "AIME-2022-I-Q14"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Reflect side endpoints across internal bisectors",
+        "name_zh": "关于内角平分线反射边端点",
+        "question_ids": [
+          "AIME-2022-II-Q11"
+        ],
+        "prerequisites": [
+          "GE07"
+        ]
+      },
+      {
+        "name_en": "Prove arc-midpoint distance equality to the incenter",
+        "name_zh": "证明弧中点到内心的等距关系",
+        "question_ids": [
+          "AIME-2016-I-Q06"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Recover a base circumradius from triangle area",
+        "name_zh": "由三角形面积恢复底面外接圆半径",
+        "question_ids": [
+          "AIME-2017-I-Q04"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE06",
+    "methods": [
+      {
+        "name_en": "Use negative-radius homothety at an external tangency point",
+        "name_zh": "在外切点使用负比例位似",
+        "question_ids": [
+          "AIME-2015-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recover a circle chord from center-to-line distance",
+        "name_zh": "由弦心距恢复圆弦",
+        "question_ids": [
+          "AIME-2015-II-Q15"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Solve vertex-circle tangency with both center-location branches",
+        "name_zh": "分圆心位置两支求顶点相切圆",
+        "question_ids": [
+          "AIME-2022-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Locate external tangent-line intersection by a radius ratio",
+        "name_zh": "用半径比定位外公切线交点",
+        "question_ids": [
+          "AIME-2022-II-Q07"
+        ],
+        "prerequisites": [
+          "GE01"
+        ]
+      },
+      {
+        "name_en": "Use the tangent angle to recover the bounded triangle",
+        "name_zh": "由切线角恢复所围三角形",
+        "question_ids": [
+          "AIME-2022-II-Q07"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE07",
+    "methods": [
+      {
+        "name_en": "Place equilateral apices and midpoint coordinates",
+        "name_zh": "设置等边顶点与中点坐标",
+        "question_ids": [
+          "AIME-2015-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Rotate a square side and impose line incidence",
+        "name_zh": "旋转正方形边并代入直线条件",
+        "question_ids": [
+          "AIME-2015-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use circumcenter dot products and a perpendicular line equation",
+        "name_zh": "使用外心点积与垂线方程",
+        "question_ids": [
+          "AIME-2015-II-Q11"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Impose a signed point-line distance ratio for equal areas",
+        "name_zh": "用同侧点线有向距离比表达等面积",
+        "question_ids": [
+          "AIME-2015-II-Q15"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Subtract midpoint coordinates at a common height",
+        "name_zh": "相同高度下求两中点横坐标差",
+        "question_ids": [
+          "AIME-2022-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Add the current vector to swimmer velocities",
+        "name_zh": "将水流向量与游泳速度合成",
+        "question_ids": [
+          "AIME-2022-I-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Intersect two symmetric equal-radius circles on their common axis",
+        "name_zh": "在公共对称轴求两等圆交点",
+        "question_ids": [
+          "AIME-2022-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Impose the midpoint twice to determine the common height",
+        "name_zh": "两次施加中点条件确定共同高度",
+        "question_ids": [
+          "AIME-2022-II-Q11"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Find the true boundary maximizer by determinant and dot product",
+        "name_zh": "用行列式与点积求真正边界最大点",
+        "question_ids": [
+          "AIME-2016-I-Q09"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Use a linear-form distance test for a thin square and circle lattice",
+        "name_zh": "以线性式距离判据筛选细小方圆整格",
+        "question_ids": [
+          "AIME-2016-I-Q14"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Use supporting-coordinate widths for nested rotated squares",
+        "name_zh": "使用支持坐标宽度处理嵌套旋转正方形",
+        "question_ids": [
+          "AIME-2016-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Find a circumcenter from two perpendicular bisectors",
+        "name_zh": "由两条垂直平分线求外心",
+        "question_ids": [
+          "AIME-2017-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Parametrize an equilateral triangle by its two axis intercepts",
+        "name_zh": "用两坐标轴截距参数化等边三角形",
+        "question_ids": [
+          "AIME-2017-I-Q15"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Intersect two cevian lines and move an area bisector along an edge",
+        "name_zh": "求两条分割线交点并沿边移动面积平分点",
+        "question_ids": [
+          "AIME-2017-II-Q10"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Realize an opposite-edge-equal tetrahedron with sign-pattern coordinates",
+        "name_zh": "用符号坐标模式实现对棱相等四面体",
+        "question_ids": [
+          "AIME-2017-II-Q15"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE08",
+    "methods": [
+      {
+        "name_en": "Translate two ellipses into four focal distances",
+        "name_zh": "将两椭圆转化为四条焦距",
+        "question_ids": [
+          "AIME-2022-II-Q12"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE09",
+    "methods": [
+      {
+        "name_en": "Compare sphere-section heights by a difference of squares",
+        "name_zh": "用平方差比较球截圆高度",
+        "question_ids": [
+          "AIME-2022-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Project tangent-sphere center distances onto the section plane",
+        "name_zh": "将相切球心距投影到截面",
+        "question_ids": [
+          "AIME-2022-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Equate apex and base-vertex distances to an axial sphere center",
+        "name_zh": "将顶点与底顶点到轴上球心的距离相等",
+        "question_ids": [
+          "AIME-2022-II-Q03"
+        ],
+        "prerequisites": [
+          "GE10"
+        ]
+      },
+      {
+        "name_en": "Use two axial sphere points as a diameter and a right-triangle altitude",
+        "name_zh": "以轴上两球面点为直径并使用直角三角形高",
+        "question_ids": [
+          "AIME-2016-II-Q14"
+        ],
+        "prerequisites": [
+          "GE10"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "GE10",
+    "methods": [
+      {
+        "name_en": "Project a tilted cylinder section to a central disk strip",
+        "name_zh": "将倾斜圆柱截面投影为中央圆带",
+        "question_ids": [
+          "AIME-2015-I-Q15"
+        ],
+        "prerequisites": [
+          "GE02"
+        ]
+      },
+      {
+        "name_en": "Find a diagonal-perpendicular equilateral cube section",
+        "name_zh": "求垂直体对角线的等边立方体截面",
+        "question_ids": [
+          "AIME-2015-II-Q09"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Compute a submerged corner tetrahedron and check barrel depth",
+        "name_zh": "计算浸入角部四面体并检验桶深",
+        "question_ids": [
+          "AIME-2015-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Take a perpendicular section to measure a tetrahedron dihedral",
+        "name_zh": "用垂直截面测量四面体二面角",
+        "question_ids": [
+          "AIME-2016-I-Q04"
+        ],
+        "prerequisites": [
+          "GE03"
+        ]
+      },
+      {
+        "name_en": "Locate an equidistant apex above the base circumcenter",
+        "name_zh": "将等距顶点定位于底面外心的垂线上",
+        "question_ids": [
+          "AIME-2017-I-Q04"
+        ],
+        "prerequisites": [
+          "GE05"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "LO02",
+    "methods": [
+      {
+        "name_en": "Separate numerator-one candidates from an integer quotient bound",
+        "name_zh": "由整数分子界分离分子一的候选",
+        "question_ids": [
+          "AIME-2022-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Exhaust the six larger-denominator digit complements",
+        "name_zh": "穷尽六种更大分母的数字补集",
+        "question_ids": [
+          "AIME-2022-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Prove the no-gap stamp interval criterion",
+        "name_zh": "证明无缺口邮票区间判据",
+        "question_ids": [
+          "AIME-2022-II-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Give a uniform sub-97 construction over a full denomination interval",
+        "name_zh": "在整个面值区间统一构造少于九十七张的方案",
+        "question_ids": [
+          "AIME-2022-II-Q14"
+        ],
+        "prerequisites": [
+          "AL06"
+        ]
+      },
+      {
+        "name_en": "Prove sharp stamp minima by mandatory low denominations",
+        "name_zh": "用必需低面值邮票证明紧最小张数",
+        "question_ids": [
+          "AIME-2022-II-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Construct identical rows attaining a divisibility volume bound",
+        "name_zh": "构造相同行以达到整除体积下界",
+        "question_ids": [
+          "AIME-2016-II-Q04"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "LO03",
+    "methods": [
+      {
+        "name_en": "Use remaining coefficient ambiguity to choose a root-sum class",
+        "name_zh": "由剩余系数歧义选择根和类别",
+        "question_ids": [
+          "AIME-2015-II-Q06"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT01",
+    "methods": [
+      {
+        "name_en": "Split a cube difference into prime-constrained factors",
+        "name_zh": "分解立方差并用质数限制",
+        "question_ids": [
+          "AIME-2015-I-Q03"
+        ],
+        "prerequisites": [
+          "AL02"
+        ]
+      },
+      {
+        "name_en": "Check the final prime by trial division",
+        "name_zh": "试除验证最终质数",
+        "question_ids": [
+          "AIME-2015-I-Q03"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use a prime exponent to fix an integer power representation",
+        "name_zh": "用质指数确定整数幂表示",
+        "question_ids": [
+          "AIME-2015-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Find the largest square divisor permitted by a late term",
+        "name_zh": "由后项限制确定允许平方约数",
+        "question_ids": [
+          "AIME-2016-I-Q10"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Compare the first two four-prime products",
+        "name_zh": "比较最小两个四质因数乘积",
+        "question_ids": [
+          "AIME-2016-I-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Test square-divisibility of the middle square area",
+        "name_zh": "检验中层正方形面积的平方整除",
+        "question_ids": [
+          "AIME-2016-II-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Distribute prime exponents into three ordered factors",
+        "name_zh": "将质因数指数分配到三个有序因子",
+        "question_ids": [
+          "AIME-2016-II-Q08"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT02",
+    "methods": [
+      {
+        "name_en": "Convert integral rational percentages to numerator multiples",
+        "name_zh": "将整数百分率转为分子公倍数",
+        "question_ids": [
+          "AIME-2015-II-Q01"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Convert population ratios into an integral scale and verify bus counts",
+        "name_zh": "将人数比例化为整数尺度并验证巴士人数",
+        "question_ids": [
+          "AIME-2022-II-Q01"
+        ],
+        "prerequisites": [
+          "AL01"
+        ]
+      },
+      {
+        "name_en": "Repeat a primitive lattice segment with shared-endpoint correction",
+        "name_zh": "重复本原格段并修正公共端点",
+        "question_ids": [
+          "AIME-2016-I-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Take the gcd of pairwise differences for a common remainder",
+        "name_zh": "对同余数的两两差取最大公因数",
+        "question_ids": [
+          "AIME-2017-I-Q02"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT03",
+    "methods": [
+      {
+        "name_en": "Track half-integer area parity across square blocks",
+        "name_zh": "按平方区块追踪半整数面积奇偶状态",
+        "question_ids": [
+          "AIME-2015-I-Q14"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use a small modulus to filter bounded digits",
+        "name_zh": "用小模数筛选有界数位",
+        "question_ids": [
+          "AIME-2022-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count a linear congruence in bounded residue classes",
+        "name_zh": "在有限剩余类中计数线性同余",
+        "question_ids": [
+          "AIME-2022-I-Q04"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Combine jump divisibility into residue classes modulo sixty",
+        "name_zh": "将跳变整除合并为模六十剩余类",
+        "question_ids": [
+          "AIME-2022-II-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Normalize each coefficient variable by complementary prime moduli",
+        "name_zh": "按互补质数模归一每个计数变量",
+        "question_ids": [
+          "AIME-2022-II-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Exclude all small prime divisors by quadratic residue tables",
+        "name_zh": "用二次剩余表排除全部小质因数",
+        "question_ids": [
+          "AIME-2016-I-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Use the universal divisibility of r-power times r-squared-minus-one",
+        "name_zh": "利用 r 幂乘 r 平方减一的恒定整除性",
+        "question_ids": [
+          "AIME-2016-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reduce decimal concatenation modulo ninety-nine",
+        "name_zh": "将十进制拼接化为模九十九求和",
+        "question_ids": [
+          "AIME-2017-I-Q09"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Separate coprime consecutive factors and combine residue choices",
+        "name_zh": "分配互质因子并合并剩余类",
+        "question_ids": [
+          "AIME-2017-I-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Clear factorial denominators and test the prime-power divisibility",
+        "name_zh": "清除阶乘分母并检验各质数幂整除",
+        "question_ids": [
+          "AIME-2017-II-Q08"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT04",
+    "methods": [
+      {
+        "name_en": "Prove the triangular-number last-digit period is twenty",
+        "name_zh": "证明三角数末位的周期为二十",
+        "question_ids": [
+          "AIME-2017-I-Q03"
+        ],
+        "prerequisites": [
+          "AL05"
+        ]
+      },
+      {
+        "name_en": "Reduce a large power separately modulo eight and one hundred twenty-five",
+        "name_zh": "将大幂分别化到模八与模一百二十五",
+        "question_ids": [
+          "AIME-2017-I-Q14"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT05",
+    "methods": [
+      {
+        "name_en": "Use side-length integrality after a short geometric bound",
+        "name_zh": "几何短范围后的边长整数筛选",
+        "question_ids": [
+          "AIME-2015-I-Q11"
+        ],
+        "prerequisites": [
+          "GE05"
+        ]
+      },
+      {
+        "name_en": "Enumerate positive sorted square triples",
+        "name_zh": "枚举递增正整数平方三元组",
+        "question_ids": [
+          "AIME-2015-II-Q06"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Turn a rational bound into a short odd-factor product list",
+        "name_zh": "将分式界化为短奇因子乘积表",
+        "question_ids": [
+          "AIME-2015-II-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Compare all admissible integer targets",
+        "name_zh": "比较全部允许整数目标值",
+        "question_ids": [
+          "AIME-2015-II-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reduce an integer-side cosine equation by congruences and a short square table",
+        "name_zh": "用同余及短平方表解整数边余弦方程",
+        "question_ids": [
+          "AIME-2022-I-Q14"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Count signed factor pairs with a required sum sign",
+        "name_zh": "按和的符号统计带符号因子对",
+        "question_ids": [
+          "AIME-2016-I-Q07"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Reject a polynomial value with a nonsquare discriminant",
+        "name_zh": "用非平方判别式排除多项式取值",
+        "question_ids": [
+          "AIME-2016-I-Q12"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Recover a primitive Pythagorean triple from a sum identity",
+        "name_zh": "由求和恒等式恢复本原勾股三元组",
+        "question_ids": [
+          "AIME-2016-II-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Exhaust a bounded ratio-and-index list",
+        "name_zh": "穷尽有界公比与下标候选",
+        "question_ids": [
+          "AIME-2016-II-Q09"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Locate the last failing interval between consecutive cubes",
+        "name_zh": "定位相邻立方数间最后一个失败区间",
+        "question_ids": [
+          "AIME-2017-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Factor a completed-square difference and enforce positive factor pairs",
+        "name_zh": "分解配方后的平方差并筛选正因子对",
+        "question_ids": [
+          "AIME-2017-II-Q06"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT06",
+    "methods": [
+      {
+        "name_en": "Use the nine-per-carry digit-sum defect",
+        "name_zh": "每次进位使数位和减少九",
+        "question_ids": [
+          "AIME-2015-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Minimize digits under an exact carry pattern",
+        "name_zh": "给定精确进位模式下最小化数位",
+        "question_ids": [
+          "AIME-2015-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Filter a minimal multiple by digit-sum congruence",
+        "name_zh": "用数位和同余筛选最小倍数",
+        "question_ids": [
+          "AIME-2015-II-Q03"
+        ],
+        "prerequisites": [
+          "NT03"
+        ]
+      },
+      {
+        "name_en": "Expand a cyclic mixed-base digit rotation",
+        "name_zh": "展开混合进位制的循环数位移位",
+        "question_ids": [
+          "AIME-2022-I-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Optimize column digit sums under a last-digit constraint",
+        "name_zh": "在末位限制下优化各列数位和",
+        "question_ids": [
+          "AIME-2016-I-Q08"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Separate integer and fractional parts in two positional bases",
+        "name_zh": "分离两种进位制的整数部分与小数部分",
+        "question_ids": [
+          "AIME-2017-I-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Count nonzero ternary digits lexicographically under a fixed upper bound",
+        "name_zh": "在给定上界下按字典序统计非零三进制数位",
+        "question_ids": [
+          "AIME-2017-II-Q04"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT07",
+    "methods": [
+      {
+        "name_en": "Characterize reduced repeating-decimal numerators by a coprime divisor bound",
+        "name_zh": "用互质约数上界刻画循环小数最简分子",
+        "question_ids": [
+          "AIME-2022-I-Q13"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "NT08",
+    "methods": [
+      {
+        "name_en": "Partition numerator classes by shared denominator primes",
+        "name_zh": "按共有分母质因数划分分子类别",
+        "question_ids": [
+          "AIME-2022-I-Q13"
+        ],
+        "prerequisites": [
+          "CO04"
+        ]
+      },
+      {
+        "name_en": "Characterize possible divisor counts of kth powers",
+        "name_zh": "刻画 k 次幂可能的约数个数",
+        "question_ids": [
+          "AIME-2016-II-Q11"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS01",
+    "methods": [
+      {
+        "name_en": "Count the nationality pattern 2+1",
+        "name_zh": "统计国籍二加一模式",
+        "question_ids": [
+          "AIME-2015-I-Q02"
+        ],
+        "prerequisites": [
+          "CO02"
+        ]
+      },
+      {
+        "name_en": "Compare grid adjacency probability with a strict threshold",
+        "name_zh": "比较方格邻接概率与严格阈值",
+        "question_ids": [
+          "AIME-2015-II-Q05"
+        ],
+        "prerequisites": [
+          "CO06"
+        ]
+      },
+      {
+        "name_en": "Place every color once in each position parity class",
+        "name_zh": "每种颜色在奇偶位置类各放一次",
+        "question_ids": [
+          "AIME-2022-I-Q09"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS02",
+    "methods": [
+      {
+        "name_en": "Exchange day labels in uniform dealing",
+        "name_zh": "均匀发牌中的日期标签交换",
+        "question_ids": [
+          "AIME-2015-I-Q05"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Track complete pairs after a mismatch",
+        "name_zh": "异色抽取后追踪完整同色对",
+        "question_ids": [
+          "AIME-2015-I-Q05"
+        ],
+        "prerequisites": [
+          "PS01"
+        ]
+      },
+      {
+        "name_en": "Normalize subgroup enrollment counts inside the selected class",
+        "name_zh": "在选中类别内归一各子群人数",
+        "question_ids": [
+          "AIME-2015-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Condition on tournament pairings and the final opponent",
+        "name_zh": "按赛程配对与决赛对手作条件分析",
+        "question_ids": [
+          "AIME-2022-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Normalize proportional die weights and multiply independent outcomes",
+        "name_zh": "归一成比例骰子权重并乘独立结果",
+        "question_ids": [
+          "AIME-2016-I-Q02"
+        ],
+        "prerequisites": [
+          "PS01"
+        ]
+      },
+      {
+        "name_en": "Recover conditional rain rates from a total probability equation",
+        "name_zh": "由全概率方程恢复条件降雨率",
+        "question_ids": [
+          "AIME-2016-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Condition a championship on the random final opponent",
+        "name_zh": "按随机决赛对手分类夺冠概率",
+        "question_ids": [
+          "AIME-2017-II-Q02"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Model a coverage-conditioned hand by repeated row and column degrees",
+        "name_zh": "用重复行列度数建立覆盖条件手牌模型",
+        "question_ids": [
+          "AIME-2017-II-Q09"
+        ],
+        "prerequisites": [
+          "CO01"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS03",
+    "methods": [
+      {
+        "name_en": "Use the complement event that both chord endpoints occupy one arc",
+        "name_zh": "用弦两端同处一弧的补事件",
+        "question_ids": [
+          "AIME-2017-I-Q06"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Cut a diagonal band from an angle-parameter square",
+        "name_zh": "从角参数正方形截取对角带状区",
+        "question_ids": [
+          "AIME-2017-I-Q08"
+        ],
+        "prerequisites": [
+          "GE04"
+        ]
+      },
+      {
+        "name_en": "Intersect a triangle with two perpendicular-bisector half-planes",
+        "name_zh": "将三角形与两垂直平分半平面相交",
+        "question_ids": [
+          "AIME-2017-II-Q03"
+        ],
+        "prerequisites": [
+          "GE07",
+          "GE02"
+        ]
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS04",
+    "methods": [
+      {
+        "name_en": "Average subset minima by exchangeable gap compositions",
+        "name_zh": "用可交换间隔拆分求子集最小值平均",
+        "question_ids": [
+          "AIME-2015-I-Q12"
+        ],
+        "prerequisites": [
+          "CO03"
+        ]
+      },
+      {
+        "name_en": "Solve a reflecting-boundary hitting-time equation",
+        "name_zh": "求解反射边界的首次到达时间方程",
+        "question_ids": [
+          "AIME-2016-I-Q13"
+        ],
+        "prerequisites": []
+      },
+      {
+        "name_en": "Average a discrete minimum through tail probabilities",
+        "name_zh": "用尾概率求离散最小值平均",
+        "question_ids": [
+          "AIME-2016-II-Q13"
+        ],
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "subtype_id": "PS06",
+    "methods": [
+      {
+        "name_en": "Classify low-median and high-median rows around the central digit",
+        "name_zh": "围绕中央数字分类低中位数行与高中位数行",
+        "question_ids": [
+          "AIME-2017-I-Q11"
+        ],
+        "prerequisites": []
+      }
+    ]
+  }
+]

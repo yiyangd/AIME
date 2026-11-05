@@ -1,0 +1,464 @@
+{
+  "subtype_id": "PS05",
+  "introduction_en": "Distinguish a probability mass from an outcome count. Independent trials give binomial, multinomial, geometric, or state-dependent laws; the right law depends on whether order, stopping, or memory matters.",
+  "introduction_zh": "必须区分点概率与结果数。独立试验可形成二项、多项、几何或状态分布；使用哪种分布，取决于顺序、停止规则及历史记忆。",
+  "prerequisites": [
+    "PS01",
+    "PS02"
+  ],
+  "methods": [
+    {
+      "method_id": "PS05-M01",
+      "title_en": "Pair symmetric score outcomes and count the balance cases",
+      "title_zh": "配对对称得分并单独计算平衡情形",
+      "steps_en": [
+        "Find a probability-preserving involution exchanging the two strict score comparisons.",
+        "Count the fixed balance event with the correct multinomial weights.",
+        "Subtract the balance probability from one and divide by two.",
+        "Check that the two compared categories have identical laws before using this symmetry."
+      ],
+      "steps_zh": [
+        "寻找保持概率且交换两个严格得分比较的对合。",
+        "用正确的多项权重计算平衡事件。",
+        "从一减去平衡概率，再除以二。",
+        "使用该对称前，确认两个被比较类别的规律相同。"
+      ],
+      "example_en": "Three independent increments equal $1,-1,0$ with probabilities $1/4,1/4,1/2$. Find the probability their sum is positive.",
+      "example_zh": "三个独立增量各以概率 $1/4,1/4,1/2$ 取 $1,-1,0$，求总和为正的概率。",
+      "solution_en": [
+        "Negating all increments exchanges positive and negative totals and preserves their probabilities.",
+        "A zero total is either three zeros, probability $1/8$, or one of each symbol, probability $6(1/4)^2(1/2)=3/16$. Its total probability is $5/16$.",
+        "Thus the positive-total probability is $(1-5/16)/2=11/32$. Counting the three symbols as equiprobable would be incorrect."
+      ],
+      "solution_zh": [
+        "全部增量反号，会交换正和与负和，且概率不变。",
+        "总和为零只能是三个零，概率 $1/8$，或三种符号各一个，概率 $6(1/4)^2(1/2)=3/16$，合为 $5/16$。",
+        "因此正和概率为 $(1-5/16)/2=11/32$，不能把三个符号当成等概率。"
+      ],
+      "tip_en": "A tie must be removed before a symmetry argument halves the sample space.",
+      "tip_zh": "利用对称性把样本空间平分之前，必须先扣去平局。",
+      "question_ids": [
+        "AIME-2001-II-Q11"
+      ],
+      "prerequisites": [
+        "CO01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M02",
+      "title_en": "Compare binomial scores by complementing one count",
+      "title_zh": "用一个计数的补数比较二项得分",
+      "steps_en": [
+        "Write the score inequality in terms of independent remaining-success counts.",
+        "For fair trials, replace one count $Y$ from $m$ trials by $m-Y$, which has the same binomial law.",
+        "Use convolution or Vandermonde to turn the comparison into a single binomial tail.",
+        "Only when the original two laws match may exchange symmetry split the strict comparisons equally."
+      ],
+      "steps_zh": [
+        "将得分比较写成两个独立剩余成功次数的不等式。",
+        "公平试验中，将 $m$ 次中的 $Y$ 替换为同分布的 $m-Y$。",
+        "用卷积或范德蒙德恒等式，把比较转为一个二项尾事件。",
+        "只有原来两种分布相同时，交换对称性才能平分严格大小事件。"
+      ],
+      "example_en": "Independently let $X$ count heads in three fair flips and $Y$ heads in two fair flips. Find $\\Pr(X\\ge Y)$.",
+      "example_zh": "独立地，$X$ 为三次公平投币正面数，$Y$ 为两次正面数，求 $\\Pr(X\\ge Y)$。",
+      "solution_en": [
+        "The variable $2-Y$ is an independent two-flip head count. Thus $Z=X+(2-Y)$ is a five-flip head count.",
+        "The event $X\\ge Y$ is exactly $Z\\ge2$.",
+        "Its probability is $1-(\\binom50+\\binom51)/2^5=26/32=13/16$. The unequal trial counts prevent directly halving the non-tie event."
+      ],
+      "solution_zh": [
+        "$2-Y$ 仍为独立的两次公平投币正面数，所以 $Z=X+(2-Y)$ 为五次正面数。",
+        "事件 $X\\ge Y$ 等价于 $Z\\ge2$。",
+        "概率为 $1-(\\binom50+\\binom51)/2^5=13/16$。两边试验次数不同，不能直接把非平局事件平分。"
+      ],
+      "tip_en": "The convolution identity $\\sum_j\\binom nj\\binom mj=\\binom{n+m}n$ counts equal scores.",
+      "tip_zh": "卷积恒等式 $\\sum_j\\binom nj\\binom mj=\\binom{n+m}n$ 可计算相等得分。",
+      "question_ids": [
+        "AIME-2006-II-Q10"
+      ],
+      "prerequisites": [
+        "CO02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M03",
+      "title_en": "Enumerate multinomial count vectors under a weighted total",
+      "title_zh": "按加权总量枚举多项计数向量",
+      "steps_en": [
+        "Let $n_i$ count occurrences of each outcome value. Write both $\\sum n_i=n$ and the weighted-sum equation.",
+        "Bound and list all nonnegative integer count vectors satisfying the equations.",
+        "A vector has $n!/\\prod n_i!$ orders and probability $(n!/\\prod n_i!)\\prod p_i^{n_i}$.",
+        "Sum the disjoint vector probabilities; a common denominator is valid only when the elementary outcomes really are equiprobable."
+      ],
+      "steps_zh": [
+        "令 $n_i$ 为各结果出现次数，同时写出总次数及加权总和方程。",
+        "给出界并列全满足条件的非负整数计数向量。",
+        "一个向量有 $n!/\\prod n_i!$ 种顺序，概率为其乘 $\\prod p_i^{n_i}$。",
+        "相加互斥向量的概率；只有基本结果确实等可能，才能统一按结果数作分母。"
+      ],
+      "example_en": "Four independent draws take values $0,1,3$ with probabilities $1/2,1/3,1/6$. Find the probability their sum is three.",
+      "example_zh": "四次独立抽取，各以概率 $1/2,1/3,1/6$ 取值 $0,1,3$，求总和为三的概率。",
+      "solution_en": [
+        "If a three occurs, the other values are all zero, giving counts $(3,0,1)$ and probability $4(1/2)^3(1/6)=1/12$.",
+        "Without a three, there must be three ones and one zero, giving probability $4(1/3)^3(1/2)=2/27$.",
+        "The cases are disjoint, so the total is $1/12+2/27=17/108$."
+      ],
+      "solution_zh": [
+        "若出现三，其余都为零，次数向量为 $(3,0,1)$，概率 $4(1/2)^3(1/6)=1/12$。",
+        "若不出现三，就需三个一和一个零，概率为 $4(1/3)^3(1/2)=2/27$。",
+        "两类互斥，总概率为 $1/12+2/27=17/108$。"
+      ],
+      "tip_en": "A fixed total can arise from several count vectors; one convenient vector is not an exhaustive list.",
+      "tip_zh": "固定总和可能对应多个计数向量，找到一个方便向量并不等于穷尽。",
+      "question_ids": [
+        "AIME-2008-I-Q09"
+      ],
+      "prerequisites": [
+        "CO01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M04",
+      "title_en": "Cancel binomial probabilities to recover success odds",
+      "title_zh": "约去二项概率以恢复成功赔率",
+      "steps_en": [
+        "Write both exact-success probabilities with their binomial coefficients.",
+        "Divide by positive common factors, preserving any unequal combinatorial coefficient.",
+        "Solve for the positive odds $p/(1-p)$ and restore $0<p<1$.",
+        "Check the original probability ratio rather than only the powered equation."
+      ],
+      "steps_zh": [
+        "写出两个准确成功次数的二项概率及组合系数。",
+        "除去正的公共因子，但保留不相等的组合系数。",
+        "求正赔率 $p/(1-p)$，并恢复 $0<p<1$。",
+        "核对原概率比，而不只核对取幂后的方程。"
+      ],
+      "example_en": "In four independent flips of a coin with head probability $0<p<1$, zero heads and exactly two heads have equal probabilities. Find $p$.",
+      "example_zh": "独立投一枚正面概率满足 $0<p<1$ 的硬币四次，零次正面与恰两次正面的概率相等，求 $p$。",
+      "solution_en": [
+        "The equality is $(1-p)^4=6p^2(1-p)^2$. A valid nondegenerate coin has $0<p<1$.",
+        "Cancel $(1-p)^2$ and take the positive square root: $1-p=\\sqrt6p$.",
+        "Thus $p=1/(1+\\sqrt6)=(\\sqrt6-1)/5$, which lies in $(0,1)$ and satisfies the original equality."
+      ],
+      "solution_zh": [
+        "方程为 $(1-p)^4=6p^2(1-p)^2$，非退化硬币满足 $0<p<1$。",
+        "约去 $(1-p)^2$ 并取正平方根，得 $1-p=\\sqrt6p$。",
+        "故 $p=(\\sqrt6-1)/5$，位于零与一之间，代回原式成立。"
+      ],
+      "tip_en": "Equal binomial coefficients are a special cancellation, not a general rule.",
+      "tip_zh": "两边组合系数相等只是特殊情况，不能普遍略去。",
+      "question_ids": [
+        "AIME-2009-I-Q03"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M05",
+      "title_en": "Count allowed prefixes before attaching trial weights",
+      "title_zh": "先数合法前缀再附加试验权重",
+      "steps_en": [
+        "Let $D(n,j)$ count allowed prefixes of length $n$ with $j$ successes.",
+        "Update by success or failure, discarding each state that violates the prefix boundary at that time.",
+        "If all final words have the same success total, multiply their count by the common Bernoulli word weight.",
+        "Keep the terminal rule separate when the boundary applies only to proper prefixes."
+      ],
+      "steps_zh": [
+        "令 $D(n,j)$ 为长 $n$、含 $j$ 次成功的合法前缀数。",
+        "按成功或失败转移，每一步都丢弃当时越过前缀边界的状态。",
+        "若终态成功次数相同，各词权重相同，可用词数乘共同伯努利权重。",
+        "若边界只限制真前缀，须单独处理末步规则。"
+      ],
+      "example_en": "Six independent trials succeed with probability $1/3$. Find the probability of exactly two successes with no prefix having more successes than failures.",
+      "example_zh": "六次独立试验成功概率为 $1/3$，求恰两次成功且任一前缀中成功数不多于失败数的概率。",
+      "solution_en": [
+        "Use $D(0,0)=1$ and $D(n,j)=D(n-1,j)+D(n-1,j-1)$ only when $2j\\le n$.",
+        "The rows through $n=6$, restricted to relevant successes, end with $D(4,2)=2,D(5,2)=5,D(6,2)=9$; the last follows $D(5,1)+D(5,2)=4+5$.",
+        "Each accepted word has weight $(1/3)^2(2/3)^4$. Thus the probability is $9\\cdot16/729=16/81$."
+      ],
+      "solution_zh": [
+        "取 $D(0,0)=1$，仅保留 $2j\\le n$ 的状态，用递推 $D(n,j)=D(n-1,j)+D(n-1,j-1)$。",
+        "逐行计算得 $D(4,2)=2,D(5,2)=5,D(6,2)=9$，末项来自 $D(5,1)+D(5,2)=4+5$。",
+        "每个合法词权重为 $(1/3)^2(2/3)^4$，所以概率为 $9\\cdot16/729=16/81$。"
+      ],
+      "tip_en": "A correct final success fraction does not guarantee that every earlier prefix was legal.",
+      "tip_zh": "最终成功比例正确，不代表每个先前前缀都合法。",
+      "question_ids": [
+        "AIME-2002-II-Q12"
+      ],
+      "prerequisites": [
+        "CO05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M06",
+      "title_en": "Match independent stopping counts by summing mass products",
+      "title_zh": "累加点概率乘积以匹配独立停止次数",
+      "steps_en": [
+        "Write each complete stopping-count mass, such as $p(1-p)^{k-1}$.",
+        "For equal counts sum $\\sum_kp_kq_k$; for an offset sum the shifted products over their common support.",
+        "Use a geometric series for infinite support and include both offset directions separately.",
+        "Do not double one offset when the two distributions differ."
+      ],
+      "steps_zh": [
+        "写出完整停止次数的点概率，如 $p(1-p)^{k-1}$。",
+        "次数相等时求 $\\sum_kp_kq_k$，有偏移时按共同支持集累加移位乘积。",
+        "无穷支持用等比级数，两个偏移方向要分别计入。",
+        "若两种分布不同，不能把某一方向直接乘二。"
+      ],
+      "example_en": "Two independent processes stop on their first successes, with per-trial success probabilities $1/2$ and $1/3$. Find the chance their stopping counts differ by at most one.",
+      "example_zh": "两个独立过程分别以每次成功概率 $1/2$、$1/3$ 等待首次成功，求停止次数相差不超过一的概率。",
+      "solution_en": [
+        "Equal counts have probability $\\sum_{k\\ge1}(1/2)^k(1/3)(2/3)^{k-1}=(1/6)/(1-1/3)=1/4$.",
+        "The first process stopping one later contributes $(1/2)(1/4)=1/8$; the second stopping one later contributes $(2/3)(1/4)=1/6$.",
+        "These are disjoint, totaling $1/4+1/8+1/6=13/24$. Their unequal offset weights show why symmetry cannot be assumed."
+      ],
+      "solution_zh": [
+        "次数相等概率为 $\\sum_{k\\ge1}(1/2)^k(1/3)(2/3)^{k-1}=1/4$。",
+        "第一个过程晚一次的概率为 $(1/2)(1/4)=1/8$，第二个晚一次为 $(2/3)(1/4)=1/6$。",
+        "三类互斥，总概率为 $1/4+1/8+1/6=13/24$。两方向权重不同，不能假设对称。"
+      ],
+      "tip_en": "Equality of two independent counts is a sum of products of masses, not a product of their total probabilities.",
+      "tip_zh": "两个独立次数相等应累加各点概率的乘积，而不是乘各自总概率。",
+      "question_ids": [
+        "AIME-2009-II-Q08"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M07",
+      "title_en": "Multiply probability-generating polynomials for unequal trials",
+      "title_zh": "用概率生成多项式处理不同成功率",
+      "steps_en": [
+        "A Bernoulli trial with success probability $p$ contributes $(1-p)+pt$.",
+        "Multiply these factors for independent trials, retaining exact coefficients.",
+        "The coefficient of $t^j$ is the full probability mass for $j$ successes.",
+        "For independent repetitions, match masses by a sum of squared coefficients or convolve the two different laws."
+      ],
+      "steps_zh": [
+        "成功概率 $p$ 的伯努利试验对应 $(1-p)+pt$。",
+        "独立试验对应因子的乘积，保留精确系数。",
+        "$t^j$ 的系数就是成功 $j$ 次的完整点概率。",
+        "独立重复时，以系数平方和求同次数概率；两种不同分布则作对应卷积。"
+      ],
+      "example_en": "Three independent coins have head probabilities $1/2,1/3,2/3$. Find the probability of exactly two heads.",
+      "example_zh": "三枚独立硬币的正面概率为 $1/2,1/3,2/3$，求恰两次正面的概率。",
+      "solution_en": [
+        "The generating polynomial is $((1+t)/2)((2+t)/3)((1+2t)/3)$.",
+        "Expanding gives $(2+7t+7t^2+2t^3)/18$; its coefficients sum to one.",
+        "The coefficient of $t^2$ is $7/18$, the desired probability. Equal-probability binomial formulas would not apply to these three coins."
+      ],
+      "solution_zh": [
+        "生成多项式为 $((1+t)/2)((2+t)/3)((1+2t)/3)$。",
+        "展开为 $(2+7t+7t^2+2t^3)/18$，系数和为一。",
+        "$t^2$ 系数为 $7/18$，即所求概率；三枚硬币成功率不同，不能套同参数二项公式。"
+      ],
+      "tip_en": "Check normalization at $t=1$ before using any coefficient as a probability.",
+      "tip_zh": "把系数当作概率之前，先代入 $t=1$ 检查总和为一。",
+      "question_ids": [
+        "AIME-2010-I-Q04"
+      ],
+      "prerequisites": [
+        "PS02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M08",
+      "title_en": "Propagate a walk distribution with enough memory",
+      "title_zh": "以足够历史信息传播行走分布",
+      "steps_en": [
+        "Choose a state recording all information needed for the next move; a no-backtracking rule needs the previous edge or equivalent type.",
+        "Group states only when their class transition totals match.",
+        "Use either probabilities or path counts consistently; if using counts, prove that every complete path has the same weight.",
+        "Initialize after any exceptional first move and iterate to the requested horizon."
+      ],
+      "steps_zh": [
+        "状态须记录决定下一步的全部信息；禁止立即返回时，要记上一条边或等价类型。",
+        "只有各类别转移总量相同时才能合并状态。",
+        "统一使用概率或路径数；若数路径，必须证明完整路径等权。",
+        "首步若规则特殊，应在首步后设初值，再迭代到所求时刻。"
+      ],
+      "example_en": "A walker on the complete graph with four vertices starts at $A$. Its first move is uniform among three neighbors; later moves are uniform among neighbors other than the previous vertex. Find its return probability after four moves.",
+      "example_zh": "行者在四顶点完全图上从 $A$ 出发，首步等可能去三个邻点，之后等可能去除上一顶点外的邻点。求四步后回到 $A$ 的概率。",
+      "solution_en": [
+        "After two moves the path is $A,B,C$ with all three distinct; symmetry makes the actual names irrelevant.",
+        "The third step goes to $A$ or the fourth vertex $D$, each with probability $1/2$. From $A$ at step three, step four cannot remain at $A$.",
+        "From $D$ at step three, excluding $C$ leaves $A$ and $B$ as equiprobable choices. Thus the four-step return probability is $(1/2)(1/2)=1/4$."
+      ],
+      "solution_zh": [
+        "两步后的路径为互异三点 $A,B,C$，由对称性，具体标号无关。",
+        "第三步等可能到 $A$ 或第四点 $D$；若第三步到 $A$，第四步不可能留在 $A$。",
+        "若第三步到 $D$，排除上一点 $C$ 后，可等可能去 $A$ 或 $B$。所以四步返回概率为 $1/4$。"
+      ],
+      "tip_en": "Being at the same vertex does not imply the same future law when the incoming edge matters.",
+      "tip_zh": "若来边影响可走方向，到达同一顶点并不代表未来规律相同。",
+      "question_ids": [
+        "AIME-2003-II-Q13",
+        "AIME-2021-II-Q08"
+      ],
+      "prerequisites": [
+        "CO05",
+        "AL05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS05-M09",
+      "title_en": "Test independence after a coordinate transformation",
+      "title_zh": "坐标变换后重新检验独立性",
+      "steps_en": [
+        "List the transformed increment pair for every elementary move.",
+        "Independence requires joint probabilities to equal products of marginal probabilities; a symmetric drawing alone is insufficient.",
+        "If every sign pair occurs with probability $1/4$, the two coordinate walks are independent fair sign walks.",
+        "Translate the target event exactly, then use binomial tails and any required union correction."
+      ],
+      "steps_zh": [
+        "逐一列出每个基本移动对应的变换后增量对。",
+        "独立要求联合概率等于边缘概率乘积，仅有图形对称还不够。",
+        "若四种符号对各以概率 $1/4$ 出现，两坐标才是独立的公平正负行走。",
+        "准确转换目标事件，再用二项尾概率及必要的并集修正。"
+      ],
+      "example_en": "One axis step chooses east or west with probability $1/3$ each, north or south with $1/6$ each. Are $U=x+y$ and $V=x-y$ independent?",
+      "example_zh": "一步在东西方向各以概率 $1/3$、南北各以 $1/6$ 移动。$U=x+y,V=x-y$ 是否独立？",
+      "solution_en": [
+        "The four transformed pairs for east, west, north, south are $(1,1),(-1,-1),(1,-1),(-1,1)$.",
+        "Both marginals satisfy $\\Pr(U=1)=\\Pr(V=1)=1/2$. But $\\Pr(U=1,V=1)=1/3$.",
+        "Since $1/3\\ne(1/2)(1/2)$, the transformed variables are not independent. Equal positive and negative marginals do not certify independence."
+      ],
+      "solution_zh": [
+        "东西南北对应的变换对分别为 $(1,1),(-1,-1),(1,-1),(-1,1)$。",
+        "边缘概率均有 $\\Pr(U=1)=\\Pr(V=1)=1/2$，但联合概率 $\\Pr(U=1,V=1)=1/3$。",
+        "由于 $1/3\\ne1/4$，两变量不独立。边缘分布的正负对称并不能证明独立。"
+      ],
+      "tip_en": "Under uniform axis moves the sign-pair table is uniform; changing move weights can destroy the factorization.",
+      "tip_zh": "等可能轴向移动给出均匀符号对；改变移动权重可能破坏分解。",
+      "question_ids": [
+        "AIME-2014-I-Q11"
+      ],
+      "prerequisites": [
+        "PS02",
+        "CO04"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2001-II-Q11",
+    "AIME-2002-II-Q12",
+    "AIME-2003-II-Q13",
+    "AIME-2006-II-Q10",
+    "AIME-2008-I-Q09",
+    "AIME-2009-I-Q03",
+    "AIME-2009-II-Q08",
+    "AIME-2010-I-Q04",
+    "AIME-2014-I-Q11",
+    "AIME-2021-II-Q08"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-II-Q11": {
+      "method_ids": [
+        "PS05-M01"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2006-II-Q10": {
+      "method_ids": [
+        "PS05-M02"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2008-I-Q09": {
+      "method_ids": [
+        "PS05-M03"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2009-I-Q03": {
+      "method_ids": [
+        "PS05-M04"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2002-II-Q12": {
+      "method_ids": [
+        "PS05-M05"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2009-II-Q08": {
+      "method_ids": [
+        "PS05-M06"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2010-I-Q04": {
+      "method_ids": [
+        "PS05-M07"
+      ],
+      "prerequisites": [
+        "PS02"
+      ]
+    },
+    "AIME-2003-II-Q13": {
+      "method_ids": [
+        "PS05-M08"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2021-II-Q08": {
+      "method_ids": [
+        "PS05-M08"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2014-I-Q11": {
+      "method_ids": [
+        "PS05-M09"
+      ],
+      "prerequisites": [
+        "CO04",
+        "PS02"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

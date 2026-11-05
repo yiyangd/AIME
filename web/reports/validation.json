@@ -1,0 +1,18 @@
+{
+  "questions": 810,
+  "chapters": 6,
+  "sections": 44,
+  "pages": 101,
+  "anchors": 5012,
+  "checks": [
+    "unique IDs",
+    "unique primary membership",
+    "bilingual statements and solutions",
+    "three-digit answers",
+    "source links",
+    "AIME part ranges",
+    "built internal links",
+    "built question and method anchors"
+  ],
+  "passed": true
+}

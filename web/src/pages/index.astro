@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ChapterIcon from '../components/ChapterIcon.astro';
+import Bi from '../components/Bi.astro';
+import {chapters,questions,sections,chapterUrl,url,yearRange} from '../lib/content';
+---
+<Layout><section class="home-intro" aria-labelledby="home-title"><p class="eyebrow"><Bi en="THE STEMHUB WORKBOOK" zh="STEMHUB 专题练习册"/></p><h1 class="home-title" id="home-title" data-title-en="Small steps. Stronger problem solvers." data-title-zh="循序渐进，建立解题实力。">Small steps.<br/><span>Stronger problem solvers.</span></h1><p class="home-subtitle"><Bi en="Explore AIME, one topic at a time." zh="按题型学习 AIME，一步一步建立解题能力。" /></p><p class="stats-line"><strong>{questions.length}</strong> <Bi en="Questions" zh="题" /> <span>·</span> <strong>{chapters.length}</strong> <Bi en="Chapters" zh="章" /> <span>·</span> <strong>{sections.length}</strong> <Bi en="Topics" zh="专题" /></p></section>
+<nav class="home-resources" aria-label="Learning resources"><a href={url('matrix/')}><Bi en="Topic matrix" zh="题型矩阵" /> ↗</a><a href={url('knowledge/')}><Bi en="Method notes" zh="知识教材" /> ↗</a><a href={url('downloads/')}><Bi en="Download the books" zh="下载配套资料" /> ↗</a></nav>
+<div class="chapter-grid" aria-label="Workbook chapters">{chapters.map(c=><a class="chapter-card" data-chapter-id={c.id} href={chapterUrl(c.id)}><div class="chapter-card-top"><span class="chapter-number"><Bi en="CHAPTER" zh="章节"/> {String(c.id).padStart(2,'0')}</span><ChapterIcon id={c.id}/></div><h2 data-title-en={c.titleEn} data-title-zh={c.titleZh}>{c.titleEn}</h2><p class="title-zh" lang="zh">{c.titleZh}</p><div class="card-meta"><span>{c.sectionCount} <Bi en="topics" zh="专题" /> · {c.questionCount} <Bi en="questions" zh="题" /></span><span class="card-arrow" aria-hidden="true">↗</span></div></a>)}</div>
+<p class="source-note"><Bi en={`AIME I and II, ${yearRange}. Mathematical statements are restated in English and Chinese; original wording is available through each source link. Parts A/B/C correspond to original Q1–5 / Q6–10 / Q11–15.`} zh={`收录 ${yearRange} 年 AIME I 与 II。题目数学条件采用中英重述，原始题面可从每题来源链接查看。Part A/B/C 对应原卷第 1–5 / 6–10 / 11–15 题。`} /></p></Layout>
+

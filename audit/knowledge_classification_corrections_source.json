@@ -1,0 +1,18 @@
+[
+  {
+    "question_id": "AIME-2021-II-Q15",
+    "author": "source_audit",
+    "review_type": "author_followup_knowledge_audit",
+    "finding": "Reaching the next square of a matching parity is not prime factorization or a valuation method. The finite integer candidates and interval bounds are Diophantine reasoning.",
+    "patch": {
+      "secondary": [
+        {
+          "category_id": "NT",
+          "subtype_id": "NT05",
+          "reason_en": "Interval bounds and an exhaustive congruence/parity candidate search establish the least positive integer.",
+          "reason_zh": "区间界与穷尽的同余奇偶候选筛选共同证明最小正整数。"
+        }
+      ]
+    }
+  }
+]

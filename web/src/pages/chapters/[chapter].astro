@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ChapterIcon from '../../components/ChapterIcon.astro';
+import Bi from '../../components/Bi.astro';
+import {chapters,sections,chapterUrl,sectionUrl,url,type Chapter} from '../../lib/content';
+export function getStaticPaths(){return chapters.map(chapter=>({params:{chapter:String(chapter.id)},props:{chapter}}))}
+interface Props{chapter:Chapter}
+const {chapter}=Astro.props;
+const chapterSections=sections.filter(s=>s.chapterId===chapter.id);const pos=chapters.findIndex(c=>c.id===chapter.id);const previous=chapters[pos-1];const next=chapters[pos+1];
+---
+<Layout title={`Chapter ${chapter.id}. ${chapter.titleEn}`} reading chapterId={chapter.id}><nav class="breadcrumbs" aria-label="Breadcrumb"><a href={url()}><Bi en="Workbook" zh="练习册" /></a><span>/</span><span><Bi en={`Chapter ${chapter.id}`} zh={`第 ${chapter.id} 章`}/></span></nav><header class="page-heading"><p class="eyebrow"><Bi en="CHAPTER" zh="章节"/> {String(chapter.id).padStart(2,'0')}</p><ChapterIcon id={chapter.id} size={48}/><h1 data-title-en={chapter.titleEn} data-title-zh={chapter.titleZh}>{chapter.titleEn}</h1><p class="title-zh" lang="zh">{chapter.titleZh}</p><p class="page-meta">{chapter.sectionCount} <Bi en="topics" zh="专题" /> · {chapter.questionCount} <Bi en="questions" zh="题" /></p></header><div class="section-list" aria-label="Sections">{chapterSections.map(s=><a class="section-link" href={sectionUrl(s)}><span class="section-link-number">{s.id}</span><span class="section-link-main"><strong class="section-link-title" data-title-en={s.titleEn} data-title-zh={s.titleZh}>{s.titleEn}</strong><span class="section-link-zh" lang="zh">{s.titleZh}</span><span class="section-link-meta">{s.code} · {s.questionIds.length} <Bi en="questions" zh="题" /></span></span><span aria-hidden="true">→</span></a>)}</div><nav class="section-pagination" aria-label="Chapter navigation">{previous?<a class="pagination-link" href={chapterUrl(previous.id)}><span class="pagination-caption">← <Bi en="Previous chapter" zh="上一章" /></span><strong><Bi en={previous.titleEn} zh={previous.titleZh}/></strong></a>:<span/>}{next&&<a class="pagination-link" href={chapterUrl(next.id)}><span class="pagination-caption"><Bi en="Next chapter" zh="下一章" /> →</span><strong><Bi en={next.titleEn} zh={next.titleZh}/></strong></a>}</nav></Layout>

@@ -1,0 +1,18 @@
+---
+import Bi from './Bi.astro';
+import MathText from './MathText.astro';
+import PrintLinks from './PrintLinks.astro';
+import {url,sections,knowledgeUrl,questionById,questionUrl} from '../lib/content';
+interface Props {method:any;index:number}
+const {method:m,index}=Astro.props;
+const related=(m.question_ids||[]).map((id:string)=>questionById.get(id)).filter(Boolean);
+const prerequisites=(m.prerequisites||[]).map((code:string)=>sections.find(s=>s.code===code)).filter(Boolean);
+---
+<section class="note-card method-card" id={m.method_id}>
+<h2><a class="method-anchor" href={`#${m.method_id}`}>{index+1}. <Bi en={m.title_en} zh={m.title_zh}/></a></h2>
+<PrintLinks resources={m.print} compact/>
+{m.diagram&&<figure class="method-diagram"><button class="question-image-button" type="button" aria-label={`Enlarge ${m.method_id}: ${m.diagram.altEn} / ${m.diagram.altZh}`} data-image={url(m.diagram.src)} data-question={m.method_id} data-image-label-en={m.diagram.altEn} data-image-label-zh={m.diagram.altZh}><img src={url(m.diagram.src)} width={m.diagram.width} height={m.diagram.height} alt={`${m.diagram.altEn} / ${m.diagram.altZh}`} loading="lazy"/></button><figcaption><Bi en={m.diagram.altEn} zh={m.diagram.altZh}/></figcaption></figure>}
+{prerequisites.length>0&&<p class="method-prerequisites"><Bi en="Before this method" zh="先备知识"/>: {prerequisites.map((s:any,i:number)=><>{i>0?' · ':''}<a href={knowledgeUrl(s)}><Bi en={s.titleEn} zh={s.titleZh}/></a></>)}</p>}
+{(['en','zh'] as const).map(lang=><div data-content-language={lang} lang={lang==='zh'?'zh':undefined}><ol class="method-steps">{(m[`steps_${lang}`]||[]).map((step:string)=><li><MathText text={step}/></li>)}</ol><h3>{lang==='en'?'Worked example':'例题'}</h3><p><MathText text={m[`example_${lang}`]||''}/></p><ol class="method-steps">{(m[`solution_${lang}`]||[]).map((step:string)=><li><MathText text={step}/></li>)}</ol>{m[`tip_${lang}`]&&<aside class="method-tip"><strong>{lang==='en'?'Check':'核对提示'}</strong><MathText text={m[`tip_${lang}`]}/></aside>}{(m[`extensions_${lang}`]||[]).length>0&&<div class="method-extensions"><h3>{lang==='en'?'Necessary lemmas and extensions':'必要引理与拓展'}</h3>{m[`extensions_${lang}`].map((text:string)=><p><MathText text={text}/></p>)}</div>}</div>)}
+{related.length>0&&<div class="method-practice"><h3><Bi en="Apply this method" zh="本方法配套练习"/></h3><div class="practice-links">{related.map((q:any)=><a href={questionUrl(q)}>{q.id}</a>)}</div></div>}
+</section>

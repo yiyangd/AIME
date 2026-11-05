@@ -1,0 +1,5 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": { "resolveJsonModule": true },
+  "exclude": ["dist", "public", "node_modules"]
+}

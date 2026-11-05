@@ -1,0 +1,429 @@
+{
+  "subtype_id": "PS04",
+  "introduction_en": "An expectation is a weighted total, not necessarily a typical outcome. Use symmetry for exchangeable gaps, tails for integer scores, and complete states for stopping processes. A strategy is locally optimal only when its choice does not change the future state distribution.",
+  "introduction_zh": "期望是加权总量，不一定是典型结果。可交换间隙用对称性，整数分数用尾概率，停止过程用完整状态。只有决策不影响未来状态分布时，逐步贪心才自动最优。",
+  "prerequisites": [
+    "PS02"
+  ],
+  "methods": [
+    {
+      "method_id": "PS04-M01",
+      "title_en": "Average order statistics through exchangeable gaps",
+      "title_zh": "用可交换间隙求顺序统计量均值",
+      "steps_en": [
+        "Write the selected positions increasingly and record all unselected gaps, including both end gaps.",
+        "Prove a bijection to weak compositions of the unselected total; uniform subsets then give exchangeable gaps.",
+        "Each gap has the same mean, and their means sum to the fixed total.",
+        "Express the desired ordered position as its rank plus the preceding gaps."
+      ],
+      "steps_zh": [
+        "将所选位置递增排列，记录所有未选间隙，含首尾间隙。",
+        "证明它们与未选总量的非负整数组成双射；均匀子集于是给出可交换间隙。",
+        "各间隙均值相同，且均值总和等于固定未选总量。",
+        "第几小的位置等于其序号加上它前面的所有间隙。"
+      ],
+      "example_en": "Choose four positions uniformly from $1$ through $9$. Find the expected second-smallest position.",
+      "example_zh": "从一至九中等可能选四个位置，求第二小位置的期望。",
+      "solution_en": [
+        "The five unchosen positions form five nonnegative gaps $g_0,\\ldots,g_4$ with sum five. Each weak composition occurs once.",
+        "Exchangeability gives $E(g_i)=1$ for every gap.",
+        "The second chosen position is $2+g_0+g_1$, so its expectation is $4$."
+      ],
+      "solution_zh": [
+        "五个未选位置形成五个非负间隙 $g_0,\\ldots,g_4$，总和五，每种非负组成恰对应一个子集。",
+        "由可交换性，每个间隙的期望为一。",
+        "第二个所选位置为 $2+g_0+g_1$，故期望为四。"
+      ],
+      "tip_en": "The gaps are exchangeable, not independent; equal means need only symmetry.",
+      "tip_zh": "间隙可交换但并不独立；求相同均值只需对称性。",
+      "question_ids": [
+        "AIME-2015-I-Q12"
+      ],
+      "prerequisites": [
+        "CO03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS04-M02",
+      "title_en": "Sum tail probabilities for an integer score",
+      "title_zh": "对整数分数累加尾概率",
+      "steps_en": [
+        "For a nonnegative integer score $X$, use $E(X)=\\sum_{j\\ge1}\\Pr(X\\ge j)$.",
+        "If a lower bound $L$ is automatic, start with $L$ and sum only tails above it.",
+        "Translate each tail event into simultaneous restrictions and count it in the original uniform sample space.",
+        "For nested allowed sets, assign the smallest set first and subtract already-used choices."
+      ],
+      "steps_zh": [
+        "非负整数分数满足 $E(X)=\\sum_{j\\ge1}\\Pr(X\\ge j)$。",
+        "若自动有下界 $L$，先记 $L$，只累加更高的尾概率。",
+        "把每个尾事件转为同时满足的限制，并在原等可能样本空间中计数。",
+        "允许集合嵌套时，先分配最小集合，再减去已使用的选择。"
+      ],
+      "example_en": "Roll two independent fair dice. Find the expected larger result.",
+      "example_zh": "独立投两枚公平骰子，求较大点数的期望。",
+      "solution_en": [
+        "Let $X$ be the maximum. For $1\\le j\\le6$, $\\Pr(X\\ge j)=1-((j-1)/6)^2$.",
+        "Therefore $E(X)=6-(0^2+1^2+2^2+3^2+4^2+5^2)/36$.",
+        "The square sum is $55$, so the expected maximum is $161/36$."
+      ],
+      "solution_zh": [
+        "令 $X$ 为最大点数，则 $1\\le j\\le6$ 时，$\\Pr(X\\ge j)=1-((j-1)/6)^2$。",
+        "所以 $E(X)=6-(0^2+1^2+2^2+3^2+4^2+5^2)/36$。",
+        "平方和为 $55$，故最大值期望为 $161/36$。"
+      ],
+      "tip_en": "A minimum exceeding a threshold means every component passes it, which often makes tails easier than the full distribution.",
+      "tip_zh": "最小值超过门槛等价于所有分量都过关，故尾概率往往比完整分布好数。",
+      "question_ids": [
+        "AIME-2016-II-Q13"
+      ],
+      "prerequisites": [
+        "CO01"
+      ],
+      "extensions_en": [
+        "The identity is pointwise: $X=\\sum_{j\\ge1}\\mathbf1_{X\\ge j}$. For a rook assignment with nested row-allowed sets $S_1\\subseteq\\cdots\\subseteq S_r$, earlier choices all belong to the next set, so row $i$ has exactly $|S_i|-(i-1)$ available columns. Complete any unrestricted rows by a factorial."
+      ],
+      "extensions_zh": [
+        "尾和恒等式来自逐点等式 $X=\\sum_{j\\ge1}\\mathbf1_{X\\ge j}$。车的行列分配若允许集合满足 $S_1\\subseteq\\cdots\\subseteq S_r$，之前所选列均属于下一集合，故第 $i$ 行恰有 $|S_i|-(i-1)$ 个可用列；余下无限制行用阶乘排列。"
+      ]
+    },
+    {
+      "method_id": "PS04-M03",
+      "title_en": "Write first-step equations with the correct boundary reward",
+      "title_zh": "按边界奖励写首步方程",
+      "steps_en": [
+        "Choose states that determine every future transition, including holding and reflecting behavior.",
+        "A hitting probability satisfies $p_s=\\sum_tP_{st}p_t$ with boundary values zero or one.",
+        "An expected step count satisfies $T_s=1+\\sum_tP_{st}T_t$ with zero at absorption; keep any self-transition term.",
+        "Solve the finite system and justify absorption or finite expectation using a uniform positive chance of success in bounded blocks."
+      ],
+      "steps_zh": [
+        "选择能决定所有未来转移的状态，包括原地停留及反射行为。",
+        "命中概率满足 $p_s=\\sum_tP_{st}p_t$，边界值为零或一。",
+        "期望步数满足 $T_s=1+\\sum_tP_{st}T_t$，吸收状态为零；原地转移项不能漏。",
+        "解有限方程组，并用有限步块中统一的正成功概率证明吸收或期望有限。"
+      ],
+      "example_en": "A walker on $0,1,2,3$ moves right with probability $2/3$ and left with $1/3$, stopping at either endpoint. Starting at one, find the probability of stopping at three and the expected number of moves.",
+      "example_zh": "行者在 $0,1,2,3$ 上移动，向右概率 $2/3$、向左 $1/3$，到任一端点就停止。从一出发，求停在三的概率及期望步数。",
+      "solution_en": [
+        "The hitting probabilities obey $p_1=2p_2/3$ and $p_2=2/3+p_1/3$. Thus $p_1=4/7,p_2=6/7$.",
+        "The expected times obey $T_1=1+2T_2/3$ and $T_2=1+T_1/3$. Solving gives $T_1=15/7,T_2=12/7$.",
+        "From either interior state, two consecutive right moves guarantee absorption with probability at least $4/9$. Thus the expected stopping time is finite, validating these equations."
+      ],
+      "solution_zh": [
+        "命中概率满足 $p_1=2p_2/3,p_2=2/3+p_1/3$，解得 $p_1=4/7,p_2=6/7$。",
+        "期望满足 $T_1=1+2T_2/3,T_2=1+T_1/3$，解得 $T_1=15/7,T_2=12/7$。",
+        "从任一内点连续两次右行都保证已吸收，概率至少 $4/9$，故停止期望有限，以上方程有效。"
+      ],
+      "tip_en": "Probability equations have boundary values; time equations have a unit cost per step. Do not interchange them.",
+      "tip_zh": "概率方程靠边界值，时间方程每步另加一，不能混用。",
+      "question_ids": [
+        "AIME-2016-I-Q13",
+        "AIME-2019-II-Q02",
+        "AIME-2021-I-Q12"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [
+        "For a height walk with equally likely east, west, north, south, the two horizontal holding moves give $T_{j+1}-2T_j+T_{j-1}=-4$. At a reflecting boundary where only east, west, north are available, $T_0=1+(2T_0+T_1)/3$, hence $T_0-T_1=3$. First differences reduce the interior equation to an arithmetic sequence.",
+        "For a strictly increasing walk, a target can be visited at most once. Partitioning paths by the last step gives a visit-probability recurrence without an expected-time unit cost."
+      ],
+      "extensions_zh": [
+        "若高度行走等可能向东西南北，两种水平停留使 $T_{j+1}-2T_j+T_{j-1}=-4$。反射边界若只可向东西北，则 $T_0=1+(2T_0+T_1)/3$，故 $T_0-T_1=3$。对期望作一阶差分，内点方程便化为等差数列。",
+        "严格向前的行走至多访问目标一次，因此可按最后一步分类得到访问概率递推；这里不能额外加期望时间的单位代价。"
+      ]
+    },
+    {
+      "method_id": "PS04-M04",
+      "title_en": "Aggregate symmetric states only after checking transition totals",
+      "title_zh": "核对转移总量后才能合并对称状态",
+      "steps_en": [
+        "Replace absolute positions by relative gaps or another symmetry invariant.",
+        "Check that every microscopic state in one proposed class has the same probabilities of moving to every class.",
+        "Enumerate all simultaneous elementary moves, including collisions and any memory restrictions.",
+        "Use the resulting class transition table in the first-step equations."
+      ],
+      "steps_zh": [
+        "以相对间隙等对称不变量代替绝对位置。",
+        "核对同一拟定类别中的每个细状态，转向各类别的概率均相同。",
+        "枚举同时发生的全部基本移动，包括碰撞和历史限制。",
+        "把所得类别转移表代入首步方程。"
+      ],
+      "example_en": "Two walkers start at opposite vertices of a square. Each second both independently choose a neighboring vertex with equal probabilities. They stop on their first simultaneous meeting. Find the expected stopping time.",
+      "example_zh": "两名行者从正方形对顶点出发，每秒同时、独立等可能选一个相邻顶点，到首次同时相遇时停止。求停止时间期望。",
+      "solution_en": [
+        "Before meeting they remain opposite: equal clockwise choices keep them opposite, while opposite choices send them to the same vertex.",
+        "Of the four equally likely simultaneous choices, two meet and two return to the same opposite-state class.",
+        "For expected time $T$, $T=1+T/2$, so $T=2$. The geometric survival probability $2^{-n}$ also proves finite expectation."
+      ],
+      "solution_zh": [
+        "未相遇时两人仍在对顶点；同向转动仍对顶，反向选择则在同一顶点相遇。",
+        "四种等可能同时选择中，两种相遇，两种返回相同的对顶状态类。",
+        "期望 $T$ 满足 $T=1+T/2$，故为两秒；存活概率 $2^{-n}$ 也证明期望有限。"
+      ],
+      "tip_en": "Equal-looking states can have different transition counts; symmetry must preserve the process, not only the drawing.",
+      "tip_zh": "外观相同的状态可能转移数不同；所用对称必须保持过程，而不只是图形。",
+      "question_ids": [
+        "AIME-2021-I-Q12"
+      ],
+      "prerequisites": [
+        "CO05",
+        "PS02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS04-M05",
+      "title_en": "Use a signed generating value for stopping-time parity",
+      "title_zh": "用带符号生成值求停止次数奇偶",
+      "steps_en": [
+        "Track the longest suffix that matches a prefix of the target pattern.",
+        "Let $u_s=E((-1)^R)$ for remaining rolls. Every additional roll contributes a factor $-1$, and a completed pattern has remaining value one.",
+        "Write the first-step equations, including fallback to shorter matched prefixes.",
+        "Recover $\\Pr(R\\text{ odd})=(1-u_s)/2$ after proving almost-sure stopping."
+      ],
+      "steps_zh": [
+        "以“当前结尾能匹配目标前缀的最长长度”为状态。",
+        "令 $u_s=E((-1)^R)$，每增加一步乘负一，已完成状态的余下次数为零、对应值为一。",
+        "写首步方程，并包含退回较短匹配前缀的情况。",
+        "证明几乎必然停止后，用 $\\Pr(R\\text{为奇数})=(1-u_s)/2$ 求概率。"
+      ],
+      "example_en": "Toss a fair coin until the first consecutive pattern $HT$. Find the probability the total toss count is odd.",
+      "example_zh": "投公平硬币，首次连续出现 $HT$ 时停止，求总次数为奇数的概率。",
+      "solution_en": [
+        "Use state zero for no trailing $H$, and state one for a trailing $H$. Let the corresponding signed expectations be $u_0,u_1$.",
+        "First-step equations are $u_0=-(u_0+u_1)/2$ and $u_1=-(u_1+1)/2$. Thus $u_1=-1/3,u_0=1/9$.",
+        "The desired probability is $(1-1/9)/2=4/9$. Disjoint two-toss blocks have a fixed $1/4$ chance of $HT$, so stopping is almost sure."
+      ],
+      "solution_zh": [
+        "用零状态表示末尾不为 $H$，一状态表示末尾为 $H$，带符号期望分别为 $u_0,u_1$。",
+        "首步方程为 $u_0=-(u_0+u_1)/2,u_1=-(u_1+1)/2$，解得 $u_1=-1/3,u_0=1/9$。",
+        "所求概率为 $(1-1/9)/2=4/9$。互不重叠的两次块各有 $1/4$ 概率出现 $HT$，故几乎必然停止。"
+      ],
+      "tip_en": "Immediate completion still uses one roll, so its contribution has a minus sign.",
+      "tip_zh": "立即完成仍消耗一步，因此在方程中的贡献带负号。",
+      "question_ids": [
+        "AIME-2018-II-Q13"
+      ],
+      "prerequisites": [
+        "PS02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS04-M06",
+      "title_en": "Optimize a prediction when choices do not affect future states",
+      "title_zh": "决策不影响未来状态时优化即时预测",
+      "steps_en": [
+        "Prove that the current guess or action does not alter the next-state distribution.",
+        "Maximize the conditional immediate expected reward at each state.",
+        "Add that reward to the transition-weighted future value; keep terminal states exact.",
+        "Use a two-parameter recurrence when the remaining counts determine the state."
+      ],
+      "steps_zh": [
+        "先证明当前猜测或行动不会改变下一状态分布。",
+        "在每个状态最大化当前条件期望奖励。",
+        "将该奖励加上按转移概率加权的未来价值，并保留准确边界状态。",
+        "若剩余数量决定状态，就用双参数递推。"
+      ],
+      "example_en": "A shuffled deck has two red cards and one black card. Before each reveal, a correct red guess earns two points and a correct black guess one point. Find the maximum expected total reward.",
+      "example_zh": "随机洗匀两红一黑牌，每次翻牌前猜色，猜中红色得两分、黑色得一分。求最大期望总得分。",
+      "solution_en": [
+        "At state $(r,b)$, choose red when $2r\\ge b$. The guess does not affect which card is revealed.",
+        "Let $F$ be optimal expected reward. Then $F(1,0)=2,F(0,1)=1,F(2,0)=4$, and $F(1,1)=1+(1+2)/2=5/2$.",
+        "At $(2,1)$, the immediate expectation is $4/3$, so $F(2,1)=4/3+(2/3)(5/2)+(1/3)4=13/3$."
+      ],
+      "solution_zh": [
+        "状态 $(r,b)$ 下，若 $2r\\ge b$ 就猜红；猜测并不改变翻出的牌。",
+        "令 $F$ 为最优期望，边界 $F(1,0)=2,F(0,1)=1,F(2,0)=4$，且 $F(1,1)=1+(1+2)/2=5/2$。",
+        "在 $(2,1)$ 中，即时奖励期望为 $4/3$，故 $F(2,1)=4/3+(2/3)(5/2)+(1/3)4=13/3$。"
+      ],
+      "tip_en": "Majority color is optimal for equal correct-guess rewards; unequal rewards change the threshold.",
+      "tip_zh": "只有猜中两色奖励相同时才直接选多数色；奖励不等会改变阈值。",
+      "question_ids": [
+        "AIME-2023-I-Q06"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS04-M07",
+      "title_en": "Count regions by linearity of crossing indicators",
+      "title_zh": "用交叉指示量的线性性数区域",
+      "steps_en": [
+        "When adding a segment with distinct interior crossings, its new regions equal one plus its number of crossings.",
+        "Express the total as a fixed segment contribution plus one indicator for each crossing pair.",
+        "Compute each pair probability by endpoint interleaving under the actual conditioned endpoint distribution.",
+        "Use linearity; pairwise crossing indicators need not be independent. Treat prescribed multiple crossings separately."
+      ],
+      "steps_zh": [
+        "加入线段时，若内部交点互异，新增区域数等于交点数加一。",
+        "将总量写为固定线段贡献加上每对交叉的指示量。",
+        "根据真实的条件端点分布，用端点交错求各对交叉概率。",
+        "使用期望线性性，无须交叉事件独立；预设的多线共点须另行处理。"
+      ],
+      "example_en": "A disk has two fixed perpendicular diameters and three independent chords, each formed by two uniform independent perimeter endpoints. Find the expected number of regions.",
+      "example_zh": "圆盘内有两条固定垂直直径，再独立画三条弦，每弦两端独立均匀取自圆周，求期望区域数。",
+      "solution_en": [
+        "There are five segments. Apart from probability-zero coincidences, regions equal $1+5+$ the number of crossing pairs. The fixed diameters contribute one crossing.",
+        "Each random chord crosses a given diameter with probability $1/2$, since its endpoints must lie in opposite semicircles. Two independent random chords cross with probability $1/3$: for four cyclically ordered endpoints, exactly one of the three pairings interleaves.",
+        "Thus the expectation is $6+1+3\\cdot2\\cdot(1/2)+\\binom32(1/3)=11$."
+      ],
+      "solution_zh": [
+        "共有五条线段。除零概率重合外，区域数等于 $1+5+$交叉线段对数；固定直径贡献一个交点。",
+        "随机弦与一条直径相交概率为 $1/2$，因为两端须在不同半圆；两随机弦相交概率为 $1/3$，四个圆周顺序端点的三种配对中恰一种交错。",
+        "所以期望为 $6+1+3\\cdot2\\cdot(1/2)+\\binom32(1/3)=11$。"
+      ],
+      "tip_en": "Conditioning endpoints to different quadrants changes the crossing law; do not reuse the unrestricted one-third value.",
+      "tip_zh": "若端点被限制在不同象限，相交概率会改变，不能沿用无条件的三分之一。",
+      "question_ids": [
+        "AIME-2025-I-Q13"
+      ],
+      "prerequisites": [
+        "PS03",
+        "CO06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "PS04-M08",
+      "title_en": "Stop at the first third-category event and sum completed prefixes",
+      "title_zh": "在第三类首次出现时停止并累加已完成前缀",
+      "steps_en": [
+        "Partition trials into two desired categories and a stopping category.",
+        "Condition on the full pre-stop word, including its order and the final stopping event.",
+        "Count or weight words that complete both desired quotas; handle overlap of deficient-category events.",
+        "Sum the resulting geometric or arithmetic-geometric series and check the starting index."
+      ],
+      "steps_zh": [
+        "把试验分为两种目标类别及一种停止类别。",
+        "按停止前的完整词分类，保留顺序并计入最后的停止事件。",
+        "对达到两种配额的词计数或加权；缺额事件可能有交集。",
+        "累加等比或等差乘等比级数，并核对起始下标。"
+      ],
+      "example_en": "Independent trials produce $A,B,C$ with probabilities $1/2,1/4,1/4$. What is the chance both $A$ and $B$ appear before the first $C$?",
+      "example_zh": "独立试验出现 $A,B,C$ 的概率为 $1/2,1/4,1/4$。求首次出现 $C$ 之前，$A,B$ 都已出现的概率。",
+      "solution_en": [
+        "No $A$ before the first $C$ means a word $B^kC$, with total probability $\\sum_{k\\ge0}(1/4)^{k+1}=1/3$.",
+        "No $B$ similarly has probability $\\sum_{k\\ge0}(1/2)^k(1/4)=1/2$. Their intersection is an immediate $C$, with probability $1/4$.",
+        "By inclusion-exclusion, success is $1-1/3-1/2+1/4=5/12$. The final stopping-event weight is included in both series."
+      ],
+      "solution_zh": [
+        "首次 $C$ 之前无 $A$，对应词 $B^kC$，总概率为 $\\sum_{k\\ge0}(1/4)^{k+1}=1/3$。",
+        "无 $B$ 的概率同理为 $\\sum_{k\\ge0}(1/2)^k(1/4)=1/2$，两者交集为立即出现 $C$，概率 $1/4$。",
+        "容斥得成功概率 $1-1/3-1/2+1/4=5/12$；两级数都计入了末次停止事件的权重。"
+      ],
+      "tip_en": "For two quotas of two, deficient binary counts are disjoint only once the prefix length is at least four.",
+      "tip_zh": "两类配额各为二时，只有前缀长至少四，两个缺额二元词类才互斥。",
+      "question_ids": [
+        "AIME-2026-II-Q07"
+      ],
+      "prerequisites": [
+        "AL05"
+      ],
+      "extensions_en": [
+        "For $|x|<1$, $\\sum_{k\\ge0}x^k=1/(1-x)$ and $\\sum_{k\\ge0}(k+1)x^k=1/(1-x)^2$. Subtract the finitely many terms before the valid quota length. The second identity follows by multiplying two geometric series, so differentiation is optional."
+      ],
+      "extensions_zh": [
+        "当 $|x|<1$，有 $\\sum_{k\\ge0}x^k=1/(1-x)$ 及 $\\sum_{k\\ge0}(k+1)x^k=1/(1-x)^2$。减去达到配额前的有限项即可；第二式也可由两个等比级数相乘得到，无须使用求导。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2015-I-Q12",
+    "AIME-2016-I-Q13",
+    "AIME-2016-II-Q13",
+    "AIME-2018-II-Q13",
+    "AIME-2019-II-Q02",
+    "AIME-2021-I-Q12",
+    "AIME-2023-I-Q06",
+    "AIME-2025-I-Q13",
+    "AIME-2026-II-Q07"
+  ],
+  "coverage_by_question": {
+    "AIME-2015-I-Q12": {
+      "method_ids": [
+        "PS04-M01"
+      ],
+      "prerequisites": [
+        "CO03"
+      ]
+    },
+    "AIME-2016-II-Q13": {
+      "method_ids": [
+        "PS04-M02"
+      ],
+      "prerequisites": [
+        "CO01"
+      ]
+    },
+    "AIME-2016-I-Q13": {
+      "method_ids": [
+        "PS04-M03"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2019-II-Q02": {
+      "method_ids": [
+        "PS04-M03"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2021-I-Q12": {
+      "method_ids": [
+        "PS04-M03",
+        "PS04-M04"
+      ],
+      "prerequisites": [
+        "CO05"
+      ]
+    },
+    "AIME-2018-II-Q13": {
+      "method_ids": [
+        "PS04-M05"
+      ],
+      "prerequisites": [
+        "PS02"
+      ]
+    },
+    "AIME-2023-I-Q06": {
+      "method_ids": [
+        "PS04-M06"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2025-I-Q13": {
+      "method_ids": [
+        "PS04-M07"
+      ],
+      "prerequisites": [
+        "CO06",
+        "PS03"
+      ]
+    },
+    "AIME-2026-II-Q07": {
+      "method_ids": [
+        "PS04-M08"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

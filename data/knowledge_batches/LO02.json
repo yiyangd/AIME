@@ -1,0 +1,1025 @@
+{
+  "subtype_id": "LO02",
+  "introduction_en": "A discrete optimum is a bound plus a witness. Use integrality, exchange moves, residue capacities and resource counts to narrow the search, then construct an arrangement that meets every local condition.",
+  "introduction_zh": "离散最优值由界与见证共同组成。用整数性、交换操作、余数容量及资源总量缩小搜索，再构造满足全部局部条件的配置。",
+  "prerequisites": [
+    "CO02"
+  ],
+  "methods": [
+    {
+      "method_id": "LO02-M01",
+      "title_en": "Bound digit positions, then optimize lexicographically",
+      "title_zh": "先界定数位再按字典序优化",
+      "steps_en": [
+        "Write every arithmetic digit condition as a weighted place-value equation.",
+        "Bound the total contribution of lower positions to rule out impossible high positions.",
+        "Among the remaining strings, optimize the leading digit first while preserving feasible remaining digit mass.",
+        "Use exchange of digit mass toward cheaper positions to prove a minimum, or the reverse for a maximum."
+      ],
+      "steps_zh": [
+        "把数字算术条件写成位权方程。",
+        "用低位总贡献的界排除过高数位。",
+        "在剩余字符串中先优化首位，同时保留余下数字总量的可行性。",
+        "通过把数字总量移向低成本位置的交换证明最小，求最大则反向。"
+      ],
+      "example_en": "Find the smallest four-digit decimal number whose digits are at most four and sum to ten.",
+      "example_zh": "求各位数字均不超过四、数字和为十的最小四位十进制数。",
+      "solution_en": [
+        "The leading digit is at least one; choosing one is feasible because the other positions can hold up to twelve.",
+        "After choosing one, the last two positions hold at most eight, so the hundreds digit must be at least one. Choose it as one.",
+        "The remaining mass eight forces the final digits four and four. The number is $1144$; each earlier digit was proved minimal while completion remained possible."
+      ],
+      "solution_zh": [
+        "首位至少一，取一可行，因为余三位容量十二。",
+        "首位取一后，末两位容量仅八，因此百位至少一，取一。",
+        "剩余数字和八迫使末两位均四，得到 $1144$；每个高位均在可完成条件下取了最小值。"
+      ],
+      "tip_en": "A leading-digit choice is valid only if the remaining positions can complete the weighted condition.",
+      "tip_zh": "只有余下数位能完成位权条件，首位选择才有效。",
+      "question_ids": [
+        "AIME-2001-I-Q08",
+        "AIME-2020-II-Q05"
+      ],
+      "prerequisites": [
+        "NT06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M02",
+      "title_en": "Turn a forbidden pattern into forced sorted growth",
+      "title_zh": "将禁止模式转为被迫的有序增长",
+      "steps_en": [
+        "Sort the positive entries and test the closest preceding entries to a proposed largest member.",
+        "The absence of a local forbidden pattern gives a recurrence lower bound.",
+        "Iterate the bound from the smallest permitted initial entries.",
+        "Check that the equality sequence avoids every nonlocal forbidden pattern too."
+      ],
+      "steps_zh": [
+        "将正数排序，对某个最大成员先测试最接近的前两项。",
+        "局部禁止模式不存在会给出递推下界。",
+        "从最小允许初项迭代该界。",
+        "检查取等序列也能避免所有非局部禁止模式。"
+      ],
+      "example_en": "Prove that a sorted positive list contains a nondegenerate triangle if and only if some three consecutive entries form one.",
+      "example_zh": "证明递增正数列表含有非退化三角形，当且仅当某三个连续成员可作三角形。",
+      "solution_en": [
+        "If a consecutive triple forms a triangle, the forward implication is immediate.",
+        "Otherwise every consecutive triple obeys $a_{j-2}+a_{j-1}\\le a_j$.",
+        "For arbitrary $i<k<j$, $a_i+a_k\\le a_{j-2}+a_{j-1}\\le a_j$, so no arbitrary triple forms a triangle. This proves the converse and the exhaustive local test."
+      ],
+      "solution_zh": [
+        "连续三项若能作三角形，自然给出所需三项。",
+        "否则每个连续三项均有前两项之和不超过第三项。",
+        "任意更早两项之和也不超过最大项前的两项之和，故同样不能作三角形，完成反向证明。"
+      ],
+      "tip_en": "A locally defined extremal sequence needs a proof that it also avoids nonconsecutive patterns.",
+      "tip_zh": "局部定义的极值序列还须证明能避免非连续模式。",
+      "question_ids": [
+        "AIME-2001-II-Q05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M03",
+      "title_en": "Combine a common residue class with a distinctness capacity",
+      "title_zh": "结合公共余数类与互异容量",
+      "steps_en": [
+        "Translate every deletion or divisibility condition into a common congruence for all entries.",
+        "Use the difference of the largest and smallest entries to restrict the modulus.",
+        "Distinct entries in one residue class require minimum successive gaps equal to that modulus.",
+        "Construct an initial arithmetic block plus the prescribed endpoint and verify every deletion condition."
+      ],
+      "steps_zh": [
+        "把每次删除或整除条件化为所有成员的公共同余。",
+        "由最大最小差限制模数。",
+        "同余类内互异成员的连续间距至少为该模数。",
+        "用起始等差块加规定端点构造，并验证每次删除。"
+      ],
+      "example_en": "For positive integers $m<M$ and $n\\ge2$, characterize when an $n$-element set with minimum $m$, maximum $M$ has integer mean after any one deletion.",
+      "example_zh": "给定正整数 $m<M,n\\ge2$，刻画何时存在最小值 $m$、最大值 $M$ 的 $n$ 元集，删除任一成员后的平均数均为整数。",
+      "solution_en": [
+        "Put $d=n-1$ and let the sum be $S$. Every deletion gives $S-x\\equiv0\\pmod d$, so all entries are congruent and $d\\mid M-m$.",
+        "There are $d$ positive gaps of at least $d$, so $M-m\\ge d^2$.",
+        "Conversely, if both conditions hold, take $m,m+d,\\ldots,m+(d-1)d,M$. They are distinct, and all entries are congruent to $m$; the total is also $m\\pmod d$. Thus every deletion sum is divisible by $d$."
+      ],
+      "solution_zh": [
+        "令 $d=n-1$，总和为 $S$。每次删除给出 $S-x\\equiv0\\pmod d$，故所有成员同余，且 $d\\mid M-m$。",
+        "共有 $d$ 个正间距，每个至少 $d$，所以 $M-m\\ge d^2$。",
+        "反之，若两条件都满足，取起始 $d$ 项等差块及端点 $M$，全部互异且同余；总和也与 $m$ 同余，故任删一项后被 $d$ 整除。"
+      ],
+      "tip_en": "Prove both the divisor restriction and the spacing capacity; either alone is too weak.",
+      "tip_zh": "约数限制与间距容量两者都要证明，单用一者不够。",
+      "question_ids": [
+        "AIME-2002-I-Q14"
+      ],
+      "prerequisites": [
+        "NT03",
+        "NT02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M04",
+      "title_en": "Round per-group bounds before summing integer totals",
+      "title_zh": "先对各组整数界取整再求和",
+      "steps_en": [
+        "Convert percentage or ratio constraints to exact inequalities with positive denominators.",
+        "For strict upper bounds on integers use $x<r\\Rightarrow x\\le\\lceil r\\rceil-1$; for lower bounds use ceilings.",
+        "Add the local integer bounds and compare with the global total.",
+        "Distribute any remaining excess explicitly and verify every group separately."
+      ],
+      "steps_zh": [
+        "将百分比或比例限制化为正分母的精确不等式。",
+        "整数严格上界用 $x<r\\Rightarrow x\\le\\lceil r\\rceil-1$，下界用向上取整。",
+        "相加各局部整数界，再与全局总量比较。",
+        "明确分配剩余量，并逐组验证。"
+      ],
+      "example_en": "Three bags have capacities $5,11,16$. Each contains a positive integer number of marked items, strictly less than five-eighths of its capacity. Maximize the total marked count.",
+      "example_zh": "三个袋子容量为五、十一、十六，标记物数量均为正整数且严格小于各容量的八分之五，求标记总数最大值。",
+      "solution_en": [
+        "The three integer upper bounds are $\\lceil25/8\\rceil-1=3$, $\\lceil55/8\\rceil-1=6$, and $10-1=9$.",
+        "Thus at most eighteen items are marked, stronger than rounding only the combined capacity bound.",
+        "Counts $(3,6,9)$ satisfy all strict per-bag inequalities and attain eighteen."
+      ],
+      "solution_zh": [
+        "三组整数上界分别为三、六、九。",
+        "所以总数至多十八，比只对合并容量取整更强。",
+        "取标记数三、六、九，逐组均严格符合比例，故十八可达。"
+      ],
+      "tip_en": "A strict ratio bound can lose a full integer when its unrounded bound is itself integral.",
+      "tip_zh": "当未取整上界本身为整数时，严格比例还须再减一。",
+      "question_ids": [
+        "AIME-2003-II-Q12",
+        "AIME-2004-I-Q05"
+      ],
+      "prerequisites": [
+        "AL01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M05",
+      "title_en": "Use unit exchanges to prove no gaps in attainable sums",
+      "title_zh": "用单位交换证明可达和无缺口",
+      "steps_en": [
+        "Compute the smallest and largest possible sums.",
+        "At every nonmaximal configuration find a legal exchange increasing the sum by exactly one.",
+        "The sum increases within a finite set, so the exchanges eventually reach the maximum.",
+        "Every intermediate integer has then been attained; count the full interval."
+      ],
+      "steps_zh": [
+        "先算最小及最大可能总和。",
+        "在每个非最大配置中，找出合法且恰增加一的交换。",
+        "总和在有限集合中严格增加，故最终到达最大值。",
+        "于是每个中间整数都达到，可直接数完整区间。"
+      ],
+      "example_en": "Prove the sums of $k$-element subsets of $\\{1,\\ldots,N\\}$ fill an integer interval, and find its size.",
+      "example_zh": "证明一至 $N$ 的 $k$ 元子集和填满一个整数区间，并求区间大小。",
+      "solution_en": [
+        "The endpoint sums are $k(k+1)/2$ and $k(2N-k+1)/2$.",
+        "Unless the set is the terminal block, some chosen $j<N$ has unchosen successor $j+1$. Replacing it legally raises the sum by one.",
+        "Following such exchanges from the initial block reaches the terminal block and visits every integer between. The number of sums is $k(N-k)+1$."
+      ],
+      "solution_zh": [
+        "两端和分别为最小前块及最大末块之和。",
+        "若还不是末块，必有被选 $j$ 的后继 $j+1$ 未选，替换后合法且和增加一。",
+        "从前块不断交换到末块，中间整数无遗漏，故总数为 $k(N-k)+1$。"
+      ],
+      "tip_en": "Knowing the endpoint sums is insufficient without the no-gap exchange proof.",
+      "tip_zh": "只知道两端和还不够，必须证明中间无缺口。",
+      "question_ids": [
+        "AIME-2006-I-Q02"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M06",
+      "title_en": "Telescope to a quantized terminal state and construct it",
+      "title_zh": "望远镜化到离散终态并构造",
+      "steps_en": [
+        "Square an absolute recurrence to remove the arbitrary sign.",
+        "Sum the resulting differences so the objective depends only on a terminal square.",
+        "Prove which terminal parity and size classes are attainable.",
+        "Choose the best allowed terminal value and give a complete legal sign sequence reaching it."
+      ],
+      "steps_zh": [
+        "将绝对值递推平方，消去任意符号。",
+        "累加差式，使目标只依赖终态平方。",
+        "证明终态允许的奇偶及大小类。",
+        "选择最优允许终值，并给出完整合法符号序列。"
+      ],
+      "example_en": "Let $u_0=0,|u_j|=|u_{j-1}+1|$. Find all possible values of $u_0+u_1+u_2+u_3$.",
+      "example_zh": "设 $u_0=0,|u_j|=|u_{j-1}+1|$，求前四项和的全部可能值。",
+      "solution_en": [
+        "Squaring and summing through step four gives $u_4^2=4+2\\sum_{j=0}^3u_j$.",
+        "Induction on the recurrence gives terminal values $u_4\\in\\{-4,-2,0,2,4\\}$, all attained: each stage gives every integer of its parity between its two extreme values.",
+        "The terminal squares are $16,4,0$, so the sums are exactly $6,0,-2$. The reachability induction supplies every listed value."
+      ],
+      "solution_zh": [
+        "平方后累加到第四步，得 $u_4^2=4+2\\sum_{j=0}^3u_j$。",
+        "递推归纳得第四步可达负四、负二、零、二、四：每步均填满其两端之间的同奇偶整数。",
+        "终态平方为十六、四、零，故和恰为六、零、负二，每个值均由可达性归纳保证。"
+      ],
+      "tip_en": "A nearest-square bound becomes an optimum only when the terminal state can actually occur.",
+      "tip_zh": "最近平方给出的界，只有终态确实可达时才成为最优值。",
+      "question_ids": [
+        "AIME-2006-I-Q15"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M07",
+      "title_en": "Check the nearest admissible integers of a concave product",
+      "title_zh": "比较凹乘积顶点附近的允许整数",
+      "steps_en": [
+        "Eliminate one count using the linear resource equation.",
+        "Complete the square in the remaining concave quadratic.",
+        "Solve its integrality congruence and test the nearest admissible points on both sides of the vertex.",
+        "Convert the maximizing counts back to a valid geometric or combinatorial arrangement."
+      ],
+      "steps_zh": [
+        "用线性资源方程消去一个计数。",
+        "对剩下的凹二次式配方。",
+        "解整数性同余，并检查顶点两侧最近的允许点。",
+        "将最优计数恢复为合法几何或组合配置。"
+      ],
+      "example_en": "Positive integers $x+y=12$ satisfy $x\\equiv1\\pmod3$. Maximize $xy$.",
+      "example_zh": "正整数 $x+y=12$ 且 $x\\equiv1\\pmod3$，求 $xy$ 最大值。",
+      "solution_en": [
+        "The product is $36-(x-6)^2$.",
+        "Allowed $x$ are $1,4,7,10$. The closest to six is seven, at distance one; four is distance two.",
+        "Thus $(x,y)=(7,5)$ attains the maximum thirty-five."
+      ],
+      "solution_zh": [
+        "乘积可配方为 $36-(x-6)^2$。",
+        "允许的一、四、七、十中，七距顶点最近。",
+        "取七、五得最大乘积三十五。"
+      ],
+      "tip_en": "Rounding the real vertex without enforcing the residue class can give an impossible count.",
+      "tip_zh": "若不执行余数限制就将实顶点取整，可能得到不可能的计数。",
+      "question_ids": [
+        "AIME-2007-II-Q08"
+      ],
+      "prerequisites": [
+        "AL07",
+        "NT03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M08",
+      "title_en": "Distinguish a finite-window count from a steady rate",
+      "title_zh": "区分有限时间窗计数与稳定速率",
+      "steps_en": [
+        "Translate the spacing rule to a lower bound on time between successive events.",
+        "$m$ events in a closed window require only $m-1$ inter-event gaps.",
+        "Use strict gap inequalities to rule out the next integer count.",
+        "Choose an initial phase and explicit legal gaps that attain the claimed count."
+      ],
+      "steps_zh": [
+        "将间距规则转为连续事件之间的时间下界。",
+        "闭时间窗内的 $m$ 个事件只需 $m-1$ 个间隔。",
+        "用严格间隔不等式排除下一个整数计数。",
+        "选择初始相位及明确合法间隔，达到所称数量。"
+      ],
+      "example_en": "Events are separated by strictly more than two minutes. What is the largest number in the closed ten-minute interval $[0,10]$?",
+      "example_zh": "相邻事件间隔严格大于两分钟，在闭区间零至十分钟内最多可有几个？",
+      "solution_en": [
+        "Six events would require five gaps whose total is strictly greater than ten, impossible.",
+        "Five events at times $0,9/4,9/2,27/4,9$ have gaps $9/4>2$ and fit in the window.",
+        "Thus five is the maximum. An initial event is counted even though it does not require an earlier gap inside the window."
+      ],
+      "solution_zh": [
+        "六个事件需五个间隔，总长严格大于十，矛盾。",
+        "取 $0,9/4,9/2,27/4,9$ 分钟这五个时刻，间隔均为 $9/4>2$。",
+        "因此最多五个，初始事件不需要窗内更早的一个间隔。"
+      ],
+      "tip_en": "State whether endpoints and a freely chosen initial phase are included before converting flow to a count.",
+      "tip_zh": "把流率变成数量前，先说明端点及自由初相是否计入。",
+      "question_ids": [
+        "AIME-2008-I-Q12"
+      ],
+      "prerequisites": [
+        "AL06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M09",
+      "title_en": "Bound a growing path by its distinct distance levels",
+      "title_zh": "用不同距离层数限制递增长路径",
+      "steps_en": [
+        "List every possible positive pair distance or squared distance.",
+        "A strictly increasing path uses each level at most once, giving a point-count bound of one more than the number of levels.",
+        "If the bound is reached, every level must be used in order; backtrack from the largest level to force predecessors.",
+        "Check distinct vertices and construct or count all surviving paths."
+      ],
+      "steps_zh": [
+        "列出所有可能正距离或距离平方。",
+        "严格递增路径每层至多一次，故顶点数至多距离层数加一。",
+        "若取等，必须按顺序使用全部距离层，可从最大层倒推前驱。",
+        "检查顶点互异，构造或计数全部剩余路径。"
+      ],
+      "example_en": "Among the four vertices of a $1\\times2$ rectangle, what is the longest path visiting distinct vertices with strictly increasing successive distances?",
+      "example_zh": "在一乘二矩形的四个顶点中，以不同顶点构成路径且相邻距离严格增加，最多经过几个点？",
+      "solution_en": [
+        "The distance levels are $1,2,\\sqrt5$, suggesting an upper bound of four points.",
+        "A four-point path would need distances $1,2,\\sqrt5$ in order. The first two are perpendicular rectangle sides, after which the unused fourth vertex is distance one from the current vertex, not $\\sqrt5$. Thus four is impossible.",
+        "Three points are possible by a length-one side followed by a diagonal. Hence the true maximum is three; the level bound alone was not attained."
+      ],
+      "solution_zh": [
+        "三种距离是一、二、根号五，形式上顶点数至多四。",
+        "若走四点，距离须依次一、二、根号五；前两段为相邻垂直边，此时唯一未用顶点距当前位置却是一，不能完成。",
+        "先走短边再走对角线可走三点，所以准确最大为三，距离层数界并不自动可达。"
+      ],
+      "tip_en": "A level-count upper bound is only a candidate until a path realizes its entire ordering.",
+      "tip_zh": "只有有路径实现完整距离顺序，层数界才可达到。",
+      "question_ids": [
+        "AIME-2008-II-Q10"
+      ],
+      "prerequisites": [
+        "CO06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M10",
+      "title_en": "Count one resource in two ways and build a compatible block",
+      "title_zh": "从两种角度计同一资源并构造相容块",
+      "steps_en": [
+        "Write the same total as a sum over each of two families of groups.",
+        "Use distinctness or fixed per-group counts to give lower and upper bounds.",
+        "Solve the resulting divisibility or size obstruction.",
+        "Build repeated local blocks or disjoint parity classes to satisfy every local rule, not only the total equation."
+      ],
+      "steps_zh": [
+        "按两类分组分别表示同一个总量。",
+        "由互异性或固定组内数量给出上下界。",
+        "解所得整除或大小障碍。",
+        "用重复局部块或不相交奇偶类构造，使全部局部规则成立，而不只满足总量方程。"
+      ],
+      "example_en": "A nonempty zero-one matrix has two ones in every row and three ones in every column. Find the least possible number of entries.",
+      "example_zh": "非空零一矩阵每行两个一、每列三个一，求总格数最小值。",
+      "solution_en": [
+        "With $r$ rows and $c$ columns, counting ones gives $2r=3c$, hence $r=3t,c=2t$ for positive integer $t$.",
+        "Therefore the entry count is $6t^2\\ge6$.",
+        "The $3\\times2$ all-one matrix meets both local rules and attains six entries, proving the minimum."
+      ],
+      "solution_zh": [
+        "按行列计一的总数，得 $2r=3c$，所以行列数为 $3t,2t$。",
+        "总格数为 $6t^2\\ge6$。",
+        "三乘二全一矩阵满足各行各列要求并达到六，故最小值为六。"
+      ],
+      "tip_en": "Equality of global counts does not guarantee a compatible local arrangement; exhibit one.",
+      "tip_zh": "全局数量相等不保证局部配置相容，必须给出见证。",
+      "question_ids": [
+        "AIME-2009-II-Q12",
+        "AIME-2016-II-Q04"
+      ],
+      "prerequisites": [
+        "CO04",
+        "NT02"
+      ],
+      "extensions_en": [
+        "For $k$ disjoint pairs from $\\{1,\\ldots,N\\}$, the used-label sum is at least $k(2k+1)$. If pair sums are distinct and at most $N$, their sum is at most $k(2N-k+1)/2$. Comparing the same total gives $5k\\le2N-1$. A sharp construction must separately ensure disjoint labels and distinct sums, often by giving one block even sums and another odd sums."
+      ],
+      "extensions_zh": [
+        "从一至 $N$ 选 $k$ 个不交元素对，已用标号总和至少 $k(2k+1)$。若对和互异且不超过 $N$，其总和至多 $k(2N-k+1)/2$，比较同一总量得 $5k\\le2N-1$。取等构造还须分别保证标号不重、对和互异，常可用一块给偶和、另一块给奇和。"
+      ]
+    },
+    {
+      "method_id": "LO02-M11",
+      "title_en": "Build product-free color bands with endpoint checks",
+      "title_zh": "以端点核查构造无同色积色带",
+      "steps_en": [
+        "Choose multiplicative scale thresholds so products of the low band jump to the other color.",
+        "Put a far high band in the first color only when multiplying it by any allowed factor leaves the whole domain.",
+        "Check products within the other color land outside that color.",
+        "Include every endpoint and permit repeated factors when the original relation allows them."
+      ],
+      "steps_zh": [
+        "选择乘法尺度门槛，使低色带乘积跳到另一颜色。",
+        "只有高色带乘任一允许因子都超出全域时，才可把它放回第一色。",
+        "检查另一色内部的积不会仍落在本色。",
+        "逐一核查端点，并保留原关系允许的重复因子。"
+      ],
+      "example_en": "For any integer $a\\ge2$, construct a two-coloring of $\\{a,\\ldots,a^5-1\\}$ with no monochromatic product $xy=z$.",
+      "example_zh": "对任意整数 $a\\ge2$，构造从 $a$ 至 $a^5-1$ 的两色染色，使无同色乘法关系。",
+      "solution_en": [
+        "Color $[a,a^2-1]\\cup[a^4,a^5-1]$ red and $[a^2,a^4-1]$ blue.",
+        "Two low red factors multiply into the blue band; a product involving a high red factor is at least $a^5$ and leaves the domain.",
+        "Two blue factors have product at least $a^4$, so any in-domain product is red. Thus every same-color product is excluded, including equal factors."
+      ],
+      "solution_zh": [
+        "把低带及远高带染红，中间带染蓝。",
+        "两低红因子的积落在蓝带；含高红因子的积至少 $a^5$，已出域。",
+        "两蓝因子的积至少 $a^4$，若仍在域内则为红，因此同色积关系全部排除，包括重复因子。"
+      ],
+      "tip_en": "The high band is safe only because its product with the smallest allowed factor is already outside the domain.",
+      "tip_zh": "高色带安全的关键，是它乘最小允许因子也已越界。",
+      "question_ids": [
+        "AIME-2010-I-Q12"
+      ],
+      "prerequisites": [
+        "LO01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M12",
+      "title_en": "Saturate a run-count bound before counting compositions",
+      "title_zh": "先使连续段界取满再数正整数组成",
+      "steps_en": [
+        "Bound the number of color changes or runs by the scarcer symbol count.",
+        "Translate any equal-pair condition into a bound on total adjacent pairs.",
+        "At equality, identify all forced singleton runs and endpoint colors.",
+        "Count the remaining positive run lengths by compositions, restoring labels only if the objects are distinct."
+      ],
+      "steps_zh": [
+        "用稀少符号数量限制颜色变化数或连续段数。",
+        "将相邻对数量关系转为总相邻对界。",
+        "取等时找出所有被迫的单元素段及端点颜色。",
+        "用正整数组成数剩余段长，只有对象不同才恢复标号。"
+      ],
+      "example_en": "A binary word has three ones and seven zeros. Maximize its color changes and count the maximizing words.",
+      "example_zh": "一个二进制词有三个一、七个零，求最多变色次数及达到最大值的词数。",
+      "solution_en": [
+        "Three one-runs allow at most six changes. To reach six, all ones are singletons and there are four positive zero-runs, including both endpoints.",
+        "Write their lengths as $z_1+z_2+z_3+z_4=7$ with each positive.",
+        "There are $\\binom63=20$ such compositions, each giving exactly six changes. Thus the maximum is six and the count twenty."
+      ],
+      "solution_zh": [
+        "三个一段至多产生六次变色，取等须三个一均单独，且四个零段均非空，包含两端。",
+        "四个正零段长之和为七。",
+        "隔板法得二十种，每种均恰有六次变色。"
+      ],
+      "tip_en": "Counting before analyzing equality can include run patterns that do not attain the bound.",
+      "tip_zh": "尚未分析取等就计数，会混入未达到上界的段型。",
+      "question_ids": [
+        "AIME-2011-II-Q07"
+      ],
+      "prerequisites": [
+        "CO03",
+        "CO01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M13",
+      "title_en": "Optimize uncoupled choices term by term",
+      "title_zh": "逐项优化互不耦合的选择",
+      "steps_en": [
+        "Express the total objective as a sum of contributions, one from each choice.",
+        "Prove that choosing one option imposes no restriction on the others.",
+        "Take the maximum contribution independently for each term.",
+        "Give the actual full selection attaining all local maxima simultaneously."
+      ],
+      "steps_zh": [
+        "将总目标拆为每次选择的一项贡献。",
+        "证明一个选项不限制其他选择。",
+        "每项独立取最大贡献。",
+        "给出同时实现全部局部最大值的完整选择。"
+      ],
+      "example_en": "For each of $1-2i,-3+4i,5-i$, choose the number or its conjugate. Maximize the imaginary part of their sum.",
+      "example_zh": "对 $1-2i,-3+4i,5-i$ 各选原数或共轭，求总和虚部最大值。",
+      "solution_en": [
+        "Each conjugation can change only the sign of its own imaginary part.",
+        "The independent maxima are two, four, one, summing to seven.",
+        "Choose $1+2i,-3+4i,5+i$. Their sum is $3+7i$, attaining the bound."
+      ],
+      "solution_zh": [
+        "每次共轭只改变自身虚部符号。",
+        "三个独立最大虚部分别为二、四、一，总和七。",
+        "选取 $1+2i,-3+4i,5+i$，总和为 $3+7i$，确取等。"
+      ],
+      "tip_en": "Local maximization fails when a shared constraint couples the choices.",
+      "tip_zh": "若存在耦合选择的共同限制，局部最优不一定能同时实现。",
+      "question_ids": [
+        "AIME-2011-II-Q08"
+      ],
+      "prerequisites": [
+        "AL03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M14",
+      "title_en": "Find a first omitted block using consecutive square gaps",
+      "title_zh": "用连续平方间隙寻找首个空块",
+      "steps_en": [
+        "Use square gaps $2j+1$ to exclude all blocks too short to fit between consecutive squares.",
+        "For the remaining aligned blocks, track the quotient $\\lfloor j^2/B\\rfloor$.",
+        "A missing block occurs when consecutive square quotients skip its index.",
+        "Exhibit the two bounding consecutive squares and prove every earlier block had a square."
+      ],
+      "steps_zh": [
+        "用平方间距排除无法完整藏在相邻平方间的早期块。",
+        "对剩下的对齐块，跟踪平方除以块长的整数商。",
+        "当相邻平方的块下标跳过某个整数，就出现空块。",
+        "给出夹住该块的连续平方，并证明此前各块都含平方。"
+      ],
+      "example_en": "Give an exact test for whether the integer block $BN,\\ldots,BN+B-1$ contains a square.",
+      "example_zh": "给出整数块 $BN$ 至 $BN+B-1$ 是否含平方数的精确判断式。",
+      "solution_en": [
+        "The least square at least $BN$ is $q^2$ with $q=\\lceil\\sqrt{BN}\\rceil$.",
+        "If $q^2\\le BN+B-1$, that square belongs to the block.",
+        "If it is larger, every subsequent square is even larger and no earlier square reaches $BN$. Thus the block is empty exactly when $\\lceil\\sqrt{BN}\\rceil^2>BN+B-1$."
+      ],
+      "solution_zh": [
+        "不小于块起点的最小平方为 $q^2$，其中 $q=\\lceil\\sqrt{BN}\\rceil$。",
+        "若它不超过块终点，则块内有该平方。",
+        "否则更大平方都越界、更小平方都不及起点，因此空块的充要条件正是该平方严格超过终点。"
+      ],
+      "tip_en": "A large square gap alone does not guarantee that an aligned whole block fits inside it.",
+      "tip_zh": "平方间距大，并不保证某个对齐整块恰好放在其中。",
+      "question_ids": [
+        "AIME-2013-II-Q06"
+      ],
+      "prerequisites": [
+        "NT05",
+        "AL06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M15",
+      "title_en": "Use competing integer bounds to force a small candidate class",
+      "title_zh": "用相竞争的整数界迫使小候选类",
+      "steps_en": [
+        "Find one feasible candidate to establish a numerical benchmark.",
+        "Use a global denominator or resource bound to exclude all objectives with a larger integer numerator or quotient class.",
+        "Apply the remaining local bound to enumerate only potentially improving cases.",
+        "Check every surviving case and retain the original witness if none improves it."
+      ],
+      "steps_zh": [
+        "先找一个可行候选作为数值基准。",
+        "用全局分母或资源界，排除整数分子或商类别较大的情况。",
+        "用另一局部界，只枚举可能改进的少量情形。",
+        "检查所有保留候选，若无改进则原见证最优。"
+      ],
+      "example_en": "Positive integers $a,b$ satisfy $b\\le30$ and $a/b<1/17$. Determine their possible form.",
+      "example_zh": "正整数 $a,b$ 满足 $b\\le30$ 且 $a/b<1/17$，求它们的全部可能形式。",
+      "solution_en": [
+        "If $a\\ge2$, then $a/b\\ge2/30=1/15>1/17$, impossible.",
+        "Thus $a=1$, and the strict comparison gives $b>17$.",
+        "The possibilities are exactly $(a,b)=(1,b)$ for $18\\le b\\le30$, each of which satisfies both conditions."
+      ],
+      "solution_zh": [
+        "若分子至少二，分数至少十五分之一，比十七分之一还大，矛盾。",
+        "所以分子为一，严格比较要求分母大于十七。",
+        "因此恰为分子一、分母十八至三十，且全部满足条件。"
+      ],
+      "tip_en": "A good candidate converts a huge search into the small class capable of beating it.",
+      "tip_zh": "一个好候选能把巨大搜索缩成仅有可能胜过它的小类。",
+      "question_ids": [
+        "AIME-2013-II-Q14",
+        "AIME-2022-I-Q07"
+      ],
+      "prerequisites": [
+        "NT03"
+      ],
+      "extensions_en": [
+        "For a remainder of $n$ by $k\\le n/2$, the quotient is at least two, so the remainder is bounded by both $k-1$ and $n-2k$. Split the divisor range near their intersection, then exhibit a divisor realizing the better bound and check its actual quotient; a divisor of $n$ has remainder zero regardless of a loose upper bound."
+      ],
+      "extensions_zh": [
+        "用 $k\\le n/2$ 除 $n$ 时商至少二，所以余数同时不超过 $k-1$ 与 $n-2k$。在两界交会附近分割除数区间，再给出达到较好界的除数并检查真实商；整除时余数为零，不能把宽松上界当作实际余数。"
+      ]
+    },
+    {
+      "method_id": "LO02-M16",
+      "title_en": "Use least representable residues to certify a largest gap",
+      "title_zh": "用最小可表示余数值核实最大缺口",
+      "steps_en": [
+        "Choose a denomination $d$ and find the least representable amount $M_r$ in every residue class modulo $d$.",
+        "Adding copies of $d$ then reaches every larger amount in that residue.",
+        "The largest missing amount in residue $r$ is $M_r-d$, so the overall largest gap is their maximum.",
+        "Prove every residue minimum is minimal and construct its representation."
+      ],
+      "steps_zh": [
+        "选一种面额作模数，在每个余数类找最小可表示金额。",
+        "再加该面额，就能到达同余类中全部更大金额。",
+        "该类最大缺失额为最小额减模数，全局取最大。",
+        "必须证明各最小额真正最小，并给出表示。"
+      ],
+      "example_en": "With unlimited stamps of values four and seven, find the largest nonrepresentable positive amount.",
+      "example_zh": "四与七面额邮票无限，求最大不可表示正金额。",
+      "solution_en": [
+        "Modulo four, zero through three have least represented values $0,21,14,7$: respectively use zero, three, two, one seven-stamps.",
+        "Adding four-stamps reaches every larger value in the same residue; fewer seven-stamps cannot reach that residue at a lower value.",
+        "The largest gaps are $-4,17,10,3$, so the largest positive gap is seventeen."
+      ],
+      "solution_zh": [
+        "模四的零至三余数最小表示额分别为零、二十一、十四、七。",
+        "再加四即可覆盖同余类后续所有值；更少七票不能以更小金额得到该余数。",
+        "各类最大缺口为负四、十七、十、三，所以最大正缺口为十七。"
+      ],
+      "tip_en": "One large residue minimum is not enough; all other residue classes must also obey the claimed largest gap.",
+      "tip_zh": "只有一个余数最小额很大还不够，其他所有类也须符合所称最大缺口。",
+      "question_ids": [
+        "AIME-2019-II-Q14"
+      ],
+      "prerequisites": [
+        "NT03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M17",
+      "title_en": "Prove the no-gap subset-sum coverage criterion",
+      "title_zh": "证明子集和无缺口覆盖准则",
+      "steps_en": [
+        "Sort the available positive coin or stamp values and keep the covered interval $[0,S]$.",
+        "The next value $v$ extends coverage without a gap exactly when $v\\le S+1$.",
+        "Then the old interval and its shifted copy overlap or touch, giving all values through $S+v$.",
+        "Use mandatory denomination counts to prove a lower bound, then exhibit a collection satisfying the criterion and the target total."
+      ],
+      "steps_zh": [
+        "将正面额排序，维护已覆盖区间 $[0,S]$。",
+        "下一面额 $v\\le S+1$ 时，且仅此时不会产生新缺口。",
+        "原区间与平移区间相接或重叠，覆盖扩展至 $S+v$。",
+        "以必须保留的面额数量证明下界，再给出满足准则及目标总量的具体集合。"
+      ],
+      "example_en": "Show that stamps $1,1,3,6$ make every amount from zero to eleven, and explain why replacing three by four creates a gap.",
+      "example_zh": "证明邮票一、一、三、六可拼出零至十一的所有金额，并说明将三改为四为何产生缺口。",
+      "solution_en": [
+        "The two ones cover $[0,2]$. Adding three gives the shifted interval $[3,5]$, contiguous with it, hence coverage $[0,5]$.",
+        "Adding six gives $[6,11]$, so the full interval through eleven is covered.",
+        "If three is replaced by four, after the ones the next value exceeds $2+1$. The amount three cannot be formed, since all remaining stamps are at least four."
+      ],
+      "solution_zh": [
+        "两张一覆盖零至二，加入三的平移区间为三至五，与原区间相接。",
+        "再加入六，平移部分覆盖六至十一，因此全覆盖。",
+        "若三改四，两张一后下一票超过三，金额三无法拼出，因为其他票至少四。"
+      ],
+      "tip_en": "The greedy interval criterion proves all intermediate sums, not merely that the total is large enough.",
+      "tip_zh": "区间准则证明所有中间和都可达，而不仅是总面额足够。",
+      "question_ids": [
+        "AIME-2022-II-Q14"
+      ],
+      "prerequisites": [
+        "AL06"
+      ],
+      "extensions_en": [
+        "For three denominations $1<b<c$ with $x,y,z$ positive counts, full coverage through the collection total is equivalent to $x\\ge b-1$ and $x+yb\\ge c-1$. To cover a smaller target, require total at least the target; use necessity of the $c$-threshold only when that threshold lies within the target range."
+      ],
+      "extensions_zh": [
+        "三种面额 $1<b<c$、张数均正时，要覆盖直到全体总额的每个值，充要条件为 $x\\ge b-1,x+yb\\ge c-1$。覆盖较小目标还需总额足够；只有 $c$ 门槛位于目标范围内，才能把该门槛作为必要条件。"
+      ]
+    },
+    {
+      "method_id": "LO02-M18",
+      "title_en": "Use improving coin exchanges to reduce every optimum to a few cases",
+      "title_zh": "用改进换币把所有最优解缩成少量情形",
+      "steps_en": [
+        "Find local equal-value exchanges that strictly reduce coin count.",
+        "Every optimum must avoid those patterns, bounding the lower-denomination remainder.",
+        "This bounds the possible number of largest coins to a short list near the greedy count.",
+        "Compare every normalized case; greedy is optimal only if none improves it."
+      ],
+      "steps_zh": [
+        "寻找同值但严格减少枚数的局部换币。",
+        "最优解不能含这些模式，从而限制小面额剩余总值。",
+        "由此把大面额枚数限制为贪心数附近的少数候选。",
+        "比较全部归一候选，只有无改进时贪心才最优。"
+      ],
+      "example_en": "Using coins one, four, six, find the minimum number for amount fourteen and compare with greedy.",
+      "example_zh": "用一、四、六面额拼十四，求最少枚数，并与贪心比较。",
+      "solution_en": [
+        "An optimum has at most three pennies and two fours, since four pennies exchange for one four and three fours for two sixes.",
+        "The non-six remainder is at most eleven, so only two or one sixes need comparison. With two sixes, two pennies give four coins; with one six, two fours give three coins.",
+        "Thus $6+4+4$ uses the minimum three coins, beating greedy $6+6+1+1$."
+      ],
+      "solution_zh": [
+        "最优解至多三枚一和两枚四，否则可同值换成更少硬币。",
+        "非六剩余至多十一，所以只需比较两枚六或一枚六：前者还需两枚一，共四枚；后者还需两枚四，共三枚。",
+        "因此六加四加四为最少三枚，比贪心的四枚更好。"
+      ],
+      "tip_en": "A normalization proof must cover every optimum, not just a rival example.",
+      "tip_zh": "归一论证必须覆盖所有最优解，不能只给一个竞争例子。",
+      "question_ids": [
+        "AIME-2025-II-Q08"
+      ],
+      "prerequisites": [
+        "NT03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M19",
+      "title_en": "Check degree-weight bounds against graph sign compatibility",
+      "title_zh": "检查度数加权界与图符号构造是否相容",
+      "steps_en": [
+        "Use a common center to bound each edge difference by the deviations at its two ends.",
+        "Rearrange deviations against degrees to obtain an upper bound.",
+        "Equality needs every edge to join compatible low/high labels; test the capacities of those sign classes.",
+        "If the bound cannot be attained, refine the cases rather than report it as the maximum."
+      ],
+      "steps_zh": [
+        "以公共中心将每条边差界为两端偏差之和。",
+        "把偏差与度数重排，得到上界。",
+        "取等要求每边连接相容高低标号，须检查两符号类的容量。",
+        "若不能取等，就细分情形，而不能将上界报成最大值。"
+      ],
+      "example_en": "Label a three-leaf star with one through four. Find the greatest sum of edge differences and explain why a naive degree bound can be loose.",
+      "example_zh": "将一至四标在三叶星图上，求边差总和最大值，并说明简单度数界为何可能偏松。",
+      "solution_en": [
+        "At center value $5/2$, deviations are $3/2,3/2,1/2,1/2$. Assigning the largest to degree three gives upper bound seven.",
+        "If the central vertex has label $c=1,2,3,4$, the actual three-edge sums are respectively six, four, four, six.",
+        "Thus the maximum is six. The degree bound seven cannot attain its required edge sign pattern; a bipartite graph alone does not guarantee the needed label capacities."
+      ],
+      "solution_zh": [
+        "以二分之五为中心，偏差为二分之三、二分之三、二分之一、二分之一，重排度数给出上界七。",
+        "但中心顶点分别标一、二、三、四时，真实边差和分别为六、四、四、六。",
+        "所以最大为六，七的重排取等符号无法实现；仅有二分图结构还不足以保证标号容量。"
+      ],
+      "tip_en": "An explicit checkerboard construction must allocate each degree class on both colors correctly.",
+      "tip_zh": "明确棋盘构造还须把每种度数的位置在两色中正确分配。",
+      "question_ids": [
+        "AIME-2026-I-Q11"
+      ],
+      "prerequisites": [
+        "AL07",
+        "CO06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "LO02-M20",
+      "title_en": "Split composite counting factors to minimize additive cost",
+      "title_zh": "拆分复合计数因子以降低加法成本",
+      "steps_en": [
+        "Prove the combinatorial count factors independently as a product of integers $d_i\\ge2$.",
+        "Express the resource cost of each factor, often $d_i-1$.",
+        "If a factor splits as $gh$, compare the split and unsplit costs exactly.",
+        "Use prime factorization for the lower bound and construct independent components realizing every prime factor."
+      ],
+      "steps_zh": [
+        "先证明组合计数独立分解为若干至少二的整数因子。",
+        "表示每因子的资源成本，常为因子减一。",
+        "若因子为 $gh$，精确比较拆分及未拆成本。",
+        "以素因数分解给下界，再构造分别实现各素因子的独立部件。"
+      ],
+      "example_en": "For $M\\ge2$, prove the minimum of $\\sum_i(d_i-1)$ over all factorizations $M=\\prod_i d_i$, $d_i\\ge2$, is $\\sum_p v_p(M)(p-1)$.",
+      "example_zh": "对 $M\\ge2$，证明所有分解 $M=\\prod_i d_i,d_i\\ge2$ 中，成本和最小为 $\\sum_pv_p(M)(p-1)$。",
+      "solution_en": [
+        "If a factor $gh$ is composite with $g,h\\ge2$, its cost is $gh-1$. The split cost is $g+h-2$.",
+        "The saving is $(g-1)(h-1)>0$, so no minimum can keep a composite factor.",
+        "All factors at a minimum are therefore primes. Unique factorization fixes their multiplicities and gives the claimed cost, which the prime-factor list itself attains."
+      ],
+      "solution_zh": [
+        "复合因子 $gh$ 未拆成本为 $gh-1$，拆分成本为 $g+h-2$。",
+        "节省量为 $(g-1)(h-1)>0$，所以最优分解不能保留复合因子。",
+        "最优因子全为素数，由唯一分解确定重数，得到公式，素因子列表本身即取等。"
+      ],
+      "tip_en": "The product factorization needs a bijection or unique matching proof before costs may be optimized independently.",
+      "tip_zh": "独立优化成本之前，计数乘积必须先有双射或唯一匹配证明。",
+      "question_ids": [
+        "AIME-2026-II-Q13"
+      ],
+      "prerequisites": [
+        "NT01",
+        "CO07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2001-II-Q05",
+    "AIME-2003-II-Q12",
+    "AIME-2004-I-Q05",
+    "AIME-2006-I-Q02",
+    "AIME-2007-II-Q08",
+    "AIME-2009-II-Q12",
+    "AIME-2022-I-Q07",
+    "AIME-2022-II-Q14",
+    "AIME-2025-II-Q08",
+    "AIME-2026-I-Q11"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-I-Q08": {
+      "method_ids": [
+        "LO02-M01"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2020-II-Q05": {
+      "method_ids": [
+        "LO02-M01"
+      ],
+      "prerequisites": [
+        "NT06"
+      ]
+    },
+    "AIME-2001-II-Q05": {
+      "method_ids": [
+        "LO02-M02"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2002-I-Q14": {
+      "method_ids": [
+        "LO02-M03"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2003-II-Q12": {
+      "method_ids": [
+        "LO02-M04"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2004-I-Q05": {
+      "method_ids": [
+        "LO02-M04"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2006-I-Q02": {
+      "method_ids": [
+        "LO02-M05"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2006-I-Q15": {
+      "method_ids": [
+        "LO02-M06"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2007-II-Q08": {
+      "method_ids": [
+        "LO02-M07"
+      ],
+      "prerequisites": [
+        "AL07",
+        "NT03"
+      ]
+    },
+    "AIME-2008-I-Q12": {
+      "method_ids": [
+        "LO02-M08"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2008-II-Q10": {
+      "method_ids": [
+        "LO02-M09"
+      ],
+      "prerequisites": [
+        "CO06"
+      ]
+    },
+    "AIME-2009-II-Q12": {
+      "method_ids": [
+        "LO02-M10"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2016-II-Q04": {
+      "method_ids": [
+        "LO02-M10"
+      ],
+      "prerequisites": [
+        "CO04",
+        "NT02"
+      ]
+    },
+    "AIME-2010-I-Q12": {
+      "method_ids": [
+        "LO02-M11"
+      ],
+      "prerequisites": [
+        "LO01"
+      ]
+    },
+    "AIME-2011-II-Q07": {
+      "method_ids": [
+        "LO02-M12"
+      ],
+      "prerequisites": [
+        "CO01",
+        "CO03"
+      ]
+    },
+    "AIME-2011-II-Q08": {
+      "method_ids": [
+        "LO02-M13"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2013-II-Q06": {
+      "method_ids": [
+        "LO02-M14"
+      ],
+      "prerequisites": [
+        "AL06",
+        "NT05"
+      ]
+    },
+    "AIME-2013-II-Q14": {
+      "method_ids": [
+        "LO02-M15"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2022-I-Q07": {
+      "method_ids": [
+        "LO02-M15"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2019-II-Q14": {
+      "method_ids": [
+        "LO02-M16"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2022-II-Q14": {
+      "method_ids": [
+        "LO02-M17"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2025-II-Q08": {
+      "method_ids": [
+        "LO02-M18"
+      ],
+      "prerequisites": [
+        "NT03"
+      ]
+    },
+    "AIME-2026-I-Q11": {
+      "method_ids": [
+        "LO02-M19"
+      ],
+      "prerequisites": [
+        "AL07",
+        "CO06"
+      ]
+    },
+    "AIME-2026-II-Q13": {
+      "method_ids": [
+        "LO02-M20"
+      ],
+      "prerequisites": [
+        "CO07",
+        "NT01"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

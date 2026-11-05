@@ -1,0 +1,417 @@
+{
+  "subtype_id": "GE08",
+  "introduction_en": "A conic equation is most useful after its geometry has selected the variables. Distinguish intersection, focal-distance optimization, tangency and envelope questions; each needs its own existence and branch check.",
+  "introduction_zh": "先由几何关系选择变量，圆锥曲线方程才最有效。求交、焦距优化、相切与包络问题应分别处理，并检验存在性与分支。",
+  "prerequisites": [
+    "GE07",
+    "AL01"
+  ],
+  "methods": [
+    {
+      "method_id": "GE08-M01",
+      "title_en": "Exploit symmetry before intersecting an ellipse",
+      "title_zh": "求椭圆交点前先利用对称性",
+      "steps_en": [
+        "Place the symmetry axis on a coordinate axis and write paired points as $(u,v),(-u,v)$.",
+        "Translate a metric condition, such as an equilateral altitude, into one linear relation between $u,v$.",
+        "Substitute into the conic, reject collapsed configurations, and recover the requested length."
+      ],
+      "steps_zh": [
+        "把对称轴放在坐标轴上，将成对的点写为 $(u,v),(-u,v)$。",
+        "将等边三角形高等度量条件转为 $u,v$ 的一个线性关系。",
+        "代入圆锥曲线，排除退化构型，再求目标长度。"
+      ],
+      "example_en": "An equilateral triangle has top vertex $(0,2)$ on $x^2+4y^2=16$ and altitude on the $y$ axis. Find its squared side length.",
+      "example_zh": "等边三角形的顶点 $(0,2)$ 在椭圆 $x^2+4y^2=16$ 上，一条高在 $y$ 轴上。求边长平方。",
+      "solution_en": [
+        "The other vertices are $(u,v),(-u,v)$, where $u>0$ and $v=2-\\sqrt3u$.",
+        "Substitution gives $u^2+4(2-\\sqrt3u)^2=16$, hence $u(13u-16\\sqrt3)=0$.",
+        "Reject $u=0$. The side is $2u=32\\sqrt3/13$, whose square is $3072/169$."
+      ],
+      "solution_zh": [
+        "另两顶点为 $(u,v),(-u,v)$，其中 $u>0,v=2-\\sqrt3u$。",
+        "代入得 $u^2+4(2-\\sqrt3u)^2=16$，即 $u(13u-16\\sqrt3)=0$。",
+        "排除 $u=0$，边长为 $32\\sqrt3/13$，平方为 $3072/169$。"
+      ],
+      "tip_en": "A zero algebraic root can represent a collapsed triangle.",
+      "tip_zh": "代数零根可能对应退化三角形。",
+      "question_ids": [
+        "AIME-2001-I-Q05"
+      ],
+      "prerequisites": [
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M02",
+      "title_en": "Combine conics, then certify the number of intersections",
+      "title_zh": "线性组合圆锥曲线后严格核实交点数",
+      "steps_en": [
+        "Rewrite both conics with all terms on one side and look for a linear combination having equal $x^2,y^2$ coefficients.",
+        "Complete squares to identify the circle containing every common point.",
+        "Independently eliminate one variable and certify distinct real roots with disjoint sign intervals or derivative monotonicity.",
+        "Check a boundary root separately: a zero value alone does not certify distinct crossings."
+      ],
+      "steps_zh": [
+        "把两圆锥曲线都移项，寻找使 $x^2,y^2$ 系数相同的线性组合。",
+        "配方，确定包含全部公共点的圆。",
+        "另行消元，用互不重叠的变号区间或导数单调性核实不同实根数。",
+        "边界根须单独检验；仅有函数值为零不能证明相邻区间仍有另一根。"
+      ],
+      "example_en": "Find a circle through all intersections of $y=x^2-2$ and $x=y^2-2$, and determine the intersection count.",
+      "example_zh": "求经过 $y=x^2-2$ 与 $x=y^2-2$ 全部交点的圆，并确定交点数。",
+      "solution_en": [
+        "Adding gives $x^2+y^2-x-y=4$, or $(x-1/2)^2+(y-1/2)^2=9/2$.",
+        "Subtracting gives $(x-y)(x+y+1)=0$. On $x=y$, the equation is $x^2-x-2=0$, giving $x=2,-1$.",
+        "On $x+y=-1$, substitute $y=-1-x$ into $y=x^2-2$: $x^2+x-1=0$, giving two distinct roots. Neither equals its paired $y$, so these are two further points.",
+        "There are four distinct real intersections, all on the identified circle."
+      ],
+      "solution_zh": [
+        "相加得 $x^2+y^2-x-y=4$，即 $(x-1/2)^2+(y-1/2)^2=9/2$。",
+        "相减得 $(x-y)(x+y+1)=0$。当 $x=y$ 时，$x^2-x-2=0$ 给出 $x=2,-1$。",
+        "当 $x+y=-1$ 时，代入得 $x^2+x-1=0$，有两个不同根；它们均不等于对应的 $y$，所以另给两点。",
+        "因此共有四个不同实交点，且均位于所求圆上。"
+      ],
+      "tip_en": "A containing circle does not by itself guarantee four conic intersections.",
+      "tip_zh": "找到公共圆并不能自动保证有四个圆锥曲线交点。",
+      "question_ids": [
+        "AIME-2021-I-Q15"
+      ],
+      "prerequisites": [
+        "AL02"
+      ],
+      "extensions_en": [
+        "For a quartic with positive leading coefficient, four alternating sign intervals certify exactly four roots. If a boundary sample is zero, a nonzero derivative can supply the nearby sign change."
+      ],
+      "extensions_zh": [
+        "首项系数为正的四次式，四个交错变号区间可核实恰有四根。若边界样点恰为零，可利用非零导数补出附近的符号变化。"
+      ]
+    },
+    {
+      "method_id": "GE08-M03",
+      "title_en": "A tangent-circle center traces an ellipse",
+      "title_zh": "相切圆的圆心形成椭圆轨迹",
+      "steps_en": [
+        "Turn internal/external tangency into center-distance equations involving the unknown radius.",
+        "Eliminate that radius; a constant sum of two distances identifies an ellipse.",
+        "Before optimizing, verify every proposed ellipse point gives a positive radius and the required containment.",
+        "Substitute a variable line and require its quadratic discriminant to be nonnegative; an endpoint slope occurs at tangency."
+      ],
+      "steps_zh": [
+        "把内切、外切写为包含未知半径的圆心距离方程。",
+        "消去半径；到两定点距离和为常数时得到椭圆。",
+        "优化前先验证椭圆点给出的半径为正且满足容纳关系。",
+        "代入可变直线，要求二次方程判别式非负；极端斜率常在相切时出现。"
+      ],
+      "example_en": "A circle lies inside the radius-$7$ circle centered at $(-3,0)$ and is externally tangent to the radius-$3$ circle centered at $(3,0)$. Show its center lies on an ellipse and decide whether every point of that ellipse is admissible.",
+      "example_zh": "某圆在圆心 $(-3,0)$、半径 $7$ 的圆内并与之内切，又与圆心 $(3,0)$、半径 $3$ 的圆外切。求其圆心轨迹，并判断轨迹是否全部可行。",
+      "solution_en": [
+        "For center $P$ and radius $t$, write $PF_1=7-t$ and $PF_2=3+t$. Thus $PF_1+PF_2=10$.",
+        "The foci are six units apart, so the ellipse has $a=5,c=3,b=4$, equation $x^2/25+y^2/16=1$.",
+        "On this ellipse, $PF_1$ ranges from $2$ to $8$. But $t=7-PF_1>0$ requires $PF_1<7$, so part of the algebraic ellipse is inadmissible."
+      ],
+      "solution_zh": [
+        "设圆心为 $P$、半径为 $t$，有 $PF_1=7-t,PF_2=3+t$，所以距离和为 $10$。",
+        "焦距为六，故 $a=5,c=3,b=4$，椭圆方程为 $x^2/25+y^2/16=1$。",
+        "椭圆上 $PF_1$ 介于 $2$ 与 $8$，而 $t=7-PF_1>0$ 要求 $PF_1<7$，所以代数椭圆并非全部可行。"
+      ],
+      "tip_en": "Eliminating the radius can add inadmissible points; restore its sign.",
+      "tip_zh": "消去半径会加入不可行点，必须补回正性条件。",
+      "question_ids": [
+        "AIME-2005-II-Q15"
+      ],
+      "prerequisites": [
+        "GE06",
+        "AL02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M04",
+      "title_en": "Pair focal distances so triangle bounds attain equality together",
+      "title_zh": "配对焦距使三角不等式同时取等",
+      "steps_en": [
+        "Express each ellipse parameter as half its sum of focal distances.",
+        "Try both pairings of the four foci and apply triangle inequalities through the common point.",
+        "Choose a pairing whose two joining segments actually intersect.",
+        "At that intersection, recompute the parameters and check strict ellipse restrictions."
+      ],
+      "steps_zh": [
+        "将每个椭圆参数写成两焦距之和的一半。",
+        "尝试四焦点的两种配对，对经过公共点的折线使用三角不等式。",
+        "选择两条焦点连线确实相交的配对。",
+        "在交点重新计算参数，并检验椭圆参数的严格限制。"
+      ],
+      "example_en": "Ellipse families have foci $(-2,0),(2,0)$ and $(4,2),(4,4)$, with distance sums $2a,2b$. Find the least possible $a+b$ at a common point.",
+      "example_zh": "两族椭圆焦点分别为 $(-2,0),(2,0)$ 与 $(4,2),(4,4)$，焦距和为 $2a,2b$。求有公共点时 $a+b$ 的最小值。",
+      "solution_en": [
+        "Pair $(-2,0)$ with $(4,2)$ and $(2,0)$ with $(4,4)$. The joining lengths are $2\\sqrt{10},2\\sqrt5$, so $a+b\\ge\\sqrt{10}+\\sqrt5$.",
+        "The segments intersect at $P=(14/5,8/5)$, found from $y=(x+2)/3$ and $y=2(x-2)$. The point lies strictly inside both segments.",
+        "At $P$, both distance inequalities are equalities. The point is on neither focal axis, so the two ellipses are nondegenerate, attaining $\\sqrt{10}+\\sqrt5$."
+      ],
+      "solution_zh": [
+        "把 $(-2,0)$ 与 $(4,2)$、$(2,0)$ 与 $(4,4)$ 配对，连线长为 $2\\sqrt{10},2\\sqrt5$，所以 $a+b\\ge\\sqrt{10}+\\sqrt5$。",
+        "由两直线 $y=(x+2)/3,y=2(x-2)$，交点为 $P=(14/5,8/5)$，严格位于两线段内部。",
+        "在 $P$，两处三角不等式同时取等。此点不在任一焦轴上，两椭圆均非退化，故达到 $\\sqrt{10}+\\sqrt5$。"
+      ],
+      "tip_en": "A lower bound from the wrong pairing may have incompatible equality cases.",
+      "tip_zh": "错误配对所得下界，其等号条件可能互不相容。",
+      "question_ids": [
+        "AIME-2022-II-Q12"
+      ],
+      "prerequisites": [
+        "AL07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M05",
+      "title_en": "Perpendicular hyperbola radii give an open feasible interval",
+      "title_zh": "双曲线垂直径向量给出开可行区间",
+      "steps_en": [
+        "Write opposite vertices as $P,-P,Q,-Q$ and use perpendicularity of rhombus diagonals.",
+        "Substitute a slope into the conic and require a positive finite squared coordinate.",
+        "Apply the same existence condition to the perpendicular slope.",
+        "Optimize only on their common open interval and distinguish an infimum from an attained minimum."
+      ],
+      "steps_zh": [
+        "把对角顶点写为 $P,-P,Q,-Q$，并使用菱形对角线垂直。",
+        "将斜率代入曲线，要求坐标平方为正且有限。",
+        "对垂直斜率使用同样的存在条件。",
+        "只在公共开区间上优化，区分下确界与可取到的最小值。"
+      ],
+      "example_en": "A centered rhombus has vertices on $x^2/3-y^2/4=1$. Find the infimum of a squared diagonal.",
+      "example_zh": "中心在原点的菱形顶点位于 $x^2/3-y^2/4=1$，求一条对角线平方的下确界。",
+      "solution_en": [
+        "Put $P=(x,mx)$. Then $x^2=12/(4-3m^2)$, and the perpendicular line exists only when $3/4<m^2<4/3$.",
+        "The diagonal square is $4|P|^2=48(1+m^2)/(4-3m^2)$, strictly increasing in $m^2$.",
+        "At the lower endpoint the limit is $48$. Every feasible value is greater than $48$, and slopes approaching the endpoint attain values arbitrarily close to it."
+      ],
+      "solution_zh": [
+        "令 $P=(x,mx)$，则 $x^2=12/(4-3m^2)$；垂直直线也有交点要求 $3/4<m^2<4/3$。",
+        "对角线平方为 $48(1+m^2)/(4-3m^2)$，随 $m^2$ 严格递增。",
+        "趋向下端点时极限为 $48$。所有可行值均大于 $48$，且可任意接近它。"
+      ],
+      "tip_en": "The endpoint fails because the other diagonal becomes asymptotic, not because the objective is undefined there.",
+      "tip_zh": "端点不可行是因为另一对角线成为渐近方向，并非目标表达式在该处无定义。",
+      "question_ids": [
+        "AIME-2024-I-Q09"
+      ],
+      "prerequisites": [
+        "AL07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M06",
+      "title_en": "A one-segment point is an envelope tangency",
+      "title_zh": "仅属于一条线段的点对应包络相切",
+      "steps_en": [
+        "Parameterize unit-axis intercepts by $(\\cos\\theta,\\sin\\theta)$.",
+        "For a positive point, form $F(\\theta)=x\\sec\\theta+y\\csc\\theta$; membership is $F=1$.",
+        "Use strict convexity and endpoint divergence to show exactly one segment means the minimum equals one.",
+        "Solve $F=1,F\\prime=0$ at the specified segment parameter."
+      ],
+      "steps_zh": [
+        "用 $(\\cos\\theta,\\sin\\theta)$ 参数化单位线段的轴截距。",
+        "对正坐标点构造 $F(\\theta)=x\\sec\\theta+y\\csc\\theta$，在线段上等价于 $F=1$。",
+        "由严格凸性和端点趋于无穷，证明仅有一条线段等价于最小值恰为一。",
+        "在指定线段参数处联立 $F=1,F\\prime=0$。"
+      ],
+      "example_en": "On the unit segment joining $(\\sqrt3/2,0)$ and $(0,1/2)$, find the positive point lying on no other unit segment joining the axes.",
+      "example_zh": "在连接 $(\\sqrt3/2,0)$ 与 $(0,1/2)$ 的单位线段上，求不在其他同类单位截轴线段上的正坐标点。",
+      "solution_en": [
+        "The parameter is $\\theta=\\pi/6$. The equations are $2x/\\sqrt3+2y=1$ and $(2/3)x-2\\sqrt3y=0$.",
+        "The derivative equation gives $x=3\\sqrt3y$. Substitution yields $y=1/8,x=3\\sqrt3/8$.",
+        "For positive $x,y$, $F$ is strictly convex and diverges at both endpoints. Its stationary value is one, so this point belongs to exactly one unit segment."
+      ],
+      "solution_zh": [
+        "参数为 $\\theta=\\pi/6$，两式为 $2x/\\sqrt3+2y=1$ 与 $(2/3)x-2\\sqrt3y=0$。",
+        "导数式给出 $x=3\\sqrt3y$，代入得 $y=1/8,x=3\\sqrt3/8$。",
+        "正坐标下 $F$ 严格凸且两端趋于无穷；其驻点值为一，因此该点只属于一条单位线段。"
+      ],
+      "tip_en": "A formal envelope equation needs a uniqueness proof; convexity supplies it.",
+      "tip_zh": "形式上的包络方程仍需唯一性证明，严格凸性可提供此证明。",
+      "question_ids": [
+        "AIME-2024-II-Q12"
+      ],
+      "prerequisites": [
+        "AL07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M07",
+      "title_en": "Use reflection symmetry to construct a rotated-conic intersection",
+      "title_zh": "利用反射对称构造旋转圆锥曲线交点",
+      "steps_en": [
+        "Identify a reflection preserving the original conic.",
+        "Seek a point whose inverse rotation is exactly that reflection.",
+        "The resulting linear relation intersects the original conic in explicit candidates.",
+        "Check the requested quadrant and use stated uniqueness only after verifying the constructed point."
+      ],
+      "steps_zh": [
+        "找出保持原圆锥曲线不变的反射。",
+        "寻找逆旋转恰等于该反射的点。",
+        "所得线性关系与原曲线相交，给出明确候选。",
+        "检验所需象限；须先验证构造点，再使用题给唯一性。"
+      ],
+      "example_en": "Construct a fourth-quadrant common point of $y=x^2-1$ and its $90^\\circ$ counterclockwise rotation.",
+      "example_zh": "构造 $y=x^2-1$ 与其绕原点逆时针旋转 $90^\\circ$ 后曲线的一个第四象限公共点。",
+      "solution_en": [
+        "The inverse rotation is $(x,y)\\mapsto(y,-x)$, and the original parabola is preserved by $(x,y)\\mapsto(-x,y)$.",
+        "Equating these images gives $y=-x$. With $y=x^2-1$, the positive root is $x=(\\sqrt5-1)/2$.",
+        "The point $((\\sqrt5-1)/2,(1-\\sqrt5)/2)$ lies in the fourth quadrant, and its inverse rotation is its reflection on the original parabola, so it belongs to both curves."
+      ],
+      "solution_zh": [
+        "逆旋转为 $(x,y)\\mapsto(y,-x)$，原抛物线关于 $(x,y)\\mapsto(-x,y)$ 不变。",
+        "令两像相等，得 $y=-x$。与 $y=x^2-1$ 联立，正根为 $x=(\\sqrt5-1)/2$。",
+        "所得点 $((\\sqrt5-1)/2,(1-\\sqrt5)/2)$ 在第四象限；逆旋转像是原曲线上的反射点，所以它在两曲线上。"
+      ],
+      "tip_en": "This construction proves existence; uniqueness needs a separate argument unless explicitly given.",
+      "tip_zh": "此构造证明存在；若题目未给唯一性，还须另证。",
+      "question_ids": [
+        "AIME-2025-I-Q09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "GE08-M08",
+      "title_en": "Tangency radii are stationary distances to a conic",
+      "title_zh": "相切半径对应到圆锥曲线的驻定距离",
+      "steps_en": [
+        "Parameterize a smooth point on the conic.",
+        "Form squared distance from the prescribed circle center.",
+        "Differentiate: a stationary distance means the radius vector is normal to the conic tangent.",
+        "Evaluate every stationary distance, remove duplicate radii, and verify actual tangency."
+      ],
+      "steps_zh": [
+        "参数化圆锥曲线上的光滑点。",
+        "构造到指定圆心的距离平方。",
+        "求导：距离驻定等价于半径向量垂直于曲线切线。",
+        "计算全部驻定距离，去掉重复半径，并核实实际相切。"
+      ],
+      "example_en": "Find all circle radii centered at $(0,3)$ tangent to $y=x^2$.",
+      "example_zh": "求圆心 $(0,3)$ 且与抛物线 $y=x^2$ 相切的所有圆半径。",
+      "solution_en": [
+        "At $(t,t^2)$, squared distance is $D(t)=t^2+(t^2-3)^2$.",
+        "Its derivative is $D\\prime(t)=2t(2t^2-5)$, giving $t=0$ or $t^2=5/2$.",
+        "These give $D=9$ and $D=11/4$. Thus the distinct radii are $3$ and $\\sqrt{11}/2$; in each case the radius is perpendicular to the tangent."
+      ],
+      "solution_zh": [
+        "在点 $(t,t^2)$，距离平方为 $D(t)=t^2+(t^2-3)^2$。",
+        "导数为 $D\\prime(t)=2t(2t^2-5)$，所以 $t=0$ 或 $t^2=5/2$。",
+        "对应距离平方为 $9,11/4$，故不同半径为 $3,\\sqrt{11}/2$；两种情况下半径均垂直于切线。"
+      ],
+      "tip_en": "Tangency at one point does not require the circle to avoid the conic everywhere else.",
+      "tip_zh": "在一点相切，并不要求圆与曲线在其他位置没有交点。",
+      "question_ids": [
+        "AIME-2026-II-Q06"
+      ],
+      "prerequisites": [
+        "AL07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2001-I-Q05",
+    "AIME-2005-II-Q15",
+    "AIME-2021-I-Q15",
+    "AIME-2022-II-Q12",
+    "AIME-2024-I-Q09",
+    "AIME-2024-II-Q12",
+    "AIME-2025-I-Q09",
+    "AIME-2026-II-Q06"
+  ],
+  "coverage_by_question": {
+    "AIME-2001-I-Q05": {
+      "method_ids": [
+        "GE08-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2021-I-Q15": {
+      "method_ids": [
+        "GE08-M02"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2005-II-Q15": {
+      "method_ids": [
+        "GE08-M03"
+      ],
+      "prerequisites": [
+        "AL02",
+        "GE06"
+      ]
+    },
+    "AIME-2022-II-Q12": {
+      "method_ids": [
+        "GE08-M04"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2024-I-Q09": {
+      "method_ids": [
+        "GE08-M05"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2024-II-Q12": {
+      "method_ids": [
+        "GE08-M06"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    },
+    "AIME-2025-I-Q09": {
+      "method_ids": [
+        "GE08-M07"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2026-II-Q06": {
+      "method_ids": [
+        "GE08-M08"
+      ],
+      "prerequisites": [
+        "AL07"
+      ]
+    }
+  },
+  "review": {
+    "author": "print_builder",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": true,
+    "reviewer": "root",
+    "findings": [
+      "All eight procedures and original worked examples independently read and recomputed by root; all pass."
+    ]
+  },
+  "unresolved_issues": []
+}

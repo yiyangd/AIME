@@ -1,0 +1,1100 @@
+{
+  "subtype_id": "AL07",
+  "introduction_en": "Every extremum needs a proved bound, the full feasible domain, and a compatible equality or limiting construction. A critical point or an attractive inequality alone does not establish a maximum.",
+  "introduction_zh": "每个最值都需要已证明的界、完整可行域，以及相容的取等或极限构造。只找到驻点或漂亮不等式，并不能证明最大值。",
+  "prerequisites": [
+    "AL01"
+  ],
+  "methods": [
+    {
+      "method_id": "AL07-M01",
+      "title_en": "Optimize one variable on its actual interval or residue class",
+      "title_zh": "在真实区间或余数类上优化单变量",
+      "steps_en": [
+        "Eliminate variables and retain all sign, interval, and integer-congruence restrictions.",
+        "For a quadratic, complete the square; for a monotone rational expression, compare its derivative or exact difference.",
+        "An integer optimum uses the nearest permitted lattice points to the vertex, not arbitrary rounding.",
+        "On an open interval, distinguish an attained value from an infimum or supremum."
+      ],
+      "steps_zh": [
+        "消元后保留全部符号、区间及整数同余限制。",
+        "二次式配方；单调有理式可比较导数或精确差值。",
+        "整数最优应取最接近顶点的允许格点，而不是任意四舍五入。",
+        "开区间必须区分实际可取的值与上下确界。"
+      ],
+      "example_en": "Maximize $x(30-x)$ for integers $0<x<30$ satisfying $x\\equiv1\\pmod4$.",
+      "example_zh": "对满足 $0<x<30,x\\equiv1\\pmod4$ 的整数，求 $x(30-x)$ 最大值。",
+      "solution_en": [
+        "Complete the square: $x(30-x)=225-(x-15)^2$.",
+        "The nearest allowed values are thirteen and seventeen, both distance two from the vertex. Every other allowed integer is farther.",
+        "Both give $225-4=221$, so the maximum is $221$, attained twice."
+      ],
+      "solution_zh": [
+        "配方为 $225-(x-15)^2$。",
+        "最近的允许整数为十三和十七，与顶点均差二，其余更远。",
+        "两者均给出 $221$，所以最大值为 $221$，且有两个取等点。"
+      ],
+      "tip_en": "A congruence restriction can make the two neighboring candidates unequal in value; compare both.",
+      "tip_zh": "同余限制下，邻近两候选的函数值未必相同，必须都比较。",
+      "question_ids": [
+        "AIME-2007-II-Q08",
+        "AIME-2008-I-Q14",
+        "AIME-2008-II-Q14",
+        "AIME-2010-II-Q13",
+        "AIME-2011-I-Q12",
+        "AIME-2013-I-Q08",
+        "AIME-2024-I-Q09"
+      ],
+      "prerequisites": [
+        "NT03",
+        "GE07"
+      ],
+      "extensions_en": [
+        "For a fractional expression on an open feasible interval, prove monotonicity throughout that interval. If the endpoint configuration is degenerate or violates another geometric condition, its limiting value is not attained. To certify the infimum, also construct a sequence of feasible parameters approaching that endpoint.",
+        "For an integer probability threshold, clear only positive denominators. Locate the real root between adjacent integers and verify that the rest of the admissible domain lies on the required side."
+      ],
+      "extensions_zh": [
+        "开可行区间上的分式须在整个区间证明单调性。若端点退化或违反其他几何条件，其极限不可取；要证明下确界，还须给出趋向端点的可行参数序列。",
+        "整数概率门槛中，只可清去已知正的分母。将实根定位在相邻整数之间，并证明可行域其余部分均落在正确一侧。"
+      ]
+    },
+    {
+      "method_id": "AL07-M02",
+      "title_en": "Complete a product and enforce every AM-GM equality",
+      "title_zh": "补成乘积并同时落实所有均值不等式等号",
+      "steps_en": [
+        "Group the variables into nonnegative factors whose sum is fixed.",
+        "Apply AM-GM to each factor group, or $px+q/x\\ge2\\sqrt{pq}$ for a reciprocal pair.",
+        "If the target is a product minus a constrained remainder, impose both equality requirements.",
+        "Construct original variables satisfying all group sums and side conditions together."
+      ],
+      "steps_zh": [
+        "把变量组成和固定的非负因子组。",
+        "对因子用均值不等式，倒数对可用 $px+q/x\\ge2\\sqrt{pq}$。",
+        "若目标为乘积减去受限余量，必须同时满足两处取等。",
+        "构造原变量，使所有组和及附加条件共同成立。"
+      ],
+      "example_en": "For positive $a,b,c,d$ with sum four, maximize $(a+b)(b+c)(c+d)(d+a)$.",
+      "example_zh": "正数 $a,b,c,d$ 的和为四，求 $(a+b)(b+c)(c+d)(d+a)$ 的最大值。",
+      "solution_en": [
+        "The opposite factors $a+b,c+d$ sum to four, so their product is at most four. The other opposite factors give the same bound.",
+        "Therefore the full product is at most sixteen. Equality requires $a+b=c+d=2$ and $b+c=d+a=2$.",
+        "These are compatible: take $a=c=1/2,b=d=3/2$. Thus sixteen is attained, with a nonconstant equality tuple."
+      ],
+      "solution_zh": [
+        "相对因子两两和为四，各自乘积至多四。",
+        "全积至多十六，取等要求两对因子都等于二。",
+        "条件相容，例如 $a=c=1/2,b=d=3/2$，所以十六确可达到，且不必四数全等。"
+      ],
+      "tip_en": "Equality in one grouped inequality may obstruct equality in another; verify the original tuple.",
+      "tip_zh": "一个分组不等式的取等可能妨碍另一个，须核对原变量。",
+      "question_ids": [
+        "AIME-2008-II-Q03",
+        "AIME-2009-II-Q15",
+        "AIME-2011-II-Q09"
+      ],
+      "prerequisites": [
+        "AL05",
+        "GE04"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M03",
+      "title_en": "Use weighted Cauchy and identify the proportionality",
+      "title_zh": "使用加权柯西并确定比例取等",
+      "steps_en": [
+        "For positive weights $w_i$, use $(\\sum x_i)^2\\le(\\sum x_i^2/w_i)(\\sum w_i)$.",
+        "Equality requires $x_i/w_i$ constant; enforce any positivity and normalization.",
+        "A linear trigonometric form $A\\cos t+B\\sin t$ is bounded by $\\sqrt{A^2+B^2}$.",
+        "Check that the proportional vector is permitted by all angular or segment constraints."
+      ],
+      "steps_zh": [
+        "正权重下使用加权柯西不等式。",
+        "取等须 $x_i/w_i$ 为常数，并满足正性及归一条件。",
+        "线性三角式 $A\\cos t+B\\sin t$ 的上界为 $\\sqrt{A^2+B^2}$。",
+        "检查比例方向是否符合所有角范围或线段限制。"
+      ],
+      "example_en": "For positive $x+y+z=1$, find the minimum of $x^2/2+y^2/3+z^2/5$.",
+      "example_zh": "正数 $x+y+z=1$，求 $x^2/2+y^2/3+z^2/5$ 的最小值。",
+      "solution_en": [
+        "Weighted Cauchy gives $1\\le10(x^2/2+y^2/3+z^2/5)$.",
+        "Equality requires $x/2=y/3=z/5$, and the sum condition sets the common ratio to $1/10$.",
+        "The positive tuple $(1/5,3/10,1/2)$ attains $1/10$, so that is the minimum."
+      ],
+      "solution_zh": [
+        "加权柯西给出目标至少为十分之一。",
+        "取等须 $x/2=y/3=z/5$，由和为一得公共比为十分之一。",
+        "正元组 $(1/5,3/10,1/2)$ 确取等，故最小值为十分之一。"
+      ],
+      "tip_en": "An equality constraint already saturating Cauchy can force a unique tuple, even when the question asks for an extremum.",
+      "tip_zh": "若条件本身已使柯西取等，可能直接迫使唯一元组，即使题目表述为求最值。",
+      "question_ids": [
+        "AIME-2016-II-Q15",
+        "AIME-2017-I-Q15",
+        "AIME-2024-I-Q07"
+      ],
+      "prerequisites": [
+        "AL05",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M04",
+      "title_en": "Pair triangle bounds with compatible equality configurations",
+      "title_zh": "配对三角不等式并检查相容取等构型",
+      "steps_en": [
+        "Group distance sums so each is bounded below by a fixed endpoint distance.",
+        "For a difference, use the reverse triangle inequality with its collinearity requirement.",
+        "Check that all required joining segments intersect, or that a rotation construction supplies a common equality point.",
+        "If using a Fermat point, verify the triangle-angle condition and its position on any additional equality segment."
+      ],
+      "steps_zh": [
+        "将距离和分组，使每组由固定端点距离给出下界。",
+        "距离差使用反三角不等式，并保留共线取等条件。",
+        "检查各连接线段是否相交，或由旋转构造给出共同取等点。",
+        "使用费马点时，须检查三角形角条件，以及它是否位于额外的取等线段上。"
+      ],
+      "example_en": "For a plane point $P$, minimize the sum of its distances to $(-3,0),(3,0),(0,-4),(0,4)$.",
+      "example_zh": "平面点 $P$ 到 $(-3,0),(3,0),(0,-4),(0,4)$ 的距离总和最小是多少？",
+      "solution_en": [
+        "The first opposite pair gives a distance-sum lower bound six, with equality exactly on its horizontal joining segment.",
+        "The second pair gives a lower bound eight, with equality on its vertical joining segment.",
+        "The two segments intersect at the origin, so both equalities hold there and the minimum total is fourteen."
+      ],
+      "solution_zh": [
+        "横向两点的距离和至少六，取等点位于连接它们的水平线段上。",
+        "竖向两点的距离和至少八，取等点位于相应竖直线段上。",
+        "两线段在原点相交，因此两处同时取等，最小总和为十四。"
+      ],
+      "tip_en": "Two separately sharp lower bounds need not have a common equality point.",
+      "tip_zh": "两个分别很紧的下界，未必有共同取等点。",
+      "question_ids": [
+        "AIME-2008-I-Q10",
+        "AIME-2012-II-Q06",
+        "AIME-2022-II-Q12",
+        "AIME-2025-I-Q14"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04",
+        "GE08"
+      ],
+      "extensions_en": [
+        "A complex modulus obeys the same triangle inequality: for fixed $|w|=R$, the farthest point from a fixed nonzero $c$ is $w=-Rc/|c|$. If $w$ is a power of another variable, verify a permitted root realizes this direction.",
+        "For three plane vertices with all angles below $120^\\circ$, erecting an outward equilateral triangle and rotating one distance by $60^\\circ$ gives the Fermat lower bound. Equality requires three rays meeting at $120^\\circ$. Additional distance-pair bounds must be attained at that same point."
+      ],
+      "extensions_zh": [
+        "复数模满足相同三角不等式：固定 $|w|=R$ 时，距非零定点 $c$ 最远的点为 $w=-Rc/|c|$。若 $w$ 是另一变量的幂，还须验证允许的根能实现此方向。",
+        "三角形各角小于一百二十度时，在一边外作等边三角形并旋转一段距离六十度，可得费马距离和下界；取等要求三射线夹角一百二十度，额外的距离对下界也须在同一点达到。"
+      ]
+    },
+    {
+      "method_id": "AL07-M05",
+      "title_en": "Optimize a fixed-angle area or a fixed-chord height",
+      "title_zh": "优化固定角面积或固定弦高",
+      "steps_en": [
+        "Express the area as a constant times a sine, its reciprocal, or the perpendicular height above a fixed chord.",
+        "Identify the exact arc or angle interval supplied by the geometry.",
+        "Use the allowed sine range or the circular-arc midpoint to prove the bound.",
+        "Prove the optimizing point is actually reached by the original moving construction."
+      ],
+      "steps_zh": [
+        "将面积写为常数乘正弦、除正弦，或固定弦上的垂直高。",
+        "确定几何实际给出的弧或角区间。",
+        "由允许的正弦范围或圆弧中点证明界。",
+        "证明原移动构造确实能到达最优点。"
+      ],
+      "example_en": "A circle has radius five and chord $AB=6$. Find the largest areas of $ABP$ when $P$ lies respectively on the minor and major arcs $AB$.",
+      "example_zh": "半径五的圆有弦 $AB=6$。点 $P$ 分别在劣弧、优弧 $AB$ 上时，三角形面积最大各是多少？",
+      "solution_en": [
+        "The center-to-chord distance is $\\sqrt{25-9}=4$.",
+        "The largest perpendicular heights on the minor and major arcs are respectively $5-4=1$ and $5+4=9$, attained at their arc midpoints.",
+        "The base is six, so the respective maximum areas are three and twenty-seven. The arc specification changes the answer."
+      ],
+      "solution_zh": [
+        "圆心到弦的距离为四。",
+        "劣弧、优弧上的最大高分别为一、九，均在各自弧中点达到。",
+        "底长六，因此最大面积分别为三、二十七；选择哪条弧会改变答案。"
+      ],
+      "tip_en": "A fixed locus bound must include a proof that the original parameter reaches its maximizing locus point.",
+      "tip_zh": "固定轨迹上的上界，还须证明原参数能到达轨迹的最优点。",
+      "question_ids": [
+        "AIME-2009-I-Q15",
+        "AIME-2013-II-Q10",
+        "AIME-2018-I-Q13"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03",
+        "GE04",
+        "GE05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M06",
+      "title_en": "Use even root multiplicities at interior nonnegative contacts",
+      "title_zh": "利用内部非负接触点的偶重根",
+      "steps_en": [
+        "Subtract the claimed minimum or comparison envelope to obtain a nonnegative polynomial on the relevant interval.",
+        "Every interior zero has even multiplicity, since an odd multiplicity changes sign.",
+        "Use the degree and leading coefficient to force a square factorization.",
+        "Compare coefficients and then verify that the proposed square has the required distinct roots and domain."
+      ],
+      "steps_zh": [
+        "减去最小值或比较包络，得到在相应区间非负的多项式。",
+        "内部零点的重数为偶数，因为奇重根会变号。",
+        "利用次数及首项系数迫使平方因式分解。",
+        "比较系数后，验证平方因子具有所需不同根及定义域。"
+      ],
+      "example_en": "A monic quartic is nonnegative for every real $x$ and vanishes at $-1,2$. Find its coefficient of $x^2$.",
+      "example_zh": "某首一四次式对所有实数非负，并在负一、二处为零，求二次项系数。",
+      "solution_en": [
+        "Each of the two distinct real zeros has multiplicity at least two.",
+        "The degree is four and the leading coefficient one, so the polynomial must be $(x+1)^2(x-2)^2=(x^2-x-2)^2$.",
+        "The $x^2$ coefficient is $1-4=-3$. The square also verifies global nonnegativity."
+      ],
+      "solution_zh": [
+        "两个不同实零点的重数均至少二。",
+        "由次数四及首一性，必为 $(x+1)^2(x-2)^2=(x^2-x-2)^2$。",
+        "二次项系数为 $1-4=-3$，平方形式也验证全域非负。"
+      ],
+      "tip_en": "An endpoint zero need not have even multiplicity; the contact must lie inside the nonnegative domain.",
+      "tip_zh": "端点零点未必为偶重，接触点必须位于非负定义域内部。",
+      "question_ids": [
+        "AIME-2010-I-Q06",
+        "AIME-2025-II-Q15"
+      ],
+      "prerequisites": [
+        "AL02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M07",
+      "title_en": "Bound inscribed shapes by projections and half-planes",
+      "title_zh": "用投影及半平面约束内含图形",
+      "steps_en": [
+        "For a fixed orientation, compute the width of the shape in every bounding normal direction.",
+        "A contained disk of radius $r$ must have center-to-boundary signed distances at least $r$.",
+        "Combine these linear inequalities to obtain a radius or orientation bound.",
+        "Exhibit a center and verify every inward half-plane, not just the active pair."
+      ],
+      "steps_zh": [
+        "固定朝向后，计算图形在各边法向的投影宽度。",
+        "若内含半径 $r$ 的圆盘，圆心到每条边界的有向距离须至少 $r$。",
+        "组合这些线性不等式，得到半径或朝向的界。",
+        "给出圆心并检查全部内侧半平面，而不只检查取等的一对。"
+      ],
+      "example_en": "Find the largest disk in $0\\le x\\le8,0\\le y\\le6,x+y\\le10$.",
+      "example_zh": "求区域 $0\\le x\\le8,0\\le y\\le6,x+y\\le10$ 内最大圆盘的半径。",
+      "solution_en": [
+        "For center $(u,v)$ and radius $r$, the lower sides give $u,v\\ge r$, while the diagonal side gives $u+v+\\sqrt2r\\le10$.",
+        "Thus $(2+\\sqrt2)r\\le10$, or $r\\le5(2-\\sqrt2)$.",
+        "Take the center $(r,r)$ at this radius. The diagonal constraint is equality, and $2r<6<8$ verifies both upper sides. Hence the bound is attained."
+      ],
+      "solution_zh": [
+        "圆心 $(u,v)$ 须有 $u,v\\ge r$，斜边又要求 $u+v+\\sqrt2r\\le10$。",
+        "故 $r\\le10/(2+\\sqrt2)=5(2-\\sqrt2)$。",
+        "取圆心为 $(r,r)$，斜边取等；因 $2r<6<8$，另外两上边界也满足，所以该界可达。"
+      ],
+      "tip_en": "A narrow strip gives an upper bound, but a disk may still fail another side constraint.",
+      "tip_zh": "最窄带只给上界，圆盘仍可能违反另一条边的限制。",
+      "question_ids": [
+        "AIME-2005-I-Q11",
+        "AIME-2018-I-Q08"
+      ],
+      "prerequisites": [
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M08",
+      "title_en": "Find a reachability envelope by a convex hull of disks",
+      "title_zh": "用圆盘凸包求可达包络",
+      "steps_en": [
+        "First justify a simplified optimal path model from the travel speeds.",
+        "For each final on-road distance, write the disk of remaining off-road reach.",
+        "When centers and radii vary linearly, identify the union as a convex hull and derive its common supporting tangent.",
+        "Take the union over road directions and compute its boundary intersections before the area."
+      ],
+      "steps_zh": [
+        "先根据速率证明最优路径可简化。",
+        "对每个最后道路距离，写出剩余越野可达圆盘。",
+        "圆心和半径线性变化时，将并集识别为凸包并求公共支撑切线。",
+        "再对各道路方向取并集，先求边界交点再算面积。"
+      ],
+      "example_en": "For $R>0,0<k<1$, consider disks centered at $(t,0)$ with radius $R-kt$, where $0\\le t\\le R/k$. Describe their union and its upper straight boundary.",
+      "example_zh": "设 $R>0,0<k<1$，圆盘圆心为 $(t,0)$、半径为 $R-kt$，其中 $0\\le t\\le R/k$，求并集及上方直边界。",
+      "solution_en": [
+        "Write $\\lambda=kt/R$. Each disk is $(1-\\lambda)D+\\lambda P$, where $D$ is the radius-$R$ disk at the origin and $P=(R/k,0)$. Thus their union is the convex hull of $D$ and $P$.",
+        "The unit normal $n=(k,\\sqrt{1-k^2})$ has maximal value $n\\cdot(t,0)+(R-kt)=R$ on every disk.",
+        "Hence the common upper support is $kx+\\sqrt{1-k^2}y=R$. The contact points run from $Rn$ to $P$, yielding precisely its straight tangent segment."
+      ],
+      "solution_zh": [
+        "令 $\\lambda=kt/R$，各圆盘可写成 $(1-\\lambda)D+\\lambda P$，其中 $D$ 为原点半径 $R$ 圆盘、$P=(R/k,0)$，所以并集是它们的凸包。",
+        "单位法向 $(k,\\sqrt{1-k^2})$ 在每个圆盘上的支撑值均为 $kt+R-kt=R$。",
+        "因此上支撑直线为 $kx+\\sqrt{1-k^2}y=R$，接触点从 $Rn$ 走到 $P$，恰给出该直切线段。"
+      ],
+      "tip_en": "Envelope optimization is valid only after the path simplification has been proved.",
+      "tip_zh": "只有先证明路径简化，包络优化才适用原问题。",
+      "question_ids": [
+        "AIME-2000-I-Q13"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M09",
+      "title_en": "Sum supporting inequalities whose variable parts cancel",
+      "title_zh": "相加可抵消变量部分的支撑不等式",
+      "steps_en": [
+        "Bound each norm or boundary distance below or above by a linear supporting expression.",
+        "Choose symmetric directions or weights so the terms involving the unknown point cancel.",
+        "The remaining constant gives a global bound without solving a derivative system.",
+        "Check a symmetric point satisfies all supporting equalities and containment conditions."
+      ],
+      "steps_zh": [
+        "以线性支撑式对各范数或边界距离估界。",
+        "选对称方向或权重，使未知点项相消。",
+        "剩余常数给出全局界，不必解导数方程组。",
+        "检查对称点同时满足全部支撑取等及容纳条件。"
+      ],
+      "example_en": "In space, minimize the sum of distances to the six points $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$.",
+      "example_zh": "在空间中，求到六个单位坐标轴端点的距离总和最小值。",
+      "solution_en": [
+        "Each vertex vector $v$ has norm one. Cauchy gives $|v-x|\\ge(v-x)\\cdot v=1-x\\cdot v$.",
+        "The six vectors sum to zero, so summing gives a total distance at least six.",
+        "At $x=0$, every distance is one. Hence six is the attained global minimum."
+      ],
+      "solution_zh": [
+        "每个顶点向量为单位向量，由柯西，$|v-x|\\ge1-x\\cdot v$。",
+        "六向量和为零，相加得到距离总和至少六。",
+        "取原点时每段距离均为一，所以六为可达全局最小值。"
+      ],
+      "tip_en": "Summing symmetric inequalities can be stronger than optimizing them one at a time.",
+      "tip_zh": "相加对称不等式，可能比逐个优化更强。",
+      "question_ids": [
+        "AIME-2017-II-Q15",
+        "AIME-2020-II-Q07"
+      ],
+      "prerequisites": [
+        "GE07",
+        "GE09"
+      ],
+      "extensions_en": [
+        "For equal-radius vectors $v_i$ summing to zero, $|v_i-x|\\ge R-v_i\\cdot x/R$ sums to $NR$. For intersecting cone constraints, use supporting-plane distances and bound radial offsets below by absolute axial coordinates; opposite signs can then be controlled before summing."
+      ],
+      "extensions_zh": [
+        "等模 $R$ 且和为零的向量，分别满足 $|v_i-x|\\ge R-v_i\\cdot x/R$，相加得 $NR$。相交圆锥问题中，可用支撑平面距离，并以轴向坐标绝对值下界径向偏移，处理符号后再相加。"
+      ]
+    },
+    {
+      "method_id": "AL07-M10",
+      "title_en": "Restrict the equality case before declaring a geometric maximum",
+      "title_zh": "先限制取等构型再宣称几何最大值",
+      "steps_en": [
+        "Derive every segment, ray, orientation, and positivity constraint in the chosen parameter.",
+        "Find the unconstrained equality parameter, then test it against that full feasible interval.",
+        "If it fails, determine whether the objective is monotone up to an active boundary.",
+        "Reconstruct the boundary configuration and verify every original distance and containment."
+      ],
+      "steps_zh": [
+        "把所有线段、射线、朝向及正性条件写成参数限制。",
+        "求无约束取等参数，再对完整可行区间检查。",
+        "若不合法，确定目标是否单调至某个约束边界。",
+        "重构边界构型，核对全部原距离及容纳关系。"
+      ],
+      "example_en": "Maximize $3\\cos t+4\\sin t$ on $0\\le t\\le\\pi/6$.",
+      "example_zh": "在 $0\\le t\\le\\pi/6$ 上求 $3\\cos t+4\\sin t$ 最大值。",
+      "solution_en": [
+        "The unconstrained Cauchy bound five needs $(\\cos t,\\sin t)=(3/5,4/5)$, so $t>\\pi/6$ and is infeasible.",
+        "On the allowed interval, the derivative $-3\\sin t+4\\cos t$ is at least $-3/2+2\\sqrt3>0$.",
+        "The maximum is therefore at the allowed endpoint, equal to $2+3\\sqrt3/2$, which is strictly below five."
+      ],
+      "solution_zh": [
+        "无约束柯西上界五需正余弦为 $(3/5,4/5)$，对应角超过三十度，不可行。",
+        "允许区间内，导数至少为 $-3/2+2\\sqrt3>0$。",
+        "因此最大值在右端点，为 $2+3\\sqrt3/2$，严格小于五。"
+      ],
+      "tip_en": "The documented2016 I Q9 source key is an example of an equality configuration violating a side-segment constraint.",
+      "tip_zh": "已记录的2016 I第九题来源答案差异，正是取等构型违反边线段限制的例子。",
+      "question_ids": [
+        "AIME-2016-I-Q09"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07",
+        "AL08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M11",
+      "title_en": "Use saturation of individual coefficient caps",
+      "title_zh": "利用各变量上界被同时用满",
+      "steps_en": [
+        "Write the equality as a weighted sum with strictly positive weights.",
+        "Subtract it from the weighted sum of the individual upper bounds.",
+        "Every deficit is nonnegative, so a zero total forces each deficit to vanish.",
+        "Recover remaining variables and verify the original complex or polynomial equation."
+      ],
+      "steps_zh": [
+        "将等式写成严格正权重的加权和。",
+        "从各自上界的加权和中减去已知等式。",
+        "每个缺额非负，总缺额为零，就迫使各缺额均为零。",
+        "再求其余变量，并验证原复数或多项式方程。"
+      ],
+      "example_en": "Reals satisfy $a\\le2,b\\le4,c\\le3$ and $2a+3b+5c=31$. Find $abc$.",
+      "example_zh": "实数满足 $a\\le2,b\\le4,c\\le3$ 及 $2a+3b+5c=31$，求 $abc$。",
+      "solution_en": [
+        "The weighted caps total $2\\cdot2+3\\cdot4+5\\cdot3=31$, equal to the required sum.",
+        "Thus $2(2-a)+3(4-b)+5(3-c)=0$, a sum of nonnegative terms.",
+        "Every term is zero, so $(a,b,c)=(2,4,3)$ and $abc=24$."
+      ],
+      "solution_zh": [
+        "各上界的加权和恰为三十一，与等式相同。",
+        "因此 $2(2-a)+3(4-b)+5(3-c)=0$，左边各项非负。",
+        "故每项为零，三数为二、四、三，乘积二十四。"
+      ],
+      "tip_en": "Strictly positive weights are essential; a zero weight would leave its variable unconstrained.",
+      "tip_zh": "权重严格为正很关键，零权重不会限制相应变量。",
+      "question_ids": [
+        "AIME-2019-II-Q08"
+      ],
+      "prerequisites": [
+        "AL03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M12",
+      "title_en": "Bound sorted coordinates by positive and negative mass",
+      "title_zh": "按正负总量限制有序坐标",
+      "steps_en": [
+        "Use the ordinary sum and absolute-value sum to determine total positive and negative mass.",
+        "If $x_k<0$, at least $k$ entries have magnitude at least $-x_k$; if $x_k>0$, at least $n-k+1$ entries are at least $x_k$.",
+        "Combine the resulting order-statistic bounds with the target coefficients.",
+        "Construct blocks of equal negative entries, zeros, and equal positive entries to verify simultaneous equality."
+      ],
+      "steps_zh": [
+        "由普通和及绝对值和，求正数总量及负数绝对值总量。",
+        "若第 $k$ 项为负，前 $k$ 项绝对值均至少为其相反数；若为正，后 $n-k+1$ 项均至少为它。",
+        "按目标系数组合所得顺序统计量界。",
+        "用等负数块、零块及等正数块构造，验证同时取等。"
+      ],
+      "example_en": "Eight ordered reals have sum zero and absolute-value sum two. Maximize $2x_6-x_2$.",
+      "example_zh": "八个递增非降实数的和为零、绝对值和为二，求 $2x_6-x_2$ 的最大值。",
+      "solution_en": [
+        "The total positive mass and total negative magnitude are each one.",
+        "Therefore $x_2\\ge-1/2$ and $x_6\\le1/3$, giving $2x_6-x_2\\le7/6$.",
+        "The tuple $(-1/2,-1/2,0,0,0,1/3,1/3,1/3)$ satisfies all conditions and attains $7/6$."
+      ],
+      "solution_zh": [
+        "正数总量及负数绝对值总量均为一。",
+        "故 $x_2\\ge-1/2,x_6\\le1/3$，目标至多 $7/6$。",
+        "取两项负二分之一、三项零、三项三分之一，满足全部条件并取等。"
+      ],
+      "tip_en": "Check that the negative and positive equality blocks do not overlap in the index order.",
+      "tip_zh": "须检查负、正取等块在下标上没有互相占用。",
+      "question_ids": [
+        "AIME-2022-II-Q06"
+      ],
+      "prerequisites": [],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M13",
+      "title_en": "Use crossing signs and strict convexity to certify root counts",
+      "title_zh": "用穿越符号及严格凸性核实根数",
+      "steps_en": [
+        "Split curves into full monotone branches with known endpoint values.",
+        "Opposite branch orientations give uniqueness by monotonicity; equal orientations need an additional crossing-sign proof.",
+        "For $y=F(x),x=G(y)$, the derivative of $G(y)-F^{-1}(y)$ at a common point is $(F\\prime G\\prime-1)/F\\prime$.",
+        "If a corner root is shared, analyze it separately; strict convexity can prove one further interior crossing rather than justify deleting that branch pair."
+      ],
+      "steps_zh": [
+        "将曲线分为端点值明确的完整单调分支。",
+        "方向相反时由单调性得唯一交点；同向时必须另证穿越符号。",
+        "对互逆形式，在交点处差函数导数为 $(F\\prime G\\prime-1)/F\\prime$。",
+        "共同角点根须单独分析，严格凸性可能证明该分支对还有一个内点交叉，不能直接删去它。"
+      ],
+      "example_en": "How many solutions in $[0,1]$ satisfy $e^{2t}=1+3t$?",
+      "example_zh": "在 $[0,1]$ 内，$e^{2t}=1+3t$ 有多少个解？",
+      "solution_en": [
+        "Let $H(t)=e^{2t}-1-3t$. Then $H(0)=0,H\\prime(0)=-1$, and $H\\prime\\prime(t)=4e^{2t}>0$.",
+        "The derivative increases strictly, so $H$ first decreases and then increases. Since $H(1)=e^2-4>0$, it crosses zero once after its minimum.",
+        "There are exactly two roots: the endpoint zero and one interior root. Convexity proves uniqueness of that second crossing."
+      ],
+      "solution_zh": [
+        "令差函数为 $H$，则零处函数值零、导数负一，且二阶导数严格正。",
+        "导数严格增加，函数先减后增；又在一处为 $e^2-4>0$，所以最小值之后恰再过零一次。",
+        "共有两个根：端点零及一个内点根，第二根的唯一性由凸性保证。"
+      ],
+      "tip_en": "Counting monotone branch pairs is invalid unless intersection existence and uniqueness are both proved.",
+      "tip_zh": "只有逐对证明交点存在且唯一，才能直接数单调分支对。",
+      "question_ids": [
+        "AIME-2024-I-Q12"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL08"
+      ],
+      "extensions_en": [
+        "If the derivative product has absolute value greater than one at every equally oriented interior crossing, all zeros of the difference have the same strict crossing direction. Two such zeros would force an intervening zero with a contrary or nonstrict crossing, impossible. Endpoint signs then supply existence.",
+        "The AL06 folded-branch method for2024 I Q12 supplies the necessary derivative-product certificate, including its separate near-corner function $H(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$ with $H\\prime\\prime>0$. This convexity excludes a noncorner weak-derivative crossing and proves that the corner branch pair has an additional interior intersection."
+      ],
+      "extensions_zh": [
+        "若每个同向内点交叉的导数乘积绝对值都大于一，差函数各零点均有相同严格穿越方向；若有两个，之间必需一个反向或非严格穿越零点，矛盾。再由端点符号证明存在。",
+        "AL06中2024 I第十二题的折叠分支方法给出所需导数乘积证明，另用近角点函数 $H(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$ 的严格凸性排除弱导数非角点根，并证明角点分支对还有一个内部交点。"
+      ]
+    },
+    {
+      "method_id": "AL07-M14",
+      "title_en": "Prove existence, then force a repeated-root boundary",
+      "title_zh": "先证明最值存在再迫使重根边界",
+      "steps_en": [
+        "Bound each positive variable above and away from zero to make the feasible set compact.",
+        "Represent the variables as roots of a polynomial with the fixed symmetric coefficients.",
+        "If all roots were distinct and interior, small coefficient perturbations would preserve feasible roots and improve the objective.",
+        "Therefore test repeated-root cases, compare every positive candidate, and verify the original constraints."
+      ],
+      "steps_zh": [
+        "将各正变量同时上界并下界为远离零，使可行集紧致。",
+        "把变量看成某个固定对称系数多项式的根。",
+        "若根均不同且位于域内，小系数扰动仍保留可行根，并能改进目标。",
+        "因此枚举重根情形，比较全部正候选，并验证原限制。"
+      ],
+      "example_en": "Show that if $t^3-st^2+qt-p$ has three distinct positive roots, then $s$ may be perturbed slightly while retaining three positive roots with the same $q,p$.",
+      "example_zh": "若 $t^3-st^2+qt-p$ 有三个不同正根，证明可微小改变 $s$，仍保留三个正根且 $q,p$ 不变。",
+      "solution_en": [
+        "Choose three disjoint closed positive intervals, one around each simple root, with opposite nonzero polynomial signs at the two ends of each interval.",
+        "At those six endpoints, a sufficiently small perturbation of $s$ changes values only slightly, preserving every sign.",
+        "The intermediate value theorem gives one positive root in each interval for the perturbed cubic. Degree three makes these exactly its roots, proving the claim and excluding an interior distinct-root extremum of $s$."
+      ],
+      "solution_zh": [
+        "在各简单正根周围选三个互不相交的正闭区间，使每个区间两端函数值非零且异号。",
+        "足够小地改变 $s$，只会小幅改变这六处函数值，所有符号保持。",
+        "由介值定理，每区间内仍有一正根，三次式恰有这三根。因此成立，也排除了 $s$ 在不同内点根处取得极值。"
+      ],
+      "tip_en": "The repeated-root argument needs compactness or another existence proof before it identifies a maximum.",
+      "tip_zh": "重根论证之前仍需紧致性或其他存在性证明。",
+      "question_ids": [
+        "AIME-2024-I-Q15"
+      ],
+      "prerequisites": [
+        "AL02",
+        "GE09"
+      ],
+      "extensions_en": [
+        "For positive dimensions with $ab+bc+ca=S,abc=V>0$, each $a\\ge V/S$ because $bc\\le S$, and $S\\ge a(b+c)\\ge2\\sqrt{Va}$ gives $a\\le S^2/(4V)$. These closed bounds prove compactness. Setting $b=c=t$ then gives $t^3-St+2V=0$; evaluate all positive roots."
+      ],
+      "extensions_zh": [
+        "若正尺寸满足 $ab+bc+ca=S,abc=V>0$，由 $bc\\le S$ 得 $a\\ge V/S$；由 $S\\ge a(b+c)\\ge2\\sqrt{Va}$ 得 $a\\le S^2/(4V)$。这些闭界证明紧致性；再令 $b=c=t$，得 $t^3-St+2V=0$，必须比较全部正根。"
+      ]
+    },
+    {
+      "method_id": "AL07-M15",
+      "title_en": "Use strict convexity to distinguish one level intersection from two",
+      "title_zh": "用严格凸性区分一次与两次水平相交",
+      "steps_en": [
+        "Form a one-parameter membership function for the entire family, not only the given member.",
+        "Prove strict convexity and divergence at both ends of its parameter interval.",
+        "A unique level-one membership means the minimum equals one, hence both the value and first derivative equations hold.",
+        "Check the stationary solution belongs to the stated interior segment."
+      ],
+      "steps_zh": [
+        "为整个图形族建立参数成员函数，而不是只写给定成员。",
+        "证明严格凸性，并在参数区间两端趋于无穷。",
+        "仅有一次值为一的成员，意味着最小值为一，因此联立函数值及导数方程。",
+        "检查驻点解确实在所给线段内部。"
+      ],
+      "example_en": "For $F(t)=1/t+4/(1-t)$ on $(0,1)$, count solutions of $F(t)=c$ for $c=8,9,10$.",
+      "example_zh": "对 $(0,1)$ 上 $F(t)=1/t+4/(1-t)$，分别数水平 $c=8,9,10$ 的交点。",
+      "solution_en": [
+        "Cauchy gives $F(t)\\ge(1+2)^2=9$, with equality at $t=1/3$. Also $F\\prime\\prime>0$ and both endpoint limits are infinite.",
+        "There are no solutions at level eight and exactly one at level nine.",
+        "At level ten, clearing the positive denominator gives $10t^2-7t+1=0$, with roots $1/5,1/2$. Thus the counts are zero, one, two."
+      ],
+      "solution_zh": [
+        "柯西给出最小值九，在三分之一处取等；二阶导数正且两端趋于无穷。",
+        "因此水平八无解，水平九仅一解。",
+        "水平十化为 $10t^2-7t+1=0$，根为五分之一、二分之一，所以三种交点数为零、一、二。"
+      ],
+      "tip_en": "The derivative condition alone constructs a candidate envelope; convexity proves uniqueness.",
+      "tip_zh": "导数条件只给包络候选，严格凸性才证明唯一性。",
+      "question_ids": [
+        "AIME-2024-II-Q12"
+      ],
+      "prerequisites": [
+        "GE08",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M16",
+      "title_en": "Use rearrangement with degree weights and a compatible labeling",
+      "title_zh": "以度数权重重排并构造相容标号",
+      "steps_en": [
+        "Orient each graph edge from its smaller label to its larger label.",
+        "The absolute-difference sum becomes a linear label sum with coefficients bounded by vertex degrees and total coefficient zero.",
+        "Subtract a common center and use rearrangement to pair largest deviations with largest degrees.",
+        "Construct a bipartite low/high labeling with the needed number of each degree on each side."
+      ],
+      "steps_zh": [
+        "把每条边从较小标号定向到较大标号。",
+        "绝对差之和成为标号线性和，其系数绝对值受度数限制且系数和为零。",
+        "减去公共中心，用重排把最大偏差配给最大度数。",
+        "在二分图两色上放低高标号，并核对两色的各度数位置数量。"
+      ],
+      "example_en": "Place labels one through five on a five-vertex path. Maximize the sum of differences over its four edges.",
+      "example_zh": "将一至五放在五顶点路径上，求四条边绝对差总和的最大值。",
+      "solution_en": [
+        "Use center three. There are three degree-two positions and two degree-one positions. The deviations are $2,2,1,1,0$.",
+        "Rearrangement bounds the sum by $2(2+2+1)+(1+0)=11$.",
+        "The path labeling $2,5,1,4,3$ gives differences $3,4,3,1$, totaling eleven, so the bound is attained."
+      ],
+      "solution_zh": [
+        "取中心三，三处度二、两处度一，五个偏差为二、二、一、一、零。",
+        "重排上界为 $2(2+2+1)+(1+0)=11$。",
+        "路径依次标二、五、一、四、三，边差为三、四、三、一，合十一，故取等。"
+      ],
+      "tip_en": "A rearrangement bound may be unattainable unless the graph allows the required sign pattern.",
+      "tip_zh": "若图不允许所需高低符号模式，重排上界可能不可达到。",
+      "question_ids": [
+        "AIME-2026-I-Q11"
+      ],
+      "prerequisites": [
+        "CO06",
+        "LO02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M17",
+      "title_en": "Find extreme directions by tangents to a locus",
+      "title_zh": "用轨迹切线找极端方向",
+      "steps_en": [
+        "Identify the exact circle or curve traced by the normalized variable.",
+        "Extreme slopes from an external point occur on tangent lines, provided vertical directions are excluded or separately handled.",
+        "Use point-to-line distance or a radius-perpendicular triangle for the tangent condition.",
+        "Choose the correct extremal root and reconstruct a permitted point on the original variable locus."
+      ],
+      "steps_zh": [
+        "确定归一变量遍历的准确圆或曲线轨迹。",
+        "外点出发的极端斜率位于切线，竖直方向须先排除或另行处理。",
+        "用点到直线距离或半径垂直切线的直角三角形写相切条件。",
+        "选择正确最值根，并恢复原变量轨迹上的允许点。"
+      ],
+      "example_en": "Find the greatest slope $y/x$ at points on $(x-3)^2+(y-4)^2=1$.",
+      "example_zh": "求圆 $(x-3)^2+(y-4)^2=1$ 上点的斜率 $y/x$ 最大值。",
+      "solution_en": [
+        "The circle has $x\\ge2$, so all slopes are finite. An extremal line $y=mx$ from the origin must be tangent.",
+        "The distance condition is $(3m-4)^2=m^2+1$, or $8m^2-24m+15=0$.",
+        "The two tangent slopes are $(6\\pm\\sqrt6)/4$. The larger is the greatest slope, and its tangency point lies on the circle, proving attainment."
+      ],
+      "solution_zh": [
+        "圆上 $x\\ge2$，斜率均有限，极端过原点直线须与圆相切。",
+        "距离条件化为 $8m^2-24m+15=0$。",
+        "两根为 $(6\\pm\\sqrt6)/4$，较大者即最大斜率，其切点确在圆上，故可达。"
+      ],
+      "tip_en": "The origin must lie outside the locus circle for a finite two-tangent argument.",
+      "tip_zh": "要使用有限的双切线论证，原点必须位于轨迹圆外。",
+      "question_ids": [
+        "AIME-2014-I-Q07"
+      ],
+      "prerequisites": [
+        "AL03",
+        "GE04",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL07-M18",
+      "title_en": "Find conic-circle tangencies by stationary squared distance",
+      "title_zh": "以距离平方驻点求圆锥曲线与圆相切",
+      "steps_en": [
+        "Parameterize a smooth point on the given conic.",
+        "Form squared distance from the prescribed center and differentiate along the conic.",
+        "At stationarity the radius vector is perpendicular to the tangent; evaluate every such radius.",
+        "Remove duplicate radii and verify the geometric tangency, including symmetry-related contact points."
+      ],
+      "steps_zh": [
+        "参数化给定圆锥曲线的光滑点。",
+        "构造到指定圆心的距离平方，并沿曲线求导。",
+        "驻点处半径向量垂直切线，计算每种半径。",
+        "去重半径，并验证几何相切及对称接触点。"
+      ],
+      "example_en": "Find the radii of all circles centered at the origin tangent to $x^2/9+y^2/4=1$.",
+      "example_zh": "求圆心在原点且与椭圆 $x^2/9+y^2/4=1$ 相切的所有圆半径。",
+      "solution_en": [
+        "Parameterize $(x,y)=(3\\cos t,2\\sin t)$. Squared distance is $D=9\\cos^2t+4\\sin^2t$.",
+        "Its derivative is $-10\\sin t\\cos t$, so stationary points are the four axis endpoints.",
+        "The distances there are two and three. At each axis endpoint the radial line is normal to the ellipse, so both radii are genuine tangencies and there are no others."
+      ],
+      "solution_zh": [
+        "参数化后距离平方为 $9\\cos^2t+4\\sin^2t$。",
+        "导数为 $-10\\sin t\\cos t$，驻点恰为四个坐标轴端点。",
+        "相应距离为二及三，且半径均垂直椭圆切线，因此两种均真相切，也无其他半径。"
+      ],
+      "tip_en": "Collect distinct radii rather than counting contact points twice.",
+      "tip_zh": "应收集不同半径，不能将对称切点重复算成不同半径。",
+      "question_ids": [
+        "AIME-2026-II-Q06"
+      ],
+      "prerequisites": [
+        "GE08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    }
+  ],
+  "practice_ids": [
+    "AIME-2005-I-Q11",
+    "AIME-2008-I-Q14",
+    "AIME-2008-II-Q03",
+    "AIME-2009-II-Q15",
+    "AIME-2011-II-Q09",
+    "AIME-2016-I-Q09",
+    "AIME-2016-II-Q15",
+    "AIME-2022-II-Q06",
+    "AIME-2024-I-Q15",
+    "AIME-2025-I-Q14",
+    "AIME-2025-II-Q15"
+  ],
+  "coverage_by_question": {
+    "AIME-2007-II-Q08": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "LO02",
+        "NT03"
+      ]
+    },
+    "AIME-2008-I-Q14": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2008-II-Q14": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2010-II-Q13": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "CO02",
+        "PS02"
+      ]
+    },
+    "AIME-2011-I-Q12": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "CO01",
+        "PS02"
+      ]
+    },
+    "AIME-2013-I-Q08": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "AL04",
+        "NT02"
+      ]
+    },
+    "AIME-2024-I-Q09": {
+      "method_ids": [
+        "AL07-M01"
+      ],
+      "prerequisites": [
+        "GE08"
+      ]
+    },
+    "AIME-2008-II-Q03": {
+      "method_ids": [
+        "AL07-M02"
+      ],
+      "prerequisites": [
+        "GE10"
+      ]
+    },
+    "AIME-2009-II-Q15": {
+      "method_ids": [
+        "AL07-M02"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04"
+      ]
+    },
+    "AIME-2011-II-Q09": {
+      "method_ids": [
+        "AL07-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2016-II-Q15": {
+      "method_ids": [
+        "AL07-M03"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2017-I-Q15": {
+      "method_ids": [
+        "AL07-M03"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE07"
+      ]
+    },
+    "AIME-2024-I-Q07": {
+      "method_ids": [
+        "AL07-M03"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2008-I-Q10": {
+      "method_ids": [
+        "AL07-M04"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2012-II-Q06": {
+      "method_ids": [
+        "AL07-M04"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2022-II-Q12": {
+      "method_ids": [
+        "AL07-M04"
+      ],
+      "prerequisites": [
+        "GE08"
+      ]
+    },
+    "AIME-2025-I-Q14": {
+      "method_ids": [
+        "AL07-M04"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04",
+        "GE07"
+      ]
+    },
+    "AIME-2009-I-Q15": {
+      "method_ids": [
+        "AL07-M05"
+      ],
+      "prerequisites": [
+        "GE04",
+        "GE05"
+      ]
+    },
+    "AIME-2013-II-Q10": {
+      "method_ids": [
+        "AL07-M05"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ]
+    },
+    "AIME-2018-I-Q13": {
+      "method_ids": [
+        "AL07-M05"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE05"
+      ]
+    },
+    "AIME-2010-I-Q06": {
+      "method_ids": [
+        "AL07-M06"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2025-II-Q15": {
+      "method_ids": [
+        "AL07-M06"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2005-I-Q11": {
+      "method_ids": [
+        "AL07-M07"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2018-I-Q08": {
+      "method_ids": [
+        "AL07-M07"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2000-I-Q13": {
+      "method_ids": [
+        "AL07-M08"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE07"
+      ]
+    },
+    "AIME-2017-II-Q15": {
+      "method_ids": [
+        "AL07-M09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2020-II-Q07": {
+      "method_ids": [
+        "AL07-M09"
+      ],
+      "prerequisites": [
+        "GE09"
+      ]
+    },
+    "AIME-2016-I-Q09": {
+      "method_ids": [
+        "AL07-M10"
+      ],
+      "prerequisites": [
+        "AL08",
+        "GE03",
+        "GE07"
+      ]
+    },
+    "AIME-2019-II-Q08": {
+      "method_ids": [
+        "AL07-M11"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2022-II-Q06": {
+      "method_ids": [
+        "AL07-M12"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2024-I-Q12": {
+      "method_ids": [
+        "AL07-M13"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL08",
+        "CO06"
+      ]
+    },
+    "AIME-2024-I-Q15": {
+      "method_ids": [
+        "AL07-M14"
+      ],
+      "prerequisites": [
+        "AL02",
+        "GE09"
+      ]
+    },
+    "AIME-2024-II-Q12": {
+      "method_ids": [
+        "AL07-M15"
+      ],
+      "prerequisites": [
+        "GE08"
+      ]
+    },
+    "AIME-2026-I-Q11": {
+      "method_ids": [
+        "AL07-M16"
+      ],
+      "prerequisites": [
+        "CO06",
+        "LO02"
+      ]
+    },
+    "AIME-2014-I-Q07": {
+      "method_ids": [
+        "AL07-M17"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2026-II-Q06": {
+      "method_ids": [
+        "AL07-M18"
+      ],
+      "prerequisites": [
+        "GE08"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

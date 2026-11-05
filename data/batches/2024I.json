@@ -1,0 +1,745 @@
+[
+  {
+    "question_id": "AIME-2024-I-Q01",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Let the stop last $u$ hours. Then $9/s+u=4$ and $9/(s+2)+u=12/5$.",
+      "reason_zh": "设停留时间为 $u$ 小时，则 $9/s+u=4,9/(s+2)+u=12/5$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Eliminating $u$ gives $18/[s(s+2)]=8/5$, so $s=5/2$ (the other root is negative). Thus $u=2/5$ h.",
+        "reason_zh": "消去 $u$ 得 $18/[s(s+2)]=8/5$，正根为 $s=5/2$，于是 $u=2/5$ 小时。"
+      }
+    ],
+    "statement_en": "A daily outing consists of a $9$ km walk and a fixed stop of $t$ minutes. At walking speed $s$ km/h the total is $4$ h; at $s+2$ km/h it is $144$ min. Find the total minutes at speed $s+1/2$ km/h.",
+    "statement_zh": "一次日常外出包括步行 $9$ 千米及固定停留 $t$ 分钟。步速为 $s$ 千米/时时总用时 $4$ 小时；步速为 $s+2$ 时总用时 $144$ 分钟。求步速为 $s+1/2$ 时的总分钟数。",
+    "answer": 204,
+    "solution_en": [
+      "Let the stop last $u$ hours. Then $9/s+u=4$ and $9/(s+2)+u=12/5$.",
+      "Eliminating $u$ gives $18/[s(s+2)]=8/5$, so $s=5/2$ (the other root is negative). Thus $u=2/5$ h.",
+      "The requested speed is $3$ km/h. The total is $60(9/3+2/5)=204$ minutes."
+    ],
+    "solution_zh": [
+      "设停留时间为 $u$ 小时，则 $9/s+u=4,9/(s+2)+u=12/5$。",
+      "消去 $u$ 得 $18/[s(s+2)]=8/5$，正根为 $s=5/2$，于是 $u=2/5$ 小时。",
+      "所求步速为 $3$ 千米/时，总时间 $60(9/3+2/5)=204$ 分钟。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q02",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Extracting the powers gives $x\\log_x y=10$ and $4y\\log_y x=10$.",
+      "reason_zh": "把指数移到对数前，得 $x\\log_x y=10,4y\\log_y x=10$。"
+    },
+    "secondary": [],
+    "statement_en": "For real $x,y>1$, both $\\log_x(y^x)$ and $\\log_y(x^{4y})$ equal $10$. Determine $xy$.",
+    "statement_zh": "实数 $x,y>1$ 满足 $\\log_x(y^x)=\\log_y(x^{4y})=10$，求 $xy$。",
+    "answer": 25,
+    "solution_en": [
+      "Extracting the powers gives $x\\log_x y=10$ and $4y\\log_y x=10$.",
+      "Multiply: change of base yields $(\\log_x y)(\\log_y x)=1$, so $4xy=100$ and $xy=25$."
+    ],
+    "solution_zh": [
+      "把指数移到对数前，得 $x\\log_x y=10,4y\\log_y x=10$。",
+      "两式相乘，并用换底公式 $(\\log_x y)(\\log_y x)=1$，得 $4xy=100$，故 $xy=25$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/2",
+    "method_chain": [
+      "Logarithms & exponentials"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q03",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "LO",
+      "subtype_id": "LO01",
+      "reason_en": "The losing positions for the player to move are exactly $n\\equiv0,2\\pmod5$. From either residue every legal move reaches $1,3,$ or $4$; from $1,3,4$ one can respectively remove $1,1,4$ to reach a losing residue.",
+      "reason_zh": "轮到行动者必败的状态恰为 $n\\equiv0,2\\pmod5$。由这两类出发，每次合法操作都进入余数 $1,3,4$；从 $1,3,4$ 则分别取 $1,1,4$ 枚进入必败类。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "The losing positions for the player to move are exactly $n\\equiv0,2\\pmod5$. From either residue every legal move reaches $1,3,$ or $4$; from $1,3,4$ one can respectively remove $1,1,4$ to reach a losing residue.",
+        "reason_zh": "轮到行动者必败的状态恰为 $n\\equiv0,2\\pmod5$。由这两类出发，每次合法操作都进入余数 $1,3,4$；从 $1,3,4$ 则分别取 $1,1,4$ 枚进入必败类。"
+      }
+    ],
+    "statement_en": "Two players alternately remove either $1$ or $4$ tokens from a pile, with the last removal winning. The first player moves first. For how many initial sizes $1\\le n\\le2024$ can the second player force a win?",
+    "statement_zh": "两人轮流从一堆筹码中取走 $1$ 或 $4$ 枚，取走最后一枚者获胜。求 $1\\le n\\le2024$ 中有多少个初始筹码数能保证后手获胜。",
+    "answer": 809,
+    "solution_en": [
+      "The losing positions for the player to move are exactly $n\\equiv0,2\\pmod5$. From either residue every legal move reaches $1,3,$ or $4$; from $1,3,4$ one can respectively remove $1,1,4$ to reach a losing residue.",
+      "The base cases $0,1,2,3,4$ verify the claim, so induction applies. The required count is $\\lfloor2024/5\\rfloor+\\lfloor(2024-2)/5\\rfloor+1=404+405=809$."
+    ],
+    "solution_zh": [
+      "轮到行动者必败的状态恰为 $n\\equiv0,2\\pmod5$。由这两类出发，每次合法操作都进入余数 $1,3,4$；从 $1,3,4$ 则分别取 $1,1,4$ 枚进入必败类。",
+      "检查 $0,1,2,3,4$ 后可归纳证明。因此所求为 $\\lfloor2024/5\\rfloor+\\lfloor(2024-2)/5\\rfloor+1=404+405=809$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/3",
+    "method_chain": [
+      "Games, invariants & state strategies",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q04",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS02",
+      "reason_en": "Within the prize event, draws with exactly $2,3,4$ matches number $\\binom42\\binom62=90$, $\\binom43\\binom61=24$, and $1$.",
+      "reason_zh": "获奖范围内，恰中 $2,3,4$ 个的开奖组合数依次为 $\\binom42\\binom62=90,\\binom43\\binom61=24,1$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Within the prize event, draws with exactly $2,3,4$ matches number $\\binom42\\binom62=90$, $\\binom43\\binom61=24$, and $1$.",
+        "reason_zh": "获奖范围内，恰中 $2,3,4$ 个的开奖组合数依次为 $\\binom42\\binom62=90,\\binom43\\binom61=24,1$。"
+      }
+    ],
+    "statement_en": "A lottery ticket chooses four distinct numbers from $1,\\ldots,10$. A random four-element winning set gives a prize for at least two matches, and the top prize for four matches. Given that a prize was won, write the probability of the top prize as $m/n$ in lowest terms and find $m+n$.",
+    "statement_zh": "彩票从 $1$ 至 $10$ 中选四个不同号码，开奖也等可能选出四个。至少匹配两个号码即获奖，四个全中为头奖。已知获奖，头奖的条件概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 116,
+    "solution_en": [
+      "Within the prize event, draws with exactly $2,3,4$ matches number $\\binom42\\binom62=90$, $\\binom43\\binom61=24$, and $1$.",
+      "Exactly one of these $115$ equally likely draws is the top prize, so the conditional probability is $1/115$ and $m+n=116$."
+    ],
+    "solution_zh": [
+      "获奖范围内，恰中 $2,3,4$ 个的开奖组合数依次为 $\\binom42\\binom62=90,\\binom43\\binom61=24,1$。",
+      "这 $115$ 种等可能组合中只有一种是头奖，所以条件概率为 $1/115$，所求 $116$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/4",
+    "method_chain": [
+      "Conditional probability & independence",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q05",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Use $D=(0,0),C=(107,0),A=(0,-16),E=(e,0),H=(e,17),G=(e+184,17)$.",
+      "reason_zh": "取 $D=(0,0),C=(107,0),A=(0,-16),E=(e,0),H=(e,17),G=(e+184,17)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "The circle center is $(e+92,-8)$ by the perpendicular bisectors of $AD$ and $HG$. Its distances to $D,H$ give $(e+92)^2+64=92^2+625$.",
+        "reason_zh": "由 $AD,HG$ 的垂直平分线，圆心为 $(e+92,-8)$。到 $D,H$ 等距给出 $(e+92)^2+64=92^2+625$。"
+      }
+    ],
+    "statement_en": "Rectangles $ABCD$ and $EFGH$ have consecutive side lengths $(107,16)$ and $(184,17)$. Along one line the points occur in order $D,E,C,F$; the rectangles lie on opposite sides of this line. If $A,D,H,G$ are concyclic, determine $CE$.",
+    "statement_zh": "矩形 $ABCD,EFGH$ 的连续两边长分别为 $(107,16)$、$(184,17)$。$D,E,C,F$ 依次共线，两矩形位于该线两侧。若 $A,D,H,G$ 共圆，求 $CE$。",
+    "answer": 104,
+    "solution_en": [
+      "Use $D=(0,0),C=(107,0),A=(0,-16),E=(e,0),H=(e,17),G=(e+184,17)$.",
+      "The circle center is $(e+92,-8)$ by the perpendicular bisectors of $AD$ and $HG$. Its distances to $D,H$ give $(e+92)^2+64=92^2+625$.",
+      "Since $e>0$, $e+92=95$, so $e=3$ and $CE=107-3=104$."
+    ],
+    "solution_zh": [
+      "取 $D=(0,0),C=(107,0),A=(0,-16),E=(e,0),H=(e,17),G=(e+184,17)$。",
+      "由 $AD,HG$ 的垂直平分线，圆心为 $(e+92,-8)$。到 $D,H$ 等距给出 $(e+92)^2+64=92^2+625$。",
+      "$e>0$，故 $e+92=95,e=3$，所求 $CE=107-3=104$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/5",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Circle power & cyclic geometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q06",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Four turns mean five nonempty runs. A path beginning right has run directions $R,U,R,U,R$.",
+      "reason_zh": "转向四次等价于五个非空直行段。若先向右，方向依次为 $R,U,R,U,R$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "The three horizontal run lengths are positive integers summing to $8$, giving $\\binom72$ choices; the two vertical lengths give $\\binom71$.",
+        "reason_zh": "三个水平段为总和 $8$ 的正整数分拆，有 $\\binom72$ 种；两个竖直段有 $\\binom71$ 种。"
+      }
+    ],
+    "statement_en": "Count shortest grid paths from $(0,0)$ to $(8,8)$ that use unit right/up steps and turn exactly four times.",
+    "statement_zh": "在方格上从 $(0,0)$ 到 $(8,8)$，每步向右或向上一个单位。求恰好转向四次的最短路径条数。",
+    "answer": 294,
+    "solution_en": [
+      "Four turns mean five nonempty runs. A path beginning right has run directions $R,U,R,U,R$.",
+      "The three horizontal run lengths are positive integers summing to $8$, giving $\\binom72$ choices; the two vertical lengths give $\\binom71$.",
+      "Interchanging horizontal and vertical accounts for paths starting up. Hence $2\\binom72\\binom71=294$."
+    ],
+    "solution_zh": [
+      "转向四次等价于五个非空直行段。若先向右，方向依次为 $R,U,R,U,R$。",
+      "三个水平段为总和 $8$ 的正整数分拆，有 $\\binom72$ 种；两个竖直段有 $\\binom71$ 种。",
+      "先向上的情况与之对称，总数为 $2\\binom72\\binom71=294$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/6",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q07",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Write $z=4(\\cos\\theta+i\\sin\\theta)$. Since $1/z=(\\cos\\theta-i\\sin\\theta)/4$, the real part simplifies to $324\\cos\\theta-432\\sin\\theta$.",
+      "reason_zh": "令 $z=4(\\cos\\theta+i\\sin\\theta)$，则 $1/z=(\\cos\\theta-i\\sin\\theta)/4$，实部化为 $324\\cos\\theta-432\\sin\\theta$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Cauchy–Schwarz bounds it by $\\sqrt{324^2+432^2}=540$. Equality is attained at $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$.",
+        "reason_zh": "由柯西不等式，上界为 $\\sqrt{324^2+432^2}=540$；当 $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$ 时取等号。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Cauchy–Schwarz bounds it by $\\sqrt{324^2+432^2}=540$. Equality is attained at $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$.",
+        "reason_zh": "由柯西不等式，上界为 $\\sqrt{324^2+432^2}=540$；当 $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$ 时取等号。"
+      }
+    ],
+    "statement_en": "For complex $z$ with $|z|=4$, find the maximum real part of $(75+117i)z+(96+144i)/z$.",
+    "statement_zh": "复数 $z$ 满足 $|z|=4$，求 $(75+117i)z+(96+144i)/z$ 实部的最大值。",
+    "answer": 540,
+    "solution_en": [
+      "Write $z=4(\\cos\\theta+i\\sin\\theta)$. Since $1/z=(\\cos\\theta-i\\sin\\theta)/4$, the real part simplifies to $324\\cos\\theta-432\\sin\\theta$.",
+      "Cauchy–Schwarz bounds it by $\\sqrt{324^2+432^2}=540$. Equality is attained at $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$."
+    ],
+    "solution_zh": [
+      "令 $z=4(\\cos\\theta+i\\sin\\theta)$，则 $1/z=(\\cos\\theta-i\\sin\\theta)/4$，实部化为 $324\\cos\\theta-432\\sin\\theta$。",
+      "由柯西不等式，上界为 $\\sqrt{324^2+432^2}=540$；当 $(\\cos\\theta,\\sin\\theta)=(3/5,-4/5)$ 时取等号。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/7",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Inequalities & continuous optimization",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q08",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Set $k=\\cot(B/2)+\\cot(C/2)$. A chain of $N$ circles of radius $\\rho$ occupies base length $BC=\\rho k+2\\rho(N-1)$, because the end-center offsets are $\\rho\\cot(B/2)$ and $\\rho\\cot(C/2)$.",
+      "reason_zh": "令 $k=\\cot(B/2)+\\cot(C/2)$。$N$ 个半径为 $\\rho$ 的圆占据的底边长为 $BC=\\rho k+2\\rho(N-1)$，其中两端圆心的水平偏移为 $\\rho\\cot(B/2),\\rho\\cot(C/2)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "The incircle is the case $N=1$, so $r=BC/k=192/5$. Therefore $m+n=197$.",
+        "reason_zh": "内切圆对应 $N=1$，故 $r=BC/k=192/5$，所求为 $197$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Set $k=\\cot(B/2)+\\cot(C/2)$. A chain of $N$ circles of radius $\\rho$ occupies base length $BC=\\rho k+2\\rho(N-1)$, because the end-center offsets are $\\rho\\cot(B/2)$ and $\\rho\\cot(C/2)$.",
+        "reason_zh": "令 $k=\\cot(B/2)+\\cot(C/2)$。$N$ 个半径为 $\\rho$ 的圆占据的底边长为 $BC=\\rho k+2\\rho(N-1)$，其中两端圆心的水平偏移为 $\\rho\\cot(B/2),\\rho\\cot(C/2)$。"
+      }
+    ],
+    "statement_en": "Inside triangle $ABC$, a row of eight mutually consecutive tangent circles of radius $34$ rests on $BC$, with the end circles touching $AB$ and $AC$. A row of $2024$ circles of radius $1$ fits in the same way. If the triangle inradius is $m/n$ in lowest terms, find $m+n$.",
+    "statement_zh": "在三角形 $ABC$ 内，八个半径 $34$ 的圆依次相切且均与 $BC$ 相切，首尾圆分别与 $AB,AC$ 相切。同样方式也能排下 $2024$ 个半径 $1$ 的圆。内切圆半径为最简分数 $m/n$，求 $m+n$。",
+    "answer": 197,
+    "solution_en": [
+      "Set $k=\\cot(B/2)+\\cot(C/2)$. A chain of $N$ circles of radius $\\rho$ occupies base length $BC=\\rho k+2\\rho(N-1)$, because the end-center offsets are $\\rho\\cot(B/2)$ and $\\rho\\cot(C/2)$.",
+      "Thus $34k+476=k+4046$, whence $k=1190/11$ and $BC=45696/11$.",
+      "The incircle is the case $N=1$, so $r=BC/k=192/5$. Therefore $m+n=197$."
+    ],
+    "solution_zh": [
+      "令 $k=\\cot(B/2)+\\cot(C/2)$。$N$ 个半径为 $\\rho$ 的圆占据的底边长为 $BC=\\rho k+2\\rho(N-1)$，其中两端圆心的水平偏移为 $\\rho\\cot(B/2),\\rho\\cot(C/2)$。",
+      "因此 $34k+476=k+4046$，得 $k=1190/11,BC=45696/11$。",
+      "内切圆对应 $N=1$，故 $r=BC/k=192/5$，所求为 $197$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/8",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Angle bisectors & triangle centers",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q09",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE08",
+      "reason_en": "Opposite vertices are negatives, and diagonals are perpendicular. Put $B=(x,mx)$; the hyperbola gives $x^2=120/(6-5m^2)$. The perpendicular diagonal meets the hyperbola only if $5/6<m^2<6/5$.",
+      "reason_zh": "对角顶点互为相反向量，对角线相互垂直。设 $B=(x,mx)$，则 $x^2=120/(6-5m^2)$。垂直的另一条对角线也与双曲线相交，要求 $5/6<m^2<6/5$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Consequently $BD^2=480(1+m^2)/(6-5m^2)$, an increasing function of $m^2$ on that interval. Its unattained lower limit as $m^2\\to5/6$ is $480$.",
+        "reason_zh": "于是 $BD^2=480(1+m^2)/(6-5m^2)$，在该区间随 $m^2$ 严格递增。当 $m^2\\to5/6$ 时趋近 $480$，但不能取到。"
+      }
+    ],
+    "statement_en": "A rhombus has vertices on $x^2/20-y^2/24=1$ and its diagonals meet at the origin. Find the greatest real number strictly smaller than $BD^2$ for every such rhombus $ABCD$.",
+    "statement_zh": "菱形 $ABCD$ 的顶点在双曲线 $x^2/20-y^2/24=1$ 上，两对角线交于原点。求对所有这种菱形均严格小于 $BD^2$ 的最大实数。",
+    "answer": 480,
+    "solution_en": [
+      "Opposite vertices are negatives, and diagonals are perpendicular. Put $B=(x,mx)$; the hyperbola gives $x^2=120/(6-5m^2)$. The perpendicular diagonal meets the hyperbola only if $5/6<m^2<6/5$.",
+      "Consequently $BD^2=480(1+m^2)/(6-5m^2)$, an increasing function of $m^2$ on that interval. Its unattained lower limit as $m^2\\to5/6$ is $480$.",
+      "Every value is larger than $480$ and values approach it arbitrarily closely, so the requested number is $480$."
+    ],
+    "solution_zh": [
+      "对角顶点互为相反向量，对角线相互垂直。设 $B=(x,mx)$，则 $x^2=120/(6-5m^2)$。垂直的另一条对角线也与双曲线相交，要求 $5/6<m^2<6/5$。",
+      "于是 $BD^2=480(1+m^2)/(6-5m^2)$，在该区间随 $m^2$ 严格递增。当 $m^2\\to5/6$ 时趋近 $480$，但不能取到。",
+      "所有值都大于 $480$，且可任意接近它，故所求为 $480$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/9",
+    "method_chain": [
+      "Conics & analytic loci",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q10",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "The tangent–chord theorem makes $DBC$ isosceles, with base angles $A$. Cosine rule gives $\\cos A=11/25$, so $DB=(9/2)/(11/25)=225/22$.",
+      "reason_zh": "由切线弦定理，$DBC$ 是底角为 $A$ 的等腰三角形。余弦定理得 $\\cos A=11/25$，所以 $DB=(9/2)/(11/25)=225/22$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Also $\\cos B=1/15$, and $\\cos(A+B)=-13/15$. Applying cosine rule in $ABD$ yields $DA^2=25+(225/22)^2+2\\cdot5(225/22)(13/15)=(325/22)^2$.",
+        "reason_zh": "又有 $\\cos B=1/15,\\cos(A+B)=-13/15$。对 $ABD$ 用余弦定理，$DA^2=25+(225/22)^2+2\\cdot5(225/22)(13/15)=(325/22)^2$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=5,BC=9,CA=10$. Tangents to its circumcircle at $B,C$ meet at $D$, and segment $AD$ meets the circle again at $P$. Express $AP=m/n$ in lowest terms and find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=5,BC=9,CA=10$。外接圆在 $B,C$ 处的切线交于 $D$，线段 $AD$ 与圆再交于 $P$。将 $AP$ 化为最简分数 $m/n$，求 $m+n$。",
+    "answer": 113,
+    "solution_en": [
+      "The tangent–chord theorem makes $DBC$ isosceles, with base angles $A$. Cosine rule gives $\\cos A=11/25$, so $DB=(9/2)/(11/25)=225/22$.",
+      "Also $\\cos B=1/15$, and $\\cos(A+B)=-13/15$. Applying cosine rule in $ABD$ yields $DA^2=25+(225/22)^2+2\\cdot5(225/22)(13/15)=(325/22)^2$.",
+      "Power of $D$ gives $DP\\cdot DA=DB^2$. Thus $AP=DA-DP=(DA^2-DB^2)/DA=100/13$ and $m+n=113$."
+    ],
+    "solution_zh": [
+      "由切线弦定理，$DBC$ 是底角为 $A$ 的等腰三角形。余弦定理得 $\\cos A=11/25$，所以 $DB=(9/2)/(11/25)=225/22$。",
+      "又有 $\\cos B=1/15,\\cos(A+B)=-13/15$。对 $ABD$ 用余弦定理，$DA^2=25+(225/22)^2+2\\cdot5(225/22)(13/15)=(325/22)^2$。",
+      "点 $D$ 的幂给出 $DP\\cdot DA=DB^2$，故 $AP=(DA^2-DB^2)/DA=100/13$，所求 $113$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/10",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q11",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO04",
+      "reason_en": "Label positions modulo $8$ and let $B$ be the blue set, $b=|B|$. We need $B\\cap(B+k)=\\varnothing$ for some $k$. Summing overlap sizes over the seven nonzero $k$ gives $b(b-1)$. For $b\\le3$ this is at most $6$, so one overlap is zero. These cases contribute $\\sum_{j=0}^3\\binom8j=93$.",
+      "reason_zh": "将位置编号为模 $8$ 的剩余类，蓝点集合为 $B,b=|B|$。需要某个 $k$ 满足 $B\\cap(B+k)=\\varnothing$。七个非零 $k$ 的重叠数之和为 $b(b-1)$；若 $b\\le3$，此和不超过 $6$，必有一次重叠为零。这些染色共 $\\sum_{j=0}^3\\binom8j=93$ 种。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS01",
+        "reason_en": "There are $93+2+4+16=115$ successful colorings out of $256$, so the requested sum is $115+256=371$.",
+        "reason_zh": "成功共 $93+2+4+16=115$ 种，总计 $256$ 种，所求 $115+256=371$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "For $b=4$, the rotation must exchange the blue and red sets. Odd $k$ permits only the two alternating colorings; $k=2,6$ gives four colorings by alternating on each parity cycle; $k=4$ gives $2^4=16$ colorings by choosing one vertex from each opposite pair. The three families are disjoint. For $b>4$ success is impossible.",
+        "reason_zh": "当 $b=4$ 时，旋转必须交换蓝红集合。奇数 $k$ 只有两种交替染色；$k=2,6$ 时在两个奇偶循环上交替，共四种；$k=4$ 时每对对顶点选一个，共 $16$ 种。这三类互不重叠；$b>4$ 不可能成功。"
+      }
+    ],
+    "statement_en": "Independently color each vertex of a regular octagon blue or red, each with probability $1/2$. Find $m+n$ when the probability that some rotation sends every blue vertex to a formerly red position is $m/n$ in lowest terms.",
+    "statement_zh": "正八边形各顶点独立地以 $1/2$ 概率染蓝或红。若存在一次旋转使所有蓝点落在原先红点的位置，则称染色成功。成功概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 371,
+    "solution_en": [
+      "Label positions modulo $8$ and let $B$ be the blue set, $b=|B|$. We need $B\\cap(B+k)=\\varnothing$ for some $k$. Summing overlap sizes over the seven nonzero $k$ gives $b(b-1)$. For $b\\le3$ this is at most $6$, so one overlap is zero. These cases contribute $\\sum_{j=0}^3\\binom8j=93$.",
+      "For $b=4$, the rotation must exchange the blue and red sets. Odd $k$ permits only the two alternating colorings; $k=2,6$ gives four colorings by alternating on each parity cycle; $k=4$ gives $2^4=16$ colorings by choosing one vertex from each opposite pair. The three families are disjoint. For $b>4$ success is impossible.",
+      "There are $93+2+4+16=115$ successful colorings out of $256$, so the requested sum is $115+256=371$."
+    ],
+    "solution_zh": [
+      "将位置编号为模 $8$ 的剩余类，蓝点集合为 $B,b=|B|$。需要某个 $k$ 满足 $B\\cap(B+k)=\\varnothing$。七个非零 $k$ 的重叠数之和为 $b(b-1)$；若 $b\\le3$，此和不超过 $6$，必有一次重叠为零。这些染色共 $\\sum_{j=0}^3\\binom8j=93$ 种。",
+      "当 $b=4$ 时，旋转必须交换蓝红集合。奇数 $k$ 只有两种交替染色；$k=2,6$ 时在两个奇偶循环上交替，共四种；$k=4$ 时每对对顶点选一个，共 $16$ 种。这三类互不重叠；$b>4$ 不可能成功。",
+      "成功共 $93+2+4+16=115$ 种，总计 $256$ 种，所求 $115+256=371$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/11",
+    "method_chain": [
+      "Inclusion-exclusion & double counting",
+      "Finite probability & combinatorial sampling",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q12",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "All solutions lie in $[0,1]^2$. For $0\\le u\\le1$, put $h(u)=4||u-1/2|-1/4|$. Its values alternate $1,0,1,0,1$ at $u=0,1/4,1/2,3/4,1$.",
+      "reason_zh": "所有解在单位正方形内。对 $0\\le u\\le1$ 令 $h(u)=4||u-1/2|-1/4|$，在 $u=0,1/4,1/2,3/4,1$ 处依次取值 $1,0,1,0,1$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "All solutions lie in $[0,1]^2$. For $0\\le u\\le1$, put $h(u)=4||u-1/2|-1/4|$. Its values alternate $1,0,1,0,1$ at $u=0,1/4,1/2,3/4,1$.",
+        "reason_zh": "所有解在单位正方形内。对 $0\\le u\\le1$ 令 $h(u)=4||u-1/2|-1/4|$，在 $u=0,1/4,1/2,3/4,1$ 处依次取值 $1,0,1,0,1$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "The first graph has $16$ full-height branches, since $|\\sin2\\pi x|$ traverses $[0,1]$ four times; the second has $24$ full-width branches, since $|\\cos3\\pi y|$ traverses it six times. The branch intersections contribute $16\\cdot24=384$ transversal points.",
+        "reason_zh": "$|\\sin2\\pi x|$ 在区间上往返四次，故第一图有 $16$ 个贯穿高度的分支；$|\\cos3\\pi y|$ 往返六次，第二图有 $24$ 个贯穿宽度的分支。分支横截交点合计 $16\\cdot24=384$ 个。"
+      }
+    ],
+    "statement_en": "Let $f(t)=||t|-1/2|$ and $g(t)=||t|-1/4|$. How many points satisfy both $y=4g(f(\\sin(2\\pi x)))$ and $x=4g(f(\\cos(3\\pi y)))$?",
+    "statement_zh": "令 $f(t)=||t|-1/2|,g(t)=||t|-1/4|$，求方程组 $y=4g(f(\\sin(2\\pi x))),x=4g(f(\\cos(3\\pi y)))$ 的解点个数。",
+    "answer": 385,
+    "solution_en": [
+      "Every solution lies in $[0,1]^2$. Put $h(u)=4||u-1/2|-1/4|$ on $[0,1]$. Its values at $0,1/4,1/2,3/4,1$ are $1,0,1,0,1$. Thus $y=F(x)=h(|\\sin2\\pi x|)$ has sixteen monotone full-height branches, while $x=G(y)=h(|\\cos3\\pi y|)$ has twenty-four full-width branches. The only boundary solution is $(1,1)$.",
+      "To justify branch-intersection uniqueness, we prove $|F\\prime(x)G\\prime(y)|=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|>1$ at every interior solution. Such solutions avoid all branch endpoints. If $|\\cos2\\pi x|\\le1/20$, then $|\\sin2\\pi x|\\ge399/400$, hence $y\\ge.99$. It follows that $x\\ge1-18\\pi^2(.01)^2>.982$, forcing $|\\cos2\\pi x|>.99$, a contradiction.",
+      "If the derivative product were at most one, at least one factor $|\\cos2\\pi x|,|\\sin3\\pi y|$ would be at most $1/20$, since $96\\pi^2/400>1$. The previous argument excludes the first, so $|\\sin3\\pi y|\\le1/20$ and $x\\ge.99$. Set $a=1-x$, $b=1-y$. Then $0<a\\le.01$ and $b=4\\sin2\\pi a\\le.08\\pi<.252$. The sine bound now forces $0<b<.01$ (the only nearby zero of $\\sin3\\pi y$ is at $y=1$). The exact equations are $b=4\\sin2\\pi a$ and $a=4(1-\\cos3\\pi b)$.",
+      "Define $H(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$. On $[0,.01]$, $H\\prime\\prime(b)=36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]>0$. We have $H(0)=H(b)=0$ for the noncorner solution, so strict convexity gives $H\\prime(b)>0$. This says $12\\pi\\sin3\\pi b>1/(8\\pi\\cos2\\pi a)$, precisely that the derivative product exceeds one, a contradiction. The claimed inequality follows.",
+      "For oppositely oriented branches uniqueness follows directly by monotonicity. For equally oriented branches, write the first as $x=F^{-1}(y)$: the difference $G(y)-F^{-1}(y)$ has the same nonzero crossing sign at every zero because the derivative product is greater than one. It cannot have two such crossings. Boundary endpoint signs guarantee one interior crossing in each of the $16\\cdot24$ branch-pair rectangles, except that the final pair shares $(1,1)$. There is also an interior crossing for that pair: near $b=0$, $H(b)<0$ because $H\\prime(0)<0$, while the opposite rectangle endpoint has positive sign. Therefore there are $384$ interior intersections plus the corner, giving $385$."
+    ],
+    "solution_zh": [
+      "所有解在单位正方形内。对 $0\\le u\\le1$ 令 $h(u)=4||u-1/2|-1/4|$，其在 $0,1/4,1/2,3/4,1$ 处依次取值 $1,0,1,0,1$。于是 $y=F(x)=h(|\\sin2\\pi x|)$ 有十六个贯穿高度的单调分支，$x=G(y)=h(|\\cos3\\pi y|)$ 有二十四个贯穿宽度的分支。唯一边界解为 $(1,1)$。",
+      "为严格证明分支交点唯一，先证每个内部解满足 $|F\\prime(x)G\\prime(y)|=96\\pi^2|\\cos2\\pi x\\sin3\\pi y|>1$。内部解不在分支端点上。若 $|\\cos2\\pi x|\\le1/20$，则 $|\\sin2\\pi x|\\ge399/400$，所以 $y\\ge.99$，进而 $x\\ge1-18\\pi^2(.01)^2>.982$，这又使 $|\\cos2\\pi x|>.99$，矛盾。",
+      "若导数乘积不超过一，由 $96\\pi^2/400>1$，两个三角因子至少有一个不超过 $1/20$。前种已排除，故 $|\\sin3\\pi y|\\le1/20$，从而 $x\\ge.99$。令 $a=1-x,b=1-y$，则 $0<a\\le.01$，$b=4\\sin2\\pi a\\le.08\\pi<.252$。正弦界进一步迫使 $0<b<.01$，因为此范围内靠近的唯一零点为 $y=1$。局部精确方程为 $b=4\\sin2\\pi a,a=4(1-\\cos3\\pi b)$。",
+      "定义 $H(b)=4(1-\\cos3\\pi b)-\\arcsin(b/4)/(2\\pi)$。在 $[0,.01]$，$H\\prime\\prime(b)=36\\pi^2\\cos3\\pi b-b/[128\\pi(1-b^2/16)^{3/2}]>0$。非角点解满足 $H(0)=H(b)=0$，严格凸性给出 $H\\prime(b)>0$，即 $12\\pi\\sin3\\pi b>1/(8\\pi\\cos2\\pi a)$，正是导数乘积大于一，与假设矛盾。",
+      "方向相反的两分支由单调性至多相交一次。方向相同时，把第一条写成 $x=F^{-1}(y)$，差函数 $G(y)-F^{-1}(y)$ 在每个零点的穿越方向均相同，因为导数乘积大于一，所以不能有两个零点。各分支矩形端点符号保证存在一个内部交点；最后一对分支共享角点 $(1,1)$，但因 $H\\prime(0)<0$，角点附近 $H(b)<0$，与矩形另一端的正号相反，因此另有一个内部交点。故内部交点为 $16\\cdot24=384$，加角点共 $385$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/12",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Trigonometric algebra & equations",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Source monotonicity shortcut replaced by derivative-product and strict-convexity proof. Root proposed route; template_audit independently checked bounds, differentiation, crossing signs and boundary uniqueness. Independent final cross-review remains pending.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q13",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "$p=2$ fails modulo $4$. For odd $p$, a root has multiplicative order $8$, so $8\\mid p-1$. The first candidate is $17$, whose roots of $x^4=-1$ are $2,8,9,15$.",
+      "reason_zh": "$p=2$ 在模 $4$ 下不成立。若 $p$ 为奇素数，根的乘法阶为 $8$，故 $8\\mid p-1$。首个候选为 $17$，模 $17$ 的四个根为 $2,8,9,15$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "For each root $a$, write $m=a+17t$. Modulo $289$, the condition is $(a^4+1)/17+4a^3t\\equiv0\\pmod{17}$. The derivative coefficient is nonzero, so each root lifts uniquely.",
+        "reason_zh": "逐一令 $m=a+17t$，则模 $289$ 的条件化为 $(a^4+1)/17+4a^3t\\equiv0\\pmod{17}$。导数系数非零，因此每个根唯一提升。"
+      }
+    ],
+    "statement_en": "Let $p$ be the smallest prime for which $p^2$ divides $n^4+1$ for some integer $n$. Determine the smallest positive $m$ with $p^2\\mid m^4+1$.",
+    "statement_zh": "设 $p$ 为使某个整数 $n$ 满足 $p^2\\mid n^4+1$ 的最小素数。求满足 $p^2\\mid m^4+1$ 的最小正整数 $m$。",
+    "answer": 110,
+    "solution_en": [
+      "$p=2$ fails modulo $4$. For odd $p$, a root has multiplicative order $8$, so $8\\mid p-1$. The first candidate is $17$, whose roots of $x^4=-1$ are $2,8,9,15$.",
+      "For each root $a$, write $m=a+17t$. Modulo $289$, the condition is $(a^4+1)/17+4a^3t\\equiv0\\pmod{17}$. The derivative coefficient is nonzero, so each root lifts uniquely.",
+      "The four lifted residues are $155,110,179,134$, respectively. Therefore the least positive root is $110$; indeed $110^4+1=289\\cdot506609$."
+    ],
+    "solution_zh": [
+      "$p=2$ 在模 $4$ 下不成立。若 $p$ 为奇素数，根的乘法阶为 $8$，故 $8\\mid p-1$。首个候选为 $17$，模 $17$ 的四个根为 $2,8,9,15$。",
+      "逐一令 $m=a+17t$，则模 $289$ 的条件化为 $(a^4+1)/17+4a^3t\\equiv0\\pmod{17}$。导数系数非零，因此每个根唯一提升。",
+      "四个提升后的剩余类依次为 $155,110,179,134$。最小正根为 $110$，检验 $110^4+1=289\\cdot506609$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/13",
+    "method_chain": [
+      "Orders, modular powers & cycles",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q14",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "Embed the tetrahedron in a rectangular box using alternate vertices. Box dimensions $a,b,c$ satisfy $a^2+b^2=41,a^2+c^2=80,b^2+c^2=89$, giving $(a,b,c)=(4,5,8)$. Its volume is $abc/3=160/3$.",
+      "reason_zh": "把四面体嵌入长方体的相间顶点。长方体边长满足 $a^2+b^2=41,a^2+c^2=80,b^2+c^2=89$，故为 $(4,5,8)$。四面体体积为 $abc/3=160/3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Every face has squared sides $41,80,89$. The squared-area identity gives $16F^2=2(41\\cdot80+80\\cdot89+89\\cdot41)-(41^2+80^2+89^2)=12096$, so $F=6\\sqrt{21}$.",
+        "reason_zh": "每个面的边长平方为 $41,80,89$，由面积恒等式，$16F^2=2(41\\cdot80+80\\cdot89+89\\cdot41)-(41^2+80^2+89^2)=12096$，故 $F=6\\sqrt{21}$。"
+      }
+    ],
+    "statement_en": "Tetrahedron $ABCD$ has opposite-edge pairs $AB=CD=\\sqrt{41}$, $AC=BD=\\sqrt{80}$, $AD=BC=\\sqrt{89}$. Its interior point equidistant from all faces has distance $m\\sqrt n/p$, with coprime $m,p$ and squarefree $n$. Find $m+n+p$.",
+    "statement_zh": "四面体 $ABCD$ 的对棱分别满足 $AB=CD=\\sqrt{41},AC=BD=\\sqrt{80},AD=BC=\\sqrt{89}$。内部到四面等距的点，其共同距离为 $m\\sqrt n/p$，其中 $m,p$ 互质且 $n$ 无平方素因子。求 $m+n+p$。",
+    "answer": 104,
+    "solution_en": [
+      "Embed the tetrahedron in a rectangular box using alternate vertices. Box dimensions $a,b,c$ satisfy $a^2+b^2=41,a^2+c^2=80,b^2+c^2=89$, giving $(a,b,c)=(4,5,8)$. Its volume is $abc/3=160/3$.",
+      "Every face has squared sides $41,80,89$. The squared-area identity gives $16F^2=2(41\\cdot80+80\\cdot89+89\\cdot41)-(41^2+80^2+89^2)=12096$, so $F=6\\sqrt{21}$.",
+      "Decomposing into four pyramids gives $V=r(4F)/3$. Hence $r=20\\sqrt{21}/63$, so $m+n+p=104$."
+    ],
+    "solution_zh": [
+      "把四面体嵌入长方体的相间顶点。长方体边长满足 $a^2+b^2=41,a^2+c^2=80,b^2+c^2=89$，故为 $(4,5,8)$。四面体体积为 $abc/3=160/3$。",
+      "每个面的边长平方为 $41,80,89$，由面积恒等式，$16F^2=2(41\\cdot80+80\\cdot89+89\\cdot41)-(41^2+80^2+89^2)=12096$，故 $F=6\\sqrt{21}$。",
+      "分成四个同高棱锥，得 $V=r(4F)/3$，于是 $r=20\\sqrt{21}/63$，所求 $104$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/14",
+    "method_chain": [
+      "Volumes & solid geometry",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2024-I-Q15",
+    "paper_id": "AIME-2024-I",
+    "exam_year": 2024,
+    "exam_form": "I",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "For dimensions $a,b,c>0$, $ab+bc+ca=27,abc=23$. The required squared radius is one fourth the maximum space-diagonal square, namely $[(a+b+c)^2-54]/4$.",
+      "reason_zh": "边长满足 $ab+bc+ca=27,abc=23$。容球半径为体对角线的一半，所以所求平方为 $[(a+b+c)^2-54]/4$ 的最大值。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "At an extremum two dimensions coincide: otherwise the cubic with roots $a,b,c$ could have its sum perturbed while maintaining three positive roots. Setting $b=c=t$ gives $t^3-27t+46=(t-2)(t^2+2t-23)=0$. The positive candidates are $t=2$ and $t=2\\sqrt6-1$.",
+        "reason_zh": "极值处至少两边相等：否则以 $a,b,c$ 为根的三次方程可微调根之和且保持三正根。令 $b=c=t$，得 $t^3-27t+46=(t-2)(t^2+2t-23)=0$，正根为 $2,2\\sqrt6-1$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE09",
+        "reason_en": "For dimensions $a,b,c>0$, $ab+bc+ca=27,abc=23$. The required squared radius is one fourth the maximum space-diagonal square, namely $[(a+b+c)^2-54]/4$.",
+        "reason_zh": "边长满足 $ab+bc+ca=27,abc=23$。容球半径为体对角线的一半，所以所求平方为 $[(a+b+c)^2-54]/4$ 的最大值。"
+      }
+    ],
+    "statement_en": "Consider all rectangular boxes with surface area $54$ and volume $23$. Let $r$ be the smallest radius such that every box can fit inside some sphere of radius $r$. Write $r^2=p/q$ in lowest terms and find $p+q$.",
+    "statement_zh": "考虑所有表面积为 $54$、体积为 $23$ 的长方体。若半径为 $r$ 的球能够分别容纳其中每个长方体，求最小的 $r$。将其平方写成最简分数 $p/q$，求 $p+q$。",
+    "answer": 721,
+    "solution_en": [
+      "For dimensions $a,b,c>0$, $ab+bc+ca=27,abc=23$. The required squared radius is one fourth the maximum space-diagonal square, namely $[(a+b+c)^2-54]/4$.",
+      "At an extremum two dimensions coincide: otherwise the cubic with roots $a,b,c$ could have its sum perturbed while maintaining three positive roots. Setting $b=c=t$ gives $t^3-27t+46=(t-2)(t^2+2t-23)=0$. The positive candidates are $t=2$ and $t=2\\sqrt6-1$.",
+      "For $t=2$, $(a,b,c)=(23/4,2,2)$ and the sum is $39/4$. For the second candidate the sum is $(-21+96\\sqrt6)/23<39/4$ (use $\\sqrt6<5/2$, giving $s<219/23<39/4$). Thus $r^2=[(39/4)^2-54]/4=657/64$ and $p+q=721$."
+    ],
+    "solution_zh": [
+      "边长满足 $ab+bc+ca=27,abc=23$。容球半径为体对角线的一半，所以所求平方为 $[(a+b+c)^2-54]/4$ 的最大值。",
+      "极值处至少两边相等：否则以 $a,b,c$ 为根的三次方程可微调根之和且保持三正根。令 $b=c=t$，得 $t^3-27t+46=(t-2)(t^2+2t-23)=0$，正根为 $2,2\\sqrt6-1$。",
+      "$t=2$ 给出 $(23/4,2,2)$，边长和为 $39/4$；另一候选的和为 $(-21+96\\sqrt6)/23<39/4$。故 $r^2=[(39/4)^2-54]/4=657/64$，所求 $721$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2024I/problem/15",
+    "method_chain": [
+      "Inequalities & continuous optimization",
+      "Polynomials & Vieta relations",
+      "Spheres & spatial distances"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

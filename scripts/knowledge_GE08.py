@@ -1,0 +1,68 @@
+from knowledge_ge_helpers import Section
+s=Section(r'GE08',r'A conic equation is most useful after its geometry has selected the variables. Distinguish intersection, focal-distance optimization, tangency and envelope questions; each needs its own existence and branch check.',r'先由几何关系选择变量，圆锥曲线方程才最有效。求交、焦距优化、相切与包络问题应分别处理，并检验存在性与分支。',[r'GE07',r'AL01'])
+s.add(r'Exploit symmetry before intersecting an ellipse',r'求椭圆交点前先利用对称性',
+ [r'Place the symmetry axis on a coordinate axis and write paired points as $(u,v),(-u,v)$.',r'Translate a metric condition, such as an equilateral altitude, into one linear relation between $u,v$.',r'Substitute into the conic, reject collapsed configurations, and recover the requested length.'],
+ [r'把对称轴放在坐标轴上，将成对的点写为 $(u,v),(-u,v)$。',r'将等边三角形高等度量条件转为 $u,v$ 的一个线性关系。',r'代入圆锥曲线，排除退化构型，再求目标长度。'],
+ r'An equilateral triangle has top vertex $(0,2)$ on $x^2+4y^2=16$ and altitude on the $y$ axis. Find its squared side length.',
+ r'等边三角形的顶点 $(0,2)$ 在椭圆 $x^2+4y^2=16$ 上，一条高在 $y$ 轴上。求边长平方。',
+ [r'The other vertices are $(u,v),(-u,v)$, where $u>0$ and $v=2-\sqrt3u$.',r'Substitution gives $u^2+4(2-\sqrt3u)^2=16$, hence $u(13u-16\sqrt3)=0$.',r'Reject $u=0$. The side is $2u=32\sqrt3/13$, whose square is $3072/169$.'],
+ [r'另两顶点为 $(u,v),(-u,v)$，其中 $u>0,v=2-\sqrt3u$。',r'代入得 $u^2+4(2-\sqrt3u)^2=16$，即 $u(13u-16\sqrt3)=0$。',r'排除 $u=0$，边长为 $32\sqrt3/13$，平方为 $3072/169$。'],
+ r'A zero algebraic root can represent a collapsed triangle.',r'代数零根可能对应退化三角形。',r'2001-I-Q05',prerequisites=[r'GE03'])
+s.add(r'Combine conics, then certify the number of intersections',r'线性组合圆锥曲线后严格核实交点数',
+ [r'Rewrite both conics with all terms on one side and look for a linear combination having equal $x^2,y^2$ coefficients.',r'Complete squares to identify the circle containing every common point.',r'Independently eliminate one variable and certify distinct real roots with disjoint sign intervals or derivative monotonicity.',r'Check a boundary root separately: a zero value alone does not certify distinct crossings.'],
+ [r'把两圆锥曲线都移项，寻找使 $x^2,y^2$ 系数相同的线性组合。',r'配方，确定包含全部公共点的圆。',r'另行消元，用互不重叠的变号区间或导数单调性核实不同实根数。',r'边界根须单独检验；仅有函数值为零不能证明相邻区间仍有另一根。'],
+ r'Find a circle through all intersections of $y=x^2-2$ and $x=y^2-2$, and determine the intersection count.',
+ r'求经过 $y=x^2-2$ 与 $x=y^2-2$ 全部交点的圆，并确定交点数。',
+ [r'Adding gives $x^2+y^2-x-y=4$, or $(x-1/2)^2+(y-1/2)^2=9/2$.',r'Subtracting gives $(x-y)(x+y+1)=0$. On $x=y$, the equation is $x^2-x-2=0$, giving $x=2,-1$.',r'On $x+y=-1$, substitute $y=-1-x$ into $y=x^2-2$: $x^2+x-1=0$, giving two distinct roots. Neither equals its paired $y$, so these are two further points.',r'There are four distinct real intersections, all on the identified circle.'],
+ [r'相加得 $x^2+y^2-x-y=4$，即 $(x-1/2)^2+(y-1/2)^2=9/2$。',r'相减得 $(x-y)(x+y+1)=0$。当 $x=y$ 时，$x^2-x-2=0$ 给出 $x=2,-1$。',r'当 $x+y=-1$ 时，代入得 $x^2+x-1=0$，有两个不同根；它们均不等于对应的 $y$，所以另给两点。',r'因此共有四个不同实交点，且均位于所求圆上。'],
+ r'A containing circle does not by itself guarantee four conic intersections.',r'找到公共圆并不能自动保证有四个圆锥曲线交点。',r'2021-I-Q15',prerequisites=[r'AL02'],extensions_en=[r'For a quartic with positive leading coefficient, four alternating sign intervals certify exactly four roots. If a boundary sample is zero, a nonzero derivative can supply the nearby sign change.'],extensions_zh=[r'首项系数为正的四次式，四个交错变号区间可核实恰有四根。若边界样点恰为零，可利用非零导数补出附近的符号变化。'])
+s.add(r'A tangent-circle center traces an ellipse',r'相切圆的圆心形成椭圆轨迹',
+ [r'Turn internal/external tangency into center-distance equations involving the unknown radius.',r'Eliminate that radius; a constant sum of two distances identifies an ellipse.',r'Before optimizing, verify every proposed ellipse point gives a positive radius and the required containment.',r'Substitute a variable line and require its quadratic discriminant to be nonnegative; an endpoint slope occurs at tangency.'],
+ [r'把内切、外切写为包含未知半径的圆心距离方程。',r'消去半径；到两定点距离和为常数时得到椭圆。',r'优化前先验证椭圆点给出的半径为正且满足容纳关系。',r'代入可变直线，要求二次方程判别式非负；极端斜率常在相切时出现。'],
+ r'A circle lies inside the radius-$7$ circle centered at $(-3,0)$ and is externally tangent to the radius-$3$ circle centered at $(3,0)$. Show its center lies on an ellipse and decide whether every point of that ellipse is admissible.',
+ r'某圆在圆心 $(-3,0)$、半径 $7$ 的圆内并与之内切，又与圆心 $(3,0)$、半径 $3$ 的圆外切。求其圆心轨迹，并判断轨迹是否全部可行。',
+ [r'For center $P$ and radius $t$, write $PF_1=7-t$ and $PF_2=3+t$. Thus $PF_1+PF_2=10$.',r'The foci are six units apart, so the ellipse has $a=5,c=3,b=4$, equation $x^2/25+y^2/16=1$.',r'On this ellipse, $PF_1$ ranges from $2$ to $8$. But $t=7-PF_1>0$ requires $PF_1<7$, so part of the algebraic ellipse is inadmissible.'],
+ [r'设圆心为 $P$、半径为 $t$，有 $PF_1=7-t,PF_2=3+t$，所以距离和为 $10$。',r'焦距为六，故 $a=5,c=3,b=4$，椭圆方程为 $x^2/25+y^2/16=1$。',r'椭圆上 $PF_1$ 介于 $2$ 与 $8$，而 $t=7-PF_1>0$ 要求 $PF_1<7$，所以代数椭圆并非全部可行。'],
+ r'Eliminating the radius can add inadmissible points; restore its sign.',r'消去半径会加入不可行点，必须补回正性条件。',r'2005-II-Q15',prerequisites=[r'GE06',r'AL02'])
+s.add(r'Pair focal distances so triangle bounds attain equality together',r'配对焦距使三角不等式同时取等',
+ [r'Express each ellipse parameter as half its sum of focal distances.',r'Try both pairings of the four foci and apply triangle inequalities through the common point.',r'Choose a pairing whose two joining segments actually intersect.',r'At that intersection, recompute the parameters and check strict ellipse restrictions.'],
+ [r'将每个椭圆参数写成两焦距之和的一半。',r'尝试四焦点的两种配对，对经过公共点的折线使用三角不等式。',r'选择两条焦点连线确实相交的配对。',r'在交点重新计算参数，并检验椭圆参数的严格限制。'],
+ r'Ellipse families have foci $(-2,0),(2,0)$ and $(4,2),(4,4)$, with distance sums $2a,2b$. Find the least possible $a+b$ at a common point.',
+ r'两族椭圆焦点分别为 $(-2,0),(2,0)$ 与 $(4,2),(4,4)$，焦距和为 $2a,2b$。求有公共点时 $a+b$ 的最小值。',
+ [r'Pair $(-2,0)$ with $(4,2)$ and $(2,0)$ with $(4,4)$. The joining lengths are $2\sqrt{10},2\sqrt5$, so $a+b\ge\sqrt{10}+\sqrt5$.',r'The segments intersect at $P=(14/5,8/5)$, found from $y=(x+2)/3$ and $y=2(x-2)$. The point lies strictly inside both segments.',r'At $P$, both distance inequalities are equalities. The point is on neither focal axis, so the two ellipses are nondegenerate, attaining $\sqrt{10}+\sqrt5$.'],
+ [r'把 $(-2,0)$ 与 $(4,2)$、$(2,0)$ 与 $(4,4)$ 配对，连线长为 $2\sqrt{10},2\sqrt5$，所以 $a+b\ge\sqrt{10}+\sqrt5$。',r'由两直线 $y=(x+2)/3,y=2(x-2)$，交点为 $P=(14/5,8/5)$，严格位于两线段内部。',r'在 $P$，两处三角不等式同时取等。此点不在任一焦轴上，两椭圆均非退化，故达到 $\sqrt{10}+\sqrt5$。'],
+ r'A lower bound from the wrong pairing may have incompatible equality cases.',r'错误配对所得下界，其等号条件可能互不相容。',r'2022-II-Q12',prerequisites=[r'AL07'])
+s.add(r'Perpendicular hyperbola radii give an open feasible interval',r'双曲线垂直径向量给出开可行区间',
+ [r'Write opposite vertices as $P,-P,Q,-Q$ and use perpendicularity of rhombus diagonals.',r'Substitute a slope into the conic and require a positive finite squared coordinate.',r'Apply the same existence condition to the perpendicular slope.',r'Optimize only on their common open interval and distinguish an infimum from an attained minimum.'],
+ [r'把对角顶点写为 $P,-P,Q,-Q$，并使用菱形对角线垂直。',r'将斜率代入曲线，要求坐标平方为正且有限。',r'对垂直斜率使用同样的存在条件。',r'只在公共开区间上优化，区分下确界与可取到的最小值。'],
+ r'A centered rhombus has vertices on $x^2/3-y^2/4=1$. Find the infimum of a squared diagonal.',
+ r'中心在原点的菱形顶点位于 $x^2/3-y^2/4=1$，求一条对角线平方的下确界。',
+ [r'Put $P=(x,mx)$. Then $x^2=12/(4-3m^2)$, and the perpendicular line exists only when $3/4<m^2<4/3$.',r'The diagonal square is $4|P|^2=48(1+m^2)/(4-3m^2)$, strictly increasing in $m^2$.',r'At the lower endpoint the limit is $48$. Every feasible value is greater than $48$, and slopes approaching the endpoint attain values arbitrarily close to it.'],
+ [r'令 $P=(x,mx)$，则 $x^2=12/(4-3m^2)$；垂直直线也有交点要求 $3/4<m^2<4/3$。',r'对角线平方为 $48(1+m^2)/(4-3m^2)$，随 $m^2$ 严格递增。',r'趋向下端点时极限为 $48$。所有可行值均大于 $48$，且可任意接近它。'],
+ r'The endpoint fails because the other diagonal becomes asymptotic, not because the objective is undefined there.',r'端点不可行是因为另一对角线成为渐近方向，并非目标表达式在该处无定义。',r'2024-I-Q09',prerequisites=[r'AL07'])
+s.add(r'A one-segment point is an envelope tangency',r'仅属于一条线段的点对应包络相切',
+ [r'Parameterize unit-axis intercepts by $(\cos\theta,\sin\theta)$.',r'For a positive point, form $F(\theta)=x\sec\theta+y\csc\theta$; membership is $F=1$.',r'Use strict convexity and endpoint divergence to show exactly one segment means the minimum equals one.',r'Solve $F=1,F\prime=0$ at the specified segment parameter.'],
+ [r'用 $(\cos\theta,\sin\theta)$ 参数化单位线段的轴截距。',r'对正坐标点构造 $F(\theta)=x\sec\theta+y\csc\theta$，在线段上等价于 $F=1$。',r'由严格凸性和端点趋于无穷，证明仅有一条线段等价于最小值恰为一。',r'在指定线段参数处联立 $F=1,F\prime=0$。'],
+ r'On the unit segment joining $(\sqrt3/2,0)$ and $(0,1/2)$, find the positive point lying on no other unit segment joining the axes.',
+ r'在连接 $(\sqrt3/2,0)$ 与 $(0,1/2)$ 的单位线段上，求不在其他同类单位截轴线段上的正坐标点。',
+ [r'The parameter is $\theta=\pi/6$. The equations are $2x/\sqrt3+2y=1$ and $(2/3)x-2\sqrt3y=0$.',r'The derivative equation gives $x=3\sqrt3y$. Substitution yields $y=1/8,x=3\sqrt3/8$.',r'For positive $x,y$, $F$ is strictly convex and diverges at both endpoints. Its stationary value is one, so this point belongs to exactly one unit segment.'],
+ [r'参数为 $\theta=\pi/6$，两式为 $2x/\sqrt3+2y=1$ 与 $(2/3)x-2\sqrt3y=0$。',r'导数式给出 $x=3\sqrt3y$，代入得 $y=1/8,x=3\sqrt3/8$。',r'正坐标下 $F$ 严格凸且两端趋于无穷；其驻点值为一，因此该点只属于一条单位线段。'],
+ r'A formal envelope equation needs a uniqueness proof; convexity supplies it.',r'形式上的包络方程仍需唯一性证明，严格凸性可提供此证明。',r'2024-II-Q12',prerequisites=[r'AL07'])
+s.add(r'Use reflection symmetry to construct a rotated-conic intersection',r'利用反射对称构造旋转圆锥曲线交点',
+ [r'Identify a reflection preserving the original conic.',r'Seek a point whose inverse rotation is exactly that reflection.',r'The resulting linear relation intersects the original conic in explicit candidates.',r'Check the requested quadrant and use stated uniqueness only after verifying the constructed point.'],
+ [r'找出保持原圆锥曲线不变的反射。',r'寻找逆旋转恰等于该反射的点。',r'所得线性关系与原曲线相交，给出明确候选。',r'检验所需象限；须先验证构造点，再使用题给唯一性。'],
+ r'Construct a fourth-quadrant common point of $y=x^2-1$ and its $90^\circ$ counterclockwise rotation.',
+ r'构造 $y=x^2-1$ 与其绕原点逆时针旋转 $90^\circ$ 后曲线的一个第四象限公共点。',
+ [r'The inverse rotation is $(x,y)\mapsto(y,-x)$, and the original parabola is preserved by $(x,y)\mapsto(-x,y)$.',r'Equating these images gives $y=-x$. With $y=x^2-1$, the positive root is $x=(\sqrt5-1)/2$.',r'The point $((\sqrt5-1)/2,(1-\sqrt5)/2)$ lies in the fourth quadrant, and its inverse rotation is its reflection on the original parabola, so it belongs to both curves.'],
+ [r'逆旋转为 $(x,y)\mapsto(y,-x)$，原抛物线关于 $(x,y)\mapsto(-x,y)$ 不变。',r'令两像相等，得 $y=-x$。与 $y=x^2-1$ 联立，正根为 $x=(\sqrt5-1)/2$。',r'所得点 $((\sqrt5-1)/2,(1-\sqrt5)/2)$ 在第四象限；逆旋转像是原曲线上的反射点，所以它在两曲线上。'],
+ r'This construction proves existence; uniqueness needs a separate argument unless explicitly given.',r'此构造证明存在；若题目未给唯一性，还须另证。',r'2025-I-Q09',prerequisites=[r'GE07'])
+s.add(r'Tangency radii are stationary distances to a conic',r'相切半径对应到圆锥曲线的驻定距离',
+ [r'Parameterize a smooth point on the conic.',r'Form squared distance from the prescribed circle center.',r'Differentiate: a stationary distance means the radius vector is normal to the conic tangent.',r'Evaluate every stationary distance, remove duplicate radii, and verify actual tangency.'],
+ [r'参数化圆锥曲线上的光滑点。',r'构造到指定圆心的距离平方。',r'求导：距离驻定等价于半径向量垂直于曲线切线。',r'计算全部驻定距离，去掉重复半径，并核实实际相切。'],
+ r'Find all circle radii centered at $(0,3)$ tangent to $y=x^2$.',
+ r'求圆心 $(0,3)$ 且与抛物线 $y=x^2$ 相切的所有圆半径。',
+ [r'At $(t,t^2)$, squared distance is $D(t)=t^2+(t^2-3)^2$.',r'Its derivative is $D\prime(t)=2t(2t^2-5)$, giving $t=0$ or $t^2=5/2$.',r'These give $D=9$ and $D=11/4$. Thus the distinct radii are $3$ and $\sqrt{11}/2$; in each case the radius is perpendicular to the tangent.'],
+ [r'在点 $(t,t^2)$，距离平方为 $D(t)=t^2+(t^2-3)^2$。',r'导数为 $D\prime(t)=2t(2t^2-5)$，所以 $t=0$ 或 $t^2=5/2$。',r'对应距离平方为 $9,11/4$，故不同半径为 $3,\sqrt{11}/2$；两种情况下半径均垂直于切线。'],
+ r'Tangency at one point does not require the circle to avoid the conic everywhere else.',r'在一点相切，并不要求圆与曲线在其他位置没有交点。',r'2026-II-Q06',prerequisites=[r'AL07'])
+s.data['review']={'author':'print_builder','all_primary_routes_read':True,'necessary_secondary_routes_read':True,'original_examples_recomputed':True,'independent_review':True,'reviewer':'root','findings':['All eight procedures and original worked examples independently read and recomputed by root; all pass.']}
+s.save()

@@ -1,0 +1,704 @@
+[
+  {
+    "question_id": "AIME-2008-II-Q01",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Each four-term block $(4j)^2+(4j-1)^2-(4j-2)^2-(4j-3)^2$ simplifies to $32j-12$.",
+      "reason_zh": "每四项一组，$(4j)^2+(4j-1)^2-(4j-2)^2-(4j-3)^2=32j-12$。"
+    },
+    "secondary": [],
+    "statement_en": "Let $N=100^2+99^2-98^2-97^2+96^2+95^2-\\cdots+4^2+3^2-2^2-1^2$. Find $N\\bmod1000$.",
+    "statement_zh": "令 $N=100^2+99^2-98^2-97^2+96^2+95^2-\\cdots+4^2+3^2-2^2-1^2$，求其除以一千的余数。",
+    "answer": 100,
+    "solution_en": [
+      "Each four-term block $(4j)^2+(4j-1)^2-(4j-2)^2-(4j-3)^2$ simplifies to $32j-12$.",
+      "Sum for $j=1,\\ldots,25$: $N=32\\cdot325-12\\cdot25=10100$, remainder $100$."
+    ],
+    "solution_zh": [
+      "每四项一组，$(4j)^2+(4j-1)^2-(4j-2)^2-(4j-3)^2=32j-12$。",
+      "对一至二十五求和得 $10100$，余数为 $100$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/1",
+    "method_chain": [
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q02",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "If R’s speed is $r$ miles/min, its time is $50/r+49\\cdot5$. J’s time is $200/(3r)+24\\cdot5$.",
+      "reason_zh": "设甲速度为 $r$ 英里每分，用时为 $50/r+245$；乙为 $200/(3r)+120$。"
+    },
+    "secondary": [],
+    "statement_en": "Cyclist R rests five minutes after every mile; cyclist J rides at three quarters R’s riding speed and rests five minutes after every two miles. They start together and first reach mile fifty simultaneously, before any final rest. Find elapsed minutes.",
+    "statement_zh": "骑手甲每骑一英里休五分钟；乙骑行速度为甲的四分之三，每两英里休五分钟。两人同时出发且同时首次到达五十英里处，不计终点休息，求分钟数。",
+    "answer": 620,
+    "solution_en": [
+      "If R’s speed is $r$ miles/min, its time is $50/r+49\\cdot5$. J’s time is $200/(3r)+24\\cdot5$.",
+      "Equating gives $125=50/(3r)$, hence $r=2/15$. Total time $375+245=620$."
+    ],
+    "solution_zh": [
+      "设甲速度为 $r$ 英里每分，用时为 $50/r+245$；乙为 $200/(3r)+120$。",
+      "联立得 $r=2/15$，总用时为 $620$ 分钟。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/2",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q03",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL07",
+      "reason_en": "Each cut reduces one dimension by one, so the remaining three dimensions sum to $37-10=27$. By AM–GM their product is at most $9^3$.",
+      "reason_zh": "每刀使一维减少一，因此余下三维和为二十七，由均值不等式乘积至多 $9^3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE10",
+        "reason_en": "Each cut reduces one dimension by one, so the remaining three dimensions sum to $37-10=27$. By AM–GM their product is at most $9^3$.",
+        "reason_zh": "每刀使一维减少一，因此余下三维和为二十七，由均值不等式乘积至多 $9^3$。"
+      }
+    ],
+    "statement_en": "A $10\\times13\\times14$ rectangular block loses ten slices, each one unit thick and parallel to one of its faces. Maximize the volume left after all slices.",
+    "statement_zh": "尺寸 $10\\times13\\times14$ 的长方体，依次切去十片，每片厚一且平行于某个面。求剩余体积最大值。",
+    "answer": 729,
+    "solution_en": [
+      "Each cut reduces one dimension by one, so the remaining three dimensions sum to $37-10=27$. By AM–GM their product is at most $9^3$.",
+      "The dimensions $9,9,9$ are attained by cuts $1,4,5$ in the respective directions. Maximum volume is $729$."
+    ],
+    "solution_zh": [
+      "每刀使一维减少一，因此余下三维和为二十七，由均值不等式乘积至多 $9^3$。",
+      "三个方向分别切一、四、五片即可达到 $9,9,9$，最大体积为 $729$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/3",
+    "method_chain": [
+      "Inequalities & continuous optimization",
+      "Volumes & solid geometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q04",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "The ordinary ternary representation is $2202101_3$. Replace each digit two by minus one with a carry to the next position, giving $2008=3^7-3^5+3^4-3^3+3^2+3^0$.",
+      "reason_zh": "普通三进制为 $2202101_3$，将数字二改为负一并向上进位，得 $2008=3^7-3^5+3^4-3^3+3^2+3^0$。"
+    },
+    "secondary": [],
+    "statement_en": "Express $2008$ uniquely as a sum of distinct nonnegative powers of three with coefficients $1$ or $-1$. Find the sum of the exponents used.",
+    "statement_zh": "将 $2008$ 唯一表示为不同非负三次幂的和，各系数为正一或负一，求所用指数之和。",
+    "answer": 21,
+    "solution_en": [
+      "The ordinary ternary representation is $2202101_3$. Replace each digit two by minus one with a carry to the next position, giving $2008=3^7-3^5+3^4-3^3+3^2+3^0$.",
+      "Balanced ternary digits are unique because reduction modulo three determines the final digit and then induction determines the rest. Exponent sum $7+5+4+3+2+0=21$."
+    ],
+    "solution_zh": [
+      "普通三进制为 $2202101_3$，将数字二改为负一并向上进位，得 $2008=3^7-3^5+3^4-3^3+3^2+3^0$。",
+      "模三先唯一确定末位，再递归确定其余位，故表示唯一。指数和为 $21$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/4",
+    "method_chain": [
+      "Number bases, digits & palindromes"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q05",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "Extend the legs to meet at $E$. Since the two base angles sum to ninety degrees, triangle $EAD$ is right at $E$. Parallelism makes $EBC$ a smaller homothetic right triangle, so $E,M,N$ are collinear.",
+      "reason_zh": "延长两腰交于 $E$，两底角和为直角，所以 $EAD$ 为直角三角形。由平行线，$EBC$ 与其位似，$E,M,N$ 共线。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The median to a right triangle’s hypotenuse is half that hypotenuse. Thus $EN=1004,EM=500$, and $MN=504$.",
+        "reason_zh": "直角三角形斜边中线等于斜边一半，故 $MN=1004-500=504$。"
+      }
+    ],
+    "statement_en": "Trapezoid $ABCD$ has $BC\\parallel AD$, $BC=1000,AD=2008$, and base angles $A=37^\\circ,D=53^\\circ$. If $M,N$ are the base midpoints, find $MN$.",
+    "statement_zh": "梯形 $ABCD$ 中 $BC\\parallel AD,BC=1000,AD=2008$，底角 $A=37^\\circ,D=53^\\circ$。$M,N$ 为两底中点，求 $MN$。",
+    "answer": 504,
+    "solution_en": [
+      "Extend the legs to meet at $E$. Since the two base angles sum to ninety degrees, triangle $EAD$ is right at $E$. Parallelism makes $EBC$ a smaller homothetic right triangle, so $E,M,N$ are collinear.",
+      "The median to a right triangle’s hypotenuse is half that hypotenuse. Thus $EN=1004,EM=500$, and $MN=504$."
+    ],
+    "solution_zh": [
+      "延长两腰交于 $E$，两底角和为直角，所以 $EAD$ 为直角三角形。由平行线，$EBC$ 与其位似，$E,M,N$ 共线。",
+      "直角三角形斜边中线等于斜边一半，故 $MN=1004-500=504$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/5",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q06",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Dividing by $u_{n-1}$ shows successive ratios increase by one: $u_n/u_{n-1}=1+u_{n-1}/u_{n-2}$.",
+      "reason_zh": "除以 $u_{n-1}$，相邻项比满足每次加一。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Dividing by $u_{n-1}$ shows successive ratios increase by one: $u_n/u_{n-1}=1+u_{n-1}/u_{n-2}$.",
+        "reason_zh": "除以 $u_{n-1}$，相邻项比满足每次加一。"
+      }
+    ],
+    "statement_en": "Sequences $a_n,b_n$ both obey $u_n=u_{n-1}+u_{n-1}^2/u_{n-2}$ for $n\\ge2$. Initial terms are $(a_0,a_1)=(1,1)$ and $(b_0,b_1)=(1,3)$. Find $b_{32}/a_{32}$.",
+    "statement_zh": "两数列都满足 $u_n=u_{n-1}+u_{n-1}^2/u_{n-2}$，初值分别为 $(1,1)$ 与 $(1,3)$，求 $b_{32}/a_{32}$。",
+    "answer": 561,
+    "solution_en": [
+      "Dividing by $u_{n-1}$ shows successive ratios increase by one: $u_n/u_{n-1}=1+u_{n-1}/u_{n-2}$.",
+      "Therefore $a_n=n!$, $b_n=(n+2)!/2$. Their ratio at thirty-two is $34\\cdot33/2=561$."
+    ],
+    "solution_zh": [
+      "除以 $u_{n-1}$，相邻项比满足每次加一。",
+      "因此 $a_n=n!,b_n=(n+2)!/2$，所求为 $34\\cdot33/2=561$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/6",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q07",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "Vieta gives $r+s+t=0$ and $rst=-251$. Each pair sum is the negative remaining root, so the requested sum is $-(r^3+s^3+t^3)$.",
+      "reason_zh": "韦达定理给出根和零、根积负二百五十一，各两根和为另一根的相反数。"
+    },
+    "secondary": [],
+    "statement_en": "If $r,s,t$ are the roots of $8x^3+1001x+2008=0$, find $(r+s)^3+(s+t)^3+(t+r)^3$.",
+    "statement_zh": "若 $r,s,t$ 是 $8x^3+1001x+2008=0$ 的根，求 $(r+s)^3+(s+t)^3+(t+r)^3$。",
+    "answer": 753,
+    "solution_en": [
+      "Vieta gives $r+s+t=0$ and $rst=-251$. Each pair sum is the negative remaining root, so the requested sum is $-(r^3+s^3+t^3)$.",
+      "When the root sum is zero, the cube-sum identity yields $r^3+s^3+t^3=3rst=-753$. The answer is $753$."
+    ],
+    "solution_zh": [
+      "韦达定理给出根和零、根积负二百五十一，各两根和为另一根的相反数。",
+      "由三次和恒等式，$r^3+s^3+t^3=3rst=-753$，所求为 $753$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/7",
+    "method_chain": [
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q08",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "Product-to-sum writes each term as $\\sin(k(k+1)a)-\\sin((k-1)ka)$. The sum telescopes to $\\sin(n(n+1)\\pi/2008)$.",
+      "reason_zh": "积化和差后每项为 $\\sin(k(k+1)a)-\\sin((k-1)ka)$，望远镜求和得 $\\sin(n(n+1)\\pi/2008)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Product-to-sum writes each term as $\\sin(k(k+1)a)-\\sin((k-1)ka)$. The sum telescopes to $\\sin(n(n+1)\\pi/2008)$.",
+        "reason_zh": "积化和差后每项为 $\\sin(k(k+1)a)-\\sin((k-1)ka)$，望远镜求和得 $\\sin(n(n+1)\\pi/2008)$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Integer sine values require an argument multiple of $\\pi/2$, so $1004=4\\cdot251$ divides $n(n+1)$. Coprimality of consecutive integers forces $n\\ge250$.",
+        "reason_zh": "正弦取整数要求角为半圆周角的整数倍，即 $1004\\mid n(n+1)$。相邻整数互质，素数二百五十一必须整除其中之一，故 $n\\ge250$。"
+      }
+    ],
+    "statement_en": "For $a=\\pi/2008$, find the smallest positive $n$ such that $2\\sum_{k=1}^n\\cos(k^2a)\\sin(ka)$ is an integer.",
+    "statement_zh": "令 $a=\\pi/2008$，求使 $2\\sum_{k=1}^n\\cos(k^2a)\\sin(ka)$ 为整数的最小正整数 $n$。",
+    "answer": 251,
+    "solution_en": [
+      "Product-to-sum writes each term as $\\sin(k(k+1)a)-\\sin((k-1)ka)$. The sum telescopes to $\\sin(n(n+1)\\pi/2008)$.",
+      "Integer sine values require an argument multiple of $\\pi/2$, so $1004=4\\cdot251$ divides $n(n+1)$. Coprimality of consecutive integers forces $n\\ge250$.",
+      "$250\\cdot251$ lacks a factor four, while $251\\cdot252$ qualifies. The minimum is $251$."
+    ],
+    "solution_zh": [
+      "积化和差后每项为 $\\sin(k(k+1)a)-\\sin((k-1)ka)$，望远镜求和得 $\\sin(n(n+1)\\pi/2008)$。",
+      "正弦取整数要求角为半圆周角的整数倍，即 $1004\\mid n(n+1)$。相邻整数互质，素数二百五十一必须整除其中之一，故 $n\\ge250$。",
+      "二百五十缺因子四，而二百五十一符合，故最小为 $251$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/8",
+    "method_chain": [
+      "Trigonometric algebra & equations",
+      "Sequences & summation",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q09",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "With $\\omega=e^{i\\pi/4}$, the move is $z\\mapsto\\omega z+10$. Since $\\omega^8=1$ and the eight powers sum to zero, the affine map also has period eight, so only six moves remain.",
+      "reason_zh": "令 $\\omega=e^{i\\pi/4}$，变换为 $z\\mapsto\\omega z+10$。八次单位根之和为零，所以整个仿射变换周期也为八，仅需算六次。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL09",
+        "reason_en": "With $\\omega=e^{i\\pi/4}$, the move is $z\\mapsto\\omega z+10$. Since $\\omega^8=1$ and the eight powers sum to zero, the affine map also has period eight, so only six moves remain.",
+        "reason_zh": "令 $\\omega=e^{i\\pi/4}$，变换为 $z\\mapsto\\omega z+10$。八次单位根之和为零，所以整个仿射变换周期也为八，仅需算六次。"
+      }
+    ],
+    "statement_en": "Start at $(5,0)$ and repeat $150$ times: rotate counterclockwise $45^\\circ$ about the origin, then translate ten units right. If the endpoint is $(p,q)$, find $\\lfloor|p|+|q|\\rfloor$.",
+    "statement_zh": "从 $(5,0)$ 出发，重复一百五十次“绕原点逆时针转四十五度，再向右平移十”，终点为 $(p,q)$，求 $\\lfloor|p|+|q|\\rfloor$。",
+    "answer": 19,
+    "solution_en": [
+      "With $\\omega=e^{i\\pi/4}$, the move is $z\\mapsto\\omega z+10$. Since $\\omega^8=1$ and the eight powers sum to zero, the affine map also has period eight, so only six moves remain.",
+      "Thus $z_{150}=5\\omega^6+10\\sum_{j=0}^5\\omega^j=-5\\sqrt2+(5+5\\sqrt2)i$. The absolute-coordinate sum is $5+10\\sqrt2$, between nineteen and twenty.",
+      "The floor is $19$."
+    ],
+    "solution_zh": [
+      "令 $\\omega=e^{i\\pi/4}$，变换为 $z\\mapsto\\omega z+10$。八次单位根之和为零，所以整个仿射变换周期也为八，仅需算六次。",
+      "得到 $z_{150}=-5\\sqrt2+(5+5\\sqrt2)i$，绝对坐标和为 $5+10\\sqrt2$，介于十九和二十。",
+      "故取整为 $19$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/9",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Functional constraints & iteration"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q10",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO06",
+      "reason_en": "The nine possible squared distances are $1,2,4,5,8,9,10,13,18$, so at most ten points occur. A ten-point path must use these in that order.",
+      "reason_zh": "可能距离平方只有 $1,2,4,5,8,9,10,13,18$ 九种，故最多十点。十点路径必须按此顺序使用全部距离。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO02",
+        "reason_en": "The nine possible squared distances are $1,2,4,5,8,9,10,13,18$, so at most ten points occur. A ten-point path must use these in that order.",
+        "reason_zh": "可能距离平方只有 $1,2,4,5,8,9,10,13,18$ 九种，故最多十点。十点路径必须按此顺序使用全部距离。"
+      }
+    ],
+    "statement_en": "On the sixteen lattice points $\\{0,1,2,3\\}^2$, a growing path visits distinct points with strictly increasing successive distances. If the maximum point count is $m$ and exactly $r$ paths attain it, find $mr$.",
+    "statement_zh": "在十六个格点 $\\{0,1,2,3\\}^2$ 上，路径访问互异点且相邻距离严格递增。若最多可有 $m$ 个点，达到者有 $r$ 条，求 $mr$。",
+    "answer": 240,
+    "solution_en": [
+      "The nine possible squared distances are $1,2,4,5,8,9,10,13,18$, so at most ten points occur. A ten-point path must use these in that order.",
+      "Count backwards. The last two points are opposite corners, with four ordered choices. The preceding squared distance thirteen allows two symmetric choices. Fix the last points as $P_{10}=(0,0),P_9=(3,3),P_8=(0,1)$. Distances ten,nine,eight,five,four,two successively force $P_7=(3,2),P_6=(0,2),P_5=(2,0),P_4=(1,2),P_3=(1,0),P_2=(2,1)$; the alternative ten-distance choice $(3,0)$ fails at the next step because its distance-three neighbors were used.",
+      "The first point has three unused unit-neighbors of $(2,1)$: $(1,1),(2,2),(3,1)$. Thus ten-point paths exist and $r=4\\cdot2\\cdot3=24$, giving $mr=240$."
+    ],
+    "solution_zh": [
+      "可能距离平方只有 $1,2,4,5,8,9,10,13,18$ 九种，故最多十点。十点路径必须按此顺序使用全部距离。",
+      "倒数计数：最后两点为对角顶点，有四个有序选择，前一点有两个对称选择。固定 $P_{10}=(0,0),P_9=(3,3),P_8=(0,1)$，后续距离依次迫使 $P_7=(3,2),P_6=(0,2),P_5=(2,0),P_4=(1,2),P_3=(1,0),P_2=(2,1)$。十距离的另一选择 $(3,0)$ 会使下一步只能重复旧点。",
+      "$P_1$ 可取未用的三个单位邻点 $(1,1),(2,2),(3,1)$。因此 $m=10,r=24$，乘积为 $240$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/10",
+    "method_chain": [
+      "Graphs & geometric counting",
+      "Discrete extrema & constructions"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q11",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Use $B=(0,0),C=(56,0),A=(28,96)$. Half-angle tangent at either base vertex is $(24/25)/(1+7/25)=3/4$. Thus the two centers are $(104/3,16)$ and $(4q/3,q)$, where $q$ is the unknown radius.",
+      "reason_zh": "取 $B=(0,0),C=(56,0),A=(28,96)$。两底角半角正切为 $3/4$，故圆心为 $(104/3,16)$ 及 $(4q/3,q)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Use $B=(0,0),C=(56,0),A=(28,96)$. Half-angle tangent at either base vertex is $(24/25)/(1+7/25)=3/4$. Thus the two centers are $(104/3,16)$ and $(4q/3,q)$, where $q$ is the unknown radius.",
+        "reason_zh": "取 $B=(0,0),C=(56,0),A=(28,96)$。两底角半角正切为 $3/4$，故圆心为 $(104/3,16)$ 及 $(4q/3,q)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Use $B=(0,0),C=(56,0),A=(28,96)$. Half-angle tangent at either base vertex is $(24/25)/(1+7/25)=3/4$. Thus the two centers are $(104/3,16)$ and $(4q/3,q)$, where $q$ is the unknown radius.",
+        "reason_zh": "取 $B=(0,0),C=(56,0),A=(28,96)$。两底角半角正切为 $3/4$，故圆心为 $(104/3,16)$ 及 $(4q/3,q)$。"
+      }
+    ],
+    "statement_en": "In triangle $ABC$, $AB=AC=100,BC=56$. A radius-sixteen circle touches $AC,BC$. A second circle touches $AB,BC$, lies wholly inside the triangle, and is externally tangent to the first. If its radius is $m-n\\sqrt k$ with squarefree $k$, find $m+nk$.",
+    "statement_zh": "等腰三角形 $ABC$ 中 $AB=AC=100,BC=56$。半径十六的圆与 $AC,BC$ 相切，另一圆与 $AB,BC$ 相切且完全在三角形内，并与前圆外切。其半径为 $m-n\\sqrt k$，求 $m+nk$。",
+    "answer": 254,
+    "solution_en": [
+      "Use $B=(0,0),C=(56,0),A=(28,96)$. Half-angle tangent at either base vertex is $(24/25)/(1+7/25)=3/4$. Thus the two centers are $(104/3,16)$ and $(4q/3,q)$, where $q$ is the unknown radius.",
+      "External tangency gives $((104-4q)/3)^2+(16-q)^2=(16+q)^2$, or $(26-q)^2=36q$. Hence $q=44\\pm6\\sqrt{35}$.",
+      "The large root cannot fit inside the triangle (its diameter exceeds the altitude), so $q=44-6\\sqrt{35}$ and $m+nk=44+210=254$."
+    ],
+    "solution_zh": [
+      "取 $B=(0,0),C=(56,0),A=(28,96)$。两底角半角正切为 $3/4$，故圆心为 $(104/3,16)$ 及 $(4q/3,q)$。",
+      "外切给出 $((104-4q)/3)^2+(16-q)^2=(16+q)^2$，化为 $(26-q)^2=36q$，解得 $q=44\\pm6\\sqrt{35}$。",
+      "大根直径超过三角形高，不能容纳，故取小根，所求为 $254$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/11",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Coordinates, vectors & transformations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q12",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "If pole one has $b$ blues and $g$ greens, its arrangements number $\\binom{b+1}{g}$ using distinct gaps around the blues. Pole two contributes $\\binom{11-b}{9-g}$.",
+      "reason_zh": "第一杆若有 $b$ 蓝、$g$ 绿，则把绿旗放在蓝旗的不同空隙中，有 $\\binom{b+1}{g}$ 种；第二杆有 $\\binom{11-b}{9-g}$ 种。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Allow empty poles temporarily and sum: Vandermonde gives $\\sum_{b=0}^{10}\\sum_g\\binom{b+1}{g}\\binom{11-b}{9-g}=11\\binom{12}{9}=2420$.",
+        "reason_zh": "先允许空杆，范德蒙德恒等式求和得 $11\\binom{12}{9}=2420$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "Allow empty poles temporarily and sum: Vandermonde gives $\\sum_{b=0}^{10}\\sum_g\\binom{b+1}{g}\\binom{11-b}{9-g}=11\\binom{12}{9}=2420$.",
+        "reason_zh": "先允许空杆，范德蒙德恒等式求和得 $11\\binom{12}{9}=2420$。"
+      }
+    ],
+    "statement_en": "Arrange ten identical blue and nine identical green flags in ordered stacks on two distinguishable poles, each nonempty, with no adjacent greens on a pole. Find the count modulo $1000$.",
+    "statement_zh": "将十面相同蓝旗、九面相同绿旗按次序挂在两根不同旗杆上，每杆非空且绿旗不相邻，求排法数除以一千的余数。",
+    "answer": 310,
+    "solution_en": [
+      "If pole one has $b$ blues and $g$ greens, its arrangements number $\\binom{b+1}{g}$ using distinct gaps around the blues. Pole two contributes $\\binom{11-b}{9-g}$.",
+      "Allow empty poles temporarily and sum: Vandermonde gives $\\sum_{b=0}^{10}\\sum_g\\binom{b+1}{g}\\binom{11-b}{9-g}=11\\binom{12}{9}=2420$.",
+      "An empty pole leaves all flags on the other in $\\binom{11}{9}=55$ ways, for each of two choices. Thus $N=2420-110=2310$, remainder $310$."
+    ],
+    "solution_zh": [
+      "第一杆若有 $b$ 蓝、$g$ 绿，则把绿旗放在蓝旗的不同空隙中，有 $\\binom{b+1}{g}$ 种；第二杆有 $\\binom{11-b}{9-g}$ 种。",
+      "先允许空杆，范德蒙德恒等式求和得 $11\\binom{12}{9}=2420$。",
+      "空一杆时另一杆有 $\\binom{11}{9}=55$ 种，两杆分别扣除，得 $2310$，余数为 $310$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/12",
+    "method_chain": [
+      "Compositions, partitions & generating functions",
+      "Subsets & binomial identities",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q13",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The exterior is the union of six rotated half-planes such as $\\Re z>1/2$. Under $w=1/z$, that inequality becomes $u/(u^2+v^2)>1/2$, or $|w-1|<1$. Thus $S$ is the union of six unit disks centered at the sixth roots of unity.",
+      "reason_zh": "外部为六个旋转半平面的并，如 $\\Re z>1/2$。代换 $w=1/z=u+iv$，此不等式化为 $u/(u^2+v^2)>1/2$，即 $|w-1|<1$。所以 $S$ 是六个以六次单位根为圆心的单位圆盘之并。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Partition into sixty-degree wedges centered on the disk-center rays. In each wedge its corresponding disk reaches farthest in every direction, with boundary endpoints $(3/2,\\pm\\sqrt3/2)$ for the wedge around the real axis.",
+        "reason_zh": "按圆心方向分成六个六十度扇区，每区内对应圆盘沿每条射线延伸最远。实轴区的两个边界端点为 $(3/2,\\pm\\sqrt3/2)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "The exterior is the union of six rotated half-planes such as $\\Re z>1/2$. Under $w=1/z$, that inequality becomes $u/(u^2+v^2)>1/2$, or $|w-1|<1$. Thus $S$ is the union of six unit disks centered at the sixth roots of unity.",
+        "reason_zh": "外部为六个旋转半平面的并，如 $\\Re z>1/2$。代换 $w=1/z=u+iv$，此不等式化为 $u/(u^2+v^2)>1/2$，即 $|w-1|<1$。所以 $S$ 是六个以六次单位根为圆心的单位圆盘之并。"
+      }
+    ],
+    "statement_en": "A regular hexagon centered at zero in the complex plane has opposite sides distance one apart, with one pair vertical. Let $R$ be its exterior and $S=\\{1/z:z\\in R\\}$. If $S$ has area $a\\pi+\\sqrt b$ for positive integers, find $a+b$.",
+    "statement_zh": "复平面正六边形中心为零，对边距离为一，其中一对竖直。令 $R$ 为其外部，$S=\\{1/z:z\\in R\\}$。若面积为 $a\\pi+\\sqrt b$，求 $a+b$。",
+    "answer": 29,
+    "solution_en": [
+      "The exterior is the union of six rotated half-planes such as $\\Re z>1/2$. Under $w=1/z$, that inequality becomes $u/(u^2+v^2)>1/2$, or $|w-1|<1$. Thus $S$ is the union of six unit disks centered at the sixth roots of unity.",
+      "Partition into sixty-degree wedges centered on the disk-center rays. In each wedge its corresponding disk reaches farthest in every direction, with boundary endpoints $(3/2,\\pm\\sqrt3/2)$ for the wedge around the real axis.",
+      "That wedge piece has a $120^\\circ$ unit sector of area $\\pi/3$ plus two triangles of total area $\\sqrt3/2$. Multiply by six: area $2\\pi+3\\sqrt3=2\\pi+\\sqrt{27}$, giving $29$."
+    ],
+    "solution_zh": [
+      "外部为六个旋转半平面的并，如 $\\Re z>1/2$。代换 $w=1/z=u+iv$，此不等式化为 $u/(u^2+v^2)>1/2$，即 $|w-1|<1$。所以 $S$ 是六个以六次单位根为圆心的单位圆盘之并。",
+      "按圆心方向分成六个六十度扇区，每区内对应圆盘沿每条射线延伸最远。实轴区的两个边界端点为 $(3/2,\\pm\\sqrt3/2)$。",
+      "每区面积为一百二十度单位扇形 $\\pi/3$ 加两个三角形 $\\sqrt3/2$，总面积 $2\\pi+\\sqrt{27}$，所求 $29$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/13",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Areas & area ratios",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q14",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Use rectangle vertices $A=(0,0),B=(a,0),C=(a,b),D=(0,b)$ and points $E=(x,0),F=(a,b-y)$. The three equal quantities are exactly squared sides of equilateral triangle $DEF$.",
+      "reason_zh": "取矩形标准坐标及 $E=(x,0),F=(a,b-y)$，三个相等量正是三角形 $DEF$ 的三边平方，因此该三角形等边。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "Let $\\theta=\\angle ADE$. Then $x=b\\tan\\theta$, $y=a\\tan(30^\\circ-\\theta)$, and equal sides give $a/b=\\cos(30^\\circ-\\theta)/\\cos\\theta=\\sqrt3/2+\\tan\\theta/2$. Nonnegative $x,y$ imply $0\\le\\theta\\le30^\\circ$.",
+        "reason_zh": "令 $\\theta=\\angle ADE$，则 $x=b\\tan\\theta,y=a\\tan(30^\\circ-\\theta)$，等边给出 $a/b=\\sqrt3/2+\\tan\\theta/2$。非负条件要求 $0\\le\\theta\\le30^\\circ$。"
+      }
+    ],
+    "statement_en": "For $a\\ge b>0$, the system $a^2+y^2=b^2+x^2=(a-x)^2+(b-y)^2$ has a solution with $0\\le x<a,0\\le y<b$. If the largest possible ratio is $\\rho=a/b$ and $\\rho^2=m/n$ reduced, find $m+n$.",
+    "statement_zh": "对 $a\\ge b>0$，方程组 $a^2+y^2=b^2+x^2=(a-x)^2+(b-y)^2$ 有解满足 $0\\le x<a,0\\le y<b$。若最大比值为 $\\rho=a/b$，其平方为最简分数 $m/n$，求 $m+n$。",
+    "answer": 7,
+    "solution_en": [
+      "Use rectangle vertices $A=(0,0),B=(a,0),C=(a,b),D=(0,b)$ and points $E=(x,0),F=(a,b-y)$. The three equal quantities are exactly squared sides of equilateral triangle $DEF$.",
+      "Let $\\theta=\\angle ADE$. Then $x=b\\tan\\theta$, $y=a\\tan(30^\\circ-\\theta)$, and equal sides give $a/b=\\cos(30^\\circ-\\theta)/\\cos\\theta=\\sqrt3/2+\\tan\\theta/2$. Nonnegative $x,y$ imply $0\\le\\theta\\le30^\\circ$.",
+      "The ratio increases with $\\theta$ and reaches $2/\\sqrt3$ at $\\theta=30^\\circ$, with $y=0,x=b/\\sqrt3<a$. Thus $\\rho^2=4/3$ and the answer is $7$."
+    ],
+    "solution_zh": [
+      "取矩形标准坐标及 $E=(x,0),F=(a,b-y)$，三个相等量正是三角形 $DEF$ 的三边平方，因此该三角形等边。",
+      "令 $\\theta=\\angle ADE$，则 $x=b\\tan\\theta,y=a\\tan(30^\\circ-\\theta)$，等边给出 $a/b=\\sqrt3/2+\\tan\\theta/2$。非负条件要求 $0\\le\\theta\\le30^\\circ$。",
+      "比值在末端达到 $2/\\sqrt3$，并满足严格上界约束，故平方为 $4/3$，所求 $7$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/14",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2008-II-Q15",
+    "paper_id": "AIME-2008-II",
+    "exam_year": 2008,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "For a positive candidate, write $n^2=3u^2+3u+1$. Then $(2n-1)(2n+1)=3(2u+1)^2$. These coprime odd factors force one square and the other three times a square. The lower factor cannot be three times a square, since the upper would be two modulo three. Hence $2n-1=k^2$ with odd $k>0$.",
+      "reason_zh": "对正候选写 $n^2=3u^2+3u+1$，得到 $(2n-1)(2n+1)=3(2u+1)^2$。两奇因子互质，所以一为平方、一为三倍平方。较小者不能为三倍平方，否则较大平方模三余二。因此 $2n-1=k^2$，$k$ 为正奇数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "For a positive candidate, write $n^2=3u^2+3u+1$. Then $(2n-1)(2n+1)=3(2u+1)^2$. These coprime odd factors force one square and the other three times a square. The lower factor cannot be three times a square, since the upper would be two modulo three. Hence $2n-1=k^2$ with odd $k>0$.",
+        "reason_zh": "对正候选写 $n^2=3u^2+3u+1$，得到 $(2n-1)(2n+1)=3(2u+1)^2$。两奇因子互质，所以一为平方、一为三倍平方。较小者不能为三倍平方，否则较大平方模三余二。因此 $2n-1=k^2$，$k$ 为正奇数。"
+      }
+    ],
+    "statement_en": "Find the largest integer $n$ whose square is a difference of consecutive integer cubes and for which $2n+79$ is square.",
+    "statement_zh": "求最大整数 $n$，使 $n^2$ 为两个连续整数立方之差，且 $2n+79$ 为平方数。",
+    "answer": 181,
+    "solution_en": [
+      "For a positive candidate, write $n^2=3u^2+3u+1$. Then $(2n-1)(2n+1)=3(2u+1)^2$. These coprime odd factors force one square and the other three times a square. The lower factor cannot be three times a square, since the upper would be two modulo three. Hence $2n-1=k^2$ with odd $k>0$.",
+      "Write $2n+79=d^2$. Subtracting yields $(d-k)(d+k)=80$. The positive even factor pairs $2,40$; $4,20$; $8,10$ give $k=19,8,1$. Oddness leaves $k=19,1$, giving $n=181,1$.",
+      "The larger works: $181^2=105^3-104^3$ and $2\\cdot181+79=21^2$. Thus the maximum is $181$."
+    ],
+    "solution_zh": [
+      "对正候选写 $n^2=3u^2+3u+1$，得到 $(2n-1)(2n+1)=3(2u+1)^2$。两奇因子互质，所以一为平方、一为三倍平方。较小者不能为三倍平方，否则较大平方模三余二。因此 $2n-1=k^2$，$k$ 为正奇数。",
+      "再令 $2n+79=d^2$，相减得 $(d-k)(d+k)=80$。同奇偶正因子对 $2,40;4,20;8,10$ 对应 $k=19,8,1$，保留奇数得到 $n=181,1$。",
+      "检验 $181^2=105^3-104^3$ 且 $2n+79=21^2$，故最大值为 $181$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2008II/problem/15",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

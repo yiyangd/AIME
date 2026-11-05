@@ -1,0 +1,16 @@
+---
+import {url,type Question,sections,sectionUrl} from '../lib/content';
+import MathText from './MathText.astro';
+import Bi from './Bi.astro';
+import PrintLinks from './PrintLinks.astro';
+interface Props {question:Question;eager?:boolean}
+const {question:q,eager=false}=Astro.props;
+---
+<article class="question-card" id={`q-${q.id.toLowerCase()}`} data-question-id={q.id} data-part={q.part}>
+<div class="question-top"><a class="question-id" href={`#q-${q.id.toLowerCase()}`}>[{q.id}]</a><span class="part-badge">Part {q.part}</span><span class="question-source"><a href={q.sourceUrl} target="_blank" rel="noopener noreferrer"><Bi en="Original source ↗" zh="原题来源 ↗" /></a></span></div>
+<PrintLinks resources={q.print?.workbook?{workbook:q.print.workbook}:{}} compact/>
+<div class="question-statement" data-content-language="en"><MathText text={q.statementEn}/></div><div class="question-statement" lang="zh" data-content-language="zh"><MathText text={q.statementZh}/></div>
+{q.image&&<button class="question-image-button" type="button" aria-label={`Enlarge diagram ${q.id}`} data-image={url(q.image.src)} data-question={q.id}><img src={url(q.image.src)} width={q.image.width} height={q.image.height} alt={`Diagram for ${q.id}`} loading={eager?'eager':'lazy'}/></button>}
+{q.secondary.length>0&&<p class="secondary-tags"><Bi en="Also uses" zh="配套考点" />: {q.secondary.map((code,i)=>{const section=sections.find(s=>s.code===code);return <>{i>0?' · ':''}{section?<a href={sectionUrl(section)}>{code} <Bi en={section.titleEn} zh={section.titleZh}/></a>:code}</>})}</p>}
+<details class="answer-panel" data-answer="true"><summary><Bi en="Show answer & explanation" zh="显示答案与分步解析" /></summary><div class="answer-content">{q.answerStatus==='source_discrepancy'?<div class="editorial-answer"><p class="answer-line"><span class="answer-choice"><Bi en="Verified result under the stated conditions" zh="按原题条件核验的结果" /></span></p><p data-content-language="en"><MathText text={q.correctedAnswerEn||''}/></p><p data-content-language="zh" lang="zh"><MathText text={q.correctedAnswerZh||''}/></p><p class="historical-key"><Bi en={`Historical source key: ${q.sourceAnswer}`} zh={`历史来源答案键：${q.sourceAnswer}`}/></p><p class="editorial-note" data-content-language="en"><MathText text={q.editorialNoteEn||''}/></p><p class="editorial-note" data-content-language="zh" lang="zh"><MathText text={q.editorialNoteZh||''}/></p></div>:<p class="answer-line"><span class="answer-choice"><Bi en="Answer" zh="答案" /> {q.answer.value}</span></p>}<div data-content-language="en"><p class="answer-language-label">ENGLISH SOLUTION</p><ol class="solution-steps">{q.answer.stepsEn.map(step=><li><MathText text={step}/></li>)}</ol></div><div data-content-language="zh" lang="zh"><p class="answer-language-label">中文解析</p><ol class="solution-steps">{q.answer.stepsZh.map(step=><li><MathText text={step}/></li>)}</ol></div><PrintLinks resources={{...(q.print?.solutions_en?{solutions_en:q.print.solutions_en}:{}),...(q.print?.solutions_zh?{solutions_zh:q.print.solutions_zh}:{})}}/></div></details>
+</article>

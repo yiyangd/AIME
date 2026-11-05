@@ -1,0 +1,702 @@
+[
+  {
+    "question_id": "AIME-2012-II-Q01",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Divide by four to get $5m+3n=503$. Modulo three, $m\\equiv1$, so write $m=3k+1,n=166-5k$.",
+      "reason_zh": "除以四得 $5m+3n=503$。模三知 $m\\equiv1$，写成 $m=3k+1,n=166-5k$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Divide by four to get $5m+3n=503$. Modulo three, $m\\equiv1$, so write $m=3k+1,n=166-5k$.",
+        "reason_zh": "除以四得 $5m+3n=503$。模三知 $m\\equiv1$，写成 $m=3k+1,n=166-5k$。"
+      }
+    ],
+    "statement_en": "Count positive integer pairs $(m,n)$ solving $20m+12n=2012$.",
+    "statement_zh": "求正整数解 $(m,n)$ 的个数，使 $20m+12n=2012$。",
+    "answer": 34,
+    "solution_en": [
+      "Divide by four to get $5m+3n=503$. Modulo three, $m\\equiv1$, so write $m=3k+1,n=166-5k$.",
+      "Positivity is exactly $0\\le k\\le33$, giving $34$ pairs."
+    ],
+    "solution_zh": [
+      "除以四得 $5m+3n=503$。模三知 $m\\equiv1$，写成 $m=3k+1,n=166-5k$。",
+      "正数条件恰为 $0\\le k\\le33$，故有三十四对。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/1",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q02",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "For common ratio $r\\ne0$, $27r^{14}=99r^{10}$ gives $r^4=11/3$.",
+      "reason_zh": "设非零公比为 $r$，由 $27r^{14}=99r^{10}$ 得 $r^4=11/3$。"
+    },
+    "secondary": [],
+    "statement_en": "Two geometric sequences have the same nonzero common ratio, first terms $27,99$, and $a_{15}=b_{11}$. Find $a_9$.",
+    "statement_zh": "两个等比数列有相同的非零公比，首项分别为 $27,99$，且 $a_{15}=b_{11}$。求 $a_9$。",
+    "answer": 363,
+    "solution_en": [
+      "For common ratio $r\\ne0$, $27r^{14}=99r^{10}$ gives $r^4=11/3$.",
+      "Therefore $a_9=27r^8=27(11/3)^2=363$."
+    ],
+    "solution_zh": [
+      "设非零公比为 $r$，由 $27r^{14}=99r^{10}$ 得 $r^4=11/3$。",
+      "因此 $a_9=27(11/3)^2=363$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/2",
+    "method_chain": [
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "States the usual nonzero-ratio geometric-sequence convention explicitly; allowing a zero ratio would add a degenerate zero answer.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q03",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "If every department contributes one man and one woman, there are $4^3=64$ committees.",
+      "reason_zh": "若每系各出一男一女，有 $4^3=64$ 种。"
+    },
+    "secondary": [],
+    "statement_en": "Three departments each have two male and two female professors. Count six-person committees with two from each department and three of each gender.",
+    "statement_zh": "三个系各有两男两女教授，求六人委员会数，要求每系两人，且男女各三人。",
+    "answer": 88,
+    "solution_en": [
+      "If every department contributes one man and one woman, there are $4^3=64$ committees.",
+      "Otherwise the gender splits by department must be two men, two women, and mixed. Choose those department roles in $3\\cdot2$ ways and the mixed pair in four ways, adding twenty-four.",
+      "The total is $88$."
+    ],
+    "solution_zh": [
+      "若每系各出一男一女，有 $4^3=64$ 种。",
+      "否则三个系的组合只能分别为两男、两女、一男一女；分配系的角色有六种，混合系选人四种，增加二十四。",
+      "总数为八十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/3",
+    "method_chain": [
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q04",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Let those dimensions be $L,W,x$. Equal times give $(2L+W-x)/8.6=(W+x)/6.2=\\sqrt{W^2+x^2}/5$. The first equality gives $31L=6W+37x$.",
+      "reason_zh": "令三种长度为 $L,W,x$，等时给出 $(2L+W-x)/8.6=(W+x)/6.2=\\sqrt{W^2+x^2}/5$。前一等式化为 $31L=6W+37x$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The second equality, squared, is $168W^2-625Wx+168x^2=(24W-7x)(7W-24x)=0$.",
+        "reason_zh": "后一等式平方化为 $(24W-7x)(7W-24x)=0$。"
+      }
+    ],
+    "statement_en": "Three cyclists start at a rectangle northeast corner: one follows the boundary westward at $8.6$ m/s, one southward at $6.2$ m/s, and one rides straight at $5$ m/s. Their first arrivals coincide at a point $D$ on the south edge. The west-east length exceeds the north-south width. Write length:width:distance from $D$ to the southeast corner as $p:q:r$, with coprime $p,q$, and find $p+q+r$.",
+    "statement_zh": "三名骑车人从矩形东北角同时出发，沿边向西者速率 $8.6$ 米/秒，沿边向南者 $6.2$，直线骑行者为五。三人首次同时到达南边点 $D$。东西长大于南北宽；将长、宽、$D$ 到东南角距离之比写为 $p:q:r$，其中 $p,q$ 互质，求三者和。",
+    "answer": 61,
+    "solution_en": [
+      "Let those dimensions be $L,W,x$. Equal times give $(2L+W-x)/8.6=(W+x)/6.2=\\sqrt{W^2+x^2}/5$. The first equality gives $31L=6W+37x$.",
+      "The second equality, squared, is $168W^2-625Wx+168x^2=(24W-7x)(7W-24x)=0$.",
+      "If $x=7W/24$, then $L=13W/24<W$, impossible. Thus $x=24W/7,L=30W/7$, which also has $0<x<L$.",
+      "The ratio is $30:7:24$, giving $61$."
+    ],
+    "solution_zh": [
+      "令三种长度为 $L,W,x$，等时给出 $(2L+W-x)/8.6=(W+x)/6.2=\\sqrt{W^2+x^2}/5$。前一等式化为 $31L=6W+37x$。",
+      "后一等式平方化为 $(24W-7x)(7W-24x)=0$。",
+      "若 $x=7W/24$，则 $L=13W/24<W$，排除；所以 $x=24W/7,L=30W/7$，也满足 $x<L$。",
+      "比例为 $30:7:24$，答案六十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/4",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q05",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "Each flat triangular face has altitude $20-15/2=25/2$, which becomes the pyramid slant height. The base apothem is $15/2$.",
+      "reason_zh": "每个平面三角形的高为 $20-15/2=25/2$，折后为斜高；底面边心距为 $15/2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Each flat triangular face has altitude $20-15/2=25/2$, which becomes the pyramid slant height. The base apothem is $15/2$.",
+        "reason_zh": "每个平面三角形的高为 $20-15/2=25/2$，折后为斜高；底面边心距为 $15/2$。"
+      }
+    ],
+    "statement_en": "A side-$15$ square is concentric and parallel-sided inside a side-$40$ square. Join each outer side midpoint to the two nearest inner vertices. Cut out the inner square and four attached triangles, and fold along the inner sides into a square pyramid. Find its volume.",
+    "statement_zh": "边长十五的正方形与边长四十的外正方形同心且各边平行。将外正方形各边中点连至内正方形最近的两个顶点，剪下内部正方形及四个三角形并折成正四棱锥，求体积。",
+    "answer": 750,
+    "solution_en": [
+      "Each flat triangular face has altitude $20-15/2=25/2$, which becomes the pyramid slant height. The base apothem is $15/2$.",
+      "The vertical height is $\\sqrt{(25/2)^2-(15/2)^2}=10$. Thus the volume is $15^2\\cdot10/3=750$."
+    ],
+    "solution_zh": [
+      "每个平面三角形的高为 $20-15/2=25/2$，折后为斜高；底面边心距为 $15/2$。",
+      "由勾股定理，锥高为十，故体积为 $15^2\\cdot10/3=750$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/5",
+    "method_chain": [
+      "Volumes & solid geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q06",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "The distance factors as $125|1+2i-z^2|$, with $|z^2|=25$. The triangle inequality gives maximum $125(25+\\sqrt5)$ when $z^2$ points opposite to $1+2i$.",
+      "reason_zh": "距离可提取为 $125|1+2i-z^2|$，且 $|z^2|=25$。三角不等式表明，当 $z^2$ 与 $1+2i$ 反向时取最大值。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL07",
+        "reason_en": "The distance factors as $125|1+2i-z^2|$, with $|z^2|=25$. The triangle inequality gives maximum $125(25+\\sqrt5)$ when $z^2$ points opposite to $1+2i$.",
+        "reason_zh": "距离可提取为 $125|1+2i-z^2|$，且 $|z^2|=25$。三角不等式表明，当 $z^2$ 与 $1+2i$ 反向时取最大值。"
+      }
+    ],
+    "statement_en": "Among complex $z=a+bi$ with $|z|=5,b>0$, choose one maximizing the distance from $(1+2i)z^3$ to $z^5$. If $z^4=c+di$, find $c+d$.",
+    "statement_zh": "复数 $z=a+bi$ 满足 $|z|=5,b>0$，取使 $(1+2i)z^3$ 与 $z^5$ 的距离最大的 $z$。若 $z^4=c+di$，求 $c+d$。",
+    "answer": 125,
+    "solution_en": [
+      "The distance factors as $125|1+2i-z^2|$, with $|z^2|=25$. The triangle inequality gives maximum $125(25+\\sqrt5)$ when $z^2$ points opposite to $1+2i$.",
+      "Thus $z^2=-25(1+2i)/\\sqrt5=-5\\sqrt5(1+2i)$. This nonreal point has a square root in the upper half-plane, so the bound is attained under $b>0$.",
+      "Squaring yields $z^4=125(-3+4i)=-375+500i$. Hence $c+d=125$."
+    ],
+    "solution_zh": [
+      "距离可提取为 $125|1+2i-z^2|$，且 $|z^2|=25$。三角不等式表明，当 $z^2$ 与 $1+2i$ 反向时取最大值。",
+      "故 $z^2=-5\\sqrt5(1+2i)$。此点非实，必有一个上半平面平方根，满足 $b>0$，所以最大值可达。",
+      "再平方得 $z^4=-375+500i$，所求为一百二十五。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/6",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Inequalities & continuous optimization"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q07",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "Below $2^{12}$ are $\\binom{12}8=495$ such numbers, and below $2^{13}$ are $\\binom{13}8=1287$. The desired one is thirteen-bit. There are $\\binom{11}6=462$ beginning $11$, the largest group, so its rank within that group is $462-(1287-1000)=175$.",
+      "reason_zh": "小于 $2^{12}$ 的有 $\\binom{12}8=495$ 个，小于 $2^{13}$ 的有 $1287$ 个，故目标为十三位。最大一组前缀为 $11$，有 $462$ 个，目标在该组中的排名为 $462-(1287-1000)=175$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "Below $2^{12}$ are $\\binom{12}8=495$ such numbers, and below $2^{13}$ are $\\binom{13}8=1287$. The desired one is thirteen-bit. There are $\\binom{11}6=462$ beginning $11$, the largest group, so its rank within that group is $462-(1287-1000)=175$.",
+        "reason_zh": "小于 $2^{12}$ 的有 $\\binom{12}8=495$ 个，小于 $2^{13}$ 的有 $1287$ 个，故目标为十三位。最大一组前缀为 $11$，有 $462$ 个，目标在该组中的排名为 $462-(1287-1000)=175$。"
+      }
+    ],
+    "statement_en": "Order increasingly all positive integers whose binary expansion contains exactly eight ones. Find the thousandth integer modulo $1000$.",
+    "statement_zh": "将二进制表示恰有八个一的正整数递增排列，求第一千个数模 $1000$ 的余数。",
+    "answer": 32,
+    "solution_en": [
+      "Below $2^{12}$ are $\\binom{12}8=495$ such numbers, and below $2^{13}$ are $\\binom{13}8=1287$. The desired one is thirteen-bit. There are $\\binom{11}6=462$ beginning $11$, the largest group, so its rank within that group is $462-(1287-1000)=175$.",
+      "The initial groups $1100$, $11010$, $110110$ have counts $\\binom96=84,\\binom85=56,\\binom74=35$, whose sum is $175$. Thus take the greatest member of the final group, placing four remaining ones as far left as possible.",
+      "The binary string is $1101101111000_2=7032$, leaving remainder $32$."
+    ],
+    "solution_zh": [
+      "小于 $2^{12}$ 的有 $\\binom{12}8=495$ 个，小于 $2^{13}$ 的有 $1287$ 个，故目标为十三位。最大一组前缀为 $11$，有 $462$ 个，目标在该组中的排名为 $462-(1287-1000)=175$。",
+      "该组依次的前缀 $1100,11010,110110$ 分别有 $84,56,35$ 个，总和一百七十五，所以目标是最后一组最大值，余下四个一全部靠左。",
+      "得到 $1101101111000_2=7032$，余数三十二。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/7",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q08",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Multiply the two equations and put $v=zw$. The result is $v-240/v=-30+14i$, hence $v^2+(30-14i)v-240=0$.",
+      "reason_zh": "将两式相乘，令 $v=zw$，得 $v-240/v=-30+14i$，即 $v^2+(30-14i)v-240=0$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Multiply the two equations and put $v=zw$. The result is $v-240/v=-30+14i$, hence $v^2+(30-14i)v-240=0$.",
+        "reason_zh": "将两式相乘，令 $v=zw$，得 $v-240/v=-30+14i$，即 $v^2+(30-14i)v-240=0$。"
+      }
+    ],
+    "statement_en": "Nonzero complex $z,w$ satisfy $z+20i/w=5+i$ and $w+12i/z=-4+10i$. Find the least $|zw|^2$.",
+    "statement_zh": "非零复数满足 $z+20i/w=5+i,w+12i/z=-4+10i$，求 $|zw|^2$ 的最小值。",
+    "answer": 40,
+    "solution_en": [
+      "Multiply the two equations and put $v=zw$. The result is $v-240/v=-30+14i$, hence $v^2+(30-14i)v-240=0$.",
+      "The quadratic formula uses $\\sqrt{416-210i}=\\pm(21-5i)$, giving $v=6+2i$ or $-36+12i$. Their squared moduli are $40,1440$.",
+      "The lower one is attained by $z=1-i,w=2+4i$, which satisfy both original equations. Thus the minimum is $40$."
+    ],
+    "solution_zh": [
+      "将两式相乘，令 $v=zw$，得 $v-240/v=-30+14i$，即 $v^2+(30-14i)v-240=0$。",
+      "因 $\\sqrt{416-210i}=\\pm(21-5i)$，两根为 $6+2i,-36+12i$，模平方分别为四十、一千四百四十。",
+      "取 $z=1-i,w=2+4i$ 可验证原方程，确达到较小值四十。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/8",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q09",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "The sine double-angle ratio is $3/2$. Let $t=\\cos^2y$; the two given squared relations sum to $9(1-t)+t/4=1$, so $t=32/35$.",
+      "reason_zh": "正弦倍角比为 $3/2$。设 $t=\\cos^2y$，将两已知关系平方相加得 $9(1-t)+t/4=1$，解得 $t=32/35$。"
+    },
+    "secondary": [],
+    "statement_en": "Real angles satisfy $\\sin x/\\sin y=3$ and $\\cos x/\\cos y=1/2$. Reduce $\\sin(2x)/\\sin(2y)+\\cos(2x)/\\cos(2y)=p/q$ and find $p+q$.",
+    "statement_zh": "实角满足 $\\sin x/\\sin y=3,\\cos x/\\cos y=1/2$。将 $\\sin(2x)/\\sin(2y)+\\cos(2x)/\\cos(2y)$ 约为 $p/q$，求 $p+q$。",
+    "answer": 107,
+    "solution_en": [
+      "The sine double-angle ratio is $3/2$. Let $t=\\cos^2y$; the two given squared relations sum to $9(1-t)+t/4=1$, so $t=32/35$.",
+      "Thus $\\cos2y=29/35$ and $\\cos2x=-19/35$. In particular neither required double-angle denominator vanishes.",
+      "The sum is $3/2-19/29=49/58$, giving $107$."
+    ],
+    "solution_zh": [
+      "正弦倍角比为 $3/2$。设 $t=\\cos^2y$，将两已知关系平方相加得 $9(1-t)+t/4=1$，解得 $t=32/35$。",
+      "所以 $\\cos2y=29/35,\\cos2x=-19/35$，各所需分母均非零。",
+      "目标为 $3/2-19/29=49/58$，答案一百零七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/9",
+    "method_chain": [
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q10",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL06",
+      "reason_en": "With $a=\\lfloor x\\rfloor$, positivity of $n$ forces $a\\ge1$. The range $a\\le x<a+1$ gives $a^2\\le n<a^2+a$. Conversely every integer in this interval is attained by $x=n/a$.",
+      "reason_zh": "令 $a=\\lfloor x\\rfloor\\ge1$，由 $a\\le x<a+1$，得 $a^2\\le n<a^2+a$；反之每个区间内整数均由 $x=n/a$ 达到。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The count is $1+\\cdots+31=496$.",
+        "reason_zh": "总数为 $1+\\cdots+31=496$。"
+      }
+    ],
+    "statement_en": "How many positive integers $n<1000$ can be written $n=x\\lfloor x\\rfloor$ for some positive real $x$?",
+    "statement_zh": "求小于一千的正整数 $n$ 的个数，使存在正实数 $x$ 满足 $n=x\\lfloor x\\rfloor$。",
+    "answer": 496,
+    "solution_en": [
+      "With $a=\\lfloor x\\rfloor$, positivity of $n$ forces $a\\ge1$. The range $a\\le x<a+1$ gives $a^2\\le n<a^2+a$. Conversely every integer in this interval is attained by $x=n/a$.",
+      "These integer intervals are disjoint, and each contributes exactly $a$ numbers. All intervals for $a=1,\\ldots,31$ lie below $1000$, ending at $991$; the next begins at $1024$.",
+      "The count is $1+\\cdots+31=496$."
+    ],
+    "solution_zh": [
+      "令 $a=\\lfloor x\\rfloor\\ge1$，由 $a\\le x<a+1$，得 $a^2\\le n<a^2+a$；反之每个区间内整数均由 $x=n/a$ 达到。",
+      "这些整数区间互不重叠，每个贡献 $a$ 项。$a=1$ 至 $31$ 时全部小于一千，最大为 $991$；下一段从 $1024$ 开始。",
+      "总数为 $1+\\cdots+31=496$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/10",
+    "method_chain": [
+      "Absolute values, floors & piecewise graphs",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q11",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Write $f(x)=(6x-7)/(9x+3)$. Direct composition gives $f^{\\circ2}(x)=(-3x-7)/(9x-6)$ and $f^{\\circ3}(x)=x$ wherever the iterates exist.",
+      "reason_zh": "化为 $f(x)=(6x-7)/(9x+3)$，直接复合得 $f^{\\circ2}(x)=(-3x-7)/(9x-6),f^{\\circ3}(x)=x$，但须保证中间各步有定义。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "As $1001\\equiv2\\pmod3$, the equation becomes $(-3x-7)/(9x-6)=x-3$. Clearing the nonzero denominator yields $(3x-5)^2=0$.",
+        "reason_zh": "一千零一模三为二，所以方程成为 $(-3x-7)/(9x-6)=x-3$，清分母得 $(3x-5)^2=0$。"
+      }
+    ],
+    "statement_en": "Define $f(x)=2/3-3/(3x+1)$ and let $f^{\\circ1001}$ denote its $1001$-fold composition. The real solution of $f^{\\circ1001}(x)=x-3$ is reduced $m/n$. Find $m+n$.",
+    "statement_zh": "定义 $f(x)=2/3-3/(3x+1)$，以 $f^{\\circ1001}$ 表示复合一千零一次。将方程 $f^{\\circ1001}(x)=x-3$ 的实数解约为 $m/n$，求 $m+n$。",
+    "answer": 8,
+    "solution_en": [
+      "Write $f(x)=(6x-7)/(9x+3)$. Direct composition gives $f^{\\circ2}(x)=(-3x-7)/(9x-6)$ and $f^{\\circ3}(x)=x$ wherever the iterates exist.",
+      "As $1001\\equiv2\\pmod3$, the equation becomes $(-3x-7)/(9x-6)=x-3$. Clearing the nonzero denominator yields $(3x-5)^2=0$.",
+      "The candidate $5/3$ cycles through $5/3,1/6,-4/3$, none of which is the pole $-1/3$, so all $1001$ iterates exist. The answer is $5+3=8$."
+    ],
+    "solution_zh": [
+      "化为 $f(x)=(6x-7)/(9x+3)$，直接复合得 $f^{\\circ2}(x)=(-3x-7)/(9x-6),f^{\\circ3}(x)=x$，但须保证中间各步有定义。",
+      "一千零一模三为二，所以方程成为 $(-3x-7)/(9x-6)=x-3$，清分母得 $(3x-5)^2=0$。",
+      "候选值 $5/3$ 的循环为 $5/3,1/6,-4/3$，均不是极点 $-1/3$，故每步有定义，答案八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/11",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q12",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT03",
+      "reason_en": "The allowed residues modulo $p$ are $3,\\ldots,p-3$. There are $2,6,8$ choices for the three primes, so the Chinese remainder theorem gives $96$ allowed classes modulo $1001$.",
+      "reason_zh": "模 $p$ 允许余数为三至 $p-3$，对三个素数分别有二、六、八种。中国剩余定理给出模 $1001$ 的九十六个允许类。"
+    },
+    "secondary": [],
+    "statement_en": "A positive integer is called $p$-safe when its distance from every integer multiple of $p$ exceeds two. Count integers at most $10000$ that are simultaneously $7$-, $11$-, and $13$-safe.",
+    "statement_zh": "若正整数与 $p$ 的每个整数倍的距离都大于二，称为 $p$ 安全数。求不超过一万且同时对七、十一、十三安全的整数个数。",
+    "answer": 958,
+    "solution_en": [
+      "The allowed residues modulo $p$ are $3,\\ldots,p-3$. There are $2,6,8$ choices for the three primes, so the Chinese remainder theorem gives $96$ allowed classes modulo $1001$.",
+      "Ten complete blocks, $1$ through $10010$, contain $960$ safe numbers. Among the excess last ten numbers, only $10006,10007$ are seven-safe; their residues modulo eleven are $7,8$ and modulo thirteen $9,10$, so both are fully safe.",
+      "Subtracting them gives $958$."
+    ],
+    "solution_zh": [
+      "模 $p$ 允许余数为三至 $p-3$，对三个素数分别有二、六、八种。中国剩余定理给出模 $1001$ 的九十六个允许类。",
+      "一至 $10010$ 共十整段，有九百六十个。多出的最后十数中，只有 $10006,10007$ 对七安全；它们模十一为七、八，模十三为九、十，也均安全。",
+      "减去两数，得到九百五十八。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/12",
+    "method_chain": [
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q13",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Put $s^2=111,r^2=11$. The two rays $AD_i$ are at signed angles $\\pm\\theta$ to $AB$. Rotating each by $\\pm60^\\circ$ produces the four $AE_k$ rays, all of length $s$.",
+      "reason_zh": "记 $s^2=111,r^2=11$，两条 $AD_i$ 相对于 $AB$ 的有向角为 $\\pm\\theta$。各旋转正负六十度，得到四条长为 $s$ 的 $AE_k$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Relative to ray $AC$ at $60^\\circ$, the four angle cosines sum to $2\\cos\\theta+\\cos(120^\\circ-\\theta)+\\cos(120^\\circ+\\theta)=\\cos\\theta$.",
+        "reason_zh": "相对于六十度的 $AC$，四个角余弦的和为 $2\\cos\\theta+\\cos(120^\\circ-\\theta)+\\cos(120^\\circ+\\theta)=\\cos\\theta$。"
+      }
+    ],
+    "statement_en": "Equilateral $ABC$ has side $\\sqrt{111}$. Points $D_1,D_2$ both satisfy $AD_i=\\sqrt{111},BD_i=\\sqrt{11}$. On each base $AD_i$ construct both equilateral triangles, giving four apexes $E_1,\\ldots,E_4$. Find $\\sum_{k=1}^4CE_k^2$.",
+    "statement_zh": "等边三角形 $ABC$ 边长为 $\\sqrt{111}$。两点 $D_1,D_2$ 均满足 $AD_i=\\sqrt{111},BD_i=\\sqrt{11}$。在每条 $AD_i$ 两侧分别作等边三角形，四顶点为 $E_1$ 至 $E_4$。求 $\\sum CE_k^2$。",
+    "answer": 677,
+    "solution_en": [
+      "Put $s^2=111,r^2=11$. The two rays $AD_i$ are at signed angles $\\pm\\theta$ to $AB$. Rotating each by $\\pm60^\\circ$ produces the four $AE_k$ rays, all of length $s$.",
+      "Relative to ray $AC$ at $60^\\circ$, the four angle cosines sum to $2\\cos\\theta+\\cos(120^\\circ-\\theta)+\\cos(120^\\circ+\\theta)=\\cos\\theta$.",
+      "Thus the squared-distance sum is $2s^2(4-\\cos\\theta)$. In triangle $ABD_i$, $r^2=2s^2(1-\\cos\\theta)$, so this simplifies to $6s^2+r^2=677$."
+    ],
+    "solution_zh": [
+      "记 $s^2=111,r^2=11$，两条 $AD_i$ 相对于 $AB$ 的有向角为 $\\pm\\theta$。各旋转正负六十度，得到四条长为 $s$ 的 $AE_k$。",
+      "相对于六十度的 $AC$，四个角余弦的和为 $2\\cos\\theta+\\cos(120^\\circ-\\theta)+\\cos(120^\\circ+\\theta)=\\cos\\theta$。",
+      "故距离平方和为 $2s^2(4-\\cos\\theta)$。由 $ABD_i$ 中 $r^2=2s^2(1-\\cos\\theta)$，化简为 $6s^2+r^2=677$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/13",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q14",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO06",
+      "reason_en": "A simple graph with all degrees two is a disjoint union of cycles of length at least three. On nine vertices, the possible cycle sizes are $3+3+3,3+6,4+5,9$.",
+      "reason_zh": "各度数为二的简单图必为若干长度至少三的圈。九个顶点的圈长度分拆仅 $3+3+3,3+6,4+5,9$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "An undirected cycle on $k$ fixed labels has $(k-1)!/2$ arrangements. The four cases give $9!/[(3!)^3 3!]=280$, $\\binom93(5!/2)=5040$, $\\binom94(3!/2)(4!/2)=4536$, and $8!/2=20160$.",
+        "reason_zh": "固定 $k$ 人的无向圈有 $(k-1)!/2$ 种。四类分别为 $280,5040,4536,20160$。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "A simple graph with all degrees two is a disjoint union of cycles of length at least three. On nine vertices, the possible cycle sizes are $3+3+3,3+6,4+5,9$.",
+        "reason_zh": "各度数为二的简单图必为若干长度至少三的圈。九个顶点的圈长度分拆仅 $3+3+3,3+6,4+5,9$。"
+      }
+    ],
+    "statement_en": "Nine labeled people each shake hands with exactly two others, and no pair shakes twice. Count the possible undirected handshaking patterns modulo $1000$.",
+    "statement_zh": "九名不同的人各与另外两人握手，每对至多握一次。求不同无向握手关系的数目模 $1000$。",
+    "answer": 16,
+    "solution_en": [
+      "A simple graph with all degrees two is a disjoint union of cycles of length at least three. On nine vertices, the possible cycle sizes are $3+3+3,3+6,4+5,9$.",
+      "An undirected cycle on $k$ fixed labels has $(k-1)!/2$ arrangements. The four cases give $9!/[(3!)^3 3!]=280$, $\\binom93(5!/2)=5040$, $\\binom94(3!/2)(4!/2)=4536$, and $8!/2=20160$.",
+      "The total is $30016$, leaving remainder $16$."
+    ],
+    "solution_zh": [
+      "各度数为二的简单图必为若干长度至少三的圈。九个顶点的圈长度分拆仅 $3+3+3,3+6,4+5,9$。",
+      "固定 $k$ 人的无向圈有 $(k-1)!/2$ 种。四类分别为 $280,5040,4536,20160$。",
+      "总数为 $30016$，余数十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/14",
+    "method_chain": [
+      "Graphs & geometric counting",
+      "Restricted permutations & arrangements",
+      "Compositions, partitions & generating functions"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2012-II-Q15",
+    "paper_id": "AIME-2012-II",
+    "exam_year": 2012,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Let $E^{\\prime}$ be antipodal to $E$ on $\\omega$. Both $\\angle DFE$ and $\\angle E^{\\prime}FE$ are right, so $E^{\\prime},D,F$ are collinear. This reduces the second-circle intersection to a line-circle intersection.",
+      "reason_zh": "设 $E^{\\prime}$ 为 $E$ 在原圆上的对径点。$\\angle DFE,\\angle E^{\\prime}FE$ 均为直角，故 $E^{\\prime},D,F$ 共线，将两圆求交化为直线与原圆求交。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "Take $B=(0,0),C=(7,0),A=(65/14,15\\sqrt3/14)$. The bisector gives $D=(35/8,0)$. The circumcenter is $(7/2,-7\\sqrt3/6)$ with radius squared $49/3$; the relevant antipode is $E^{\\prime}=(7/2,7\\sqrt3/6)$.",
+        "reason_zh": "取 $B=(0,0),C=(7,0),A=(65/14,15\\sqrt3/14)$。角平分线给出 $D=(35/8,0)$。外心为 $(7/2,-7\\sqrt3/6)$，半径平方为 $49/3$，所需对径点 $E^{\\prime}=(7/2,7\\sqrt3/6)$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Parameterize line $E^{\\prime}D$ by $E^{\\prime}+t(3,-4\\sqrt3)$. Substitution in the circle equation gives $57t^2-56t=0$. The second point is $t=56/57$, yielding $F=(245/38,-105\\sqrt3/38)$.",
+        "reason_zh": "将直线写为 $E^{\\prime}+t(3,-4\\sqrt3)$，代入圆方程得 $57t^2-56t=0$。第二交点取 $t=56/57$，得到 $F=(245/38,-105\\sqrt3/38)$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ with sides $AB=5,BC=7,AC=3$ has circumcircle $\\omega$. The $A$-bisector meets $BC$ at $D$ and $\\omega$ again at $E$. The circle of diameter $DE$ meets $\\omega$ again at $F$. Reduce $AF^2=m/n$ and find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 的边长为 $AB=5,BC=7,AC=3$，外接圆为 $\\omega$。$A$ 的角平分线交 $BC$ 于 $D$、再交 $\\omega$ 于 $E$。以 $DE$ 为直径的圆再交 $\\omega$ 于 $F$。将 $AF^2$ 约为 $m/n$，求 $m+n$。",
+    "answer": 919,
+    "solution_en": [
+      "Let $E^{\\prime}$ be antipodal to $E$ on $\\omega$. Both $\\angle DFE$ and $\\angle E^{\\prime}FE$ are right, so $E^{\\prime},D,F$ are collinear. This reduces the second-circle intersection to a line-circle intersection.",
+      "Take $B=(0,0),C=(7,0),A=(65/14,15\\sqrt3/14)$. The bisector gives $D=(35/8,0)$. The circumcenter is $(7/2,-7\\sqrt3/6)$ with radius squared $49/3$; the relevant antipode is $E^{\\prime}=(7/2,7\\sqrt3/6)$.",
+      "Parameterize line $E^{\\prime}D$ by $E^{\\prime}+t(3,-4\\sqrt3)$. Substitution in the circle equation gives $57t^2-56t=0$. The second point is $t=56/57$, yielding $F=(245/38,-105\\sqrt3/38)$.",
+      "Therefore $AF^2=(240/133)^2+3(510/133)^2=900/19$. It is reduced, so $m+n=919$."
+    ],
+    "solution_zh": [
+      "设 $E^{\\prime}$ 为 $E$ 在原圆上的对径点。$\\angle DFE,\\angle E^{\\prime}FE$ 均为直角，故 $E^{\\prime},D,F$ 共线，将两圆求交化为直线与原圆求交。",
+      "取 $B=(0,0),C=(7,0),A=(65/14,15\\sqrt3/14)$。角平分线给出 $D=(35/8,0)$。外心为 $(7/2,-7\\sqrt3/6)$，半径平方为 $49/3$，所需对径点 $E^{\\prime}=(7/2,7\\sqrt3/6)$。",
+      "将直线写为 $E^{\\prime}+t(3,-4\\sqrt3)$，代入圆方程得 $57t^2-56t=0$。第二交点取 $t=56/57$，得到 $F=(245/38,-105\\sqrt3/38)$。",
+      "所以 $AF^2=(240/133)^2+3(510/133)^2=900/19$，答案九百一十九。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2012II/problem/15",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Angle bisectors & triangle centers",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

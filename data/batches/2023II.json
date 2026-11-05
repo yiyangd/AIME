@@ -1,0 +1,752 @@
+[
+  {
+    "question_id": "AIME-2023-II-Q01",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "Let the least count be $a$ and greatest be $2a$. The sum of six terms is $6(a+2a)/2=9a$.",
+      "reason_zh": "设最小项为 $a$，最大项为 $2a$。六项等差数列的和为 $6(a+2a)/2=9a$。"
+    },
+    "secondary": [],
+    "statement_en": "Six tree harvests form an arithmetic progression with sum $990$, and the largest harvest is twice the smallest. Find the largest harvest.",
+    "statement_zh": "六棵树的果实数成等差数列，总数 $990$，最大项为最小项的两倍。求最大项。",
+    "answer": 220,
+    "solution_en": [
+      "Let the least count be $a$ and greatest be $2a$. The sum of six terms is $6(a+2a)/2=9a$.",
+      "Thus $a=990/9=110$, and the largest count is $220$."
+    ],
+    "solution_zh": [
+      "设最小项为 $a$，最大项为 $2a$。六项等差数列的和为 $6(a+2a)/2=9a$。",
+      "故 $a=110$，最大项为 $220$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/1",
+    "method_chain": [
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q02",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "A base-eight number of at most three digits is at most $511$. Any larger candidate below $1000$ has four octal digits, beginning and ending with $1$.",
+      "reason_zh": "至多三位的八进制数不超过 $511$。若更大且小于 $1000$，其八进制必有四位，首尾均为 $1$。"
+    },
+    "secondary": [],
+    "statement_en": "Determine the largest positive integer below $1000$ whose representations in bases ten and eight are both palindromes.",
+    "statement_zh": "求小于 $1000$ 的最大正整数，使其十进制、八进制表示均为回文。",
+    "answer": 585,
+    "solution_en": [
+      "A base-eight number of at most three digits is at most $511$. Any larger candidate below $1000$ has four octal digits, beginning and ending with $1$.",
+      "Its form is $\\overline{1bb1}_8=513+72b$, with $b=0,\\ldots,6$. The candidates are $513,585,657,729,801,873,945$.",
+      "Only $585$ is a decimal palindrome; it exceeds all three-digit octal numbers and is therefore the maximum. Indeed $585=1111_8$."
+    ],
+    "solution_zh": [
+      "至多三位的八进制数不超过 $511$。若更大且小于 $1000$，其八进制必有四位，首尾均为 $1$。",
+      "故形式为 $\\overline{1bb1}_8=513+72b$，其中 $b=0$ 至 $6$，得到 $513,585,657,729,801,873,945$。",
+      "其中仅 $585$ 为十进制回文，又大于所有三位八进制数，故为最大值；且 $585=1111_8$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/2",
+    "method_chain": [
+      "Number bases, digits & palindromes"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q03",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Let the common angle be $\\omega$ and leg length be $L$. Triangle $APC$ has angles $90^\\circ-\\omega,\\omega,90^\\circ$, so $L=10/\\sin\\omega$.",
+      "reason_zh": "设公共角为 $\\omega$，直角边长为 $L$。三角形 $APC$ 的角为 $90^\\circ-\\omega,\\omega,90^\\circ$，故 $L=10/\\sin\\omega$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE01",
+        "reason_en": "Let the common angle be $\\omega$ and leg length be $L$. Triangle $APC$ has angles $90^\\circ-\\omega,\\omega,90^\\circ$, so $L=10/\\sin\\omega$.",
+        "reason_zh": "设公共角为 $\\omega$，直角边长为 $L$。三角形 $APC$ 的角为 $90^\\circ-\\omega,\\omega,90^\\circ$，故 $L=10/\\sin\\omega$。"
+      }
+    ],
+    "statement_en": "In a right isosceles triangle $ABC$ with right angle at $A$, an interior point $P$ has $AP=10$ and $\\angle PAB=\\angle PBC=\\angle PCA$. Find the triangle area.",
+    "statement_zh": "等腰直角三角形 $ABC$ 的直角在 $A$。内点 $P$ 满足 $AP=10$ 且 $\\angle PAB=\\angle PBC=\\angle PCA$。求三角形面积。",
+    "answer": 250,
+    "solution_en": [
+      "Let the common angle be $\\omega$ and leg length be $L$. Triangle $APC$ has angles $90^\\circ-\\omega,\\omega,90^\\circ$, so $L=10/\\sin\\omega$.",
+      "In triangle $ABP$, the angles at $A,B,P$ are $\\omega,45^\\circ-\\omega,135^\\circ$. The sine rule gives $10\\sin135^\\circ=L\\sin(45^\\circ-\\omega)$.",
+      "Substitution reduces this to $\\sin\\omega=\\cos\\omega-\\sin\\omega$, so $\\tan\\omega=1/2$ and $\\sin^2\\omega=1/5$.",
+      "Therefore $L^2=500$ and the area is $L^2/2=250$."
+    ],
+    "solution_zh": [
+      "设公共角为 $\\omega$，直角边长为 $L$。三角形 $APC$ 的角为 $90^\\circ-\\omega,\\omega,90^\\circ$，故 $L=10/\\sin\\omega$。",
+      "三角形 $ABP$ 在 $A,B,P$ 处的角分别为 $\\omega,45^\\circ-\\omega,135^\\circ$。正弦定理给出 $10\\sin135^\\circ=L\\sin(45^\\circ-\\omega)$。",
+      "代入化简得 $\\sin\\omega=\\cos\\omega-\\sin\\omega$，所以 $\\tan\\omega=1/2,\\sin^2\\omega=1/5$。",
+      "于是 $L^2=500$，面积为 $250$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/3",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Angles, similarity & parallel lines"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q04",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Subtract the first two equations to obtain $(y-4)(x-z)=0$. Thus either $y=4$ or $x=z$.",
+      "reason_zh": "前两式相减得 $(y-4)(x-z)=0$，因此 $y=4$ 或 $x=z$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "If $x=z$, then $x(y+4)=60$, so $x\\ne0$. Substitution into $x^2+4y=60$ gives $x^3-76x+240=(x-4)(x-6)(x+10)=0$. Every resulting value has a valid real companion $y=60/x-4$.",
+        "reason_zh": "若 $x=z$，由 $x(y+4)=60$ 知 $x\\ne0$。代入 $x^2+4y=60$ 得 $x^3-76x+240=(x-4)(x-6)(x+10)=0$，每个根均能配上实数 $y=60/x-4$。"
+      }
+    ],
+    "statement_en": "Real numbers satisfy $xy+4z=yz+4x=zx+4y=60$. Let $S$ contain every possible value of $x$. Compute $\\sum_{s\\in S}s^2$.",
+    "statement_zh": "实数 $x,y,z$ 满足 $xy+4z=yz+4x=zx+4y=60$。令 $S$ 为 $x$ 的所有可能值组成的集合，求各元素平方和。",
+    "answer": 273,
+    "solution_en": [
+      "Subtract the first two equations to obtain $(y-4)(x-z)=0$. Thus either $y=4$ or $x=z$.",
+      "If $y=4$, then $x+z=15$ and $xz=44$, giving $x=4$ or $11$.",
+      "If $x=z$, then $x(y+4)=60$, so $x\\ne0$. Substitution into $x^2+4y=60$ gives $x^3-76x+240=(x-4)(x-6)(x+10)=0$. Every resulting value has a valid real companion $y=60/x-4$.",
+      "Therefore $S=\\{-10,4,6,11\\}$ and the square sum is $100+16+36+121=273$."
+    ],
+    "solution_zh": [
+      "前两式相减得 $(y-4)(x-z)=0$，因此 $y=4$ 或 $x=z$。",
+      "若 $y=4$，则 $x+z=15,xz=44$，所以 $x=4$ 或 $11$。",
+      "若 $x=z$，由 $x(y+4)=60$ 知 $x\\ne0$。代入 $x^2+4y=60$ 得 $x^3-76x+240=(x-4)(x-6)(x+10)=0$，每个根均能配上实数 $y=60/x-4$。",
+      "所以 $S=\\{-10,4,6,11\\}$，平方和为 $273$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/4",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q05",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT07",
+      "reason_en": "Write $r=a/b$ with $\\gcd(a,b)=1$, and put $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$. The reduced form of $55r$ is $(55a/g)/(b/g)$.",
+      "reason_zh": "写 $r=a/b$，其中 $a,b$ 互质，令 $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$，则 $55r$ 的最简形式为 $(55a/g)/(b/g)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT02",
+        "reason_en": "Write $r=a/b$ with $\\gcd(a,b)=1$, and put $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$. The reduced form of $55r$ is $(55a/g)/(b/g)$.",
+        "reason_zh": "写 $r=a/b$，其中 $a,b$ 互质，令 $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$，则 $55r$ 的最简形式为 $(55a/g)/(b/g)$。"
+      }
+    ],
+    "statement_en": "For positive rationals $r$, compare the sums of numerator and denominator in the reduced fractions for $r$ and $55r$. Let $S$ be the rationals for which these two sums agree. If $\\sum_{r\\in S}r=p/q$ in lowest terms, find $p+q$.",
+    "statement_zh": "将正有理数 $r$ 及 $55r$ 分别约为最简分数；两分数的分子分母之和相等时，将 $r$ 收入集合 $S$。若 $S$ 各元素之和为最简分数 $p/q$，求 $p+q$。",
+    "answer": 719,
+    "solution_en": [
+      "Write $r=a/b$ with $\\gcd(a,b)=1$, and put $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$. The reduced form of $55r$ is $(55a/g)/(b/g)$.",
+      "The equal-sum condition becomes $(g-1)b=(55-g)a$. The values $g=1,55$ are impossible for positive $a,b$.",
+      "For $g=5$, $2b=25a$, forcing $(a,b)=(2,25)$. For $g=11$, $5b=22a$, forcing $(a,b)=(5,22)$. Each has the required gcd and indeed equal sums.",
+      "The sum is $2/25+5/22=169/550$, which is reduced, and $p+q=719$."
+    ],
+    "solution_zh": [
+      "写 $r=a/b$，其中 $a,b$ 互质，令 $g=\\gcd(55,b)\\in\\{1,5,11,55\\}$，则 $55r$ 的最简形式为 $(55a/g)/(b/g)$。",
+      "分子分母和相等化为 $(g-1)b=(55-g)a$。$g=1,55$ 均与正数条件矛盾。",
+      "$g=5$ 时 $2b=25a$，互质性给出 $(a,b)=(2,25)$；$g=11$ 时 $5b=22a$，给出 $(5,22)$。两者均符合所需最大公因数及和相等条件。",
+      "总和为 $169/550$，已最简，故答案为 $719$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/5",
+    "method_chain": [
+      "Rational fractions & repeating decimals",
+      "Divisibility, GCD & LCM"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q06",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS03",
+      "reason_en": "The midpoint always stays in $[0,2]^2$. Failure means its two coordinates both exceed $1$, placing it in the missing upper-right square.",
+      "reason_zh": "中点必在 $[0,2]^2$ 中，失败恰指中点两坐标都超过 $1$，落入缺失的右上方单位方格。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS02",
+        "reason_en": "This requires one point in the upper arm and one in the right arm, probability $2/9$. Conditional on that choice, each coordinate-sum exceeds $2$ with probability $1/2$; the two coordinate events are independent.",
+        "reason_zh": "此时必须一点在上臂、一点在右臂，概率为 $2/9$。在这个条件下，每个坐标和大于 $2$ 的概率为 $1/2$，且横纵坐标事件相互独立。"
+      }
+    ],
+    "statement_en": "Choose two independent uniform points in $L=[0,1]^2\\cup([0,1]\\times[1,2])\\cup([1,2]\\times[0,1])$. The chance that their midpoint also belongs to $L$ is the reduced fraction $m/n$. Find $m+n$.",
+    "statement_zh": "在区域 $L=[0,1]^2\\cup([0,1]\\times[1,2])\\cup([1,2]\\times[0,1])$ 内独立均匀选取两点。两点中点仍在 $L$ 内的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 35,
+    "solution_en": [
+      "The midpoint always stays in $[0,2]^2$. Failure means its two coordinates both exceed $1$, placing it in the missing upper-right square.",
+      "This requires one point in the upper arm and one in the right arm, probability $2/9$. Conditional on that choice, each coordinate-sum exceeds $2$ with probability $1/2$; the two coordinate events are independent.",
+      "Thus failure has probability $(2/9)(1/2)^2=1/18$, and success is $17/18$, yielding $35$."
+    ],
+    "solution_zh": [
+      "中点必在 $[0,2]^2$ 中，失败恰指中点两坐标都超过 $1$，落入缺失的右上方单位方格。",
+      "此时必须一点在上臂、一点在右臂，概率为 $2/9$。在这个条件下，每个坐标和大于 $2$ 的概率为 $1/2$，且横纵坐标事件相互独立。",
+      "失败概率为 $(2/9)(1/2)^2=1/18$，成功概率为 $17/18$，故答案 $35$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/6",
+    "method_chain": [
+      "Geometric probability",
+      "Conditional probability & independence"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q07",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO01",
+      "reason_en": "Any inscribed rectangle has two diameters as its diagonals. Group the vertices into six opposite pairs; a forbidden rectangle occurs precisely when two pairs are both solid red or two pairs are both solid blue.",
+      "reason_zh": "圆内接矩形的两条对角线均为直径。把十二顶点分为六组对径点；恰在有两组全红或两组全蓝时，出现同色矩形。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Any inscribed rectangle has two diameters as its diagonals. Group the vertices into six opposite pairs; a forbidden rectangle occurs precisely when two pairs are both solid red or two pairs are both solid blue.",
+        "reason_zh": "圆内接矩形的两条对角线均为直径。把十二顶点分为六组对径点；恰在有两组全红或两组全蓝时，出现同色矩形。"
+      }
+    ],
+    "statement_en": "Color each vertex of a regular twelve-gon red or blue. Among the $2^{12}$ labeled colorings, how many contain no rectangle whose four vertices share one color?",
+    "statement_zh": "将正十二边形每个顶点涂成红或蓝。$2^{12}$ 种按位置区分的染色中，不存在四顶点同色矩形的共有多少种？",
+    "answer": 928,
+    "solution_en": [
+      "Any inscribed rectangle has two diameters as its diagonals. Group the vertices into six opposite pairs; a forbidden rectangle occurs precisely when two pairs are both solid red or two pairs are both solid blue.",
+      "So there may be at most one all-red pair and at most one all-blue pair. Every remaining pair is mixed, with two orientations.",
+      "The four cases (zero solids, red only, blue only, both) give $2^6+6\\cdot2^5+6\\cdot2^5+6\\cdot5\\cdot2^4=928$."
+    ],
+    "solution_zh": [
+      "圆内接矩形的两条对角线均为直径。把十二顶点分为六组对径点；恰在有两组全红或两组全蓝时，出现同色矩形。",
+      "所以全红组至多一组，全蓝组也至多一组；其余各组红蓝各一，有两种朝向。",
+      "按无纯色组、仅红、仅蓝、红蓝各一四类，得到 $2^6+6\\cdot2^5+6\\cdot2^5+6\\cdot5\\cdot2^4=928$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/7",
+    "method_chain": [
+      "Restricted permutations & arrangements",
+      "Circle power & cyclic geometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q08",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Put $P(t)=t^3+t+1$ and let its roots be $\\beta_1,\\beta_2,\\beta_3$. Interchanging the factors in the product gives $\\prod_{k=0}^6P(\\omega^k)=\\prod_{j=1}^3(1-\\beta_j^7)$, because $t^7-1$ has the seven roots $\\omega^k$.",
+      "reason_zh": "令 $P(t)=t^3+t+1$，根为 $\\beta_1,\\beta_2,\\beta_3$。交换乘积次序，并用 $t^7-1$ 的七个根，得 $\\prod_{k=0}^6P(\\omega^k)=\\prod_{j=1}^3(1-\\beta_j^7)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Reducing powers using $\\beta^3=-\\beta-1$ gives $\\beta^7=2\\beta^2-1$. Thus $1-\\beta^7=2(1-\\beta)(1+\\beta)$.",
+        "reason_zh": "利用 $\\beta^3=-\\beta-1$ 逐次降幂，得 $\\beta^7=2\\beta^2-1$，故 $1-\\beta^7=2(1-\\beta)(1+\\beta)$。"
+      }
+    ],
+    "statement_en": "Let $\\omega=e^{2\\pi i/7}$. Evaluate $\\prod_{k=0}^6(1+\\omega^k+\\omega^{3k})$.",
+    "statement_zh": "令 $\\omega=e^{2\\pi i/7}$，求 $\\prod_{k=0}^6(1+\\omega^k+\\omega^{3k})$。",
+    "answer": 24,
+    "solution_en": [
+      "Put $P(t)=t^3+t+1$ and let its roots be $\\beta_1,\\beta_2,\\beta_3$. Interchanging the factors in the product gives $\\prod_{k=0}^6P(\\omega^k)=\\prod_{j=1}^3(1-\\beta_j^7)$, because $t^7-1$ has the seven roots $\\omega^k$.",
+      "Reducing powers using $\\beta^3=-\\beta-1$ gives $\\beta^7=2\\beta^2-1$. Thus $1-\\beta^7=2(1-\\beta)(1+\\beta)$.",
+      "The product becomes $8P(1)[-P(-1)]=8\\cdot3\\cdot1=24$. The negative sign in the second bracket comes from the odd degree of $P$."
+    ],
+    "solution_zh": [
+      "令 $P(t)=t^3+t+1$，根为 $\\beta_1,\\beta_2,\\beta_3$。交换乘积次序，并用 $t^7-1$ 的七个根，得 $\\prod_{k=0}^6P(\\omega^k)=\\prod_{j=1}^3(1-\\beta_j^7)$。",
+      "利用 $\\beta^3=-\\beta-1$ 逐次降幂，得 $\\beta^7=2\\beta^2-1$，故 $1-\\beta^7=2(1-\\beta)(1+\\beta)$。",
+      "于是乘积为 $8P(1)[-P(-1)]=24$。第二个括号中的负号来自 $P$ 的奇数次数。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/8",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q09",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE04",
+      "reason_en": "Tangency parallel to a chord places the tangency point over that chord midpoint. Consequently, taking $P=(0,0),X=(-10,0),Y=(14,0)$ gives $A=(-5,h),B=(7,h)$ and $AB=12,XY=24$.",
+      "reason_zh": "与弦平行的切线，其切点正对弦中点。因此可取 $P=(0,0),X=(-10,0),Y=(14,0)$，得 $A=(-5,h),B=(7,h)$，上下底为 $12,24$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "The radical axis $PQ$ meets $AB$ at its midpoint $M=(1,h)$, since the powers $MA^2,MB^2$ agree. The tangent nearer $P$ gives the order $M,P,Q$, so $MP\\cdot MQ=MA^2=36$ and $MQ=MP+5$.",
+        "reason_zh": "根轴 $PQ$ 与 $AB$ 交于中点 $M=(1,h)$，因为两圆在该点的幂分别为 $MA^2,MB^2$。选离 $P$ 较近的公切线，使点序为 $M,P,Q$，故 $MP\\cdot MQ=36$ 且 $MQ=MP+5$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "The area is $(24+12)\\sqrt{15}/2=18\\sqrt{15}$, yielding $m+n=33$.",
+        "reason_zh": "梯形面积为 $(24+12)\\sqrt{15}/2=18\\sqrt{15}$，答案 $33$。"
+      }
+    ],
+    "statement_en": "Two intersecting circles meet at $P,Q$. Their common external tangent nearer $P$ touches them at $A,B$. A line through $P$ parallel to $AB$ meets the circles again at $X,Y$, with $PX=10,PY=14,PQ=5$. The area of trapezoid $XABY$ is $m\\sqrt n$ with squarefree $n$. Find $m+n$.",
+    "statement_zh": "两圆交于 $P,Q$，离 $P$ 较近的公外切线分别切于 $A,B$。过 $P$ 作 $AB$ 的平行线，再交两圆于 $X,Y$，其中 $PX=10,PY=14,PQ=5$。梯形 $XABY$ 面积为 $m\\sqrt n$，$n$ 无平方因子，求 $m+n$。",
+    "answer": 33,
+    "solution_en": [
+      "Tangency parallel to a chord places the tangency point over that chord midpoint. Consequently, taking $P=(0,0),X=(-10,0),Y=(14,0)$ gives $A=(-5,h),B=(7,h)$ and $AB=12,XY=24$.",
+      "The radical axis $PQ$ meets $AB$ at its midpoint $M=(1,h)$, since the powers $MA^2,MB^2$ agree. The tangent nearer $P$ gives the order $M,P,Q$, so $MP\\cdot MQ=MA^2=36$ and $MQ=MP+5$.",
+      "Thus $MP=4$, and $h^2=MP^2-1^2=15$. The alternative same-side chord-end placement would give $AB=2,|M_x|=6$; then $MP\\ge6$ and $MP\\cdot MQ\\ge6(6-5)>1=MA^2$, impossible.",
+      "The area is $(24+12)\\sqrt{15}/2=18\\sqrt{15}$, yielding $m+n=33$."
+    ],
+    "solution_zh": [
+      "与弦平行的切线，其切点正对弦中点。因此可取 $P=(0,0),X=(-10,0),Y=(14,0)$，得 $A=(-5,h),B=(7,h)$，上下底为 $12,24$。",
+      "根轴 $PQ$ 与 $AB$ 交于中点 $M=(1,h)$，因为两圆在该点的幂分别为 $MA^2,MB^2$。选离 $P$ 较近的公切线，使点序为 $M,P,Q$，故 $MP\\cdot MQ=36$ 且 $MQ=MP+5$。",
+      "解得 $MP=4$，所以 $h^2=16-1=15$。若 $X,Y$ 在 $P$ 同侧，则 $AB=2,|M_x|=6$，从而 $MP\\ge6$，圆幂至少为 $6(6-5)>1=MA^2$，矛盾，故已涵盖所有构型。",
+      "梯形面积为 $(24+12)\\sqrt{15}/2=18\\sqrt{15}$，答案 $33$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/9",
+    "method_chain": [
+      "Circle power & cyclic geometry",
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q10",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO07",
+      "reason_en": "First fill with residues $0,1,2$, each appearing four times; then permute the four actual integers within each class, contributing $(4!)^3$. Adjacent residues must differ.",
+      "reason_zh": "先按模 $3$ 的余数填入 $0,1,2$，每类四格；再将同类四个实际数字排列，贡献 $(4!)^3$。共边格子的余数须不同。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "First fill with residues $0,1,2$, each appearing four times; then permute the four actual integers within each class, contributing $(4!)^3$. Adjacent residues must differ.",
+        "reason_zh": "先按模 $3$ 的余数填入 $0,1,2$，每类四格；再将同类四个实际数字排列，贡献 $(4!)^3$。共边格子的余数须不同。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT08",
+        "reason_en": "Hence $N=180\\cdot24^3=2^{11}3^5\\cdot5$. Its divisor count is $(11+1)(5+1)(1+1)=144$.",
+        "reason_zh": "故 $N=180\\cdot24^3=2^{11}3^5\\cdot5$，正约数数目为 $12\\cdot6\\cdot2=144$。"
+      }
+    ],
+    "statement_en": "Fill a labeled $2\\times6$ grid bijectively with $1,\\ldots,12$, requiring neighboring cells that share an edge to have differences not divisible by $3$. If there are $N$ fillings, find the number of positive divisors of $N$.",
+    "statement_zh": "将 $1$ 至 $12$ 各用一次填入有固定位置的 $2\\times6$ 网格，要求共边两格的数之差不能被 $3$ 整除。设填法数为 $N$，求 $N$ 的正约数个数。",
+    "answer": 144,
+    "solution_en": [
+      "First fill with residues $0,1,2$, each appearing four times; then permute the four actual integers within each class, contributing $(4!)^3$. Adjacent residues must differ.",
+      "For a column $(a,b)$ with remaining residue $c$, the next column has exactly the three possibilities $(b,a),(b,c),(c,a)$. Thus each choice of its unordered residue pair uniquely determines the orientation once the previous column is known.",
+      "For each residue to occur four times in six columns, the three unordered pair types must each occur twice. There are $6!/(2!)^3=90$ pair sequences and two orientations of the first column, yielding $180$ residue fillings.",
+      "Hence $N=180\\cdot24^3=2^{11}3^5\\cdot5$. Its divisor count is $(11+1)(5+1)(1+1)=144$."
+    ],
+    "solution_zh": [
+      "先按模 $3$ 的余数填入 $0,1,2$，每类四格；再将同类四个实际数字排列，贡献 $(4!)^3$。共边格子的余数须不同。",
+      "若一列为 $(a,b)$，第三种余数为 $c$，下一列恰可为 $(b,a),(b,c),(c,a)$。所以确定下一列的无序余数对后，朝向便唯一确定。",
+      "六列中每种余数出现四次，等价于三种无序对各出现两次。有 $6!/(2!)^3=90$ 种对类型序列，首列两种朝向，共 $180$ 种余数填法。",
+      "故 $N=180\\cdot24^3=2^{11}3^5\\cdot5$，正约数数目为 $12\\cdot6\\cdot2=144$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/10",
+    "method_chain": [
+      "Bijections & structural counting",
+      "Congruences & Chinese remainders",
+      "Divisor functions & totients"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q11",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "The $32$ subsets form $16$ complementary pairs. Exactly one member of each pair must be chosen. The full set is chosen and the empty set is not.",
+      "reason_zh": "三十二个子集分成十六组互补对子，必须每组恰选一个。全集必选，空集不能选。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO06",
+        "reason_en": "View two-element sets as edges of $K_5$. A pairwise-intersecting edge family is empty, a nonempty subfamily of a star, or a triangle. To see completeness, after edges $ab,ac$ are chosen, any edge avoiding $a$ must be $bc$, which prevents any fourth edge outside that triangle.",
+        "reason_zh": "将二元集看成 $K_5$ 的边。两两相交的边族只能为空、非空星形子族或三角形：选定 $ab,ac$ 后，不经过 $a$ 的边只能为 $bc$，继而不允许三角形以外的其他边。"
+      }
+    ],
+    "statement_en": "Count the families containing sixteen distinct subsets of a five-element set such that every pair of family members has nonempty intersection.",
+    "statement_zh": "一个五元集合的十六个不同子集组成一族，要求族中任意两个成员交集非空。求这样的集合族数目。",
+    "answer": 81,
+    "solution_en": [
+      "The $32$ subsets form $16$ complementary pairs. Exactly one member of each pair must be chosen. The full set is chosen and the empty set is not.",
+      "If a singleton is chosen, the entire family consists of all sets containing its element. This gives five families. Otherwise all four-element sets are chosen, and the only further restriction is that the selected two-element sets pairwise intersect; three-element choices are then fixed by complementation.",
+      "View two-element sets as edges of $K_5$. A pairwise-intersecting edge family is empty, a nonempty subfamily of a star, or a triangle. To see completeness, after edges $ab,ac$ are chosen, any edge avoiding $a$ must be $bc$, which prevents any fourth edge outside that triangle.",
+      "The counts are $1$, $5(2^4-1)-10=65$ (single edges counted twice), and $\\binom53=10$. Add the five singleton families: $1+65+10+5=81$."
+    ],
+    "solution_zh": [
+      "三十二个子集分成十六组互补对子，必须每组恰选一个。全集必选，空集不能选。",
+      "若选择单元素集，则全部成员必须含这个元素，恰为五种族。否则全部四元集均选，剩余条件只是已选二元集两两相交；三元集由互补关系唯一确定。",
+      "将二元集看成 $K_5$ 的边。两两相交的边族只能为空、非空星形子族或三角形：选定 $ab,ac$ 后，不经过 $a$ 的边只能为 $bc$，继而不允许三角形以外的其他边。",
+      "这三类分别有 $1,5(2^4-1)-10=65,\\binom53=10$ 种；星形计数中减去重复计入的十条单边。再加五种含单元素集的族，总数 $81$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/11",
+    "method_chain": [
+      "Subsets & binomial identities",
+      "Graphs & geometric counting"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q12",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Take $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$, so $AM=2\\sqrt{37}$. The power relation $MA\\,MP=49$ gives $P=(567/74,-147/37)$. Directions of $BP,CP$ may be represented by $(27,-14),(-67,-42)$.",
+      "reason_zh": "取 $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$，得 $AM=2\\sqrt{37}$。由圆幂 $MA\\,MP=49$，得到 $P=(567/74,-147/37)$，故 $BP,CP$ 的方向分别可用 $(27,-14),(-67,-42)$ 表示。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Take $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$, so $AM=2\\sqrt{37}$. The power relation $MA\\,MP=49$ gives $P=(567/74,-147/37)$. Directions of $BP,CP$ may be represented by $(27,-14),(-67,-42)$.",
+        "reason_zh": "取 $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$，得 $AM=2\\sqrt{37}$。由圆幂 $MA\\,MP=49$，得到 $P=(567/74,-147/37)$，故 $BP,CP$ 的方向分别可用 $(27,-14),(-67,-42)$ 表示。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "Write $Q=(5+2t,12-12t)$ with $0\\le t\\le1$. Cross-product and dot-product formulas give the angle tangents $(394-296t)/(222t-33)$ at $B$, and $(1182-888t)/(370t+99)$ at $C$.",
+        "reason_zh": "令 $Q=(5+2t,12-12t)$，其中 $0\\le t\\le1$。由叉积与点积，$B,C$ 处两角的正切分别为 $(394-296t)/(222t-33)$ 和 $(1182-888t)/(370t+99)$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has sides $AB=13,BC=14,CA=15$. Let $M$ be the midpoint of $BC$, and let line $AM$ meet the circumcircle again at $P$, beyond $M$. The unique $Q$ on $AM$ satisfying $\\angle PBQ=\\angle PCQ$ has $AQ=m/\\sqrt n$, with coprime positive integers $m,n$. Find $m+n$.",
+    "statement_zh": "三角形 $ABC$ 的边长为 $AB=13,BC=14,CA=15$。$M$ 为 $BC$ 中点，直线 $AM$ 在 $M$ 外侧再交外接圆于 $P$。线段 $AM$ 上唯一满足 $\\angle PBQ=\\angle PCQ$ 的点为 $Q$。若 $AQ=m/\\sqrt n$，正整数 $m,n$ 互质，求 $m+n$。",
+    "answer": 247,
+    "solution_en": [
+      "Take $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$, so $AM=2\\sqrt{37}$. The power relation $MA\\,MP=49$ gives $P=(567/74,-147/37)$. Directions of $BP,CP$ may be represented by $(27,-14),(-67,-42)$.",
+      "Write $Q=(5+2t,12-12t)$ with $0\\le t\\le1$. Cross-product and dot-product formulas give the angle tangents $(394-296t)/(222t-33)$ at $B$, and $(1182-888t)/(370t+99)$ at $C$.",
+      "The angle at $C$ is acute on this segment, so equality requires $222t-33>0$. The numerators have ratio $3$, hence equality is equivalent to $370t+99=3(222t-33)$. It has the single valid root $t=99/148$.",
+      "Therefore $AQ=t\\,AM=99/\\sqrt{148}$. Since $99$ and $148$ are coprime, the answer is $247$."
+    ],
+    "solution_zh": [
+      "取 $B=(0,0),C=(14,0),A=(5,12),M=(7,0)$，得 $AM=2\\sqrt{37}$。由圆幂 $MA\\,MP=49$，得到 $P=(567/74,-147/37)$，故 $BP,CP$ 的方向分别可用 $(27,-14),(-67,-42)$ 表示。",
+      "令 $Q=(5+2t,12-12t)$，其中 $0\\le t\\le1$。由叉积与点积，$B,C$ 处两角的正切分别为 $(394-296t)/(222t-33)$ 和 $(1182-888t)/(370t+99)$。",
+      "$C$ 处角在此区间恒为锐角，因此相等时必须 $222t-33>0$。两分子之比为三，故等角条件化为 $370t+99=3(222t-33)$，唯一合条件的根为 $t=99/148$。",
+      "因此 $AQ=t\\,AM=99/\\sqrt{148}$，$99,148$ 互质，答案为 $247$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/12",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Circle power & cyclic geometry",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q13",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL08",
+      "reason_en": "Set $s=\\sec A,t=\\tan A$. Then $st=2,s^2-t^2=1$, so for $u=s^2,v=t^2$, one has $u+v=\\sqrt{17},uv=4$.",
+      "reason_zh": "令 $s=\\sec A,t=\\tan A$，则 $st=2,s^2-t^2=1$。写 $u=s^2,v=t^2$，得 $u+v=\\sqrt{17},uv=4$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "For $n=4j$, let $x_j=s^{4j}+t^{4j}$. The two bases have sum $9$ and product $16$, so $x_{j+1}=9x_j-16x_{j-1}$ with $x_0=2,x_1=9$.",
+        "reason_zh": "令 $n=4j,x_j=s^{4j}+t^{4j}$。两个底数的和为 $9$，积为 $16$，故 $x_{j+1}=9x_j-16x_{j-1}$，初值为 $2,9$。"
+      },
+      {
+        "category_id": "NT",
+        "subtype_id": "NT04",
+        "reason_en": "Modulo $10$, the terms for $j\\ge1$ cycle $9,9,7$: the pair $(x_1,x_2)=(9,9)$ returns after three steps. Valid $j\\le250$ are exactly those not divisible by $3$, numbering $250-83=167$.",
+        "reason_zh": "模 $10$，从 $j=1$ 开始循环为 $9,9,7$：状态对 $(9,9)$ 三步后重现。故 $j\\le250$ 且不被 $3$ 整除，共 $250-83=167$ 个。"
+      }
+    ],
+    "statement_en": "An acute angle $A$ satisfies $\\tan A=2\\cos A$. Count the integers $1\\le n\\le1000$ for which $\\sec^n A+\\tan^n A$ is a positive integer ending in $9$.",
+    "statement_zh": "锐角 $A$ 满足 $\\tan A=2\\cos A$。求 $1\\le n\\le1000$ 中使 $\\sec^n A+\\tan^n A$ 为个位是 $9$ 的正整数的 $n$ 的个数。",
+    "answer": 167,
+    "solution_en": [
+      "Set $s=\\sec A,t=\\tan A$. Then $st=2,s^2-t^2=1$, so for $u=s^2,v=t^2$, one has $u+v=\\sqrt{17},uv=4$.",
+      "The sums $w_j=u^j+v^j$ satisfy $w_{j+1}=\\sqrt{17}w_j-4w_{j-1}$, with $w_0=2,w_1=\\sqrt{17}$. Induction shows that even-index terms are positive integers and odd-index terms are nonzero integer multiples of $\\sqrt{17}$. For odd $n$, $(s^n+t^n)^2=w_n+2^{n+1}$ is irrational. Thus integrality occurs exactly when $4\\mid n$.",
+      "For $n=4j$, let $x_j=s^{4j}+t^{4j}$. The two bases have sum $9$ and product $16$, so $x_{j+1}=9x_j-16x_{j-1}$ with $x_0=2,x_1=9$.",
+      "Modulo $10$, the terms for $j\\ge1$ cycle $9,9,7$: the pair $(x_1,x_2)=(9,9)$ returns after three steps. Valid $j\\le250$ are exactly those not divisible by $3$, numbering $250-83=167$."
+    ],
+    "solution_zh": [
+      "令 $s=\\sec A,t=\\tan A$，则 $st=2,s^2-t^2=1$。写 $u=s^2,v=t^2$，得 $u+v=\\sqrt{17},uv=4$。",
+      "$w_j=u^j+v^j$ 满足 $w_{j+1}=\\sqrt{17}w_j-4w_{j-1}$，初值 $w_0=2,w_1=\\sqrt{17}$。归纳可知偶数下标为正整数，奇数下标为非零整数乘 $\\sqrt{17}$。若 $n$ 为奇数，则 $(s^n+t^n)^2=w_n+2^{n+1}$ 无理。因此原式为整数当且仅当 $4\\mid n$。",
+      "令 $n=4j,x_j=s^{4j}+t^{4j}$。两个底数的和为 $9$，积为 $16$，故 $x_{j+1}=9x_j-16x_{j-1}$，初值为 $2,9$。",
+      "模 $10$，从 $j=1$ 开始循环为 $9,9,7$：状态对 $(9,9)$ 三步后重现。故 $j\\le250$ 且不被 $3$ 整除，共 $250-83=167$ 个。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/13",
+    "method_chain": [
+      "Trigonometric algebra & equations",
+      "Sequences & summation",
+      "Orders, modular powers & cycles"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q14",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "Use cube-edge coordinates $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$ and unit vertical vector $u$. The vertical rectangle has normal $(0,1,-1)$, so $u_2=u_3$. Heights give $su_1=2,su_2=su_3=4$, whence $s^2=2^2+4^2+4^2=36$.",
+      "reason_zh": "沿棱取坐标 $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$，设竖直单位向量为 $u$。竖直矩形的法向量为 $(0,1,-1)$，故 $u_2=u_3$。由高度，$su_1=2,su_2=su_3=4$，因此 $s^2=2^2+4^2+4^2=36$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Use cube-edge coordinates $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$ and unit vertical vector $u$. The vertical rectangle has normal $(0,1,-1)$, so $u_2=u_3$. Heights give $su_1=2,su_2=su_3=4$, whence $s^2=2^2+4^2+4^2=36$.",
+        "reason_zh": "沿棱取坐标 $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$，设竖直单位向量为 $u$。竖直矩形的法向量为 $(0,1,-1)$，故 $u_2=u_3$。由高度，$su_1=2,su_2=su_3=4$，因此 $s^2=2^2+4^2+4^2=36$。"
+      }
+    ],
+    "statement_en": "A cube has parallel edges $AB,CD$ and face diagonals $AC,BD$. The rectangle $ABDC$ lies in a vertical plane. The heights of $A,B,C,D$ above a horizontal floor are $0,2,8,10$ meters. Water fills the cube up to height $7$ meters. If its volume is $m/n$ cubic meters in lowest terms, find $m+n$.",
+    "statement_zh": "立方体的 $AB,CD$ 为平行棱，$AC,BD$ 为面对角线，矩形 $ABDC$ 所在平面竖直。$A,B,C,D$ 离水平地面的高度分别为 $0,2,8,10$ 米。水面高度为 $7$ 米。若水量为最简分数 $m/n$ 立方米，求 $m+n$。",
+    "answer": 751,
+    "solution_en": [
+      "Use cube-edge coordinates $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$ and unit vertical vector $u$. The vertical rectangle has normal $(0,1,-1)$, so $u_2=u_3$. Heights give $su_1=2,su_2=su_3=4$, whence $s^2=2^2+4^2+4^2=36$.",
+      "Thus the cube is $[0,6]^3$ and height is $(x+2y+2z)/3$. Reflect all coordinates about $3$: the empty region above height $7$ has the same volume as $x+2y+2z<9$ inside the cube.",
+      "The full first-octant tetrahedron has intercepts $9,9/2,9/2$ and volume $243/8$. Only the constraint $x\\le6$ truncates it; the removed tetrahedron has intercepts $3,3/2,3/2$ and volume $9/8$. Thus air occupies $234/8=117/4$.",
+      "The water volume is $6^3-117/4=747/4$, giving $m+n=751$."
+    ],
+    "solution_zh": [
+      "沿棱取坐标 $A=(0,0,0),B=(s,0,0),C=(0,s,s),D=(s,s,s)$，设竖直单位向量为 $u$。竖直矩形的法向量为 $(0,1,-1)$，故 $u_2=u_3$。由高度，$su_1=2,su_2=su_3=4$，因此 $s^2=2^2+4^2+4^2=36$。",
+      "立方体为 $[0,6]^3$，高度为 $(x+2y+2z)/3$。将三坐标各反射为 $6-x$ 等，水面以上的空区域体积等于立方体内 $x+2y+2z<9$ 的体积。",
+      "第一卦限完整四面体的截距为 $9,9/2,9/2$，体积 $243/8$；仅 $x\\le6$ 会截去部分。被截四面体截距为 $3,3/2,3/2$，体积 $9/8$。故空气体积为 $117/4$。",
+      "水量为 $216-117/4=747/4$，答案为 $751$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/14",
+    "method_chain": [
+      "Volumes & solid geometry",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Independent noncalculus solution by complementary tetrahedra.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2023-II-Q15",
+    "paper_id": "AIME-2023-II",
+    "exam_year": 2023,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "Write $a_n=1+k_n2^n$. Minimality makes $k_n$ the representative in $\\{1,\\ldots,22\\}$ of $-2^{-n}\\pmod{23}$. Equality with $a_{n+1}$ holds exactly when $k_n$ is even.",
+      "reason_zh": "写 $a_n=1+k_n2^n$。由最小性，$k_n$ 是 $-2^{-n}\\pmod{23}$ 在 $1$ 至 $22$ 内的代表元。两相邻 $a$ 相等当且仅当 $k_n$ 为偶数。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Write $a_n=1+k_n2^n$. Minimality makes $k_n$ the representative in $\\{1,\\ldots,22\\}$ of $-2^{-n}\\pmod{23}$. Equality with $a_{n+1}$ holds exactly when $k_n$ is even.",
+        "reason_zh": "写 $a_n=1+k_n2^n$。由最小性，$k_n$ 是 $-2^{-n}\\pmod{23}$ 在 $1$ 至 $22$ 内的代表元。两相邻 $a$ 相等当且仅当 $k_n$ 为偶数。"
+      }
+    ],
+    "statement_en": "For each $n\\ge1$, let $a_n$ be the smallest positive multiple of $23$ congruent to $1$ modulo $2^n$. Count $n\\le1000$ for which $a_n=a_{n+1}$.",
+    "statement_zh": "对每个正整数 $n$，令 $a_n$ 为满足 $a_n\\equiv1\\pmod{2^n}$ 的最小正 $23$ 的倍数。求 $n\\le1000$ 中使 $a_n=a_{n+1}$ 的个数。",
+    "answer": 363,
+    "solution_en": [
+      "Write $a_n=1+k_n2^n$. Minimality makes $k_n$ the representative in $\\{1,\\ldots,22\\}$ of $-2^{-n}\\pmod{23}$. Equality with $a_{n+1}$ holds exactly when $k_n$ is even.",
+      "Since $2^{11}\\equiv1\\pmod{23}$ and the order is $11$ (a prime, and $2\\not\\equiv1$), the sequence $k_n$ repeats every eleven terms.",
+      "For $n=1,\\ldots,11$, its values are $11,17,20,10,5,14,7,15,19,21,22$. These follow from $k_{n+1}=k_n/2$ for even $k_n$, or $(k_n+23)/2$ for odd $k_n$. Even entries occur at residues $3,4,6,0\\pmod{11}$.",
+      "In $1,\\ldots,1000=90\\cdot11+10$, there are ninety full periods and three extra even entries. The count is $90\\cdot4+3=363$."
+    ],
+    "solution_zh": [
+      "写 $a_n=1+k_n2^n$。由最小性，$k_n$ 是 $-2^{-n}\\pmod{23}$ 在 $1$ 至 $22$ 内的代表元。两相邻 $a$ 相等当且仅当 $k_n$ 为偶数。",
+      "$2^{11}\\equiv1\\pmod{23}$，且 $11$ 为素数、$2\\not\\equiv1$，故乘法阶为 $11$，$k_n$ 每十一项重复。",
+      "$n=1$ 至 $11$ 时依次为 $11,17,20,10,5,14,7,15,19,21,22$；可用递推检验：偶数项除二，奇数项加 $23$ 再除二。偶数恰在 $n\\equiv3,4,6,0\\pmod{11}$。",
+      "$1000=90\\cdot11+10$，九十个整周期各四次，余下十项再三次，共 $363$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2023II/problem/15",
+    "method_chain": [
+      "Orders, modular powers & cycles",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Independent modular-quotient recurrence, avoiding an unnecessary binary inverse expansion.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

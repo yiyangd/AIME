@@ -1,0 +1,63 @@
+from knowledge_co_helpers import Chapter
+c=Chapter('CO07','A structural count starts by changing what one object means. Write both the encoding and its inverse, and track fixed points before identifying symmetric descriptions. A useful bijection must preserve every boundary, maximality, and noncollision condition.','结构计数从改变对象的描述方式开始。必须写出编码与逆过程，并在按对称性归并之前处理不动点。有效双射须保留所有边界、极大性与不碰撞条件。',['CO01','CO02'])
+c.add('Write an index map for a shuffle','写出洗牌的位置映射',
+['Choose one indexing direction and keep it throughout.','Express the destination of each source interval as an affine function of its old index.','Solve fixed-point or target-position equations, then check the source interval and the other required conditions.'],
+['统一使用一种位置编号方向。','对每段来源位置，把新位置写成旧下标的仿射式。','解不动点或目标位置方程，再检验来源区间与其他条件。'],
+r'A strip has cards $1,\ldots,12$. Reverse each consecutive block of four cards. Which cards retain their positions?',r'纸条上依次放牌 $1,\ldots,12$，把每个连续四张区块内部倒序。哪些牌保留原位置？',
+[r'In block $j=0,1,2$, write the old position as $4j+t$, $1\le t\le4$.',r'The new position is $4j+5-t$. A fixed position would require $t=5-t$.',r'This gives $t=5/2$, not an integer. Therefore no card stays fixed, even though every block remains in place.'],
+[r'第 $j=0,1,2$ 块中，旧位置为 $4j+t$，$1\le t\le4$。',r'新位置为 $4j+5-t$，不动条件要求 $t=5-t$。',r'得到 $t=5/2$ 非整数，所以没有牌保持原位置，尽管每块整体位置不变。'],
+'A map written from the bottom cannot be substituted into an equation indexed from the top.','从下方编号的映射不能直接代入从上方编号的方程。','2005II06',[])
+c.add('Compress mandatory gaps','压缩必须保留的间隔',
+['Sort the selected positions and write their minimum separation.','Subtract the accumulated compulsory gaps to obtain an ordinary increasing selection.','Construct the inverse by adding those gaps back and verify both endpoint bounds.'],
+['将选中位置排序并写明最小间距。','减去累计强制间隔，化为普通递增选取。','加回间隔写出逆过程，并检验两端界。'],
+r'Three event days $a<b<c$ are chosen from days one through twelve. The second must be at least two days after the first, and the third at least four days after the second. Count the schedules.',r'从第一至第十二天中选三个活动日 $a<b<c$，第二次须比第一次至少晚两天，第三次比第二次至少晚四天，求日程数。',
+[r'Set $(u,v,w)=(a,b-1,c-4)$. The unequal compulsory gaps become $1\le u<v<w\le8$.',r'Conversely, every such triple gives $(a,b,c)=(u,v+1,w+4)$ with gaps at least two and four.',r'The map is reversible, so the answer is $\binom83=56$.'],
+[r'令 $(u,v,w)=(a,b-1,c-4)$，不同的强制间隔统一变为 $1\le u<v<w\le8$。',r'反之，任意此类三元组都给出 $(a,b,c)=(u,v+1,w+4)$，两段间距分别至少为二和四。',r'映射可逆，故答案为 $\binom83=56$。'],
+'Subtract only the compulsory extra gaps; the strict ordering already accounts for a gap of one.','只减去额外强制间隔；严格递增本身已包含一单位间距。','2009II06',['CO02'])
+c.add('Pair objects by an involution, including fixed points','用对合配对并计入不动点',
+['Define a transformation that is its own inverse.','Prove it exchanges the two classes being compared, or identifies the two descriptions of one object.','Count the fixed objects separately; only nonfixed objects come in pairs.'],
+['定义一个连续作用两次回到原对象的变换。','证明它交换要比较的两类，或交换同一对象的两种描述。','单独计算不动对象；只有非不动对象能两两配对。'],
+r'A designer chooses two subsets of a four-element icon library, allowing the two subsets to coincide. The two display panels are interchangeable. How many designs are there?',r'设计者为两个可互换面板各选一个四元素图标库的子集，允许两子集相同。共有多少种设计？',
+[r'There are $16^2=256$ ordered pairs of subsets.',r'Swapping the panels is an involution. Its fixed pairs have the same subset on both panels, giving $16$ fixed designs.',r'The number of unordered designs is $(256+16)/2=136$. Equal-panel designs must not be divided by two.'],
+[r'有序子集对共有 $16^2=256$ 个。',r'交换面板是对合，不动对要求两面板选同一子集，共十六个。',r'无序设计数为 $(256+16)/2=136$，相同面板设计不能除以二。'],
+'For a symmetry exchanging strict inequalities, remove the equality class before halving.','对交换严格不等式的对称，先扣除等号类再除二。','2010II10 2011II06',['NT01','AL02','CO03'])
+c.add('Use symmetry orbits before counting colors','先看对称轨道再计颜色',
+['Write the permutation of positions induced by the required symmetry.','An invariant coloring is constant on each orbit; impose any prescribed color totals using orbit sizes.','When counting up to all symmetries, describe orbit representatives or average fixed-coloring counts; divide by the group size only for a free action.'],
+['写出指定对称对位置产生的置换。','不变染色在每个轨道上必须同色，按轨道大小施加颜色总量限制。','按全部对称归并时，描述轨道代表或平均不动染色数；只有自由作用才能直接除群的大小。'],
+r'A wheel has a center and eight labeled rim positions. How many red-blue colorings with exactly three red positions are unchanged by a half-turn?',r'一个轮形有中心与八个有标识轮缘位置。恰有三个位置为红色的红蓝染色中，有多少个在半转后不变？',
+[r'The half-turn fixes the center and splits the rim into four pairs.',r'Three red positions require a red center and exactly one red pair; a blue center would leave an impossible odd red count on pairs.',r'Choose the red pair in four ways. The answer is $4$.'],
+[r'半转固定中心，将轮缘分为四个二元轨道。',r'红色总数为三，必须中心红色、恰一个轨道红色；中心为蓝时二元轨道无法给出奇数个红位。',r'红轨道有四种选择，答案为四。'],
+'A prescribed invariant coloring and a coloring counted up to symmetry are different counting questions.','要求染色在某对称下不变，与把对称染色视为同类，是两种不同计数。','2006II08 2013I04',['CO03'])
+c.add('Encode a constrained path by independent local choices','用独立局部选择编码受限路径',
+['Choose a short code for each available local move.','Prove each code word determines one legal complete object, including any forced intermediate moves.','Translate the endpoint or count condition into a condition on the code, and count only code words meeting it.'],
+['给每个可选局部动作指定简短编码。','证明每个编码串都唯一决定合法完整对象，包括被迫的中间动作。','将终点或数量条件转成编码条件，再计算符合条件的串。'],
+r'Two lamps begin off. Each of four commands either toggles both lamps or swaps their states. Count command histories ending with both lamps off.',r'两盏灯起初均关闭。四次指令每次可同时翻转两灯，或交换两灯状态。求最后两灯均关闭的指令历史数。',
+[r'Use $T$ for toggle and $S$ for swap. The lamps always have equal states, so $S$ keeps them unchanged and $T$ reverses them.',r'The code word uniquely determines the state history, and conversely each step changes both lamps or leaves both unchanged, recovering its code.',r'The endpoint condition is an even number of $T$ commands. Hence the count is $\binom40+\binom42+\binom44=8$.'],
+[r'用 $T$ 表示翻转、$S$ 表示交换。两灯始终同态，所以 $S$ 保持状态，$T$ 同时改变状态。',r'编码串唯一决定状态历史，反之每步要么均变要么均不变，可恢复指令。',r'终态条件是 $T$ 数为偶数，故共有 $\binom40+\binom42+\binom44=8$ 种。'],
+'A code must remember enough state to recover orientation; counting only unordered column types needs a proof of forced orientation.','编码必须保留恢复方向所需的状态；只计无序列类型时须证明方向可被唯一恢复。','2018I10 2023II10 2026II02',['CO01','CO02','NT03'],
+[r'For a two-row proper three-color strip, if a column is $(a,b)$ and the third color is $c$, the next column can only be $(b,a),(b,c),(c,a)$. Each unordered color pair occurs once in this list, so a sequence of unordered pairs plus the first orientation uniquely reconstructs the strip.',r'For a two-ring walk, a code that determines the ending ring can also turn angular displacement into a difference of code counts. Verify the cancellation of opposite spoke moves before applying a residue condition.'],
+[r'两行三色相邻异色条中，某列为 $(a,b)$、第三色为 $c$ 时，下一列仅有 $(b,a),(b,c),(c,a)$。三种无序色对各出现一次，所以无序色对序列加首列方向即可唯一重构整条。',r'双环游走中，若编码决定每步终止在哪个环，可将角位移化为两类编码数之差；应用同余条件前须证明向内向外辐条动作抵消。'])
+c.add('Split overlapping place values into digit streams','将重叠位权拆成数位流',
+['Separate every bounded coefficient into ordinary base digits.','Regroup equal shifts into independent digit streams.','Solve for one stream and show the remaining stream has legal digits and bounds, giving an inverse.'],
+['把每个有界系数拆成普通进位制数位。','将相同位移重新归并成独立数位流。','解出其中一流，证明另一流满足数位与范围限制，从而得到逆映射。'],
+r'Count integer pairs $0\le a,b\le24$ satisfying $a+5b=48$.',r'求 $0\le a,b\le24$ 且 $a+5b=48$ 的整数对数。',
+[r'Write $a=5u+v$ with digits $0\le u,v\le4$. Modulo five the equation gives $v=3$.',r'Then $u+b=9$, so $u=0,1,2,3,4$ uniquely determines $b=9-u$.',r'All five recovered pairs satisfy the bounds, so the answer is $5$. This explicitly accounts for the overlapping place value carried by $a$.'],
+[r'写 $a=5u+v$，其中 $u,v$ 均为零至四的数位。模五得到 $v=3$。',r'于是 $u+b=9$，每个 $u=0,1,2,3,4$ 唯一给出 $b=9-u$。',r'五个逆向恢复的数对均满足范围，故答案为五。这一编码明确处理了系数 $a$ 内重叠的位权。'],
+'Padding a stream with leading zero digits is allowed only when it matches the original coefficient bounds.','只有符合原系数界时，才可给数位流补前导零。','2010I10',['NT06'])
+c.add('Recover a maximal placement from its row and column labels','由行列标签恢复极大放置',
+['Use maximality to exclude an empty structural part that could receive another object.','Label every occupied row and column by its forced type.','Prove every compatible intersection must be filled and every incompatible one empty; count label assignments whose supports satisfy the nonempty conditions.'],
+['利用极大性排除仍可加入物体的空结构部分。','用被迫的类型给每个已占用行列标号。','证明每个相容交点必须填、每个不相容交点必须空，再计算满足非空支持条件的标号方案。'],
+r'A monochromatic-row-and-column token board is maximal. Its row colors are red, red, blue, and its column colors are red, blue, blue, green. Can such a placement exist? If the green column is changed to red, reconstruct the placement.',r'一个每行每列各自单色的棋子放置为极大放置。行颜色为红、红、蓝，列颜色为红、蓝、蓝、绿。此放置存在吗？若把绿列改红，重构放置。',
+[r'A maximal placement cannot have an empty column, but no row can supply a green token. The green column makes the given labels impossible.',r'After replacing green by red, both row and column color supports are exactly red and blue. Fill precisely the equal-color intersections.',r'The two red rows each meet two red columns, and the blue row meets two blue columns. The unique reconstructed placement has $2\cdot2+1\cdot2=6$ tokens and is maximal.'],
+[r'极大放置不能有空列，但没有行能提供绿棋子，所以原来的绿列标签不可能实现。',r'绿列改红后，行列的颜色集合都恰为红蓝两色，填满且仅填同行列同色的交点。',r'两条红行各与两条红列相交，蓝行与两条蓝列相交，唯一重构有 $2\cdot2+1\cdot2=6$ 枚棋子且确为极大。'],
+'Maximal means that no object can be added; it does not mean that the number already placed is greatest.','极大指不能再加物体，不表示已放物体数最多。','2024II09',[])
+c.add('Factor independent collision chains, then optimize their lengths','分解独立碰撞链并优化链长',
+['Determine which local patterns force a move or make every matching impossible.','Join blocks only when they can compete for the same target; prove distinct chains are independent.','Count each chain by its allowed monotone choice pattern, then factor the target count to minimize construction cost.'],
+['判断哪些局部结构迫使动作、哪些使配对完全不可能。','仅将可能争夺同一目标的区块连成链，并证明不同链独立。','按允许的单调选择模式计算每条链，再分解目标计数以最小化构造代价。'],
+r'Place isolated marked integers so consecutive marks in a chain differ by two. Each mark shifts left or right by one, and target integers must be distinct. How many target sets arise from chains of lengths two and four, placed far apart?',r'若干标记整数构成间隔为二的链，每个标记向左或右移一，目标整数不得重复。相距很远的两条链长度分别为二和四，共能得到多少个目标集合？',
+[r'Inside one chain, a right shift followed by a left shift would target the same missing integer and is forbidden.',r'Therefore the choices are an initial block of left shifts followed by right shifts. A chain of $k$ marks has $k+1$ distinct target sets.',r'The separated chains do not compete, giving $(2+1)(4+1)=15$ target sets.'],
+[r'同一链中，向右后紧接向左会争夺同一个缺失整数，所以禁止。',r'故动作只能先若干个向左、再向右；长度 $k$ 的链产生 $k+1$ 个不同目标集合。',r'分离的两链不争目标，总数为 $(2+1)(4+1)=15$。'],
+'Independence is a statement about disjoint target choices, not merely disjoint starting sets.','独立性要求目标选择互不冲突，仅起始集合不相交还不够。','2026II13',['NT01'],
+[r'For disjoint sets paired by differences one, a consecutive block of three source integers is impossible: the middle source has both possible targets still in the source set. A two-block forces its members outward. Chains are formed by singleton or two-block components separated by one missing integer. A chain with no two-block has $k+1$ images, one with one two-block has one image, and one with two two-blocks has none, because the forced directions would create a right-left collision.',r'If an independent singleton chain contributing factor $q$ costs $q-1$ source elements, replacing a composite factor $gh$ by separate factors costs $g+h-2<gh-1$ for $g,h>1$. Therefore the least cost for a prescribed product is the sum of prime-factor costs, counted with multiplicity; separate chains realize the bound.'],
+[r'对不交且配对差为一的集合，连续三个源整数不可能，因为中间数的两个目标都仍在源集合中。连续二元块的两个数被迫向外移。由间隔一个缺失整数的单元块或二元块形成链：无二元块的链有 $k+1$ 个像，恰一二元块的链只有一个像，两个二元块的链无像，因强制方向最终产生右后左碰撞。',r'若产生因子 $q$ 的独立单元链耗费 $q-1$ 个源元素，将合因子 $gh$ 分成两链只耗费 $g+h-2<gh-1$。故指定乘积的最小代价是按重数相加的各素因子代价，分离各链即可达到。'])
+c.save()

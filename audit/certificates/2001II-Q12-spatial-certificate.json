@@ -1,0 +1,38 @@
+{
+  "method": "Exact rational vertex generation; SAT face normals plus all edge cross products for tetrahedra; coplanar2D SAT for exposed triangles. Zero-width projection overlap is boundary contact, not positive volume/area.",
+  "stages": [
+    {
+      "stage": 1,
+      "attached_tetrahedra": 4,
+      "total_tetrahedra": 5,
+      "boundary_faces": 24,
+      "exact_tetrahedron_pair_checks": 10,
+      "exact_surface_triangle_pair_checks": 276,
+      "positive_volume_overlaps": 0,
+      "positive_area_boundary_overlaps": 0
+    },
+    {
+      "stage": 2,
+      "attached_tetrahedra": 24,
+      "total_tetrahedra": 29,
+      "boundary_faces": 144,
+      "exact_tetrahedron_pair_checks": 396,
+      "exact_surface_triangle_pair_checks": 10296,
+      "positive_volume_overlaps": 0,
+      "positive_area_boundary_overlaps": 0
+    },
+    {
+      "stage": 3,
+      "attached_tetrahedra": 144,
+      "total_tetrahedra": 173,
+      "boundary_faces": 864,
+      "exact_tetrahedron_pair_checks": 14472,
+      "exact_surface_triangle_pair_checks": 372816,
+      "positive_volume_overlaps": 0,
+      "positive_area_boundary_overlaps": 0
+    }
+  ],
+  "relative_volume": "69/32",
+  "answer": 101,
+  "passed": true
+}

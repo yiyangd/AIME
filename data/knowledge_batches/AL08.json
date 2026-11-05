@@ -1,0 +1,886 @@
+{
+  "subtype_id": "AL08",
+  "introduction_en": "Trigonometric algebra becomes reliable when each substitution carries its angle range. Keep complementary and supplementary branches, denominator signs, endpoint exclusions, and the attainability of any equality case.",
+  "introduction_zh": "三角代数是否可靠，取决于每次代换是否保留角的范围。补角分支、分母符号、端点排除及等号可达到性都必须保留。",
+  "prerequisites": [
+    "AL01"
+  ],
+  "methods": [
+    {
+      "method_id": "AL08-M01",
+      "title_en": "Use a bounded sine-cosine substitution",
+      "title_zh": "使用带范围的正余弦代换",
+      "steps_en": [
+        "Translate the original domain into allowed signs of sine and cosine.",
+        "Use $\\sin^2x+\\cos^2x=1$ to reduce the equation to one bounded variable.",
+        "Solve the polynomial or inequality, then restore the unsquared signs and any logarithm domain.",
+        "Use double-angle identities to recover the target rather than solving for the angle itself."
+      ],
+      "steps_zh": [
+        "先将原定义域转为正余弦的允许符号。",
+        "用平方和恒等式将方程化为一个有界变量。",
+        "解多项式或不等式后，恢复未平方符号及对数定义域。",
+        "用倍角公式恢复目标，不必求角本身。"
+      ],
+      "example_en": "If $0<x<\\pi/4$ and $\\sin x\\cos x=1/5$, find $\\sin4x$.",
+      "example_zh": "若 $0<x<\\pi/4$ 且 $\\sin x\\cos x=1/5$，求 $\\sin4x$。",
+      "solution_en": [
+        "The double-angle formula gives $\\sin2x=2/5$.",
+        "Since $0<2x<\\pi/2$, the positive cosine is $\\cos2x=\\sqrt{1-4/25}=\\sqrt{21}/5$.",
+        "Thus $\\sin4x=2\\sin2x\\cos2x=4\\sqrt{21}/25$. The angle interval determined the radical sign."
+      ],
+      "solution_zh": [
+        "倍角公式给出 $\\sin2x=2/5$。",
+        "由 $0<2x<\\pi/2$，余弦取正，故 $\\cos2x=\\sqrt{21}/5$。",
+        "因此 $\\sin4x=4\\sqrt{21}/25$，根式符号由角区间确定。"
+      ],
+      "tip_en": "Squaring removes signs, so every algebraic root must return to the original domain.",
+      "tip_zh": "平方会丢失符号，所有代数根都须返回原定义域检查。",
+      "question_ids": [
+        "AIME-2003-I-Q04",
+        "AIME-2003-I-Q11",
+        "AIME-2006-I-Q08",
+        "AIME-2011-I-Q09",
+        "AIME-2012-II-Q09",
+        "AIME-2023-I-Q08"
+      ],
+      "prerequisites": [
+        "AL04",
+        "GE03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M02",
+      "title_en": "List all trigonometric branches over a finite interval",
+      "title_zh": "在有限区间列全三角分支",
+      "steps_en": [
+        "Convert equal sines or cosines into both difference and supplementary-angle families.",
+        "Intersect each arithmetic angle progression with the stated open or closed interval.",
+        "Count duplicates by solving the simultaneous progression equations.",
+        "For a sine level, treat zero, interior levels, and turning-point extrema separately."
+      ],
+      "steps_zh": [
+        "正弦或余弦相等时，列出差角及补角两类解。",
+        "将每个等差角数列与给定开闭区间相交。",
+        "联立两数列方程，检查重复解。",
+        "数正弦水平交点时，零、内部水平及转折极值须分别处理。"
+      ],
+      "example_en": "How many $x\\in[0,2\\pi)$ satisfy $\\cos3x=\\sin2x$?",
+      "example_zh": "在 $[0,2\\pi)$ 内，有多少个 $x$ 满足 $\\cos3x=\\sin2x$？",
+      "solution_en": [
+        "Write $\\sin2x=\\cos(\\pi/2-2x)$. Equal cosines give $3x=\\pi/2-2x+2k\\pi$ or $3x=-\\pi/2+2x+2k\\pi$.",
+        "The first family is $x=\\pi/10+2k\\pi/5$, with five representatives; the second is $x=-\\pi/2+2k\\pi$, with only $x=3\\pi/2$.",
+        "That second value is not in the first family, since it would require $k=7/2$. Hence there are six distinct solutions."
+      ],
+      "solution_zh": [
+        "将右边写为 $\\cos(\\pi/2-2x)$，余弦相等给出两个差角分支。",
+        "第一支为 $x=\\pi/10+2k\\pi/5$，区间内五个；第二支为 $x=-\\pi/2+2k\\pi$，仅有 $3\\pi/2$。",
+        "后一值若属于第一支，会要求 $k=7/2$，非整数，因此共有六个不同解。"
+      ],
+      "tip_en": "Equal sine does not mean equal angle; the supplementary family is often decisive.",
+      "tip_zh": "正弦相等不代表角相等，补角支往往决定答案。",
+      "question_ids": [
+        "AIME-2002-II-Q10",
+        "AIME-2018-I-Q06",
+        "AIME-2019-II-Q10",
+        "AIME-2024-I-Q12",
+        "AIME-2025-II-Q09"
+      ],
+      "prerequisites": [
+        "NT03",
+        "AL06",
+        "AL07"
+      ],
+      "extensions_en": [
+        "The full rules are $\\sin u=\\sin v$ iff $u-v=2k\\pi$ or $u+v=(2k+1)\\pi$, and $\\cos u=\\cos v$ iff $u=\\pm v+2k\\pi$. For a nested sine, split its inner argument into monotone arcs before counting levels; a zero derivative at an inner extremum can be a tangency rather than two crossings.",
+        "For a periodic sign itinerary under angle multiplication, shifting one itinerary period preserves the full condition. If uniqueness is stated, the reduced angle is fixed by that shift; solve its finite congruence candidates and verify every sign in one complete period."
+      ],
+      "extensions_zh": [
+        "完整规则为：正弦相等当且仅当 $u-v=2k\\pi$ 或 $u+v=(2k+1)\\pi$；余弦相等当且仅当 $u=\\pm v+2k\\pi$。嵌套正弦数水平交点时，先把内部角分成单调弧；内部极值的零导数可能对应相切，而不是两次穿越。",
+        "角倍增下的周期符号轨迹，移动一个信息周期后仍满足完整条件；若已知唯一性，化简后的角须为该移动的不动点。解有限同余候选，再核对一整个符号周期。"
+      ]
+    },
+    {
+      "method_id": "AL08-M03",
+      "title_en": "Factor with sum-to-product before dividing",
+      "title_zh": "先和差化积再考虑相除",
+      "steps_en": [
+        "Pair symmetric angle multiples with sum-to-product identities.",
+        "Look for a common factor or a cubic identity rather than expanding every term.",
+        "Keep the zero-factor branches; divide only after handling them separately.",
+        "Use the triangle angle sum to simplify cyclic expressions when applicable."
+      ],
+      "steps_zh": [
+        "将对称倍角用和差化积配对。",
+        "寻找公共因子或立方恒等式，不必逐项展开。",
+        "保留因子为零的分支，单独处理后才能相除。",
+        "涉及三角形循环式时，利用角和进一步化简。"
+      ],
+      "example_en": "Solve $\\cos x+\\cos3x=\\cos2x$ for $0<x<\\pi$.",
+      "example_zh": "在 $0<x<\\pi$ 内解 $\\cos x+\\cos3x=\\cos2x$。",
+      "solution_en": [
+        "The left side is $2\\cos2x\\cos x$, so the equation factors as $\\cos2x(2\\cos x-1)=0$.",
+        "The first factor gives $x=\\pi/4,3\\pi/4$; the second gives $x=\\pi/3$.",
+        "All three are in the interval and distinct. Dividing at the start by $\\cos2x$ would have lost two roots."
+      ],
+      "solution_zh": [
+        "左边为 $2\\cos2x\\cos x$，所以方程因式分解为 $\\cos2x(2\\cos x-1)=0$。",
+        "第一因子给出 $\\pi/4,3\\pi/4$，第二因子给出 $\\pi/3$。",
+        "三根均在区间内且互异，若一开始除以 $\\cos2x$，就会漏去两根。"
+      ],
+      "tip_en": "A factorized identity exposes exceptional branches that an early division hides.",
+      "tip_zh": "因式分解能揭示过早相除所遮住的特殊分支。",
+      "question_ids": [
+        "AIME-2006-I-Q12",
+        "AIME-2013-II-Q15",
+        "AIME-2014-II-Q12",
+        "AIME-2016-I-Q09",
+        "AIME-2025-II-Q14"
+      ],
+      "prerequisites": [
+        "GE03",
+        "AL07"
+      ],
+      "extensions_en": [
+        "For triangle angles, the sine and cosine laws give $\\sin^2A+\\sin^2B-2\\sin A\\sin B\\cos C=\\sin^2C$. Therefore $\\cos^2A+\\cos^2B+2\\sin A\\sin B\\cos C=2-\\sin^2C$. Also $1-\\sum\\cos3A=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$.",
+        "Products under a fixed angle sum use $2\\cos u\\cos v=\\cos(u-v)+\\cos(u+v)$ and $\\sin u+\\sin v=2\\sin((u+v)/2)\\cos((u-v)/2)$. A formal maximum of the resulting cosine must still satisfy all original side-segment constraints."
+      ],
+      "extensions_zh": [
+        "三角形的正余弦定理给出 $\\sin^2A+\\sin^2B-2\\sin A\\sin B\\cos C=\\sin^2C$，故对应余弦平方循环式等于 $2-\\sin^2C$；另有 $1-\\sum\\cos3A=4\\sin(3A/2)\\sin(3B/2)\\sin(3C/2)$。",
+        "固定角和下的积可用 $2\\cos u\\cos v=\\cos(u-v)+\\cos(u+v)$，和可用正弦和差化积。所得余弦的形式最大值，仍须符合原来的边线段容纳条件。"
+      ]
+    },
+    {
+      "method_id": "AL08-M04",
+      "title_en": "Add tangents with full angle-branch control",
+      "title_zh": "带完整角分支地相加正切",
+      "steps_en": [
+        "Track the ranges of the angles before applying tangent addition.",
+        "Use $\\tan(u+v)=(\\tan u+\\tan v)/(1-\\tan u\\tan v)$ with separate handling of a zero denominator.",
+        "For tangent polygons, express each vertex half-angle as $\\arctan(r/t)$ and impose their actual total.",
+        "Filter algebraic roots using monotonicity of the full angle sum, not merely its tangent."
+      ],
+      "steps_zh": [
+        "使用正切和角前先跟踪各角范围。",
+        "应用和角公式，分母为零时须另行处理。",
+        "切圆多边形中，各顶点半角可写为 $\\arctan(r/t)$，并保留真实总角。",
+        "利用整个角和的单调性筛选代数根，而非只看正切是否相等。"
+      ],
+      "example_en": "Find the exact angle $\\arctan2+\\arctan3$.",
+      "example_zh": "求 $\\arctan2+\\arctan3$ 的精确值。",
+      "solution_en": [
+        "Both angles lie in $(0,\\pi/2)$, so the sum lies in $(0,\\pi)$.",
+        "The tangent is $(2+3)/(1-6)=-1$. The negative tangent places the sum in the second quadrant.",
+        "Therefore the sum is $3\\pi/4$, not the principal arctangent $-\\pi/4$."
+      ],
+      "solution_zh": [
+        "两角均在第一象限，和在零与 $\\pi$ 之间。",
+        "正切为 $(2+3)/(1-6)=-1$，负号说明角和在第二象限。",
+        "因此和为 $3\\pi/4$，而不是主值反正切 $-\\pi/4$。"
+      ],
+      "tip_en": "Tangent identifies an angle only modulo $\\pi$; the original angle total chooses the branch.",
+      "tip_zh": "正切只能确定模 $\\pi$ 的角，须由原角和选择分支。",
+      "question_ids": [
+        "AIME-2000-II-Q10",
+        "AIME-2002-II-Q15",
+        "AIME-2008-I-Q08",
+        "AIME-2009-II-Q14",
+        "AIME-2016-II-Q14",
+        "AIME-2020-II-Q13"
+      ],
+      "prerequisites": [
+        "GE05",
+        "GE06",
+        "AL09"
+      ],
+      "extensions_en": [
+        "A convex $n$-gon has half-angle total $(n-2)\\pi/2$. Each positive term $\\arctan(r/t_i)$ increases strictly with $r$, so the radius satisfying this full total is unique. A root of a tangent equation may instead represent another total differing by $\\pi$.",
+        "For a radical sine recurrence, $\\sqrt{1-\\sin^2\\phi}=|\\cos\\phi|$. Crossing $\\pi/2$ changes the sign of the cosine term and can fold an increasing angle sequence into a short cycle."
+      ],
+      "extensions_zh": [
+        "凸 $n$ 边形半角和为 $(n-2)\\pi/2$。每个正项 $\\arctan(r/t_i)$ 随 $r$ 严格增加，故满足完整角和的半径唯一；正切方程的某个根可能对应相差 $\\pi$ 的另一个总角。",
+        "根式正弦递推中，$\\sqrt{1-\\sin^2\\phi}=|\\cos\\phi|$；跨越直角会改变余弦项符号，将递增形式角折叠成短循环。"
+      ]
+    },
+    {
+      "method_id": "AL08-M05",
+      "title_en": "Use a two-root recurrence for high trigonometric powers",
+      "title_zh": "以二根递推处理高次三角幂",
+      "steps_en": [
+        "Put $u=\\sin^2x,v=\\cos^2x$, so $u+v=1$ and $p=uv\\in[0,1/4]$.",
+        "The power sums satisfy $S_0=2,S_1=u+v$ and $S_n=(u+v)S_{n-1}-uvS_{n-2}$.",
+        "Use the allowed product interval to reject extraneous algebraic roots.",
+        "When irrational coefficients occur, prove the rational/irrational parity pattern by induction before studying last digits."
+      ],
+      "steps_zh": [
+        "令 $u=\\sin^2x,v=\\cos^2x$，则和为一，积在零至四分之一之间。",
+        "幂和满足 $S_n=(u+v)S_{n-1}-uvS_{n-2}$，初值为二及 $u+v$。",
+        "使用乘积允许区间排除多余代数根。",
+        "若递推系数含无理数，先归纳证明有理、无理的下标奇偶规律，再研究末位。"
+      ],
+      "example_en": "If $\\cos2x=1/3$, find $\\sin^8x+\\cos^8x$ using a power-sum recurrence.",
+      "example_zh": "若 $\\cos2x=1/3$，用幂和递推求 $\\sin^8x+\\cos^8x$。",
+      "solution_en": [
+        "Here $u+v=1$ and $uv=(1-\\cos^22x)/4=2/9$.",
+        "The recurrence gives $S_2=1-4/9=5/9$ and $S_3=5/9-2/9=1/3$.",
+        "Thus $S_4=1/3-(2/9)(5/9)=17/81$, the required eighth-power sum."
+      ],
+      "solution_zh": [
+        "此时 $u+v=1,uv=(1-\\cos^22x)/4=2/9$。",
+        "递推得 $S_2=5/9,S_3=1/3$。",
+        "所以 $S_4=1/3-(2/9)(5/9)=17/81$，即所求八次幂和。"
+      ],
+      "tip_en": "An integer subsequence needs an integrality proof before modular arithmetic applies.",
+      "tip_zh": "只有先证明子序列为整数，才能对它作整数同余。",
+      "question_ids": [
+        "AIME-2019-I-Q08",
+        "AIME-2023-II-Q13"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT04"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M06",
+      "title_en": "Telescope trigonometric sums by endpoint differences",
+      "title_zh": "将三角和望远镜化为端点差",
+      "steps_en": [
+        "Use product-to-sum or a cotangent difference to express each summand as a discrete difference.",
+        "Write the finite sum with explicit first and last terms before canceling.",
+        "For alternating samples, pair supplementary angles and account for unpaired endpoints.",
+        "Translate the final sign or integer-value condition into a periodic angle interval."
+      ],
+      "steps_zh": [
+        "用积化和差或余切差，将每项变成离散差分。",
+        "消去之前，明确写出有限和首尾项。",
+        "交替采样时配对互补角，并保留未配对端点。",
+        "把最终符号或整数值要求转为周期角区间。"
+      ],
+      "example_en": "Find a closed form for $\\sum_{k=1}^n\\sin((2k-1)t)$ when $\\sin t\\ne0$.",
+      "example_zh": "当 $\\sin t\\ne0$，求 $\\sum_{k=1}^n\\sin((2k-1)t)$ 的闭式。",
+      "solution_en": [
+        "The identity $2\\sin t\\sin((2k-1)t)=\\cos((2k-2)t)-\\cos(2kt)$ gives a difference.",
+        "Summing cancels every interior cosine, leaving $1-\\cos2nt$.",
+        "Divide by $2\\sin t$ and use $1-\\cos2nt=2\\sin^2nt$. The answer is $\\sin^2(nt)/\\sin t$."
+      ],
+      "solution_zh": [
+        "由积化和差，每项乘 $2\\sin t$ 后为两个相邻偶倍角余弦之差。",
+        "求和时内部余弦全部抵消，只余 $1-\\cos2nt$。",
+        "除以 $2\\sin t$，再用倍角公式，得闭式 $\\sin^2(nt)/\\sin t$。"
+      ],
+      "tip_en": "The identity $\\cot u-\\cot v=\\sin(v-u)/(\\sin u\\sin v)$ is a useful reciprocal-product version.",
+      "tip_zh": "余切差恒等式是处理正弦乘积倒数的有用版本。",
+      "question_ids": [
+        "AIME-2000-II-Q15",
+        "AIME-2008-II-Q08",
+        "AIME-2015-II-Q13"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M07",
+      "title_en": "Pair and double sine products, or use roots of unity",
+      "title_zh": "配对倍角正弦积或使用单位根",
+      "steps_en": [
+        "Pair complementary or supplementary angles to relate two products.",
+        "Apply $2\\sin x\\cos x=\\sin2x$, then match the doubled-angle multiset exactly.",
+        "Cancel only nonzero products and preserve any central factor equal to one.",
+        "Alternatively factor a root-of-unity polynomial at one and take magnitudes."
+      ],
+      "steps_zh": [
+        "将余角或补角配对，建立两个乘积的关系。",
+        "使用正弦倍角公式，准确匹配倍角后的角多重集。",
+        "只约去非零乘积，并保留中央等于一的因子。",
+        "也可在一处计算单位根多项式的因式分解，再取模。"
+      ],
+      "example_en": "Prove $\\sin(\\pi/5)\\sin(2\\pi/5)=\\sqrt5/4$.",
+      "example_zh": "证明 $\\sin(\\pi/5)\\sin(2\\pi/5)=\\sqrt5/4$。",
+      "solution_en": [
+        "Let $\\zeta=e^{2\\pi i/5}$. Evaluating $(x^5-1)/(x-1)$ at one gives $\\prod_{k=1}^4(1-\\zeta^k)=5$.",
+        "Taking magnitudes and using $|1-e^{it}|=2|\\sin(t/2)|$ gives $16\\prod_{k=1}^4\\sin(k\\pi/5)=5$.",
+        "Supplementary sines pair equally, so the product is $(\\sin(\\pi/5)\\sin(2\\pi/5))^2=5/16$. Both factors are positive, giving the stated positive square root."
+      ],
+      "solution_zh": [
+        "令五次单位根为 $\\zeta$，在一处计算 $(x^5-1)/(x-1)$，得四个因子的乘积为五。",
+        "取模并用弦长公式，得到 $16\\prod_{k=1}^4\\sin(k\\pi/5)=5$。",
+        "补角正弦相等，因此所求积的平方为 $5/16$；两因子均正，故取正根 $\\sqrt5/4$。"
+      ],
+      "tip_en": "A product identity depends on the entire angle multiset, not only its number of factors.",
+      "tip_zh": "乘积恒等式依赖整个角多重集，而不只依赖因子数量。",
+      "question_ids": [
+        "AIME-2015-I-Q13"
+      ],
+      "prerequisites": [
+        "AL03",
+        "NT01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M08",
+      "title_en": "Convert multiple-angle metric relations into polynomial identities",
+      "title_zh": "把倍角度量关系转为多项式恒等式",
+      "steps_en": [
+        "Use the geometry to choose one angle and prove its range before algebra.",
+        "Apply the chord formula $2R\\sin(\\phi/2)$ or the sine rule to express length ratios.",
+        "Use double- and triple-angle identities to eliminate the angle in favor of a bounded sine or cosine.",
+        "Check every root against the geometric ordering and any supplementary-angle choices."
+      ],
+      "steps_zh": [
+        "先由几何选择一个角，并证明它的范围。",
+        "使用弦长公式或正弦定理表示长度比。",
+        "以二倍、三倍角恒等式，将角消为有界正弦或余弦。",
+        "按几何顺序及可能的补角选择筛选每个根。"
+      ],
+      "example_en": "Prove $\\sin3t/\\sin t=1+2\\cos2t$ for $0<t<\\pi$.",
+      "example_zh": "对 $0<t<\\pi$，证明 $\\sin3t/\\sin t=1+2\\cos2t$。",
+      "solution_en": [
+        "Addition gives $\\sin3t=\\sin t\\cos2t+\\cos t\\sin2t$.",
+        "Use $\\sin2t=2\\sin t\\cos t$ and divide by the positive $\\sin t$, obtaining $\\cos2t+2\\cos^2t$.",
+        "Since $2\\cos^2t=1+\\cos2t$, this equals $1+2\\cos2t$, also $4\\cos^2t-1$."
+      ],
+      "solution_zh": [
+        "和角公式给出 $\\sin3t=\\sin t\\cos2t+\\cos t\\sin2t$。",
+        "代入二倍角并除以正的 $\\sin t$，得 $\\cos2t+2\\cos^2t$。",
+        "再由余弦倍角恒等式，化为 $1+2\\cos2t=4\\cos^2t-1$。"
+      ],
+      "tip_en": "A chord may correspond to a major consecutive arc; exclude or include that case from the polygon geometry.",
+      "tip_zh": "一条边可能对应连续的优弧，须由多边形构型决定是否排除。",
+      "question_ids": [
+        "AIME-2001-I-Q13",
+        "AIME-2010-II-Q14",
+        "AIME-2011-I-Q14",
+        "AIME-2013-II-Q08",
+        "AIME-2018-I-Q15"
+      ],
+      "prerequisites": [
+        "GE03",
+        "GE04",
+        "GE07"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M09",
+      "title_en": "Encode geometric angles by dot products and equally turning vectors",
+      "title_zh": "用点积及等转角向量表示几何角",
+      "steps_en": [
+        "Write each direction as a unit sine-cosine vector, keeping orientation.",
+        "Use dot products for cosine and determinants for signed sine; a tangent ratio also needs the dot-product sign.",
+        "For a closed equiangular polygon, the weighted direction vectors sum to zero.",
+        "Derive exact special-angle cosines from the closure or root-of-unity relation when needed."
+      ],
+      "steps_zh": [
+        "将方向写成带定向的单位正余弦向量。",
+        "点积给余弦，行列式给有向正弦；求正切还须保留点积符号。",
+        "闭合等角多边形的加权边方向向量和为零。",
+        "需要时由闭合或单位根关系推导特殊角余弦的精确值。"
+      ],
+      "example_en": "Derive exact values for $\\cos72^\\circ$ and $\\cos144^\\circ$ from a regular pentagon.",
+      "example_zh": "由正五边形推导 $\\cos72^\\circ$ 和 $\\cos144^\\circ$ 的精确值。",
+      "solution_en": [
+        "The five equally spaced unit vectors sum to zero. Real parts give $1+2\\cos72^\\circ+2\\cos144^\\circ=0$.",
+        "Put $c=\\cos72^\\circ$ and use $\\cos144^\\circ=2c^2-1$. This gives $4c^2+2c-1=0$.",
+        "Since $72^\\circ$ is acute, $c=(\\sqrt5-1)/4$. Substitution gives $\\cos144^\\circ=-(\\sqrt5+1)/4$."
+      ],
+      "solution_zh": [
+        "五个等距单位方向向量和为零，取实部得 $1+2\\cos72^\\circ+2\\cos144^\\circ=0$。",
+        "令 $c=\\cos72^\\circ$，用倍角公式得 $4c^2+2c-1=0$。",
+        "由七十二度为锐角，取正根 $c=(\\sqrt5-1)/4$，继而得 $\\cos144^\\circ=-(\\sqrt5+1)/4$。"
+      ],
+      "tip_en": "For rolling, ground-frame spin includes rotation of the line of centers as well as relative contact rotation.",
+      "tip_zh": "滚动的对地自转还包括圆心连线的转动，不能只算相对接触转角。",
+      "question_ids": [
+        "AIME-2005-II-Q12",
+        "AIME-2014-I-Q10",
+        "AIME-2026-I-Q14"
+      ],
+      "prerequisites": [
+        "GE07",
+        "AL03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M10",
+      "title_en": "Linearize complementary radicals with sine squares",
+      "title_zh": "以正弦平方线性化互补根式",
+      "steps_en": [
+        "Use the real-radical domain to bound each variable, then put it equal to a scaled sine square.",
+        "Choose angles in $[0,\\pi/2]$ so all square roots have the intended positive signs.",
+        "The paired radicals become a sine of an angle sum.",
+        "List both supplementary pair-sum branches, solve their linear angle equations, and reject those outside the allowed range."
+      ],
+      "steps_zh": [
+        "由实根式定义域给变量界，再令其等于适当倍数的正弦平方。",
+        "选角在第一象限闭区间内，保证所有根式取正确非负符号。",
+        "成对互补根式会变成角和的正弦。",
+        "列出角和的两种补角支，解线性角方程，并排除超范围分支。"
+      ],
+      "example_en": "For $0\\le x,y\\le1$, characterize solutions of $\\sqrt{x(1-y)}+\\sqrt{y(1-x)}=1$.",
+      "example_zh": "对 $0\\le x,y\\le1$，刻画 $\\sqrt{x(1-y)}+\\sqrt{y(1-x)}=1$ 的全部解。",
+      "solution_en": [
+        "Put $x=\\sin^2a,y=\\sin^2b$ with $a,b\\in[0,\\pi/2]$. The left side is $\\sin(a+b)$.",
+        "As $a+b\\in[0,\\pi]$, equality to one requires $a+b=\\pi/2$.",
+        "Thus $y=\\cos^2a=1-x$. Conversely every such pair satisfies the original equation, so the complete solution is $x+y=1$ in the given square."
+      ],
+      "solution_zh": [
+        "令 $x=\\sin^2a,y=\\sin^2b$，角均在零至直角之间，左边为 $\\sin(a+b)$。",
+        "角和在零至 $\\pi$ 之间，正弦为一只能是角和为直角。",
+        "所以 $y=1-x$；反之该关系确满足原方程，故全部解为给定方形内的 $x+y=1$。"
+      ],
+      "tip_en": "The angle range is what makes the radical identity exact without extra absolute values.",
+      "tip_zh": "角范围保证根式恒等式准确成立，不额外产生绝对值。",
+      "question_ids": [
+        "AIME-2022-I-Q15"
+      ],
+      "prerequisites": [
+        "AL01"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M11",
+      "title_en": "Join sine and cosine series into a complex geometric series",
+      "title_zh": "将正余弦级数合成复等比级数",
+      "steps_en": [
+        "Express phase shifts through powers of $e^{it}$ or $ie^{it}$.",
+        "Combine the two real series as real and imaginary parts of one absolutely convergent geometric series.",
+        "Sum it exactly, rationalize once, then read both parts.",
+        "Restore quadrant and denominator conditions after any squared equation."
+      ],
+      "steps_zh": [
+        "以 $e^{it}$ 或 $ie^{it}$ 的幂表示相位变化。",
+        "将两条实级数合为一个绝对收敛复等比级数的实虚部。",
+        "精确求和并统一有理化，再读出两部分。",
+        "若后续平方求解，须恢复象限及分母条件。"
+      ],
+      "example_en": "Find $\\sum_{k=1}^{\\infty}3^{-k}\\sin(k\\pi/3)$.",
+      "example_zh": "求 $\\sum_{k=1}^{\\infty}3^{-k}\\sin(k\\pi/3)$。",
+      "solution_en": [
+        "The series is the imaginary part of $\\sum_{k\\ge1}(e^{i\\pi/3}/3)^k$, whose ratio modulus is $1/3$.",
+        "For general $r<1$, that imaginary part is $r\\sin t/(1-2r\\cos t+r^2)$, by rationalizing $re^{it}/(1-re^{it})$.",
+        "With $r=1/3,t=\\pi/3$, it is $(\\sqrt3/6)/(7/9)=3\\sqrt3/14$."
+      ],
+      "solution_zh": [
+        "所求为公比 $e^{i\\pi/3}/3$ 的复等比级数虚部，公比模小于一。",
+        "将闭式有理化，一般虚部为 $r\\sin t/(1-2r\\cos t+r^2)$。",
+        "代入 $r=1/3,t=\\pi/3$，得 $(\\sqrt3/6)/(7/9)=3\\sqrt3/14$。"
+      ],
+      "tip_en": "Absolute convergence permits joining the series; it should be stated before rearranging.",
+      "tip_zh": "应先说明绝对收敛，再合并或重排级数。",
+      "question_ids": [
+        "AIME-2013-I-Q14"
+      ],
+      "prerequisites": [
+        "AL03",
+        "AL05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL08-M12",
+      "title_en": "Check compatibility of simultaneous trigonometric maxima",
+      "title_zh": "检查多个三角项能否同时取最大",
+      "steps_en": [
+        "If a sum attains the sum of individual upper bounds, every summand must attain its own bound.",
+        "Translate those equalities to angular congruences and test compatibility using gcd or Bezout.",
+        "If the bounds are incompatible, reduce the actual expression using an identity and optimize on its true range.",
+        "Exhibit an angle realizing the final compatible equality case."
+      ],
+      "steps_zh": [
+        "和要达到各项上界之和，每项必须同时达到自身上界。",
+        "将取等条件转为角同余，并用最大公因数或贝祖检验相容性。",
+        "若不相容，利用恒等式在真实范围内优化原表达式。",
+        "给出实现最后取等条件的角。"
+      ],
+      "example_en": "Find the maximum of $\\sin2x+\\cos4x$ for real $x$.",
+      "example_zh": "求实数域上 $\\sin2x+\\cos4x$ 的最大值。",
+      "solution_en": [
+        "The separate upper bounds sum to two, but $\\sin2x=1$ forces $\\cos4x=-1$, so they cannot both attain one.",
+        "Put $u=\\sin2x\\in[-1,1]$. Then the expression is $1+u-2u^2=9/8-2(u-1/4)^2$.",
+        "The value $u=1/4$ is attainable by a real angle, so the exact maximum is $9/8$."
+      ],
+      "solution_zh": [
+        "各项上界相加为二，但 $\\sin2x=1$ 会迫使 $\\cos4x=-1$，不能同时为一。",
+        "令 $u=\\sin2x\\in[-1,1]$，表达式为 $1+u-2u^2=9/8-2(u-1/4)^2$。",
+        "实角可实现 $u=1/4$，所以准确最大值为 $9/8$。"
+      ],
+      "tip_en": "An algebraic upper bound is not a maximum until all its equality requirements are compatible.",
+      "tip_zh": "只有全部取等要求相容，代数上界才能称为最大值。",
+      "question_ids": [
+        "AIME-2021-I-Q07"
+      ],
+      "prerequisites": [
+        "NT02",
+        "AL07"
+      ],
+      "extensions_en": [
+        "For positive frequencies $m=gu,n=gv$ with coprime $u,v$, simultaneous $\\sin(mx)=\\sin(nx)=1$ requires $v(4a+1)=u(4b+1)$. Bezout shows integer $a,b$ exist exactly when $u\\equiv v\\pmod4$, which forces both odd. This is stronger than merely requiring the two frequencies odd."
+      ],
+      "extensions_zh": [
+        "将正频率写为 $m=gu,n=gv$，其中 $u,v$ 互质。同时正弦为一要求 $v(4a+1)=u(4b+1)$。由贝祖，整数 $a,b$ 存在当且仅当 $u\\equiv v\\pmod4$，从而两者均奇；仅要求两频率为奇数还不够。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-II-Q15",
+    "AIME-2002-II-Q10",
+    "AIME-2006-I-Q12",
+    "AIME-2008-I-Q08",
+    "AIME-2008-II-Q08",
+    "AIME-2012-II-Q09",
+    "AIME-2013-II-Q15",
+    "AIME-2014-II-Q12",
+    "AIME-2015-I-Q13",
+    "AIME-2015-II-Q13",
+    "AIME-2021-I-Q07",
+    "AIME-2022-I-Q15",
+    "AIME-2023-II-Q13",
+    "AIME-2025-II-Q09"
+  ],
+  "coverage_by_question": {
+    "AIME-2003-I-Q04": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2003-I-Q11": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": [
+        "PS03"
+      ]
+    },
+    "AIME-2006-I-Q08": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": [
+        "GE02"
+      ]
+    },
+    "AIME-2011-I-Q09": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": [
+        "AL04"
+      ]
+    },
+    "AIME-2012-II-Q09": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2023-I-Q08": {
+      "method_ids": [
+        "AL08-M01"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2002-II-Q10": {
+      "method_ids": [
+        "AL08-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2018-I-Q06": {
+      "method_ids": [
+        "AL08-M02"
+      ],
+      "prerequisites": [
+        "AL03",
+        "NT03"
+      ]
+    },
+    "AIME-2019-II-Q10": {
+      "method_ids": [
+        "AL08-M02"
+      ],
+      "prerequisites": [
+        "AL09",
+        "NT03"
+      ]
+    },
+    "AIME-2024-I-Q12": {
+      "method_ids": [
+        "AL08-M02"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL07",
+        "CO06"
+      ]
+    },
+    "AIME-2025-II-Q09": {
+      "method_ids": [
+        "AL08-M02"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2006-I-Q12": {
+      "method_ids": [
+        "AL08-M03"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2013-II-Q15": {
+      "method_ids": [
+        "AL08-M03"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2014-II-Q12": {
+      "method_ids": [
+        "AL08-M03"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2016-I-Q09": {
+      "method_ids": [
+        "AL08-M03"
+      ],
+      "prerequisites": [
+        "AL07",
+        "GE03",
+        "GE07"
+      ]
+    },
+    "AIME-2025-II-Q14": {
+      "method_ids": [
+        "AL08-M03"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE03"
+      ]
+    },
+    "AIME-2000-II-Q10": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": [
+        "GE06"
+      ]
+    },
+    "AIME-2002-II-Q15": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": [
+        "AL02",
+        "GE06"
+      ]
+    },
+    "AIME-2008-I-Q08": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2009-II-Q14": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": [
+        "AL09"
+      ]
+    },
+    "AIME-2016-II-Q14": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": [
+        "GE09",
+        "GE10"
+      ]
+    },
+    "AIME-2020-II-Q13": {
+      "method_ids": [
+        "AL08-M04"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE06"
+      ]
+    },
+    "AIME-2019-I-Q08": {
+      "method_ids": [
+        "AL08-M05"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2023-II-Q13": {
+      "method_ids": [
+        "AL08-M05"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT04"
+      ]
+    },
+    "AIME-2000-II-Q15": {
+      "method_ids": [
+        "AL08-M06"
+      ],
+      "prerequisites": [
+        "AL05"
+      ]
+    },
+    "AIME-2008-II-Q08": {
+      "method_ids": [
+        "AL08-M06"
+      ],
+      "prerequisites": [
+        "AL05",
+        "NT03"
+      ]
+    },
+    "AIME-2015-II-Q13": {
+      "method_ids": [
+        "AL08-M06"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL06"
+      ]
+    },
+    "AIME-2015-I-Q13": {
+      "method_ids": [
+        "AL08-M07"
+      ],
+      "prerequisites": [
+        "NT01"
+      ]
+    },
+    "AIME-2001-I-Q13": {
+      "method_ids": [
+        "AL08-M08"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2010-II-Q14": {
+      "method_ids": [
+        "AL08-M08"
+      ],
+      "prerequisites": [
+        "GE03"
+      ]
+    },
+    "AIME-2011-I-Q14": {
+      "method_ids": [
+        "AL08-M08"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2013-II-Q08": {
+      "method_ids": [
+        "AL08-M08"
+      ],
+      "prerequisites": [
+        "GE04"
+      ]
+    },
+    "AIME-2018-I-Q15": {
+      "method_ids": [
+        "AL08-M08"
+      ],
+      "prerequisites": [
+        "GE02",
+        "GE04"
+      ]
+    },
+    "AIME-2005-II-Q12": {
+      "method_ids": [
+        "AL08-M09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2014-I-Q10": {
+      "method_ids": [
+        "AL08-M09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2026-I-Q14": {
+      "method_ids": [
+        "AL08-M09"
+      ],
+      "prerequisites": [
+        "GE07"
+      ]
+    },
+    "AIME-2022-I-Q15": {
+      "method_ids": [
+        "AL08-M10"
+      ],
+      "prerequisites": [
+        "AL01"
+      ]
+    },
+    "AIME-2013-I-Q14": {
+      "method_ids": [
+        "AL08-M11"
+      ],
+      "prerequisites": [
+        "AL03",
+        "AL05"
+      ]
+    },
+    "AIME-2021-I-Q07": {
+      "method_ids": [
+        "AL08-M12"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

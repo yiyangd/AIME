@@ -1,0 +1,741 @@
+[
+  {
+    "question_id": "AIME-2018-II-Q01",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Let $AB=x$. Paul covers four-fifths of the initial gap $1800-x$ before meeting Eve, then retraces this distance. His total is $8(1800-x)/5$.",
+      "reason_zh": "设 $AB=x$。相遇前保罗走完初始间距的五分之四，再原路返回，总路程为 $8(1800-x)/5$。"
+    },
+    "secondary": [],
+    "statement_en": "Points $A,B,C$ lie in order on a straight path with $AC=1800$ m. Runners start together: Ina at $A$ toward $C$, Paul at $B$ toward $C$, Eve at $C$ toward $A$, with speed ratio Ina:Paul:Eve $=2:4:1$. Paul turns back when he meets Eve and returns to $B$ exactly as Ina first reaches it. Find $AB$.",
+    "statement_zh": "直路上 $A,B,C$ 依次排列，$AC=1800$ 米。三人同时出发，伊娜从 $A$ 向 $C$、保罗从 $B$ 向 $C$、伊芙从 $C$ 向 $A$，速度比为 $2:4:1$。保罗遇到伊芙后折返，恰与伊娜首次同时到达 $B$。求 $AB$。",
+    "answer": 800,
+    "solution_en": [
+      "Let $AB=x$. Paul covers four-fifths of the initial gap $1800-x$ before meeting Eve, then retraces this distance. His total is $8(1800-x)/5$.",
+      "In the same time Ina covers $x$, while Paul runs twice as fast, so $8(1800-x)/5=2x$. Solving gives $x=800$ m."
+    ],
+    "solution_zh": [
+      "设 $AB=x$。相遇前保罗走完初始间距的五分之四，再原路返回，总路程为 $8(1800-x)/5$。",
+      "同时间伊娜走 $x$，保罗为其两倍，故 $8(1800-x)/5=2x$，解得八百米。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/1",
+    "method_chain": [
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q02",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT04",
+      "reason_en": "The initial terms are $2,5,8,5,6,10,7,4,7,6,2,5,8$. The consecutive triple at indices ten through twelve repeats the initial triple.",
+      "reason_zh": "初项依次为 $2,5,8,5,6,10,7,4,7,6,2,5,8$，第十至十二项重复初始三元状态。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "The initial terms are $2,5,8,5,6,10,7,4,7,6,2,5,8$. The consecutive triple at indices ten through twelve repeats the initial triple.",
+        "reason_zh": "初项依次为 $2,5,8,5,6,10,7,4,7,6,2,5,8$，第十至十二项重复初始三元状态。"
+      }
+    ],
+    "statement_en": "Let $a_0=2,a_1=5,a_2=8$. For $n>2$, let $a_n$ be the least nonnegative residue of $4(a_{n-1}+a_{n-2}+a_{n-3})$ modulo eleven. Find $a_{2018}a_{2020}a_{2022}$.",
+    "statement_zh": "令 $a_0=2,a_1=5,a_2=8$。$n>2$ 时，$a_n$ 为 $4(a_{n-1}+a_{n-2}+a_{n-3})$ 模十一的最小非负余数。求 $a_{2018}a_{2020}a_{2022}$。",
+    "answer": 112,
+    "solution_en": [
+      "The initial terms are $2,5,8,5,6,10,7,4,7,6,2,5,8$. The consecutive triple at indices ten through twelve repeats the initial triple.",
+      "Because three terms determine every future term, this proves period ten. The requested terms are $a_8=7,a_0=2,a_2=8$, whose product is $112$."
+    ],
+    "solution_zh": [
+      "初项依次为 $2,5,8,5,6,10,7,4,7,6,2,5,8$，第十至十二项重复初始三元状态。",
+      "三项唯一确定后续，所以周期为十。目标三项为七、二、八，乘积一百一十二。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/2",
+    "method_chain": [
+      "Orders, modular powers & cycles",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q03",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT06",
+      "reason_en": "We need $b\\ge8$, $3b+6$ a square, and $2b+7$ a cube. The last expression is odd and below $2007$, so its positive odd cube possibilities give $b=10,59,168,361,662$ after discarding the invalid negative case.",
+      "reason_zh": "数字合法要求 $b\\ge8$，并需 $3b+6$ 为平方、$2b+7$ 为立方。后者为小于二千零七的奇数，枚举奇立方得正底数十、五十九、一百六十八、三百六十一、六百六十二。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "The corresponding square candidates are $36,183,510,1089,1992$. Only $36=6^2$ and $1089=33^2$ qualify, at bases ten and $361$.",
+        "reason_zh": "对应平方候选为三十六、一百八十三、五百一十、一千零八十九、一千九百九十二，仅第一、四个为平方。"
+      }
+    ],
+    "statement_en": "Find the sum of integer bases $b<1000$ for which $\\overline{36}_b$ is a square and $\\overline{27}_b$ is a cube. Digits must be valid in base $b$.",
+    "statement_zh": "求小于一千的整数进位制底数 $b$ 之和，使 $\\overline{36}_b$ 为完全平方、$\\overline{27}_b$ 为完全立方，各数字须合法。",
+    "answer": 371,
+    "solution_en": [
+      "We need $b\\ge8$, $3b+6$ a square, and $2b+7$ a cube. The last expression is odd and below $2007$, so its positive odd cube possibilities give $b=10,59,168,361,662$ after discarding the invalid negative case.",
+      "The corresponding square candidates are $36,183,510,1089,1992$. Only $36=6^2$ and $1089=33^2$ qualify, at bases ten and $361$.",
+      "The sum is $371$."
+    ],
+    "solution_zh": [
+      "数字合法要求 $b\\ge8$，并需 $3b+6$ 为平方、$2b+7$ 为立方。后者为小于二千零七的奇数，枚举奇立方得正底数十、五十九、一百六十八、三百六十一、六百六十二。",
+      "对应平方候选为三十六、一百八十三、五百一十、一千零八十九、一千九百九十二，仅第一、四个为平方。",
+      "故底数和为三百七十一。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/3",
+    "method_chain": [
+      "Number bases, digits & palindromes",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q04",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Use coordinates $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$. They give the required alternating lengths and exterior turns of forty-five degrees.",
+      "reason_zh": "可取坐标 $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$，满足交替边长及四十五度外转角。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Lines $AI,RN$ meet $CO$ at $Y=(4/3,0),Z=(5/3,0)$ and intersect at $W=(3/2,-1/2)$. The region consists of four congruent corner triangles like $CAY$ and two central ones like $YZW$.",
+        "reason_zh": "$AI,RN$ 与 $CO$ 分别交于 $Y=(4/3,0),Z=(5/3,0)$，两线交于 $W=(3/2,-1/2)$。六区域为四个如 $CAY$ 的角三角形和两个如 $YZW$ 的中央小三角形。"
+      }
+    ],
+    "statement_en": "A convex equiangular octagon has consecutive labels $CAROLINE$, with $CA=RO=LI=NE=\\sqrt2$ and the other four sides one. Reconnect the same vertices in order $CORNELIA$, forming six bounded nonoverlapping triangles. If their total area is reduced $a/b$, find $a+b$.",
+    "statement_zh": "凸等角八边形按 $CAROLINE$ 排列，$CA=RO=LI=NE=\\sqrt2$，其余四边均为一。将原顶点改按 $CORNELIA$ 顺序连接，围成六个不重叠的有界三角形区域。若总面积为最简分数 $a/b$，求 $a+b$。",
+    "answer": 23,
+    "solution_en": [
+      "Use coordinates $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$. They give the required alternating lengths and exterior turns of forty-five degrees.",
+      "Lines $AI,RN$ meet $CO$ at $Y=(4/3,0),Z=(5/3,0)$ and intersect at $W=(3/2,-1/2)$. The region consists of four congruent corner triangles like $CAY$ and two central ones like $YZW$.",
+      "The former have area $(4/3)\\cdot1/2=2/3$; the latter $(1/3)(1/2)/2=1/12$. Hence total area $4(2/3)+2(1/12)=17/6$, giving $23$."
+    ],
+    "solution_zh": [
+      "可取坐标 $C=(0,0),A=(1,1),R=(2,1),O=(3,0),L=(3,-1),I=(2,-2),N=(1,-2),E=(0,-1)$，满足交替边长及四十五度外转角。",
+      "$AI,RN$ 与 $CO$ 分别交于 $Y=(4/3,0),Z=(5/3,0)$，两线交于 $W=(3/2,-1/2)$。六区域为四个如 $CAY$ 的角三角形和两个如 $YZW$ 的中央小三角形。",
+      "两类面积分别为三分之二、十二分之一，合计 $17/6$，答案二十三。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/4",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q05",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Multiplying all equations gives $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$. Thus $xyz=\\pm240(5+3i)$.",
+      "reason_zh": "三式相乘得 $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$，所以 $xyz=\\pm240(5+3i)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Multiplying all equations gives $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$. Thus $xyz=\\pm240(5+3i)$.",
+        "reason_zh": "三式相乘得 $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$，所以 $xyz=\\pm240(5+3i)$。"
+      }
+    ],
+    "statement_en": "Complex numbers satisfy $xy=-80-320i,yz=60,zx=-96+24i$. If $x+y+z=a+bi$ with real $a,b$, find $a^2+b^2$.",
+    "statement_zh": "复数满足 $xy=-80-320i,yz=60,zx=-96+24i$。若 $x+y+z=a+bi$，$a,b$ 为实数，求 $a^2+b^2$。",
+    "answer": 74,
+    "solution_en": [
+      "Multiplying all equations gives $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$. Thus $xyz=\\pm240(5+3i)$.",
+      "Dividing by the three given products gives matching-sign triples $x=\\pm(20+12i),y=\\pm(-10-10i),z=\\pm(-3+3i)$. Both signs satisfy the products.",
+      "The sum is $\\pm(7+5i)$, whose squared modulus is $74$."
+    ],
+    "solution_zh": [
+      "三式相乘得 $(xyz)^2=240^2(16+30i)=240^2(5+3i)^2$，所以 $xyz=\\pm240(5+3i)$。",
+      "分别除以给定两两积，得到同号三元组 $x=\\pm(20+12i),y=\\pm(-10-10i),z=\\pm(-3+3i)$，两组均满足原式。",
+      "总和为 $\\pm(7+5i)$，模平方为七十四。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/5",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q06",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL02",
+      "reason_en": "The polynomial factors as $(x-1)(x+2)[x^2+(2a-1)x+1]$. Only the quadratic can have nonreal roots.",
+      "reason_zh": "因式分解为 $(x-1)(x+2)[x^2+(2a-1)x+1]$，只需判断二次因子。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS03",
+        "reason_en": "Its discriminant is nonnegative exactly when $|2a-1|\\ge2$, or $a\\le-1/2$ or $a\\ge3/2$. This excludes an interval of length two from a sample interval of length thirty-eight.",
+        "reason_zh": "判别式非负当且仅当 $a\\le-1/2$ 或 $a\\ge3/2$，即从长三十八的抽样区间扣去长二的开区间。"
+      }
+    ],
+    "statement_en": "Choose real $a$ uniformly from $[-20,18]$. The probability that all four roots of $x^4+2ax^3+(2a-2)x^2+(-4a+3)x-2$ are real, counting multiplicity, is reduced $m/n$. Find $m+n$.",
+    "statement_zh": "在 $[-20,18]$ 均匀选实数 $a$，四次式 $x^4+2ax^3+(2a-2)x^2+(-4a+3)x-2$ 的四根全部为实数（计重数）的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 37,
+    "solution_en": [
+      "The polynomial factors as $(x-1)(x+2)[x^2+(2a-1)x+1]$. Only the quadratic can have nonreal roots.",
+      "Its discriminant is nonnegative exactly when $|2a-1|\\ge2$, or $a\\le-1/2$ or $a\\ge3/2$. This excludes an interval of length two from a sample interval of length thirty-eight.",
+      "The probability is $36/38=18/19$, giving $37$."
+    ],
+    "solution_zh": [
+      "因式分解为 $(x-1)(x+2)[x^2+(2a-1)x+1]$，只需判断二次因子。",
+      "判别式非负当且仅当 $a\\le-1/2$ 或 $a\\ge3/2$，即从长三十八的抽样区间扣去长二的开区间。",
+      "概率为 $18/19$，答案三十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/6",
+    "method_chain": [
+      "Polynomials & Vieta relations",
+      "Geometric probability"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q07",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE01",
+      "reason_en": "The first $k$ bands form a similar triangle of area ratio $k/2450$. Thus $P_kQ_k=5\\sqrt3\\sqrt{k/2450}=\\sqrt{6k}/14$.",
+      "reason_zh": "前 $k$ 块组成相似三角形，面积比为 $k/2450$，所以截线长为 $\\sqrt{6k}/14$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT01",
+        "reason_en": "An integer has rational square root exactly when it is a perfect square. The condition $6k$ square is equivalent to $k=6j^2$ for integer $j\\ge1$, by prime-exponent parity.",
+        "reason_zh": "整数的平方根为有理数当且仅当其为平方，素因子指数奇偶条件使 $6k$ 为平方等价于 $k=6j^2$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=9,AC=12,BC=5\\sqrt3$. Parallel cuts $P_kQ_k\\parallel BC$ divide it into $2450$ equal-area bands, with $P_0=Q_0=A,P_{2450}=B,Q_{2450}=C$. Count rational lengths among $P_kQ_k$, $1\\le k\\le2450$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=9,AC=12,BC=5\\sqrt3$，用平行于 $BC$ 的 $P_kQ_k$ 将其分成二千四百五十块等面积区域，$P_0=Q_0=A,P_{2450}=B,Q_{2450}=C$。求 $1\\le k\\le2450$ 的截线中长度为有理数的个数。",
+    "answer": 20,
+    "solution_en": [
+      "The first $k$ bands form a similar triangle of area ratio $k/2450$. Thus $P_kQ_k=5\\sqrt3\\sqrt{k/2450}=\\sqrt{6k}/14$.",
+      "An integer has rational square root exactly when it is a perfect square. The condition $6k$ square is equivalent to $k=6j^2$ for integer $j\\ge1$, by prime-exponent parity.",
+      "As $6j^2\\le2450$, one has $1\\le j\\le20$. The count is $20$."
+    ],
+    "solution_zh": [
+      "前 $k$ 块组成相似三角形，面积比为 $k/2450$，所以截线长为 $\\sqrt{6k}/14$。",
+      "整数的平方根为有理数当且仅当其为平方，素因子指数奇偶条件使 $6k$ 为平方等价于 $k=6j^2$。",
+      "由 $6j^2\\le2450$，正整数 $j$ 为一至二十，共二十条。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/7",
+    "method_chain": [
+      "Angles, similarity & parallel lines",
+      "Prime factorization & valuations"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q08",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "For either coordinate, a multiset of jumps totaling four is of type $(1,1,1,1)$, $(1,1,2)$, or $(2,2)$. Choose one type independently for horizontal and vertical jumps, and interleave their distinct directional steps.",
+      "reason_zh": "每个坐标的跳长多重集只能为 $(1,1,1,1),(1,1,2),(2,2)$。横纵各选一种，再对各方向步法作多重排列。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO03",
+        "reason_en": "For either coordinate, a multiset of jumps totaling four is of type $(1,1,1,1)$, $(1,1,2)$, or $(2,2)$. Choose one type independently for horizontal and vertical jumps, and interleave their distinct directional steps.",
+        "reason_zh": "每个坐标的跳长多重集只能为 $(1,1,1,1),(1,1,2),(2,2)$。横纵各选一种，再对各方向步法作多重排列。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "The symmetric table of multinomial counts for these three types is $\\begin{pmatrix}70&105&15\\\\105&180&30\\\\15&30&6\\end{pmatrix}$. For example the middle entry is $6!/(2!2!)=180$, since the two horizontal singles and two vertical singles are indistinguishable within each direction.",
+        "reason_zh": "三类组合的对称计数表为 $\\begin{pmatrix}70&105&15\\\\105&180&30\\\\15&30&6\\end{pmatrix}$。例如中央项为 $6!/(2!2!)=180$。"
+      }
+    ],
+    "statement_en": "A frog starts at $(0,0)$ and may move one or two units east or one or two units north each jump. Count ordered jump sequences ending at $(4,4)$.",
+    "statement_zh": "青蛙从原点出发，每次可向东一或二单位，或向北一或二单位。求到达 $(4,4)$ 的有序跳跃序列数。",
+    "answer": 556,
+    "solution_en": [
+      "For either coordinate, a multiset of jumps totaling four is of type $(1,1,1,1)$, $(1,1,2)$, or $(2,2)$. Choose one type independently for horizontal and vertical jumps, and interleave their distinct directional steps.",
+      "The symmetric table of multinomial counts for these three types is $\\begin{pmatrix}70&105&15\\\\105&180&30\\\\15&30&6\\end{pmatrix}$. For example the middle entry is $6!/(2!2!)=180$, since the two horizontal singles and two vertical singles are indistinguishable within each direction.",
+      "Summing all entries gives $556$."
+    ],
+    "solution_zh": [
+      "每个坐标的跳长多重集只能为 $(1,1,1,1),(1,1,2),(2,2)$。横纵各选一种，再对各方向步法作多重排列。",
+      "三类组合的对称计数表为 $\\begin{pmatrix}70&105&15\\\\105&180&30\\\\15&30&6\\end{pmatrix}$。例如中央项为 $6!/(2!2!)=180$。",
+      "九项相加为五百五十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/8",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Compositions, partitions & generating functions",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q09",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "For each fan triangle $JVW$, its centroid is two-thirds of the way from $J$ to the midpoint of $VW$. Hence the centroid polygon is a homothety of ratio $2/3$ of the polygon of midpoints of $AB,BC,\\ldots,GH$.",
+      "reason_zh": "每个扇形三角形 $JVW$ 的重心位于从 $J$ 到 $VW$ 中点线段的三分之二处。所以重心多边形是七条对应边中点多边形的相似比三分之二的位似像。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Those midpoints are $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$. Split their heptagon by vertical lines at $x=4,27/2,23$.",
+        "reason_zh": "这些中点依次为 $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$，用 $x=4,27/2,23$ 的竖线分割。"
+      }
+    ],
+    "statement_en": "From $[0,27]\\times[0,23]$, remove each corner right triangle with horizontal leg eight and vertical leg six, obtaining octagon $ABCDEFGH$ starting at $A=(0,6)$ and $B=(8,0)$ around the boundary. Let $J$ be the midpoint of $AH$. Fan-triangulate from $J$ into seven triangles using the other six vertices $B$ through $G$. Find the area of their centroid polygon.",
+    "statement_zh": "从矩形 $[0,27]\\times[0,23]$ 各角去掉水平直角边八、竖直直角边六的三角形，得到依次以 $A=(0,6),B=(8,0)$ 开始的八边形 $ABCDEFGH$。$J$ 为 $AH$ 中点，从 $J$ 连至 $B$ 至 $G$ 将区域分为七个三角形，求各重心组成多边形的面积。",
+    "answer": 184,
+    "solution_en": [
+      "For each fan triangle $JVW$, its centroid is two-thirds of the way from $J$ to the midpoint of $VW$. Hence the centroid polygon is a homothety of ratio $2/3$ of the polygon of midpoints of $AB,BC,\\ldots,GH$.",
+      "Those midpoints are $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$. Split their heptagon by vertical lines at $x=4,27/2,23$.",
+      "Two trapezoids of heights $19/2$ and parallel lengths seventeen, twenty-three contribute $380$; the right triangle at the right contributes $17\\cdot4/2=34$. Thus midpoint-polygon area is $414$.",
+      "The target area is $(4/9)414=184$."
+    ],
+    "solution_zh": [
+      "每个扇形三角形 $JVW$ 的重心位于从 $J$ 到 $VW$ 中点线段的三分之二处。所以重心多边形是七条对应边中点多边形的相似比三分之二的位似像。",
+      "这些中点依次为 $(4,3),(27/2,0),(23,3),(27,23/2),(23,20),(27/2,23),(4,20)$，用 $x=4,27/2,23$ 的竖线分割。",
+      "两块平行边十七、二十三且高 $19/2$ 的梯形贡献三百八十，右端三角形贡献三十四，中点多边形面积四百一十四。",
+      "目标面积为其九分之四，即一百八十四。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/9",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Areas & area ratios"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q10",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Every second iterate must be a fixed point. Partition the elements into fixed points, nonfixed elements mapping directly to fixed points, and the remaining elements, which must map to that middle level.",
+      "reason_zh": "每个第二次像必须是不动点。将元素分成不动点、直接映入不动点的非不动点中层，以及其余必须映入中层的点。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO02",
+        "reason_en": "With $i\\ge1$ fixed points and $j$ middle elements, choose levels in $\\binom5i\\binom{5-i}j$ ways; their images have $i^j j^{5-i-j}$ possibilities. This categorization is intrinsic, preventing double counting.",
+        "reason_zh": "若前两层大小为 $i\\ge1,j$，选层有 $\\binom5i\\binom{5-i}j$ 种，指定像有 $i^j j^{5-i-j}$ 种。分层由函数本身唯一确定，不会重复。"
+      }
+    ],
+    "statement_en": "Count functions on a labeled five-element set satisfying $f(f(x))=f(f(f(x)))$ for every element $x$.",
+    "statement_zh": "求固定标号五元集合到自身的函数数，使对每个 $x$ 均有 $f(f(x))=f(f(f(x)))$。",
+    "answer": 756,
+    "solution_en": [
+      "Every second iterate must be a fixed point. Partition the elements into fixed points, nonfixed elements mapping directly to fixed points, and the remaining elements, which must map to that middle level.",
+      "With $i\\ge1$ fixed points and $j$ middle elements, choose levels in $\\binom5i\\binom{5-i}j$ ways; their images have $i^j j^{5-i-j}$ possibilities. This categorization is intrinsic, preventing double counting.",
+      "For $i=1,2,3,4,5$, the totals are respectively $205,380,150,20,1$ (the last is the identity). They sum to $756$."
+    ],
+    "solution_zh": [
+      "每个第二次像必须是不动点。将元素分成不动点、直接映入不动点的非不动点中层，以及其余必须映入中层的点。",
+      "若前两层大小为 $i\\ge1,j$，选层有 $\\binom5i\\binom{5-i}j$ 种，指定像有 $i^j j^{5-i-j}$ 种。分层由函数本身唯一确定，不会重复。",
+      "$i=1,2,3,4,5$ 时总数分别为 $205,380,150,20,1$，最后为恒等函数，合计七百五十六。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/10",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Subsets & binomial identities"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q11",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO05",
+      "reason_en": "Failure means a proper prefix contains exactly the first $k$ positive integers. Let $c_n$ count permutations of $1,\\ldots,n$ with no such proper prefix.",
+      "reason_zh": "失败等价于某个真前缀恰含最小的 $k$ 个正整数。令 $c_n$ 数无此真前缀的排列。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "Failure means a proper prefix contains exactly the first $k$ positive integers. Let $c_n$ count permutations of $1,\\ldots,n$ with no such proper prefix.",
+        "reason_zh": "失败等价于某个真前缀恰含最小的 $k$ 个正整数。令 $c_n$ 数无此真前缀的排列。"
+      }
+    ],
+    "statement_en": "Count permutations of $1,\\ldots,6$ such that for each $1\\le k\\le5$, the first $k$ terms contain an element greater than $k$.",
+    "statement_zh": "求一至六的排列数，使对每个 $1\\le k\\le5$，前 $k$ 项中至少有一项大于 $k$。",
+    "answer": 461,
+    "solution_en": [
+      "Failure means a proper prefix contains exactly the first $k$ positive integers. Let $c_n$ count permutations of $1,\\ldots,n$ with no such proper prefix.",
+      "Every permutation has a unique earliest closed prefix, of some size $k$. Its internal order has $c_k$ choices, and the rest are arbitrary, so $n!=\\sum_{k=1}^nc_k(n-k)!$.",
+      "Starting with $c_1=1$ yields $c_2=1,c_3=3,c_4=13,c_5=71$. Then $c_6=720-(120+24+18+26+71)=461$."
+    ],
+    "solution_zh": [
+      "失败等价于某个真前缀恰含最小的 $k$ 个正整数。令 $c_n$ 数无此真前缀的排列。",
+      "任一排列有唯一最短封闭前缀，大小为 $k$ 时内部有 $c_k$ 种，余项任排，故 $n!=\\sum_{k=1}^nc_k(n-k)!$。",
+      "递推得 $c_1=1,c_2=1,c_3=3,c_4=13,c_5=71$，进而 $c_6=720-259=461$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/11",
+    "method_chain": [
+      "Recurrences, lattice paths & tilings",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q12",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "Let the four diagonal portions be $a=AP,b=BP,c=CP,d=DP$. The common sine of the intersection angle cancels from the area equality, giving $(a-c)(b-d)=0$. Thus at least one diagonal is bisected.",
+      "reason_zh": "记四段为 $a=AP,b=BP,c=CP,d=DP$。四小三角形面积中的公共正弦可消去，得到 $(a-c)(b-d)=0$，所以至少一条对角线被平分。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE02",
+        "reason_en": "Let the four diagonal portions be $a=AP,b=BP,c=CP,d=DP$. The common sine of the intersection angle cancels from the area equality, giving $(a-c)(b-d)=0$. Thus at least one diagonal is bisected.",
+        "reason_zh": "记四段为 $a=AP,b=BP,c=CP,d=DP$。四小三角形面积中的公共正弦可消去，得到 $(a-c)(b-d)=0$，所以至少一条对角线被平分。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Let $u$ be half the bisected diagonal and $v,w$ the other portions, orienting the angle $\\theta$ appropriately and putting $v$ next to the fourteen-unit side. Averaging and subtracting the adjacent cosine-law equations gives $u^2+v^2=148,u^2+w^2=180,uv|\\cos\\theta|=24,uw|\\cos\\theta|=40$. These relations apply whether $a=c$ or $b=d$, with the diagonal names exchanged.",
+        "reason_zh": "令被平分对角线的一半为 $u$，另一条两段为 $v,w$，适当选择夹角方向，并以 $v$ 对应十四边。对相邻余弦定理方程取平均及相减，得 $u^2+v^2=148,u^2+w^2=180,uv|\\cos\\theta|=24,uw|\\cos\\theta|=40$。无论哪条对角线平分，交换名称后均成立。"
+      }
+    ],
+    "statement_en": "Convex quadrilateral $ABCD$ has $AB=CD=10,BC=14,AD=2\\sqrt{65}$. Its diagonals meet at $P$ and obey $[APB]+[CPD]=[BPC]+[APD]$. Find its area.",
+    "statement_zh": "凸四边形 $ABCD$ 中 $AB=CD=10,BC=14,AD=2\\sqrt{65}$。对角线交于 $P$，且 $[APB]+[CPD]=[BPC]+[APD]$，求四边形面积。",
+    "answer": 112,
+    "solution_en": [
+      "Let the four diagonal portions be $a=AP,b=BP,c=CP,d=DP$. The common sine of the intersection angle cancels from the area equality, giving $(a-c)(b-d)=0$. Thus at least one diagonal is bisected.",
+      "Let $u$ be half the bisected diagonal and $v,w$ the other portions, orienting the angle $\\theta$ appropriately and putting $v$ next to the fourteen-unit side. Averaging and subtracting the adjacent cosine-law equations gives $u^2+v^2=148,u^2+w^2=180,uv|\\cos\\theta|=24,uw|\\cos\\theta|=40$. These relations apply whether $a=c$ or $b=d$, with the diagonal names exchanged.",
+      "Hence $w/v=5/3$ and $w^2-v^2=32$, so $v=3\\sqrt2,w=5\\sqrt2,u^2=130$. It follows that $\\cos^2\\theta=16/65$, and $\\sin\\theta=7/\\sqrt{65}$.",
+      "The area is $u(v+w)\\sin\\theta=\\sqrt{130}(8\\sqrt2)(7/\\sqrt{65})=112$."
+    ],
+    "solution_zh": [
+      "记四段为 $a=AP,b=BP,c=CP,d=DP$。四小三角形面积中的公共正弦可消去，得到 $(a-c)(b-d)=0$，所以至少一条对角线被平分。",
+      "令被平分对角线的一半为 $u$，另一条两段为 $v,w$，适当选择夹角方向，并以 $v$ 对应十四边。对相邻余弦定理方程取平均及相减，得 $u^2+v^2=148,u^2+w^2=180,uv|\\cos\\theta|=24,uw|\\cos\\theta|=40$。无论哪条对角线平分，交换名称后均成立。",
+      "故 $w/v=5/3,w^2-v^2=32$，解得 $v=3\\sqrt2,w=5\\sqrt2,u^2=130$，以及 $\\sin\\theta=7/\\sqrt{65}$。",
+      "四边形面积为 $u(v+w)\\sin\\theta=112$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/12",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Areas & area ratios",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Covers both possible bisected-diagonal branches instead of assuming one without justification.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q13",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS04",
+      "reason_en": "Use prefix states zero (no match), one (last result one), and two (last two results one-two). Let $u_j$ be the expected value of $(-1)^R$ for the number $R$ of remaining rolls from each state. Stopping is almost sure, since independent three-roll blocks have a fixed positive chance of being one-two-three.",
+      "reason_zh": "按匹配前缀设三状态：无匹配、末次为一、末两次为一二。令 $u_j$ 为各状态余下次数 $R$ 的 $(-1)^R$ 期望。独立三次块均有固定正概率出现一二三，因此几乎必然停止。"
+    },
+    "secondary": [
+      {
+        "category_id": "PS",
+        "subtype_id": "PS02",
+        "reason_en": "Use prefix states zero (no match), one (last result one), and two (last two results one-two). Let $u_j$ be the expected value of $(-1)^R$ for the number $R$ of remaining rolls from each state. Stopping is almost sure, since independent three-roll blocks have a fixed positive chance of being one-two-three.",
+        "reason_zh": "按匹配前缀设三状态：无匹配、末次为一、末两次为一二。令 $u_j$ 为各状态余下次数 $R$ 的 $(-1)^R$ 期望。独立三次块均有固定正概率出现一二三，因此几乎必然停止。"
+      }
+    ],
+    "statement_en": "Roll a fair six-sided die until the first occurrence of consecutive results $1,2,3$. If the probability the total number of rolls is odd is reduced $m/n$, find $m+n$.",
+    "statement_zh": "反复投公平六面骰，首次连续出现一、二、三时停止。总投掷次数为奇数的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 647,
+    "solution_en": [
+      "Use prefix states zero (no match), one (last result one), and two (last two results one-two). Let $u_j$ be the expected value of $(-1)^R$ for the number $R$ of remaining rolls from each state. Stopping is almost sure, since independent three-roll blocks have a fixed positive chance of being one-two-three.",
+      "Each next roll changes parity, so conditioning gives $6u_0=-u_1-5u_0$, $6u_1=-u_1-u_2-4u_0$, and $6u_2=-1-u_1-4u_0$. The constant term corresponds to immediate completion from state two.",
+      "The first two yield $u_1=-11u_0,u_2=73u_0$. The third gives $431u_0=-1$, so the odd-roll probability is $(1-u_0)/2=216/431$.",
+      "The fraction is reduced and $m+n=647$."
+    ],
+    "solution_zh": [
+      "按匹配前缀设三状态：无匹配、末次为一、末两次为一二。令 $u_j$ 为各状态余下次数 $R$ 的 $(-1)^R$ 期望。独立三次块均有固定正概率出现一二三，因此几乎必然停止。",
+      "每次投掷翻转奇偶，条件化得 $6u_0=-u_1-5u_0,6u_1=-u_1-u_2-4u_0,6u_2=-1-u_1-4u_0$，末式常数为立即完成情形。",
+      "前两式给出 $u_1=-11u_0,u_2=73u_0$，代入末式得 $u_0=-1/431$。所以奇数概率为 $(1-u_0)/2=216/431$。",
+      "已最简，答案六百四十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/13",
+    "method_chain": [
+      "Expected values & stopping processes",
+      "Conditional probability & independence"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Independent parity-generating expectation on the three prefix states.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q14",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "Let the tangencies on $AB,AC$ be $Z,W$ and their common distance from $A$ be $\\ell$. Because $Y$ is the first intersection from $A$, the tangent cuts off the corner: $PY=PZ=\\ell-AP$ and $BX=BZ=AB-\\ell$.",
+      "reason_zh": "设圆切 $AB,AC$ 于 $Z,W$，公共切线长为 $\\ell$。$Y$ 为从 $A$ 出发先遇到的交点，其切线截去角部，故 $PY=PZ=\\ell-AP$，$BX=BZ=AB-\\ell$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE03",
+        "reason_en": "The tangent-chord angle theorem makes the angles opposite $AP$ in triangle $APY$ and opposite $AB$ in triangle $ABX$ supplementary. Their angle at $A$ is common. The sine rule therefore gives $PY/AP=BX/AB$, or $\\ell/AP+\\ell/AB=2$.",
+        "reason_zh": "由弦切角定理，三角形 $APY,ABX$ 中分别对着 $AP,AB$ 的角互补，且 $A$ 角相同。正弦定理给出 $PY/AP=BX/AB$，即 $\\ell/AP+\\ell/AB=2$。"
+      }
+    ],
+    "statement_en": "The incircle of $ABC$ touches $BC$ at $X$. Line $AX$ meets it again at $Y\\ne X$. The tangent at $Y$ meets side segments $AB,AC$ at $P,Q$. Given $AP=3,PB=4,AC=8$, reduce $AQ=m/n$ and find $m+n$.",
+    "statement_zh": "三角形内切圆切 $BC$ 于 $X$，直线 $AX$ 再交圆于 $Y\\ne X$。$Y$ 处切线交边线段 $AB,AC$ 于 $P,Q$。已知 $AP=3,PB=4,AC=8$，将 $AQ$ 约为 $m/n$，求 $m+n$。",
+    "answer": 227,
+    "solution_en": [
+      "Let the tangencies on $AB,AC$ be $Z,W$ and their common distance from $A$ be $\\ell$. Because $Y$ is the first intersection from $A$, the tangent cuts off the corner: $PY=PZ=\\ell-AP$ and $BX=BZ=AB-\\ell$.",
+      "The tangent-chord angle theorem makes the angles opposite $AP$ in triangle $APY$ and opposite $AB$ in triangle $ABX$ supplementary. Their angle at $A$ is common. The sine rule therefore gives $PY/AP=BX/AB$, or $\\ell/AP+\\ell/AB=2$.",
+      "With $AP=3,AB=7$, this yields $\\ell=21/5$. The same argument on $AC$ gives $\\ell/AQ+\\ell/AC=2$, hence $1/AQ=10/21-1/8=59/168$.",
+      "Thus $AQ=168/59$, within $AC$, giving $227$."
+    ],
+    "solution_zh": [
+      "设圆切 $AB,AC$ 于 $Z,W$，公共切线长为 $\\ell$。$Y$ 为从 $A$ 出发先遇到的交点，其切线截去角部，故 $PY=PZ=\\ell-AP$，$BX=BZ=AB-\\ell$。",
+      "由弦切角定理，三角形 $APY,ABX$ 中分别对着 $AP,AB$ 的角互补，且 $A$ 角相同。正弦定理给出 $PY/AP=BX/AB$，即 $\\ell/AP+\\ell/AB=2$。",
+      "代入 $AP=3,AB=7$，得 $\\ell=21/5$。在 $AC$ 上同理，$\\ell/AQ+\\ell/AC=2$，所以 $1/AQ=10/21-1/8=59/168$。",
+      "故 $AQ=168/59<8$，答案二百二十七。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/14",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Triangle metrics & trigonometry"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2018-II-Q15",
+    "paper_id": "AIME-2018-II",
+    "exam_year": 2018,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO03",
+      "reason_en": "Let $d_i=f(i)-f(i-1)\\in\\{\\pm1,\\pm2,\\pm3\\}$. Their sum is twelve. Two negative steps would make the sum at most $18-8=10$, so at most one is negative.",
+      "reason_zh": "令差分 $d_i\\in\\{\\pm1,\\pm2,\\pm3\\}$，六差之和为十二。若有两个负差，和最多十，所以至多一个负差。"
+    },
+    "secondary": [
+      {
+        "category_id": "LO",
+        "subtype_id": "LO01",
+        "reason_en": "Let $d_i=f(i)-f(i-1)\\in\\{\\pm1,\\pm2,\\pm3\\}$. Their sum is twelve. Two negative steps would make the sum at most $18-8=10$, so at most one is negative.",
+        "reason_zh": "令差分 $d_i\\in\\{\\pm1,\\pm2,\\pm3\\}$，六差之和为十二。若有两个负差，和最多十，所以至多一个负差。"
+      },
+      {
+        "category_id": "CO",
+        "subtype_id": "CO01",
+        "reason_en": "A negative two cannot adjoin any allowed positive step without violating the distance-two lower bound. A negative three would force all five other steps to be three to achieve total twelve, again violating that bound. Thus a single negative must be minus one, and its existing neighbors must be three. These local conditions suffice for every longer interval: a two-step interval containing it has sum at least two, and extending by positive steps preserves the lower bound; intervals containing it internally are larger still.",
+        "reason_zh": "负二与任何允许正步相邻都违反长度二的下界。若为负三，为使总和十二，其余五步必须全三，同样违反。因此负步只能为负一，相邻已有步必须为三。此条件也充分：包含负一的两步区间和至少二，继续加入正步保持下界，负一位于区间内部时和更大；上界由每步绝对值不超过三自动保证。"
+      }
+    ],
+    "statement_en": "Count integer-valued functions on $\\{0,1,\\ldots,6\\}$ with $f(0)=0,f(6)=12$ and $|x-y|\\le|f(x)-f(y)|\\le3|x-y|$ for every pair of inputs.",
+    "statement_zh": "求定义在 $\\{0,1,\\ldots,6\\}$ 上的整数值函数数，满足 $f(0)=0,f(6)=12$，且任意输入对均有 $|x-y|\\le|f(x)-f(y)|\\le3|x-y|$。",
+    "answer": 185,
+    "solution_en": [
+      "Let $d_i=f(i)-f(i-1)\\in\\{\\pm1,\\pm2,\\pm3\\}$. Their sum is twelve. Two negative steps would make the sum at most $18-8=10$, so at most one is negative.",
+      "With no negatives, all pair inequalities follow immediately from steps one through three. The counts of ones, twos, threes can be $(0,6,0),(1,4,1),(2,2,2),(3,0,3)$, contributing $1+30+90+20=141$.",
+      "A negative two cannot adjoin any allowed positive step without violating the distance-two lower bound. A negative three would force all five other steps to be three to achieve total twelve, again violating that bound. Thus a single negative must be minus one, and its existing neighbors must be three. These local conditions suffice for every longer interval: a two-step interval containing it has sum at least two, and extending by positive steps preserves the lower bound; intervals containing it internally are larger still.",
+      "At either endpoint, the remaining four unfixed positive steps sum to ten, giving $4+6=10$ orders each. At each of four interior positions, the remaining three positive steps sum to seven, giving $3+3=6$ orders each. Total $141+20+24=185$."
+    ],
+    "solution_zh": [
+      "令差分 $d_i\\in\\{\\pm1,\\pm2,\\pm3\\}$，六差之和为十二。若有两个负差，和最多十，所以至多一个负差。",
+      "全为正时，所有区间约束自动成立。一、二、三的个数可为 $(0,6,0),(1,4,1),(2,2,2),(3,0,3)$，多重排列数为 $1+30+90+20=141$。",
+      "负二与任何允许正步相邻都违反长度二的下界。若为负三，为使总和十二，其余五步必须全三，同样违反。因此负步只能为负一，相邻已有步必须为三。此条件也充分：包含负一的两步区间和至少二，继续加入正步保持下界，负一位于区间内部时和更大；上界由每步绝对值不超过三自动保证。",
+      "负一步在端点时，其余四个未固定正步和为十，有十种，各两端共二十；在四个内点时，其余三个正步和为七，各六种，共二十四。总数一百八十五。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2018II/problem/15",
+    "method_chain": [
+      "Compositions, partitions & generating functions",
+      "Games, invariants & state strategies",
+      "Restricted permutations & arrangements"
+    ],
+    "review": {
+      "author": "print_builder",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "Explicitly excludes negative-three using the global endpoint sum and proves the local-neighbor conditions sufficient for all interval inequalities.",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

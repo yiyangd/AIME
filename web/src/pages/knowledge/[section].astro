@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Bi from '../../components/Bi.astro';
+import MathText from '../../components/MathText.astro';
+import KnowledgeMethod from '../../components/KnowledgeMethod.astro';
+import PrintLinks from '../../components/PrintLinks.astro';
+import {sections,sectionUrl,sectionQuestions,questionUrl,type Section} from '../../lib/content';
+export function getStaticPaths(){return sections.map(section=>({params:{section:section.slug},props:{section}}))}
+interface Props{section:Section}
+const {section:s}=Astro.props;
+---
+<Layout title={`${s.titleEn} · Method notes`} reading chapterId={s.chapterId} sectionId={s.id}>
+<header class="page-heading"><p class="eyebrow"><Bi en="METHOD NOTES" zh="知识与方法"/> · {s.code}</p><h1 data-title-en={`${s.id}. ${s.titleEn}`} data-title-zh={`${s.id}. ${s.titleZh}`}>{s.id}. {s.titleEn}</h1><p class="title-zh" lang="zh">{s.titleZh}</p><PrintLinks resources={s.print}/></header>
+<section class="note-card"><p data-content-language="en"><MathText text={s.definitionEn}/></p><p data-content-language="zh" lang="zh"><MathText text={s.definitionZh}/></p></section>
+{s.methods.length>1&&<nav class="method-index" aria-label="Methods in this section">{s.methods.map((m,i)=><a href={`#${m.method_id}`}>{i+1}. <Bi en={m.title_en} zh={m.title_zh}/></a>)}</nav>}
+{s.methods.map((method,index)=><KnowledgeMethod method={method} index={index}/>)}
+<section class="note-card"><h2><Bi en="Practise this topic" zh="本节配套练习"/></h2><a class="section-knowledge-link" href={sectionUrl(s)}><Bi en="Open all questions with solutions" zh="打开全部真题与解析"/> →</a><div class="practice-links">{sectionQuestions(s).map(q=><a href={questionUrl(q)}>{q.id}</a>)}</div></section>
+</Layout>

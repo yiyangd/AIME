@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 410" role="img" aria-labelledby="title desc">
+<title id="title">Three nested squares in AIME 2015 I question 7</title>
+<desc id="desc">ABCD is the outer square. E bisects AD. F and G lie on CE, H on AB and J on BC. K and L lie on GH, M on AD and N on AB. This diagram was reconstructed from the mathematical incidences.</desc>
+<rect width="420" height="410" fill="white"/>
+<g fill="none" stroke-linejoin="round" stroke-width="2">
+<path d="M70 350H350V70H70Z" stroke="#173f65"/>
+<path d="M70 210L350 70" stroke="#94a3b8" stroke-dasharray="5 4"/>
+<path d="M270 110L110 190L190 350L350 270Z" stroke="#d97332" fill="#fff2e8" fill-opacity=".6"/>
+<path d="M172.857 315.714L138.571 247.143L70 281.429L104.286 350Z" stroke="#39739f" fill="#e7f1f7"/>
+</g><g fill="#173f65" font-family="Arial, sans-serif" font-size="16" font-style="italic">
+<text x="57" y="377">A</text><text x="354" y="377">B</text><text x="355" y="66">C</text><text x="53" y="66">D</text><text x="49" y="216">E</text>
+<text x="276" y="105">F</text><text x="96" y="182">G</text><text x="185" y="377">H</text><text x="360" y="276">J</text>
+<text x="180" y="315">K</text><text x="121" y="243">L</text><text x="48" y="286">M</text><text x="99" y="377">N</text>
+</g></svg>

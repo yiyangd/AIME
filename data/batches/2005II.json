@@ -1,0 +1,706 @@
+[
+  {
+    "question_id": "AIME-2005-II-Q01",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 1,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO02",
+      "reason_en": "The equation $\\binom n6=6\\binom n3$ simplifies to $(n-3)(n-4)(n-5)=720$.",
+      "reason_zh": "方程 $\\binom n6=6\\binom n3$ 化为 $(n-3)(n-4)(n-5)=720$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "The equation $\\binom n6=6\\binom n3$ simplifies to $(n-3)(n-4)(n-5)=720$.",
+        "reason_zh": "方程 $\\binom n6=6\\binom n3$ 化为 $(n-3)(n-4)(n-5)=720$。"
+      }
+    ],
+    "statement_en": "A deck of $n\\ge6$ distinct cards has six times as many six-card subsets as three-card subsets. Find $n$.",
+    "statement_zh": "一副 $n\\ge6$ 张不同的牌，其六张子集数为三张子集数的六倍，求 $n$。",
+    "answer": 13,
+    "solution_en": [
+      "The equation $\\binom n6=6\\binom n3$ simplifies to $(n-3)(n-4)(n-5)=720$.",
+      "The product increases for $n\\ge6$, and $10\\cdot9\\cdot8=720$, so the unique solution is $n=13$."
+    ],
+    "solution_zh": [
+      "方程 $\\binom n6=6\\binom n3$ 化为 $(n-3)(n-4)(n-5)=720$。",
+      "左侧在 $n\\ge6$ 严格递增，且 $10\\cdot9\\cdot8=720$，故唯一解为 $13$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/1",
+    "method_chain": [
+      "Subsets & binomial identities",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q02",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 2,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "PS",
+      "subtype_id": "PS01",
+      "reason_en": "For the first bag, after any initial roll, the next differs in type with probability $6/8$ and the third supplies the missing type with probability $3/7$. Thus the chance is $9/28$.",
+      "reason_zh": "第一袋任取首个后，第二个异种概率为 $6/8$，第三个补齐缺种概率为 $3/7$，故首袋成功率 $9/28$。"
+    },
+    "secondary": [],
+    "statement_en": "Three rolls of each of three types are randomly distributed into three labeled bags, three rolls per bag. The probability every bag has all three types is $m/n$ in lowest terms. Find $m+n$.",
+    "statement_zh": "三种面包各三个，随机装入三个有标号的袋子，每袋三个。每袋恰含三种的概率为最简分数 $m/n$，求 $m+n$。",
+    "answer": 79,
+    "solution_en": [
+      "For the first bag, after any initial roll, the next differs in type with probability $6/8$ and the third supplies the missing type with probability $3/7$. Thus the chance is $9/28$.",
+      "Two of each type remain. The second bag succeeds with chance $(4/5)(2/4)=2/5$, and the last bag is then forced. Probability $9/70$, giving $79$."
+    ],
+    "solution_zh": [
+      "第一袋任取首个后，第二个异种概率为 $6/8$，第三个补齐缺种概率为 $3/7$，故首袋成功率 $9/28$。",
+      "剩余每种两个，第二袋成功率为 $(4/5)(2/4)=2/5$，最后一袋自动符合。总概率 $9/70$，所求 $79$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/2",
+    "method_chain": [
+      "Finite probability & combinatorial sampling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q03",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 3,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL05",
+      "reason_en": "For first term $a$ and ratio $r$, $a/(1-r)=2005$ and $a^2/(1-r^2)=20050$. Dividing gives $a/(1+r)=10$.",
+      "reason_zh": "设首项 $a$、公比 $r$，则 $a/(1-r)=2005,a^2/(1-r^2)=20050$，相除得 $a/(1+r)=10$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "Thus $2005(1-r)=10(1+r)$, so $r=1995/2015=399/403$. The terms are coprime and sum to $802$.",
+        "reason_zh": "所以 $2005(1-r)=10(1+r)$，得 $r=399/403$，最简分子分母之和为 $802$。"
+      }
+    ],
+    "statement_en": "An infinite geometric series sums to $2005$. Squaring each term gives a series with sum $20050$. If the original ratio is reduced $m/n>0$, find $m+n$.",
+    "statement_zh": "无穷等比级数和为 $2005$，每项平方后的级数和为 $20050$。若原公比为最简正分数 $m/n$，求 $m+n$。",
+    "answer": 802,
+    "solution_en": [
+      "For first term $a$ and ratio $r$, $a/(1-r)=2005$ and $a^2/(1-r^2)=20050$. Dividing gives $a/(1+r)=10$.",
+      "Thus $2005(1-r)=10(1+r)$, so $r=1995/2015=399/403$. The terms are coprime and sum to $802$."
+    ],
+    "solution_zh": [
+      "设首项 $a$、公比 $r$，则 $a/(1-r)=2005,a^2/(1-r^2)=20050$，相除得 $a/(1+r)=10$。",
+      "所以 $2005(1-r)=10(1+r)$，得 $r=399/403$，最简分子分母之和为 $802$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/3",
+    "method_chain": [
+      "Sequences & summation",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q04",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 4,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT08",
+      "reason_en": "The factorizations give divisor counts $11^2=121$, $8^2=64$, and $12\\cdot23=276$. Pairwise intersections are divisors of gcds $5^7,2^{10},3^7$, with counts $8,11,8$.",
+      "reason_zh": "分解质因数后约数数分别为 $121,64,276$。两两交集为最大公约数 $5^7,2^{10},3^7$ 的约数，个数为 $8,11,8$。"
+    },
+    "secondary": [
+      {
+        "category_id": "CO",
+        "subtype_id": "CO04",
+        "reason_en": "The triple intersection contains only one. Inclusion–exclusion gives $121+64+276-8-11-8+1=435$.",
+        "reason_zh": "三者交集只有一，容斥得 $435$。"
+      }
+    ],
+    "statement_en": "Count positive integers dividing at least one of $10^{10},15^7,18^{11}$.",
+    "statement_zh": "求至少整除 $10^{10},15^7,18^{11}$ 中一个数的正整数个数。",
+    "answer": 435,
+    "solution_en": [
+      "The factorizations give divisor counts $11^2=121$, $8^2=64$, and $12\\cdot23=276$. Pairwise intersections are divisors of gcds $5^7,2^{10},3^7$, with counts $8,11,8$.",
+      "The triple intersection contains only one. Inclusion–exclusion gives $121+64+276-8-11-8+1=435$."
+    ],
+    "solution_zh": [
+      "分解质因数后约数数分别为 $121,64,276$。两两交集为最大公约数 $5^7,2^{10},3^7$ 的约数，个数为 $8,11,8$。",
+      "三者交集只有一，容斥得 $435$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/4",
+    "method_chain": [
+      "Divisor functions & totients",
+      "Inclusion-exclusion & double counting"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q05",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 5,
+    "practice_part": "A",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL04",
+      "reason_en": "Put $t=\\log_a b$, so $t+6/t=5$. Factoring $t^2-5t+6$ yields $t=2,3$, hence $b=a^2$ or $a^3$.",
+      "reason_zh": "令 $t=\\log_a b$，则 $t+6/t=5$，解得 $t=2,3$，对应 $b=a^2$ 或 $a^3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT05",
+        "reason_en": "Squares allow $a=2,\\ldots,44$, giving $43$ pairs; cubes allow $2,\\ldots,12$, giving $11$. The families do not overlap for $a\\ge2$, so total $54$.",
+        "reason_zh": "平方情形 $a=2$ 至 $44$，有 $43$ 对；立方情形 $a=2$ 至 $12$，有 $11$ 对。两类不重叠，合计 $54$。"
+      }
+    ],
+    "statement_en": "Count integer pairs $2\\le a,b\\le2005$ satisfying $\\log_a b+6\\log_b a=5$.",
+    "statement_zh": "求整数对 $2\\le a,b\\le2005$ 满足 $\\log_a b+6\\log_b a=5$ 的个数。",
+    "answer": 54,
+    "solution_en": [
+      "Put $t=\\log_a b$, so $t+6/t=5$. Factoring $t^2-5t+6$ yields $t=2,3$, hence $b=a^2$ or $a^3$.",
+      "Squares allow $a=2,\\ldots,44$, giving $43$ pairs; cubes allow $2,\\ldots,12$, giving $11$. The families do not overlap for $a\\ge2$, so total $54$."
+    ],
+    "solution_zh": [
+      "令 $t=\\log_a b$，则 $t+6/t=5$，解得 $t=2,3$，对应 $b=a^2$ 或 $a^3$。",
+      "平方情形 $a=2$ 至 $44$，有 $43$ 对；立方情形 $a=2$ 至 $12$，有 $11$ 对。两类不重叠，合计 $54$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/5",
+    "method_chain": [
+      "Logarithms & exponentials",
+      "Diophantine equations & factor pairs"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q06",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 6,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "CO",
+      "subtype_id": "CO07",
+      "reason_en": "A card $i\\le n$ moves to top-based position $2(n-i)+1$, while $i>n$ moves to $2(2n-i)+2$. Thus an odd fixed position must belong to $A$.",
+      "reason_zh": "原上半堆第 $i$ 张的新位置为 $2(n-i)+1$，下半堆为 $2(2n-i)+2$，所以奇数保位只能来自上半堆。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL01",
+        "reason_en": "For $i=131$, solve $131=2(n-131)+1$, giving $n=196$. Card $262$ from $B$ is also fixed because $2(392-262)+2=262$. Thus the required total is $392$.",
+        "reason_zh": "解 $131=2(n-131)+1$ 得 $n=196$。下半堆第 $262$ 张也保位，因此总张数为 $392$。"
+      }
+    ],
+    "statement_en": "Cards numbered $1$ through $2n$ are stacked top to bottom, split into top half $A$ and bottom half $B$, then alternately removed from $B,A$ and added on top of a new stack. A stack is magical when at least one card from each half retains its original top-based position. Find $2n$ for the magical stack in which card $131$ stays fixed.",
+    "statement_zh": "编号 $1$ 至 $2n$ 的牌自上而下排列，分为上半堆 $A$、下半堆 $B$，再依次从 $B,A$ 顶端交替取牌并压到新堆顶。若原两堆各至少一张牌位置不变，称此堆神奇。求第 $131$ 张保位的神奇牌堆总张数。",
+    "answer": 392,
+    "solution_en": [
+      "A card $i\\le n$ moves to top-based position $2(n-i)+1$, while $i>n$ moves to $2(2n-i)+2$. Thus an odd fixed position must belong to $A$.",
+      "For $i=131$, solve $131=2(n-131)+1$, giving $n=196$. Card $262$ from $B$ is also fixed because $2(392-262)+2=262$. Thus the required total is $392$."
+    ],
+    "solution_zh": [
+      "原上半堆第 $i$ 张的新位置为 $2(n-i)+1$，下半堆为 $2(2n-i)+2$，所以奇数保位只能来自上半堆。",
+      "解 $131=2(n-131)+1$ 得 $n=196$。下半堆第 $262$ 张也保位，因此总张数为 $392$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/6",
+    "method_chain": [
+      "Bijections & structural counting",
+      "Equations & algebraic modeling"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q07",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 7,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL01",
+      "reason_en": "Put $y=5^{1/16}$. Multiplying the denominator by $y-1$ repeatedly uses difference of squares, producing $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$.",
+      "reason_zh": "令 $y=5^{1/16}$。分母乘以 $y-1$，逐次用平方差得 $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Put $y=5^{1/16}$. Multiplying the denominator by $y-1$ repeatedly uses difference of squares, producing $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$.",
+        "reason_zh": "令 $y=5^{1/16}$。分母乘以 $y-1$，逐次用平方差得 $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$。"
+      }
+    ],
+    "statement_en": "Let $x=4/[(\\sqrt5+1)(5^{1/4}+1)(5^{1/8}+1)(5^{1/16}+1)]$. Find $(x+1)^{48}$.",
+    "statement_zh": "令 $x=4/[(\\sqrt5+1)(5^{1/4}+1)(5^{1/8}+1)(5^{1/16}+1)]$，求 $(x+1)^{48}$。",
+    "answer": 125,
+    "solution_en": [
+      "Put $y=5^{1/16}$. Multiplying the denominator by $y-1$ repeatedly uses difference of squares, producing $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$.",
+      "Therefore $x=y-1$, so $(x+1)^{48}=y^{48}=5^3=125$."
+    ],
+    "solution_zh": [
+      "令 $y=5^{1/16}$。分母乘以 $y-1$，逐次用平方差得 $(y-1)(y+1)(y^2+1)(y^4+1)(y^8+1)=y^{16}-1=4$。",
+      "因此 $x=y-1$，所求为 $y^{48}=125$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/7",
+    "method_chain": [
+      "Equations & algebraic modeling",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q08",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 8,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE06",
+      "reason_en": "The small-center separation is $14$, so $(R-4)+(R-10)=14$ and the outer radius is $R=14$. Its center lies ten units from the radius-four center and four from the other.",
+      "reason_zh": "小圆心距离为 $14$，因此 $(R-4)+(R-10)=14$，得大圆半径 $14$，其圆心到半径四圆心距离为十。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Signed distance to the common tangent varies affinely along the center line. Thus the outer-center distance is $4+(10/14)(10-4)=58/7$. Chord length is $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$.",
+        "reason_zh": "到公切线的有向距离沿圆心线为仿射变化，故大圆心距切线为 $4+(10/14)\\cdot6=58/7$。弦长为 $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$。"
+      },
+      {
+        "category_id": "GE",
+        "subtype_id": "GE04",
+        "reason_en": "Signed distance to the common tangent varies affinely along the center line. Thus the outer-center distance is $4+(10/14)(10-4)=58/7$. Chord length is $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$.",
+        "reason_zh": "到公切线的有向距离沿圆心线为仿射变化，故大圆心距切线为 $4+(10/14)\\cdot6=58/7$。弦长为 $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$。"
+      }
+    ],
+    "statement_en": "Two externally tangent circles of radii $4,10$ are internally tangent to a third circle, all centers collinear. A common external tangent cuts a chord of the third circle of length $m\\sqrt n/p$ in reduced squarefree form. Find $m+n+p$.",
+    "statement_zh": "半径 $4,10$ 的两圆外切，并均与第三圆内切，三圆心共线。两小圆的公外切线截大圆的弦长为约简的 $m\\sqrt n/p$，求 $m+n+p$。",
+    "answer": 405,
+    "solution_en": [
+      "The small-center separation is $14$, so $(R-4)+(R-10)=14$ and the outer radius is $R=14$. Its center lies ten units from the radius-four center and four from the other.",
+      "Signed distance to the common tangent varies affinely along the center line. Thus the outer-center distance is $4+(10/14)(10-4)=58/7$. Chord length is $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$.",
+      "Since $390$ is squarefree and $8,7$ coprime, the answer is $405$."
+    ],
+    "solution_zh": [
+      "小圆心距离为 $14$，因此 $(R-4)+(R-10)=14$，得大圆半径 $14$，其圆心到半径四圆心距离为十。",
+      "到公切线的有向距离沿圆心线为仿射变化，故大圆心距切线为 $4+(10/14)\\cdot6=58/7$。弦长为 $2\\sqrt{14^2-(58/7)^2}=8\\sqrt{390}/7$。",
+      "$390$ 无平方素因子，故所求为 $405$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/8",
+    "method_chain": [
+      "Tangent circles & common tangents",
+      "Coordinates, vectors & transformations",
+      "Circle power & cyclic geometry"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q09",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 9,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL03",
+      "reason_en": "Write $\\sin t+i\\cos t=ie^{-it}$. The identity becomes $i^ne^{-int}=ie^{-int}$, equivalent to $n\\equiv1\\pmod4$.",
+      "reason_zh": "写成 $\\sin t+i\\cos t=ie^{-it}$，恒等式等价于 $i^n=i$，即 $n\\equiv1\\pmod4$。"
+    },
+    "secondary": [
+      {
+        "category_id": "NT",
+        "subtype_id": "NT03",
+        "reason_en": "Write $\\sin t+i\\cos t=ie^{-it}$. The identity becomes $i^ne^{-int}=ie^{-int}$, equivalent to $n\\equiv1\\pmod4$.",
+        "reason_zh": "写成 $\\sin t+i\\cos t=ie^{-it}$，恒等式等价于 $i^n=i$，即 $n\\equiv1\\pmod4$。"
+      }
+    ],
+    "statement_en": "Count $1\\le n\\le1000$ for which $(\\sin t+i\\cos t)^n=\\sin(nt)+i\\cos(nt)$ holds for every real $t$.",
+    "statement_zh": "求 $1\\le n\\le1000$ 中使 $(\\sin t+i\\cos t)^n=\\sin(nt)+i\\cos(nt)$ 对所有实数 $t$ 成立的整数个数。",
+    "answer": 250,
+    "solution_en": [
+      "Write $\\sin t+i\\cos t=ie^{-it}$. The identity becomes $i^ne^{-int}=ie^{-int}$, equivalent to $n\\equiv1\\pmod4$.",
+      "The integers $1,5,\\ldots,997$ number $250$."
+    ],
+    "solution_zh": [
+      "写成 $\\sin t+i\\cos t=ie^{-it}$，恒等式等价于 $i^n=i$，即 $n\\equiv1\\pmod4$。",
+      "$1,5,\\ldots,997$ 共有 $250$ 个。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/9",
+    "method_chain": [
+      "Complex numbers & roots of unity",
+      "Congruences & Chinese remainders"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q10",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 10,
+    "practice_part": "B",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE10",
+      "reason_en": "Take octahedron vertices $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$. Two square pyramids of base area two and height one give volume $4/3$.",
+      "reason_zh": "取八面体顶点为三个坐标轴上正负单位点，由两个底面积二、高一的棱锥组成，体积为 $4/3$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE07",
+        "reason_en": "Take octahedron vertices $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$. Two square pyramids of base area two and height one give volume $4/3$.",
+        "reason_zh": "取八面体顶点为三个坐标轴上正负单位点，由两个底面积二、高一的棱锥组成，体积为 $4/3$。"
+      }
+    ],
+    "statement_en": "The face centers of a regular octahedron are the vertices of a cube. If octahedron volume divided by cube volume is reduced $m/n$, find $m+n$.",
+    "statement_zh": "正八面体的八个面心构成一个立方体的顶点。八面体与该立方体体积比为最简分数 $m/n$，求 $m+n$。",
+    "answer": 11,
+    "solution_en": [
+      "Take octahedron vertices $(\\pm1,0,0),(0,\\pm1,0),(0,0,\\pm1)$. Two square pyramids of base area two and height one give volume $4/3$.",
+      "Face centers are $(\\pm1/3,\\pm1/3,\\pm1/3)$, so cube volume is $(2/3)^3=8/27$. Their ratio is $9/2$, giving $11$."
+    ],
+    "solution_zh": [
+      "取八面体顶点为三个坐标轴上正负单位点，由两个底面积二、高一的棱锥组成，体积为 $4/3$。",
+      "面心为 $(\\pm1/3,\\pm1/3,\\pm1/3)$，立方体体积为 $8/27$，比为 $9/2$，所求 $11$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/10",
+    "method_chain": [
+      "Volumes & solid geometry",
+      "Coordinates, vectors & transformations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q11",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 11,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "AL",
+      "subtype_id": "AL09",
+      "reason_en": "Multiply by $a_k$. The adjacent products $b_k=a_ka_{k-1}$ satisfy $b_{k+1}=b_k-3$, with $b_1=2664$. Hence $b_k=3(889-k)$.",
+      "reason_zh": "乘以 $a_k$，令 $b_k=a_ka_{k-1}$，则 $b_{k+1}=b_k-3$，且 $b_1=2664$，所以 $b_k=3(889-k)$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL05",
+        "reason_en": "Multiply by $a_k$. The adjacent products $b_k=a_ka_{k-1}$ satisfy $b_{k+1}=b_k-3$, with $b_1=2664$. Hence $b_k=3(889-k)$.",
+        "reason_zh": "乘以 $a_k$，令 $b_k=a_ka_{k-1}$，则 $b_{k+1}=b_k-3$，且 $b_1=2664$，所以 $b_k=3(889-k)$。"
+      }
+    ],
+    "statement_en": "A real sequence has $a_0=37,a_1=72$, $a_m=0$, and $a_{k+1}=a_{k-1}-3/a_k$ for $1\\le k<m$. Find the positive integer $m$.",
+    "statement_zh": "实数列满足 $a_0=37,a_1=72,a_m=0$，且 $1\\le k<m$ 时 $a_{k+1}=a_{k-1}-3/a_k$，求正整数 $m$。",
+    "answer": 889,
+    "solution_en": [
+      "Multiply by $a_k$. The adjacent products $b_k=a_ka_{k-1}$ satisfy $b_{k+1}=b_k-3$, with $b_1=2664$. Hence $b_k=3(889-k)$.",
+      "For $k\\le888$ these products are positive, so all needed denominators remain nonzero. At $k=889$ the product vanishes and $a_{888}\\ne0$, forcing the first zero $a_{889}=0$. Thus $m=889$."
+    ],
+    "solution_zh": [
+      "乘以 $a_k$，令 $b_k=a_ka_{k-1}$，则 $b_{k+1}=b_k-3$，且 $b_1=2664$，所以 $b_k=3(889-k)$。",
+      "$k\\le888$ 时乘积为正，所有所需分母都非零；$b_{889}=0$ 且 $a_{888}\\ne0$，迫使首个零项为 $a_{889}$，故 $m=889$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/11",
+    "method_chain": [
+      "Functional constraints & iteration",
+      "Sequences & summation"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q12",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 12,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE07",
+      "reason_en": "Put the side midpoint at horizontal coordinate zero and $O$ height $450$. Let signed coordinates of $E,F$ be $e,f$, with $f-e=400$. The angle tangent formula gives $1=450(f-e)/(450^2+ef)$, so $ef=-22500$.",
+      "reason_zh": "取边中点水平坐标为零，$O$ 高为 $450$，设 $E,F$ 的有向坐标为 $e,f$，$f-e=400$。夹角正切给出 $1=450(f-e)/(450^2+ef)$，所以 $ef=-22500$。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL08",
+        "reason_en": "Put the side midpoint at horizontal coordinate zero and $O$ height $450$. Let signed coordinates of $E,F$ be $e,f$, with $f-e=400$. The angle tangent formula gives $1=450(f-e)/(450^2+ef)$, so $ef=-22500$.",
+        "reason_zh": "取边中点水平坐标为零，$O$ 高为 $450$，设 $E,F$ 的有向坐标为 $e,f$，$f-e=400$。夹角正切给出 $1=450(f-e)/(450^2+ef)$，所以 $ef=-22500$。"
+      }
+    ],
+    "statement_en": "In a side-$900$ square with center $O$, points $A,E,F,B$ occur in order along one side, $EF=400$, $AE<BF$, and $\\angle EOF=45^\\circ$. If $BF=p+q\\sqrt r$ in squarefree form, find $p+q+r$.",
+    "statement_zh": "边长九百的正方形中心为 $O$，某边上依次为 $A,E,F,B$，$EF=400,AE<BF,\\angle EOF=45^\\circ$。若 $BF=p+q\\sqrt r$，$r$ 无平方素因子，求 $p+q+r$。",
+    "answer": 307,
+    "solution_en": [
+      "Put the side midpoint at horizontal coordinate zero and $O$ height $450$. Let signed coordinates of $E,F$ be $e,f$, with $f-e=400$. The angle tangent formula gives $1=450(f-e)/(450^2+ef)$, so $ef=-22500$.",
+      "The roots with difference $400$ are $e=-200-50\\sqrt7,f=200-50\\sqrt7$; this orientation follows from $AE<BF$. Thus $BF=450-f=250+50\\sqrt7$.",
+      "The requested sum is $307$."
+    ],
+    "solution_zh": [
+      "取边中点水平坐标为零，$O$ 高为 $450$，设 $E,F$ 的有向坐标为 $e,f$，$f-e=400$。夹角正切给出 $1=450(f-e)/(450^2+ef)$，所以 $ef=-22500$。",
+      "结合差为四百，且 $AE<BF$，得 $e=-200-50\\sqrt7,f=200-50\\sqrt7$，因此 $BF=250+50\\sqrt7$。",
+      "所求为 $307$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/12",
+    "method_chain": [
+      "Coordinates, vectors & transformations",
+      "Trigonometric algebra & equations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q13",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 13,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "NT",
+      "subtype_id": "NT05",
+      "reason_en": "Put $S(x)=P(x)-x-3$. Since $S(17)=S(24)=-10$, division by the two monic linear factors gives $S(x)=-10+(x-17)(x-24)Q(x)$ with integer-coefficient $Q$.",
+      "reason_zh": "令 $S(x)=P(x)-x-3$，则 $S(17)=S(24)=-10$，所以 $S(x)=-10+(x-17)(x-24)Q(x)$，其中 $Q$ 仍为整系数多项式。"
+    },
+    "secondary": [
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Put $S(x)=P(x)-x-3$. Since $S(17)=S(24)=-10$, division by the two monic linear factors gives $S(x)=-10+(x-17)(x-24)Q(x)$ with integer-coefficient $Q$.",
+        "reason_zh": "令 $S(x)=P(x)-x-3$，则 $S(17)=S(24)=-10$，所以 $S(x)=-10+(x-17)(x-24)Q(x)$，其中 $Q$ 仍为整系数多项式。"
+      }
+    ],
+    "statement_en": "An integer-coefficient polynomial satisfies $P(17)=10,P(24)=17$. If $P(n)=n+3$ has two distinct integer solutions $n_1,n_2$, find $n_1n_2$.",
+    "statement_zh": "整系数多项式满足 $P(17)=10,P(24)=17$。若 $P(n)=n+3$ 有两个不同整数解 $n_1,n_2$，求其乘积。",
+    "answer": 418,
+    "solution_en": [
+      "Put $S(x)=P(x)-x-3$. Since $S(17)=S(24)=-10$, division by the two monic linear factors gives $S(x)=-10+(x-17)(x-24)Q(x)$ with integer-coefficient $Q$.",
+      "An integer zero requires $(n-17)(n-24)\\mid10$. The factors differ by seven; testing signed factor pairs of divisors of ten leaves only $(2,-5)$ and $(5,-2)$, giving $n=19,22$.",
+      "The stipulated two distinct solutions must be these, so their product is $418$."
+    ],
+    "solution_zh": [
+      "令 $S(x)=P(x)-x-3$，则 $S(17)=S(24)=-10$，所以 $S(x)=-10+(x-17)(x-24)Q(x)$，其中 $Q$ 仍为整系数多项式。",
+      "整数零点必须满足 $(n-17)(n-24)\\mid10$。两因子相差七，检查十的约数有符号因子对，只剩 $(2,-5),(5,-2)$，即 $n=19,22$。",
+      "题给两个不同解必为这两个，乘积为 $418$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/13",
+    "method_chain": [
+      "Diophantine equations & factor pairs",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q14",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 14,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE03",
+      "reason_en": "The cevians $AD,AE$ are isogonal. Applying sine-area ratios to both and multiplying cancels the sine factors: $(BD/DC)(BE/EC)=AB^2/AC^2$.",
+      "reason_zh": "$AD,AE$ 关于角平分线对称。分别用正弦面积比再相乘，正弦因子消去，得 $(BD/DC)(BE/EC)=AB^2/AC^2$。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE05",
+        "reason_en": "The cevians $AD,AE$ are isogonal. Applying sine-area ratios to both and multiplying cancels the sine factors: $(BD/DC)(BE/EC)=AB^2/AC^2$.",
+        "reason_zh": "$AD,AE$ 关于角平分线对称。分别用正弦面积比再相乘，正弦因子消去，得 $(BD/DC)(BE/EC)=AB^2/AC^2$。"
+      }
+    ],
+    "statement_en": "Triangle $ABC$ has $AB=13,BC=15,CA=14$. On $BC$, let $CD=6$ and choose $E$ with $\\angle BAE=\\angle CAD$. If $BE=p/q$ is reduced, find $q$.",
+    "statement_zh": "三角形 $ABC$ 中 $AB=13,BC=15,CA=14$。$D,E$ 在 $BC$ 上，$CD=6$ 且 $\\angle BAE=\\angle CAD$。若 $BE=p/q$ 为最简分数，求 $q$。",
+    "answer": 463,
+    "solution_en": [
+      "The cevians $AD,AE$ are isogonal. Applying sine-area ratios to both and multiplying cancels the sine factors: $(BD/DC)(BE/EC)=AB^2/AC^2$.",
+      "Thus $BE/EC=(169/196)(6/9)=169/294$, so $BE=15\\cdot169/(169+294)=2535/463$. The numerator and denominator are coprime, giving $q=463$."
+    ],
+    "solution_zh": [
+      "$AD,AE$ 关于角平分线对称。分别用正弦面积比再相乘，正弦因子消去，得 $(BD/DC)(BE/EC)=AB^2/AC^2$。",
+      "所以 $BE/EC=169/294$，故 $BE=2535/463$，分子分母互质，所求 $463$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/14",
+    "method_chain": [
+      "Triangle metrics & trigonometry",
+      "Angle bisectors & triangle centers"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  },
+  {
+    "question_id": "AIME-2005-II-Q15",
+    "paper_id": "AIME-2005-II",
+    "exam_year": 2005,
+    "exam_form": "II",
+    "number": 15,
+    "practice_part": "C",
+    "primary": {
+      "category_id": "GE",
+      "subtype_id": "GE08",
+      "reason_en": "The centers are $F_1=(-5,12),F_2=(5,12)$ and radii $16,4$. A desired center $P$ has $PF_1+PF_2=20$, giving ellipse $x^2/100+(y-12)^2/75=1$. Every ellipse point is admissible since its $PF_1$ is between five and fifteen, making circle radius $16-PF_1$ positive.",
+      "reason_zh": "两圆心为 $(-5,12),(5,12)$，半径为 $16,4$。目标圆心满足距离和为二十，轨迹为椭圆 $x^2/100+(y-12)^2/75=1$。椭圆上到第一焦点距离介于五与十五，故对应半径始终为正，整条轨迹均合法。"
+    },
+    "secondary": [
+      {
+        "category_id": "GE",
+        "subtype_id": "GE06",
+        "reason_en": "The centers are $F_1=(-5,12),F_2=(5,12)$ and radii $16,4$. A desired center $P$ has $PF_1+PF_2=20$, giving ellipse $x^2/100+(y-12)^2/75=1$. Every ellipse point is admissible since its $PF_1$ is between five and fifteen, making circle radius $16-PF_1$ positive.",
+        "reason_zh": "两圆心为 $(-5,12),(5,12)$，半径为 $16,4$。目标圆心满足距离和为二十，轨迹为椭圆 $x^2/100+(y-12)^2/75=1$。椭圆上到第一焦点距离介于五与十五，故对应半径始终为正，整条轨迹均合法。"
+      },
+      {
+        "category_id": "AL",
+        "subtype_id": "AL02",
+        "reason_en": "Substitute $y=ax$: $(3+4a^2)x^2-96ax+276=0$. Real intersection requires discriminant $4800a^2-3312\\ge0$.",
+        "reason_zh": "代入 $y=ax$ 得 $(3+4a^2)x^2-96ax+276=0$，实交点条件为 $4800a^2-3312\\ge0$。"
+      }
+    ],
+    "statement_en": "Circles are given by $x^2+y^2+10x-24y-87=0$ and $x^2+y^2-10x-24y+153=0$. Find the least positive slope $a$ of a line $y=ax$ containing the center of a circle internally tangent to the first and externally tangent to the second. If $a^2=p/q$ is reduced, find $p+q$.",
+    "statement_zh": "两圆方程为 $x^2+y^2+10x-24y-87=0$、$x^2+y^2-10x-24y+153=0$。直线 $y=ax$ 包含某圆圆心，该圆与第一圆内切、第二圆外切。求最小正斜率 $a$，若 $a^2=p/q$ 最简，求 $p+q$。",
+    "answer": 169,
+    "solution_en": [
+      "The centers are $F_1=(-5,12),F_2=(5,12)$ and radii $16,4$. A desired center $P$ has $PF_1+PF_2=20$, giving ellipse $x^2/100+(y-12)^2/75=1$. Every ellipse point is admissible since its $PF_1$ is between five and fifteen, making circle radius $16-PF_1$ positive.",
+      "Substitute $y=ax$: $(3+4a^2)x^2-96ax+276=0$. Real intersection requires discriminant $4800a^2-3312\\ge0$.",
+      "The least positive slope is tangent, with $a^2=69/100$, so $p+q=169$."
+    ],
+    "solution_zh": [
+      "两圆心为 $(-5,12),(5,12)$，半径为 $16,4$。目标圆心满足距离和为二十，轨迹为椭圆 $x^2/100+(y-12)^2/75=1$。椭圆上到第一焦点距离介于五与十五，故对应半径始终为正，整条轨迹均合法。",
+      "代入 $y=ax$ 得 $(3+4a^2)x^2-96ax+276=0$，实交点条件为 $4800a^2-3312\\ge0$。",
+      "最小正斜率在相切时取得，平方为 $69/100$，所求 $169$。"
+    ],
+    "source_url": "https://live.poshenloh.com/past-contests/aime/2005II/problem/15",
+    "method_chain": [
+      "Conics & analytic loci",
+      "Tangent circles & common tangents",
+      "Polynomials & Vieta relations"
+    ],
+    "review": {
+      "author": "template_audit",
+      "source_checked": true,
+      "recomputed": true,
+      "notes": "",
+      "cross_review": "pending"
+    },
+    "unresolved_issues": []
+  }
+]

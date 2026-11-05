@@ -1,0 +1,687 @@
+{
+  "subtype_id": "AL09",
+  "introduction_en": "A functional equation constrains whole orbits, not isolated values. Compose transformations, preserve domains, and use rigidity when a polynomial or an infinite integer orbit cannot support the proposed behavior.",
+  "introduction_zh": "函数方程限制的是完整轨道，而非孤立函数值。应复合变换、保留定义域，并利用多项式或无穷整数轨道无法支持某些行为的刚性。",
+  "prerequisites": [
+    "AL01"
+  ],
+  "methods": [
+    {
+      "method_id": "AL09-M01",
+      "title_en": "Compose input symmetries and classify value orbits",
+      "title_zh": "复合自变量对称并分类函数值轨道",
+      "steps_en": [
+        "Compose the stated input transformations, carrying along any output sign or multiplier.",
+        "Identify genuine periods once the accumulated multiplier is one; integer periods combine by their gcd.",
+        "On integer residues, count the remaining reflection orbits, and check whether a sign relation forces a value to zero.",
+        "Construct a function satisfying every original relation to prove a proposed number of distinct values is attainable."
+      ],
+      "steps_zh": [
+        "复合题给自变量变换，同时保留输出的符号或倍数。",
+        "累计输出倍数为一时得到真正周期；整数周期可取最大公因数。",
+        "在整数余数上数剩余反射轨道，并检查带负号关系是否迫使函数值为零。",
+        "构造满足全部原关系的函数，才能证明不同函数值数目可达到。"
+      ],
+      "example_en": "A real function obeys $f(-x)=-f(x)$ and $f(2-x)=f(x)$. What is the maximum number of distinct values at integer inputs?",
+      "example_zh": "实函数满足 $f(-x)=-f(x),f(2-x)=f(x)$，在所有整数输入处最多有多少个不同函数值？",
+      "solution_en": [
+        "Composition gives $f(x+2)=-f(x)$ and hence period four. Oddness gives $f(0)=0$, so every even integer has value zero.",
+        "Writing $f(1)=a$, odd integer values alternate $a,-a$. Thus at most the three values $0,a,-a$ occur.",
+        "The function $f(x)=\\sin(\\pi x/2)$ satisfies both original identities and realizes $0,1,-1$, proving the maximum is three."
+      ],
+      "solution_zh": [
+        "复合得 $f(x+2)=-f(x)$，因此周期为四。奇性给出 $f(0)=0$，故所有偶整数处值为零。",
+        "若 $f(1)=a$，奇整数处交替为 $a,-a$，所以至多有零、$a$、$-a$ 三值。",
+        "$f(x)=\\sin(\\pi x/2)$ 满足两原关系并实现零、一、负一，故最大值为三。"
+      ],
+      "tip_en": "An upper bound on orbit classes still needs a function separating the permitted classes.",
+      "tip_zh": "轨道分类只给上界，还需函数把允许分开的类别真正区分。",
+      "question_ids": [
+        "AIME-2000-I-Q12"
+      ],
+      "prerequisites": [
+        "NT02"
+      ],
+      "extensions_en": [
+        "For a period $P$ and reflection $r\\mapsto c-r\\pmod P$, fixed residues solve $2r\\equiv c\\pmod P$. If there are $F$ fixed residues, the number of value orbits is $(P+F)/2$. A cosine centered at $c/2$ separates exactly the reflection pairs when no other relation is present."
+      ],
+      "extensions_zh": [
+        "周期为 $P$，剩余反射为 $r\\mapsto c-r\\pmod P$ 时，不动余数满足 $2r\\equiv c\\pmod P$。若有 $F$ 个不动余数，轨道数为 $(P+F)/2$。无其他关系时，以 $c/2$ 为中心的余弦可恰好区分这些反射对。"
+      ]
+    },
+    {
+      "method_id": "AL09-M02",
+      "title_en": "Extend a piecewise template by multiplicative scaling",
+      "title_zh": "按乘法缩放扩展分段模板",
+      "steps_en": [
+        "Use $f(rx)=rf(x)$ to move any positive input into the defining interval $[1,r]$.",
+        "Write the exact piecewise formula on $[r^k,r^{k+1}]$ and check endpoint consistency.",
+        "For a target level, compare it with each scaled branch maximum before solving branches.",
+        "For a least input or a level-set length, combine the branch domains as well as the algebraic solutions."
+      ],
+      "steps_zh": [
+        "利用 $f(rx)=rf(x)$，将正输入缩放到定义模板区间 $[1,r]$。",
+        "写出 $[r^k,r^{k+1}]$ 上的准确分段式，并检查端点一致。",
+        "求给定水平时，先与各缩放分支最大值比较，再解方程。",
+        "求最小输入或水平集长度时，必须将分支定义区间与代数解合并。"
+      ],
+      "example_en": "For $x>0$, let $f(2x)=2f(x)$ and $f(x)=\\min(x-1,2-x)$ on $[1,2]$. Find the length of the set of $x\\in[1,8]$ with $f(x)\\ge1$.",
+      "example_zh": "正数域函数满足 $f(2x)=2f(x)$，在 $[1,2]$ 上为 $\\min(x-1,2-x)$，求 $[1,8]$ 内满足 $f(x)\\ge1$ 的集合长度。",
+      "solution_en": [
+        "On $[1,2]$, the maximum is $1/2$, so there are no qualifying points.",
+        "On $[2,4]$, $f(x)=\\min(x-2,4-x)$ reaches one only at $x=3$, a set of length zero.",
+        "On $[4,8]$, $f(x)=\\min(x-4,8-x)$. The condition is $5\\le x\\le7$, so the total length is two."
+      ],
+      "solution_zh": [
+        "在 $[1,2]$ 上，最大值为二分之一，没有合格点。",
+        "在 $[2,4]$ 上，$f(x)=\\min(x-2,4-x)$，仅在三处达到一，集合长度为零。",
+        "在 $[4,8]$ 上，$f(x)=\\min(x-4,8-x)$，条件为五至七，故总长度为二。"
+      ],
+      "tip_en": "A smaller scale may contain no solution even when the branch equation has formal roots.",
+      "tip_zh": "较小尺度可能根本达不到目标水平，即使形式方程有解。",
+      "question_ids": [
+        "AIME-2001-II-Q08"
+      ],
+      "prerequisites": [
+        "AL06"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL09-M03",
+      "title_en": "Expose finite-order composition and check all poles",
+      "title_zh": "找出有限阶复合并检查全部极点",
+      "steps_en": [
+        "Compute a few exact compositions of a fractional-linear or affine map.",
+        "Prove a full composition returns the input, retaining every excluded denominator.",
+        "Reduce large iteration counts by this order only after proving the candidate orbit avoids the poles.",
+        "For affine complex maps $z\\mapsto\\omega z+c$, sum the geometric translation terms rather than tracking each point."
+      ],
+      "steps_zh": [
+        "对分式线性或仿射映射计算若干次精确复合。",
+        "证明若干次复合回到输入，并保留每个禁用分母。",
+        "只有证明候选轨道避开全部极点后，才能按阶约去大迭代次数。",
+        "复仿射映射 $z\\mapsto\\omega z+c$ 应累加等比平移项，不必逐点追踪。"
+      ],
+      "example_en": "For $g(x)=1/(1-x)$, determine all real inputs whose entire forward orbit exists, and the period of each such orbit.",
+      "example_zh": "对 $g(x)=1/(1-x)$，求所有完整正向轨道均有定义的实输入，并确定其周期。",
+      "solution_en": [
+        "The pole is one. Its only real preimage is zero, so zero and one must both be excluded.",
+        "For every other input, the map produces neither zero nor one. Direct composition gives $g^2(x)=(x-1)/x$ and $g^3(x)=x$.",
+        "A real fixed point would solve $x^2-x+1=0$, which has negative discriminant. Thus the allowed domain is $\\mathbb R\\setminus\\{0,1\\}$ and every orbit has exact period three."
+      ],
+      "solution_zh": [
+        "极点为一，其唯一实原像为零，因此零、一均须排除。",
+        "其余输入的像既不为零也不为一。直接复合得 $g^2(x)=(x-1)/x,g^3(x)=x$。",
+        "实不动点须满足 $x^2-x+1=0$，但判别式为负。因此允许域为 $\\mathbb R\\setminus\\{0,1\\}$，每轨道恰为三周期。"
+      ],
+      "tip_en": "A simplified composition can hide intermediate poles; domain checks belong to the unsimplified orbit.",
+      "tip_zh": "化简复合式可能遮住中途极点，定义域必须按实际轨道检查。",
+      "question_ids": [
+        "AIME-2002-I-Q12",
+        "AIME-2008-II-Q09",
+        "AIME-2012-II-Q11"
+      ],
+      "prerequisites": [
+        "AL03"
+      ],
+      "extensions_en": [
+        "For an affine complex map, $F^N(z)=\\omega^Nz+c\\sum_{j=0}^{N-1}\\omega^j$. If $\\omega^N=1$ and $\\omega\\ne1$, the translation sum vanishes, proving finite order for the entire map."
+      ],
+      "extensions_zh": [
+        "复仿射映射满足 $F^N(z)=\\omega^Nz+c\\sum_{j=0}^{N-1}\\omega^j$。若 $\\omega^N=1,\\omega\\ne1$，则平移和为零，整个映射具有有限阶。"
+      ]
+    },
+    {
+      "method_id": "AL09-M04",
+      "title_en": "Use finite root orbits to force polynomial rigidity",
+      "title_zh": "用有限根轨道迫使多项式刚性",
+      "steps_en": [
+        "Compare leading and constant coefficients of the polynomial identity.",
+        "Determine how every complex root generates further roots under the induced map.",
+        "Exclude any root modulus that would grow without bound in a finite root set.",
+        "Combine the product of root moduli and equality conditions to identify the remaining possible roots."
+      ],
+      "steps_zh": [
+        "先比较多项式恒等式的首项及常数项。",
+        "确定每个复根在诱导映射下如何产生新根。",
+        "根集有限，故排除会不断增大模长的根。",
+        "结合根模乘积与等号条件，确定剩余可能根。"
+      ],
+      "example_en": "A nonempty finite set $R$ of nonzero complex numbers is closed under squaring and satisfies $\\prod_{z\\in R}|z|=1$. Show every member is a root of unity.",
+      "example_zh": "非零复数的非空有限集 $R$ 在平方运算下封闭，且各元素模的乘积为一，证明每个元素都是单位根。",
+      "solution_en": [
+        "If some $|z|>1$, repeated squaring gives unbounded moduli inside the finite set, impossible. Thus all moduli are at most one.",
+        "Their product is one and none exceeds one, so every modulus equals one.",
+        "Finiteness gives $z^{2^j}=z^{2^k}$ for some $j<k$. Since $z\\ne0$, $z^{2^j(2^{k-j}-1)}=1$, proving the claim."
+      ],
+      "solution_zh": [
+        "若某元素模大于一，反复平方在有限集中产生无界模，矛盾，因此所有模至多一。",
+        "各模乘积为一且均至多一，故每个模均为一。",
+        "有限性给出某个 $j<k$ 满足 $z^{2^j}=z^{2^k}$。由 $z\\ne0$，得 $z^{2^j(2^{k-j}-1)}=1$，即为单位根。"
+      ],
+      "tip_en": "The root map must come from the actual identity; closure under a different transformation gives no information.",
+      "tip_zh": "根映射必须由原恒等式推出，不能擅自使用另一种封闭变换。",
+      "question_ids": [
+        "AIME-2007-II-Q14"
+      ],
+      "prerequisites": [
+        "AL03",
+        "AL02"
+      ],
+      "extensions_en": [
+        "For the map $T(z)=2z^3+z$, a modulus $r>1$ gives $|T(z)|\\ge2r^3-r>r$, forcing unbounded growth. If a monic polynomial has constant term one, the product of root moduli is one. Hence all root moduli equal one; requiring the image modulus also one gives $|2z^2+1|=1$, forcing $z^2=-1$."
+      ],
+      "extensions_zh": [
+        "对 $T(z)=2z^3+z$，若模 $r>1$，则 $|T(z)|\\ge2r^3-r>r$，会迫使无界增长。首一且常数项为一的多项式，根模乘积为一，所以所有根模均为一；像的模也为一进一步给出 $|2z^2+1|=1$，迫使 $z^2=-1$。"
+      ]
+    },
+    {
+      "method_id": "AL09-M05",
+      "title_en": "Use infinite integer descent to eliminate a nonzero difference",
+      "title_zh": "用无穷整数递降排除非零差",
+      "steps_en": [
+        "Subtract adjacent cleared recurrences to isolate a sequence of integer differences.",
+        "Prove a nonzero difference forces the next difference nonzero but smaller in absolute value by a fixed factor.",
+        "An infinite sequence of positive integer magnitudes cannot decrease this way, so every difference must be zero.",
+        "Substitute the resulting periodicity back into the original recurrence and optimize only the remaining finite arithmetic choices."
+      ],
+      "steps_zh": [
+        "先清分母，再将相邻递推相减，分离整数差序列。",
+        "证明非零差会迫使下一差也非零，但绝对值按固定比例缩小。",
+        "正整数绝对值不能如此无穷递降，因此每个差都须为零。",
+        "将所得周期代回原递推，再对剩余有限算术选择求最值。"
+      ],
+      "example_en": "An infinite integer sequence satisfies $b_n=(n+2)b_{n+1}$ for all $n\\ge0$. Prove it is identically zero.",
+      "example_zh": "无穷整数序列满足 $b_n=(n+2)b_{n+1}$，$n\\ge0$，证明所有项均为零。",
+      "solution_en": [
+        "Iteration gives $b_0=(k+1)!b_k$ for every $k\\ge1$.",
+        "If $b_0\\ne0$, every $b_k$ is a nonzero integer, so $|b_0|\\ge(k+1)!$ for every $k$, impossible.",
+        "Thus $b_0=0$. The nonzero multipliers then force successively $b_1=b_2=\\cdots=0$."
+      ],
+      "solution_zh": [
+        "反复代入得每个 $k\\ge1$ 都有 $b_0=(k+1)!b_k$。",
+        "若 $b_0\\ne0$，则各 $b_k$ 都是非零整数，迫使 $|b_0|\\ge(k+1)!$ 对所有 $k$ 成立，矛盾。",
+        "因此 $b_0=0$，由各乘数非零，依次推出后续全零。"
+      ],
+      "tip_en": "An inequality allowing the difference to become zero is insufficient; exact propagation of nonzeroness is essential.",
+      "tip_zh": "若不等式允许差突然变零，就不能这样递降；必须证明非零性被精确传递。",
+      "question_ids": [
+        "AIME-2009-I-Q13"
+      ],
+      "prerequisites": [
+        "NT05"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL09-M06",
+      "title_en": "Normalize a radical recurrence into a folded angle map",
+      "title_zh": "将根式递推归一化为折叠角映射",
+      "steps_en": [
+        "Remove an exponential scale so the radical becomes $\\sqrt{1-u^2}$.",
+        "Choose a sine parameter $u=\\sin\\phi$ and write the coefficients as $\\cos\\theta,\\sin\\theta$.",
+        "Use $\\sqrt{1-\\sin^2\\phi}=|\\cos\\phi|$, splitting at right-angle crossings.",
+        "Prove the eventual orbit or cycle, then restore the original scale."
+      ],
+      "steps_zh": [
+        "先除去指数尺度，使根式变为 $\\sqrt{1-u^2}$。",
+        "令 $u=\\sin\\phi$，将系数写成 $\\cos\\theta,\\sin\\theta$。",
+        "必须使用 $\\sqrt{1-\\sin^2\\phi}=|\\cos\\phi|$，在跨越直角时分类。",
+        "证明最终轨道或循环，再恢复原尺度。"
+      ],
+      "example_en": "Let $u_0=0$ and $u_{n+1}=(\\sqrt3/2)u_n+(1/2)\\sqrt{1-u_n^2}$. Describe all terms from $u_2$ onward.",
+      "example_zh": "令 $u_0=0,u_{n+1}=(\\sqrt3/2)u_n+(1/2)\\sqrt{1-u_n^2}$，描述从 $u_2$ 起的全部项。",
+      "solution_en": [
+        "The first terms are $u_1=1/2,u_2=\\sqrt3/2,u_3=1$, using the sine addition formula with angle $30^\\circ$.",
+        "At $u=1$, the next value is $\\sqrt3/2$. At $u=\\sqrt3/2$, the positive radical is $1/2$, giving the next value one.",
+        "Thus the exact two-cycle $\\sqrt3/2,1$ starts at $u_2$. Continuing to increase a formal angle without the absolute cosine would give the wrong later terms."
+      ],
+      "solution_zh": [
+        "用三十度正弦和角公式，前几项为 $1/2,\\sqrt3/2,1$。",
+        "当 $u=1$ 时，下项为 $\\sqrt3/2$；当 $u=\\sqrt3/2$ 时，正根式为二分之一，下项为一。",
+        "因此从 $u_2$ 起恰交替为 $\\sqrt3/2,1$。若忽略余弦绝对值而持续增加形式角，后续会算错。"
+      ],
+      "tip_en": "A nonnegative radical is an absolute value, so angle addition may turn into angle subtraction.",
+      "tip_zh": "非负根式对应绝对值，因此和角过程可能改为差角。",
+      "question_ids": [
+        "AIME-2009-II-Q14"
+      ],
+      "prerequisites": [
+        "AL08"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL09-M07",
+      "title_en": "Count finite functions by intrinsic image and preimage levels",
+      "title_zh": "按内在像集与原像层次计数有限函数",
+      "steps_en": [
+        "Translate a composition equality into restrictions on directed functional graphs.",
+        "Choose intrinsic classes such as fixed points, their direct preimages, and more distant points; the classes must be recoverable from the function.",
+        "Assign images only to their permitted classes, using independent powers after the classes are chosen.",
+        "If the image is prescribed exactly, require surjectivity rather than counting all maps into it."
+      ],
+      "steps_zh": [
+        "把复合等式转为有向函数图限制。",
+        "选择能由函数自身恢复的类别，如不动点、其直接原像和更远点。",
+        "选定类别后，只允许把像分配到指定层，再用独立幂计数。",
+        "若像集须恰为某集合，必须要求满射，不能把所有映入函数都算入。"
+      ],
+      "example_en": "Count functions on a labeled three-element set satisfying $f^2=f$.",
+      "example_zh": "求固定标号三元集合上满足 $f^2=f$ 的函数数。",
+      "solution_en": [
+        "Every image point must be fixed, and every fixed point belongs to the image. Thus choosing the image is exactly choosing the fixed-point set.",
+        "If it has $k\\ge1$ elements, choose it in $\\binom3k$ ways. Each remaining element maps independently to any of its $k$ points.",
+        "The count is $\\sum_{k=1}^3\\binom3k k^{3-k}=3+6+1=10$. The fixed-point set is intrinsic, so no function is counted twice."
+      ],
+      "solution_zh": [
+        "每个像点都必须不动，而每个不动点都属于像，因此像集恰为不动点集。",
+        "若大小为 $k\\ge1$，有 $\\binom3k$ 种选择，其余点各可独立映入其中任一点。",
+        "总数为 $\\sum_{k=1}^3\\binom3k k^{3-k}=10$。不动点集由函数唯一确定，故不重复。"
+      ],
+      "tip_en": "A chosen target set is not automatically the exact image set.",
+      "tip_zh": "指定允许像集并不等于指定准确像集。",
+      "question_ids": [
+        "AIME-2013-II-Q11",
+        "AIME-2014-I-Q12",
+        "AIME-2018-II-Q10"
+      ],
+      "prerequisites": [
+        "CO02",
+        "CO04"
+      ],
+      "extensions_en": [
+        "If $f^2$ is constant $a$, let $S=f^{-1}(a)$. Then $a\\in S$, every point of $S$ maps to $a$, and each outside point maps to $S\\setminus\\{a\\}$. For an $n$-point domain, a size-$k$ set contributes $n\\binom{n-1}{k-1}(k-1)^{n-k}$.",
+        "If $f^3=f^2$, every second image is fixed. Choose $i$ fixed points and $j$ nonfixed direct preimages; all remaining points map to that middle layer. The count for those sizes is $\\binom ni\\binom{n-i}j i^j j^{n-i-j}$, with $0^0=1$ for an empty assignment.",
+        "The number of maps onto a specified $k$-set from an $n$-set is $\\sum_{j=0}^k(-1)^j\\binom kj(k-j)^n$. Multiply by the choice of the image set. A second map avoiding that image has $(n-k)^n$ choices."
+      ],
+      "extensions_zh": [
+        "若 $f^2$ 为常值 $a$，令 $S=f^{-1}(a)$，则 $a\\in S$，$S$ 内各点映到 $a$，外点各映到 $S\\setminus\\{a\\}$。在 $n$ 元域中，大小 $k$ 的贡献为 $n\\binom{n-1}{k-1}(k-1)^{n-k}$。",
+        "若 $f^3=f^2$，每个第二像均不动。选 $i$ 个不动点和 $j$ 个非不动直接原像，其余点全映到中层；对应计数为 $\\binom ni\\binom{n-i}j i^j j^{n-i-j}$，空分配时约定 $0^0=1$。",
+        "从 $n$ 元集满射到指定 $k$ 元集的数目为 $\\sum_{j=0}^k(-1)^j\\binom kj(k-j)^n$，再乘像集选择数。第二个函数若避开该像集，则有 $(n-k)^n$ 种。"
+      ]
+    },
+    {
+      "method_id": "AL09-M08",
+      "title_en": "Factor forced roots and apply finite-difference rigidity",
+      "title_zh": "分离被迫根并使用有限差分刚性",
+      "steps_en": [
+        "Substitute special inputs into a polynomial identity to force explicit roots.",
+        "Factor those roots before canceling common polynomial factors in the identity.",
+        "A nonconstant degree-$d$ polynomial has a nonzero first difference of degree $d-1$, so a periodic polynomial is constant.",
+        "Use normalization to determine the remaining constant and verify the original identity."
+      ],
+      "steps_zh": [
+        "向多项式恒等式代入特殊值，找出被迫根。",
+        "先分离这些根，再在恒等式中约去公共多项式因子。",
+        "非常数 $d$ 次多项式的一阶差分为非零的 $d-1$ 次式，因此周期多项式只能为常数。",
+        "由归一条件确定余下常数，并验证原恒等式。"
+      ],
+      "example_en": "Find all real polynomials $P$ with $P(x+1)-P(x)=2x+1$.",
+      "example_zh": "求满足 $P(x+1)-P(x)=2x+1$ 的所有实系数多项式。",
+      "solution_en": [
+        "The polynomial $x^2$ has the required first difference.",
+        "Put $Q(x)=P(x)-x^2$. Then $Q(x+1)-Q(x)=0$, so $Q$ is a periodic polynomial.",
+        "If $Q$ were nonconstant, its first difference would have nonzero leading coefficient. Hence $Q=C$, and all solutions are $P=x^2+C$."
+      ],
+      "solution_zh": [
+        "$x^2$ 的一阶差分正好是 $2x+1$。",
+        "令 $Q(x)=P(x)-x^2$，则其差分为零，因此 $Q$ 是周期多项式。",
+        "若 $Q$ 非常数，其差分首项系数非零，矛盾。因此 $Q=C$，全部解为 $P=x^2+C$。"
+      ],
+      "tip_en": "Cancel polynomial factors as identities; do not incorrectly exclude their zeros from the final polynomial.",
+      "tip_zh": "约去因子是在多项式恒等式层面进行，不能把该因子的零点从最终多项式中排除。",
+      "question_ids": [
+        "AIME-2016-I-Q11"
+      ],
+      "prerequisites": [
+        "AL02"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL09-M09",
+      "title_en": "Periodic information and uniqueness force a fixed residue",
+      "title_zh": "周期信息与唯一性迫使固定余数",
+      "steps_en": [
+        "Encode the full infinite itinerary by signs, interval labels, or digits.",
+        "Shift by one full itinerary period and prove the transformed point satisfies the same complete information.",
+        "Use uniqueness to equate the transformed and original point, giving a fixed-point congruence.",
+        "Test every finite candidate against the entire repeating itinerary and its domain."
+      ],
+      "steps_zh": [
+        "以符号、区间标记或数字编码完整无穷轨迹。",
+        "移动一个信息周期，证明变换后的点仍满足同一套完整信息。",
+        "利用唯一性令变换后点等于原点，得到不动余数关系。",
+        "将每个有限候选代回整个周期轨迹及定义域检查。"
+      ],
+      "example_en": "For $F(x)=\\{3x\\}$ on $[0,1)$, find the point whose labels $\\lfloor3F^n(x)\\rfloor$ alternate $0,2,0,2,\\ldots$.",
+      "example_zh": "对 $[0,1)$ 上的 $F(x)=\\{3x\\}$，求使标记 $\\lfloor3F^n(x)\\rfloor$ 交替为零、二、零、二的点。",
+      "solution_en": [
+        "The labels give the ternary expansion $0.\\overline{02}_3$. Its first $2k$ digits restrict $x$ to an interval of length $9^{-k}$, proving uniqueness.",
+        "After two shifts the same itinerary remains, so $F^2(x)=x$. Its two-digit integer part is two, hence $9x=2+x$ and $x=1/4$.",
+        "The orbit is $1/4,3/4,1/4,\\ldots$, whose labels are exactly zero and two, verifying existence."
+      ],
+      "solution_zh": [
+        "标记给出三进制展开 $0.\\overline{02}_3$，前 $2k$ 位将点限制在长 $9^{-k}$ 的区间内，因此唯一。",
+        "两次移位后信息不变，故 $F^2(x)=x$，两位整数部分为二，所以 $9x=2+x$，解得四分之一。",
+        "轨道为四分之一、四分之三交替，标记恰为零、二，验证存在。"
+      ],
+      "tip_en": "Uniqueness concerns the full infinite itinerary, not a short initial sign table.",
+      "tip_zh": "唯一性针对完整无穷轨迹，不是有限开头的符号表。",
+      "question_ids": [
+        "AIME-2019-II-Q10"
+      ],
+      "prerequisites": [
+        "AL08",
+        "NT03"
+      ],
+      "extensions_en": [],
+      "extensions_zh": []
+    },
+    {
+      "method_id": "AL09-M10",
+      "title_en": "Propagate preimages branch by branch and prove their pattern",
+      "title_zh": "逐分支传播原像并证明其模式",
+      "steps_en": [
+        "Determine the exact range of each branch before taking an inverse.",
+        "For an absolute value retain only nonnegative targets; include both signs and remove coinciding preimages.",
+        "Use induction to prove an arithmetic zero pattern or nested interval-index rule.",
+        "Count or sum only after the branch-domain restrictions and duplicates have been settled."
+      ],
+      "steps_zh": [
+        "求原像前，先确定每个分支的准确值域。",
+        "绝对值只接受非负目标，取正负两支，并去除重合原像。",
+        "以归纳证明等差零点模式或嵌套区间下标规则。",
+        "只有明确分支定义域及重复后，才能计数或求和。"
+      ],
+      "example_en": "On $[0,1]$, let $g(x)=|2x-1|$. Find all zeros of $g\\circ g\\circ g$.",
+      "example_zh": "在 $[0,1]$ 上令 $g(x)=|2x-1|$，求三次复合的全部零点。",
+      "solution_en": [
+        "The preimage of zero is the single point $1/2$; the two formal signs coincide there.",
+        "The preimages of $1/2$ are $1/4,3/4$. For a target $t\\in[0,1]$, its preimages are $(1-t)/2,(1+t)/2$.",
+        "Applying this to both targets gives $1/8,3/8,5/8,7/8$. They are distinct and remain in the domain, so this is the complete zero set."
+      ],
+      "solution_zh": [
+        "零的原像只有二分之一，此时形式上的正负分支重合。",
+        "二分之一的原像为四分之一、四分之三；一般 $t\\in[0,1]$ 的原像为 $(1-t)/2,(1+t)/2$。",
+        "对两目标再求原像，得到八分之一、八分之三、八分之五、八分之七，互异且均在域内，故已穷尽。"
+      ],
+      "tip_en": "A negative intermediate zero has no preimage under a nonnegative absolute-value map.",
+      "tip_zh": "在非负绝对值映射下，负的中间零点没有原像。",
+      "question_ids": [
+        "AIME-2020-II-Q08",
+        "AIME-2020-II-Q14"
+      ],
+      "prerequisites": [
+        "AL06",
+        "AL05",
+        "CO02"
+      ],
+      "extensions_en": [
+        "For $f(x)=x\\{x\\}$ on $[j,j+1)$ with $j\\ge0$, write $x=j+t$. The expression $(j+t)t$ is strictly increasing with range $[0,j+1)$. Thus a positive target has exactly one preimage in each admissible unit interval. Repeated inverses produce weakly ordered interval indices, counted by binomial coefficients.",
+        "For $F_1(x)=|x-1|,F_n(x)=F_{n-1}(|x-n|)$, the zero set is the step-two progression from $n-T_{n-1}$ to $T_n$, where $T_n=n(n+1)/2$. Inductively the nonnegative preceding zeros include every value of their parity from zero or one to $T_{n-1}$; reflecting these as $n\\pm z$ produces exactly the stated progression. Its endpoints sum to $2n$ and it has $T_{n-1}+1$ points."
+      ],
+      "extensions_zh": [
+        "对 $j\\ge0$ 的区间 $[j,j+1)$，写 $x=j+t$，则 $x\\{x\\}=(j+t)t$ 严格递增，值域为 $[0,j+1)$。因此每个允许单位区间内，正目标恰有一个原像；反复求逆得到弱递增区间下标，可用组合数计数。",
+        "若 $F_1(x)=|x-1|,F_n(x)=F_{n-1}(|x-n|)$，其零点为从 $n-T_{n-1}$ 到 $T_n$ 的公差二数列，其中 $T_n=n(n+1)/2$。归纳时，前一层非负零点含从零或一到 $T_{n-1}$ 的全部同奇偶值；反射为 $n\\pm z$ 后恰填满该数列。两端和为 $2n$，点数为 $T_{n-1}+1$。"
+      ]
+    },
+    {
+      "method_id": "AL09-M11",
+      "title_en": "Unroll a recursive function to its first reachable terminal input",
+      "title_zh": "展开递归直到首个可达终止输入",
+      "steps_en": [
+        "Identify the terminal set and the arithmetic progression of inputs visited by the recursion.",
+        "Prove a terminal point is reachable and choose the first one in that progression, not merely the nearest terminal numerically.",
+        "Add the cost of each recursive step to the terminal value.",
+        "For a minimum input, combine the terminal formula with its defining interval and residue constraints."
+      ],
+      "steps_zh": [
+        "确定终止集合，以及递归访问的输入等差数列。",
+        "证明终止点可达，选择该等差数列中的首个终止点，而非数值最近的任意终止点。",
+        "将每次递归的代价加上终止值。",
+        "若求最小输入，将终止公式与其定义区间、余数限制合并。"
+      ],
+      "example_en": "For positive integers define $H(n)=0$ if $5\\mid n$, and $H(n)=1+H(n+2)$ otherwise. Find $H(7)$.",
+      "example_zh": "正整数上定义 $H(n)$：若五整除 $n$ 则为零，否则为 $1+H(n+2)$，求 $H(7)$。",
+      "solution_en": [
+        "The visited inputs are $7+2j$. Because two is invertible modulo five, a multiple of five is reachable.",
+        "The first nonnegative solution of $7+2j\\equiv0\\pmod5$ is $j=4$, giving input fifteen.",
+        "The four preceding calls each add one, so $H(7)=4$. The closer multiple ten is not visited and must not be used."
+      ],
+      "solution_zh": [
+        "访问输入为 $7+2j$，因二在模五下可逆，必能到达五的倍数。",
+        "同余式的首个非负解为 $j=4$，终止输入十五。",
+        "此前四次调用各加一，所以结果为四；较近的十不在访问序列中，不能用它。"
+      ],
+      "tip_en": "A square reached by step two must have the input parity; the first square above the input may be skipped.",
+      "tip_zh": "步长二只能到达与输入同奇偶的平方，紧邻上方的平方可能被跳过。",
+      "question_ids": [
+        "AIME-2021-II-Q15"
+      ],
+      "prerequisites": [
+        "NT05"
+      ],
+      "extensions_en": [
+        "Let $k=\\lceil\\sqrt n\\rceil$. Unit-step recursion first reaches $k^2$. A step-two recursion first reaches $k^2$ if $n\\equiv k\\pmod2$, otherwise $(k+1)^2$. With cost two per step, its accumulated cost equals terminal square minus $n$. Always restore $(k-1)^2<n\\le k^2$ before minimizing."
+      ],
+      "extensions_zh": [
+        "令 $k=\\lceil\\sqrt n\\rceil$，步长一首先到 $k^2$；步长二若 $n\\equiv k\\pmod2$ 也到 $k^2$，否则首先到 $(k+1)^2$。若每步代价为二，累计代价恰为终止平方减去 $n$。求最小值时必须恢复 $(k-1)^2<n\\le k^2$。"
+      ]
+    },
+    {
+      "method_id": "AL09-M12",
+      "title_en": "Conjugate a rational map to a simpler recurrence",
+      "title_zh": "将有理映射共轭为较简单递推",
+      "steps_en": [
+        "Search for a fractional-linear variable that sends special points or fixed points to simple values.",
+        "Derive the transformed recurrence exactly and invert the substitution.",
+        "Track numerator and denominator before and after reduction; use gcd identities to certify the claimed denominator growth.",
+        "Prove the transformed orbit remains in the interval that gives valid positive original values before taking modular residues."
+      ],
+      "steps_zh": [
+        "寻找将特殊点或不动点送到简单数值的分式线性变量。",
+        "精确推出变换后的递推，并写出逆变换。",
+        "跟踪约分前后的分子分母，用最大公因数关系确认所称分母增长。",
+        "取同余前，证明变换轨道留在使原变量为合法正值的区间内。"
+      ],
+      "example_en": "Let $x_0=3$ and $x_{n+1}=(x_n^2+1)/(2x_n)$. Find an exact reduced formula for $x_n$.",
+      "example_zh": "令 $x_0=3,x_{n+1}=(x_n^2+1)/(2x_n)$，求 $x_n$ 的精确既约表达式。",
+      "solution_en": [
+        "Put $y=(x-1)/(x+1)$. Direct simplification gives $y_{n+1}=y_n^2$ and $y_0=1/2$.",
+        "Thus $y_n=2^{-2^n}$, always in $(0,1)$, and inversion gives $x_n=(2^{2^n}+1)/(2^{2^n}-1)$.",
+        "The two numerator/denominator terms differ by two and are both odd. Their gcd is therefore one, so the formula is reduced and positive."
+      ],
+      "solution_zh": [
+        "令 $y=(x-1)/(x+1)$，直接化简得 $y_{n+1}=y_n^2,y_0=1/2$。",
+        "因此 $y_n=2^{-2^n}$ 始终在零一之间，逆变换给出 $x_n=(2^{2^n}+1)/(2^{2^n}-1)$。",
+        "分子分母相差二且均奇，最大公因数只能为一，所以该式已既约且为正。"
+      ],
+      "tip_en": "A denominator recurrence is not proved until cancellation has been ruled out.",
+      "tip_zh": "只有排除约分后，分母递推才算证明。",
+      "question_ids": [
+        "AIME-2025-II-Q13"
+      ],
+      "prerequisites": [
+        "NT03",
+        "NT04"
+      ],
+      "extensions_en": [
+        "For a transformed map $y\\mapsto y(y-1)$ with $y=c/d$ in lowest terms, the unreduced next fraction is $c(c-d)/d^2$. If $\\gcd(c,d)=1$, both factors in the numerator are coprime to $d$, so the next denominator is exactly $d^2$. When inverting a substitution, analyze any new common divisor separately."
+      ],
+      "extensions_zh": [
+        "若变换映射为 $y\\mapsto y(y-1)$，既约 $y=c/d$ 的下一式为 $c(c-d)/d^2$。由 $\\gcd(c,d)=1$，分子两因子都与 $d$ 互质，故下一分母准确为 $d^2$。逆变换若引入新的公因子，还须另行核查。"
+      ]
+    }
+  ],
+  "practice_ids": [
+    "AIME-2000-I-Q12",
+    "AIME-2001-II-Q08",
+    "AIME-2007-II-Q14",
+    "AIME-2009-I-Q13",
+    "AIME-2009-II-Q14",
+    "AIME-2012-II-Q11",
+    "AIME-2013-II-Q11",
+    "AIME-2018-II-Q10",
+    "AIME-2019-II-Q10",
+    "AIME-2020-II-Q08",
+    "AIME-2021-II-Q15",
+    "AIME-2025-II-Q13"
+  ],
+  "coverage_by_question": {
+    "AIME-2000-I-Q12": {
+      "method_ids": [
+        "AL09-M01"
+      ],
+      "prerequisites": [
+        "NT02"
+      ]
+    },
+    "AIME-2001-II-Q08": {
+      "method_ids": [
+        "AL09-M02"
+      ],
+      "prerequisites": [
+        "AL06"
+      ]
+    },
+    "AIME-2002-I-Q12": {
+      "method_ids": [
+        "AL09-M03"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2008-II-Q09": {
+      "method_ids": [
+        "AL09-M03"
+      ],
+      "prerequisites": [
+        "AL03"
+      ]
+    },
+    "AIME-2012-II-Q11": {
+      "method_ids": [
+        "AL09-M03"
+      ],
+      "prerequisites": []
+    },
+    "AIME-2007-II-Q14": {
+      "method_ids": [
+        "AL09-M04"
+      ],
+      "prerequisites": [
+        "AL02",
+        "AL03"
+      ]
+    },
+    "AIME-2009-I-Q13": {
+      "method_ids": [
+        "AL09-M05"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2009-II-Q14": {
+      "method_ids": [
+        "AL09-M06"
+      ],
+      "prerequisites": [
+        "AL08"
+      ]
+    },
+    "AIME-2013-II-Q11": {
+      "method_ids": [
+        "AL09-M07"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2014-I-Q12": {
+      "method_ids": [
+        "AL09-M07"
+      ],
+      "prerequisites": [
+        "CO04",
+        "PS01"
+      ]
+    },
+    "AIME-2018-II-Q10": {
+      "method_ids": [
+        "AL09-M07"
+      ],
+      "prerequisites": [
+        "CO02"
+      ]
+    },
+    "AIME-2016-I-Q11": {
+      "method_ids": [
+        "AL09-M08"
+      ],
+      "prerequisites": [
+        "AL02"
+      ]
+    },
+    "AIME-2019-II-Q10": {
+      "method_ids": [
+        "AL09-M09"
+      ],
+      "prerequisites": [
+        "AL08",
+        "NT03"
+      ]
+    },
+    "AIME-2020-II-Q08": {
+      "method_ids": [
+        "AL09-M10"
+      ],
+      "prerequisites": [
+        "AL05",
+        "AL06"
+      ]
+    },
+    "AIME-2020-II-Q14": {
+      "method_ids": [
+        "AL09-M10"
+      ],
+      "prerequisites": [
+        "AL06",
+        "CO02"
+      ]
+    },
+    "AIME-2021-II-Q15": {
+      "method_ids": [
+        "AL09-M11"
+      ],
+      "prerequisites": [
+        "NT05"
+      ]
+    },
+    "AIME-2025-II-Q13": {
+      "method_ids": [
+        "AL09-M12"
+      ],
+      "prerequisites": [
+        "NT03",
+        "NT04"
+      ]
+    }
+  },
+  "review": {
+    "author": "root",
+    "all_primary_routes_read": true,
+    "necessary_secondary_routes_read": true,
+    "original_examples_recomputed": true,
+    "independent_review": false
+  },
+  "unresolved_issues": []
+}

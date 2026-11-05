@@ -1,0 +1,48 @@
+{
+  "question_sha256": "2eb9bf48ae0b5f70d00970d3d33b32deb037d1212bb456323c2defda84411476",
+  "reports": [
+    {
+      "kind": "workbook",
+      "questions": 810,
+      "sections": 44,
+      "pdf_pages": 828,
+      "toc_links": 854,
+      "split_pages_complete": true,
+      "page_labels_and_placements": "pass",
+      "erratum": null
+    },
+    {
+      "kind": "solutions_en",
+      "questions": 810,
+      "sections": 44,
+      "pdf_pages": 830,
+      "toc_links": 854,
+      "split_pages_complete": true,
+      "page_labels_and_placements": "pass",
+      "erratum": {
+        "physical_pages": [
+          202,
+          203
+        ],
+        "corrected_result_and_historical_key_present": true
+      }
+    },
+    {
+      "kind": "solutions_zh",
+      "questions": 810,
+      "sections": 44,
+      "pdf_pages": 828,
+      "toc_links": 854,
+      "split_pages_complete": true,
+      "page_labels_and_placements": "pass",
+      "erratum": {
+        "physical_pages": [
+          201
+        ],
+        "corrected_result_and_historical_key_present": true
+      }
+    }
+  ],
+  "visual_review": "passed separately: see audit/workbook-visual-qa-template.json, output/qa/solutions-en-visual-review.json and audit/final-root-visual-qa.json",
+  "horizontal_math_fragments": "all three books pass"
+}
