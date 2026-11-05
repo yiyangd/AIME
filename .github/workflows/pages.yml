@@ -1,4 +1,4 @@
-name: Restore reviewed AIME public pack
+name: Complete reviewed AIME QA records
 
 on:
   workflow_dispatch:
@@ -7,17 +7,33 @@ permissions:
   contents: write
 
 jobs:
-  restore:
+  restore_qa:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the upload staging commit
-        uses: actions/checkout@v6
-      - name: Verify hashes and restore only allowlisted public files
-        run: python3 aime-bootstrap-extract.py
-      - name: Commit the readable reviewed pack
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 3
+      - name: Restore exactly the five reviewed QA reports
+        shell: bash
         run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = 16d50024a799efd071252e0d15e576e7f5b657f9
+          git diff --exit-code HEAD^ HEAD -- . ':(exclude).github/workflows/pages.yml'
+          staging="$RUNNER_TEMP/aime-reviewed-qa-source"
+          git worktree add --detach "$staging" 4563bb92be4017eed8852ef3aa3fa886bec9b3bc
+          (cd "$staging" && python3 aime-bootstrap-extract.py)
+          paths=(output/qa/rendered/matrix/render-report.json output/qa/rendered/solutions_en/render-report.json output/qa/rendered/solutions_zh/render-report.json output/qa/rendered/textbook/render-report.json output/qa/rendered/workbook/render-report.json)
+          for path in "${paths[@]}"; do
+            test ! -e "$path"
+            install -D -m 0644 "$staging/$path" "$path"
+            cmp "$staging/$path" "$path"
+          done
+          git -c core.autocrlf=false add -f -- "${paths[@]}"
+          test "$(git diff --cached --name-only)" = "$(printf '%s\n' "${paths[@]}")"
+          for path in "${paths[@]}"; do
+            test "$(git rev-parse ":$path")" = "$(git hash-object --no-filters "$staging/$path")"
+          done
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add --all
-          git commit -m 'Publish reviewed bilingual AIME 2000-2026 source and products'
+          git commit -m 'Include five reviewed AIME rendering reports'
           git push origin HEAD:main
