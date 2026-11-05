@@ -1,0 +1,23 @@
+name: Restore reviewed AIME public pack
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the upload staging commit
+        uses: actions/checkout@v6
+      - name: Verify hashes and restore only allowlisted public files
+        run: python3 aime-bootstrap-extract.py
+      - name: Commit the readable reviewed pack
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m 'Publish reviewed bilingual AIME 2000-2026 source and products'
+          git push origin HEAD:main
